@@ -1,0 +1,7 @@
+using UnityEngine;
+
+namespace Orion 
+{
+    [CreateAssetMenu(fileName = "NewRemote#Type#Event", menuName = "Orion/Remote/Event/#Type#")]
+    public class Remote#Type#Event : RemoteEvent<#Type#> { }
+}

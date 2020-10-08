@@ -1,0 +1,7 @@
+using UnityEngine;
+
+namespace Orion 
+{
+    [CreateAssetMenu(fileName = "NewRemote#Type#", menuName = "Orion/Remote/#Type#/Standard")]
+    public class Remote#Type# : RemoteValue<#Type#> { }
+}
