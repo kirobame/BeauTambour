@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rythmHandlerToken: {fileID: 11400000, guid: 9964d5b60ca0e2d4e9952d599701352c, type: 2}
+  duration: 3
 --- !u!4 &507534888
 Transform:
   m_ObjectHideFlags: 0
