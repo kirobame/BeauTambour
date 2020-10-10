@@ -10,7 +10,11 @@ namespace BeauTambour.Prototyping
     {
         public const double StandardErrorMargin = 0.175d;
         
+        //--------------------------------------------------------------------------------------------------------------
+        
         public event Action<double> OnBeat;
+        
+        //--------------------------------------------------------------------------------------------------------------
         
         public bool IsActive => audioSource.isPlaying;
         
@@ -20,32 +24,19 @@ namespace BeauTambour.Prototyping
         public double Time { get; private set; }
         public double Beats { get; private set; }
         
+        //--------------------------------------------------------------------------------------------------------------
+        
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private int beatsPerMinutes;
 
         private double startTime;
         private int lastBeat = -1;
 
-        private List<(Action action, int countdown)> plainTimedActions = new List<(Action action, int countdown)>();
+        private List<(Action<int> action, int countdown)> plainTimedActions = new List<(Action<int> actio, int countdown)>();
         private List<(Action<double> action, double countdown)> timedActions = new List<(Action<double> action, double countdown)>();
         
-        [Button]
-        public void Calibrate()
-        {
-            startTime = AudioSettings.dspTime;
-            audioSource.Play();
-        }
-        [Button]
-        public void Stop()
-        {
-            audioSource.Stop();
-
-            Time = 0d;
-            Beats = 0d;
-            
-            lastBeat = -1;
-        }
-
+        //--------------------------------------------------------------------------------------------------------------
+        
         void Update()
         {
             if (!IsActive) return;
@@ -67,7 +58,104 @@ namespace BeauTambour.Prototyping
                 OnBeat?.Invoke(lastBeat);
             }
         }
+        
+        //--------------------------------------------------------------------------------------------------------------
+        
+        [Button]
+        public void BootUp()
+        {
+            startTime = AudioSettings.dspTime;
+            audioSource.Play();
+        }
+        [Button]
+        public void ShutDown()
+        {
+            audioSource.Stop();
 
+            Time = 0d;
+            Beats = 0d;
+            
+            lastBeat = -1;
+        }
+        
+        public void Pause() { }
+        public void Resume() { }
+        
+        //--------------------------------------------------------------------------------------------------------------
+        
+        public bool TryEnqueue(Action<int> action, int duration, double errorMargin = StandardErrorMargin)
+        {
+            if (action == null || !IsActive || errorMargin <= 0 || errorMargin > SecondsPerBeats) return false;
+            var code = IsInputValid(errorMargin, out var flooredDifference, out var ceiledDifference);
+
+            if (code == 1)
+            {
+                action(duration);
+                plainTimedActions.Add((action, duration));
+
+                return true;
+            }
+            else if (code == 2)
+            {
+                plainTimedActions.Add((action, duration + 1));
+                return true;
+            }
+
+            return false;
+        }
+        public bool TryEnqueue(Action<double> action, double duration, double errorMargin = StandardErrorMargin)
+        {
+            if (action == null || !IsActive || errorMargin <= 0 || errorMargin > SecondsPerBeats) return false;
+            var code = IsInputValid(errorMargin, out var flooredDifference, out var ceiledDifference);
+
+            if (code == 1)
+            {
+                var countdown = 1d - flooredDifference + duration;
+                timedActions.Add((action, countdown));
+
+                return true;
+            }
+            else if (code == 2)
+            {
+                var countdown = 1d + ceiledDifference + duration;
+                timedActions.Add((action, countdown));
+                
+                return true;
+            }
+
+            return false;
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+        
+        //TO CORRECT + REFACTOR BOTH TICKS INTO ONE METHOD IF POSSIBLE
+        private void PlainTick()
+        {
+            var index = 0;
+            while (index < plainTimedActions.Count)
+            {
+                var removalIndex = -1;
+                
+                for (var i = index; i < plainTimedActions.Count; i++)
+                {
+                    if (plainTimedActions[i].countdown <= 0)
+                    {
+                        plainTimedActions[i].action(420);
+                        
+                        removalIndex = i;
+                        break;
+                    }
+                    
+                    var plainTimedAction = plainTimedActions[i];
+                    plainTimedAction.countdown--;
+
+                    plainTimedActions[i] = plainTimedAction;
+                    index++;
+                }
+                
+                if (removalIndex != -1) plainTimedActions.RemoveAt(removalIndex);
+            }
+        }
         private void Tick(double difference)
         {
             var index = 0;
@@ -94,74 +182,6 @@ namespace BeauTambour.Prototyping
                 
                 if (removalIndex != -1) timedActions.RemoveAt(removalIndex);
             }
-        }
-        private void PlainTick()
-        {
-            var index = 0;
-            while (index < plainTimedActions.Count)
-            {
-                var removalIndex = -1;
-                
-                for (var i = index; i < plainTimedActions.Count; i++)
-                {
-                    if (plainTimedActions[i].countdown <= 0)
-                    {
-                        plainTimedActions[i].action();
-                        
-                        removalIndex = i;
-                        break;
-                    }
-                    
-                    var plainTimedAction = plainTimedActions[i];
-                    plainTimedAction.countdown--;
-
-                    plainTimedActions[i] = plainTimedAction;
-                    index++;
-                }
-                
-                if (removalIndex != -1) plainTimedActions.RemoveAt(removalIndex);
-            }
-        }
-
-        public bool TryEnqueue(Action action, double errorMargin = StandardErrorMargin)
-        {
-            if (action == null || !IsActive || errorMargin <= 0 || errorMargin > SecondsPerBeats) return false;
-            var code = IsInputValid(errorMargin, out var flooredDifference, out var ceiledDifference);
-
-            if (code == 1)
-            {
-                plainTimedActions.Add((action, 0));
-                return true;
-            }
-            else if (code == 2)
-            {
-                plainTimedActions.Add((action, 1));
-                return true;
-            }
-
-            return false;
-        }
-        public bool TryEnqueue(Action<double> action, double errorMargin = StandardErrorMargin)
-        {
-            if (action == null || !IsActive || errorMargin <= 0 || errorMargin > SecondsPerBeats) return false;
-            var code = IsInputValid(errorMargin, out var flooredDifference, out var ceiledDifference);
-
-            if (code == 1)
-            {
-                var countdown = 1d - flooredDifference;
-                timedActions.Add((action, countdown));
-
-                return true;
-            }
-            else if (code == 2)
-            {
-                var countdown = 1d + ceiledDifference;
-                timedActions.Add((action, countdown));
-                
-                return true;
-            }
-
-            return false;
         }
 
         private int IsInputValid(double errorMargin, out double flooredDifference, out double ceiledDifference)
