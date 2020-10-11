@@ -7,7 +7,7 @@ public class SessionHandler : MonoBehaviour
 {
     private List<IBootable> bootables = new List<IBootable>();
 
-    void Begin()
+    public void Begin()
     {
         for (int indexBootables = 0; indexBootables < bootables.Count; indexBootables++)
         {
@@ -15,11 +15,16 @@ public class SessionHandler : MonoBehaviour
         }
     }
 
-    void End()
+    public void End()
     {
         for (int indexBootables = 0; indexBootables < bootables.Count; indexBootables++)
         {
             bootables[indexBootables].ShutDown();
         }
+    }
+
+    public void Subscribe(IBootable toAdd)
+    {
+        bootables.Add(toAdd);
     }
 }
