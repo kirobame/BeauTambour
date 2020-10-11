@@ -8,10 +8,6 @@ namespace Orion
     public interface IReferencer
     {
         /// <summary>
-        /// The asset at which the reference is stored.
-        /// </summary>
-        Token Token { get; }
-        /// <summary>
         /// The reference.
         /// </summary>
         object Content { get; }

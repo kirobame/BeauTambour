@@ -4,13 +4,10 @@ using UnityEngine;
 
 namespace Orion
 {
-    public abstract class ReferencerBase : MonoBehaviour, IReferencer
+    public abstract class ReferencerBase : MonoBehaviour
     {
-        public Token Token => token;
+        [SerializeField] private bool lifetimeLinkage;
         
-        [SerializeField] private Token token;
-        [SerializeField, PropertyOrder(-1)] private bool lifetimeLinkage;
-
         public abstract object Content { get; }
         
         void OnEnable()
