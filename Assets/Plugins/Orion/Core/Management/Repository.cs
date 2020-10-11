@@ -34,8 +34,21 @@ namespace Orion
 
         private static Dictionary<Token, Referencer> referencers = new Dictionary<Token, Referencer>();
         private static Dictionary<Token, StackReferencer> stackReferencers = new Dictionary<Token, StackReferencer>();
+        
+        private static Dictionary<Type, object> singles = new Dictionary<Type, object>();
 
         #region Registration
+
+        /// <summary>
+        /// Stores a value which must be the only of its <code>Type</code>.
+        /// </summary>
+        public static void Register(Object value)
+        {
+            var type = value.GetType();
+            if (singles.ContainsKey(type)) return;
+            
+            singles.Add(type, value);
+        }
         
         /// <summary>
         /// Stores the single value of a <code>Referencer</code>.
@@ -112,10 +125,15 @@ namespace Orion
         #region Unregistration
         
         /// <summary>
+        /// Removes the value at the passed <code>Type</code> key.
+        /// </summary>
+        public static bool Unregister(Type type) => singles.Remove(type);
+        
+        /// <summary>
         /// Removes from the stored content a single value indicated by an <code>IReferencer</code>.
         /// </summary>
         /// <returns>Indicates if the removal was the successful</returns>
-        public static bool Unregister(IReferencer referencer)
+        public static bool Unregister(Referencer referencer)
         {
             return referencers.Remove(referencer.Token) && Unregister(referencer.Token);
         }
@@ -197,6 +215,11 @@ namespace Orion
             return successes;
         }
         #endregion
+
+        /// <summary>
+        /// Returns the only value stored at the passed <code>Type</code> key.
+        /// </summary>
+        public static T Get<T>() => (T)singles[typeof(T)];
 
         /// <summary>
         /// Returns the single value at the given <code>Token</code> key casted to the specified <code>T</code> type.

@@ -4,19 +4,8 @@ using UnityEngine;
 
 namespace Orion.Prototyping
 {
-    public class MovingTilable : SomeTilable
+    public class MovingTilable : Tilable
     {
-        [SerializeField] private Token playAreaToken;
-
-        [Button]
-        public override void Place()
-        {
-            var playArea = Repository.Get<PlayArea>(playAreaToken);
-
-            transform.position = playArea[0, 0].Position;
-            playArea.Register(this);
-        }
-
         void Update()
         {
             var input = Vector2Int.zero;
@@ -28,13 +17,13 @@ namespace Orion.Prototyping
 
             if (input == Vector2Int.zero) return;
             
-            var playArea = Repository.Get<PlayArea>(playAreaToken);
+            var playArea = Repository.Get<PlayArea>();
             var index = Tile.Index + input;
             
             if (playArea.IndexedBounds.Contains(index) && !playArea[index][TilableType.NoteFragment].Any())
             {
                 transform.position = playArea[index].Position;
-                NotifyMove();
+                SendMoveNotification();
             }
         }
     }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Orion.Prototyping
 {
-    public abstract class SomeTilable : MonoBehaviour, ITilable
+    public abstract class Tilable : MonoBehaviour, ITilable
     {
         public event Action<ITilable> OnMove;
         
@@ -20,8 +20,15 @@ namespace Orion.Prototyping
         [SerializeField] protected TilableType type;
         
         private Tile tile;
+        
+        public virtual void Place(Vector2Int index)
+        {
+            var playArea = Repository.Get<PlayArea>();
 
-        protected void NotifyMove() => OnMove?.Invoke(this);
-        public abstract void Place();
+            transform.position = playArea[index].Position;
+            playArea.Register(this);
+        }
+        
+        protected void SendMoveNotification() => OnMove?.Invoke(this);
     }
 }
