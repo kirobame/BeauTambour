@@ -13,6 +13,13 @@ namespace BeauTambour.Prototyping
             return value;
         }
 
+        public static Vector2Int Clamp(this Vector2Int value, Vector2Int min, Vector2Int max)
+        {
+            value.x = Mathf.Clamp(value.x, min.x, max.x);
+            value.y = Mathf.Clamp(value.y, min.y, max.y);
+            return value;
+        }
+
         public static Vector2Int Floor(Vector2 position)
         {
             var flooredVector = new Vector2Int();
@@ -36,6 +43,13 @@ namespace BeauTambour.Prototyping
             value.y /= operand.y;
 
             return value;
+        }
+
+        public static bool IsInRange(this Vector2Int value, Vector2Int min, Vector2Int max)
+        {
+            var xIsInRange = value.x >= min.x && value.x <= max.x;
+            var yIsInRange = value.y >= min.y && value.y <= max.y;
+            return xIsInRange && yIsInRange;
         }
     }
 }

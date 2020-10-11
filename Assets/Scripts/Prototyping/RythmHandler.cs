@@ -28,11 +28,11 @@ namespace BeauTambour.Prototyping
             private Action<int> action;
             
             private int lastBeat = -1;
-            private double offset = 0f;
+            private double offset = 0d;
 
             public override void SetDuration(double offset, double duration)
             {
-                base.SetDuration(offset, duration);
+                base.SetDuration(offset, duration + 0.1d);
                 if (offset > 0)
                 {
                     TryInvoke(0d);
@@ -56,25 +56,21 @@ namespace BeauTambour.Prototyping
             public StandardAction(Action<double> action) => this.action = action;
             
             private Action<double> action;
-
-            private int max;
-            private double offset;
             private double margin;
 
             public override void SetDuration(double offset, double duration)
             {
                 base.SetDuration(offset, duration);
-                this.offset = offset;
-
-                max = (int)Math.Round(goal + offset);
                 margin = offset;
             }
             public override void TryInvoke(double delta)
             {
                 margin += delta;
-                if (margin >= 0d) action(MathBt.Clamp(time + offset, 0, max));
-              
-                base.TryInvoke(delta);
+                if (margin >= 0d)
+                {
+                    action(MathBt.Clamp01(time / goal));
+                    base.TryInvoke(delta);
+                }
             }
         }
         #endregion
@@ -86,6 +82,10 @@ namespace BeauTambour.Prototyping
         
         /// <summary>Callback for whenever the rythm hits.</summary> 
         public event Action<double> OnBeat;
+
+        /// <summary>Called each frame if active & has for parameter the time that has passed since last frame
+        /// in the AudioSystem.</summary> 
+        public event Action<double> OnTimeAdvance;
         
         //--------------------------------------------------------------------------------------------------------------
         
@@ -125,6 +125,7 @@ namespace BeauTambour.Prototyping
             var delta = beats - Beats;
             Beats = beats;
 
+            OnTimeAdvance?.Invoke(delta);
             HandleTimedActions(delta);
             
             var roundedBeats = (int)Math.Floor(Beats);
@@ -181,6 +182,15 @@ namespace BeauTambour.Prototyping
 
             return (flooredDifference, ceiledDifference);
         }
+
+        public bool IsOnTempo(double errorMargin = StandardErrorMargin)
+        {
+            var differences = GetDifferences();
+            var errorInBeats = errorMargin / SecondsPerBeats;
+
+            if (differences.floored <= errorInBeats || differences.ceiled <= errorInBeats) return true;
+            else return false;
+        }
         
         //--------------------------------------------------------------------------------------------------------------
         
@@ -209,13 +219,13 @@ namespace BeauTambour.Prototyping
         private bool TryEnqueue(TimedAction timedAction, int duration, double errorMargin)
         {
             if (!IsActive || errorMargin <= 0 || errorMargin > SecondsPerBeats) return false;
-
+            
             var differences = GetDifferences();
             var errorInBeats = errorMargin / SecondsPerBeats;
-
+            
             if (differences.floored <= errorInBeats) return EnqueueLateCall(timedAction, duration, differences.floored);
             else if (differences.ceiled <= errorInBeats) return EnqueueEarlyCall(timedAction, duration, differences.ceiled);
-
+            
             return false;
         }
 

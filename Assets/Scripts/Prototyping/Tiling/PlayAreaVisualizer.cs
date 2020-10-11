@@ -3,7 +3,7 @@ using Shapes;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace Orion.Prototyping
+namespace BeauTambour.Prototyping
 {
     public class PlayAreaVisualizer : MonoBehaviour
     {
@@ -22,6 +22,9 @@ namespace Orion.Prototyping
             {
                 for (var y = 0; y < playArea.Size.y; y++)
                 {
+                    Draw.ZTest = CompareFunction.LessEqual;
+                    Draw.ZOffsetUnits = -1;
+                    
                     Draw.Rectangle(playArea[x,y].Position, Vector3.forward, playArea.TileSize * 0.95f, tileCornerRadius, tileColor);
                 }
             }
