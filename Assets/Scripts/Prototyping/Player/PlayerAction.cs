@@ -14,7 +14,7 @@ namespace BeauTambour.Prototyping
 
         protected override void OnActionStarted(bool input)
         {
-            if (player.IsActionTypeClaimed(type) || !CanBeExecuted()) return;
+            if (!player.IsActive || player.IsActionTypeClaimed(type) || !CanBeExecuted()) return;
 
             var rythmHandler = Repository.Get<RythmHandler>();
             if (rythmHandler.TryPlainEnqueue(Execute, actionLength))

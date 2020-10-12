@@ -7,41 +7,28 @@ namespace BeauTambour.Prototyping
 {
     public class Helper : SerializedMonoBehaviour
     {
-        /*[SerializeField] private ICloneable _cloneable;
-        [SerializeField] private Token rythmHandlerToken;
-        [SerializeField, Min(1)] private int duration = 1;
+        #region Encapsuled Types
+
+        [Flags]
+        private enum SomeType
+        {
+            None = 0,
+            One = 1,
+            Two = 2,
+            Three = 4,
+            Four = 8,
+        }
+        #endregion
+
+        [SerializeField] private SomeType enumValue;
 
         [Button]
-        void Subscribe() => Repository.Get<RythmHandler>(rythmHandlerToken).OnBeat += Callback;
-
-        private void Callback(double beat)
+        void Check()
         {
-            var rythmHandler = Repository.Get<RythmHandler>(rythmHandlerToken);
-
-            rythmHandler.OnBeat -= Callback;
-            rythmHandler.TryStandardEnqueue(PrintTime, duration);
-        }
-        
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                var success = Repository.Get<RythmHandler>(rythmHandlerToken).TryStandardEnqueue(PrintTime, duration);
-                Debug.Log($"Standard Enqueue success : {success}");
-            }
+            var firstValue = SomeType.One | SomeType.Four | SomeType.Three;
+            var secondValue = SomeType.One | SomeType.Three;
             
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                var success = Repository.Get<RythmHandler>(rythmHandlerToken).TryPlainEnqueue(PrintBeat, duration);
-                Debug.Log($"Plain  Enqueue success : {success}");
-            }
+            Debug.Log((firstValue & secondValue) == secondValue);
         }
-
-        private void PrintBeat(int beat) => Debug.Log($"Beat : {beat}");
-        private void PrintTime(double time)
-        {
-            var seconds = Repository.Get<RythmHandler>(rythmHandlerToken).SecondsPerBeats * time;
-            Debug.Log($"Time : {time} / {seconds}");
-        }*/
     }
 }

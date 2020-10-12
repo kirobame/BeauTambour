@@ -25,7 +25,8 @@ namespace BeauTambour.Prototyping
         #endif
         
         public override object Link => this;
-        
+
+        public bool IsActive => Repository.Get<RoundHandler>().Current == PhaseType.Acting;
         public RectInt IndexedBounds
         {
             get

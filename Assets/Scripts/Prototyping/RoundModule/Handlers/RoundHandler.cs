@@ -4,16 +4,17 @@ using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class RoundHandler : SerializedMonoBehaviour, IBootable
 {
-    private RythmHandler rythmHandler;
-    [SerializeField]private Token rythmHandlerToken;
-
-    [SerializeField]private List<IPhase> phases;
-    private PhaseType actualPhaseType;
+    public PhaseType Current => actualPhaseType;
+    
+    [SerializeField] private List<IPhase> phases;
+    
+    [ShowInInspector, ReadOnly] private PhaseType actualPhaseType;
     private int actualPhaseIndex = 0;
     [SerializeField] private int indexReso;
 
@@ -21,8 +22,7 @@ public class RoundHandler : SerializedMonoBehaviour, IBootable
 
     private void Start()
     {
-        rythmHandler = Repository.Get<RythmHandler>(rythmHandlerToken);
-        rythmHandler.OnBeat += OnBeated;
+        Repository.Get<RythmHandler>().OnBeat += OnBeated;
         SubscribePhasesEvents();
         phases[indexReso].OnStart += HandleResolvable;
     }
@@ -30,8 +30,8 @@ public class RoundHandler : SerializedMonoBehaviour, IBootable
     #region BOOTABLE
     public void BootUp()
     {
-        phases = new List<IPhase>();
-        actualPhaseType = PhaseType.Start;      
+        resolvables = new List<IResolvable>();
+        actualPhaseType = phases.First().PhaseType;      
     }
 
     public void ShutDown()
