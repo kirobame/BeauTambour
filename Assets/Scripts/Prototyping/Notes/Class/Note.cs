@@ -1,5 +1,5 @@
 ﻿using Orion;
-using Orion.Prototyping;
+using BeauTambour.Prototyping;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class Note : Tilable, IResolvable
 {
+    public override object Link => this;
+
     private int priority;
     [SerializeField]private Shape shapesMatched;
     public int Priority { get => priority; set => priority = value; }
@@ -19,7 +21,7 @@ public class Note : Tilable, IResolvable
         {
             if (playArea[x, Tile.Index.y][TilableType.NoteRecipient].Any())
             {
-                Bloc block = playArea[x, Tile.Index.y][TilableType.NoteRecipient].First() as Bloc;
+                Bloc block = playArea[x, Tile.Index.y][TilableType.NoteRecipient].First().Link as Bloc;
                 if ((block.Shape & shapesMatched) == block.Shape)
                 {
                     Debug.Log("MATCH!");

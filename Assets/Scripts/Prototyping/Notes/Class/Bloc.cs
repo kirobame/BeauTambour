@@ -1,4 +1,4 @@
-﻿using Orion.Prototyping;
+﻿using BeauTambour.Prototyping;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Bloc : Tilable, IBootable
 {
+    public override object Link => this;
     [SerializeField]private Shape shape;
 
     public Shape Shape => shape;
