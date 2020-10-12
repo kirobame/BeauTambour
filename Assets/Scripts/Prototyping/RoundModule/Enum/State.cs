@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PhaseType
+public enum State
 {
     Start,
     Acting,
     Interstice,
     Resolution,
-    CutSCene,
     End
 }
