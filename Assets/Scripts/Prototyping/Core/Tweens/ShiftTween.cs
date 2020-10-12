@@ -19,18 +19,18 @@ namespace BeauTambour.Prototyping
         
         public void Tween(ITweenable<Vector2> tweenable, double ratio)
         {
-            var direction = (tweenable.Start - tweenable.End).normalized;
+            var direction = (tweenable.Onset - tweenable.Outset).normalized;
             direction *= Repository.Get<PlayArea>().TileSize;
             
             if (ratio < 0.5f)
             {
                 var time = curve.Evaluate((float)ratio) / midPoint;
-                tweenable.Apply(Vector2.Lerp(tweenable.Start, tweenable.Start + direction, time));
+                tweenable.Apply(Vector2.Lerp(tweenable.Onset, tweenable.Onset + direction, time));
             }
             else
             {
                 var time = (curve.Evaluate((float)ratio) - midPoint) / (1f - midPoint);
-                tweenable.Apply(Vector2.Lerp(tweenable.End - direction, tweenable.End, time));
+                tweenable.Apply(Vector2.Lerp(tweenable.Outset - direction, tweenable.Outset, time));
             }
         }
     }

@@ -17,7 +17,7 @@ namespace BeauTambour.Prototyping
 
         public void Tween(ITweenable<Vector2> tweenable, double ratio)
         {
-            tweenable.Apply(Vector2.Lerp(tweenable.Start, tweenable.End, curve.Evaluate((float)ratio)));
+            tweenable.Apply(Vector2.Lerp(tweenable.Onset, tweenable.Outset, curve.Evaluate((float)ratio)));
         }
     }
 }

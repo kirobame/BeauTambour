@@ -22,9 +22,7 @@ namespace BeauTambour.Prototyping
             {
                 for (var y = 0; y < playArea.Size.y; y++)
                 {
-                    Draw.ZTest = CompareFunction.LessEqual;
-                    Draw.ZOffsetUnits = -1;
-                    
+                    Draw.ZOffsetUnits = 2;
                     Draw.Rectangle(playArea[x,y].Position, Vector3.forward, playArea.TileSize * 0.95f, tileCornerRadius, tileColor);
                 }
             }

@@ -10,8 +10,8 @@ namespace BeauTambour.Prototyping
     {
         private static List<Color> availableColors = new List<Color>();
 
-        float ITweenable<float>.Start => 1f;
-        float ITweenable<float>.End => 0f;
+        float ITweenable<float>.Onset => 1f;
+        float ITweenable<float>.Outset => 0f;
         
         [SerializeField] private RegularPolygon polygon;
         [SerializeField] private Color[] colors;

@@ -3,40 +3,42 @@ using System.Collections.Generic;
 using Orion;
 using Shapes;
 using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public class Musician : Tilable, ITweenable<Vector2>
+    public class Musician : Tilable
     {
         public override object Link => this;
         
-        public Vector2 Start { get; private set; }
-        public Vector2 End { get; private set; }
-        
-        [FoldoutGroup("Events")] public OrionEvent<double> OnMove = new OrionEvent<double>();
-        [FoldoutGroup("Events")] public OrionEvent<double> OnShift = new OrionEvent<double>();
-        [FoldoutGroup("Events")] public OrionEvent OnNotePrepared = new OrionEvent();
-        [FoldoutGroup("Events")] public OrionEvent<Note> OnNotePlayed = new OrionEvent<Note>();
+        public OrionEvent<double> OnMove = new OrionEvent<double>();
+        public OrionEvent<double> OnShift = new OrionEvent<double>();
 
-        [SerializeField] private Note leftNotePrefab;
-        [SerializeField] private Note rightNotePrefab;
+        [SerializeField] private Note leftNote;
+        [SerializeField] private Note rightNote;
         
         private bool isShifting;
+
+        void Start()
+        {
+            leftNote.Place(Tile.Index);
+            rightNote.Place(Tile.Index);
+        }
         
         public void PrepareShift(int direction)
         {
             var playArea = Repository.Get<PlayArea>();
             var index = Tile.Index + Vector2Int.up * direction;
 
-            Start = Tile.Position;
+            Onset = Tile.Position;
             isShifting = true;
             
-            if (index.y < 0) End = playArea[0, playArea.Size.y - 1].Position;
-            else if (index.y >= playArea.Size.y) End = playArea[0, 0].Position;
+            if (index.y < 0) Outset = playArea[0, playArea.Size.y - 1].Position;
+            else if (index.y >= playArea.Size.y) Outset = playArea[0, 0].Position;
             else
             {
-                End = playArea[index].Position;
+                Outset = playArea[index].Position;
                 isShifting = false;
             }
         }
@@ -46,12 +48,16 @@ namespace BeauTambour.Prototyping
             else OnMove.Invoke(ratio);
         }
 
-        public void PrepareNote()
-
-        void ITweenable<Vector2>.Apply(Vector2 position)
+        public void PlayNote(int selection)
         {
-            Position = position;
-            ActualizeTiling();
+            var note = selection < 0 ? leftNote : rightNote;
+            
+            note.gameObject.SetActive(true);
+            note.transform.SetParent(null);
+            note.Position = Tile.Position;
+            note.ActualizeTiling();
+            
+            note.Activate();
         }
     }
 }

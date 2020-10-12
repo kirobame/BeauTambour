@@ -16,6 +16,9 @@ namespace BeauTambour.Prototyping
         //--------------------------------------------------------------------------------------------------------------
         
         public PhaseType CurrentType { get; private set; }
+
+        public IReadOnlyList<IPhase> Phases => phases;
+        public IPhase this[PhaseType type] => phases.Find(phase => phase.Type == type);
     
         //--------------------------------------------------------------------------------------------------------------
 
@@ -37,10 +40,12 @@ namespace BeauTambour.Prototyping
             advancement = 0;
             phases.First().Begin();
         }
-        public void ShutDown() => advancement = -2;
+        public void ShutDown() { }
 
         private void OnBeat(double beat)
         {
+            Debug.Log(CurrentType);
+            
             var shouldMoveToNext = phases[advancement].Advance();
             if (shouldMoveToNext)
             {
@@ -52,7 +57,8 @@ namespace BeauTambour.Prototyping
                     OnRoundLoop?.Invoke();
                 }
                 else advancement++;
-           
+
+                CurrentType = phases[advancement].Type;
                 phases[advancement].Begin();
             }
         }

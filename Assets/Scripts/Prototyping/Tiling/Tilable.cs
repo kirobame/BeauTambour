@@ -6,7 +6,7 @@ using Object = UnityEngine.Object;
 
 namespace BeauTambour.Prototyping
 {
-    public abstract class Tilable : SerializedMonoBehaviour, ITilable
+    public abstract class Tilable : SerializedMonoBehaviour, ITilable, ITweenable<Vector2>
     {
         public event Action<ITilable> OnMove;
 
@@ -25,6 +25,9 @@ namespace BeauTambour.Prototyping
             get => tile;
             set => tile = value;
         }
+        
+        public Vector2 Onset { get; protected set; }
+        public Vector2 Outset { get; protected set; }
 
         [SerializeField] protected TilableType type;
 
@@ -39,6 +42,18 @@ namespace BeauTambour.Prototyping
             playArea.Register(this);
         }
 
+        public void SetTweenMarks(Vector2 start, Vector2 end)
+        {
+            Onset = start;
+            Outset = end;
+        }
+
         public void ActualizeTiling() => OnMove?.Invoke(this);
+        
+        void ITweenable<Vector2>.Apply(Vector2 position)
+        {
+            Position = position;
+            ActualizeTiling();
+        }
     }
 }

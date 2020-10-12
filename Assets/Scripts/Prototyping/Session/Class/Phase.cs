@@ -12,6 +12,9 @@ namespace BeauTambour.Prototyping
         public event Action OnEnd;
 
         public PhaseType Type => type;
+
+        public int Length => Length;
+        public int Advancement => advancement;
     
         [SerializeField] private int length;
         [SerializeField] private PhaseType type;
@@ -27,6 +30,7 @@ namespace BeauTambour.Prototyping
             advancement++;
             return advancement >= length;
         }
+        public void Add(int value) => advancement += advancement;
 
         public virtual void Begin()
         {

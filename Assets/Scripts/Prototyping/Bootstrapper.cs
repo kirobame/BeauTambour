@@ -13,8 +13,7 @@ namespace BeauTambour.Prototyping
             var playArea = Repository.Get<PlayArea>();
             playArea.Generate();
             
-            Repository.Get<RoundHandler>().BootUp();
-            Repository.Get<RythmHandler>().BootUp();
+            Repository.Get<SessionHandler>().Begin();
 
             var player = Instantiate(playerPrefab);
             player.Place(Vector2Int.zero);

@@ -36,6 +36,8 @@ namespace BeauTambour.Prototyping
                 return new RectInt(horizontalLimits.x, verticalLimits.x, width, height);
             }
         }
+
+        [HideInInspector] public int phase = 1;
         
         [SerializeField, MinMaxSlider(0, "xMax")] private Vector2Int horizontalLimits;
         [SerializeField, MinMaxSlider(0, "yMax")] private Vector2Int verticalLimits;

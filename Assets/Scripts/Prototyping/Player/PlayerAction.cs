@@ -5,6 +5,8 @@ namespace BeauTambour.Prototyping
 {
     public abstract class PlayerAction : Module<bool>
     {
+        public int ActionLength => actionLength;
+        
         protected Player player => Repository.Get<Player>();
         protected abstract ActionType type { get; }
 
@@ -12,7 +14,11 @@ namespace BeauTambour.Prototyping
         
         private bool hasBeenFreed;
 
-        protected override void OnActionStarted(bool input)
+        protected override void OnActionStarted(bool input) => TryBeginExecution();
+        protected override void OnAction(bool input) { }
+        protected override void OnActionEnded(bool input) { }
+
+        protected void TryBeginExecution()
         {
             if (!player.IsActive || player.IsActionTypeClaimed(type) || !CanBeExecuted()) return;
 
@@ -23,9 +29,6 @@ namespace BeauTambour.Prototyping
                 rythmHandler.MakeStandardEnqueue(ResolveTime, actionLength);
             }
         }
-        protected override void OnAction(bool input) { }
-        protected override void OnActionEnded(bool input) { }
-
         protected abstract bool CanBeExecuted();
 
         protected virtual void Execute(int beat, double offset)

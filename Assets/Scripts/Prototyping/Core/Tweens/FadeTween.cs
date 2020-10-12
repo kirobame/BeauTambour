@@ -22,12 +22,12 @@ namespace BeauTambour.Prototyping
             if (ratio < 0.5f)
             {
                 var time = curve.Evaluate((float)ratio) / midPoint;
-                tweenable.Apply(Mathf.Lerp(tweenable.Start, tweenable.End, time));
+                tweenable.Apply(Mathf.Lerp(tweenable.Onset, tweenable.Outset, time));
             }
             else
             {
                 var time = (curve.Evaluate((float)ratio) - midPoint) / (1f - midPoint);
-                tweenable.Apply(Mathf.Lerp(tweenable.End, tweenable.Start, time));
+                tweenable.Apply(Mathf.Lerp(tweenable.Outset, tweenable.Onset, time));
             }
         }
     }
