@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Orion;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -12,39 +13,43 @@ namespace BeauTambour.Prototyping
 
         private abstract class TimedAction
         {
-            public bool IsDone => time >= goal;
+            public abstract bool IsDone { get; }
             
-            protected double goal;
             protected double time;
+            protected double offset;
 
-            public virtual void SetDuration(double offset, double duration) => goal = duration;
+            public virtual void SetDuration(double offset, double duration) => this.offset = offset;
             public virtual void TryInvoke(double delta) => time += delta;
         }
 
         private class PlainAction : TimedAction
         {
-            public PlainAction(Action<int> action) => this.action = action;
-            
-            private Action<int> action;
+            public PlainAction(Action<int,double> action) => this.action = action;
+
+            public override bool IsDone => lastBeat == beatGoal;
+
+            private Action<int,double> action;
             
             private int lastBeat = -1;
-            private double offset = 0d;
+            private int beatGoal;
 
             public override void SetDuration(double offset, double duration)
             {
-                base.SetDuration(offset, duration + 0.1d);
                 if (offset > 0)
                 {
+                    beatGoal = (int)Math.Ceiling(duration - offset);
+                    
                     TryInvoke(0d);
-                    this.offset = offset + 0.1d;
+                    this.offset = offset;
                 }
+                else beatGoal = (int)Math.Floor(duration - offset);
             }
             public override void TryInvoke(double delta)
             {
                 var beat = (int)Math.Floor(time + offset);
                 if (lastBeat != beat)
                 {
-                    action(beat);
+                    action(beat, offset);
                     lastBeat = beat;
                 }
                 
@@ -53,24 +58,23 @@ namespace BeauTambour.Prototyping
         }
         private class StandardAction : TimedAction
         {
-            public StandardAction(Action<double> action) => this.action = action;
-            
-            private Action<double> action;
-            private double margin;
+            public StandardAction(Action<double,double> action) => this.action = action;
+
+            public override bool IsDone => time >= goal;
+
+            private Action<double,double> action;
+
+            private double goal;
 
             public override void SetDuration(double offset, double duration)
             {
-                base.SetDuration(offset, duration);
-                margin = offset;
+                if (offset > 0) this.offset = offset;
+                goal = duration;
             }
             public override void TryInvoke(double delta)
             {
-                margin += delta;
-                if (margin >= 0d)
-                {
-                    action(MathBt.Clamp01(time / goal));
-                    base.TryInvoke(delta);
-                }
+                action(time, offset);
+                base.TryInvoke(delta);
             }
         }
         #endregion
@@ -111,6 +115,7 @@ namespace BeauTambour.Prototyping
         private double pauseTime;
         private int lastBeat = -1;
         
+        private Queue<TimedAction> earlyActions = new Queue<TimedAction>();
         private List<TimedAction> timedActions = new List<TimedAction>();
         
         //--------------------------------------------------------------------------------------------------------------
@@ -133,6 +138,12 @@ namespace BeauTambour.Prototyping
             {
                 lastBeat = roundedBeats;
                 OnBeat?.Invoke(lastBeat);
+
+                while (earlyActions.Count > 0)
+                {
+                    var timedAction = earlyActions.Dequeue();
+                    timedActions.Add(timedAction);
+                }
             }
         }
         
@@ -200,7 +211,7 @@ namespace BeauTambour.Prototyping
         /// <param name="duration">The number of times the callback will be called.</param>
         /// <param name="errorMargin">The maximum difference in seconds compared to the next or previous beat for the
         /// call to be considered correct.</param>
-        public bool TryStandardEnqueue(Action<double> action, int duration, double errorMargin = StandardErrorMargin)
+        public bool TryStandardEnqueue(Action<double,double> action, int duration, double errorMargin = StandardErrorMargin)
         {
             var standardAction = new StandardAction(action);
             return TryEnqueue(standardAction, duration, errorMargin);
@@ -211,7 +222,7 @@ namespace BeauTambour.Prototyping
         /// <param name="duration">The duration in beats during which the callback will be called.</param>
         /// <param name="errorMargin">The maximum difference in seconds compared to the next or previous beat for the
         /// call to be considered correct.</param>
-        public bool TryPlainEnqueue(Action<int> action, int duration, double errorMargin = StandardErrorMargin)
+        public bool TryPlainEnqueue(Action<int,double> action, int duration, double errorMargin = StandardErrorMargin)
         {
             var plainAction = new PlainAction(action);
             return TryEnqueue(plainAction, duration, errorMargin);
@@ -233,11 +244,11 @@ namespace BeauTambour.Prototyping
         /// the call was made.</summary>
         /// <param name="action">The callback.</param>
         /// <param name="duration">The number of times the callback will be called.</param>
-        public void MakePlainEnqueue(Action<int> action, int duration) => Enqueue(new PlainAction(action), duration);
+        public void MakePlainEnqueue(Action<int,double> action, int duration) => Enqueue(new PlainAction(action), duration);
         /// <summary>Queues a callback which will be called each frame for a certain duration in beats.</summary>
         /// <param name="action">The callback.</param>
         /// <param name="duration">The duration in beats during which the callback will be called.</param>
-        public void MakeStandardEnqueue(Action<double> action, int duration) => Enqueue(new StandardAction(action), duration);
+        public void MakeStandardEnqueue(Action<double,double> action, int duration) => Enqueue(new StandardAction(action), duration);
         private void Enqueue(TimedAction timedAction, int duration)
         {
             var differences = GetDifferences();
@@ -247,8 +258,8 @@ namespace BeauTambour.Prototyping
         
         private bool EnqueueEarlyCall(TimedAction timedAction, int duration, double difference)
         {
-            timedAction.SetDuration(-difference, duration + difference);
-            timedActions.Add(timedAction);
+            timedAction.SetDuration(-difference, duration);
+            earlyActions.Enqueue(timedAction);
                 
             return true;
         }

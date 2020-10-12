@@ -38,7 +38,7 @@ namespace BeauTambour.Prototyping
             transform.position = playArea[index].Position;
             playArea.Register(this);
         }
-        
-        public void SendMoveNotification() => OnMove?.Invoke(this);
+
+        public void ActualizeTiling() => OnMove?.Invoke(this);
     }
 }

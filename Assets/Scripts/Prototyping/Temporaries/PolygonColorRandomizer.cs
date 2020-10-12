@@ -6,10 +6,13 @@ using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public class PolygonColorRandomizer : MonoBehaviour
+    public class PolygonColorRandomizer : MonoBehaviour, ITweenable<float>
     {
         private static List<Color> availableColors = new List<Color>();
 
+        float ITweenable<float>.Start => 1f;
+        float ITweenable<float>.End => 0f;
+        
         [SerializeField] private RegularPolygon polygon;
         [SerializeField] private Color[] colors;
 
@@ -30,6 +33,14 @@ namespace BeauTambour.Prototyping
             polygon.Color = availableColors[index];
             
             availableColors.RemoveAt(index);
+        }
+
+        void ITweenable<float>.Apply(float value)
+        {
+            var color = polygon.Color;
+            color.a = value;
+
+            polygon.Color = color;
         }
     }
 }

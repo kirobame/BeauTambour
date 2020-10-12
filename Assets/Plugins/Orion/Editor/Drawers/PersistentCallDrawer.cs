@@ -137,10 +137,13 @@ namespace Orion.Editor
 
             parameterFoldout.Value = EditorGUILayout.Foldout(parameterFoldout.Value, new GUIContent("Parameters"));
             if (SirenixEditorGUI.BeginFadeGroup(this, parameterFoldout.Value))
-            { 
-                var linkage = ((ILinkage)persistentCall).Linkage;
+            {
+                var linkageProperty = Property.Children[2];
+                var linkage = linkageProperty.ValueEntry.WeakSmartValue as bool[,];
                 var parameters = current.GetParameters();
 
+                var dirtyFlag = false;
+                
                 if (persistentCall.Info != string.Empty)
                 {
                     for (var x = 0; x < parameters.Length; x++)
@@ -149,7 +152,7 @@ namespace Orion.Editor
                         var width = size + 15f;
             
                         var rect = GUILayoutUtility.GetLastRect().AddPosition(0f, size + 2f);
-                        rect = new Rect(new Vector2(rect.x + GUIHelper.BetterLabelWidth - width -2f, rect.y), new Vector2(width, rect.height));
+                        rect = new Rect(new Vector2(rect.x + GUIHelper.BetterLabelWidth - width -21f, rect.y), new Vector2(width, rect.height));
                 
                         var selection = -1;
                         var availableIndices = new List<int>();
@@ -182,20 +185,37 @@ namespace Orion.Editor
                     
                             for (var y = 0; y < argTypes.Length; y++)
                             {
-                                if (y == selection) linkage[x,y] = true;
+                                if (y == selection)
+                                {
+                                    if (linkage[x, y] == false) dirtyFlag = true;
+                                    linkage[x,y] = true;
+                                }
                                 else linkage[x,y] = false;
                             }
                         }
-                        else for (var y = 0; y < argTypes.Length; y++) linkage[x,y] = false;
-                
-                        Property.Children[2 + x].Draw(new GUIContent(ObjectNames.NicifyVariableName(parameters[x].Name)));
+                        else
+                        {
+                            for (var y = 0; y < argTypes.Length; y++)
+                            {
+                                if (linkage[x, y] == true) dirtyFlag = true;
+                                linkage[x,y] = false;
+                            }
+                        }
+                        
+                        Property.Children[3 + x].Draw(new GUIContent(ObjectNames.NicifyVariableName(parameters[x].Name)));
+                    }
+
+                    if (dirtyFlag)
+                    {
+                        InspectorUtilities.RegisterUnityObjectDirty(Property.SerializationRoot.Tree.UnitySerializedObject.targetObject);
+                        linkageProperty.ValueEntry.WeakSmartValue = linkage;
                     }
                 }
                 else
                 {
                     for (var x = 0; x < parameters.Length; x++)
                     {
-                        Property.Children[2 + x].Draw(new GUIContent(ObjectNames.NicifyVariableName(parameters[x].Name)));
+                        Property.Children[3 + x].Draw(new GUIContent(ObjectNames.NicifyVariableName(parameters[x].Name)));
                     }
                 }
             }

@@ -19,6 +19,8 @@ namespace Orion
             if (HasBinder) return;
 
             Binder = binder;
+            HasBinder = true;
+            
             binder.onActionStarted += OnActionStarted;
             binder.onActionEnded += OnActionEnded;
         }
@@ -28,7 +30,9 @@ namespace Orion
 
             Binder.onActionStarted -= OnActionStarted;
             Binder.onActionEnded -= OnActionEnded;
+            
             Binder = null;
+            HasBinder = false;
         }
 
         protected virtual void OnActionStarted(object input)

@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 648852174308086515}
   - component: {fileID: 648852174308086514}
   - component: {fileID: 2776540188493242044}
+  - component: {fileID: 9110308013039965631}
+  - component: {fileID: 5075287698147108118}
+  - component: {fileID: 6148247765336496758}
   m_Layer: 0
   m_Name: Musician
   m_TagString: Untagged
@@ -49,121 +52,75 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: a73e6684c34c02b4888797052da08a8e, type: 2}
+    - {fileID: 9110308013039965631}
+    - {fileID: 648852174308086514}
+    - {fileID: 5075287698147108118}
+    - {fileID: 6148247765336496758}
+    - {fileID: 648852174360936810}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: fadeCurveProxy
+    - Name: OnMove
       Entry: 7
-      Data: 0|Orion.WrappedValue`1[[UnityEngine.AnimationCurve, UnityEngine.CoreModule]],
-        Assembly-CSharp-firstpass
-    - Name: value
+      Data: 0|Orion.OrionEvent`1[[System.Double, mscorlib]], Assembly-CSharp-firstpass
+    - Name: persistentCalls
       Entry: 7
-      Data: 1|UnityEngine.AnimationCurve, UnityEngine.CoreModule
-    - Name: 
-      Entry: 7
-      Data: 2|UnityEngine.Keyframe[], UnityEngine.CoreModule
+      Data: 1|Orion.PersistentCallBase[], Assembly-CSharp-firstpass
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 7
-      Data: UnityEngine.Keyframe, UnityEngine.CoreModule
-    - Name: ver
-      Entry: 3
-      Data: 1
-    - Name: m_Time
-      Entry: 4
+      Data: 2|Orion.PersistentCall`2[[BeauTambour.Prototyping.ITweenable`1[[UnityEngine.Vector2,
+        UnityEngine.CoreModule]], Assembly-CSharp],[System.Double, mscorlib]], Assembly-CSharp-firstpass
+    - Name: info
+      Entry: 1
+      Data: System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: target
+      Entry: 10
       Data: 0
-    - Name: m_Value
-      Entry: 4
-      Data: 0
-    - Name: m_InTangent
-      Entry: 4
-      Data: 3.56220078
-    - Name: m_OutTangent
-      Entry: 4
-      Data: 3.56220078
-    - Name: m_TangentMode
-      Entry: 3
-      Data: 0
-    - Name: m_WeightedMode
-      Entry: 3
-      Data: 0
-    - Name: m_InWeight
-      Entry: 4
-      Data: 0
-    - Name: m_OutWeight
-      Entry: 4
-      Data: 0.175929278
+    - Name: method
+      Entry: 1
+      Data: Tween/BeauTambour.Prototyping.ITweenable`1[[UnityEngine.Vector2, UnityEngine.CoreModule,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null/System.Double, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: linkage
+      Entry: 7
+      Data: 3|System.Boolean[,], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: ranks
+      Entry: 1
+      Data: 2|1
+    - Name: 
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 13
+      Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
+    - Name: parameterOne
       Entry: 7
-      Data: UnityEngine.Keyframe, UnityEngine.CoreModule
-    - Name: ver
-      Entry: 3
+      Data: 4|Orion.WrappedValue`1[[BeauTambour.Prototyping.ITweenable`1[[UnityEngine.Vector2,
+        UnityEngine.CoreModule]], Assembly-CSharp]], Assembly-CSharp-firstpass
+    - Name: value
+      Entry: 10
       Data: 1
-    - Name: m_Time
-      Entry: 4
-      Data: 0.242599264
-    - Name: m_Value
-      Entry: 4
-      Data: 0.5905498
-    - Name: m_InTangent
-      Entry: 4
-      Data: 1.41869831
-    - Name: m_OutTangent
-      Entry: 4
-      Data: 1.41869831
-    - Name: m_TangentMode
-      Entry: 3
-      Data: 0
-    - Name: m_WeightedMode
-      Entry: 3
-      Data: 0
-    - Name: m_InWeight
-      Entry: 4
-      Data: 0.419433326
-    - Name: m_OutWeight
-      Entry: 4
-      Data: 0.101251043
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 7
-      Data: UnityEngine.Keyframe, UnityEngine.CoreModule
-    - Name: ver
-      Entry: 3
-      Data: 1
-    - Name: m_Time
-      Entry: 4
-      Data: 1
-    - Name: m_Value
-      Entry: 4
-      Data: 1
-    - Name: m_InTangent
-      Entry: 4
-      Data: 0.0455668
-    - Name: m_OutTangent
-      Entry: 4
-      Data: 0.0455668
-    - Name: m_TangentMode
-      Entry: 3
-      Data: 0
-    - Name: m_WeightedMode
-      Entry: 3
-      Data: 0
-    - Name: m_InWeight
-      Entry: 4
-      Data: 0.1262528
-    - Name: m_OutWeight
-      Entry: 4
-      Data: 0
+    - Name: parameterTwo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -174,22 +131,133 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 3
-      Data: 8
-    - Name: 
-      Entry: 3
-      Data: 8
-    - Name: 
       Entry: 8
       Data: 
+    - Name: OnShift
+      Entry: 7
+      Data: 5|Orion.OrionEvent`1[[System.Double, mscorlib]], Assembly-CSharp-firstpass
+    - Name: persistentCalls
+      Entry: 7
+      Data: 6|Orion.PersistentCallBase[], Assembly-CSharp-firstpass
     - Name: 
-      Entry: 8
-      Data: 
-    - Name: moveCurveProxy
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 7|Orion.PersistentCall`2[[BeauTambour.Prototyping.ITweenable`1[[UnityEngine.Vector2,
+        UnityEngine.CoreModule]], Assembly-CSharp],[System.Double, mscorlib]], Assembly-CSharp-firstpass
+    - Name: info
+      Entry: 1
+      Data: System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: target
       Entry: 10
-      Data: 0
+      Data: 2
+    - Name: method
+      Entry: 1
+      Data: Tween/BeauTambour.Prototyping.ITweenable`1[[UnityEngine.Vector2, UnityEngine.CoreModule,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null/System.Double, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: linkage
+      Entry: 7
+      Data: 8|System.Boolean[,], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: ranks
+      Entry: 1
+      Data: 2|1
+    - Name: 
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parameterOne
+      Entry: 7
+      Data: 9|Orion.WrappedValue`1[[BeauTambour.Prototyping.ITweenable`1[[UnityEngine.Vector2,
+        UnityEngine.CoreModule]], Assembly-CSharp]], Assembly-CSharp-firstpass
+    - Name: value
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parameterTwo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|Orion.PersistentCall`2[[BeauTambour.Prototyping.ITweenable`1[[System.Single,
+        mscorlib]], Assembly-CSharp],[System.Double, mscorlib]], Assembly-CSharp-firstpass
+    - Name: info
+      Entry: 1
+      Data: System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: target
+      Entry: 10
+      Data: 3
+    - Name: method
+      Entry: 1
+      Data: Tween/BeauTambour.Prototyping.ITweenable`1[[System.Single, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null/System.Double, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - Name: linkage
+      Entry: 7
+      Data: 11|System.Boolean[,], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: ranks
+      Entry: 1
+      Data: 2|1
+    - Name: 
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parameterOne
+      Entry: 7
+      Data: 12|Orion.WrappedValue`1[[BeauTambour.Prototyping.ITweenable`1[[System.Single,
+        mscorlib]], Assembly-CSharp]], Assembly-CSharp-firstpass
+    - Name: value
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parameterTwo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   type: 4
-  polygon: {fileID: 648852174360936811}
 --- !u!114 &2776540188493242044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +274,81 @@ MonoBehaviour:
   token: {fileID: 11400000, guid: 4cda90e8f04acc84dbf452b5fbaac3f3, type: 2}
   values:
   - {fileID: 648852174308086514}
+--- !u!114 &9110308013039965631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648852174308086512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dd02d48bf773749beb1c9c590ed257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a73e6684c34c02b4888797052da08a8e, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: curveProxy
+      Entry: 10
+      Data: 0
+--- !u!114 &5075287698147108118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648852174308086512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2e405676645a0a9e92bbe622951e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a73e6684c34c02b4888797052da08a8e, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: curveProxy
+      Entry: 10
+      Data: 0
+--- !u!114 &6148247765336496758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648852174308086512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5914c61e89904b7a8ded94012ea58ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a73e6684c34c02b4888797052da08a8e, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: curveProxy
+      Entry: 10
+      Data: 0
 --- !u!1 &648852174360936823
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,11 @@ namespace Orion
         private void OnModuleChanged()
         {
             if (module == null) return;
-            var inputType = module.GetType().BaseType.GetGenericArguments().First();
+            
+            var inputType = module.GetType().BaseType;
+            while (!inputType.GetGenericArguments().Any()) inputType = inputType.BaseType;
+
+            inputType = inputType.GetGenericArguments().First();
             
             var binderType = typeof(Binder<>).MakeGenericType(inputType);
             binder = Activator.CreateInstance(binderType) as Binder;

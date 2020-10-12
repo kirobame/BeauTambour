@@ -19,11 +19,9 @@ namespace Orion
         }
     }
 
-    public class PersistentCall<T> : PersistentCallBase, ILinkage
+    public class PersistentCall<T> : PersistentCallBase
     {
-        public bool[,] Linkage => linkage;
-        
-        [SerializeField, HideInInspector] private bool[,] linkage;
+        [SerializeField] private bool[,] linkage;
 
         [SerializeField, EnableIf("IsParameterOneDynamic")] private IReadable<T> parameterOne;
         
@@ -63,11 +61,9 @@ namespace Orion
         }
     }
     
-    public class PersistentCall<T1,T2> : PersistentCallBase, ILinkage
+    public class PersistentCall<T1,T2> : PersistentCallBase
     {
-        public bool[,] Linkage => linkage;
-        
-        [SerializeField, HideInInspector] private bool[,] linkage;
+        [SerializeField] private bool[,] linkage;
 
         [SerializeField, EnableIf("IsParameterOneDynamic")] private IReadable<T1> parameterOne;
         [SerializeField, EnableIf("IsParameterTwoDynamic")] private IReadable<T2> parameterTwo;
@@ -113,11 +109,9 @@ namespace Orion
         }
     }
     
-    public class PersistentCall<T1,T2,T3> : PersistentCallBase, ILinkage
+    public class PersistentCall<T1,T2,T3> : PersistentCallBase
     {
-        public bool[,] Linkage => linkage;
-        
-        [SerializeField, HideInInspector] private bool[,] linkage;
+        [SerializeField] private bool[,] linkage;
 
         [SerializeField, EnableIf("IsParameterOneDynamic")] private IReadable<T1> parameterOne;
         [SerializeField, EnableIf("IsParameterTwoDynamic")] private IReadable<T2> parameterTwo;
@@ -166,11 +160,9 @@ namespace Orion
         }
     }
     
-    public class PersistentCall<T1,T2,T3,T4> : PersistentCallBase, ILinkage
+    public class PersistentCall<T1,T2,T3,T4> : PersistentCallBase
     {
-        public bool[,] Linkage => linkage;
-        
-        [SerializeField, HideInInspector] private bool[,] linkage;
+        [SerializeField] private bool[,] linkage;
 
         [SerializeField, EnableIf("IsParameterOneDynamic")] private IReadable<T1> parameterOne;
         [SerializeField, EnableIf("IsParameterTwoDynamic")] private IReadable<T2> parameterTwo;

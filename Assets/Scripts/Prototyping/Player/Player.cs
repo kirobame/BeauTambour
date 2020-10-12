@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Orion;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -33,22 +35,12 @@ namespace BeauTambour.Prototyping
                 return new RectInt(horizontalLimits.x, verticalLimits.x, width, height);
             }
         }
-
-        public bool IsCurrentBeatClaimed { get; private set; }
-
+        
         [SerializeField, MinMaxSlider(0, "xMax")] private Vector2Int horizontalLimits;
         [SerializeField, MinMaxSlider(0, "yMax")] private Vector2Int verticalLimits;
 
-        private double inputClock;
+        [ShowInInspector, ReadOnly] private HashSet<ActionType> claimedActionTypes = new HashSet<ActionType>();
         
-        void Start()
-        {
-            var rythmHandler = Repository.Get<RythmHandler>();
-
-            rythmHandler.OnBeat += OnBeat;
-            rythmHandler.OnTimeAdvance += OnTimeAdvance;
-        }
-
         public override void Place(Vector2Int index)
         {
             var indexedBounds = IndexedBounds;
@@ -57,17 +49,12 @@ namespace BeauTambour.Prototyping
             base.Place(index);
         }
 
-        public void ClaimCurrentBeat()
+        public bool IsActionTypeClaimed(ActionType type) => claimedActionTypes.Contains(type);
+        public void ClaimActionType(ActionType type)
         {
-            if (IsCurrentBeatClaimed) return;
-            IsCurrentBeatClaimed = true;
+            if (claimedActionTypes.Contains(type)) return;
+            claimedActionTypes.Add(type);
         }
-
-        private void OnBeat(double beat) => inputClock = 0d;
-        private void OnTimeAdvance(double delta)
-        {
-            if (IsCurrentBeatClaimed && inputClock >= 1d - RythmHandler.StandardErrorMargin) IsCurrentBeatClaimed = false;
-            inputClock += delta;
-        }
+        public void FreeActionType(ActionType type) => claimedActionTypes.Remove(type);
     }
 }
