@@ -15,20 +15,21 @@ public class RoundHandler : SerializedMonoBehaviour, IBootable
     [SerializeField]private List<IPhase> phases;
     private PhaseType actualPhaseType;
     private int actualPhaseIndex = 0;
+    [SerializeField] private int indexReso;
 
-    private List<IResolvable> resolvables;
+    private List<IResolvable> resolvables = new List<IResolvable>();
 
     private void Start()
     {
         rythmHandler = Repository.Get<RythmHandler>(rythmHandlerToken);
         rythmHandler.OnBeat += OnBeated;
         SubscribePhasesEvents();
+        phases[indexReso].OnStart += HandleResolvable;
     }
 
     #region BOOTABLE
     public void BootUp()
     {
-        resolvables = new List<IResolvable>();
         phases = new List<IPhase>();
         actualPhaseType = PhaseType.Start;      
     }
@@ -41,6 +42,15 @@ public class RoundHandler : SerializedMonoBehaviour, IBootable
         phases = null;
     }
     #endregion
+
+    private void HandleResolvable()
+    {
+        foreach (IResolvable resolvable in resolvables)
+        {
+            resolvable.Resolve();
+        }
+        resolvables.Clear();
+    }
 
     /// <summary>
     /// Add an IResolvable object in the priority Queue (high priority -> used in first)

@@ -354,8 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd06e5766a6456449c00342744aafca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  token: {fileID: 11400000, guid: 9964d5b60ca0e2d4e9952d599701352c, type: 2}
   lifetimeLinkage: 0
+  token: {fileID: 11400000, guid: 9964d5b60ca0e2d4e9952d599701352c, type: 2}
   value: {fileID: 631571190}
 --- !u!1 &724030544
 GameObject:
@@ -367,6 +367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724030546}
   - component: {fileID: 724030545}
+  - component: {fileID: 724030547}
   m_Layer: 0
   m_Name: RoundHandler
   m_TagString: Untagged
@@ -420,6 +421,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   rythmHandlerToken: {fileID: 11400000, guid: 9964d5b60ca0e2d4e9952d599701352c, type: 2}
+  indexReso: 2
 --- !u!4 &724030546
 Transform:
   m_ObjectHideFlags: 0
@@ -434,6 +436,96 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &724030547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724030544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c608f37d6b47a7b100579451a69e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetimeLinkage: 0
+  value: {fileID: 724030545}
+--- !u!1 &1277874622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277874624}
+  - component: {fileID: 1277874623}
+  - component: {fileID: 1277874625}
+  - component: {fileID: 1277874626}
+  m_Layer: 0
+  m_Name: PlayArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1277874623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277874622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047ad43ee25211e498502978d6e4f857, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileSize: {x: 1, y: 1}
+  size: {x: 10, y: 5}
+--- !u!4 &1277874624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277874622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1277874625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277874622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fbb2ac1eeef4744a4e5d07a0749c335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playArea: {fileID: 1277874623}
+  tileCornerRadius: 0.05
+  tileColor: {r: 1, g: 1, b: 1, a: 0.33333334}
+--- !u!114 &1277874626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277874622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c608f37d6b47a7b100579451a69e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetimeLinkage: 0
+  value: {fileID: 1277874623}
 --- !u!1 &1280759632
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +627,7 @@ GameObject:
   - component: {fileID: 1687258585}
   - component: {fileID: 1687258582}
   - component: {fileID: 1687258584}
+  - component: {fileID: 1687258583}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -550,6 +643,37 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
   m_Enabled: 1
+--- !u!114 &1687258583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687258581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: 0
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 2
+  m_AntialiasingQuality: 2
+  m_StopNaN: 1
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!20 &1687258584
 Camera:
   m_ObjectHideFlags: 0
@@ -575,9 +699,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  field of view: 131.8
+  orthographic: 1
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -637,6 +761,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rythm: {fileID: 631571190}
+  playAera: {fileID: 1277874623}
+  prefabBlock: {fileID: 5038708712745727849, guid: c1da9d12167e9c94eafd737a60bfedbd,
+    type: 3}
+  prefabNote: {fileID: 8061962274889224890, guid: 6fa5f020a8d0fc543ad9035dba724624,
+    type: 3}
 --- !u!4 &1713724080
 Transform:
   m_ObjectHideFlags: 0
