@@ -1,55 +1,47 @@
 ﻿using BeauTambour.Prototyping;
 using Orion;
+using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
-public class RoundHandler : MonoBehaviour, IBootable
+public class RoundHandler : SerializedMonoBehaviour, IBootable
 {
-    private const int actingLength = 8;
-    private const int intersticeLength = 8;
-    private const int resolutionLength = 8;
-
     private RythmHandler rythmHandler;
     [SerializeField]private Token rythmHandlerToken;
-    private double beatsPerSeconds = 1.25f;
-    private State state;
+
+    [SerializeField]private List<IPhase> phases;
+    private PhaseType actualPhaseType;
+    private int actualPhaseIndex = 0;
+
     private List<IResolvable> resolvables;
-    private bool roundEnded = false;
-    private int roundBeats = 0;
-
-    public event Action onActingStart;
-
-    public event Action onActingEnd;
 
     private void Start()
     {
         rythmHandler = Repository.Get<RythmHandler>(rythmHandlerToken);
         rythmHandler.OnBeat += OnBeated;
+        SubscribePhasesEvents();
     }
 
-    public void RoundProgress()
-    {
-        roundBeats = 0;
-        do
-        {      
-            // Waiting for Beat -> see OnBeated
-        } while (!roundEnded);
-    }
-
+    #region BOOTABLE
     public void BootUp()
     {
         resolvables = new List<IResolvable>();
-        state = State.Acting;
-        roundEnded = false;        
+        phases = new List<IPhase>();
+        actualPhaseType = PhaseType.Start;      
     }
 
     public void ShutDown()
     {
         resolvables.Clear();
         resolvables = null;
+        phases.Clear();
+        phases = null;
     }
+    #endregion
+
     /// <summary>
     /// Add an IResolvable object in the priority Queue (high priority -> used in first)
     /// </summary>
@@ -67,55 +59,78 @@ public class RoundHandler : MonoBehaviour, IBootable
             }
         );
         return true;
-    }    
+    }
 
     /// <summary>
-    /// Subscribe to a callback launched at the acting's start
+    /// Subscribe to Start and End events of phases
     /// </summary>
-    /// <param name="toDo">the action that the callback have to do</param>
-    public void ActingStartSubscribe(Action toDo)
+    private void SubscribePhasesEvents()
     {
-        onActingStart += toDo;
-    }
-    public void ActingdEndSubscribe(Action toDo)
-    {
-        onActingEnd-= toDo;
-    }
-
-    private void PhaseChanging(int beats)
-    {
-        if(beats >= actingLength + intersticeLength + resolutionLength)
+        foreach (IPhase phase in phases)
         {
-            state = State.End;
-        }
-        else if(beats >= actingLength + intersticeLength)
-        {
-            state = State.Resolution;
-        }
-        else if(beats >= actingLength )
-        {
-            state = State.Interstice;
+            phase.OnStart += OnPhaseStarted;
+            phase.OnEnd += OnPhaseEnded;
         }
     }
 
+    /// <summary>
+    /// Reset the roundHandler to start a new round
+    /// </summary>
+    private void ResetRound()
+    {
+        actualPhaseIndex = 0;
+        actualPhaseType = PhaseType.Start;
+    }
+
+    #region CALLBACKS
+
+    /// <summary>
+    /// Called when beat lauched
+    /// </summary>
+    /// <param name="beat">actual number of beats in the whole session</param>
     private void OnBeated(double beat)
     {
-        roundBeats++;
-        PhaseChanging(roundBeats);
-        switch (state)
+        phases[actualPhaseIndex].Advance();
+        switch (actualPhaseType)
         {
-            case State.Acting:
+            case PhaseType.Acting:
                 //Déroulement
+                Debug.Log("Acting");
                 break;
-            case State.Interstice:
+            case PhaseType.Interstice:
                 //Déroulement
+                Debug.Log("Inter");
                 break;
-            case State.Resolution:
+            case PhaseType.Resolution:
                 //Déroulement
+                Debug.Log("Resolution");
                 break;
-            case State.End:
-                roundEnded = true;
+            case PhaseType.End:
+                Debug.Log("Ended");
+                ResetRound();                
                 break;
         }
     }
+
+    /// <summary>
+    /// Called when a phase start
+    /// </summary>
+    private void OnPhaseStarted()
+    {
+        actualPhaseType = phases[actualPhaseIndex].PhaseType;
+    }
+
+    /// <summary>
+    /// Called when a phase end
+    /// </summary>
+    private void OnPhaseEnded()
+    {
+        actualPhaseIndex++;
+        if (actualPhaseIndex >= phases.Count)
+        {
+            actualPhaseType = PhaseType.End;
+            return;
+        }
+    }
+    #endregion
 }
