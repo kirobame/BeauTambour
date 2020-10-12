@@ -27,13 +27,13 @@ namespace Orion
         /// <summary>
         /// All <code>StackReferencer</code> which are currently active & storing their content.
         /// </summary>
-        public static IReadOnlyDictionary<Token, StackReferencer> StackReferencers => stackReferencers;
+        public static IReadOnlyDictionary<Token, List<StackReferencer>> StackReferencers => stackReferencers;
         
         private static Dictionary<Token, object> objects = new Dictionary<Token, object>();
         private static Dictionary<Token, List<object>> stacks = new Dictionary<Token, List<object>>();
 
         private static Dictionary<Token, Referencer> referencers = new Dictionary<Token, Referencer>();
-        private static Dictionary<Token, StackReferencer> stackReferencers = new Dictionary<Token, StackReferencer>();
+        private static Dictionary<Token, List<StackReferencer>> stackReferencers = new Dictionary<Token, List<StackReferencer>>();
         
         private static Dictionary<Type, object> singles = new Dictionary<Type, object>();
 
@@ -91,17 +91,9 @@ namespace Orion
         /// </summary>
         public static void RegisterStack(StackReferencer referencer)
         {
-            try
-            {
-                stackReferencers.Add(referencer.Token, referencer);
-            }
-            catch (Exception exception)
-            {
-                Debug.LogError(exception);
-                Debug.Break();
-
-                throw;
-            }
+            if (stackReferencers.TryGetValue(referencer.Token, out var list)) list.Add(referencer);
+            else stackReferencers.Add(referencer.Token, new List<StackReferencer>() {referencer});
+            
             RegisterStack(referencer.Token, referencer.Values);
         }
         /// <summary>
@@ -289,7 +281,10 @@ namespace Orion
         public static void SetStackAt<T>(Token token, T value, int index)
         {
             stacks[token][index] = value;
-            if (stackReferencers.TryGetValue(token, out var referencer)) referencer.SetValue(value, index);
+            if (stackReferencers.TryGetValue(token, out var referencers))
+            {
+                foreach (var referencer in referencers) referencer.SetValue(value, index);
+            }
         }
         
         /// <summary>
@@ -316,7 +311,10 @@ namespace Orion
         {
             if (stacks.ContainsKey(token))
             {
-                if (stackReferencers.TryGetValue(token, out var referencer)) referencer.SetValue(value, index);
+                if (stackReferencers.TryGetValue(token, out var referencers))
+                {
+                    foreach (var referencer in referencers) referencer.SetValue(value, index);
+                }
                 
                 stacks[token][index] = value;
                 return true;

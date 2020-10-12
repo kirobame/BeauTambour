@@ -1,20 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using BeauTambour.Prototyping;
 using Ludiq.OdinSerializer;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Orion.Prototyping
+namespace BeauTambour.Prototyping
 {
     public class PlayArea : MonoBehaviour
     {
         public Rect Bounds => new Rect(Origin, Size * tileSize);
-        public Rect IndexedBounds => new Rect(Vector2.zero, Size);
+        public RectInt IndexedBounds => new RectInt(Vector2Int.zero, Size);
         
         public Vector2 Origin => (Vector2)transform.position - new Vector2(size.x, size.y) * tileSize * 0.5f;
+
+        public Vector2Int IntendedSize => size;
         public Vector2Int Size => new Vector2Int(tiles.GetLength(0), tiles.GetLength(1));
 
         public Vector2 TileSize => tileSize;
@@ -69,13 +70,25 @@ namespace Orion.Prototyping
         private void OnTilableMoved(ITilable tilable)
         {
             var previousTile = tilable.Tile;
-            var tile = this[Translate(tilable.Position)];
+            var index = Translate(tilable.Position);
 
-            if (previousTile == tile) return;
+            if (index.IsInRange(Vector2Int.zero, Size - Vector2Int.one))
+            {
+                var tile = this[Translate(tilable.Position)];
 
-            previousTile.Remove(tilable);
-            tile.Add(tilable);
-            tilable.Tile = tile;
+                if (previousTile == tile) return;
+
+                previousTile?.Remove(tilable);
+                tile.Add(tilable);
+                tilable.Tile = tile;
+            }
+            else
+            {
+                if (previousTile == null) return;
+                
+                previousTile.Remove(tilable);
+                tilable.Tile = null;
+            }
         }
     }
 }

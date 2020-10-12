@@ -1,11 +1,13 @@
-﻿using Orion;
+﻿using System;
+using Orion;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public class Helper : MonoBehaviour
+    public class Helper : SerializedMonoBehaviour
     {
+        /*[SerializeField] private ICloneable _cloneable;
         [SerializeField] private Token rythmHandlerToken;
         [SerializeField, Min(1)] private int duration = 1;
 
@@ -40,6 +42,6 @@ namespace BeauTambour.Prototyping
         {
             var seconds = Repository.Get<RythmHandler>(rythmHandlerToken).SecondsPerBeats * time;
             Debug.Log($"Time : {time} / {seconds}");
-        }
+        }*/
     }
 }

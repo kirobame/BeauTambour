@@ -22,7 +22,8 @@ namespace Orion.Editor
         {
             typeof(Vector2),
             typeof(Vector3),
-            typeof(Vector4)
+            typeof(Vector4),
+            typeof(AnimationCurve)
         };
 
         private bool canDraw = true;
@@ -51,15 +52,16 @@ namespace Orion.Editor
                 return;
             }
 
-            var type = Property.Children.First().ValueEntry.TypeOfValue;
+            var child = Property.Children.FirstOrDefault();
+            var type = child != null ? child.ValueEntry.TypeOfValue : typeof(TElement);
+
             if (type != previousType) Setup();
             else previousType = type;
             
             var text = label.text.Trim();
             label = new GUIContent("  " + text, icon);
-            var childProperty = Property.Children.FirstOrDefault();
-            
-            draw(label, childProperty);
+
+            draw(label, child);
         }
 
         private void Setup()
@@ -71,28 +73,44 @@ namespace Orion.Editor
             }
             
             icon = typeof(TElement).GetIcon();
-            var childProperty = Property.Children.First();
+            var child = Property.Children.FirstOrDefault();
 
             var isCollection = collectionTypes.Any(type => type.IsAssignableFrom(typeof(TElement)));
             var isObject = typeof(Object).IsAssignableFrom(typeof(TElement));
             
             var count = Property.Children.Count;
-            var subCount = childProperty.Children.Count;
+            var subCount = child?.Children.Count ?? 0;
             
             var isIndirectlyInlined = Property.Attributes.Contains(new InlinedAttribute());
             var isDirectlyInlined = inlinedTypes.Any(type => type.IsAssignableFrom(typeof(TElement)));
 
-            if (isDirectlyInlined) draw = DrawDirectlyInlined;
-            else if (isObject || isIndirectlyInlined)    draw = DrawIndirectlyInlined;
+            if (child == null) draw = DrawDirectly;
+            else if (isDirectlyInlined) draw = DrawDirectlyInlined;
+            else if (isObject || isIndirectlyInlined) draw = DrawIndirectlyInlined;
             else if (count > 1) draw = DrawAsIndirectFoldout;
             else if (isCollection) draw = DrawAsCollection;
-            else if (subCount <= 1)draw = DrawDirectlyInlined;
+            else if (subCount <= 1) draw = DrawDirectlyInlined;
             else draw = DrawAsDirectFoldout;
 
-            previousType = childProperty.ValueEntry.TypeOfValue;
+            previousType = child != null ? child.ValueEntry.TypeOfValue : typeof(TElement);
         }
         
         #region Drawing Methods
+
+        private void DrawDirectly(GUIContent label, InspectorProperty property)
+        {
+            EditorGUILayout.BeginHorizontal();
+            
+            CallNextDrawer(label);
+            
+            var size = EditorGUIUtility.singleLineHeight;
+            if (GUILayout.Button(EditorIcons.X.Active, GUILayout.Width(size), GUILayout.Height(size)))
+            {
+                Property.BaseValueEntry.WeakSmartValue = null;
+            }
+            
+            EditorGUILayout.EndHorizontal();
+        }
         
         private void DrawDirectlyInlined(GUIContent label, InspectorProperty property)
         {

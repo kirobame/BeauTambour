@@ -1,15 +1,16 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Orion.Prototyping
+namespace BeauTambour.Prototyping
 {
     public interface ITilable
     {
         event Action<ITilable> OnMove;
 
         Tile Tile { get; set; }
+        Vector2 Position { get; set; }
 
         TilableType Type { get; }
-        Vector2 Position { get; }
+        object Link { get; }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Orion.Prototyping
+namespace BeauTambour.Prototyping
 {
     public class Tile
     {
