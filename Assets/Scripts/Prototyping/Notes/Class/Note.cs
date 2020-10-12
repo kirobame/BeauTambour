@@ -1,27 +1,30 @@
 ﻿using Orion;
-using BeauTambour.Prototyping;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Note : Tilable, IResolvable
+namespace BeauTambour.Prototyping
 {
-    public override object Link => this;
-
-    private int priority;
-    [SerializeField]private Shape shapesMatched;
-    public int Priority { get => priority; set => priority = value; }
-
-    public void Resolve()
+    public class Note : Tilable, IResolvable
     {
-        PlayArea playArea = Repository.Get<PlayArea>();
-        for (int x = Tile.Index.x + 1; x < playArea.Size.x; x++)
+        public override object Link => this;
+        
+        [Space, SerializeField] private Shape shapesMatched;
+        
+        int IResolvable.Priority => 0;
+        
+        void Start() => Repository.Get<ResolutionPhase>().TryEnqueue(this);
+        
+        public void Resolve()
         {
-            if (playArea[x, Tile.Index.y][TilableType.NoteRecipient].Any())
+            var playArea = Repository.Get<PlayArea>();
+            for (var x = Tile.Index.x + 1; x < playArea.Size.x; x++)
             {
-                Bloc block = playArea[x, Tile.Index.y][TilableType.NoteRecipient].First().Link as Bloc;
+                if (!playArea[x, Tile.Index.y][TilableType.NoteRecipient].Any()) continue;
+                
+                var block = playArea[x, Tile.Index.y][TilableType.NoteRecipient].First().Link as Bloc;
                 if ((block.Shape & shapesMatched) == block.Shape)
                 {
                     Debug.Log("MATCH!");
@@ -30,21 +33,11 @@ public class Note : Tilable, IResolvable
                 {
                     Debug.Log("NO MATCH!");
                 }
+                    
                 return;
             }
+            
+            Debug.Log("NOTHING!");
         }
-        Debug.Log("NOTHING!");
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        RoundHandler roundHandler =  Repository.Get<RoundHandler>();
-        roundHandler.TryEnqueue(this);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }

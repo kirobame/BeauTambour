@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Orion;
 using Shapes;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace BeauTambour.Prototyping
@@ -13,8 +14,13 @@ namespace BeauTambour.Prototyping
         public Vector2 Start { get; private set; }
         public Vector2 End { get; private set; }
         
-        public OrionEvent<double> OnMove = new OrionEvent<double>();
-        public OrionEvent<double> OnShift = new OrionEvent<double>();
+        [FoldoutGroup("Events")] public OrionEvent<double> OnMove = new OrionEvent<double>();
+        [FoldoutGroup("Events")] public OrionEvent<double> OnShift = new OrionEvent<double>();
+        [FoldoutGroup("Events")] public OrionEvent OnNotePrepared = new OrionEvent();
+        [FoldoutGroup("Events")] public OrionEvent<Note> OnNotePlayed = new OrionEvent<Note>();
+
+        [SerializeField] private Note leftNotePrefab;
+        [SerializeField] private Note rightNotePrefab;
         
         private bool isShifting;
         
@@ -34,12 +40,13 @@ namespace BeauTambour.Prototyping
                 isShifting = false;
             }
         }
-
         public void Shift(double ratio)
         {
             if (isShifting) OnShift.Invoke(ratio);
             else OnMove.Invoke(ratio);
         }
+
+        public void PrepareNote()
 
         void ITweenable<Vector2>.Apply(Vector2 position)
         {

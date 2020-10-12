@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public class RythmHandler : MonoBehaviour
+    public class RythmHandler : MonoBehaviour, IBootable
     {
         #region Encapsuled Types
 
@@ -107,8 +107,14 @@ namespace BeauTambour.Prototyping
         public double Beats { get; private set; }
         
         //--------------------------------------------------------------------------------------------------------------
+
+        int IBootable.Priority => bootUpPriority;
         
-        [SerializeField] private AudioSource audioSource;
+        //--------------------------------------------------------------------------------------------------------------
+        
+        [SerializeField] private int bootUpPriority;
+        
+        [Space, SerializeField] private AudioSource audioSource;
         [SerializeField] private int beatsPerMinutes;
 
         private double startTime;
