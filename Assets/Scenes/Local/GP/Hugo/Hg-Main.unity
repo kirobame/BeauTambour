@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b757722ade6e8104789bea75b1741fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 8
+  length: 2
   phaseType: 1
 --- !u!1 &622563384
 GameObject:
@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 631571190}
   - component: {fileID: 631571192}
   - component: {fileID: 631571193}
+  - component: {fileID: 631571194}
   m_Layer: 0
   m_Name: Rythm
   m_TagString: Untagged
@@ -357,6 +358,20 @@ MonoBehaviour:
   lifetimeLinkage: 0
   token: {fileID: 11400000, guid: 9964d5b60ca0e2d4e9952d599701352c, type: 2}
   value: {fileID: 631571190}
+--- !u!114 &631571194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631571189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c608f37d6b47a7b100579451a69e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetimeLinkage: 0
+  value: {fileID: 631571190}
 --- !u!1 &724030544
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +435,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  rythmHandlerToken: {fileID: 11400000, guid: 9964d5b60ca0e2d4e9952d599701352c, type: 2}
   indexReso: 2
 --- !u!4 &724030546
 Transform:
@@ -614,7 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b757722ade6e8104789bea75b1741fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 8
+  length: 2
   phaseType: 2
 --- !u!1 &1687258581
 GameObject:
@@ -762,6 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rythm: {fileID: 631571190}
   playAera: {fileID: 1277874623}
+  blockgenerator: {fileID: 1919697324}
   prefabBlock: {fileID: 5038708712745727849, guid: c1da9d12167e9c94eafd737a60bfedbd,
     type: 3}
   prefabNote: {fileID: 8061962274889224890, guid: 6fa5f020a8d0fc543ad9035dba724624,
@@ -779,6 +794,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1919697323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1919697325}
+  - component: {fileID: 1919697324}
+  m_Layer: 0
+  m_Name: BlockGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1919697324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919697323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb58111420397544ba803dd2ca2a1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBlocs:
+  - {fileID: 5038708712745727849, guid: c1da9d12167e9c94eafd737a60bfedbd, type: 3}
+--- !u!4 &1919697325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919697323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1095728, y: -0.018033318, z: -0.39836502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2138677391
 GameObject:

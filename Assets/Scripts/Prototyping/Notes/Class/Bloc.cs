@@ -19,7 +19,7 @@ public class Bloc : Tilable, IBootable
 
     public void ShutDown()
     {
-        throw new System.NotImplementedException();
+        Destroy(this.gameObject);
     }
 
     // Start is called before the first frame update

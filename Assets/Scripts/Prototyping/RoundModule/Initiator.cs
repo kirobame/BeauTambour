@@ -7,6 +7,7 @@ public class Initiator : MonoBehaviour
 {
     public RythmHandler rythm;
     public PlayArea playAera;
+    public BlockGenerationHandler blockgenerator;
 
     public Bloc prefabBlock;
     public Note prefabNote;
@@ -16,12 +17,13 @@ public class Initiator : MonoBehaviour
     {
         rythm.BootUp();
         playAera.Generate();
+        blockgenerator.BootUp();
 
-        Bloc block = Instantiate(prefabBlock);
+        /*Bloc block = Instantiate(prefabBlock);
         block.Place(new Vector2Int(9, 1));
 
         Note note = Instantiate(prefabNote);
-        note.Place(new Vector2Int(0,1));
+        note.Place(new Vector2Int(0,1));*/
     }
 
     // Update is called once per frame
