@@ -13,6 +13,8 @@ namespace BeauTambour.Prototyping
     {
         public event Action OnGeneration;
         
+        public bool IsActive { get; private set; }
+        
         public Rect Bounds => new Rect(Origin, Size * tileSize);
         public RectInt IndexedBounds => new RectInt(Vector2Int.zero, Size);
         
@@ -46,6 +48,7 @@ namespace BeauTambour.Prototyping
             }
 
             OnGeneration?.Invoke();
+            IsActive = true;
         }
 
         public bool Register(ITilable tilable)

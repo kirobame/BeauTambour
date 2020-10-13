@@ -1,24 +1,21 @@
 ﻿using Orion;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public abstract class PlayerAction : Module<bool>
+    public abstract class PlayerAction : SerializedMonoBehaviour
     {
         public int ActionLength => actionLength;
         
         protected Player player => Repository.Get<Player>();
         protected abstract ActionType type { get; }
-
+        
         [SerializeField, Min(1)] protected int actionLength = 1;
         
         private bool hasBeenFreed;
-
-        protected override void OnActionStarted(bool input) => TryBeginExecution();
-        protected override void OnAction(bool input) { }
-        protected override void OnActionEnded(bool input) { }
-
-        protected void TryBeginExecution()
+        
+        public void TryBeginExecution()
         {
             Debug.Log($"For : {transform.parent.name}{name} -> Claim : {player.IsActionTypeClaimed(type)} / Execution : {!CanBeExecuted()}");
             

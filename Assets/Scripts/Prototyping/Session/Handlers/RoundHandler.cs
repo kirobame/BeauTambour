@@ -16,6 +16,7 @@ namespace BeauTambour.Prototyping
         //--------------------------------------------------------------------------------------------------------------
         
         public PhaseType CurrentType { get; private set; }
+        public IPhase Current => Phases[advancement];
 
         public IReadOnlyList<IPhase> Phases => phases;
         public IPhase this[PhaseType type] => phases.Find(phase => phase.Type == type);

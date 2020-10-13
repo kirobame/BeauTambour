@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public class NoteActionRelay : PlayerActionRelay<BumperAction>
+    public class NoteAction : PlayerAction
     {
+        protected override ActionType type => ActionType.Standard;
+        
         private Tile aim 
         {
             get
@@ -15,22 +17,26 @@ namespace BeauTambour.Prototyping
             }
         }
         
-        public override bool CanBeExecuted()
+        [HideInInspector] public int sign;
+        
+        protected override bool CanBeExecuted()
         {
+            var roundHandler = Repository.Get<RoundHandler>();
+            if (roundHandler.CurrentType != PhaseType.Setup) return false;
+            
             if (!aim[TilableType.Musician].Any()) return false;
 
             var musician = aim[TilableType.Musician].First().Link as Musician;
             return !musician.HasAlreadyPlayed;
         }
-
-        public override void Execute(int beat, double offset)
+        
+        protected override void Execute(int beat, double offset)
         {
             if (beat == 0)
             {
                 var musician = aim[TilableType.Musician].First().Link as Musician;
-                musician.PlayNote(source.Direction);
+                musician.PlayNote(sign);
             }
         }
-        public override void ResolveTime(double time, double offset) { }
     }
 }

@@ -22,7 +22,7 @@ namespace BeauTambour.Prototyping
         public bool TryEnqueue(IResolvable resolvable)
         {
             var roundHandler = Repository.Get<RoundHandler>();
-            if (roundHandler.CurrentType != PhaseType.Acting) return false;
+            if (!roundHandler.CurrentType.IsActingPhase()) return false;
 
             if (resolvables.ContainsKey(resolvable.Priority)) resolvables[resolvable.Priority].Add(resolvable);
             else resolvables.Add(resolvable.Priority, new List<IResolvable>() {resolvable});

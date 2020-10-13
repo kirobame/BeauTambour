@@ -6,8 +6,10 @@ namespace BeauTambour.Prototyping
 {
     public enum PhaseType
     {
-        Acting,
+        Placement,
+        Setup,
         Interstice,
         Resolution,
+        Generation
     }
 }

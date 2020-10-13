@@ -1,30 +1,30 @@
-﻿using UnityEngine;
+﻿using Orion;
+using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public class BumperAction : PlayerAction
+    public class BumperModule : Module<bool>
     {
-        public int Direction => direction;
+        [SerializeField] private ConfirmAction confirmAction;
         
-        [SerializeField] private int direction;
+        protected override void OnActionStarted(bool input) => confirmAction.TryBeginExecution();
 
-        private PlayerActionRelay<BumperAction> relay;
-        
-        protected override ActionType type => ActionType.Standard;
+        protected override void OnAction(bool input) { }
+        protected override void OnActionEnded(bool input) { }
+    }
 
-        public void SetRelay(PlayerActionRelay<BumperAction> relay) => this.relay = relay;
+    public class TriggerModule : Module<bool>
+    {
+        [SerializeField] private int sign;
+        [SerializeField] private NoteAction noteAction;
         
-        protected override bool CanBeExecuted() => relay.CanBeExecuted();
+        protected override void OnActionStarted(bool input) { }
+        protected override void OnAction(bool input) { }
         
-        protected override void Execute(int beat, double offset)
+        protected override void OnActionEnded(bool input)
         {
-            relay.Execute(beat, offset);
-            base.Execute(beat, offset);
-        }
-        protected override void ResolveTime(double time, double offset)
-        {
-            base.ResolveTime(time, offset);
-            relay.ResolveTime(time, offset);
+            noteAction.sign = sign;
+            noteAction.TryBeginExecution();
         }
     }
 }

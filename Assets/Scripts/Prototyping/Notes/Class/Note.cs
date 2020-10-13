@@ -47,7 +47,7 @@ namespace BeauTambour.Prototyping
             {
                 if (!playArea[x, Tile.Index.y][TilableType.Block].Any()) continue;
                 
-                var block = playArea[x, Tile.Index.y][TilableType.Block].First().Link as Bloc;
+                var block = playArea[x, Tile.Index.y][TilableType.Block].First().Link as Block;
                 if ((block.Shape & shape) == block.Shape)
                 {
                     Debug.Log("MATCH!");

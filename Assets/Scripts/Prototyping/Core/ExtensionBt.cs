@@ -32,5 +32,7 @@ namespace BeauTambour.Prototyping
 
             return results.ToArray();
         }
+
+        public static bool IsActingPhase(this PhaseType phaseType) => phaseType == PhaseType.Placement || phaseType == PhaseType.Setup;
     }
 }

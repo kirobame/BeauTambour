@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public class EndAction : PlayerAction
+    /*public class EndAction : PlayerAction
     {
         protected override ActionType type => ActionType.Standard;
 
@@ -25,5 +25,5 @@ namespace BeauTambour.Prototyping
             }
             base.Execute(beat, offset);
         }
-    }
+    }*/
 }
