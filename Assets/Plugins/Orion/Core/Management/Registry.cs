@@ -24,6 +24,8 @@ namespace Orion
         [SerializeField] private KeyValuePair[] pairs = new KeyValuePair[0];
 
         private Dictionary<TKey,TValue> values = new Dictionary<TKey,TValue>();
+
+        public bool HasKey(TKey key) => values.ContainsKey(key);
         
         void OnEnable()
         {

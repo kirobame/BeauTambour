@@ -12,6 +12,7 @@ namespace BeauTambour.Prototyping
     public class RoundHandler : SerializedMonoBehaviour, IBootable
     {
         public event Action OnRoundLoop;
+        public event Action<IPhase> OnPhaseChange;
         
         //--------------------------------------------------------------------------------------------------------------
         
@@ -61,6 +62,8 @@ namespace BeauTambour.Prototyping
 
                 CurrentType = phases[advancement].Type;
                 phases[advancement].Begin();
+                
+                OnPhaseChange?.Invoke(Current);
             }
         }
     }
