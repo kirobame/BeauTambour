@@ -15,11 +15,14 @@ namespace BeauTambour.Prototyping
         
         int IBootable.Priority => 0;
 
-    public void ShutDown()
-    {
-        Destroy(this.gameObject);
-    }
+        public void BootUp()
+        {
+            
+        }
 
-        public void ShutDown() { }
+        public void ShutDown()
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

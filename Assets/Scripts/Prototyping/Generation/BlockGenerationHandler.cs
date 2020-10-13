@@ -7,12 +7,15 @@ using UnityEngine;
 
 public class BlockGenerationHandler : MonoBehaviour, IBootable
 {
-    [SerializeField]private Bloc[] prefabBlocs;
+    [SerializeField] private int bootUpPriority;
+    [SerializeField] private Bloc[] prefabBlocs;
+    
     private int nbMaxColumnBlockSide = 4;
     private PlayArea playArea;
     private RoundHandler round;
     private List<Bloc> blocks;
 
+     int IBootable.Priority => bootUpPriority;
 
     public void BootUp()
     {
