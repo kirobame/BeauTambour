@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8906fd11ec38c61428bd94d67bf6af25, type: 3}
-  m_Name: InOutCurve
+  m_Name: Move
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -27,26 +27,26 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 3.5622008
+      outSlope: 3.5622008
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0.17592928
     - serializedVersion: 3
-      time: 0.5
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.24259926
+      value: 0.5905498
+      inSlope: 1.4186983
+      outSlope: 1.4186983
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0.41943333
+      outWeight: 0.10125104
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 1
+      inSlope: 0.0455668
+      outSlope: 0.0455668
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.1262528

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8906fd11ec38c61428bd94d67bf6af25, type: 3}
-  m_Name: MoveCurve
+  m_Name: LateEaseOut
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -26,30 +26,30 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: 3.5622008
-      outSlope: 3.5622008
+      value: 1
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.17592928
+      outWeight: 0.051372796
     - serializedVersion: 3
-      time: 0.24259926
-      value: 0.5905498
-      inSlope: 1.4186983
-      outSlope: 1.4186983
-      tangentMode: 0
+      time: 0.5
+      value: 1
+      inSlope: Infinity
+      outSlope: -5.6866245
+      tangentMode: 7
       weightedMode: 0
-      inWeight: 0.41943333
-      outWeight: 0.10125104
+      inWeight: 0.33333334
+      outWeight: 0.061146498
     - serializedVersion: 3
       time: 1
-      value: 1
-      inSlope: 0.0455668
-      outSlope: 0.0455668
+      value: 0
+      inSlope: -0.04876046
+      outSlope: -0.04876046
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.1262528
+      inWeight: 0.075659156
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

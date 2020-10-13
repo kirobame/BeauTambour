@@ -1,12 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Ludiq.PeekCore.ReflectionMagic;
 using Orion;
+using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public class ResolutionPhase : Phase
+    public class ResolutionPhase : MonoBehaviour, IPhase
     {
-        private SortedList<int, List<IResolvable>> resolvables;
+        public event Action OnStart;
+        public event Action OnEnd;
+
+        public PhaseType Type => PhaseType.Resolution;
+
+        [ShowInInspector, ReadOnly] private SortedList<int, List<IResolvable>> resolvables;
 
         void Awake()
         {
@@ -19,6 +28,18 @@ namespace BeauTambour.Prototyping
             resolvables = new SortedList<int, List<IResolvable>>(comparer);
         }
 
+        public bool Advance() => !resolvables.Any();
+
+        public void Begin()
+        {
+            var count = 0;
+            foreach (var resolvableList in resolvables.Values) count += resolvableList.Count;
+            
+            var rythmHandler = Repository.Get<RythmHandler>();
+            rythmHandler.MakePlainEnqueue(Dequeue, count);
+        }
+        public void End() => resolvables.Clear();
+
         public bool TryEnqueue(IResolvable resolvable)
         {
             var roundHandler = Repository.Get<RoundHandler>();
@@ -30,15 +51,17 @@ namespace BeauTambour.Prototyping
             return true;
         }
 
-        public override void Begin()
+        private void Dequeue(int beat, double offset)
         {
-            foreach (var resolvableList in resolvables.Values)
-            {
-                foreach (var resolvable in resolvableList) resolvable.Resolve();
-            }
-            resolvables.Clear();
-        
-            base.Begin();
+            if (!resolvables.Any()) return;
+
+            var list = resolvables.First().Value;
+            var resolvable = list.First();
+            
+            resolvable.Resolve();
+
+            list.RemoveAt(0);
+            if (list.Count == 0) resolvables.Remove(resolvable.Priority);
         }
     }
 }

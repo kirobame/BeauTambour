@@ -37,6 +37,8 @@ namespace BeauTambour.Prototyping
                 var musician = aim[TilableType.Musician].First().Link as Musician;
                 musician.PlayNote(sign);
             }
+               
+            base.Execute(beat, offset);
         }
     }
 }

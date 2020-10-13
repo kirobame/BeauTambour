@@ -3,26 +3,11 @@ using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
-    public class PadModule : Module<bool>
-    {
-        [SerializeField] private int direction;
-        [SerializeField] private ShiftAction shiftAction;
-        
-        protected override void OnActionStarted(bool input)
-        {
-            shiftAction.direction = direction;
-            shiftAction.TryBeginExecution();
-        }
-
-        protected override void OnAction(bool input) { }
-        protected override void OnActionEnded(bool input) { }
-    }
-
     public class ShiftAction : PlayerAction
     {
         protected override ActionType type => ActionType.Standard;
 
-        public int direction;
+        [HideInInspector] public int direction;
         
         [SerializeField] private Token musiciansToken;
 
@@ -39,10 +24,12 @@ namespace BeauTambour.Prototyping
                 var musicians = Repository.GetStack<Musician>(musiciansToken);
                 foreach (var musician in musicians) musician.PrepareShift(direction);
             }
-            if (beat == actionLength) direction = 0;
+            base.Execute(beat, offset);
         }
         protected override void ResolveTime(double time, double offset)
         {
+            base.ResolveTime(time, offset);
+            
             var musicians = Repository.GetStack<Musician>(musiciansToken);
             foreach (var musician in musicians) musician.Shift(time / (actionLength - offset));
         }

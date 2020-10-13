@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   length: 4
-  type: 3
+  type: 4
 --- !u!4 &333810151
 Transform:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1475915047}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &338503211
 GameObject:
@@ -226,7 +226,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1475915047}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &338503213
 MonoBehaviour:
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   length: 4
-  type: 2
+  type: 3
 --- !u!1 &381056865
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1475915047}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &505360338
 MonoBehaviour:
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   length: 1
-  type: 1
+  type: 2
 --- !u!1 &653260035
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +555,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1202100413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1202100414}
+  - component: {fileID: 1202100415}
+  m_Layer: 0
+  m_Name: Placement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1202100414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202100413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475915047}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1202100415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202100413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b757722ade6e8104789bea75b1741fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  length: 9999
+  type: 0
 --- !u!1 &1282171455
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +691,7 @@ GameObject:
   - component: {fileID: 1300864845}
   - component: {fileID: 1300864846}
   m_Layer: 0
-  m_Name: Acting
+  m_Name: Setup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -664,7 +709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1475915047}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1300864846
 MonoBehaviour:
@@ -678,8 +723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b757722ade6e8104789bea75b1741fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 6
-  type: 0
+  length: 9999
+  type: 1
 --- !u!1 &1475915046
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +754,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1202100414}
   - {fileID: 1300864845}
   - {fileID: 505360337}
   - {fileID: 338503212}
@@ -732,6 +778,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 1202100415}
     - {fileID: 1300864846}
     - {fileID: 505360338}
     - {fileID: 338503214}
@@ -747,7 +794,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 5
     - Name: 
       Entry: 10
       Data: 0
@@ -760,6 +807,9 @@ MonoBehaviour:
     - Name: 
       Entry: 10
       Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
     - Name: 
       Entry: 13
       Data: 

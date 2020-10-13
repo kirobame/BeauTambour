@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Orion;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,11 +15,12 @@ namespace BeauTambour.Prototyping
         public OrionEvent<double> OnBootUp = new OrionEvent<double>();
         public OrionEvent<double> OnShutdown = new OrionEvent<double>();
         public OrionEvent<double> OnMove = new OrionEvent<double>();
+        public OrionEvent<double> OnMatch = new OrionEvent<double>();
         
         public override object Link => this;
         
-        public Color Color { get; private set; }
-        public Shape Shape { get; private set; }
+        [ShowInInspector, ReadOnly] public Color Color { get; private set; }
+        [ShowInInspector, ReadOnly] public Shape Shape { get; private set; }
         
         int IBootable.Priority => 0;
 

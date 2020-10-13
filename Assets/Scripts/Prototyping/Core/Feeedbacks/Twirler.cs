@@ -5,7 +5,7 @@ namespace BeauTambour.Prototyping
 {
     public class Twirler : TimedEffect
     {
-        [SerializeField, PropertyOrder(-1), MinMaxSlider(-90f,90f)] private Vector2 range;
+        [SerializeField, PropertyOrder(-1)] private Vector2 range;
         
         private Quaternion start;
         private Quaternion end;

@@ -67,6 +67,9 @@ namespace BeauTambour.Prototyping
         {
             if (!tilables.Remove(tilable)) return false;
 
+            var tile = tilable.Tile;
+            tile.Remove(tilable);
+            
             tilable.OnMove -= OnTilableMoved;
             return true;
         }

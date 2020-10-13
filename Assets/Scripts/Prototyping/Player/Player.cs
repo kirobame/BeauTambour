@@ -26,7 +26,7 @@ namespace BeauTambour.Prototyping
         
         public override object Link => this;
 
-        public bool IsActive => Repository.Get<RoundHandler>().CurrentType == PhaseType.Acting;
+        public bool IsActive => Repository.Get<RoundHandler>().CurrentType.IsActingPhase();
         public RectInt IndexedBounds
         {
             get
@@ -37,8 +37,6 @@ namespace BeauTambour.Prototyping
             }
         }
 
-        [HideInInspector] public int phase = 1;
-        
         [SerializeField, MinMaxSlider(0, "xMax")] private Vector2Int horizontalLimits;
         [SerializeField, MinMaxSlider(0, "yMax")] private Vector2Int verticalLimits;
 

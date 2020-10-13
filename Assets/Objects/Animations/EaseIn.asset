@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8906fd11ec38c61428bd94d67bf6af25, type: 3}
-  m_Name: EaseInCurve
+  m_Name: EaseIn
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
