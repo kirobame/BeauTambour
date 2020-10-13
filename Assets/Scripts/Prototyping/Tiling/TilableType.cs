@@ -3,11 +3,8 @@
     public enum TilableType
     {
         Player,
-        
-        NoteFragment,
-        NoteRecipient,
         Note,
-        
+        Block,
         Musician
     }
 }

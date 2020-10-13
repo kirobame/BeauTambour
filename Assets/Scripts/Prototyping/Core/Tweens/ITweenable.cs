@@ -2,8 +2,8 @@
 {
     public interface ITweenable<T>
     {
-        T Start { get; }
-        T End { get; }
+        T Onset { get; }
+        T Outset { get; }
 
         void Apply(T value);
     }
