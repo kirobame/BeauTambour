@@ -758,6 +758,7 @@ GameObject:
   - component: {fileID: 6280167175281732118}
   - component: {fileID: 6280167175281732119}
   - component: {fileID: 6280167175281732116}
+  - component: {fileID: 9083743075627601785}
   m_Layer: 0
   m_Name: Graph
   m_TagString: Untagged
@@ -793,7 +794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blendMode: 1
   scaleMode: 0
-  color: {r: 0.8773585, g: 0.56157726, b: 0.2027857, a: 1}
+  color: {r: 0.6151712, g: 0.35457456, b: 0.9056604, a: 1}
   zTest: 4
   zOffsetFactor: 0
   zOffsetUnits: 0
@@ -867,6 +868,33 @@ MeshRenderer:
   m_SortingLayerID: 1370833891
   m_SortingLayer: 1
   m_SortingOrder: 0
+--- !u!114 &9083743075627601785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280167175281732114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295ec9137ce946dfaa89be0c6da5ce54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 69448ac869b47c74495acb720088626c, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: curveProxy
+      Entry: 10
+      Data: 0
+  height: 0.1
+  length: 1
 --- !u!1 &6280167175347661664
 GameObject:
   m_ObjectHideFlags: 0

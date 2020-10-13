@@ -8,22 +8,24 @@ namespace BeauTambour.Prototyping
     public class PlayAreaVisualizer : MonoBehaviour
     {
         [SerializeField] private PlayArea playArea;
+        [SerializeField] private Rectangle tileVisualPrefab;
+        [SerializeField] private Transform parent;
         
-        [Space, SerializeField] private float tileCornerRadius;
-        [SerializeField] private Color tileColor;
+        [Space, SerializeField, Range(0.1f, 1f)] private float sizeRatio;
 
-        void OnEnable () => RenderPipelineManager.endCameraRendering += PostRender;
-        void OnDisable () => RenderPipelineManager.endCameraRendering -= PostRender;
-        
-        void PostRender(ScriptableRenderContext context, Camera camera)
+        void Awake() => playArea.OnGeneration += BuildVisuals;
+
+        private void BuildVisuals()
         {
-
             for (var x = 0; x < playArea.Size.x; x++)
             {
                 for (var y = 0; y < playArea.Size.y; y++)
                 {
-                    Draw.ZOffsetUnits = 2;
-                    Draw.Rectangle(playArea[x,y].Position, Vector3.forward, playArea.TileSize * 0.95f, tileCornerRadius, tileColor);
+                    var position = playArea[x, y].Position;
+                    
+                    var tileVisual = Instantiate(tileVisualPrefab, position, Quaternion.identity, parent);
+                    tileVisual.Width = playArea.TileSize.x * sizeRatio;
+                    tileVisual.Height = playArea.TileSize.y * sizeRatio;
                 }
             }
         }

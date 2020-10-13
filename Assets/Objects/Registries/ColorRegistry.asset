@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3114c191064f49729e2491df6cd9e377, type: 3}
+  m_Name: ColorRegistry
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: pairs
+      Entry: 7
+      Data: 0|Orion.Registry`2+KeyValuePair[[BeauTambour.Prototyping.Color, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[UnityEngine.Color,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]][],
+        Assembly-CSharp-firstpass
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 1|Orion.Registry`2+KeyValuePair[[BeauTambour.Prototyping.Color, Assembly-CSharp],[UnityEngine.Color,
+        UnityEngine.CoreModule]], Assembly-CSharp-firstpass
+    - Name: key
+      Entry: 3
+      Data: 0
+    - Name: value
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.8584906
+    - Name: 
+      Entry: 4
+      Data: 0.336107135
+    - Name: 
+      Entry: 4
+      Data: 0.336107135
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Orion.Registry`2+KeyValuePair[[BeauTambour.Prototyping.Color, Assembly-CSharp],[UnityEngine.Color,
+        UnityEngine.CoreModule]], Assembly-CSharp-firstpass
+    - Name: key
+      Entry: 3
+      Data: 1
+    - Name: value
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.6096037
+    - Name: 
+      Entry: 4
+      Data: 0.8962264
+    - Name: 
+      Entry: 4
+      Data: 0.469250619
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Orion.Registry`2+KeyValuePair[[BeauTambour.Prototyping.Color, Assembly-CSharp],[UnityEngine.Color,
+        UnityEngine.CoreModule]], Assembly-CSharp-firstpass
+    - Name: key
+      Entry: 3
+      Data: 2
+    - Name: value
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.511747956
+    - Name: 
+      Entry: 4
+      Data: 0.6110957
+    - Name: 
+      Entry: 4
+      Data: 0.8679245
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Orion.Registry`2+KeyValuePair[[BeauTambour.Prototyping.Color, Assembly-CSharp],[UnityEngine.Color,
+        UnityEngine.CoreModule]], Assembly-CSharp-firstpass
+    - Name: key
+      Entry: 3
+      Data: 3
+    - Name: value
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.8773585
+    - Name: 
+      Entry: 4
+      Data: 0.679261267
+    - Name: 
+      Entry: 4
+      Data: 0.285555363
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

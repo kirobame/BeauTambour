@@ -18,7 +18,6 @@ namespace BeauTambour.Prototyping
         
         protected override void Execute(int beat, double offset)
         {
-            Debug.Log(relay.GetType());
             relay.Execute(beat, offset);
             base.Execute(beat, offset);
         }

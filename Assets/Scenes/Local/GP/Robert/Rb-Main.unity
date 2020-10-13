@@ -121,6 +121,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &225921510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225921511}
+  m_Layer: 0
+  m_Name: Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225921511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225921510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &338503211
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,8 +364,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playArea: {fileID: 866588375}
-  tileCornerRadius: 0.075
-  tileColor: {r: 1, g: 1, b: 1, a: 0.101960786}
+  tileVisualPrefab: {fileID: 7000226177799880505, guid: c73760bb589e6a0459662598f3f1c2d6,
+    type: 3}
+  parent: {fileID: 225921511}
+  sizeRatio: 0.9
 --- !u!114 &866588378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,8 +413,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 6280167175347661666, guid: 2de8863a26a05c842a2eb4722d0a4a58,
     type: 3}
-  musicianPrefab: {fileID: 648852174308086514, guid: 27449b269ff03a7438006f1b7cf1fc1f,
-    type: 3}
+  musicianPrefabs:
+  - {fileID: 8880069490294785284, guid: c7761a9d70de3c94fbdc03ee4f570986, type: 3}
+  - {fileID: 4190021138869501638, guid: 8785499045cdf414db61bc7dfc18fcee, type: 3}
+  - {fileID: 648852174308086514, guid: 27449b269ff03a7438006f1b7cf1fc1f, type: 3}
+  - {fileID: 1340478431832693995, guid: 628dd674f28d6954dbe67aa535c80a9f, type: 3}
 --- !u!4 &1282171457
 Transform:
   m_ObjectHideFlags: 0
@@ -396,6 +431,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1288553872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1288553873}
+  m_Layer: 0
+  m_Name: '[VISUALISATION]----------------------------------- '
+  m_TagString: EditorOnly
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1288553873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288553872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300864844
 GameObject:
@@ -440,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b757722ade6e8104789bea75b1741fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 8
+  length: 100
   type: 0
 --- !u!1 &1475915046
 GameObject:
@@ -957,5 +1022,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

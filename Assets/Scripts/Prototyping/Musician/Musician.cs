@@ -12,20 +12,38 @@ namespace BeauTambour.Prototyping
     {
         public override object Link => this;
         
+        public bool HasAlreadyPlayed { get; private set; }
+        
         public OrionEvent<double> OnMove = new OrionEvent<double>();
         public OrionEvent<double> OnShift = new OrionEvent<double>();
 
-        [SerializeField] private Note leftNote;
-        [SerializeField] private Note rightNote;
+        [SerializeField] private Color color;
+
+        [Space, SerializeField] private Shape leftShape;
+        [SerializeField] private Shape rightShape;
+        [SerializeField] private Note notePrefab;
+
+        private Note leftNote;
+        private Note rightNote;
         
         private bool isShifting;
 
         void Start()
         {
-            leftNote.Place(Tile.Index);
-            rightNote.Place(Tile.Index);
+            Repository.Get<RoundHandler>()[PhaseType.Acting].OnStart += () => HasAlreadyPlayed = false; 
+            
+            leftNote = Initialize(leftShape);
+            rightNote = Initialize(rightShape);
+            
+            Note Initialize(Shape shape)
+            {
+                var note = Instantiate(notePrefab);
+                note.Initialize(shape, color, Tile.Index);
+
+                return note;
+            }
         }
-        
+
         public void PrepareShift(int direction)
         {
             var playArea = Repository.Get<PlayArea>();
@@ -52,12 +70,11 @@ namespace BeauTambour.Prototyping
         {
             var note = selection < 0 ? leftNote : rightNote;
             
-            note.gameObject.SetActive(true);
-            note.transform.SetParent(null);
             note.Position = Tile.Position;
             note.ActualizeTiling();
-            
             note.Activate();
+
+            HasAlreadyPlayed = true;
         }
     }
 }

@@ -10,15 +10,29 @@ namespace BeauTambour.Prototyping
     public class Note : Tilable, IResolvable
     {
         public override object Link => this;
+        public Shape Shape => shape;
         
+        public OrionEvent<UnityEngine.Color> OnInitialization = new OrionEvent<UnityEngine.Color>();
         public OrionEvent<double> OnActivation = new OrionEvent<double>();
-        
-        [Space, SerializeField] private Shape shapesMatched;
+
+        [Space, SerializeField] private ColorRegistry colorRegistry;
+
+        private Shape shape;
         
         int IResolvable.Priority => 0;
+
+        public void Initialize(Shape shape, Color color, Vector2Int index)
+        {
+            this.shape = shape;
+            
+            OnInitialization.Invoke(colorRegistry[color]);
+            Place(index);
+        }
         
         public void Activate()
         {
+            gameObject.SetActive(true);
+            
             Onset = Tile.Position;
             Outset = Repository.Get<PlayArea>()[Tile.Index + Vector2Int.right].Position;
             
@@ -34,7 +48,7 @@ namespace BeauTambour.Prototyping
                 if (!playArea[x, Tile.Index.y][TilableType.Block].Any()) continue;
                 
                 var block = playArea[x, Tile.Index.y][TilableType.Block].First().Link as Bloc;
-                if ((block.Shape & shapesMatched) == block.Shape)
+                if ((block.Shape & shape) == block.Shape)
                 {
                     Debug.Log("MATCH!");
                 }

@@ -20,14 +20,19 @@ namespace BeauTambour.Prototyping
 
         protected void TryBeginExecution()
         {
+            Debug.Log($"For : {transform.parent.name}{name} -> Claim : {player.IsActionTypeClaimed(type)} / Execution : {!CanBeExecuted()}");
+            
             if (!player.IsActive || player.IsActionTypeClaimed(type) || !CanBeExecuted()) return;
 
             var rythmHandler = Repository.Get<RythmHandler>();
             if (rythmHandler.TryPlainEnqueue(Execute, actionLength))
             {
+                Debug.Log($"RIGHT ! {transform.parent.name}{name}'s Action was on time");
+                
                 player.ClaimActionType(type);
                 rythmHandler.MakeStandardEnqueue(ResolveTime, actionLength);
             }
+            else Debug.Log($"WRONG ! {transform.parent.name}{name}'s Action was not on time");
         }
         protected abstract bool CanBeExecuted();
 

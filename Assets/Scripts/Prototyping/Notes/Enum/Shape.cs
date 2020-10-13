@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace BeauTambour.Prototyping
 {
@@ -13,11 +12,11 @@ namespace BeauTambour.Prototyping
         Triangle = 2,
         Circle = 4,
         Wave = 8,
-        Rectangle = 16,
+        Cross = 16,
         Cloud = 32,
         Star = 64,
         Moon = 128,
-        Nine = 256,
-        Ten = 512
+        Heart = 256,
+        Flower = 512
     }
 }

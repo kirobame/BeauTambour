@@ -80,7 +80,7 @@ namespace BeauTambour.Prototyping
         #endregion
         
         /// <summary>The allowed delay for an input to be considered on time with the rythm.</summary> 
-        public const double StandardErrorMargin = 0.175d;
+        public const double StandardErrorMargin = 0.3d;
         
         //--------------------------------------------------------------------------------------------------------------
         

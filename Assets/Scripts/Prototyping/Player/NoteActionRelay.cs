@@ -15,7 +15,13 @@ namespace BeauTambour.Prototyping
             }
         }
         
-        public override bool CanBeExecuted() => aim[TilableType.Musician].Any();
+        public override bool CanBeExecuted()
+        {
+            if (!aim[TilableType.Musician].Any()) return false;
+
+            var musician = aim[TilableType.Musician].First().Link as Musician;
+            return !musician.HasAlreadyPlayed;
+        }
 
         public override void Execute(int beat, double offset)
         {

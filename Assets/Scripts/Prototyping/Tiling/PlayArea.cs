@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Ludiq.OdinSerializer;
 using Sirenix.OdinInspector;
@@ -10,6 +11,8 @@ namespace BeauTambour.Prototyping
 {
     public class PlayArea : MonoBehaviour
     {
+        public event Action OnGeneration;
+        
         public Rect Bounds => new Rect(Origin, Size * tileSize);
         public RectInt IndexedBounds => new RectInt(Vector2Int.zero, Size);
         
@@ -33,7 +36,6 @@ namespace BeauTambour.Prototyping
         public void Generate()
         {
             tiles = new Tile[size.x, size.y];
-            
             for (var x = 0; x < size.x; x++)
             {
                 for (var y = 0; y < size.y; y++)
@@ -42,6 +44,8 @@ namespace BeauTambour.Prototyping
                     tiles[x,y] = new Tile(Translate(index) + tileSize * 0.5f, index);
                 }
             }
+
+            OnGeneration?.Invoke();
         }
 
         public bool Register(ITilable tilable)
