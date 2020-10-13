@@ -16,6 +16,8 @@ public class BlockGenerationHandler : MonoBehaviour, IBootable
 
     public void BootUp()
     {
+        playArea = Repository.Get<PlayArea>();
+        round = Repository.Get<RoundHandler>();
         blocks = new List<Bloc>();
         int startX = playArea.Size.x - nbMaxColumnBlockSide;        
         for (int x = startX; x < playArea.Size.x; x++)
@@ -32,8 +34,7 @@ public class BlockGenerationHandler : MonoBehaviour, IBootable
     // Start is called before the first frame update
     void Start()
     {
-        playArea = Repository.Get<PlayArea>();
-        round = Repository.Get<RoundHandler>();
+
     }
 
     // Update is called once per frame
@@ -62,10 +63,10 @@ public class BlockGenerationHandler : MonoBehaviour, IBootable
     {
         List<int> possibleY = new List<int>();
         ResetPossibleY(possibleY);
-        int nbBlockInColumn = Random.Range(2, playArea.Size.y - 1);
+        int nbBlockInColumn = Random.Range(2, playArea.Size.y+1);
         for (int nb = 0; nb < nbBlockInColumn; nb++)
         {
-            Bloc block = Instantiate(prefabBlocs[Random.Range(0, prefabBlocs.Length - 1)]);
+            Bloc block = Instantiate(prefabBlocs[Random.Range(0, prefabBlocs.Length)]);
             block.Place(new Vector2Int(x, GetPossibleNumberFromList(possibleY)));
             blocks.Add(block);
         }
