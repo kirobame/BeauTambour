@@ -1,13 +1,8 @@
-﻿using Ludiq.PeekCore.CodeDom;
-using Orion;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using Orion;
 using System.Linq;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace BeauTambour.Prototyping
 {

@@ -1,10 +1,8 @@
 ﻿using Orion;
 using Sirenix.OdinInspector;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 namespace BeauTambour.Prototyping

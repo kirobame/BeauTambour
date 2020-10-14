@@ -24,7 +24,6 @@ namespace Orion
             var binderType = typeof(Binder<>).MakeGenericType(inputType);
             binder = Activator.CreateInstance(binderType) as Binder;
         }
-        
         #endif
         
         public Binder Binder => binder;
