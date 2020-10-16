@@ -30,7 +30,7 @@ namespace BeauTambour.Prototyping
 
         void Start()
         {
-            Repository.Get<RoundHandler>()[PhaseType.Acting].OnStart += () => HasAlreadyPlayed = false; 
+            Repository.Get<RoundHandler>()[PhaseType.Setup].OnStart += () => HasAlreadyPlayed = false; 
             
             leftNote = Initialize(leftShape);
             rightNote = Initialize(rightShape);

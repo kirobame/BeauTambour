@@ -1,10 +1,8 @@
 ﻿using Orion;
 using Sirenix.OdinInspector;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 namespace BeauTambour.Prototyping
@@ -12,11 +10,12 @@ namespace BeauTambour.Prototyping
     public class RoundHandler : SerializedMonoBehaviour, IBootable
     {
         public event Action OnRoundLoop;
-        public event Action<PhaseType> OnPhaseChange;
+        public event Action<IPhase> OnPhaseChange;
         
         //--------------------------------------------------------------------------------------------------------------
         
         public PhaseType CurrentType { get; private set; }
+        public IPhase Current => Phases[advancement];
 
         public IReadOnlyList<IPhase> Phases => phases;
         public IPhase this[PhaseType type] => phases.Find(phase => phase.Type == type);
@@ -61,8 +60,8 @@ namespace BeauTambour.Prototyping
 
                 CurrentType = phases[advancement].Type;
                 phases[advancement].Begin();
-
-                OnPhaseChange?.Invoke(CurrentType);
+                
+                OnPhaseChange?.Invoke(Current);
             }
         }
     }

@@ -25,7 +25,9 @@ namespace Orion.Editor
             var actionMaps = inputHandler.Source.actionMaps;
             var mapsProperty = tree.GetPropertyAtPath("activeMaps");
             var activeMaps = mapsProperty.ValueEntry.WeakSmartValue as List<int>;
-            
+
+            if (activeMaps.Count > actionMaps.Count) activeMaps.Clear();
+
             var columns = Mathf.RoundToInt((EditorGUIUtility.currentViewWidth - 40f) / maxButtonWidth);
             var count = 0f;
             

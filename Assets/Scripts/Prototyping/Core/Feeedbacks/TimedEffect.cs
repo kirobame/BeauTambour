@@ -14,6 +14,9 @@ namespace BeauTambour.Prototyping
             set => curveProxy.Write(value);
         }
 
+        public void Stop() => isActive = false;
+
+        protected bool isActive = true;
         protected float time;
 
         public void ReInitialize()
@@ -27,12 +30,16 @@ namespace BeauTambour.Prototyping
             {
                 if (beat == 0) Repository.Get<RythmHandler>().OnTimeAdvance += PrepareExecution;
             }, 1);
+            
+            isActive = true;
         }
 
         protected virtual void Start() => Repository.Get<RythmHandler>().OnTimeAdvance += PrepareExecution;
 
         private void PrepareExecution(double delta)
         {
+            if (!isActive) return;
+            
             Execute(Mathf.Clamp01(time/length));
             
             time += (float)delta;

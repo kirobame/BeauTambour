@@ -7,9 +7,9 @@ public class Initiator : MonoBehaviour
 {
     public RythmHandler rythm;
     public PlayArea playAera;
-    public BlockGenerationHandler blockgenerator;
+    public BlockGenerator blockgenerator;
 
-    public Bloc prefabBlock;
+    public Block prefabBlock;
     public Note prefabNote;
 
     // Start is called before the first frame update

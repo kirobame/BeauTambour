@@ -16,6 +16,7 @@ namespace BeauTambour.Prototyping
             {
                 Repository.Get<RythmHandler>(),
                 Repository.Get<RoundHandler>(),
+                Repository.Get<BlockGenerator>()
             };
             Register(primaryBootables);
         }

@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using Sirenix.OdinInspector;
-using UnityEditor.Animations;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor.Animations;
+#endif
 
 namespace Orion
 {
