@@ -127,7 +127,7 @@ namespace BeauTambour.Tooling
         [ListDrawerSettings(DraggableItems = false, HideAddButton = true, HideRemoveButton = true)]
         [SerializeField] private List<Map> maps = new List<Map>();
 
-        void Awake()
+        void Start()
         {
             if (!IsActive) return;
             foreach (var map in maps) map.Activate();
