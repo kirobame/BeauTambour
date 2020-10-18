@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 public class PhaseUI : MonoBehaviour
 {
-    public Image image;
+    /*public Image image;
     public Text text;
     public Text textBeatsToNextPhase;
     public List<PhaseColorPair> phaseColorList;
@@ -63,8 +63,8 @@ public class PhaseUI : MonoBehaviour
         else
         {
             textBeatsToNextPhase.text = (2).ToString();
-        } */       
-    }
+        } 
+    }*/
 }
 
 [Serializable]

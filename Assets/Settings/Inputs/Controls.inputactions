@@ -6,49 +6,25 @@
             "id": "0233a0b8-dac3-4dc1-a96b-ff03705ea8d5",
             "actions": [
                 {
-                    "name": "DPadDown",
+                    "name": "Button South",
                     "type": "Button",
-                    "id": "2b5a5f10-8b9b-438d-b881-33a8d2e3f42f",
+                    "id": "7d8f461f-0653-4ed3-a354-76ae38dfe29d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "DPadUp",
+                    "name": "Right Trigger",
                     "type": "Button",
-                    "id": "79be03e0-baae-443b-9763-9b6f76355d03",
+                    "id": "dd4af333-8a26-484b-8807-c5443f8eb5f2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
                 {
-                    "name": "RightBumper",
-                    "type": "Button",
-                    "id": "5d8ee678-a562-4f74-afa5-119e7f5ae516",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "RightTrigger",
-                    "type": "Button",
-                    "id": "5e703b3a-20af-404c-a169-8c610d4e5846",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "LeftTrigger",
-                    "type": "Button",
-                    "id": "74a096c4-9a9f-4611-98d9-c33c5f45595b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Stick",
+                    "name": "Left Stick",
                     "type": "Value",
-                    "id": "c93386a0-5976-4f3f-9b0c-09456e7ee115",
+                    "id": "662083a1-1576-455e-bdfd-fc50c6a151c5",
                     "expectedControlType": "Stick",
                     "processors": "",
                     "interactions": ""
@@ -57,67 +33,34 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "522c5466-cda2-4f38-bc5f-317fe3d549ba",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
+                    "id": "fd436f5b-5882-4be6-8f34-4768c3b77716",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "RightBumper",
+                    "action": "Button South",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "2e6da771-96dc-48f2-81fb-e2c103094280",
-                    "path": "<Gamepad>/dpad/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DPadDown",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6bc154f3-7cf1-4db6-90ad-dd0b14a82391",
-                    "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DPadUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "336f99a7-a095-4bd4-9bb9-a58b70744d2a",
+                    "id": "55c970e3-f180-4c79-a50b-8cb594fff8d5",
                     "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
-                    "action": "RightTrigger",
+                    "action": "Right Trigger",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "dec6f21d-729e-40e4-8edf-555770d56635",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LeftTrigger",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "62d85ece-8c59-48e6-bb04-535797bd66fd",
+                    "id": "2979cbc5-0df6-4054-b4a1-680e07997723",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Stick",
+                    "action": "Left Stick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
