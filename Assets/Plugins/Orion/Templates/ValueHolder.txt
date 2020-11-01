@@ -1,5 +1,0 @@
-
-namespace Orion 
-{
-    public class #Type#Holder : ValueHolder<#Type#> { } 
-}
