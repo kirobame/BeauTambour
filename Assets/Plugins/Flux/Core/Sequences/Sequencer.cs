@@ -5,6 +5,8 @@ namespace Flux
 {
     public class Sequencer : MonoBehaviour
     {
+        public event Action OnCompletion;
+        
         [SerializeField] private Effect[] effects;
 
         private bool isPlaying;
@@ -57,7 +59,9 @@ namespace Flux
                 
                 if (next < 0 || next >= effects.Length)
                 {
+                    OnCompletion?.Invoke();
                     Stop();
+
                     return;
                 }
 
@@ -66,23 +70,14 @@ namespace Flux
                     next++;
                     if (next < effects.Length) continue;
                     
+                    OnCompletion?.Invoke();
                     Stop();
+                    
                     return;
                 }
 
                 advancement = next;
             }
-        }
-
-        private bool TryBreak(int index, bool prolong)
-        {
-            if (index < 0 || index >= effects.Length)
-            {
-                Stop();
-                return false;
-            }
-
-            return prolong;
         }
     }
 }

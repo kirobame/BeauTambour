@@ -63,9 +63,9 @@ namespace BeauTambour.Editor
             iterator.NextVisible(false);
             DrawElement(() => EditorGUILayout.Slider(iterator, 0.5f, 15f));
             iterator.NextVisible(false);
-            DrawElement(() => EditorGUILayout.Slider(iterator, 0.01f, 5f));
+            DrawElement(() => EditorGUILayout.Slider(iterator, 0.01f, 1f));
             iterator.NextVisible(false);
-            DrawElement(() => EditorGUILayout.Slider(iterator, 0.01f, 5f));
+            DrawElement(() => EditorGUILayout.Slider(iterator, 0.01f, 1f));
 
             EditorGUIUtility.labelWidth = originalLabelWidth;
             instance.ApplyModifiedProperties();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Flux
 {
@@ -19,7 +20,7 @@ namespace Flux
         public static void Reference(IEnumerable<object> values, string address)
         {
             if (globalReferences.TryGetValue(address, out var list)) foreach (var value in values) list.Add(value);
-            else globalReferences.Add(address, new List<object>() {values});
+            else globalReferences.Add(address, new List<object>(values));
         }
 
         public static void Reference(object value, Enum address, object key) => Reference(value, address.GetNiceName(), key);
@@ -46,12 +47,12 @@ namespace Flux
                 var hashCode = key.GetHashCode();
                 
                 if (subDictionary.TryGetValue(hashCode, out var list)) foreach (var value in values) list.Add(value);
-                else subDictionary.Add(hashCode, new List<object>(){values});
+                else subDictionary.Add(hashCode, new List<object>(values));
             }
             else
             {
                 localReferences.Add(address, new Dictionary<int, List<object>>());
-                localReferences[address].Add(key.GetHashCode(), new List<object>(){values});
+                localReferences[address].Add(key.GetHashCode(), new List<object>(values));
             }
         }
 

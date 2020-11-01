@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33616237edcf3c46ad7b2dc86e28c52, type: 3}
   m_Name: BeauTambourSettings
   m_EditorClassIdentifier: 
-  rythmMarginTolerance: 0.009999999776482582
+  rythmMarginTolerance: 0.25
   toleranceRadiusRange: {x: 0.05, y: 0.3}
-  standardToleranceRadius: 0.05
-  radiusToleranceForgiveness: 0
+  standardToleranceRadius: 0.1
+  radiusToleranceForgiveness: 1.25
   curveSubdivision: 1
-  recognitionErrorThreshold: 0.5
-  headingErrorFactor: 0.01
-  spacingErrorFactor: 0.01
+  recognitionErrorThreshold: 10
+  headingErrorFactor: 0.025
+  spacingErrorFactor: 0.02

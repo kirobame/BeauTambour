@@ -6,6 +6,8 @@ namespace BeauTambour
     public enum Reference
     {
         Settings,
-        RythmHandler
+        RythmHandler,
+        
+        OutcomesParent,
     }
 }

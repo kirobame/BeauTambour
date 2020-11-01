@@ -100,9 +100,9 @@ namespace Flux.Editor
                     {
                         var content = EditorGUIUtility.IconContent("greenLight");
                         content.text = shortName;
-
+       
                         var labelRect = rect;
-                        labelRect.width = 100f;
+                        labelRect.width = 200f;
                         EditorGUI.LabelField(labelRect, content);
 
                         var referenceRect = labelRect;

@@ -23,7 +23,8 @@ namespace BeauTambour
             OnShutdown,
         }
         #endregion
-        
+
+        public double BeatsPerSeconds => beatsPerMinutes / 60f;
         /// <summary>How much seconds fit in a beat.</summary> 
         public double SecondsPerBeats => 60f / beatsPerMinutes;
         /// <summary>How many beats fit in a minute.</summary> 
@@ -71,7 +72,7 @@ namespace BeauTambour
             Beats = Time / SecondsPerBeats;
 
             Event.Call<double>(EventType.OnTick, Time);
-            ProcessCalls(call => call.Tick(Time - call.StartingTime));
+            ProcessCalls(call => call.Tick(Beats - call.Start - MathBt.Clamp(call.Offset, 0d, double.PositiveInfinity)));
             
             var roundedBeats = (int)Math.Floor(Beats);
             if (roundedBeats != lastBeat)
@@ -85,7 +86,7 @@ namespace BeauTambour
                     processedCalls.Add(call);
                 }
                 
-                ProcessCalls(call => call.Tick(lastBeat - call.StartingBeat));
+                ProcessCalls(call => call.Beat(lastBeat - call.Start));
             }
         }
         
@@ -145,7 +146,7 @@ namespace BeauTambour
         public bool IsOnTempo(double toleranceMargin)
         {
             var differences = GetDifferences();
-            var toleranceMarginInBeats = toleranceMargin / SecondsPerBeats;
+            var toleranceMarginInBeats = toleranceMargin / BeatsPerSeconds;
 
             if (differences.floored <= toleranceMarginInBeats || differences.ceiled <= toleranceMarginInBeats) return true;
             else return false;
@@ -155,7 +156,7 @@ namespace BeauTambour
         public bool IsOnLowerTempo() => IsOnLowerTempo(standardRythmMarginTolerance);
         public bool IsOnLowerTempo(double toleranceMargin)
         {
-            var toleranceMarginInBeats = toleranceMargin / SecondsPerBeats;
+            var toleranceMarginInBeats = toleranceMargin / BeatsPerSeconds;
             var flooredDifference = Beats - lastBeat;
 
             return flooredDifference <= toleranceMarginInBeats;
@@ -164,7 +165,7 @@ namespace BeauTambour
         public bool IsOnUpperTempo() => IsOnUpperTempo(standardRythmMarginTolerance);
         public bool IsOnUpperTempo(double toleranceMargin)
         {
-            var toleranceMarginInBeats = toleranceMargin / SecondsPerBeats;
+            var toleranceMarginInBeats = toleranceMargin / BeatsPerSeconds;
             var ceiledDifference = lastBeat + 1 - Beats;
 
             return ceiledDifference <= toleranceMarginInBeats;
@@ -177,18 +178,24 @@ namespace BeauTambour
             if (!IsActive || toleranceMargin <= 0 || toleranceMargin > SecondsPerBeats) return false;
             
             var differences = GetDifferences();
-            var toleranceMarginInBeats = toleranceMargin / SecondsPerBeats;
+            var toleranceMarginInBeats = toleranceMargin / BeatsPerSeconds;
 
             if (differences.floored <= toleranceMarginInBeats)
             {
-                queueable.Prepare(Time, lastBeat, differences.floored);
+                Debug.Log("Normal");
+                
+                queueable.Prepare(lastBeat, differences.floored);
+                queueable.Beat(lastBeat - queueable.Start);
+                
                 processedCalls.Add(queueable);
-
+                
                 return true;
             } 
             else if (differences.ceiled <= toleranceMarginInBeats)
             {
-                queueable.Prepare(Time, lastBeat, -differences.ceiled);
+                Debug.Log("Early");
+                
+                queueable.Prepare(lastBeat + 1, -differences.ceiled);
                 earlyCalls.Enqueue(queueable);
                 
                 return true;
@@ -201,12 +208,14 @@ namespace BeauTambour
             var differences = GetDifferences();
             if (differences.floored <= differences.ceiled)
             {
-                queueable.Prepare(Time, lastBeat, differences.floored);
+                queueable.Prepare(lastBeat, differences.floored);
+                queueable.Beat(lastBeat - queueable.Start);
+                
                 processedCalls.Add(queueable);
             }
             else
             {
-                queueable.Prepare(Time, lastBeat, -differences.ceiled);
+                queueable.Prepare(lastBeat, -differences.ceiled);
                 earlyCalls.Enqueue(queueable);
             }
         }

@@ -2,12 +2,11 @@
 {
     public interface IRythmQueueable
     {
-        double StartingTime { get; }
-        int StartingBeat { get; }
-        
+        int Start { get; }
         bool IsDone { get; }
+        double Offset { get; }
         
-        void Prepare(double startingTime, int startingBeat, double offset);
+        void Prepare(int start, double offset);
 
         void Tick(double time);
         void Beat(int count);

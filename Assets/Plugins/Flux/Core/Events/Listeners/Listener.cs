@@ -19,12 +19,7 @@ namespace Flux
     {
         [SerializeField] private TEvent callback;
         
-        void OnEnable()
-        {
-            Debug.Log(Address);
-            Event.Register<T>(Address, callback.Invoke);
-        }
-
+        void OnEnable() =>  Event.Register<T>(Address, callback.Invoke);
         void OnDisable() => Event.Unregister<T>(Address, callback.Invoke);
     }
     public abstract class Listener<T1,T2,TEvent> : Listener where TEvent : UnityEvent<T1,T2>

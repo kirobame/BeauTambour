@@ -125,6 +125,7 @@ namespace Flux
         }
 
         public static bool Open<T>(Enum address) => Open<T>(address.GetNiceName());
+
         public static bool Open<T>(object address)
         {
             var stringedAddress = address.ToString();
