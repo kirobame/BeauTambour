@@ -2,7 +2,7 @@
 
 namespace Flux
 {
-    [Effect("Utility/Jumps/Loop")]
+    [ItemPath("Utility/Jumps/Loop")]
     public class Loop : ConditionalJump
     {
         [SerializeField] private int repetitions;

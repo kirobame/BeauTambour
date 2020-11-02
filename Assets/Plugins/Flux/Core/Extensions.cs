@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Flux
@@ -77,6 +78,17 @@ namespace Flux
 
             if (result.x >= minX && result.x <= maxX && result.y >= minY && result.y <= maxY) return true;
             else return false;
+        }
+
+        public static T[] Split<T>(this T value) where T : Enum
+        {
+            var results = Enum.GetValues(typeof(T)).Cast<T>().Where(item => value.HasFlag(item)).ToArray();
+            return results;
+        }
+        public static int Count<T>(this T value) where T : Enum
+        {
+            var count = Enum.GetValues(typeof(T)).Cast<T>().Count(item => value.HasFlag(item));
+            return count;
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Flux
 {
-    [Effect("Utility/Display")]
+    [ItemPath("Utility/Display")]
     public class Display : Effect
     {
         [SerializeField] private string message;

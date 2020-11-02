@@ -12,8 +12,21 @@ namespace Flux
         private bool isPlaying;
         private int advancement;
 
+        #if UNITY_EDITOR
+        
+        void OnValidate()
+        {
+            if (Application.isPlaying) return;
+            foreach (var effect in effects)
+            {
+                if (effect.hideFlags == HideFlags.HideInInspector) continue;
+                effect.hideFlags = HideFlags.HideInInspector;
+            }
+        }
+        #endif
+        
         void Start() { for (var i = 0; i < effects.Length; i++) effects[i].Bootup(i); }
-
+        
         public void Play()
         {
             isPlaying = true;

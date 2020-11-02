@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a630b45f73a80f446b23d4a172b9de85, type: 3}
+  m_Name: Encounter
+  m_EditorClassIdentifier: 
+  ports:
+  - {fileID: 11400000, guid: 2b3c642407362ed40991fdb381b54084, type: 2}
+  - {fileID: 11400000, guid: f8f8aaa829667e944bc55cebaf8a33af, type: 2}
+  - {fileID: 11400000, guid: f55a822519beaec42902cf10b30bc4e6, type: 2}
+  outcomes:
+  - {fileID: 11400000, guid: 6f3e247204c213e46811bb1feeedc255, type: 2}
+  - {fileID: 11400000, guid: 5f12174d5e679004796497611f80b9df, type: 2}
+  - {fileID: 11400000, guid: e408ebd56687b55419c4bdf545a33c04, type: 2}
+  - {fileID: 11400000, guid: d04a9406aec37fd4aad7506290950bdc, type: 2}

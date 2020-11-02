@@ -2,7 +2,7 @@
 
 namespace Flux
 {
-    [Effect("Utility/Marker")]
+    [ItemPath("Utility/Marker")]
     public class Marker : Effect
     {
         public string Name => name;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Flux
 {
-    [Effect("Utility/Wait")]
+    [ItemPath("Utility/Wait")]
     public class Wait : Effect
     {
         [SerializeField] private float time;
@@ -19,7 +19,6 @@ namespace Flux
         public override int Evaluate(int advancement, IReadOnlyList<Effect> registry, float deltaTime, out bool prolong)
         {
             runtime += deltaTime;
-            Debug.Log($"Waiting : {runtime / time}");
 
             if (runtime < time)
             {

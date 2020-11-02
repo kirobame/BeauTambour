@@ -86,7 +86,7 @@ namespace Flux.Editor
             if (!reorderableList.serializedProperty.isExpanded) return;
             
             rect.y += EditorGUIUtility.standardVerticalSpacing * 2f;
-            rect.height -= EditorGUIUtility.standardVerticalSpacing * 2;
+            rect.height -= EditorGUIUtility.standardVerticalSpacing * 4f;
             var elementProperty = reorderableList.serializedProperty.GetArrayElementAtIndex(index);
             
             if (hasDrawer)
