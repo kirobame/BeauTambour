@@ -31,6 +31,10 @@ namespace BeauTambour
         [SerializeField] private int duration;
         [SerializeField] private int startOffset;
         
+        //----------------------------------------------------------------------------------------------------------
+
+        [Space, SerializeField] private LineRenderer lineRenderer;
+        
         private Note[] specificNotes = new Note[]
         {
             new Note(new NoteAttribute[]
@@ -75,7 +79,23 @@ namespace BeauTambour
             };
         }
 
-        void Start() => Repository.GetSingle<RythmHandler>(Reference.RythmHandler).BootUp();
+        void Start()
+        {
+            Repository.GetSingle<RythmHandler>(Reference.RythmHandler).BootUp();
+
+            var definition = 360;
+            var step = 360f / definition * Mathf.Deg2Rad;
+
+            var positions = new Vector3[definition];
+            for (var i = 0; i < definition; i++)
+            {
+                var angle = step * i;
+                positions[i] = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+            }
+
+            lineRenderer.positionCount = definition;
+            lineRenderer.SetPositions(positions);
+        }
 
         private void Execute()
         {
