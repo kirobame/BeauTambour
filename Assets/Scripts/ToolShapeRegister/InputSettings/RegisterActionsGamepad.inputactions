@@ -1,0 +1,104 @@
+{
+    "name": "RegisterActions",
+    "maps": [
+        {
+            "name": "RegisterShapeTool",
+            "id": "aa242329-f397-4a85-96c0-ef25358adffe",
+            "actions": [
+                {
+                    "name": "BeginRegister",
+                    "type": "Button",
+                    "id": "c11d3ae5-e311-481c-877f-3dbebb105076",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Draw",
+                    "type": "Value",
+                    "id": "f5b1ffab-eb5b-4280-997c-77a802a95094",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "EndRegister",
+                    "type": "Button",
+                    "id": "2bfa408c-f333-4e3f-afab-b80e3df8256d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "326cc5a6-9d10-4dbe-aae5-32a976af1682",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BeginRegister",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed11aebc-6dab-4bc2-aca4-bebefbd5d113",
+                    "path": "<Gamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c196d235-959e-4e67-b7b5-149e146f0b2b",
+                    "path": "<Gamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9594719d-ed85-425f-a2b7-7cfead0aae07",
+                    "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7d197a04-4d8b-4c2c-8ddb-44359559260c",
+                    "path": "<Gamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4185c9fb-e5c5-4831-a475-35dc1fce4134",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EndRegister",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
