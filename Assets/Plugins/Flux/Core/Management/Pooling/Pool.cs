@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -27,13 +28,19 @@ namespace Flux
             }
         }
 
-        public T RequestSingle() => Request(Providers[0].Prefab, 1).First();
-        public T RequestSingle(TPoolable key) => Request(key, 1).First();
+        public T RequestSingle() => RequestSinglePoolable().Value;
+        public T RequestSingle(TPoolable key) => RequestSinglePoolable(key).Value;
         
-        public T[] Request(int count) => Request(Providers[0].Prefab, count);
-        public T[] Request(TPoolable key, int count)
+        public TPoolable RequestSinglePoolable() => RequestPoolable(Providers[0].Prefab, 1).First();
+        public TPoolable RequestSinglePoolable(TPoolable key) => RequestPoolable(key, 1).First();
+
+        public T[] Request(int count) => RequestPoolable(count).Select(poolable => poolable.Value).ToArray();
+        public T[] Request(TPoolable key, int count) => RequestPoolable(key, count).Select(poolable => poolable.Value).ToArray();
+        
+        public TPoolable[] RequestPoolable(int count) => RequestPoolable(Providers[0].Prefab, count);
+        public TPoolable[] RequestPoolable(TPoolable key, int count)
         {
-            var request = new T[count];
+            var request = new TPoolable[count];
             if (availableInstances.TryGetValue(key, out var queue))
             {
                 int index;
@@ -42,7 +49,7 @@ namespace Flux
                     var instance = Instantiate(key, transform);
                     Claim(instance, key);
                     
-                    request[index] = instance.Value;
+                    request[index] = instance;
                     index++;
                 }
                 
@@ -51,7 +58,7 @@ namespace Flux
                     var instance = queue.Dequeue();
                 
                     Claim(instance, key);
-                    request[i] = instance.Value;
+                    request[i] = instance;
                 }
             }
             else
@@ -62,7 +69,7 @@ namespace Flux
                     var instance = Instantiate(key);
                     Claim(instance, key);
                     
-                    request[i] = instance.Value;
+                    request[i] = instance;
                 }
             }
 

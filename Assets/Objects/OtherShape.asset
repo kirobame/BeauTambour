@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
+  m_Name: OtherShape
+  m_EditorClassIdentifier: 
+  points:
+  - position: {x: -0.9999428, y: -0.0106945755}
+    toleranceRadius: 0.23611791
+  - position: {x: -0.9316536, y: -0.84661424}
+    toleranceRadius: 0.125
+  - position: {x: -0.13417324, y: -1.2585828}
+    toleranceRadius: 0.1
+  - position: {x: 0.60403126, y: -0.79696065}
+    toleranceRadius: 0.24313219
+  - position: {x: 0.107716545, y: -0.15118112}
+    toleranceRadius: 0.1
+  - position: {x: -0.14551182, y: 0.18519686}
+    toleranceRadius: 0.1
+  - position: {x: -0.5948011, y: 0.80387294}
+    toleranceRadius: 0.2779411
+  - position: {x: 0.13795276, y: 1.2585828}
+    toleranceRadius: 0.1
+  - position: {x: 0.9505513, y: 0.8390552}
+    toleranceRadius: 0.1
+  - position: {x: 0.9999371, y: -0.011214248}
+    toleranceRadius: 0.23894875

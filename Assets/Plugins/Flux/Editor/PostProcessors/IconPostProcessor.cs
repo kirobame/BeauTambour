@@ -27,6 +27,7 @@ namespace Flux.Editor
         private static readonly (Type type, long id)[] lookups = new (Type type, long id)[]
         {
             (typeof(Listener), -7098612008054524421),
+            (typeof(LocalListener), -7098612008054524421),
             (typeof(Sequencer), 3920131678736184407),
             (typeof(Poolable), -3633255215815038627),
             (typeof(Pool), 8714319771344428160),

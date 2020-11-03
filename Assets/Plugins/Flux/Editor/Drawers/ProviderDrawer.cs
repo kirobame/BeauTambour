@@ -49,7 +49,7 @@ namespace Flux.Editor
                 copy.arraySize = property.intValue;
                 for (var i = 0; i < copy.arraySize; i++)
                 {
-                    var instance = (Component)Object.Instantiate(prefab, component.transform);
+                    var instance = (Component)PrefabUtility.InstantiatePrefab(prefab, component.transform);
                     instance.gameObject.SetActive(false);
 
                     var elementProperty = copy.GetArrayElementAtIndex(i);

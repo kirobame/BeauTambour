@@ -7,7 +7,7 @@ namespace BeauTambour
     {
         Settings,
         RythmHandler,
-        
-        OutcomesParent,
+        LinePool,
+        StickIndicator
     }
 }

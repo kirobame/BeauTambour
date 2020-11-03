@@ -21,8 +21,6 @@ namespace BeauTambour
         public IReadOnlyList<Point> RuntimePoints => runtimePoints;
         private Point[] runtimePoints;
 
-        private bool isOperative;
-    
         #region Edition
 
         public void SetPointPosition(int index, Vector2 position)
@@ -84,25 +82,47 @@ namespace BeauTambour
         }
         #endregion
 
-        public void GenerateRuntimeData()
+        public Vector3[] Define(int subDivision, float depth = 0f)
         {
-            if (isOperative) return;
-
-            var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
-            var results = new List<Point>();
-
-            var index = 0;
+            var results = new List<Vector3>();
             for (var i = 0; i < points.Count - 1; i += 3)
             {
                 var p1 = points[i].position;
-                var p2 = points[i+1].position;
-                var p3 = points[i+2].position;
-                var p4 = points[i+3].position;
+                var p2 = points[i + 1].position;
+                var p3 = points[i + 2].position;
+                var p4 = points[i + 3].position;
+
+                for (float j = 0; j < subDivision; j++)
+                {
+                    var ratio = j / subDivision;
+                
+                    var position = Bezier.GetPoint(p1, p2, p3, p4, ratio);
+                    results.Add(new Vector3(position.x, position.y, depth));
+                }
+            }
+
+            var last = runtimePoints.Last().position;
+            results.Add(new Vector3(last.x, last.y, depth));
+
+            return results.ToArray();
+        }
+        
+        public void GenerateRuntimeData()
+        {
+            var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
+            var results = new List<Point>();
+            
+            for (var i = 0; i < points.Count - 1; i += 3)
+            {
+                var p1 = points[i].position;
+                var p2 = points[i + 1].position;
+                var p3 = points[i + 2].position;
+                var p4 = points[i + 3].position;
 
                 for (float j = 0; j < settings.CurveSubdivision; j++)
                 {
                     var ratio = j / settings.CurveSubdivision;
-                
+
                     var position = Bezier.GetPoint(p1, p2, p3, p4, ratio);
                     var errorRadius = Mathf.Lerp(points[i].toleranceRadius, points[i + 3].toleranceRadius, ratio);
                 
@@ -115,8 +135,6 @@ namespace BeauTambour
         
             results.Add(last);
             runtimePoints = results.ToArray();
-
-            isOperative = true;
         }
         
         public bool CanStartEvaluation(Vector2 position)
@@ -126,53 +144,51 @@ namespace BeauTambour
 
             return distance <= firstPoint.toleranceRadius;
         }
-        public float Evaluate(Vector2 position, Vector2 direction, int index, out bool next)
+        public ShapeAnalysis Evaluate(ShapeAnalysis analysis, Vector2 position)
         {
-            next = false;
-            var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
-        
-            var p1 = runtimePoints[index].position;
-            var p2 = runtimePoints[index + 1].position;
-        
+            var result = default(ShapeAnalysis);
+            
+            var p2 = runtimePoints[analysis.index + 1].position;
             var p2Distance = Vector2.Distance(position, p2);
-            if (p2Distance <= runtimePoints[index + 1].toleranceRadius)
+            
+            if (p2Distance <= runtimePoints[analysis.index + 1].toleranceRadius)
             {
-                next = true;
-                return 0;
-            }
-        
-            var headingError = Mathf.Clamp01(Vector2.Dot(direction, (p2 - p1).normalized) * -1) * settings.HeadingErrorFactor;
-        
-            if (position.TryProjectOnto(p1, p2, out var result))
-            {
-                var ratio = (result - p1).magnitude / (p2 - p1).magnitude;
-                var errorMargin = Mathf.Lerp(runtimePoints[index].toleranceRadius, runtimePoints[index + 1].toleranceRadius, ratio);
-
-                var distance = Vector2.Distance(position, p2);
-                if (distance <= errorMargin) return headingError;
-                else
+                result = new ShapeAnalysis(0f, 0f, (analysis.index + 1f) / (runtimePoints.Length - 1), true)
                 {
-                    var spacingError = (distance - errorMargin) * settings.SpacingErrorFactor;
-                    return (headingError + spacingError) / 2f;
-                }
+                    position = position,
+                    index = analysis.index + 1
+                };
+                return result;
+            }
+            var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
+            
+            var direction = (position - analysis.position).normalized;
+            var p1 = runtimePoints[analysis.index].position;
+            
+            var headingError = Mathf.Clamp01(Vector2.Dot(direction, (p2 - p1).normalized) * -1) * settings.HeadingErrorFactor;
+            result.position = position;
+            result.index = analysis.index;
+
+            var closest = position.ProjectOnto(p1, p2);
+            
+            var ratio = (closest - p1).magnitude / (p2 - p1).magnitude;
+            var errorMargin = Mathf.Lerp(runtimePoints[analysis.index].toleranceRadius, runtimePoints[analysis.index + 1].toleranceRadius, ratio);
+            
+            var localRatio = Vector2.Distance(p1, closest) / Vector2.Distance(p1, p2);
+            var globalRatio = Mathf.Lerp((float)analysis.index / (runtimePoints.Length - 1), (analysis.index + 1f) / (runtimePoints.Length - 1), localRatio);
+
+            var distance = Vector2.Distance(position, closest);
+            if (distance <= errorMargin)
+            {
+                result.SetData(headingError, localRatio, globalRatio, false);
+                return result;
             }
             else
             {
-                var p1Distance = Vector2.Distance(position, p1);
-                if (p1Distance < p2Distance)
-                {
-                    if (p1Distance <= runtimePoints[index].toleranceRadius) return headingError;
-                    else
-                    {
-                        var spacingError = (p1Distance - runtimePoints[index].toleranceRadius) * settings.SpacingErrorFactor;
-                        return (headingError + spacingError) / 2f;
-                    }
-                }
-                else
-                {
-                    var spacingError = (p1Distance - runtimePoints[index + 1].toleranceRadius) * settings.SpacingErrorFactor;
-                    return (headingError + spacingError) / 2f;
-                }
+                var spacingError = Mathf.Abs(distance - errorMargin) * settings.SpacingErrorFactor;
+                result.SetData(headingError + spacingError, localRatio, globalRatio, false);
+                    
+                return result;
             }
         }
     }

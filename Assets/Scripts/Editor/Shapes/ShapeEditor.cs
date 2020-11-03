@@ -43,6 +43,7 @@ namespace BeauTambour.Editor
             iterator.NextVisible(false);
             Handles.color = Color.yellow;
 
+            DisplayRuntimeData(rect);
             for (var i = 0; i < iterator.arraySize; i += 3)
             {
                 var p1 = GetPosition(iterator, i, rect);
@@ -73,6 +74,28 @@ namespace BeauTambour.Editor
 
             var position = pointProperty.vector2Value;
             return rect.center + new Vector2(position.x, -position.y) * (rect.width * 0.5f * occupiance);
+        }
+        
+        private void DisplayRuntimeData(Rect rect)
+        {
+            var shape = serializedObject.targetObject as Shape;
+            if (shape.RuntimePoints != null)
+            {
+                for (var i = 0; i < shape.RuntimePoints.Count - 1; i++)
+                {
+                    var p1 = shape.RuntimePoints[i].position;
+                    p1 = rect.center + new Vector2(p1.x, -p1.y) * (rect.width * 0.5f * occupiance);
+                
+                    var p2 = shape.RuntimePoints[i + 1].position;
+                    p2 = rect.center + new Vector2(p2.x, -p2.y) * (rect.width * 0.5f * occupiance);
+                
+                    Handles.color = Color.cyan;
+                    Handles.DrawLine(p1,p2);
+                
+                    Handles.DrawSolidDisc(p1, Vector3.forward, rect.width * 0.005f);
+                    Handles.DrawSolidDisc(p2, Vector3.forward, rect.width * 0.005f);
+                }
+            }
         }
     }
 }
