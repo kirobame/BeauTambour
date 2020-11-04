@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808269684180be14487638e67ceebd36, type: 3}
   m_Name: IndicateStick
   m_EditorClassIdentifier: 
-  smoothing: 0
+  smoothing: 0.05
+  sizeRange: {x: 0, y: 0.1}

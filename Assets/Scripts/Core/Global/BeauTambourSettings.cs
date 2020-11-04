@@ -29,6 +29,11 @@ namespace BeauTambour
         public float SpacingErrorFactor => spacingErrorFactor;
         [SerializeField] private float spacingErrorFactor = 0.01f;
 
+        public float ValidationRadius => validationRadius;
+        [SerializeField] private float validationRadius;
+        public float CompletionQuota => completionQuota;
+        [SerializeField] private float completionQuota;
+        
         #if UNITY_EDITOR
         
         public static BeauTambourSettings GetOrCreateSettings()

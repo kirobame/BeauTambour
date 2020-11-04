@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: ShapeActivator
   m_EditorClassIdentifier: 
   shapes:
+  - {fileID: 11400000, guid: 09682ca5c7aa3d04c94f8b811ea28fd1, type: 2}
   - {fileID: 11400000, guid: d3d91098e16d6e34b8053fefe9b3f6cb, type: 2}
-  deactivationTime: 0.25
+  - {fileID: 11400000, guid: c7f31ef370c4654428f64193f5f5e8e3, type: 2}
+  deactivationTime: 0.075

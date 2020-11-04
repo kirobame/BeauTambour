@@ -13,6 +13,11 @@ namespace BeauTambour.Editor
         
         protected override void Draw(SerializedProperty iterator)
         {
+            iterator.NextVisible(false);
+            EditorGUILayout.PropertyField(iterator);
+
+            var color = iterator.colorValue;
+            
             EditorGUILayout.Separator();
         
             var rect = GUILayoutUtility.GetRect(EditorGUIUtility.currentViewWidth, EditorGUIUtility.currentViewWidth);
@@ -41,7 +46,7 @@ namespace BeauTambour.Editor
             Handles.DrawLine(bottomLeft, rect.min);
 
             iterator.NextVisible(false);
-            Handles.color = Color.yellow;
+            Handles.color = color;
 
             DisplayRuntimeData(rect);
             for (var i = 0; i < iterator.arraySize; i += 3)
@@ -54,7 +59,7 @@ namespace BeauTambour.Editor
                     var p3 = GetPosition(iterator, i + 2, rect);
                     var p4 = GetPosition(iterator, i + 3, rect);
             
-                    Handles.DrawBezier(p1,p4, p2,p3, Color.yellow,null, 2);
+                    Handles.DrawBezier(p1,p4, p2,p3, color,null, 2);
                 }
 
                 var size = rect.width * 0.005f;
@@ -89,7 +94,7 @@ namespace BeauTambour.Editor
                     var p2 = shape.RuntimePoints[i + 1].position;
                     p2 = rect.center + new Vector2(p2.x, -p2.y) * (rect.width * 0.5f * occupiance);
                 
-                    Handles.color = Color.cyan;
+                    Handles.color = Color.magenta;
                     Handles.DrawLine(p1,p2);
                 
                     Handles.DrawSolidDisc(p1, Vector3.forward, rect.width * 0.005f);

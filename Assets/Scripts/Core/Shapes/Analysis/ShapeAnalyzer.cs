@@ -7,21 +7,6 @@ namespace BeauTambour
 {
     public class ShapeAnalyzer
     {
-        #region Encapsulated Types
-
-        private struct TrackedShape
-        {
-            public TrackedShape(int index, Vector2 lastInput)
-            {
-                shapeIndex = index;
-                analysis = new ShapeAnalysis() {position = lastInput};
-            }
-            
-            public int shapeIndex;
-            public ShapeAnalysis analysis;
-        }
-        #endregion
-
         public event Action<Shape> OnEvaluationStart;
 
         public ShapeAnalyzer(Shape[] shapes)
@@ -30,7 +15,7 @@ namespace BeauTambour
             
             for (var i = 0; i < shapes.Length; i++)
             {
-                shapes[i].GenerateRuntimeData();
+                shapes[i].GenerateRuntimePoints();
                 untrackedShapes.Add(i);
             }
         }
@@ -38,61 +23,53 @@ namespace BeauTambour
         private Shape[] shapes;
         
         private List<int> untrackedShapes = new List<int>();
-        private List<TrackedShape> trackedShapes = new List<TrackedShape>();
+        private List<ShapeAnalysis> trackedShapes = new List<ShapeAnalysis>();
 
         private Vector2 lastInput;
 
         public void Begin(Vector2 input) => lastInput = input;
-        public IEnumerable<ShapeAnalysisResult> Evaluate(Vector2 input)
+        public ShapeAnalysis[] Evaluate(Vector2 input)
         {
             var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
-            var results = new List<ShapeAnalysisResult>();
             
             for (var i = 0; i < untrackedShapes.Count; i++)
             {
                 if (!shapes[untrackedShapes[i]].CanStartEvaluation(input)) continue;
                 
                 OnEvaluationStart?.Invoke(shapes[untrackedShapes[i]]);
-                
-                trackedShapes.Add(new TrackedShape(i, lastInput));
+
+                trackedShapes.Add(new ShapeAnalysis(shapes[untrackedShapes[i]], lastInput));
                 untrackedShapes.RemoveAt(i);
                 i--;
             }
 
             for (var i = 0; i < trackedShapes.Count; i++)
             {
-                var current = trackedShapes[i];
-                var analysis = shapes[current.shapeIndex].Evaluate(current.analysis, input);
-                
-                if (analysis.GoToNext && analysis.index + 1 == shapes[current.shapeIndex].RuntimePoints.Count)
+                var analysis = trackedShapes[i];
+                if (analysis.GoToNext && analysis.advancement == analysis.Source.RuntimePoints.Count - 1)
                 {
-                    untrackedShapes.Add(current.shapeIndex);
+                    analysis.advancement++;
+                    
+                    untrackedShapes.Add(shapes.IndexOf(analysis.Source));
                     trackedShapes.RemoveAt(i);
                     i--;
-                        
-                    results.Add(new ShapeAnalysisResult(shapes[current.shapeIndex], analysis, true, false));
+                    
                     continue;
                 }
-                else
+                else if (analysis.Error >= settings.RecognitionErrorThreshold)
                 {
-                    if (analysis.Error >= settings.RecognitionErrorThreshold)
-                    {
-                        untrackedShapes.Add(current.shapeIndex);
-                        trackedShapes.RemoveAt(i);
-                        i--;
+                    untrackedShapes.Add(shapes.IndexOf(analysis.Source));
+                    trackedShapes.RemoveAt(i);
+                    i--;
 
-                        results.Add(new ShapeAnalysisResult(shapes[current.shapeIndex], analysis, false, true));
-                        continue;
-                    }
-                    else results.Add(new ShapeAnalysisResult(shapes[current.shapeIndex], analysis, false, false));
+                    continue;
                 }
-
-                current.analysis = analysis;
-                trackedShapes[i] = current;
+                
+                trackedShapes[i] = analysis.Source.Evaluate(analysis, input);
             }
             
             lastInput = input;
-            return results;
+            return trackedShapes.ToArray();
         }
         public void Stop()
         {

@@ -7,7 +7,7 @@ namespace BeauTambour
     {
         Settings,
         RythmHandler,
-        LinePool,
+        DrawingPool,
         StickIndicator
     }
 }

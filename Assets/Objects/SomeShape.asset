@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
+  m_Name: SomeShape
+  m_EditorClassIdentifier: 
+  color: {r: 0.3033108, g: 0.53723615, b: 0.9056604, a: 1}
+  points:
+  - position: {x: -1, y: -0}
+    toleranceRadius: 0.22736944
+  - position: {x: -0.9959056, y: 0.5177953}
+    toleranceRadius: 0.125
+  - position: {x: -0.56125987, y: 0.99779534}
+    toleranceRadius: 0.125
+  - position: {x: 0.0017793565, y: 0.9999984}
+    toleranceRadius: 0.21550046
+  - position: {x: 0.45921263, y: 1.0015749}
+    toleranceRadius: 0.1
+  - position: {x: 0.9959056, y: 0.6198426}
+    toleranceRadius: 0.1
+  - position: {x: 1, y: -0}
+    toleranceRadius: 0.22411062
+  - position: {x: 0.712441, y: 0.003779528}
+    toleranceRadius: 0.1
+  - position: {x: 0.28157482, y: -0.003779528}
+    toleranceRadius: 0.1
+  - position: {x: -0.00944882, y: -0.007559056}
+    toleranceRadius: 0.3
+  - position: {x: -0.0056692916, y: -0.34393704}
+    toleranceRadius: 0.1
+  - position: {x: -0.0056692916, y: -0.680315}
+    toleranceRadius: 0.1
+  - position: {x: -0.001889764, y: -0.9940158}
+    toleranceRadius: 0.1293902

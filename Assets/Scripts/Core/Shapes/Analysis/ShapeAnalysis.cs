@@ -1,46 +1,53 @@
 ﻿
+using Flux;
 using UnityEngine;
 
 namespace BeauTambour
 {
-    public struct ShapeAnalysis
+    public class ShapeAnalysis
     {
-        public ShapeAnalysis(float error, float localRatio, float globalRatio, bool goToNext)
+        public ShapeAnalysis(Shape source, Vector2 position)
         {
-            Error = error;
-            
+            Source = source;
+            this.position = position;
+        }
+        public ShapeAnalysis(float localRatio, float globalRatio, float error, bool goToNext)
+        {
             LocalRatio = localRatio;
             GlobalRatio = globalRatio;
 
+            Error = error;
             GoToNext = goToNext;
-
-            position = Vector2.zero;
-            index = 0;
         }
 
-        public float Error { get; private set; }
+        public bool IsComplete
+        {
+            get
+            {
+                var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
+                return GlobalRatio >= settings.CompletionQuota;
+            }
+        }
+        public bool IsValid
+        {
+            get
+            {
+                var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
+                return Error <= settings.RecognitionErrorThreshold;
+            }
+        }
         
-        public float LocalRatio { get; private set; }
-        public float GlobalRatio { get; private set; }
+        public Shape Source { get; private set; }
 
-        public bool GoToNext { get; private set; }
+        public readonly float LocalRatio;
+        public readonly float GlobalRatio;
+
+        public readonly float Error;
+        public readonly bool GoToNext;
 
         public Vector2 position;
-        public int index;
+        public int advancement;
 
-        public void SetData(float error, float localRatio, float globalRatio, bool goToNext)
-        {
-            Error = error;
-            
-            LocalRatio = localRatio;
-            GlobalRatio = globalRatio;
-
-            GoToNext = goToNext;
-        }
-        public ShapeAnalysis Copy()
-        {
-            var copy = new ShapeAnalysis(Error, LocalRatio, GlobalRatio, GoToNext);
-            return copy;
-        }
+        public void SetSource(Shape source) => Source = source;
     }
 }

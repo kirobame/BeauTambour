@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: Shape
   m_EditorClassIdentifier: 
+  color: {r: 0.39101994, g: 0.8207547, b: 0.4155493, a: 1}
   points:
   - position: {x: 0.042871, y: 0.9990806}
     toleranceRadius: 0.23611791

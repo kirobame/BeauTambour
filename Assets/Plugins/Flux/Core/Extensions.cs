@@ -60,14 +60,31 @@ namespace Flux
         
         public static Vector2 ProjectOnto(this Vector2 pt, Vector2 p1, Vector2 p2)
         {
+            var closest = ProjectOnto(pt, p1, p2, out var code);
+            return closest;
+        }
+        public static Vector2 ProjectOnto(this Vector2 pt, Vector2 p1, Vector2 p2, out int code)
+        {
             var dx = p2.x - p1.x;
             var dy = p2.y - p1.y;
 
             var t = ((pt.x - p1.x) * dx + (pt.y - p1.y) * dy) / (dx * dx + dy * dy);
-            
-            if (t < 0) return p1;
-            else if (t > 1) return p2;
-            else return new Vector2(p1.x + t * dx, p1.y + t * dy);
+
+            if (t < 0)
+            {
+                code = 1;
+                return p1;
+            }
+            else if (t > 1)
+            {
+                code = 2;
+                return p2;
+            }
+            else
+            {
+                code = 3;
+                return new Vector2(p1.x + t * dx, p1.y + t * dy);
+            }
         }
 
         public static T[] Split<T>(this T value) where T : Enum
