@@ -6,33 +6,39 @@ using UnityEngine.InputSystem;
 
 public class InputController : MonoBehaviour
 {
+    #region Singleton
+    private static InputController instance = null;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+    public static InputController Instance => instance;
+    #endregion
+
     [SerializeField] private InputActionAsset actions;
     [SerializeField] private Transform cursor;
-    [SerializeField] private TrailRenderer trail;
-    [SerializeField] private LineRenderer line;
 
     private InputActionMap registerActions;
     private InputAction moveAction;
     private InputAction beginRegisterAction;
     private InputAction endRegisterAction;
+    private InputAction viewHistoryAction;
 
+    private bool isMoving = false;
     private Vector2 lastPos;
-    private Vector2 currentPos;
-    private float circleRadius = 1;
-    private float precisionBetweenEachPoints = 10;
-    [SerializeField]private float timeToRemovePos = 1f;
-    private float timeLastRemovedPos = 0;
-    bool isMoving = false;
+    private Vector2 currentPos;    
 
-    private void OnEnable()
-    {
-        Initialize();
-
-        moveAction.performed += OnMove;
-        moveAction.started += OnMoveStart;
-        moveAction.canceled += OnMoveCanceled;
-        moveAction.Enable();
-    }
+    public event Action OnBeginRegisterCallback;
+    public event Action OnEndRegisterCallback;
+    public event Action OnViewHistoryCallback;
 
     private void Update()
     {
@@ -43,21 +49,13 @@ public class InputController : MonoBehaviour
             {
                 cursor.Translate(moveAction.ReadValue<Vector2>() * Time.deltaTime * -3f);
             }*/
-            cursor.position = moveAction.ReadValue<Vector2>();
+            Vector2 newPos = moveAction.ReadValue<Vector2>();
+            cursor.position = newPos;
         }
-        DrawCursorLine();
-    }
-
-    private void OnDisable()
-    {
-        moveAction.performed -= OnMove;
-        moveAction.started -= OnMoveStart;
-        moveAction.canceled -= OnMoveCanceled;
-        moveAction.Disable();
-    }
-
-    private void DrawCursorLine()
-    {
+        else
+        {
+            cursor.position = Vector2.zero;
+        }
         if (currentPos == null)
         {
             lastPos = currentPos = cursor.position;
@@ -67,40 +65,49 @@ public class InputController : MonoBehaviour
             lastPos = currentPos;
             currentPos = cursor.position;
         }
-        if (currentPos != lastPos)
+        if (ToolManager.Instance.Action == CurrentAction.Drawing)
         {
-            line.positionCount++;
-            line.SetPosition(line.positionCount - 1, currentPos);
+            ShapeDrawer.Instance.DrawLineBetweenTwoPoint(lastPos, currentPos);
         }
-        if (line.positionCount <= 1)
-        {
-            timeLastRemovedPos = Time.time;
-        }
-        if (Time.time - timeLastRemovedPos >= timeToRemovePos)
-        {
-            timeLastRemovedPos = Time.time;
-            RemovePosFromLine();
-        }
-        Debug.Log(Time.time - timeLastRemovedPos);
     }
 
-    private void RemovePosFromLine()
+    private void OnDisable()
     {
-        Vector2 pos;
-        for (int index = 0; index < line.positionCount - 1; index++)
-        {
-            pos = line.GetPosition(index + 1);
-            line.SetPosition(index, pos);
-        }
-        line.positionCount--;
+        moveAction.started -= OnMoveStart;
+        moveAction.canceled -= OnMoveCanceled;
+        moveAction.Disable();
+
+        beginRegisterAction.performed -= OnBeginRegister;
+        beginRegisterAction.Disable();
+
+        endRegisterAction.performed -= OnEndRegister;
+        endRegisterAction.Disable();
+
+        viewHistoryAction.performed -= OnViewHistory;
+        viewHistoryAction.Disable();
     }
 
-    private void OnMove(InputAction.CallbackContext obj)
+    public void Initialize()
     {
-        /*Vector2 input = obj.ReadValue<Vector2>();
+        registerActions = actions.FindActionMap("RegisterShapeTool");
+        moveAction = registerActions.FindAction("Draw");
+        beginRegisterAction = registerActions.FindAction("BeginRegister");
+        endRegisterAction = registerActions.FindAction("EndRegister");
+        viewHistoryAction = registerActions.FindAction("ViewHistory");
 
-        cursor.Translate(input * Time.deltaTime * 10f);*/
-    }
+        moveAction.started += OnMoveStart;
+        moveAction.canceled += OnMoveCanceled;
+        moveAction.Enable();
+
+        beginRegisterAction.performed += OnBeginRegister;
+        beginRegisterAction.Enable();
+
+        endRegisterAction.performed += OnEndRegister;
+        endRegisterAction.Enable();
+
+        viewHistoryAction.performed += OnViewHistory;
+        viewHistoryAction.Enable();
+    }   
 
     private void OnMoveStart(InputAction.CallbackContext obj)
     {
@@ -110,14 +117,24 @@ public class InputController : MonoBehaviour
     private void OnMoveCanceled(InputAction.CallbackContext obj)
     {
         isMoving = false;
-    }
+    }   
 
-    private void Initialize()
+    private void OnBeginRegister(InputAction.CallbackContext obj)
     {
-        registerActions = actions.FindActionMap("RegisterShapeTool");
-        moveAction = registerActions.FindAction("Draw");
-        beginRegisterAction = registerActions.FindAction("BeginRegister");
-        endRegisterAction = registerActions.FindAction("EndRegister");
-        timeLastRemovedPos = Time.time;
+        if (ToolManager.Instance.Action != CurrentAction.Drawing) return;
+
+        OnBeginRegisterCallback?.Invoke();
+    }
+    
+    private void OnEndRegister(InputAction.CallbackContext obj)
+    {
+        if (ToolManager.Instance.Action != CurrentAction.Drawing) return;
+
+        OnEndRegisterCallback?.Invoke();
+    }
+    
+    private void OnViewHistory(InputAction.CallbackContext obj)
+    {
+        OnViewHistoryCallback?.Invoke();
     }
 }
