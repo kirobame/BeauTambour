@@ -22,7 +22,10 @@ namespace Flux.Editor
                 var current = rootType;
                 while (current != null)
                 {
-                    foreach (var field in current.GetFields(bindings)) fields.Add(field.Name, field);
+                    foreach (var field in current.GetFields(bindings))
+                    {
+                        if (!fields.ContainsKey(field.Name)) fields.Add(field.Name, field);
+                    }
                     current = current.BaseType;
                 }
 

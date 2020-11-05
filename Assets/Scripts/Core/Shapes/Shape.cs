@@ -9,6 +9,9 @@ namespace BeauTambour
     [IconIndicator(-3461654150298456965), CreateAssetMenu(fileName = "NewShape", menuName = "Beau Tambour/Shape")]
     public class Shape : ScriptableObject
     {
+        public Color Color => color;
+        [SerializeField] private Color color = Color.yellow;
+        
         public IReadOnlyList<Point> Points => points;
         [SerializeField] private List<Point> points = new List<Point>()
         {
@@ -21,8 +24,6 @@ namespace BeauTambour
         public IReadOnlyList<Point> RuntimePoints => runtimePoints;
         private Point[] runtimePoints;
 
-        private bool isOperative;
-    
         #region Edition
 
         public void SetPointPosition(int index, Vector2 position)
@@ -84,25 +85,48 @@ namespace BeauTambour
         }
         #endregion
 
-        public void GenerateRuntimeData()
+        #region Generation
+        
+        public Vector3[] GenerateCopy(int subDivision, float depth = 0f)
         {
-            if (isOperative) return;
-
-            var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
-            var results = new List<Point>();
-
-            var index = 0;
+            var results = new List<Vector3>();
             for (var i = 0; i < points.Count - 1; i += 3)
             {
                 var p1 = points[i].position;
-                var p2 = points[i+1].position;
-                var p3 = points[i+2].position;
-                var p4 = points[i+3].position;
+                var p2 = points[i + 1].position;
+                var p3 = points[i + 2].position;
+                var p4 = points[i + 3].position;
+
+                for (float j = 0; j < subDivision; j++)
+                {
+                    var ratio = j / subDivision;
+                
+                    var position = Bezier.GetPoint(p1, p2, p3, p4, ratio);
+                    results.Add(new Vector3(position.x, position.y, depth));
+                }
+            }
+
+            var last = runtimePoints.Last().position;
+            results.Add(new Vector3(last.x, last.y, depth));
+
+            return results.ToArray();
+        }
+        public void GenerateRuntimePoints()
+        {
+            var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
+            var results = new List<Point>();
+            
+            for (var i = 0; i < points.Count - 1; i += 3)
+            {
+                var p1 = points[i].position;
+                var p2 = points[i + 1].position;
+                var p3 = points[i + 2].position;
+                var p4 = points[i + 3].position;
 
                 for (float j = 0; j < settings.CurveSubdivision; j++)
                 {
                     var ratio = j / settings.CurveSubdivision;
-                
+
                     var position = Bezier.GetPoint(p1, p2, p3, p4, ratio);
                     var errorRadius = Mathf.Lerp(points[i].toleranceRadius, points[i + 3].toleranceRadius, ratio);
                 
@@ -115,9 +139,8 @@ namespace BeauTambour
         
             results.Add(last);
             runtimePoints = results.ToArray();
-
-            isOperative = true;
         }
+        #endregion
         
         public bool CanStartEvaluation(Vector2 position)
         {
@@ -126,54 +149,53 @@ namespace BeauTambour
 
             return distance <= firstPoint.toleranceRadius;
         }
-        public float Evaluate(Vector2 position, Vector2 direction, int index, out bool next)
+        public ShapeAnalysis Evaluate(ShapeAnalysis analysis, Vector2 position)
         {
-            next = false;
-            var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
-        
-            var p1 = runtimePoints[index].position;
-            var p2 = runtimePoints[index + 1].position;
-        
-            var p2Distance = Vector2.Distance(position, p2);
-            if (p2Distance <= runtimePoints[index + 1].toleranceRadius)
-            {
-                next = true;
-                return 0;
-            }
-        
-            var headingError = Mathf.Clamp01(Vector2.Dot(direction, (p2 - p1).normalized) * -1) * settings.HeadingErrorFactor;
-        
-            if (position.TryProjectOnto(p1, p2, out var result))
-            {
-                var ratio = (result - p1).magnitude / (p2 - p1).magnitude;
-                var errorMargin = Mathf.Lerp(runtimePoints[index].toleranceRadius, runtimePoints[index + 1].toleranceRadius, ratio);
+            var result = default(ShapeAnalysis);
+            
+            var p1 = runtimePoints[analysis.advancement].position;
+            var p2 = runtimePoints[analysis.advancement + 1].position;
 
-                var distance = Vector2.Distance(position, p2);
-                if (distance <= errorMargin) return headingError;
-                else
+            var closest = position.ProjectOnto(p1, p2, out var code);
+            var completionDistance = Vector2.Distance(position, p2);
+            
+            var settings = Repository.GetSingle<BeauTambourSettings>(Reference.Settings);
+            if (code == 2 || completionDistance <= settings.ValidationRadius)
+            {
+                result = new ShapeAnalysis(0f, (analysis.advancement + 1f) / (runtimePoints.Length - 1f), 0f, true)
                 {
-                    var spacingError = (distance - errorMargin) * settings.SpacingErrorFactor;
-                    return (headingError + spacingError) / 2f;
-                }
+                    position = position,
+                    advancement = analysis.advancement + 1
+                };
+                result.SetSource(analysis.Source);
+                return result;
             }
+            
+            var direction = (position - analysis.position).normalized;
+
+            var headingError = Vector2.Dot(direction, (p2 - p1).normalized);
+            if (headingError < 0) headingError = -headingError * 2f;
+
+            headingError *= settings.HeadingErrorFactor;
+            
+            var localRatio = Vector2.Distance(p1, closest) / Vector2.Distance(p1, p2);
+            var errorMargin = Mathf.Lerp(runtimePoints[analysis.advancement].toleranceRadius, runtimePoints[analysis.advancement + 1].toleranceRadius, localRatio);
+            
+            var globalRatio = Mathf.Lerp((float)analysis.advancement / (runtimePoints.Length - 1), (analysis.advancement + 1f) / (runtimePoints.Length - 1), localRatio);
+            var distance = Vector2.Distance(position, closest);
+            
+            if (distance <= errorMargin) result = new ShapeAnalysis(localRatio, globalRatio, headingError, false);
             else
             {
-                var p1Distance = Vector2.Distance(position, p1);
-                if (p1Distance < p2Distance)
-                {
-                    if (p1Distance <= runtimePoints[index].toleranceRadius) return headingError;
-                    else
-                    {
-                        var spacingError = (p1Distance - runtimePoints[index].toleranceRadius) * settings.SpacingErrorFactor;
-                        return (headingError + spacingError) / 2f;
-                    }
-                }
-                else
-                {
-                    var spacingError = (p1Distance - runtimePoints[index + 1].toleranceRadius) * settings.SpacingErrorFactor;
-                    return (headingError + spacingError) / 2f;
-                }
+                var spacingError = Mathf.Abs(distance - errorMargin) * settings.SpacingErrorFactor;
+                result = new ShapeAnalysis(localRatio, globalRatio, headingError + spacingError, false);
             }
+
+            result.position = position;
+            result.advancement = analysis.advancement;
+
+            result.SetSource(analysis.Source);
+            return result;
         }
     }
 }

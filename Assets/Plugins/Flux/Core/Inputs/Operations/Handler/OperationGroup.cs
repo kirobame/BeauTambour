@@ -19,7 +19,7 @@ namespace Flux
         public void Initialize(OperationHandler operationHandler, InputAction inputAction)
         {
             runtimeInputHandler = Object.Instantiate(inputHandler);
-            runtimeInputHandler.Initialize();
+            runtimeInputHandler.Initialize(operationHandler);
             runtimeInputHandler.Bind(inputAction);
             
             runtimeOperations = new Operation[operations.Length];

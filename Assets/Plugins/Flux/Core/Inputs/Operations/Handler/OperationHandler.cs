@@ -9,7 +9,7 @@ namespace Flux
         
         private IContinuousHandler[] continuousHandlers;
         
-        void Awake()
+        void Start()
         {
             foreach (var inputLink in inputLinks) inputLink.Initialize(this);
             continuousHandlers = inputLinks.SelectMany(link => link.Handlers).Where(handler => handler is IContinuousHandler).Cast<IContinuousHandler>().ToArray();

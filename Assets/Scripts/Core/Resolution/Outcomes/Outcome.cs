@@ -24,7 +24,7 @@ namespace BeauTambour
         {
             if (!Application.isPlaying || Sequencer != null) return;
             
-            var parent = Repository.GetSingle<Transform>(Reference.OutcomesParent);
+            var parent = Repository.GetSingle<Transform>(Parent.Outcomes);
             Sequencer = Instantiate(sequencerPrefab, parent);
         }
 
