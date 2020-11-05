@@ -40,12 +40,35 @@ public class ShapeDrawer : MonoBehaviour
         InputController.Instance.OnViewHistoryCallback += OnViewHistory;
     }
 
+    /// <summary>
+    /// Default : Draw data on the main line 
+    /// </summary>
+    /// <param name="shape"></param>
     public void DrawFromShapeData(ShapeData shape)
     {
-        ResetLine();
-        foreach(Vector2 point in shape.ShapePoints)
+        DrawFromShapeData(line, shape);
+    }
+
+    /// <summary>
+    /// Default : Reset the main Line
+    /// </summary>
+    public void ResetLine()
+    {
+        ResetLine(line);
+    }
+
+    /// <summary>
+    /// Default : Add a point on the main line
+    /// </summary>
+    /// <param name="position"></param>
+    private void AddPointToLine(Vector2 position)
+    {
+        line.positionCount++;
+        line.SetPosition(line.positionCount - 1, position);        
+        AddPointToLine(position, line);
+        if (isRegistering)
         {
-            AddPointToLine(point);
+            currentDrawingShape.AddPoint(position);
         }
     }
 
@@ -67,19 +90,38 @@ public class ShapeDrawer : MonoBehaviour
         }
     }
 
-    public void ResetLine()
+    /// <summary>
+    /// To draw data on a specified line
+    /// </summary>
+    /// <param name="lineToDraw"></param>
+    /// <param name="shape"></param>
+    public void DrawFromShapeData(LineRenderer lineToDraw, ShapeData shape)
     {
-        line.positionCount = 0;
+        ResetLine(lineToDraw);
+        foreach (Vector2 point in shape.ShapePoints)
+        {
+            AddPointToLine(point, lineToDraw);
+        }
     }
 
-    private void AddPointToLine(Vector2 position)
+    /// <summary>
+    /// Reset a specified line
+    /// </summary>
+    /// <param name="lineToReset"></param>
+    public void ResetLine(LineRenderer lineToReset)
     {
-        line.positionCount++;
-        line.SetPosition(line.positionCount - 1, position);
-        if (isRegistering)
-        {
-            currentDrawingShape.AddPoint(position);
-        }
+        lineToReset.positionCount = 0;
+    }  
+    
+    /// <summary>
+    /// Add a point on a specified line
+    /// </summary>
+    /// <param name="position"></param>
+    /// <param name="lineToDraw"></param>
+    private void AddPointToLine(Vector2 position, LineRenderer lineToDraw)
+    {
+        lineToDraw.positionCount++;
+        lineToDraw.SetPosition(lineToDraw.positionCount - 1, position);
     }
 
     private void AddPrecisionPointsBetween(Vector2 lastPos, Vector2 currentPos)

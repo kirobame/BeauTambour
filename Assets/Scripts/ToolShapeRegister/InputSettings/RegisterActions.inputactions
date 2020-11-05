@@ -41,6 +41,17 @@
             "bindings": [
                 {
                     "name": "",
+                    "id": "377e1bb3-c572-4ed1-80cd-a09637202b1a",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BeginRegister",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "326cc5a6-9d10-4dbe-aae5-32a976af1682",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -107,12 +118,34 @@
                 },
                 {
                     "name": "",
+                    "id": "ef9fb560-c9b2-4165-be2a-2e1b5f3c1c2b",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EndRegister",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4185c9fb-e5c5-4831-a475-35dc1fce4134",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "EndRegister",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9ff87751-d40c-49eb-b531-0c8ca696a07b",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ViewHistory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -126,6 +159,61 @@
                     "action": "ViewHistory",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "f4b895a5-273b-4fdc-8c55-1eec53d52183",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "86603eb3-1b33-4e6c-afa0-fa8d2da495df",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "d33f0f3e-13dd-4884-ae9a-583ddf7c7805",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "1b501f5f-d5bc-4b6a-9c44-923384502641",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "db598069-125c-41e1-93e0-0592f1ae1e88",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

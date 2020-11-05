@@ -15,6 +15,8 @@ public class HistoryButtonBehavior : MonoBehaviour
 
     public Text ButtonText => buttonText;
 
+    public ShapeData CurrentShape => currentShape;
+
     public void OnClick()
     {
         if (ToolManager.Instance.Action != CurrentAction.HistoryReview) return;

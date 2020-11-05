@@ -32,6 +32,7 @@ public class InputController : MonoBehaviour
     private InputAction endRegisterAction;
     private InputAction viewHistoryAction;
 
+    private bool isRegistering = false;
     private bool isMoving = false;
     private Vector2 lastPos;
     private Vector2 currentPos;    
@@ -121,20 +122,23 @@ public class InputController : MonoBehaviour
 
     private void OnBeginRegister(InputAction.CallbackContext obj)
     {
-        if (ToolManager.Instance.Action != CurrentAction.Drawing) return;
+        if (ToolManager.Instance.Action != CurrentAction.Drawing || isRegistering) return;
 
         OnBeginRegisterCallback?.Invoke();
+        isRegistering = true;
     }
     
     private void OnEndRegister(InputAction.CallbackContext obj)
     {
-        if (ToolManager.Instance.Action != CurrentAction.Drawing) return;
+        if (ToolManager.Instance.Action != CurrentAction.Drawing || !isRegistering) return;
 
         OnEndRegisterCallback?.Invoke();
+        isRegistering = false;
     }
     
     private void OnViewHistory(InputAction.CallbackContext obj)
     {
+        if (isRegistering) { isRegistering = false; }
         OnViewHistoryCallback?.Invoke();
     }
 }
