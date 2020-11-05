@@ -61,11 +61,19 @@ namespace BeauTambour.Editor
             DrawElement(() => EditorGUILayout.IntSlider(iterator, 1, 6));
 
             iterator.NextVisible(false);
-            DrawElement(() => EditorGUILayout.Slider(iterator, 0.5f, 15f));
+            DrawElement(() => EditorGUILayout.Slider(iterator, 0.1f, 7.5f));
             iterator.NextVisible(false);
-            DrawElement(() => EditorGUILayout.Slider(iterator, 0.01f, 1f));
+            DrawElement(() => EditorGUILayout.Slider(iterator, 0.01f, 2.5f));
             iterator.NextVisible(false);
-            DrawElement(() => EditorGUILayout.Slider(iterator, 0.01f, 1f));
+            DrawElement(() => EditorGUILayout.Slider(iterator, 0.01f, 2.5f));
+            
+            EditorGUILayout.Space();
+            DrawTitle("Shape Validation");
+            
+            iterator.NextVisible(false);
+            DrawElement(() => EditorGUILayout.Slider(iterator, 0f, 0.5f));
+            iterator.NextVisible(false);
+            DrawElement(() => EditorGUILayout.Slider(iterator, 0f, 1f));
 
             EditorGUIUtility.labelWidth = originalLabelWidth;
             instance.ApplyModifiedProperties();

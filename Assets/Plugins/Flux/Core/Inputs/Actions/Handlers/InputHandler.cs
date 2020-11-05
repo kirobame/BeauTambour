@@ -12,8 +12,9 @@ namespace Flux
         public event Action<EventArgs> onEnd;
         
         protected InputAction bindedAction;
+        protected OperationHandler handler;
 
-        public abstract void Initialize();
+        public virtual void Initialize(OperationHandler handler) => this.handler = handler;
         protected virtual void OnDestroy() => Unbind();
         
         public virtual void Bind(InputAction inputAction)
@@ -31,8 +32,9 @@ namespace Flux
     {
         private ActionCallbacks<InputAction.CallbackContext> inputCallbacks;
 
-        public override void Initialize()
+        public override void Initialize(OperationHandler handler)
         {
+            base.Initialize(handler);
             inputCallbacks = new ActionCallbacks<InputAction.CallbackContext>()
             {
                 onStart = ctxt => OnStart((TInput) Convert.ChangeType(ctxt.ReadValueAsObject(), typeof(TInput))),

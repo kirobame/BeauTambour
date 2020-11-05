@@ -16,7 +16,7 @@ namespace Flux
         
         void OnValidate()
         {
-            if (Application.isPlaying) return;
+            if (Application.isPlaying || effects == null) return;
             foreach (var effect in effects)
             {
                 if (effect.hideFlags == HideFlags.HideInInspector) continue;

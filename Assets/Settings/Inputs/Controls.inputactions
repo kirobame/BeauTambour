@@ -6,23 +6,7 @@
             "id": "0233a0b8-dac3-4dc1-a96b-ff03705ea8d5",
             "actions": [
                 {
-                    "name": "Button South",
-                    "type": "Button",
-                    "id": "7d8f461f-0653-4ed3-a354-76ae38dfe29d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Right Trigger",
-                    "type": "Button",
-                    "id": "dd4af333-8a26-484b-8807-c5443f8eb5f2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Left Stick",
+                    "name": "Draw",
                     "type": "Value",
                     "id": "662083a1-1576-455e-bdfd-fc50c6a151c5",
                     "expectedControlType": "Stick",
@@ -33,34 +17,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "fd436f5b-5882-4be6-8f34-4768c3b77716",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Button South",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "55c970e3-f180-4c79-a50b-8cb594fff8d5",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "Press(behavior=1)",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Right Trigger",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "2979cbc5-0df6-4054-b4a1-680e07997723",
-                    "path": "<Gamepad>/leftStick",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Left Stick",
+                    "action": "Draw",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

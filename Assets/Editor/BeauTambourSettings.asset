@@ -15,8 +15,10 @@ MonoBehaviour:
   rythmMarginTolerance: 0.25
   toleranceRadiusRange: {x: 0.05, y: 0.3}
   standardToleranceRadius: 0.1
-  radiusToleranceForgiveness: 1.25
-  curveSubdivision: 1
-  recognitionErrorThreshold: 10
-  headingErrorFactor: 0.025
-  spacingErrorFactor: 0.02
+  radiusToleranceForgiveness: 0.5
+  curveSubdivision: 2
+  recognitionErrorThreshold: 0.9
+  headingErrorFactor: 0.275
+  spacingErrorFactor: 1.5
+  validationRadius: 0.045
+  completionQuota: 0.9

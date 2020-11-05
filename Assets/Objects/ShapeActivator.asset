@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7509ec5c07b3d4695614455e1b6feb, type: 3}
+  m_Name: ShapeActivator
+  m_EditorClassIdentifier: 
+  shapes:
+  - {fileID: 11400000, guid: 09682ca5c7aa3d04c94f8b811ea28fd1, type: 2}
+  - {fileID: 11400000, guid: d3d91098e16d6e34b8053fefe9b3f6cb, type: 2}
+  - {fileID: 11400000, guid: c7f31ef370c4654428f64193f5f5e8e3, type: 2}
+  deactivationTime: 0.075

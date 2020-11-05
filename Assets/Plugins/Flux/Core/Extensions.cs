@@ -58,26 +58,33 @@ namespace Flux
             return rect;
         }
         
-        public static bool TryProjectOnto(this Vector2 pt, Vector2 p1, Vector2 p2, out Vector2 result)
+        public static Vector2 ProjectOnto(this Vector2 pt, Vector2 p1, Vector2 p2)
         {
-            var U = (pt.x - p1.x) * (p2.x - p1.x) + (pt.y - p1.y) * (p2.y - p1.y);
-            var UDenom = Mathf.Pow(p2.x - p1.x, 2) + Mathf.Pow(p2.y - p1.y, 2);
+            var closest = ProjectOnto(pt, p1, p2, out var code);
+            return closest;
+        }
+        public static Vector2 ProjectOnto(this Vector2 pt, Vector2 p1, Vector2 p2, out int code)
+        {
+            var dx = p2.x - p1.x;
+            var dy = p2.y - p1.y;
 
-            U /= UDenom;
+            var t = ((pt.x - p1.x) * dx + (pt.y - p1.y) * dy) / (dx * dx + dy * dy);
 
-            result.x = p1.x + U * (p2.x - p1.x);
-            result.y = p1.y + U * (p2.y - p1.y);
-
-            float minX, maxX, minY, maxY;
-
-            minX = Mathf.Min(p1.x, p2.x);
-            maxX = Mathf.Max(p1.x, p2.x);
-        
-            minY =  Mathf.Min(p1.y, p2.y);
-            maxY =  Mathf.Max(p1.y, p2.y);
-
-            if (result.x >= minX && result.x <= maxX && result.y >= minY && result.y <= maxY) return true;
-            else return false;
+            if (t < 0)
+            {
+                code = 1;
+                return p1;
+            }
+            else if (t > 1)
+            {
+                code = 2;
+                return p2;
+            }
+            else
+            {
+                code = 3;
+                return new Vector2(p1.x + t * dx, p1.y + t * dy);
+            }
         }
 
         public static T[] Split<T>(this T value) where T : Enum
