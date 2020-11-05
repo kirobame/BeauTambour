@@ -42,7 +42,9 @@ namespace BeauTambour
         public void AssignShape(Shape shape, int subDivision)
         {
             this.shape = shape;
+            
             points = shape.GenerateCopy(subDivision);
+            for (var i = 0; i < points.Length; i++) points[i] += transform.position;
             
             Value.positionCount = 1;
             Value.SetPosition(0, points[0]);

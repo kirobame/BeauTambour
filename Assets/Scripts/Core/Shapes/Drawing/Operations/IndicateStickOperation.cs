@@ -38,7 +38,7 @@ namespace BeauTambour
         private void Place(Vector2 input)
         {
             var stickIndicator = Repository.GetSingle<Transform>(Reference.StickIndicator);
-            stickIndicator.position = Vector2.SmoothDamp(stickIndicator.position, input, ref velocity, smoothing);
+            stickIndicator.localPosition = Vector2.SmoothDamp(stickIndicator.localPosition, input, ref velocity, smoothing);
 
             stickIndicator.localScale = Vector3.Lerp(sizeRange.x * Vector3.one, sizeRange.y * Vector3.one, input.magnitude);
             Event.Call<float>(EventType.OnScale, stickIndicator.localScale.z);

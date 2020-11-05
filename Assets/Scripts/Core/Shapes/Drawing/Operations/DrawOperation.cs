@@ -23,6 +23,11 @@ namespace BeauTambour
             
             var pool = Repository.GetSingle<DrawingPool>(Reference.DrawingPool);
             var drawing = pool.RequestSinglePoolable();
+
+            var drawingsParent = Repository.GetSingle<Transform>(Parent.Drawings);
+            drawing.transform.SetParent(drawingsParent);
+
+            drawing.transform.localPosition = Vector2.zero;
             
             drawing.AssignShape(shapeEventArgs.Value, subDivision);
             drawings.Add(shapeEventArgs.Value, drawing);
