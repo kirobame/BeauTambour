@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2781446390798994658
+--- !u!1 &1375729000
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4826771217031176861}
-  - component: {fileID: 5781896919447802020}
+  - component: {fileID: 1375729002}
+  - component: {fileID: 1375729001}
   m_Layer: 0
-  m_Name: ec51d58b077076e4bb06eba19eb4d3b0
+  m_Name: a444bfb5469436b439d1e37f919d3c36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4826771217031176861
+--- !u!4 &1375729002
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2781446390798994658}
+  m_GameObject: {fileID: 1375729000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 512.33997, y: 150.35284, z: -53.59375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!120 &5781896919447802020
+--- !u!120 &1375729001
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2781446390798994658}
+  m_GameObject: {fileID: 1375729000}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -49,7 +49,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -71,15 +71,35 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.1, y: 0, z: 0}
-  - {x: -0.2, y: 0, z: 0}
-  - {x: -0.3, y: 0, z: 0}
-  - {x: -0.4, y: 0, z: 0}
-  - {x: -0.5, y: 0, z: 0}
-  - {x: -0.6, y: 0, z: 0}
-  - {x: -0.7, y: 0, z: 0}
-  - {x: -0.8, y: 0, z: 0}
-  - {x: -0.9, y: 0, z: 0}
+  - {x: 0, y: 0.1, z: 0}
+  - {x: 0, y: 0.2, z: 0}
+  - {x: 0, y: 0.3, z: 0}
+  - {x: 0, y: 0.4, z: 0}
+  - {x: 0, y: 0.5, z: 0}
+  - {x: 0, y: 0.6, z: 0}
+  - {x: 0, y: 0.7, z: 0}
+  - {x: 0, y: 0.8, z: 0}
+  - {x: 0, y: 0.9, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: -0.09238797, y: 0.9617317, z: 0}
+  - {x: -0.18477593, y: 0.9234634, z: 0}
+  - {x: -0.2771639, y: 0.8851951, z: 0}
+  - {x: -0.36955187, y: 0.84692675, z: 0}
+  - {x: -0.46193984, y: 0.8086585, z: 0}
+  - {x: -0.5543278, y: 0.77039015, z: 0}
+  - {x: -0.64671576, y: 0.7321218, z: 0}
+  - {x: -0.73910373, y: 0.69385356, z: 0}
+  - {x: -0.8314917, y: 0.6555852, z: 0}
+  - {x: -0.707107, y: 0.707107, z: 0}
+  - {x: -0.74537534, y: 0.61471903, z: 0}
+  - {x: -0.7836436, y: 0.52233106, z: 0}
+  - {x: -0.82191193, y: 0.4299431, z: 0}
+  - {x: -0.86018026, y: 0.33755514, z: 0}
+  - {x: -0.8984485, y: 0.24516717, z: 0}
+  - {x: -0.93671685, y: 0.15277919, z: 0}
+  - {x: -0.9749852, y: 0.06039123, z: 0}
+  - {x: -1.0132535, y: -0.03199674, z: 0}
+  - {x: -1.0515218, y: -0.12438471, z: 0}
   - {x: -1, y: 0, z: 0}
   - {x: -0.9617317, y: -0.09238797, z: 0}
   - {x: -0.9234634, y: -0.18477593, z: 0}
@@ -149,20 +169,29 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.012817383
         inSlope: 0
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.07689881
+        inSlope: 0.043258876
+        outSlope: 0.043258876
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.14814812
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.745283, g: 0.024608415, b: 0.024608415, a: 1}
+      key1: {r: 1, g: 0.79951197, b: 0.3066038, a: 0.827451}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -177,7 +206,7 @@ LineRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 0
+      atime0: 32189
       atime1: 65535
       atime2: 0
       atime3: 0
@@ -188,8 +217,8 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 90
+    numCapVertices: 90
     alignment: 0
     textureMode: 0
     shadowBias: 0.5

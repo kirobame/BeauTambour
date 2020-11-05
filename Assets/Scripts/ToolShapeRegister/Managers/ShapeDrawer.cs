@@ -72,6 +72,11 @@ public class ShapeDrawer : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Draw the line between two points
+    /// </summary>
+    /// <param name="lastPos">beginning of the line</param>
+    /// <param name="currentPos">ending of the line</param>
     public void DrawLineBetweenTwoPoint(Vector2 lastPos, Vector2 currentPos )
     {
         if (currentPos != lastPos)
@@ -124,6 +129,11 @@ public class ShapeDrawer : MonoBehaviour
         lineToDraw.SetPosition(lineToDraw.positionCount - 1, position);
     }
 
+    /// <summary>
+    /// Add precision between two points (in line from a director vector)
+    /// </summary>
+    /// <param name="lastPos">the beginning point</param>
+    /// <param name="currentPos">the ending point</param>
     private void AddPrecisionPointsBetween(Vector2 lastPos, Vector2 currentPos)
     {
         Vector2 dir = (currentPos - lastPos).normalized;
@@ -134,6 +144,9 @@ public class ShapeDrawer : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Remove the oldest drawn point of the line
+    /// </summary>
     private void RemovePosFromLine()
     {
         Vector2 pos;

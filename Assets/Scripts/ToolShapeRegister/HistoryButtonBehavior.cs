@@ -10,6 +10,7 @@ public class HistoryButtonBehavior : MonoBehaviour
     [SerializeField] private Text buttonText;
     [SerializeField] private ShapeData currentShape;
     [SerializeField] private Transform selfTransform;
+    private bool isInitialized = false;
 
     public Transform SelfTransform => selfTransform;
 
@@ -24,8 +25,10 @@ public class HistoryButtonBehavior : MonoBehaviour
         ShapeDrawer.Instance.DrawFromShapeData(currentShape);     
     }
 
-    public void SetCurrentShape(ShapeData shape)
+    public void Initialize(ShapeData shape)
     {
+        if (isInitialized) return;
         currentShape = shape;
+        isInitialized = true;
     }
 }

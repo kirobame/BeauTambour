@@ -26,24 +26,36 @@ public class ListManager : MonoBehaviour
 
     [SerializeField] private HistoryButtonBehavior prefabButton;
     [SerializeField] private Transform shapeHistory;
+    [SerializeField] private LineRenderer prefabLine;
 
     private HistoryButtonBehavior currentShapeButton;
     private int numberOfButton = 0;
 
+    /// <summary>
+    /// Set the selected shape (the button pressed)
+    /// </summary>
+    /// <param name="shape"></param>
     public void SetCurrentShapeButton(HistoryButtonBehavior shape)
     {
         currentShapeButton = shape;
     }
 
+    /// <summary>
+    /// Add a shape to the history (create a button)
+    /// </summary>
+    /// <param name="shape"></param>
     public void AddToHistory(ShapeData shape)
     {
         HistoryButtonBehavior button = Instantiate(prefabButton);
-        button.SetCurrentShape(shape);
+        button.Initialize(shape);
         button.SelfTransform.parent = shapeHistory;
         button.ButtonText.text = string.Format("Shape number {0}",numberOfButton);
         numberOfButton++;
     }
 
+    /// <summary>
+    /// Remove the selected shape from the history (remove the button)
+    /// </summary>
     public void RemoveFromHistory()
     {
         if (ToolManager.Instance.Action != CurrentAction.HistoryReview) return;
@@ -53,18 +65,17 @@ public class ListManager : MonoBehaviour
         ShapeDrawer.Instance.ResetLine();
     }
 
+    /// <summary>
+    /// Save the selected shape as a prefab
+    /// </summary>
     public void SaveCurrentShape()
     {
         if (ToolManager.Instance.Action != CurrentAction.HistoryReview) return;
         if (currentShapeButton == null) return;
 
-        string name = string.Format("Shape number {0}", numberOfButton);
-        GameObject go = new GameObject(name);
-        LineRenderer shapeToSave = go.AddComponent<LineRenderer>();
-        ShapeDrawer.Instance.DrawFromShapeData(shapeToSave, currentShapeButton.CurrentShape);
-
-        PrefabUtility.SaveAsPrefabAsset(go, string.Format("Assets/Scripts/ToolShapeRegister/Registered/{0}.prefab", GUID.Generate()));
-        Destroy(go);
+        ShapeDrawer.Instance.DrawFromShapeData(prefabLine, currentShapeButton.CurrentShape);
+        PrefabUtility.SaveAsPrefabAsset(prefabLine.gameObject, string.Format("Assets/Scripts/ToolShapeRegister/Registered/{0}.prefab", GUID.Generate()));
+        ShapeDrawer.Instance.ResetLine(prefabLine);
 
         RemoveFromHistory();
     }
