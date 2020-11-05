@@ -8,6 +8,8 @@ namespace Flux.Editor
 {
     public class CollectionDrawer
     {
+        public SerializedObject SerializedObject => reorderableList.serializedProperty.serializedObject;
+        
         public CollectionDrawer(SerializedObject serializedObject, SerializedProperty property)
         {
             var propertyCopy = property.Copy();

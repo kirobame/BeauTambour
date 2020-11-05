@@ -8,6 +8,6 @@ namespace BeauTambour
     {
         [SerializeField] private OutcomePort port;
 
-        public override bool IsMet() => port.IsValid;
+        public override bool IsMet(Note[] notes) => port.IsValid;
     }
 }

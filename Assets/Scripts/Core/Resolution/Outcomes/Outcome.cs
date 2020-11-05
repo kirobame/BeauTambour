@@ -1,14 +1,14 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Flux;
+using UnityEditor;
 using UnityEngine;
 
 namespace BeauTambour
 {
-    [IconIndicator(1891504476101499824), CreateAssetMenu(fileName = "NewOutcome", menuName = "Beau Tambour/Resolution/Outcome")]
+    [IconIndicator(1891504476101499824)]
     public class Outcome : ScriptableObject
     {
-        public bool IsOperational => !conditions.Any() || conditions.All(condition => condition.IsMet());
-        //
         public bool AllowsSuccession => allowsSuccession;
         public int Priority => priority;
 
@@ -28,6 +28,17 @@ namespace BeauTambour
             Sequencer = Instantiate(sequencerPrefab, parent);
         }
 
+        public bool IsOperational(Note[] notes) => !conditions.Any() || conditions.All(condition => condition.IsMet(notes));
         public void Play(Note[] notes) => Sequencer.Play();
+
+        private void OnDisable()
+        {
+            Debug.Log(1);
+        }
+
+        private void OnDestroy()
+        {
+            
+        }
     }
 }

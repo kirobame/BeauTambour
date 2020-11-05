@@ -8,6 +8,7 @@ namespace BeauTambour
         Settings,
         RythmHandler,
         DrawingPool,
-        StickIndicator
+        StickIndicator,
+        DialogueProvider
     }
 }

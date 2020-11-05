@@ -18,6 +18,6 @@ namespace Flux.Editor
             effect.hideFlags = HideFlags.HideInInspector;
             return effect;
         }
-        protected override void DeleteItem(Effect item) => Object.DestroyImmediate(item);
+        protected override void DeleteItem(Effect item) => Object.DestroyImmediate(item, true);
     }
 }

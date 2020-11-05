@@ -56,7 +56,7 @@ namespace BeauTambour
             results.Clear();
             foreach (var outcome in runtimeOutcomes)
             {
-                if (!outcome.IsOperational) continue;
+                if (!outcome.IsOperational(notes)) continue;
                 results.Add(outcome);
             }
 
