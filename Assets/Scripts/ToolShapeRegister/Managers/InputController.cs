@@ -35,7 +35,9 @@ public class InputController : MonoBehaviour
     private bool isRegistering = false;
     private bool isMoving = false;
     private Vector2 lastPos;
-    private Vector2 currentPos;    
+    private Vector2 currentPos;
+    private float circleRadius = 1;
+
 
     public event Action OnBeginRegisterCallback;
     public event Action OnEndRegisterCallback;
@@ -45,13 +47,13 @@ public class InputController : MonoBehaviour
     {
         if (isMoving)
         {
-            /*cursor.Translate(moveAction.ReadValue<Vector2>() * Time.deltaTime * 3f);
-            if(Mathf.Pow(cursor.position.x,2) + Mathf.Pow(cursor.position.y, 2) > Mathf.Pow(circleRadius, 2))
-            {
-                cursor.Translate(moveAction.ReadValue<Vector2>() * Time.deltaTime * -3f);
-            }*/
             Vector2 newPos = moveAction.ReadValue<Vector2>();
+            if(Mathf.Pow(newPos.x,2) + Mathf.Pow(newPos.y,2) >= Mathf.Pow(circleRadius,2))
+            {
+                newPos = newPos.normalized;
+            }
             cursor.position = newPos;
+
         }
         else
         {

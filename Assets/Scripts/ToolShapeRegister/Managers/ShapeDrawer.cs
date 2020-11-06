@@ -27,7 +27,6 @@ public class ShapeDrawer : MonoBehaviour
 
     [SerializeField] private LineRenderer line;
 
-    private float circleRadius = 1;
     private float precisionBetweenEachPoints = 10;
 
     [SerializeField] private float timeToRemovePos = 1f;
@@ -81,7 +80,7 @@ public class ShapeDrawer : MonoBehaviour
     {
         if (currentPos != lastPos)
         {
-            AddPrecisionPointsBetween(lastPos, currentPos);
+            //AddPrecisionPointsBetween(lastPos, currentPos);
             AddPointToLine(currentPos);
         }
         if (line.positionCount <= 1 || isRegistering)
@@ -175,6 +174,7 @@ public class ShapeDrawer : MonoBehaviour
 
     private void OnViewHistory()
     {
+        if (isRegistering) isRegistering = false;
         ResetLine();
     }
 }

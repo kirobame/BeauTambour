@@ -706,7 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   line: {fileID: 1883243260}
-  timeToRemovePos: 0.02
+  timeToRemovePos: 0.01
 --- !u!1 &1096243567
 GameObject:
   m_ObjectHideFlags: 0
