@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -34,18 +35,47 @@ namespace Flux
     
         public bool Process(string data)
         {
-            var lines = Regex.Split(data, "\r\n|\r|\n");
+            var splittedData =Regex.Split(data, "\r\n|\r|\n");
+            var lines = new List<string>();
 
+            for (var i = 0; i < splittedData.Length; i++)
+            {
+                if (!splittedData[i].Contains('"'))
+                {
+                    lines.Add(splittedData[i]);
+                    continue;
+                }
+                
+                var line = $"{splittedData[i]}{Environment.NewLine}";
+                i++;
+
+                var count = splittedData[i].Count(character => character == '"');
+                while (count == 0 || count == 2)
+                {
+                    line += $"{splittedData[i]}{Environment.NewLine}";
+                    
+                    i++;
+                    count = splittedData[i].Count(character => character == '"');
+                }
+                
+                line += $"{splittedData[i]}";
+
+                var toReplace = new string(new char[] {'"'});
+                line = line.Replace(toReplace, string.Empty);
+                
+                lines.Add(line);
+            }
+            
             var firstLine = lines.First().Split(',');
             var width = firstLine.Length;
 
             var indicator = firstLine.First().Split('=');
             name = indicator[0];
             version = indicator[1];
-        
-            if (!lines.Any() ||lines.Length < 2 || lines.First().Length < 2) return false;
+            
+            if (!lines.Any() ||lines.Count < 2 || lines.First().Length < 2) return false;
 
-            size = new Vector2Int(width - 1, lines.Length - 1);
+            size = new Vector2Int(width - 1, lines.Count - 1);
             array = new string[size.x * size.y];
 
             for (var y = 0; y < size.y; y++)
@@ -57,7 +87,7 @@ namespace Flux
                     array[index] = items[x + 1];
                 }
             }
-        
+
             return true;
         }
 
@@ -73,7 +103,7 @@ namespace Flux
                     var value = item == string.Empty ? "Empty" : item;
                     var suffix = x == size.x - 1 ? ";" : ",";
 
-                    builder.Append($" {value} {suffix}");
+                    builder.Append($" {value}{suffix}");
                 }
                 builder.AppendLine();
             }

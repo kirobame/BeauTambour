@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6055869049101337923
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45eb8d6b28ab4aef86e520a52165bad4, type: 3}
+  m_Name: dbc6a9ec-dc03-4414-95ce-c2d585ec27e6-AttributeGenerationInput
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 21efbdf7ea2e3c344869bbb4139edcce, type: 2}
+  generator: {fileID: 11400000, guid: bc1780835bf792a41be0f69e5f0978f3, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a630b45f73a80f446b23d4a172b9de85, type: 3}
+  m_Name: Encounter
+  m_EditorClassIdentifier: 
+  outcomes:
+  - {fileID: 11400000, guid: 0d4510a0dc5133346ad9b8285823eb42, type: 2}
+  characterInputs:
+  - {fileID: -6055869049101337923}

@@ -1,102 +1,163 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Ludiq.OdinSerializer.Utilities;
 using Ludiq.PeekCore;
+using UnityEngine;
 
 namespace Flux
 {
-    public class RuntimeSheet
+    public abstract class RuntimeSheet<T>
     {
-        public Sheet Source => source;
-    
-        private Dictionary<string, List<string>> rows = new Dictionary<string, List<string>>();
-        private Dictionary<string, List<string>> columns = new Dictionary<string, List<string>>();
+        public Sheet Source { get; private set; }
 
-        private Sheet source;
-    
-        public string this[string rowKey, string columnKey]
+        public IEnumerable<string> ArrayKeys => values.Keys;
+        public IEnumerable<string> ColumnKeys => columnKeys.SelectMany(keyValuePair => keyValuePair.Value);
+        public IEnumerable<string> RowKeys => rowKeys.SelectMany(keyValuePair => keyValuePair.Value);
+
+        public IEnumerable<T[,]> Arrays => values.Select(keyValuePair => keyValuePair.Value);
+        public IEnumerable<T> Values
         {
             get
             {
-                if (!rows.TryGetValue(rowKey, out var row) || !columns.TryGetValue(columnKey, out var column)) return string.Empty;
-                return row.Find(rowItem => column.Any(columnItem => rowItem == columnItem));
+                var list = new List<T>();
+                foreach (var array in Arrays)
+                {
+                    for (var x = 0; x < array.GetLength(0); x++)
+                    {
+                        for (var y = 0; y < array.GetLength(1); y++) list.Add(array[x,y]);
+                    }
+                }
+
+                return list;
             }
         }
-    
+        
+        private Dictionary<string, int> columns = new Dictionary<string, int>();
+        private Dictionary<string, int> rows = new Dictionary<string, int>();
+        
+        private Dictionary<string, T[,]> values = new Dictionary<string, T[,]>();
+        
+        private Dictionary<string, List<string>> columnKeys = new Dictionary<string, List<string>>();
+        private Dictionary<string, List<string>> rowKeys = new Dictionary<string, List<string>>();
+
+        public T this[string arrayKey, string columnKey, string rowKey] => values[arrayKey][columns[columnKey], rows[rowKey]];
+
+        public bool TryGet(string arrayKey, string columnKey, string rowKey , out T result)
+        {
+            var isArrayKeyValid = values.ContainsKey(arrayKey);
+            var isColumnKeyValid = columns.ContainsKey(columnKey);
+            var isRowKeyValid = rows.ContainsKey(rowKey);
+
+            if (isArrayKeyValid && isColumnKeyValid && isRowKeyValid)
+            {
+                result = this[arrayKey, columnKey, rowKey];
+                return true;
+            }
+            else
+            {
+                result = default;
+                return false;
+            }
+        }
+        
         public void Process(Sheet sheet)
         {
-            source = sheet;
-        
+            Source = Source;
+            
+            columns.Clear();
+            rows.Clear();
+            
+            values.Clear();
+            
+            columnKeys.Clear();
+            rowKeys.Clear();
+
             for (var x = 0; x < sheet.Size.x; x++)
             {
                 for (var y = 0; y < sheet.Size.y; y++)
                 {
                     var item = sheet[x,y];
-                    if (item == string.Empty) continue;
-                
-                    if (item[0] == 'Ⓒ')
-                    {
-                        var column = new List<string>();
-                    
-                        for (var i = y + 1; i < sheet.Size.y; i++)
-                        {
-                            var subItem = sheet[x,i];
-                            if (subItem.Contains('Ⓒ') || subItem == string.Empty) break;
+                    if (item == string.Empty || item[0] != 'ⓘ') continue;
 
-                            subItem = subItem.Replace("Ⓡ", string.Empty);
-                            subItem = subItem.Replace(" ", string.Empty);
-                            column.Add(subItem);
-                        }
-                                        
-                        item = item.Replace("Ⓒ", string.Empty);
-                        item = item.Replace(" ", string.Empty);
-                        columns.Add(item, column);
-                    }
-                    else if (item[0] == 'Ⓡ')
-                    {
-                        var row = new List<string>();
- 
-                        for (var i = x + 1; i < sheet.Size.x; i++)
-                        {
-                            var subItem = sheet[i,y];
-                            if (subItem.Contains('Ⓡ') || subItem == string.Empty) break;
-                        
-                            subItem = subItem.Replace("Ⓒ", string.Empty);
-                            subItem = subItem.Replace(" ", string.Empty);
-                            row.Add(subItem);
-                        }
+                    var id = item.Replace("ⓘ-", string.Empty);
+
+                    columnKeys.Add(id, new List<string>());
+                    rowKeys.Add(id, new List<string>());
                     
-                        item = item.Replace("Ⓡ", string.Empty);
-                        item = item.Replace(" ", string.Empty);
-                        rows.Add(item, row);
+                    var size = Vector2Int.zero;
+
+                    for (var i = x + 1; i < sheet.Size.x; i++)
+                    {
+                        var subItem = sheet[i,y];
+                        if (!subItem.Contains('Ⓒ')) break;
+
+                        var key = subItem.Replace("Ⓒ-", string.Empty);
+                        
+                        columns.Add(key, size.x);
+                        columnKeys[id].Add(key);
+
+                        size.x++;
                     }
+                    
+                    for (var i = y + 1; i < sheet.Size.y; i++)
+                    {
+                        var subItem = sheet[x,i];
+                        if (!subItem.Contains('Ⓡ')) break;
+
+                        var key = subItem.Replace("Ⓡ-", string.Empty);
+                        
+                        rows.Add(key, size.y);
+                        rowKeys[id].Add(key);
+
+                        size.y++;
+                    }
+
+                    var array = new T[size.x, size.y];
+                    for (var subX = 0; subX < size.x; subX++)
+                    {
+                        for (var subY = 0; subY < size.y; subY++)
+                        {
+                            var value = sheet[x + 1 + subX, y + 1 + subY];
+                            array[subX, subY] = ProcessValue(value);
+                        }
+                    }
+                    
+                    values.Add(id, array);
                 }
             }
+        }
+        
+        protected abstract T ProcessValue(string value);
+        private bool IsValueValid(string value)
+        {
+            if (value == string.Empty) return false;
+            
+            var isColumnId = value.Contains('Ⓒ');
+            var isRowId = value.Contains('Ⓡ');
+            var isArrayId = value.Contains('ⓘ');
+
+            return !isColumnId && !isRowId && !isArrayId;
         }
 
         public override string ToString()
         {
             var builder = new StringBuilder();
-        
-            builder.AppendLine("Columns :");
-            foreach (var column in columns)
+            foreach (var arrayKey in values.Keys)
             {
-                var value = $"{column.Key} :";
-                for (var i = 0; i < column.Value.Count - 1; i++) value += $" {column.Value[i]} |";
-                value += $" {column.Value.Last()};";
+                builder.AppendLine($"Array | {arrayKey} |---------------------------------");
 
-                builder.AppendLine(value);
-            }
+                var columns = columnKeys[arrayKey];
+                var rows = rowKeys[arrayKey];
 
-            builder.AppendLine();
-            builder.AppendLine("Rows :");
-            foreach (var row in rows)
-            {
-                var value = $"{row.Key} :";
-                for (var i = 0; i < row.Value.Count - 1; i++) value += $" {row.Value[i]} |";
-                value += $" {row.Value.Last()};";
-
-                builder.AppendLine(value);
+                for (var x = 0; x < columns.Count; x++)
+                {
+                    for (var y = 0; y < rows.Count; y++)
+                    {
+                        builder.AppendLine($"---- : R.{columns[x]} / C.{rows[y]} = {this[arrayKey, columns[x], rows[y]]}");
+                    }
+                }
             }
 
             return builder.ToString();

@@ -7,7 +7,7 @@ namespace BeauTambour
 {
     public class Helper : MonoBehaviour
     {
-        #region Encapsualted Types
+        /*#region Encapsualted Types
 
         [EnumAddress]
         public enum EventType
@@ -22,7 +22,7 @@ namespace BeauTambour
         //----------------------------------------------------------------------------------------------------------
         
         [SerializeField] private Encounter encounter;
-        [SerializeField] private NoteGenerator[] generators;
+        [SerializeField] private CompoundAttributeGenerator[] generators;
         [SerializeField] private bool useHardcoded;
         
         //----------------------------------------------------------------------------------------------------------
@@ -39,15 +39,15 @@ namespace BeauTambour
         {
             new Note(new NoteAttribute[]
             {
-                new EmotionalNoteAttribute(NoteAttributeType.Joy), 
+                new EmotionAttribute(Emotion.Joy), 
             }), 
             new Note(new NoteAttribute[]
             {
-                new EmotionalNoteAttribute(NoteAttributeType.Joy), 
+                new EmotionAttribute(Emotion.Joy), 
             }), 
             new Note(new NoteAttribute[]
             {
-                new EmotionalNoteAttribute(NoteAttributeType.Sadness), 
+                new EmotionAttribute(Emotion.Sadness), 
             }), 
         };
         
@@ -121,6 +121,6 @@ namespace BeauTambour
                 
                 encounter.Evaluate(notes);
             }
-        }
+        }*/
     }
 }

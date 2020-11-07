@@ -18,6 +18,9 @@ namespace BeauTambour.Editor
             EditorGUILayout.PropertyField(iterator);
             
             iterator.NextVisible(false);
+            EditorGUILayout.PropertyField(iterator);
+            
+            iterator.NextVisible(false);
             DrawCollection(iterator);
             
             iterator.NextVisible(false);

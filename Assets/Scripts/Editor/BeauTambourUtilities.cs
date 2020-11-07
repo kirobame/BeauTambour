@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Flux;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,13 +8,31 @@ namespace BeauTambour.Editor
 {
     public static class BeauTambourUtilities
     {
+        public static DialogueProvider DialogueProvider { get; private set; }
+        
         public static IReadOnlyDictionary<string, string> Outcomes => outcomes;
+        
         private static Dictionary<string, string> outcomes = new Dictionary<string, string>();
+        private static Dictionary<Outcome, string> pathHistoric = new Dictionary<Outcome, string>();
 
         [InitializeOnLoadMethod]
+        private static void Bootup()
+        {
+            RegisterOutcomes();
+
+            var gameObject = EditorUtility.CreateGameObjectWithHideFlags("Editor-DialogueProvider", HideFlags.HideAndDontSave, typeof(DialogueProvider));
+            DialogueProvider = gameObject.GetComponent<DialogueProvider>();
+
+            var guids = AssetDatabase.FindAssets("Dialogues t:CSVRecipient");
+            var dialogues = AssetDatabase.LoadAssetAtPath<CSVRecipient>(AssetDatabase.GUIDToAssetPath(guids.First()));
+            
+            DialogueProvider.Process(dialogues.Sheets.ToArray());
+        }
         private static void RegisterOutcomes()
         {
             outcomes.Clear();
+            pathHistoric.Clear();
+            
             var guids = AssetDatabase.FindAssets("t:Outcome");
             
             foreach (var guid in guids)
@@ -23,27 +42,32 @@ namespace BeauTambour.Editor
 
                 if (!TryGetPrefabName(outcome, out var name)) return;
                 outcomes.Add(path, name);
+                pathHistoric.Add(outcome, path);
             }
         }
 
         public static void ModifyPathFor(Outcome outcome)
         {
-            var key = string.Empty;
-            foreach (var keyValuePair in outcomes)
+            if (pathHistoric.TryGetValue(outcome, out var oldPath))
             {
-                var asset = AssetDatabase.LoadAssetAtPath<Outcome>(keyValuePair.Key);
-                if (!TryGetPrefabName(asset, out var itemName) || keyValuePair.Value != itemName) continue;
-
-                key = keyValuePair.Key;
-                break;
+                var newPath = AssetDatabase.GetAssetPath(outcome);
+                if (outcomes.ContainsKey(newPath)) return;
+                
+                var prefabName = outcomes[oldPath];
+                
+                outcomes.Remove(oldPath);
+                outcomes.Add(newPath, prefabName);
+                
+                pathHistoric[outcome] = newPath;
             }
-
-            if (key == string.Empty || !TryGetPrefabName(outcome, out var name)) return;
-            
-            outcomes.Remove(key);
-            outcomes.Add(AssetDatabase.GetAssetPath(outcome), name);
+            else if (TryGetPrefabName(outcome, out var prefabName))
+            {
+                var path = AssetDatabase.GetAssetPath(outcome);
+                
+                outcomes.Add(path, prefabName);
+                pathHistoric.Add(outcome, path);
+            }
         }
-
         private static bool TryGetPrefabName(Outcome outcome, out string name)
         {
             var serializedObject = new SerializedObject(outcome);

@@ -13,7 +13,7 @@ namespace BeauTambour.Editor
             {
                 var asset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(path);
                 if (!(asset is Outcome outcome)) continue;
-                
+
                 BeauTambourUtilities.ModifyPathFor(outcome);
             }
 

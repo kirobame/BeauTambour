@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5eb650dc254cea893d1906f868a110, type: 3}
+  m_Name: NoteGenerator
+  m_EditorClassIdentifier: 
+  subGenerators:
+  - {fileID: 2120597906663705564}
+--- !u!114 &2120597906663705564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67931b7c9044c348e350bc2980bbb6b, type: 3}
+  m_Name: 62fb6169-6087-40e1-9d77-0bf66e3d1d61-DummyAttributeGenerator
+  m_EditorClassIdentifier: 
+  percentage: 50

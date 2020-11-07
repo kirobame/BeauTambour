@@ -53,7 +53,7 @@ namespace Flux.Editor
                 
                 if (customCollections.TryGetValue(type, out var drawerType)) drawer = (CollectionDrawer)Activator.CreateInstance(drawerType, serializedObject, iterator);
                 else drawer = new CollectionDrawer(serializedObject, iterator);
-                
+
                 reorderableLists.Add(iterator.name, drawer);
             }
         }

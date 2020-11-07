@@ -36,7 +36,7 @@ namespace Flux.Editor
             EditorGUILayout.PropertyField(iterator);
             GUI.enabled = true;
 
-            iterator.NextVisible(false);
+            var prolong = iterator.NextVisible(false);
             EditorGUILayout.PropertyField(iterator);
 
             if (fetchPhase != FetchPhase.None) GUI.enabled = false;
@@ -46,7 +46,7 @@ namespace Flux.Editor
                 requests = new UnityWebRequest[] {Recipient.GetIdRequest()};
                 fetchPhase = FetchPhase.Ids;
             
-                ToggleInspectorLock();
+                ToggleInspectorLock(true);
                 EditorApplication.update += UpdateRequests;
             }
             GUI.enabled = true;
@@ -54,14 +54,14 @@ namespace Flux.Editor
             if (!Recipient.Sheets.Any() || Recipient.Sheets.Any(sheet => !sheet.IsInitialized)) EditorGUILayout.HelpBox("Recipient has no full backup value for the moment! Please fetch.", MessageType.Warning);
             else if (GUILayout.Button("Display backup")) { foreach (var sheet in Recipient.Sheets) Debug.Log(sheet); }
 
+            if (!prolong) return;
+            
             while (iterator.NextVisible(false)) EditorGUILayout.PropertyField(iterator);
             serializedObject.ApplyModifiedProperties();
         }
 
         private void UpdateRequests()
         {
-            Debug.Log("Updating requests");
-        
             if (fetchPhase == FetchPhase.Ids)
             {
                 if (!requests.First().isDone) return;
@@ -91,7 +91,7 @@ namespace Flux.Editor
                     for (var i = 0; i < requests.Length; i++)
                     {
                         var request = requests[i];
-                    
+                        
                         Debug.Log($"Download successful : {request.downloadHandler.text}");
 
                         sheets[i] = new Sheet();
@@ -104,11 +104,11 @@ namespace Flux.Editor
                 fetchPhase = FetchPhase.None;
             }
 
-            ToggleInspectorLock();
+            ToggleInspectorLock(false);
             EditorApplication.update -= UpdateRequests;
         }
     
-        private void ToggleInspectorLock()
+        private void ToggleInspectorLock(bool value)
         {
             var inspectorToBeLocked = EditorWindow.mouseOverWindow; 
  
@@ -128,9 +128,8 @@ namespace Flux.Editor
             {
                 return;
             }
- 
-            var value = (bool)propertyInfo.GetValue(inspectorToBeLocked, null);
-            propertyInfo.SetValue(inspectorToBeLocked, !value, null);
+            
+            propertyInfo.SetValue(inspectorToBeLocked, value, null);
             inspectorToBeLocked.Repaint();
         }
     }
