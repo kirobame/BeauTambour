@@ -8,9 +8,11 @@ using UnityEngine;
 
 namespace Flux
 {
-    public abstract class RuntimeSheet<T>
+    public class RuntimeSheet
     {
         public Sheet Source { get; private set; }
+        
+        //--------------------------------------------------------------------------------------------------------------
         
         public IReadOnlyDictionary<string, int> Columns => columns;
         public IReadOnlyDictionary<string, int> Rows => rows;
@@ -19,12 +21,12 @@ namespace Flux
         public IReadOnlyDictionary<string, List<string>> ColumnKeys => columnKeys;
         public IReadOnlyDictionary<string, List<string>> RowKeys => rowKeys;
 
-        public IEnumerable<T[,]> Arrays => values.Select(keyValuePair => keyValuePair.Value);
-        public IEnumerable<T> Values
+        public IEnumerable<string[,]> Arrays => values.Select(keyValuePair => keyValuePair.Value);
+        public IEnumerable<string> Values
         {
             get
             {
-                var list = new List<T>();
+                var list = new List<string>();
                 foreach (var array in Arrays)
                 {
                     for (var x = 0; x < array.GetLength(0); x++)
@@ -37,18 +39,22 @@ namespace Flux
             }
         }
         
+        //--------------------------------------------------------------------------------------------------------------
+        
         private Dictionary<string, int> columns = new Dictionary<string, int>();
         private Dictionary<string, int> rows = new Dictionary<string, int>();
         
-        private Dictionary<string, T[,]> values = new Dictionary<string, T[,]>();
+        private Dictionary<string, string[,]> values = new Dictionary<string, string[,]>();
         
         private Dictionary<string, List<string>> columnKeys = new Dictionary<string, List<string>>();
         private Dictionary<string, List<string>> rowKeys = new Dictionary<string, List<string>>();
 
-        public T[,] this[string arrayKey] => values[arrayKey];
-        public T this[string arrayKey, string columnKey, string rowKey] => values[arrayKey][columns[columnKey], rows[rowKey]];
+        //--------------------------------------------------------------------------------------------------------------
+        
+        public string[,] this[string arrayKey] => values[arrayKey];
+        public string this[string arrayKey, string columnKey, string rowKey] => values[arrayKey][columns[columnKey], rows[rowKey]];
 
-        public bool TryGet(string arrayKey, string columnKey, string rowKey , out T result)
+        public bool TryGet(string arrayKey, string columnKey, string rowKey , out string result)
         {
             var isArrayKeyValid = values.ContainsKey(arrayKey);
             var isColumnKeyValid = columns.ContainsKey(columnKey);
@@ -65,6 +71,8 @@ namespace Flux
                 return false;
             }
         }
+        
+        //--------------------------------------------------------------------------------------------------------------
         
         public void Process(Sheet sheet)
         {
@@ -118,13 +126,13 @@ namespace Flux
                         size.y++;
                     }
 
-                    var array = new T[size.x, size.y];
+                    var array = new string[size.x, size.y];
                     for (var subX = 0; subX < size.x; subX++)
                     {
                         for (var subY = 0; subY < size.y; subY++)
                         {
                             var value = sheet[x + 1 + subX, y + 1 + subY];
-                            array[subX, subY] = ProcessValue(value);
+                            array[subX, subY] = value;
                         }
                     }
                     
@@ -133,7 +141,8 @@ namespace Flux
             }
         }
         
-        protected abstract T ProcessValue(string value);
+        //--------------------------------------------------------------------------------------------------------------
+        
         private bool IsValueValid(string value)
         {
             if (value == string.Empty) return false;
@@ -144,6 +153,8 @@ namespace Flux
 
             return !isColumnId && !isRowId && !isArrayId;
         }
+        
+        //--------------------------------------------------------------------------------------------------------------
 
         public override string ToString()
         {

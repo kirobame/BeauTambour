@@ -22,16 +22,16 @@ namespace BeauTambour
             get
             {
                 var settings = Repository.GetSingle<RuntimeSettings>(Reference.RuntimeSettings);
-                return encounterSheets[reference.EncounterIndex - 1]["Dialogues", settings.Language.ToString(), reference.Id];
+                return Dialogue.Parse(encounterSheets[reference.EncounterIndex - 1]["Dialogues", settings.Language.ToString(), reference.Id]);
             }
         }
 
-        public IReadOnlyList<EncounterSheet> Sheets => encounterSheets;
+        public IReadOnlyList<RuntimeSheet> Sheets => encounterSheets;
         
         [SerializeField] private CSVRecipient dialogues;
         [SerializeField] private bool useBackup;
 
-        private EncounterSheet[] encounterSheets;
+        private RuntimeSheet[] encounterSheets;
 
         void Awake() => Event.Open(EventType.OnDialoguesDownloaded);
         void Start()
@@ -42,10 +42,10 @@ namespace BeauTambour
 
         public void Process(Sheet[] sheets)
         {
-            encounterSheets = new EncounterSheet[sheets.Length];
+            encounterSheets = new RuntimeSheet[sheets.Length];
             for (var i = 0; i < sheets.Length; i++)
             {
-                var encounterSheet = new EncounterSheet();
+                var encounterSheet = new RuntimeSheet();
                 encounterSheet.Process(sheets[i]);
 
                 encounterSheets[i] = encounterSheet;
@@ -65,7 +65,12 @@ namespace BeauTambour
             dialogue = default;
             if (encounterIndex < 0 || encounterIndex >= encounterSheets.Length) return false;
 
-            return encounterSheets[encounterIndex].TryGet("Dialogues", language.ToString(), id, out dialogue);
+            if (encounterSheets[encounterIndex].TryGet("Dialogues", language.ToString(), id, out var text))
+            {
+                dialogue = Dialogue.Parse(text);
+                return true;
+            }
+            else return false;
         }
     }
 }

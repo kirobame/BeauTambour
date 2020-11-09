@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Flux.Editor
 {
@@ -40,6 +41,15 @@ namespace Flux.Editor
             
             if (type.IsArray) return type.GetElementType();
             else return type.GetGenericArguments().First();
+        }
+
+        public static void AddElement(this SerializedProperty arrayProperty, Object element)
+        {
+            if (arrayProperty.arraySize == 0) arrayProperty.InsertArrayElementAtIndex(0);
+            else arrayProperty.InsertArrayElementAtIndex(arrayProperty.arraySize - 1);
+
+            var elementProperty = arrayProperty.GetArrayElementAtIndex(arrayProperty.arraySize - 1);
+            elementProperty.objectReferenceValue = element;
         }
     }
 }

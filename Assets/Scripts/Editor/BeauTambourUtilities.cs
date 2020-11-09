@@ -10,25 +10,42 @@ namespace BeauTambour.Editor
     {
         public static DialogueProvider DialogueProvider { get; private set; }
         
+        //--------------------------------------------------------------------------------------------------------------
+        
         public static IReadOnlyDictionary<string, string> Outcomes => outcomes;
         
         private static Dictionary<string, string> outcomes = new Dictionary<string, string>();
         private static Dictionary<Outcome, string> pathHistoric = new Dictionary<Outcome, string>();
         
+        //--------------------------------------------------------------------------------------------------------------
+
+        public static IReadOnlyList<OutcomeInterpreter> OutcomeInterpreters => outcomeInterpreters;
+        private static OutcomeInterpreter[] outcomeInterpreters;
+        
+        //--------------------------------------------------------------------------------------------------------------
+        
         [InitializeOnLoadMethod]
         private static void Bootup()
         {
+            LoadOutcomeInterpreters();
             RegisterOutcomes();
-
-            var gameObject = EditorUtility.CreateGameObjectWithHideFlags("Editor-DialogueProvider", HideFlags.HideAndDontSave, typeof(DialogueProvider));
-            DialogueProvider = gameObject.GetComponent<DialogueProvider>();
-
-            var guids = AssetDatabase.FindAssets("Dialogues t:CSVRecipient");
-            var dialogues = AssetDatabase.LoadAssetAtPath<CSVRecipient>(AssetDatabase.GUIDToAssetPath(guids.First()));
-            
-            DialogueProvider.Process(dialogues.Sheets.ToArray());
+            CreateTemporaryDialogueProvider();
         }
-        private static void RegisterOutcomes()
+        
+        //--------------------------------------------------------------------------------------------------------------
+
+        public static void LoadOutcomeInterpreters()
+        {
+            var guids = AssetDatabase.FindAssets(string.Empty, new string[] {"Assets/Editor/OutcomeInterpreters"});
+            outcomeInterpreters = new OutcomeInterpreter[guids.Length];
+
+            for (var i = 0; i < guids.Length; i++)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guids[i]);
+                outcomeInterpreters[i] = AssetDatabase.LoadAssetAtPath<OutcomeInterpreter>(path);
+            }
+        }
+        public static void RegisterOutcomes()
         {
             outcomes.Clear();
             pathHistoric.Clear();
@@ -45,7 +62,22 @@ namespace BeauTambour.Editor
                 pathHistoric.Add(outcome, path);
             }
         }
+        public static void CreateTemporaryDialogueProvider()
+        {
+            if (DialogueProvider == null)
+            {
+                var gameObject = EditorUtility.CreateGameObjectWithHideFlags("Editor-DialogueProvider", HideFlags.HideAndDontSave, typeof(DialogueProvider));
+                DialogueProvider = gameObject.GetComponent<DialogueProvider>();
+            }
 
+            var guids = AssetDatabase.FindAssets("Dialogues t:CSVRecipient");
+            var dialogues = AssetDatabase.LoadAssetAtPath<CSVRecipient>(AssetDatabase.GUIDToAssetPath(guids.First()));
+            
+            DialogueProvider.Process(dialogues.Sheets.ToArray());
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+        
         public static void ModifyPathFor(Outcome outcome)
         {
             if (pathHistoric.TryGetValue(outcome, out var oldPath))

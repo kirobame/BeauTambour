@@ -123,7 +123,7 @@ namespace Flux.Editor
             GUI.DrawTexture(buttonRect, EditorGUIUtility.IconContent("d_scenepicking_pickable_hover@2x").image);
 
             var Ev = UnityEngine.Event.current;
-            if (Ev.type == EventType.MouseDown & Ev.button == 0 && buttonRect.Contains(Ev.mousePosition))
+            if (Ev.type == EventType.MouseDown && Ev.button == 0 && buttonRect.Contains(Ev.mousePosition))
             {
                 DragAndDrop.StartDrag($"Dragging : {elementProperty.propertyPath}");
                 DragAndDrop.SetGenericData($"PPtr<${typeof(T).Name}>", serializedObject.targetObject);
