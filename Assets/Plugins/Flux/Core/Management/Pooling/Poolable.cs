@@ -26,6 +26,7 @@ namespace Flux
             this.key = key;
             this.origin = origin;
         }
+        public virtual void Prepare() { }
         
         public virtual void Reboot() { }
     }

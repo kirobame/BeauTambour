@@ -13,7 +13,9 @@ namespace BeauTambour
         public IEnumerable<NoteAttribute> Prompt()
         {
             var attributes = new List<NoteAttribute>() {new MusicianAttribute(this)};
-            return attributes.Concat(attributeGenerator.Generate());
+            
+            if (attributeGenerator != null) return attributes.Concat(attributeGenerator.Generate());
+            else return attributes;
         }
     }
 }

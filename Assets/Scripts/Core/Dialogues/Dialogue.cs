@@ -15,7 +15,7 @@ namespace BeauTambour
         public override string ToString()
         {
             var builder = new StringBuilder();
-            foreach (var cue in cues) builder.Append($"[{cue.Actor}]-{cue.Text}");
+            foreach (var cue in cues) builder.Append(cue.ToString());
 
             return builder.ToString();
         }

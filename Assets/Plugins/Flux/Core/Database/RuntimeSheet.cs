@@ -11,10 +11,13 @@ namespace Flux
     public abstract class RuntimeSheet<T>
     {
         public Sheet Source { get; private set; }
-
+        
+        public IReadOnlyDictionary<string, int> Columns => columns;
+        public IReadOnlyDictionary<string, int> Rows => rows;
+        
         public IEnumerable<string> ArrayKeys => values.Keys;
-        public IEnumerable<string> ColumnKeys => columnKeys.SelectMany(keyValuePair => keyValuePair.Value);
-        public IEnumerable<string> RowKeys => rowKeys.SelectMany(keyValuePair => keyValuePair.Value);
+        public IReadOnlyDictionary<string, List<string>> ColumnKeys => columnKeys;
+        public IReadOnlyDictionary<string, List<string>> RowKeys => rowKeys;
 
         public IEnumerable<T[,]> Arrays => values.Select(keyValuePair => keyValuePair.Value);
         public IEnumerable<T> Values
@@ -42,6 +45,7 @@ namespace Flux
         private Dictionary<string, List<string>> columnKeys = new Dictionary<string, List<string>>();
         private Dictionary<string, List<string>> rowKeys = new Dictionary<string, List<string>>();
 
+        public T[,] this[string arrayKey] => values[arrayKey];
         public T this[string arrayKey, string columnKey, string rowKey] => values[arrayKey][columns[columnKey], rows[rowKey]];
 
         public bool TryGet(string arrayKey, string columnKey, string rowKey , out T result)
@@ -64,7 +68,7 @@ namespace Flux
         
         public void Process(Sheet sheet)
         {
-            Source = Source;
+            Source = sheet;
             
             columns.Clear();
             rows.Clear();

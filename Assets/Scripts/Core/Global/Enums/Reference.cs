@@ -7,9 +7,9 @@ namespace BeauTambour
     {
         Settings,
         RythmHandler,
-        DrawingPool,
         StickIndicator,
         DialogueProvider,
-        RuntimeSettings
+        RuntimeSettings,
+        PhaseHandler,
     }
 }

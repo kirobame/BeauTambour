@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-308616490814503204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0c2dec15c54f0d8945fb551fbe78e0, type: 3}
+  m_Name: 67f1068d-b66a-42b0-b46a-800821084f31-MusicianCondition
+  m_EditorClassIdentifier: 
+  musician: {fileID: 11400000, guid: adaf503684cbb2141b10e9501bab0836, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
+  m_Name: Demo-Mc.w.Is
+  m_EditorClassIdentifier: 
+  priority: 2
+  mask: 4
+  successionMask: 6
+  shouldBeRemoved: 1
+  conditions:
+  - {fileID: -308616490814503204}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: e0afab4265e97044ab8c69d5b6783ed7,
+    type: 3}

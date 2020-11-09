@@ -13,10 +13,12 @@ namespace BeauTambour
         public int Priority => priority;
         public OutcomeType Mask => mask;
         public OutcomeType SuccessionMask => successionMask;
+        public bool ShouldBeRemoved => shouldBeRemoved;
         
         [SerializeField] private int priority;
         [SerializeField] private OutcomeType mask;
         [SerializeField] private OutcomeType successionMask;
+        [SerializeField] private bool shouldBeRemoved;
         
         [SerializeField] private Condition[] conditions;
         [SerializeField] private Sequencer sequencerPrefab;

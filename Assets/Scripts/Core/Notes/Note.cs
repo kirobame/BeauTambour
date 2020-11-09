@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Flux;
 
 namespace BeauTambour
 {
     public class Note
     {
+        public Note() => this.attributes = new HashSet<NoteAttribute>();
         public Note(IEnumerable<NoteAttribute> attributes) => this.attributes = new HashSet<NoteAttribute>(attributes);
 
         public IEnumerable<NoteAttribute> Attributes => attributes;

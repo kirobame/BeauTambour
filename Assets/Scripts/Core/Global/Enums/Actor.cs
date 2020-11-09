@@ -3,6 +3,10 @@
     public enum Actor
     {
         JeanGuy,
-        Michelle
+        Michelle,
+        Vincent,
+        Rory,
+        
+        Isabelle
     }
 }

@@ -1,6 +1,5 @@
 ﻿using Flux.Editor;
 using UnityEditor;
-using UnityEngine;
 
 namespace BeauTambour.Editor
 {
@@ -11,6 +10,9 @@ namespace BeauTambour.Editor
         
         protected override void Draw(SerializedProperty iterator)
         {
+            iterator.NextVisible(false);
+            EditorGUILayout.PropertyField(iterator);
+            
             iterator.NextVisible(false);
             EditorGUILayout.PropertyField(iterator);
             

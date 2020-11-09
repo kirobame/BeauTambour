@@ -12,6 +12,9 @@ namespace BeauTambour
         public Color Color => color;
         [SerializeField] private Color color = Color.yellow;
         
+        public Emotion Emotion => emotion;
+        [SerializeField] private Emotion emotion;
+        
         public IReadOnlyList<Point> Points => points;
         [SerializeField] private List<Point> points = new List<Point>()
         {

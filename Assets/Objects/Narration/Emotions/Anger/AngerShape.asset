@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
+  m_Name: AngerShape
+  m_EditorClassIdentifier: 
+  color: {r: 0.8867924, g: 0.2642927, b: 0.20496619, a: 1}
+  emotion: 1
+  points:
+  - position: {x: 0.0054944227, y: 0.99998486}
+    toleranceRadius: 0.17262964
+  - position: {x: 0.5461418, y: 0.99779534}
+    toleranceRadius: 0.125
+  - position: {x: 0.9996851, y: 0.5291339}
+    toleranceRadius: 0.125
+  - position: {x: 0.9999775, y: 0.006700017}
+    toleranceRadius: 0.16354029
+  - position: {x: 0.68976384, y: -0}
+    toleranceRadius: 0.1
+  - position: {x: -0.65574807, y: -0.011338583}
+    toleranceRadius: 0.1
+  - position: {x: -0.99999434, y: -0.0033277685}
+    toleranceRadius: 0.15987928

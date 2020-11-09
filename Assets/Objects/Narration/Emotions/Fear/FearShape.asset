@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
+  m_Name: FearShape
+  m_EditorClassIdentifier: 
+  color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
+  emotion: 3
+  points:
+  - position: {x: 0.70973057, y: -0.70447326}
+    toleranceRadius: 0.23111057
+  - position: {x: 1.0677166, y: -0.35527563}
+    toleranceRadius: 0.125
+  - position: {x: 1.0979528, y: 0.31748033}
+    toleranceRadius: 0.125
+  - position: {x: 0.700268, y: 0.71388006}
+    toleranceRadius: 0.18948652
+  - position: {x: 0.34912997, y: 0.35793048}
+    toleranceRadius: 0.1
+  - position: {x: -0.35314602, y: -0.35396862}
+    toleranceRadius: 0.1
+  - position: {x: -0.704284, y: -0.7099183}
+    toleranceRadius: 0.2371195
+  - position: {x: -1.1017324, y: -0.29480317}
+    toleranceRadius: 0.1
+  - position: {x: -1.0828347, y: 0.32125986}
+    toleranceRadius: 0.1
+  - position: {x: -0.6973229, y: 0.7029922}
+    toleranceRadius: 0.2557822
+  - position: {x: -0.37322837, y: 0.37889767}
+    toleranceRadius: 0.1
+  - position: {x: 0.2749607, y: -0.2692914}
+    toleranceRadius: 0.1
+  - position: {x: 0.48944885, y: -0.49511814}
+    toleranceRadius: 0.22550832

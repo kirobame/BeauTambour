@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
+  m_Name: Demo-Sd.Op
+  m_EditorClassIdentifier: 
+  priority: 1
+  mask: 2
+  successionMask: 4
+  shouldBeRemoved: 1
+  conditions:
+  - {fileID: 2155053259187139766}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 6b4c61c009fbd1a42ae1a9313786dfe9,
+    type: 3}
+--- !u!114 &2155053259187139766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
+  m_Name: 0e3b0af7-d754-4333-bae7-e9484a69bb9d-EmotionCondition
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 2200d03da3e03b142a822a251711f057, type: 2}

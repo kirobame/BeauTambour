@@ -2,7 +2,7 @@
     "name": "Controls",
     "maps": [
         {
-            "name": "Gameplay-Pad",
+            "name": "Gameplay",
             "id": "0233a0b8-dac3-4dc1-a96b-ff03705ea8d5",
             "actions": [
                 {
@@ -10,6 +10,46 @@
                     "type": "Value",
                     "id": "662083a1-1576-455e-bdfd-fc50c6a151c5",
                     "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pick Musician Right",
+                    "type": "Button",
+                    "id": "16a57b1b-ceed-4c04-9d03-e14fd8ae4402",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pick Musician Left",
+                    "type": "Button",
+                    "id": "e048cb27-6c0c-41e4-b964-4a3c452b5c4d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pick Musician Up",
+                    "type": "Button",
+                    "id": "cf8131a8-89e5-480f-8c06-4e2e72fa7edb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pick Musician Down",
+                    "type": "Button",
+                    "id": "f8707450-5943-46af-a39a-dcc812802c54",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Complete Partition",
+                    "type": "Button",
+                    "id": "f4eae84f-79e1-468f-9f8b-be80c618f1f2",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -23,6 +63,88 @@
                     "processors": "",
                     "groups": "",
                     "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ff9e413-00bb-4845-a2af-727ff1ef0ea9",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Musician Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0433efa4-8663-4fc9-b8ec-0b3f2ba7c748",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Musician Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "76aa9764-a0e1-4347-abbb-4e046a4493e2",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Musician Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "663a0e73-cf94-4c15-bbf9-63e51ac51273",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Musician Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a7cba384-2da4-499d-9183-cf3615d36ef7",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Complete Partition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Outcome",
+            "id": "108d5a96-7cbf-4beb-af1c-c8812086f5da",
+            "actions": [
+                {
+                    "name": "Next",
+                    "type": "Button",
+                    "id": "eff24a28-9b76-4f3a-8b0d-ef0ba3bdb589",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ecfac7c3-046f-4ae2-8c64-77af8fe0aecf",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

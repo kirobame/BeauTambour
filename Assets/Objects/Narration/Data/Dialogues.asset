@@ -14,31 +14,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vS8Q6v7INEOwWaina2oXaTEZtBfofmSn2JwiWqErLhVlamk4NpfuaP90LCzq4TONHyVASUEWaJpjnsa/pub?output=csv
   sheets:
-  - name: Rencontre-01
+  - name: Demo
     version: 1.0.0
     array:
     - "\u24D8-Dialogues"
     - "\u24B8-Fran\xE7ais"
     - "\u24B8-English"
-    - "\u24C7-PC.2p"
-    - '[JeanGuy]-Salut le monde !
-
-      
-
-      [Michelle]-On s''en fout.
-
-      
-
-      [JeanGuy]-*Sniff
-      Sniff...*'
-    - '[JeanGuy]-Hello world !
-
-      
-
-      [Michelle]-Fuck off.
-
-      
-
-      [JeanGuy]-*Sob
-      Sob...*'
-    size: {x: 3, y: 2}
+    - "\u24C7-Default"
+    - '[Isabelle]-Bof.'
+    - '[Isabelle]-Meh.'
+    - "\u24C7-Pr.Jy"
+    - "[Isabelle]-Non\u201A pas de la joie."
+    - "[Isabelle]-No\u201A t'was not joy."
+    - "\u24C7-Pr.Tr"
+    - "[Isabelle]-Non\u201A pas de la confiance."
+    - "[Isabelle]-No\u201A t'was not trust."
+    - "\u24C7-Pr.Fr"
+    - "[Isabelle]-Non\u201A pas de la peur."
+    - "[Isabelle]-No\u201A t'was not fear."
+    - "\u24C7-Pr.Sr"
+    - "[Isabelle]-Non\u201A pas de la surprise."
+    - "[Isabelle]-No\u201A t'was not surprise."
+    - "\u24C7-Pr.Sd"
+    - "[Isabelle]-Non\u201A pas de la tristesse."
+    - "[Isabelle]-No\u201A t'was not sadness."
+    - "\u24C7-Pr.Ds"
+    - "[Isabelle]-Non\u201A pas du d\xE9go\xFBt."
+    - "[Isabelle]-No\u201A t'was not disgust."
+    - "\u24C7-Pr.Ang"
+    - "[Isabelle]-Non\u201A pas de la col\xE8re."
+    - "[Isabelle]-No\u201A t'was not anger."
+    - "\u24C7-Pr.Ant"
+    - "[Isabelle]-Non\u201A pas de l'anticipation."
+    - "[Isabelle]-No\u201A t'was not anticipation"
+    - "\u24C7-Sd.Lv"
+    - "[Isabelle]-Non\u201A pas de l'amour."
+    - "[Isabelle]-No\u201A t'was not love."
+    - "\u24C7-Sd.Sb"
+    - "[Isabelle]-Non\u201A pas de la soumission."
+    - "[Isabelle]-No\u201A t'was not submission."
+    - "\u24C7-Sd.Aw"
+    - "[Isabelle]-Non\u201A pas de l'effroi respectueux."
+    - "[Isabelle]-No\u201A t'was not awe."
+    - "\u24C7-Sd.Ds"
+    - "[Isabelle]-Non\u201A pas de la d\xE9sapprobation."
+    - "[Isabelle]-No\u201A t'was not disapproval."
+    - "\u24C7-Sd.Rm"
+    - "[Isabelle]-Non\u201A pas du remord."
+    - "[Isabelle]-No\u201A t'was not remorse."
+    - "\u24C7-Sd.Ct"
+    - "[Isabelle]-Non\u201A pas du m\xE9pris."
+    - "[Isabelle]-No\u201A t'was not contempt."
+    - "\u24C7-Sd.Ag"
+    - "[Isabelle]-Non\u201A pas de l'agressivit\xE9."
+    - "[Isabelle]-No\u201A t'was not aggressivity."
+    - "\u24C7-Sd.Op"
+    - "[Isabelle]-C'est \xE7a! De l'optimisme."
+    - '[Isabelle]-Yes Exactly! It was optimism that i felt.'
+    - "\u24C7-Jn.w.Is"
+    - "[JeanGuy]-Bonjour\u201A je m'apelle JeanGuy.\r\n\r\n[Isabelle]-Salut JeanGuy."
+    - "[JeanGuy]-Hello\u201A my name is JeanGuy.\r\n\r\n[Isabelle]-Sup JeanGuy."
+    - "\u24C7-Mc.w.Is"
+    - "[Michelle]-Bonjour\u201A je m'apelle Michelle.\r\n\r\n[Isabelle]-Salut Michelle."
+    - "[Michelle]-Hello\u201A my name is Michelle.\r\n\r\n[Isabelle]-Sup Michelle."
+    - "\u24C7-Rr.w.Is"
+    - "[Rory]-Bonjour\u201A je m'apelle Rory.\r\n\r\n[Isabelle]-Salut Rory."
+    - "[Rory]-Hello\u201A my name is Rory.\r\n\r\n[Isabelle]-Sup Rory."
+    - "\u24C7-Vn.w.Is"
+    - "[Vincent]-Bonjour\u201A je m'apelle Vincent.\r\n\r\n[Isabelle]-Salut Vincent."
+    - "[Vincent]-Hello\u201A my name is Vincent.\r\n\r\n[Isabelle]-Sup Vincent."
+    size: {x: 3, y: 22}

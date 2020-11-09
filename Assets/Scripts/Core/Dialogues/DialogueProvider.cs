@@ -1,17 +1,39 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Flux;
 using UnityEngine;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
     public class DialogueProvider : MonoBehaviour
     {
+        #region Encapsulated Types
+
+        public enum EventType
+        {
+            OnDialoguesDownloaded
+        }
+        #endregion
+        
+        public Dialogue this[DialogueReference reference]
+        {
+            get
+            {
+                var settings = Repository.GetSingle<RuntimeSettings>(Reference.RuntimeSettings);
+                return encounterSheets[reference.EncounterIndex - 1]["Dialogues", settings.Language.ToString(), reference.Id];
+            }
+        }
+
+        public IReadOnlyList<EncounterSheet> Sheets => encounterSheets;
+        
         [SerializeField] private CSVRecipient dialogues;
         [SerializeField] private bool useBackup;
 
         private EncounterSheet[] encounterSheets;
 
+        void Awake() => Event.Open(EventType.OnDialoguesDownloaded);
         void Start()
         {
             if (!useBackup) StartCoroutine(dialogues.Download(Process));
@@ -28,6 +50,8 @@ namespace BeauTambour
 
                 encounterSheets[i] = encounterSheet;
             }
+            
+            if (Application.isPlaying) Event.Call(EventType.OnDialoguesDownloaded);
         }
 
         public bool TryGetDialogue(DialogueReference reference, out Dialogue dialogue) => TryGetDialogue(reference.EncounterIndex - 1, reference.Id, out dialogue);

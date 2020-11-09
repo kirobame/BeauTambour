@@ -21,4 +21,4 @@ MonoBehaviour:
   headingErrorFactor: 0.275
   spacingErrorFactor: 1.5
   validationRadius: 0.045
-  completionQuota: 0.9
+  completionQuota: 0.975

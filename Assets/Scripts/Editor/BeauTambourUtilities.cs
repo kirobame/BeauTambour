@@ -14,7 +14,7 @@ namespace BeauTambour.Editor
         
         private static Dictionary<string, string> outcomes = new Dictionary<string, string>();
         private static Dictionary<Outcome, string> pathHistoric = new Dictionary<Outcome, string>();
-
+        
         [InitializeOnLoadMethod]
         private static void Bootup()
         {

@@ -18,6 +18,9 @@ namespace BeauTambour.Editor
 
             var color = iterator.colorValue;
             
+            iterator.NextVisible(false);
+            EditorGUILayout.PropertyField(iterator);
+            
             EditorGUILayout.Separator();
         
             var rect = GUILayoutUtility.GetRect(EditorGUIUtility.currentViewWidth, EditorGUIUtility.currentViewWidth);

@@ -10,5 +10,7 @@
         
         public readonly Actor Actor;
         public readonly string Text;
+
+        public override string ToString() => $"[{Actor}]-{Text}";
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Flux;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -23,7 +24,7 @@ namespace BeauTambour
         private HashSet<Outcome> runtimeOutcomes;
         private List<Outcome> results;
 
-        private Stack<Note[]> historic;
+        private Stack<Note[]> historic = new Stack<Note[]>();
         private int outcomeAdvancement;
         
         public void BootUp()
@@ -40,6 +41,16 @@ namespace BeauTambour
         public void Evaluate(Note[] notes)
         {
             if (outcomeAdvancement >= 0) return;
+            
+            var builder = new StringBuilder();
+            builder.AppendLine("Evaluating outcomes with :");
+            for (var i = 0; i < notes.Length; i++)
+            {
+                builder.AppendLine($"---Note [{i}] :");
+                foreach (var attribute in notes[i].Attributes) builder.AppendLine($"------{attribute}");
+            }
+            Debug.Log(builder.ToString());
+            
             historic.Push(notes);
             
             results.Clear();
@@ -65,6 +76,11 @@ namespace BeauTambour
             });
             
             outcomeAdvancement = 0;
+
+            builder.Clear();
+            builder.AppendLine("Outcomes :");
+            foreach (var result in results) builder.AppendLine($"---{result}");
+            Debug.Log(builder.ToString());
             
             results[0].Play(this, notes);
             results[0].Sequencer.OnCompletion += OnOutcomeDone;
@@ -72,14 +88,30 @@ namespace BeauTambour
 
         private void OnOutcomeDone()
         {
-            runtimeOutcomes.Remove(CurrentOutcome);
+            if (CurrentOutcome.ShouldBeRemoved) runtimeOutcomes.Remove(CurrentOutcome);
             CurrentOutcome.Sequencer.OnCompletion -= OnOutcomeDone;
 
-            var succession = (CurrentOutcome.SuccessionMask | results[outcomeAdvancement + 1].Mask) == CurrentOutcome.SuccessionMask;
-            if (outcomeAdvancement + 1 >= results.Count || !succession)
+            if (outcomeAdvancement + 1 < results.Count)
+            {
+                var succession = (CurrentOutcome.SuccessionMask | results[outcomeAdvancement + 1].Mask) == CurrentOutcome.SuccessionMask;
+                if (!succession)
+                {
+                    End();
+                    return;
+                }
+            }
+            else
+            {
+                End();
+                return;
+            }
+            
+            void End()
             {
                 outcomeAdvancement = -1;
-                return;
+
+                var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
+                phaseHandler.SkipToNext();
             }
             
             outcomeAdvancement++;

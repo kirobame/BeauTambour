@@ -5,8 +5,7 @@ namespace BeauTambour
     [EnumAddress]
     public enum PhaseType
     {
-        Melody,
-        Resolution,
+        Gameplay,
         Outcome
     }
 }

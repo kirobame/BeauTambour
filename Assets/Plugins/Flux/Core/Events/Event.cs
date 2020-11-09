@@ -31,7 +31,7 @@ namespace Flux
             }
 
             public void Register(Action action) => callback += action;
-            public void Unregister(Action action) => callback += action;
+            public void Unregister(Action action) => callback -= action;
         }
         private class Port<T> : Port
         {
@@ -46,7 +46,7 @@ namespace Flux
             }
 
             public void Register(Action<T> action) => callback += action;
-            public void Unregister(Action<T> action) => callback += action;
+            public void Unregister(Action<T> action) => callback -= action;
         }
         private class Port<T1,T2> : Port
         {
@@ -61,7 +61,7 @@ namespace Flux
             }
 
             public void Register(Action<T1,T2> action) => callback += action;
-            public void Unregister(Action<T1,T2> action) => callback += action;
+            public void Unregister(Action<T1,T2> action) => callback -= action;
         }
         private class Port<T1,T2,T3> : Port
         {
@@ -76,7 +76,7 @@ namespace Flux
             }
 
             public void Register(Action<T1,T2,T3> action) => callback += action;
-            public void Unregister(Action<T1,T2,T3> action) => callback += action;
+            public void Unregister(Action<T1,T2,T3> action) => callback -= action;
         }
         private class Port<T1,T2,T3,T4> : Port
         {
@@ -91,7 +91,7 @@ namespace Flux
             }
 
             public void Register(Action<T1,T2,T3,T4> action) => callback += action;
-            public void Unregister(Action<T1,T2,T3,T4> action) => callback += action;
+            public void Unregister(Action<T1,T2,T3,T4> action) => callback -= action;
         }
         #endregion
         

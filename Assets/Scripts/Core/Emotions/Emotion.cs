@@ -9,6 +9,8 @@ namespace BeauTambour
         Sadness,
         Fear,
         Disgust,
-        Surprise
+        Surprise,
+        Anticipation,
+        Trust
     }
 }

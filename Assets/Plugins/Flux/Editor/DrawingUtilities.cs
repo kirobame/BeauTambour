@@ -16,7 +16,9 @@ namespace Flux.Editor
         public static float horizontalSpacing => EditorGUIUtility.standardVerticalSpacing * 2f;
         
         public static float labelWidth => EditorGUIUtility.labelWidth + 2f;
-        public static float fieldWidth => EditorGUIUtility.currentViewWidth - EditorGUIUtility.labelWidth - 25f;
+        public static float fieldWidth => EditorGUIUtility.currentViewWidth - labelWidth;
+
+        public static float indent => EditorGUI.indentLevel * 14f;
 
         private static HashSet<(Type type, FluxPropertyDrawer instance)> drawers;
 

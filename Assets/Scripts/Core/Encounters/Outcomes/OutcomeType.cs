@@ -7,8 +7,9 @@ namespace BeauTambour
     {
         None = 0,
         
-        PrimaryEmotion = 1,
-        SecondaryEmotion = 2,
-        TertiaryEmotion = 4
+        Default = 1,
+        
+        Emotion = 2,
+        Conversation = 4
     }
 }

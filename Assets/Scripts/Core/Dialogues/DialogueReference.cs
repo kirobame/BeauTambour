@@ -1,4 +1,5 @@
 ﻿using System;
+using Flux;
 using UnityEngine;
 
 namespace BeauTambour
@@ -10,6 +11,15 @@ namespace BeauTambour
         {
             this.encounterIndex = encounterIndex;
             this.id = id;
+        }
+
+        public Dialogue Value
+        {
+            get
+            {
+                var provider = Repository.GetSingle<DialogueProvider>(Reference.DialogueProvider);
+                return provider[this];
+            }
         }
 
         public int EncounterIndex => encounterIndex;

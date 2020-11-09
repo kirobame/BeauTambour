@@ -62,6 +62,8 @@ namespace BeauTambour
             
             Event.Open(EventType.OnPause);
             Event.Open(EventType.OnShutdown);
+
+            Event.Register(Bootstrapper.EventType.OnBootup, BootUp);
         }
         
         void Update()
@@ -182,8 +184,6 @@ namespace BeauTambour
 
             if (differences.floored <= toleranceMarginInBeats)
             {
-                Debug.Log("Normal");
-                
                 queueable.Prepare(lastBeat, differences.floored);
                 queueable.Beat(lastBeat - queueable.Start);
                 
@@ -193,8 +193,6 @@ namespace BeauTambour
             } 
             else if (differences.ceiled <= toleranceMarginInBeats)
             {
-                Debug.Log("Early");
-                
                 queueable.Prepare(lastBeat + 1, -differences.ceiled);
                 earlyCalls.Enqueue(queueable);
                 

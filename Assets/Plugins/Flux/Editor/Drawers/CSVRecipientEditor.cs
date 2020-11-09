@@ -106,6 +106,8 @@ namespace Flux.Editor
 
             ToggleInspectorLock(false);
             EditorApplication.update -= UpdateRequests;
+            
+            EditorUtility.SetDirty(serializedObject.targetObject);
         }
     
         private void ToggleInspectorLock(bool value)

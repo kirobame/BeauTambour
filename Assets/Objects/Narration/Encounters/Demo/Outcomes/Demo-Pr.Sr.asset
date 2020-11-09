@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3885658687334583618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
+  m_Name: b43e47ed-c083-4a31-8dc1-2241a7886def-EmotionCondition
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 0b8291cfa7f617c4d941da7a782b2217, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
+  m_Name: Demo-Pr.Sr
+  m_EditorClassIdentifier: 
+  priority: 0
+  mask: 2
+  successionMask: 4
+  shouldBeRemoved: 1
+  conditions:
+  - {fileID: -3885658687334583618}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 62f742f096efa434ba50066679a521b1,
+    type: 3}
