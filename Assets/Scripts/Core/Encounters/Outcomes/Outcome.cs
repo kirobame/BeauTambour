@@ -18,11 +18,11 @@ namespace BeauTambour
         [SerializeField] private int priority;
         [SerializeField] private OutcomeType mask;
         [SerializeField] private OutcomeType successionMask;
-        [SerializeField] private bool shouldBeRemoved;
+        [SerializeField] private bool shouldBeRemoved = true;
         
         [SerializeField] private Condition[] conditions;
         [SerializeField] private Sequencer sequencerPrefab;
-
+        //
         public Sequencer Sequencer { get; private set; }
 
         public void BootUp()

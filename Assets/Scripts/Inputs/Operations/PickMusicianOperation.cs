@@ -1,5 +1,6 @@
 ﻿using Flux;
 using UnityEngine;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
@@ -7,7 +8,15 @@ namespace BeauTambour
     public class PickMusicianOperation : RythmOperation
     {
         [SerializeField] private Musician musician;
-        
+
+        public override void Initialize(OperationHandler operationHandler)
+        {
+            base.Initialize(operationHandler);
+            
+            Event.Open(TempEvent.OnAnyMusicianPicked);
+            Event.Open(TempEvent.OnMusicianPicked, musician);
+        }
+
         protected override bool TryGetAction(out IRythmQueueable action)
         {
             var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
@@ -15,7 +24,7 @@ namespace BeauTambour
 
             if (outcomePhase.IsNoteBeingProcessed)
             {
-                action = new BeatAction(1, 1, Action);
+                action = new BeatAction(0, 0, Action);
                 return true;
             }
             else
@@ -28,7 +37,10 @@ namespace BeauTambour
         private void Action(int beat)
         {
             var attributes = musician.Prompt();
-                
+            
+            Event.Call(TempEvent.OnAnyMusicianPicked);
+            Event.CallLocal(TempEvent.OnMusicianPicked, musician);
+
             var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
             var outcomePhase = phaseHandler.Get<OutcomePhase>(PhaseType.Outcome);
             

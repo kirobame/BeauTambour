@@ -216,14 +216,10 @@ namespace Flux
             var stringedAddress = address.ToString();
             var port = new VoidPort(stringedAddress);
 
-            if (!localPorts.ContainsKey(stringedAddress))
-            {
-                localPorts.Add(stringedAddress, new Dictionary<object, Port>() { {key, port} });
-                return true;
-            }
+            if (!localPorts.ContainsKey(stringedAddress)) localPorts.Add(stringedAddress, new Dictionary<object, Port>() { {key, port} });
             else if (localPorts[stringedAddress].ContainsKey(key)) return false;
-
-            localPorts[stringedAddress].Add(key, port);
+            else localPorts[stringedAddress].Add(key, port);
+            
             if (!queuedLocalCallbacks.ContainsKey(stringedAddress) || !queuedLocalCallbacks[stringedAddress].TryGetValue(key, out var hashSet)) return true;
             
             foreach (var callback in hashSet)
@@ -577,7 +573,11 @@ namespace Flux
                 if (subDictionary.TryGetValue(key, out var hashSet)) hashSet.Add(callback);
                 else subDictionary.Add(key, new HashSet<object>() {callback});
             }
-            else queuedLocalCallbacks.Add(stringedAddress, new Dictionary<object, HashSet<object>>() { {key, new HashSet<object>() {callback} } });
+            else
+            {
+                var hashset = new HashSet<object>() {callback};
+                queuedLocalCallbacks.Add(stringedAddress, new Dictionary<object, HashSet<object>>(){ {key, hashset} });
+            }
         }
         
         //--------------------------------------------------------------------------------------------------------------

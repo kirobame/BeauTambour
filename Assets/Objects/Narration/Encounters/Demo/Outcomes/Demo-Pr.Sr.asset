@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3885658687334583618
+--- !u!114 &-7351030311181327139
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
-  m_Name: b43e47ed-c083-4a31-8dc1-2241a7886def-EmotionCondition
+  m_Name: 10afdad2-bb2d-4efb-84ef-ebc596e9115e-EmotionCondition
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 0b8291cfa7f617c4d941da7a782b2217, type: 2}
 --- !u!114 &11400000
@@ -30,6 +30,6 @@ MonoBehaviour:
   successionMask: 4
   shouldBeRemoved: 1
   conditions:
-  - {fileID: -3885658687334583618}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: 62f742f096efa434ba50066679a521b1,
+  - {fileID: -7351030311181327139}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: acf368a7bbf32a346921e47b9f2b9d17,
     type: 3}

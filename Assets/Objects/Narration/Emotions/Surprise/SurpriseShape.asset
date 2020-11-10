@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: SurpriseShape
   m_EditorClassIdentifier: 
-  color: {r: 0.8396226, g: 0.50324684, b: 0.23366857, a: 1}
+  color: {r: 0.8392157, g: 0.4277939, b: 0.20392154, a: 1}
   emotion: 5
   points:
   - position: {x: -1, y: 0}

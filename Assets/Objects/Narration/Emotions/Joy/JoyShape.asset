@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: JoyShape
   m_EditorClassIdentifier: 
-  color: {r: 0.8962264, g: 0.7494828, b: 0.2494215, a: 1}
+  color: {r: 0.8867924, g: 0.64493555, b: 0.17986828, a: 1}
   emotion: 0
   points:
   - position: {x: 0.012236846, y: -0.999925}

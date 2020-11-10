@@ -55,8 +55,9 @@ namespace Flux.Editor
                 if (!path.Contains("cs")) continue;
 
                 var script = AssetDatabase.LoadAssetAtPath<MonoScript>(path);
+                if (script == null) continue;
+                
                 var type = script.GetClass();
-
                 if (type == null) continue;
                 
                 var attribute = type.GetCustomAttribute<IconProxyAttribute>();

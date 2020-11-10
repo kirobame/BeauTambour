@@ -1,4 +1,5 @@
-﻿using Flux;
+﻿using System.Collections;
+using Flux;
 using UnityEngine;
 using UnityScript.Lang;
 using Array = System.Array;
@@ -23,6 +24,8 @@ namespace BeauTambour
             OnFail
         }
         #endregion
+
+        [SerializeField] private LineRenderer path;
         
         public bool IsDone => Mathf.Abs(goal - Current) <= 0.0125f;
         public float Current => (float)Value.positionCount / points.Length;
@@ -32,6 +35,8 @@ namespace BeauTambour
 
         private Shape shape;
         private Vector3[] points;
+
+        private Coroutine revealPathRoutine;
 
         void Awake()
         {
@@ -50,17 +55,26 @@ namespace BeauTambour
             this.shape = shape;
             
             points = shape.GenerateCopy(subDivision);
-            for (var i = 0; i < points.Length; i++) points[i] += transform.position;
+            for (var i = 0; i < points.Length; i++) points[i] = transform.TransformPoint(points[i]);
             
             Value.positionCount = 1;
             Value.SetPosition(0, points[0]);
+
+            revealPathRoutine = StartCoroutine(RevealPathRoutine(0.3f));
+            path.positionCount = points.Length;
+            path.SetPositions(points);
             
             Event.CallLocal<Vector3>(EventType.OnDraw, gameObject, Value.GetPosition(0));
-            
+
+            var color = shape.Color;
+            color.r -= 0.21f;
+            color.g -= 0.21f;
+            color.b -= 0.21f;
+
             var colors = new GradientColorKey[]
             {
-                new GradientColorKey(shape.Color, 0f),
-                new GradientColorKey(shape.Color, 1f), 
+                new GradientColorKey(color, 0f),
+                new GradientColorKey(color, 1f), 
             };
             var gradient = Value.colorGradient;
             
@@ -73,6 +87,37 @@ namespace BeauTambour
 
             Event.CallLocal<Color>(EventType.OnColorAssigned, gameObject, shape.Color);
             Event.CallLocal<Vector3>(EventType.OnShapeRecognized, gameObject, Value.GetPosition(0));
+        }
+        private IEnumerator RevealPathRoutine(float goal)
+        {
+            Gradient gradient;
+            
+            var time = 0f;
+            while (time < goal)
+            {
+                var alpha = time / goal;
+                
+                gradient = path.colorGradient;
+                gradient.SetKeys(gradient.colorKeys, new GradientAlphaKey[]
+                {
+                    new GradientAlphaKey(alpha, 0f), 
+                    new GradientAlphaKey(alpha, 1f), 
+                });
+                path.colorGradient = gradient;
+                
+                yield return new WaitForEndOfFrame();
+                time += Time.deltaTime;
+            }
+            
+            gradient = path.colorGradient;
+            gradient.SetKeys(gradient.colorKeys, new GradientAlphaKey[]
+            {
+                new GradientAlphaKey(1f, 0f), 
+                new GradientAlphaKey(1f, 1f), 
+            });
+            path.colorGradient = gradient;
+
+            revealPathRoutine = null;
         }
 
         public void Draw(float smoothing) => Draw(smoothing, goal);
@@ -90,6 +135,12 @@ namespace BeauTambour
 
         public void Complete(bool success)
         {
+            if (revealPathRoutine != null)
+            {
+                StopCoroutine(revealPathRoutine);
+                revealPathRoutine = null;
+            }
+
             Event.CallLocal<Vector3>(EventType.OnCompletion, gameObject, Value.GetPosition(Value.positionCount - 1));
             
             if (success) Event.CallLocal(EventType.OnMatch, gameObject);

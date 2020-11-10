@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: TrustShape
   m_EditorClassIdentifier: 
-  color: {r: 0.5152341, g: 0.8584906, b: 0.40899786, a: 1}
+  color: {r: 0.24096651, g: 0.8962264, b: 0.2628085, a: 1}
   emotion: 7
   points:
   - position: {x: -0.79977626, y: 0.6002983}

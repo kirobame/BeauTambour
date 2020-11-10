@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: FearShape
   m_EditorClassIdentifier: 
-  color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
+  color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
   emotion: 3
   points:
   - position: {x: 0.70973057, y: -0.70447326}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: IndicateStick
   m_EditorClassIdentifier: 
   smoothing: 0.05
-  sizeRange: {x: 0, y: 0.1}
+  sizeRange: {x: 0, y: 0.15}

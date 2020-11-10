@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2482945910668545760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
+  m_Name: 5d5e2870-e30e-482f-9869-b3f0073f814c-EmotionCondition
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: b47c31c52df5db945b335920745231ed, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,19 +30,6 @@ MonoBehaviour:
   successionMask: 4
   shouldBeRemoved: 1
   conditions:
-  - {fileID: 5568618771784676536}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: c1fb3985e07dfba419e531df66aa39db,
+  - {fileID: -2482945910668545760}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: f57c3a0835a06654baf41bb59960272d,
     type: 3}
---- !u!114 &5568618771784676536
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
-  m_Name: 6da27e90-5574-473c-aa4a-138fc22ec71a-EmotionCondition
-  m_EditorClassIdentifier: 
-  target: {fileID: 11400000, guid: b47c31c52df5db945b335920745231ed, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33616237edcf3c46ad7b2dc86e28c52, type: 3}
   m_Name: BeauTambourSettings
   m_EditorClassIdentifier: 
-  rythmMarginTolerance: 0.25
+  rythmMarginTolerance: 0.3499999940395355
   toleranceRadiusRange: {x: 0.05, y: 0.3}
   standardToleranceRadius: 0.1
   radiusToleranceForgiveness: 0.5

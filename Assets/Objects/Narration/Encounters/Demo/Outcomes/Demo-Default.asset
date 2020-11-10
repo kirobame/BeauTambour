@@ -17,5 +17,5 @@ MonoBehaviour:
   successionMask: 0
   shouldBeRemoved: 0
   conditions: []
-  sequencerPrefab: {fileID: 5614385688149014047, guid: 1f09cc64210653244947c91041fa053e,
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 04e12845a645d90488d5596cb08fa6b8,
     type: 3}

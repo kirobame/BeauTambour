@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
   m_Name: Demo-Rr.w.Is
   m_EditorClassIdentifier: 
-  priority: 2
+  priority: 1
   mask: 4
   successionMask: 6
   shouldBeRemoved: 1
   conditions:
-  - {fileID: 892795337914179911}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: 50c23e2ae10740546b6de4b0bd9782d7,
+  - {fileID: 3508596593685582509}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 377b109e89446b445b647f269817d58f,
     type: 3}
---- !u!114 &892795337914179911
+--- !u!114 &3508596593685582509
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,6 +30,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d0c2dec15c54f0d8945fb551fbe78e0, type: 3}
-  m_Name: 1c7bf5d6-2bf7-4f27-b31a-bc0ba2464538-MusicianCondition
+  m_Name: 2fcc8312-8fef-4fc4-9712-2de91d242810-MusicianCondition
   m_EditorClassIdentifier: 
   musician: {fileID: 11400000, guid: b01b20f9993be474eafac52bfff716ad, type: 2}
