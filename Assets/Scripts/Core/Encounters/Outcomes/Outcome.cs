@@ -22,7 +22,7 @@ namespace BeauTambour
         
         [SerializeField] private Condition[] conditions;
         [SerializeField] private Sequencer sequencerPrefab;
-        //
+        
         public Sequencer Sequencer { get; private set; }
 
         public void BootUp()

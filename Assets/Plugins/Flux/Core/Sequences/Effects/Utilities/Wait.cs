@@ -12,6 +12,8 @@ namespace Flux
 
         public override void Initialize()
         {
+            base.Initialize();
+            
             time = Mathf.Abs(time);
             runtime = 0f;
         }

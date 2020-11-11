@@ -118,27 +118,31 @@ MonoBehaviour:
     - '[Rory]-Bleh.'
     - Priority:-1;Emotion:Joy;
     - "\u24C7-S1"
-    - '[Vincent]-Un poisson peut pas parler.
-
-      
-
-      [Michelle]-Incroyable!'
-    - '[Vincent]-A fish can''t talk.
-
-      
-
-      [Michelle]-Amazing!'
+    - "[Vincent]-Un poisson peut pas parler.\r\n\r\n[Michelle]-Incroyable!\r\n\r\n[Vincent]-Exactement\u201A
+      je suis si heureux qu'on se comprennes."
+    - "[Vincent]-A fish can't talk.\r\n\r\n[Michelle]-Amazing!\r\n\r\n[Vincent]-Exactly\u201A
+      I am so happy that we're able to understand each other."
     - Priority:1;Emotion:Anticipation;
     - "\u24C7-S2"
     - '[Rory]-Pareil pour les castors.
 
       
 
-      [Michelle]-Woaw!!!'
+      [Michelle]-Woaw!!!
+
+      
+
+      [Rory]-Trop
+      marrant. '
     - '[Rory]-Same for beavers.
 
       
 
-      [Michelle]-Woaw!!!'
+      [Michelle]-Woaw!!!
+
+      
+
+      [Rory]-So
+      funny.'
     - Priority:0;Emotion:Awe;
     size: {x: 4, y: 4}

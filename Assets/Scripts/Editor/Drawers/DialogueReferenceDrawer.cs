@@ -11,12 +11,12 @@ namespace BeauTambour.Editor
         private bool hasBeenInitialized;
         private RuntimeSettings runtimeSettings;
 
+        private bool isExpanded;
         private Vector2 scrollPosition;
         
         public override void OnGUI(Rect rect, SerializedProperty property, GUIContent label)
         {
             EditorGUI.BeginProperty(rect, label, property);
-            var sourceProperty = property.Copy();
             
             if (!hasBeenInitialized) Initialize();
             
@@ -65,7 +65,7 @@ namespace BeauTambour.Editor
             if (!match)
             {
                 GUI.enabled = false;
-                sourceProperty.isExpanded = false;
+                isExpanded = false;
 
                 var content = EditorGUIUtility.IconContent("animationvisibilitytoggleoff@2x");
                 GUI.Button(buttonRect, content, EditorStyles.label);
@@ -74,10 +74,10 @@ namespace BeauTambour.Editor
             }
             else
             {
-                var content = sourceProperty.isExpanded ? EditorGUIUtility.IconContent("animationvisibilitytoggleon@2x") : EditorGUIUtility.IconContent("animationvisibilitytoggleoff@2x");
-                if (GUI.Button(buttonRect, content, EditorStyles.label)) sourceProperty.isExpanded = !sourceProperty.isExpanded;
+                var content = isExpanded ? EditorGUIUtility.IconContent("animationvisibilitytoggleon@2x") : EditorGUIUtility.IconContent("animationvisibilitytoggleoff@2x");
+                if (GUI.Button(buttonRect, content, EditorStyles.label)) isExpanded = !isExpanded;
 
-                if (!sourceProperty.isExpanded) return;
+                if (!isExpanded) return;
                 
                 rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2f;
 
@@ -106,11 +106,27 @@ namespace BeauTambour.Editor
         {
             if (!hasBeenInitialized) Initialize();
 
-            if (!property.isExpanded) return EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2f;
-            else
+            if (!isExpanded) return EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2f;
+            
+            property.NextVisible(true);
+            var encounterIndex = property.intValue;
+
+            property.NextVisible(false);
+            var id = property.stringValue;
+
+            var match = BeauTambourUtilities.DialogueProvider.TryGetDialogue(encounterIndex - 1, id, runtimeSettings.Language, out var dialogue);
+
+            if (match)
             {
-                return EditorGUIUtility.singleLineHeight * 4f + EditorGUIUtility.standardVerticalSpacing * 4f;
+                var style = new GUIStyle(EditorStyles.textArea);
+                var textContent = new GUIContent(dialogue.ToString());
+
+                var textHeight = style.CalcHeight(textContent, EditorGUIUtility.currentViewWidth);
+                if (textHeight > EditorGUIUtility.singleLineHeight * 3f) textHeight = EditorGUIUtility.singleLineHeight * 3f;
+                
+                return EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 4f + textHeight;
             }
+            else return EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2f;
         }
 
         private void Initialize()

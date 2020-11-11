@@ -9,7 +9,11 @@ namespace Flux
 
         private int countdown;
 
-        public override void Initialize() => countdown = repetitions + 1;
+        public override void Initialize()
+        {
+            base.Initialize();
+            countdown = repetitions + 1;
+        }
 
         protected override bool IsConditionMet()
         {

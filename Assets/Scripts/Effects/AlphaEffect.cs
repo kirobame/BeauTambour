@@ -15,9 +15,6 @@ namespace BeauTambour
             target.Initialize();
         }
 
-        protected override void Execute(float ratio)
-        {
-            target.SetAlpha(Mathf.Lerp(target.StartingAlpha, goal, ratio));
-        }
+        protected override void Execute(float ratio) => target.SetAlpha(Mathf.Lerp(target.StartingAlpha, goal, ratio));
     }
 }

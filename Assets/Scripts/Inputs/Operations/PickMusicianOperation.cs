@@ -19,19 +19,8 @@ namespace BeauTambour
 
         protected override bool TryGetAction(out IRythmQueueable action)
         {
-            var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
-            var outcomePhase = phaseHandler.Get<OutcomePhase>(PhaseType.Outcome);
-
-            if (outcomePhase.IsNoteBeingProcessed)
-            {
-                action = new BeatAction(0, 0, Action);
-                return true;
-            }
-            else
-            {
-                action = null;
-                return false;
-            }
+            action = new BeatAction(0, 0, Action);
+            return true;
         }
 
         private void Action(int beat)
@@ -43,9 +32,9 @@ namespace BeauTambour
 
             var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
             var outcomePhase = phaseHandler.Get<OutcomePhase>(PhaseType.Outcome);
-            
+
+            outcomePhase.BeginNote();
             outcomePhase.EnqueueNoteAttributes(attributes);
-            outcomePhase.CompleteNote();
         }
     }
 }

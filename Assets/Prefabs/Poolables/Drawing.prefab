@@ -83,7 +83,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   time: 0.75
-  passThrough: 0
   target: {fileID: 4414829751209934398}
   goal: 0
 --- !u!1 &1964277263425386603
@@ -171,7 +170,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   time: 1.25
-  passThrough: 0
   target: {fileID: 5647541757288651567}
   goal: 0
 --- !u!114 &2640118652814379836
@@ -443,6 +441,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: {fileID: 3253960096948700807}
   path: {fileID: 4846317230106149803}
+  emotionColorRegistry: {fileID: 11400000, guid: 3d6658634dbc22b46b0c47b96147a616,
+    type: 2}
 --- !u!114 &5647541757288651567
 MonoBehaviour:
   m_ObjectHideFlags: 0

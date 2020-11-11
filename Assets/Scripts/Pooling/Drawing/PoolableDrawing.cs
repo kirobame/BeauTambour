@@ -26,6 +26,7 @@ namespace BeauTambour
         #endregion
 
         [SerializeField] private LineRenderer path;
+        [SerializeField] private EmotionColorRegistry emotionColorRegistry;
         
         public bool IsDone => Mathf.Abs(goal - Current) <= 0.0125f;
         public float Current => (float)Value.positionCount / points.Length;
@@ -66,7 +67,7 @@ namespace BeauTambour
             
             Event.CallLocal<Vector3>(EventType.OnDraw, gameObject, Value.GetPosition(0));
 
-            var color = shape.Color;
+            var color = emotionColorRegistry[shape.Emotion];
             color.r -= 0.21f;
             color.g -= 0.21f;
             color.b -= 0.21f;
@@ -85,7 +86,7 @@ namespace BeauTambour
             });
             Value.colorGradient = gradient;
 
-            Event.CallLocal<Color>(EventType.OnColorAssigned, gameObject, shape.Color);
+            Event.CallLocal<Color>(EventType.OnColorAssigned, gameObject, emotionColorRegistry[shape.Emotion]);
             Event.CallLocal<Vector3>(EventType.OnShapeRecognized, gameObject, Value.GetPosition(0));
         }
         private IEnumerator RevealPathRoutine(float goal)

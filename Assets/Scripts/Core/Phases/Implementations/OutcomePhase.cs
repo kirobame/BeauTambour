@@ -2,11 +2,21 @@
 using System.Text;
 using Flux;
 using UnityEngine;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
     public class OutcomePhase : Phase
     {
+        #region Encapsualted Types
+
+        public enum EventType
+        {
+            OnNoteCompleted,
+            OnNoteCleared
+        }
+        #endregion
+        
         public int NoteCount => notes.Count;
         public bool IsNoteBeingProcessed { get; private set; }
         
@@ -17,6 +27,11 @@ namespace BeauTambour
         private List<Note> notes;
         private List<NoteAttribute> noteAttributes;
 
+        void Awake()
+        {
+            Event.Open<Note[]>(EventType.OnNoteCompleted);
+            Event.Open(EventType.OnNoteCleared);
+        }
         void Start()
         {
             encounter.BootUp();
@@ -56,6 +71,8 @@ namespace BeauTambour
             }
             
             IsNoteBeingProcessed = false;
+            Event.Call<Note[]>(EventType.OnNoteCompleted, notes.ToArray());
+            
             var builder = new StringBuilder();
             builder.AppendLine($"Note [{notes.Count}] :");
 
@@ -63,8 +80,15 @@ namespace BeauTambour
             Debug.Log(builder.ToString());
         }
         
-        public void ClearNotes() => notes.Clear();
-        
+        public void ClearNotes()
+        {
+            noteAttributes.Clear();
+            IsNoteBeingProcessed = false;
+            
+            notes.Clear();
+            Event.Call(EventType.OnNoteCleared);
+        }
+
         public override void Begin()
         {
             base.Begin();

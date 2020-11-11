@@ -9,9 +9,6 @@ namespace BeauTambour
     [IconIndicator(-3461654150298456965), CreateAssetMenu(fileName = "NewShape", menuName = "Beau Tambour/Shape")]
     public class Shape : ScriptableObject
     {
-        public Color Color => color;
-        [SerializeField] private Color color = Color.yellow;
-        
         public Emotion Emotion => emotion;
         [SerializeField] private Emotion emotion;
         

@@ -20,12 +20,13 @@ namespace BeauTambour
             OnShapeMatch,
             OnShapeLoss
         }
-
         #endregion
         
         [SerializeField] private int subDivision;
 
         private bool isDrawing;
+        private bool isBusy;
+        
         private (Shape shape, PoolableDrawing drawing) currentPair;
 
         public override void Initialize(OperationHandler operationHandler)
@@ -39,8 +40,9 @@ namespace BeauTambour
 
         public override void OnStart(EventArgs inArgs)
         {
-            if (isDrawing || !(inArgs is ShapeEventArgs shapeEventArgs)) return;
-            
+            if (isBusy || isDrawing || !(inArgs is ShapeEventArgs shapeEventArgs)) return;
+
+            isBusy = true;
             Event.Call(EventType.OnStart);
             
             var pool = Repository.GetSingle<DrawingPool>(Pool.Drawing);
@@ -68,14 +70,16 @@ namespace BeauTambour
                 currentPair.drawing.Draw(0f, analysis.GlobalRatio);
                 if (analysis.IsComplete)
                 {
-                    var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
-                    var outcomePhase = phaseHandler.Get<OutcomePhase>(PhaseType.Outcome);
-                
-                    outcomePhase.BeginNote();
-                    outcomePhase.EnqueueNoteAttribute(new EmotionAttribute(analysis.Source.Emotion));
-
                     End(true);
                     Event.Call(EventType.OnShapeMatch);
+                    
+                    var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
+                    var outcomePhase = phaseHandler.Get<OutcomePhase>(PhaseType.Outcome);
+                    
+                    if (!outcomePhase.IsNoteBeingProcessed) return;
+                    
+                    outcomePhase.EnqueueNoteAttribute(new EmotionAttribute(analysis.Source.Emotion));
+                    outcomePhase.CompleteNote();
                     
                     return;
                 }
@@ -99,7 +103,10 @@ namespace BeauTambour
         }
         public override void OnEnd(EventArgs inArgs)
         {
+            isBusy = false;
             if (!isDrawing) return;
+            
+            Event.Call(EventType.OnShapeLoss);
             
             currentPair.drawing.Complete(false);
             currentPair = (null,null);
