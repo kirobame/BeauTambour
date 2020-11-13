@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Linq;
+using Ludiq.PeekCore;
 using UnityEditor;
 using UnityEditor.Graphs;
 using UnityEditorInternal;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Flux.Editor
 {
     public class CollectionDrawer
     {
+        public SerializedObject SerializedObject => reorderableList.serializedProperty.serializedObject;
+        
         public CollectionDrawer(SerializedObject serializedObject, SerializedProperty property)
         {
             var propertyCopy = property.Copy();
@@ -45,6 +50,44 @@ namespace Flux.Editor
             var arrayProperty = reorderableList.serializedProperty;
             arrayProperty.isExpanded = EditorGUI.Foldout(rect, arrayProperty.isExpanded, new GUIContent(arrayProperty.displayName));
 
+            var dropRect = rect;
+            dropRect.width -= 34f;
+            
+            var Ev = UnityEngine.Event.current;
+            if (dropRect.Contains(Ev.mousePosition))
+            {
+                if (Ev.type == EventType.MouseDown && Ev.button == 1)
+                {
+                    var genericMenu = new GenericMenu();
+                    genericMenu.AddItem(new GUIContent("Clear"), false, () =>
+                    {
+                        reorderableList.serializedProperty.arraySize = 0;
+                        reorderableList.serializedProperty.serializedObject.ApplyModifiedProperties();
+                    });
+                    
+                    genericMenu.ShowAsContext();
+                }
+                else
+                {
+                    var references = DragAndDrop.objectReferences;
+                    var type = PropertyUtilities.GetArrayPropertyType(reorderableList.serializedProperty);
+
+                    if (!references.All(reference => type.IsInstanceOfType(reference))) return;
+                
+                    DragAndDrop.visualMode = DragAndDropVisualMode.Copy;
+                    if (Ev.type == EventType.DragPerform)
+                    {
+                        foreach (var reference in references)
+                        {
+                            AddElement();
+                        
+                            var elementProperty = arrayProperty.GetArrayElementAtIndex(arrayProperty.arraySize - 1);
+                            elementProperty.objectReferenceValue = reference;
+                        }
+                    }
+                }
+            }
+            
             reorderableList.draggable = arrayProperty.isExpanded;
             
             var buttonSize = EditorGUIUtility.singleLineHeight + 2;

@@ -9,5 +9,6 @@ namespace BeauTambour
         PhaseType Type { get; }
 
         void Begin();
+        void End();
     }
 }

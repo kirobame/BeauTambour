@@ -13,7 +13,7 @@ namespace Flux
     public abstract class LocalVoidListener : LocalListener
     {
         [SerializeField] private UnityEvent callback;
-        
+
         void OnEnable() => Event.Register(Address, key, callback.Invoke);
         void OnDisable() => Event.Unregister(Address, key, callback.Invoke);
     }

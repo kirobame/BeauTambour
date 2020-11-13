@@ -5,7 +5,20 @@ namespace BeauTambour
     public class ParticleColorTarget : ColorTarget
     {
         [SerializeField] private ParticleSystem particle;
+
+        public override Color StartingColor => startingColor;
+        public override float StartingAlpha => startingAlpha;
+
+        private Color startingColor;
+        private float startingAlpha;
         
+        public override void Initialize()
+        {
+            var gradient = particle.main.startColor;
+            startingColor = gradient.color;
+            startingAlpha = gradient.color.a;
+        }
+
         public override void Set(Color color)
         {
             var main = particle.main;

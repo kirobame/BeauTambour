@@ -81,8 +81,11 @@ namespace Flux.Editor
             
             DrawEnableButton(headerRect, serializedObject);
             DrawDragButton(headerRect, elementProperty, serializedObject);
+
+            var nameAttribute = serializedObject.targetObject.GetType().GetCustomAttribute<ItemNameAttribute>();
+            var foldoutContent = nameAttribute == null ? new GUIContent(serializedObject.targetObject.GetType().Name) : new GUIContent(nameAttribute.Name);
             
-            elementProperty.isExpanded = EditorGUI.Foldout(headerRect, elementProperty.isExpanded, new GUIContent(serializedObject.targetObject.GetType().Name));
+            elementProperty.isExpanded = EditorGUI.Foldout(headerRect, elementProperty.isExpanded, foldoutContent);
             if (elementProperty.isExpanded)
             {
                 var iterator = serializedObject.GetIterator();
@@ -120,7 +123,7 @@ namespace Flux.Editor
             GUI.DrawTexture(buttonRect, EditorGUIUtility.IconContent("d_scenepicking_pickable_hover@2x").image);
 
             var Ev = UnityEngine.Event.current;
-            if (Ev.type == EventType.MouseDown & Ev.button == 0 && buttonRect.Contains(Ev.mousePosition))
+            if (Ev.type == EventType.MouseDown && Ev.button == 0 && buttonRect.Contains(Ev.mousePosition))
             {
                 DragAndDrop.StartDrag($"Dragging : {elementProperty.propertyPath}");
                 DragAndDrop.SetGenericData($"PPtr<${typeof(T).Name}>", serializedObject.targetObject);

@@ -34,6 +34,8 @@ namespace BeauTambour
 
             Event.Open<IPhase>(EvenType.OnChange);
             Event.Open(EvenType.OnLoop);
+            
+            Event.Register(Bootstrapper.EventType.OnBootup, BootUp);
         }
 
         public void BootUp()
@@ -47,6 +49,7 @@ namespace BeauTambour
             advancement = -1;
         }
 
+        public void SkipToNext() => Current.End();
         private void Next()
         {
             if (advancement + 1 >= runtimePhases.Count)
@@ -54,7 +57,7 @@ namespace BeauTambour
                 advancement = -1;
                 Event.Call(EvenType.OnLoop);
             }
-            
+
             advancement++;
             Current.Begin();
             Current.onEnd += OnCurrentEnd;
@@ -66,6 +69,8 @@ namespace BeauTambour
 
             Event.Call<IPhase>(EvenType.OnChange, Current);
         }
+        
+        public T Get<T>(PhaseType type) where T : IPhase => (T)runtimePhases.Find(phase => phase.Type == type);
 
         public void SwitchTo(PhaseType type) => SwitchTo(this[type]);
         public void SwitchTo(IPhase phase)

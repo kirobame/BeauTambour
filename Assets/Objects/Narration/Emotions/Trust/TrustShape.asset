@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
+  m_Name: TrustShape
+  m_EditorClassIdentifier: 
+  color: {r: 0.24096651, g: 0.8962264, b: 0.2628085, a: 1}
+  emotion: 7
+  points:
+  - position: {x: -0.79977626, y: 0.6002983}
+    toleranceRadius: 0.125
+  - position: {x: -0.45165357, y: 1.0053544}
+    toleranceRadius: 0.125
+  - position: {x: 0.100157484, y: 1.1074016}
+    toleranceRadius: 0.125
+  - position: {x: 0.5877166, y: 0.8012599}
+    toleranceRadius: 0.125
+  - position: {x: 1.0185827, y: 0.472441}
+    toleranceRadius: 0.1
+  - position: {x: 1.1168505, y: -0.120944895}
+    toleranceRadius: 0.1
+  - position: {x: 0.8105297, y: -0.5856975}
+    toleranceRadius: 0.1
+  - position: {x: 0.6083697, y: -0.44116288}
+    toleranceRadius: 0.1
+  - position: {x: 0.20404977, y: -0.15209365}
+    toleranceRadius: 0.1
+  - position: {x: 0.001889764, y: -0.007559056}
+    toleranceRadius: 0.1
+  - position: {x: -0.17574805, y: -0.2305512}
+    toleranceRadius: 0.1
+  - position: {x: -0.37984255, y: -0.4913386}
+    toleranceRadius: 0.1
+  - position: {x: -0.6205186, y: -0.78419167}
+    toleranceRadius: 0.1

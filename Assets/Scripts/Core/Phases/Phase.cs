@@ -16,15 +16,22 @@ namespace BeauTambour
         public PhaseType Type => type;
         [SerializeField] private PhaseType type;
 
-        void Awake()
+        protected virtual void Awake()
         {
             Event.Open($"{type}.{PhaseCallback.Start}");
             Event.Open($"{type}.{PhaseCallback.End}");
         }
 
-        public virtual void Begin() => Event.Call($"{type}.{PhaseCallback.Start}");
-        protected void End()
+        public virtual void Begin()
         {
+            Debug.Log($"Beginning phase : {type}");
+            Event.Call($"{type}.{PhaseCallback.Start}");
+        }
+
+        public virtual void End()
+        {
+            Debug.Log($"Ending phase : {type}");
+            
             onEnd?.Invoke();
             Event.Call($"{type}.{PhaseCallback.End}");
         }

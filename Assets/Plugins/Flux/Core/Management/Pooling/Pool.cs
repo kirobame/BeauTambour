@@ -98,6 +98,7 @@ namespace Flux
         private void Claim(TPoolable poolable, TPoolable key)
         {
             poolable.SetOrigin(this, key);
+            poolable.Prepare();
             
             poolable.gameObject.SetActive(true);
             poolable.transform.SetParent(null);

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
+  m_Name: SurpriseShape
+  m_EditorClassIdentifier: 
+  color: {r: 0.8392157, g: 0.4277939, b: 0.20392154, a: 1}
+  emotion: 5
+  points:
+  - position: {x: -1, y: 0}
+    toleranceRadius: 0.18900193
+  - position: {x: -0.96188986, y: -0.83527565}
+    toleranceRadius: 0.125
+  - position: {x: -0.08881891, y: -1.2585828}
+    toleranceRadius: 0.125
+  - position: {x: 0.6102857, y: -0.79218143}
+    toleranceRadius: 0.1987341
+  - position: {x: 0.30889535, y: -0.39571086}
+    toleranceRadius: 0.1
+  - position: {x: -0.29388535, y: 0.39723033}
+    toleranceRadius: 0.1
+  - position: {x: -0.59527564, y: 0.7937009}
+    toleranceRadius: 0.18442391
+  - position: {x: -0.09637796, y: 1.1489764}
+    toleranceRadius: 0.1
+  - position: {x: 0.79559064, y: 1.016693}
+    toleranceRadius: 0.1
+  - position: {x: 0.9823064, y: 0.18728085}
+    toleranceRadius: 0.19160518

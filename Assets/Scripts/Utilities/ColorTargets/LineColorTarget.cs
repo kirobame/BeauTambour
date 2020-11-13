@@ -1,11 +1,24 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace BeauTambour
 {
     public class LineColorTarget : ColorTarget
     {
         [SerializeField] private LineRenderer line;
+
+        public override Color StartingColor => startingColor;
+        public override float StartingAlpha => startingAlpha;
         
+        private Color startingColor;
+        private float startingAlpha;
+        
+        public override void Initialize()
+        {
+            startingColor = line.colorGradient.colorKeys.First().color;
+            startingAlpha = line.colorGradient.alphaKeys.First().alpha;
+        }
+
         public override void Set(Color color)
         {
             var gradient = line.colorGradient;

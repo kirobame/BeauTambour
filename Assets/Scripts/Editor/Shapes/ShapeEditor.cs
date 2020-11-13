@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Flux;
 using Flux.Editor;
 using UnityEditor;
@@ -10,13 +11,22 @@ namespace BeauTambour.Editor
     public class ShapeEditor : FluxEditor
     {
         private const float occupiance = 0.9f;
-        
+        private EmotionColorRegistry emotionColorRegistry;
+
+        protected override void Initialize()
+        {
+            base.Initialize();
+            
+            var guids = AssetDatabase.FindAssets("t:EmotionColorRegistry", new string[] {"Assets/Objects"});
+            emotionColorRegistry = AssetDatabase.LoadAssetAtPath<EmotionColorRegistry>(AssetDatabase.GUIDToAssetPath(guids.First()));
+        }
+
         protected override void Draw(SerializedProperty iterator)
         {
             iterator.NextVisible(false);
             EditorGUILayout.PropertyField(iterator);
 
-            var color = iterator.colorValue;
+            var emotion = (Emotion) iterator.enumValueIndex;
             
             EditorGUILayout.Separator();
         
@@ -46,7 +56,9 @@ namespace BeauTambour.Editor
             Handles.DrawLine(bottomLeft, rect.min);
 
             iterator.NextVisible(false);
-            Handles.color = color;
+            
+            var emotionColor = emotionColorRegistry.Get(emotion);
+            Handles.color = emotionColor;
 
             DisplayRuntimeData(rect);
             for (var i = 0; i < iterator.arraySize; i += 3)
@@ -59,7 +71,7 @@ namespace BeauTambour.Editor
                     var p3 = GetPosition(iterator, i + 2, rect);
                     var p4 = GetPosition(iterator, i + 3, rect);
             
-                    Handles.DrawBezier(p1,p4, p2,p3, color,null, 2);
+                    Handles.DrawBezier(p1,p4, p2,p3, emotionColor,null, 2);
                 }
 
                 var size = rect.width * 0.005f;
