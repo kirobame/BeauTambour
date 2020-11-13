@@ -39,6 +39,8 @@ namespace Flux.Editor
         }
         protected virtual void Initialize()
         {
+            if (target == null) return;
+            
             reorderableLists = new Dictionary<string, CollectionDrawer>();
             
             var iterator = serializedObject.GetIterator();

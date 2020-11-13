@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b158a0a4ae4c29936ce715f3e67dac, type: 3}
   m_Name: Michelle
   m_EditorClassIdentifier: 
-  actor: 0
+  actor: 1
+  anchor: 0
+  font: {fileID: 11400000, guid: 2951f4977f124f34b91d3ed4d0cb7548, type: 2}
+  fontColor: {r: 0.08235294, g: 0.09803922, b: 0.03529412, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}

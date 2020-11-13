@@ -31,6 +31,9 @@ namespace BeauTambour
         
         public Dialogue(Cue[] cues) => this.cues = cues;
 
+        public Cue this[int index] => cues[index];
+        public int Length => cues.Length;
+
         public IReadOnlyList<Cue> Cues => cues;
         private Cue[] cues;
         

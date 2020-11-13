@@ -176,6 +176,8 @@ namespace Flux.Editor
                     elementProperty.NextVisible(false);
                     
                     rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2;
+                    rect.height = EditorGUIUtility.singleLineHeight;
+                    
                     EditorGUI.PropertyField(rect, elementProperty, true);
                 }
             }
@@ -228,10 +230,23 @@ namespace Flux.Editor
                     }
                 }
 
-                if (count == 1) height -= EditorGUIUtility.singleLineHeight;
-                else if (count > 1) height += EditorGUIUtility.standardVerticalSpacing;
+              
+                if (count == 0)
+                {
+                    //Debug.Log($"A.1 + {elementProperty.name}");
+                    height -= EditorGUIUtility.singleLineHeight;
+                }
+                else if (count > 1)
+                {
+                    //Debug.Log($"A.2 + {elementProperty.name}");
+                    height += EditorGUIUtility.standardVerticalSpacing;
+                }
             }
-            else height += EditorGUI.GetPropertyHeight(elementProperty);
+            else
+            {
+                //Debug.Log($"B + {elementProperty.name}");
+                height += EditorGUI.GetPropertyHeight(elementProperty);
+            }
             return height;
         }
     }

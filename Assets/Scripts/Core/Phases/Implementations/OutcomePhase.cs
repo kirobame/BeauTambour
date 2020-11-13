@@ -27,8 +27,10 @@ namespace BeauTambour
         private List<Note> notes;
         private List<NoteAttribute> noteAttributes;
 
-        void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+            
             Event.Open<Note[]>(EventType.OnNoteCompleted);
             Event.Open(EventType.OnNoteCleared);
         }

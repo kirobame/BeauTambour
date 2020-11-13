@@ -11,5 +11,6 @@ namespace BeauTambour
         DialogueProvider,
         RuntimeSettings,
         PhaseHandler,
+        DialogueManager
     }
 }

@@ -27,7 +27,6 @@ namespace BeauTambour
             Debug.Log($"Beginning phase : {type}");
             Event.Call($"{type}.{PhaseCallback.Start}");
         }
-
         public virtual void End()
         {
             Debug.Log($"Ending phase : {type}");

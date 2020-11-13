@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
+/*[Serializable]
 public class Cue
 {    
     private string text;
@@ -30,4 +30,4 @@ public class Cue
     {
         return actor.Equals(other.actor);
     }    
-}
+}*/

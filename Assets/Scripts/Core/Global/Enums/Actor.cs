@@ -1,5 +1,8 @@
-﻿namespace BeauTambour
+﻿using Flux;
+
+namespace BeauTambour
 {
+    [EnumAddress, TrackEnumReferencing]
     public enum Actor
     {
         JeanGuy,
