@@ -23,7 +23,7 @@ namespace BeauTambour
 
         void Awake() => initialWidth = rectTransform.sizeDelta.x;
 
-        public void Reboot()
+        public void Reboot() // Prepare bounds to correctly calculate width a height
         {
             rectTransform.sizeDelta = new Vector2(initialWidth, 1000f);
             texTransform.sizeDelta = new Vector2(initialWidth, 1000f);

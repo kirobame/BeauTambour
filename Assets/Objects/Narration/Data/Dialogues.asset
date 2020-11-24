@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0bd759e0e4aafd44833fb08d666bc7c, type: 3}
   m_Name: Dialogues
   m_EditorClassIdentifier: 
-  baseUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vS8Q6v7INEOwWaina2oXaTEZtBfofmSn2JwiWqErLhVlamk4NpfuaP90LCzq4TONHyVASUEWaJpjnsa/pub?output=csv
+  baseUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vS8Q6v7INEOwWaina2oXaTEZtBfofmSn2JwiWqErLhVlamk4NpfuaP90LCzq4TONHyVASUEWaJpjnsa/pub?gid=0&single=true&output=csv
   sheets:
   - name: Demo
     version: 1.0.0

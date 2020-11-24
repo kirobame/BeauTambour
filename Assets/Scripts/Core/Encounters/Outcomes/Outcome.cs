@@ -27,7 +27,9 @@ namespace BeauTambour
 
         public void BootUp()
         {
-            if (!Application.isPlaying || Sequencer != null) return;
+            if (!Application.isPlaying) return;
+
+            Destroy(Sequencer);
             
             var parent = Repository.GetSingle<Transform>(Parent.Outcomes);
             Sequencer = Instantiate(sequencerPrefab, parent);

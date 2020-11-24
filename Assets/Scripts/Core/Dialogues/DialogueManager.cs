@@ -15,39 +15,45 @@ namespace BeauTambour
         #region Encapsulated Types
 
         [Serializable]
-        public struct AnchorPoint
+        public struct AnchorPoint //Serializable KeyValuePair Struct for runtime dictionary generation
         {
             public Anchor Anchor => anchor;
             public Transform Point => point;
             
-            [SerializeField] private Anchor anchor;
-            [SerializeField] private Transform point;
+            [SerializeField] private Anchor anchor; // Key
+            [SerializeField] private Transform point; // Value
         }
         
         public enum EventType
         {
-            OnEnd,
+            OnEnd, // Called when all cues have been played
         }
         #endregion
         
-        [SerializeField] private ActorCharacterRegistry actorCharacterRegistry;
+        //--------------------------------------------------------------------------------------------------------------
+        
+        [SerializeField] private ActorCharacterRegistry actorCharacterRegistry; // Enum By ScriptableObject AssetDictionary
         [SerializeField] private AnchorPoint[] anchorPoints;
 
-        [Space, SerializeField] private DialogueBounds bounds;
-        [SerializeField] private TextMeshPro textMesh;
-        [SerializeField] private int lineCount = 2;
+        [Space, SerializeField] private DialogueBounds bounds; // Bounds used to display text inside
+        [SerializeField] private TextMeshPro textMesh; // Text of the bounds
+        [SerializeField] private int lineCount = 2; // Max allowed amount of line inside bounds
 
-        private Cue cue => dialogue[advancement];
+        //--------------------------------------------------------------------------------------------------------------
+        
+        private Cue cue => dialogue[advancement]; // Current Cue
 
-        private List<(string text, int height)> subTexts;
-        private int subAdvancement;
+        private List<(string text, int height)> subTexts; // Cue that has been splitted into smaller cues
+        private int subAdvancement; // Index of the current small cue
             
-        private Dialogue dialogue;
+        private Dialogue dialogue; // Current Dialogue
 
-        private int advancement;
-        private Character character;
+        private int advancement; // Index of the current cue
+        private Character character; // Character delivering the current cue
         
         private Dictionary<Anchor, Transform> runtimeAnchorPoints;
+        
+        //--------------------------------------------------------------------------------------------------------------
         
         void Awake()
         {
@@ -55,7 +61,7 @@ namespace BeauTambour
             subAdvancement = -1;
             
             runtimeAnchorPoints = new Dictionary<Anchor, Transform>();
-            foreach (var anchorPoint in anchorPoints)
+            foreach (var anchorPoint in anchorPoints) // Dictionary generation
             {
                 if (runtimeAnchorPoints.ContainsKey(anchorPoint.Anchor)) continue;
                 runtimeAnchorPoints.Add(anchorPoint.Anchor, anchorPoint.Point);
@@ -67,6 +73,9 @@ namespace BeauTambour
             Event.Register(OperationEvent.Skip, Next);
         }
         
+        //--------------------------------------------------------------------------------------------------------------
+        
+        // Entry point
         public void BeginDialogue(Dialogue dialogue)
         {
             this.dialogue = dialogue;
@@ -77,46 +86,53 @@ namespace BeauTambour
         
         public void Next()
         {
-            if (subAdvancement != -1)
+            if (subAdvancement != -1) // If there are small cues, play them
             {
-                var tuple = subTexts[subAdvancement];
+                var tuple = subTexts[subAdvancement]; // Retrieve small cue
                 textMesh.text = tuple.text;
                 
+                // Actualize Bounds
                 ResizeBounds();
                 PlaceBounds();
 
+                // Update small cue current index
                 if (subAdvancement + 1 >= subTexts.Count) subAdvancement = -1;
                 else subAdvancement++;
             }
             else
             {
-                advancement++;
-                if (advancement >= dialogue.Length)
+                
+                advancement++; // Update cue index
+                if (advancement >= dialogue.Length) // Exit point
                 {
                     EndDialogue();
                     return;
                 }
                 
-                character = actorCharacterRegistry[cue.Actor];
+                character = actorCharacterRegistry[cue.Actor]; // Retrieve associated character
                 
+                // Setup text data
                 textMesh.font = character.Font;
                 textMesh.color = character.FontColor;
                 bounds.color = character.BackgroundColor;
                 
+                // Reboot bounds & text for correct actualization
                 bounds.Reboot();
                 textMesh.ForceMeshUpdate();
                 
                 var info = textMesh.GetTextInfo(cue.Text);
-                if (info.lineCount > lineCount)
+                if (info.lineCount > lineCount) // Cue is too large, split it into smaller cues
                 {
+                    // Prepare small cues container
                     subAdvancement = 0;
                     subTexts.Clear();
                     
+                    // loop data
                     var previousIndex = 0;
                     var index = lineCount - 1;
                     var prolong = true;
                     
-                    while (prolong)
+                    while (prolong) // Small cue identification & caching
                     {
                         if (index >= info.lineCount)
                         {
@@ -130,7 +146,7 @@ namespace BeauTambour
                         var lastCharacterIndex = info.lineInfo[index].lastCharacterIndex;
 
                         var height = index - previousIndex;
-                        var text = cue.Text.Substring(firstIndex, lastCharacterIndex - firstIndex);
+                        var text = cue.Text.Substring(firstIndex, lastCharacterIndex - firstIndex); // Actual small cue
                             
                         subTexts.Add((text, height));
 
@@ -138,20 +154,33 @@ namespace BeauTambour
                         index += lineCount;
                     }
                     
-                    Next();
+                    Next(); // Skip to directly play first small cue
                 }
                 else
                 {
                     textMesh.text = cue.Text;
+                    
+                    // Actualize Bounds
                     ResizeBounds();
                     PlaceBounds();
                 }
             }
         }
+        
+        // ExitPoint
+        private void EndDialogue()
+        {
+            advancement = -1;
+            bounds.gameObject.SetActive(false);
+            
+            Event.Call(EventType.OnEnd);
+        }
 
+        //--------------------------------------------------------------------------------------------------------------
+        
         private void PlaceBounds()
         {
-            if (character.Anchor == Anchor.Right)
+            if (character.Anchor == Anchor.Right) 
             {
                 var offset = Vector2.left * bounds.Width;
                 var position = (Vector2)runtimeAnchorPoints[Anchor.Right].position + offset;
@@ -173,6 +202,7 @@ namespace BeauTambour
         }
         private void ResizeBounds()
         {
+            // Necessary to force visual update
             textMesh.enabled = false;
             textMesh.enabled = true;
             
@@ -183,14 +213,6 @@ namespace BeauTambour
             maximumWidth += textMesh.margin.z;
             
             bounds.Resize(new Vector2(maximumWidth, height));
-        }
-
-        private void EndDialogue()
-        {
-            advancement = -1;
-            bounds.gameObject.SetActive(false);
-            
-            Event.Call(EventType.OnEnd);
         }
     }
 }
