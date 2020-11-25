@@ -9,6 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1079c62ef53b1b439b922790d5c8dbe, type: 3}
-  m_Name: StickActivator
+  m_Script: {fileID: 11500000, guid: 46f8089149a1423c9bddc197dfb95664, type: 3}
+  m_Name: LeftThrust
   m_EditorClassIdentifier: 
+  range: {x: 157.5, y: 202.5}
+  thresholds: {x: 0.9, y: 0.5}
+  wrap: 0

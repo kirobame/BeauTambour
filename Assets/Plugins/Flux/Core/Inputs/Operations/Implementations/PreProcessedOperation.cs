@@ -11,11 +11,11 @@ namespace Flux
 
         private TOp runtimeOperation;
 
-        public override void Initialize(OperationHandler operationHandler)
+        public override void Initialize(MonoBehaviour hook)
         {
-            base.Initialize(operationHandler);
+            base.Initialize(hook);
             runtimeOperation = Instantiate(operation);
-            runtimeOperation.Initialize(operationHandler);
+            runtimeOperation.Initialize(hook);
         }
 
         public override void OnStart(EventArgs inArgs)

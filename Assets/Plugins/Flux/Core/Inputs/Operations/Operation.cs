@@ -3,20 +3,19 @@ using UnityEngine;
 
 namespace Flux
 {
-    public abstract class Operation : ScriptableObject
+    public abstract class Operation : ScriptableObject, IBindable
     {
         public event Action<EventArgs> onStart;
         public event Action<EventArgs> onUpdate;
         public event Action<EventArgs> onEnd;
         
-        protected OperationHandler operationHandler { get; private set; }
+        protected MonoBehaviour hook { get; private set; }
         protected bool isBinded;
 
-        public virtual void Initialize(OperationHandler operationHandler) => this.operationHandler = operationHandler;
+        public virtual void Initialize(MonoBehaviour hook) => this.hook = hook;
         protected virtual void OnDestroy() => Unbind();
         
-        public abstract void Bind(InputHandler inputHandler);
-        public abstract void Bind(Operation operation);
+        public abstract void Bind(IBindable bindable);
         public abstract void Unbind();
         
         protected void Begin(EventArgs outArgs) => onStart?.Invoke(outArgs);

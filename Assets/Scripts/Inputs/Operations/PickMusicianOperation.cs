@@ -9,9 +9,9 @@ namespace BeauTambour
     {
         [SerializeField] private Musician musician;
 
-        public override void Initialize(OperationHandler operationHandler)
+        public override void Initialize(MonoBehaviour hook)
         {
-            base.Initialize(operationHandler);
+            base.Initialize(hook);
             
             Event.Open(TempEvent.OnAnyMusicianPicked);
             Event.Open(TempEvent.OnMusicianPicked, musician);

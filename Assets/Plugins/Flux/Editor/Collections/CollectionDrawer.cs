@@ -169,14 +169,16 @@ namespace Flux.Editor
                 }
                 
                 elementProperty.NextVisible(true);
+                rect.height = EditorGUI.GetPropertyHeight(elementProperty);
+                
                 EditorGUI.PropertyField(rect, elementProperty, true);
                 
                 for (var i = 1; i < count; i++)
                 {
                     elementProperty.NextVisible(false);
                     
-                    rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2;
-                    rect.height = EditorGUIUtility.singleLineHeight;
+                    rect.y += rect.height + EditorGUIUtility.standardVerticalSpacing * 2;
+                    rect.height = EditorGUI.GetPropertyHeight(elementProperty);
                     
                     EditorGUI.PropertyField(rect, elementProperty, true);
                 }

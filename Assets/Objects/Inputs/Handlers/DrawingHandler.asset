@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e7509ec5c07b3d4695614455e1b6feb, type: 3}
-  m_Name: ShapeActivator
+  m_Name: DrawingHandler
   m_EditorClassIdentifier: 
   shapes:
   - {fileID: 11400000, guid: a75da5350cddbde4887ae8ec4fb21e6c, type: 2}

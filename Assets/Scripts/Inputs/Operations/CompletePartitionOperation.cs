@@ -7,9 +7,9 @@ namespace BeauTambour
     [CreateAssetMenu(fileName = "NewCompletePartitionOperation", menuName = "Beau Tambour/Operations/Complete Partition")]
     public class CompletePartitionOperation : RythmOperation
     {
-        public override void Initialize(OperationHandler operationHandler)
+        public override void Initialize(MonoBehaviour hook)
         {
-            base.Initialize(operationHandler);
+            base.Initialize(hook);
             Event.Open(TempEvent.OnPartitionCompleted);
         }
 
