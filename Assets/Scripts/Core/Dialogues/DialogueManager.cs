@@ -180,17 +180,15 @@ namespace BeauTambour
         
         private void PlaceBounds()
         {
+            var offset = Vector2.left * (bounds.Width / 2f) + Vector2.up * 0.2f;
+            var position = (Vector2)character.Instance.DialoguePoint.position + offset;
             if (character.Anchor == Anchor.Right) 
-            {
-                var offset = Vector2.left * bounds.Width;
-                var position = (Vector2)runtimeAnchorPoints[Anchor.Right].position + offset;
-                
-                bounds.Place(position, character.Instance.DialoguePoint.position, Vector2.left);
+            {                
+                bounds.Place(position, character.Instance.DialoguePoint.position, Vector2.right, true);
             }
             else if (character.Anchor == Anchor.Left)
             {
-                var position = runtimeAnchorPoints[Anchor.Left].position;
-                bounds.Place(position, character.Instance.DialoguePoint.position, Vector2.right);
+                bounds.Place(position, character.Instance.DialoguePoint.position, Vector2.left, true);
             }
             else
             {
