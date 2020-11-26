@@ -14,6 +14,8 @@ namespace BeauTambour
         public OutcomeType Mask => mask;
         public OutcomeType SuccessionMask => successionMask;
         public bool ShouldBeRemoved => shouldBeRemoved;
+
+        public Sequencer Sequencer => runtimeSequencer;
         
         [SerializeField] private int priority;
         [SerializeField] private OutcomeType mask;
@@ -22,17 +24,15 @@ namespace BeauTambour
         
         [SerializeField] private Condition[] conditions;
         [SerializeField] private Sequencer sequencerPrefab;
-        
-        public Sequencer Sequencer { get; private set; }
+
+        private Sequencer runtimeSequencer;
 
         public void BootUp()
         {
             if (!Application.isPlaying) return;
 
-            Destroy(Sequencer);
-            
             var parent = Repository.GetSingle<Transform>(Parent.Outcomes);
-            Sequencer = Instantiate(sequencerPrefab, parent);
+            runtimeSequencer = Instantiate(sequencerPrefab, parent);
         }
 
         public bool IsOperational(Encounter encounter, Note[] notes)

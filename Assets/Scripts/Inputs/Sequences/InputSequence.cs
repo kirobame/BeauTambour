@@ -47,11 +47,15 @@ namespace BeauTambour
         public IReadOnlyList<IContinuousHandler> ContinuousHandlers => continuousHandlers;
         public int Advancement { get; private set; }
 
+        [SerializeField] private float spacing;
         [SerializeField] private Element[] elements;
         [SerializeField] private Operation[] operations;
         
         private IContinuousHandler[] continuousHandlers;
         private Operation[] runtimeOperations;
+
+        private bool hasBegun;
+        private float timer;
 
         public void Initialize(InputSequenceHandler handler)
         {
@@ -73,13 +77,37 @@ namespace BeauTambour
 
         public void Advance(int index)
         {
-            if (index == 0) Advancement = 0;
-            else if (Advancement + 1 == index) Advancement++;
+            if (index == 0)
+            {
+                Advancement = 0;
+                timer = spacing;
+            }
+            else 
+            {
+                if (Advancement + 1 == index)
+                {
+                    Advancement++;
+                    timer = spacing;
+                }
+            }
             
             if (Advancement != elements.Length - 1) return;
 
             Advancement = -1;
+            timer = 0f;
+            
             onStart.Invoke(new EventArgs());
+        }
+        public void Tick(float deltaTime)
+        {
+            if (timer <= 0f) return;
+            timer -= deltaTime;
+
+            if (timer <= 0f)
+            {
+                Advancement = -1;
+                timer = 0f;
+            }
         }
     }
 }

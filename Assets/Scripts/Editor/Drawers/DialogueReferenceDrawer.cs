@@ -21,14 +21,14 @@ namespace BeauTambour.Editor
             if (!hasBeenInitialized) Initialize();
             
             rect.height = EditorGUIUtility.singleLineHeight;
-            rect.y += EditorGUIUtility.standardVerticalSpacing;
+            //rect.y += EditorGUIUtility.standardVerticalSpacing;
             
             var labelRect = rect;
-            labelRect.width = DrawingUtilities.labelWidth - DrawingUtilities.indent - 6f;
+            labelRect.width = DrawingUtilities.labelWidth - DrawingUtilities.indent + 9f;
 
             EditorGUI.LabelField(labelRect, label);
            
-            var fieldWidth = DrawingUtilities.fieldWidth - DrawingUtilities.horizontalSpacing * 3f - EditorGUIUtility.singleLineHeight - DrawingUtilities.indent * 2f;
+            var fieldWidth = DrawingUtilities.fieldWidth - DrawingUtilities.horizontalSpacing * 3f - EditorGUIUtility.singleLineHeight - DrawingUtilities.indent * 2f - 14f;
             
             var indexRect = labelRect;
             indexRect.x += labelRect.width + DrawingUtilities.horizontalSpacing - DrawingUtilities.indent;
@@ -105,8 +105,7 @@ namespace BeauTambour.Editor
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
             if (!hasBeenInitialized) Initialize();
-
-            if (!isExpanded) return EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2f;
+            if (!isExpanded) return EditorGUIUtility.singleLineHeight;
             
             property.NextVisible(true);
             var encounterIndex = property.intValue;
@@ -124,9 +123,9 @@ namespace BeauTambour.Editor
                 var textHeight = style.CalcHeight(textContent, EditorGUIUtility.currentViewWidth);
                 if (textHeight > EditorGUIUtility.singleLineHeight * 3f) textHeight = EditorGUIUtility.singleLineHeight * 3f;
                 
-                return EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 4f + textHeight;
+                return EditorGUIUtility.singleLineHeight  +  textHeight;
             }
-            else return EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2f;
+            else return EditorGUIUtility.singleLineHeight;
         }
 
         private void Initialize()

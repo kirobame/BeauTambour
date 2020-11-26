@@ -10,7 +10,11 @@ namespace BeauTambour
         [SerializeField] private InputSequence[] sequences;
         
         void Awake() { foreach(var sequence in sequences) sequence.Initialize(this); }
-        
-        void Update() { foreach(var continuousHandler in sequences.SelectMany(sequence => sequence.ContinuousHandlers)) continuousHandler.Update(); }
+
+        void Update()
+        {
+            foreach(var sequence in sequences) sequence.Tick(Time.deltaTime);
+            foreach(var continuousHandler in sequences.SelectMany(sequence => sequence.ContinuousHandlers)) continuousHandler.Update();
+        }
     }
 }

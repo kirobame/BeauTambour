@@ -8,6 +8,10 @@ namespace BeauTambour
     [ItemPath("Beau Tambour/Dialogue")]
     public class DialogueEffect : Effect
     {
+        [SerializeField] private bool trim;
+        [SerializeField] private int from;
+        [SerializeField] private int to;
+        
         public DialogueReference reference;
         private Dialogue dialogue;
 
@@ -37,7 +41,16 @@ namespace BeauTambour
             }
         }
         
-        private void CacheDialogue() => dialogue = reference.Value;
+        private void CacheDialogue()
+        {
+            if (trim)
+            {
+                var value = reference.Value;
+                dialogue = value.Trim(new Vector2Int(from, to));
+            }
+            else dialogue = reference.Value;
+        }
+
         private void End() => IsDone = true;
     }
 }

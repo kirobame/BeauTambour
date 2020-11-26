@@ -22,6 +22,6 @@ namespace BeauTambour.Editor
             Interpret(data, outcome, sequencer);
         }
 
-        protected abstract void Interpret(string data, Outcome outcome, Sequencer sequencer);
+        public abstract void Interpret(string data, Outcome outcome, Sequencer sequencer);
     }
 }

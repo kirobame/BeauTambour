@@ -16,11 +16,7 @@ namespace BeauTambour
         protected override bool TryGetAction(out IRythmQueueable action)
         {
             var copiedIndex = index;
-            action = new BeatAction(0, 0, beat =>
-            {
-                if (sequence.Advancement + 1 == index) Debug.Log($"Advancing {sequence} to : {copiedIndex}");
-                sequence.Advance(index);
-            });
+            action = new BeatAction(0, 0, beat => sequence.Advance(index));
 
             return true;
         }

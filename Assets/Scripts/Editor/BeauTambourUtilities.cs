@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Flux;
 using UnityEditor;
@@ -19,8 +20,8 @@ namespace BeauTambour.Editor
         
         //--------------------------------------------------------------------------------------------------------------
 
-        public static IReadOnlyList<OutcomeInterpreter> OutcomeInterpreters => outcomeInterpreters;
-        private static OutcomeInterpreter[] outcomeInterpreters;
+        public static IReadOnlyDictionary<Type, OutcomeInterpreter> OutcomeInterpreters => outcomeInterpreters;
+        private static Dictionary<Type, OutcomeInterpreter> outcomeInterpreters;
         
         //--------------------------------------------------------------------------------------------------------------
         
@@ -37,12 +38,14 @@ namespace BeauTambour.Editor
         public static void LoadOutcomeInterpreters()
         {
             var guids = AssetDatabase.FindAssets(string.Empty, new string[] {"Assets/Editor/OutcomeInterpreters"});
-            outcomeInterpreters = new OutcomeInterpreter[guids.Length];
+            outcomeInterpreters = new Dictionary<Type, OutcomeInterpreter>();
 
             for (var i = 0; i < guids.Length; i++)
             {
                 var path = AssetDatabase.GUIDToAssetPath(guids[i]);
-                outcomeInterpreters[i] = AssetDatabase.LoadAssetAtPath<OutcomeInterpreter>(path);
+
+                var interpreter = AssetDatabase.LoadAssetAtPath<OutcomeInterpreter>(path);
+                outcomeInterpreters.Add(interpreter.GetType(), interpreter);
             }
         }
         public static void RegisterOutcomes()

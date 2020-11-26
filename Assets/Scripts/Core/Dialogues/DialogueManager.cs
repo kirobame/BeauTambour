@@ -26,7 +26,8 @@ namespace BeauTambour
         
         public enum EventType
         {
-            OnEnd, // Called when all cues have been played
+            OnEnd, // Called when all cues have been played$
+            OnNext
         }
         #endregion
         
@@ -70,6 +71,8 @@ namespace BeauTambour
             subTexts = new List<(string text, int height)>();
             
             Event.Open(EventType.OnEnd);
+            Event.Open<int>(EventType.OnNext);
+            
             Event.Register(OperationEvent.Skip, Next);
         }
         
@@ -101,7 +104,6 @@ namespace BeauTambour
             }
             else
             {
-                
                 advancement++; // Update cue index
                 if (advancement >= dialogue.Length) // Exit point
                 {
@@ -164,6 +166,8 @@ namespace BeauTambour
                     ResizeBounds();
                     PlaceBounds();
                 }
+                
+                Event.Call<int>(EventType.OnNext, advancement);
             }
         }
         

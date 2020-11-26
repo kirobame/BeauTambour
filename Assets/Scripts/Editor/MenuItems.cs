@@ -61,22 +61,21 @@ namespace BeauTambour.Editor
                     if (exists) continue;
 
                     var reference = new DialogueReference(encounterIndex + 1, rowKey);
-              
-                    var header = sheet["Dialogues", "Data", rowKey];
                     var folder = folders.FirstOrDefault(path => path.Split('/').Last() == sheet.Source.Name);
                     
-                    if (folder != null) InstantiateDialogueOutcome(header, reference, $"{folder}/Outcomes", name, sequencerSource);
+                    if (folder != null) InstantiateDialogueOutcome(sheet, reference, $"{folder}/Outcomes", name, sequencerSource);
                     else
                     {
                         var path = "Assets/Objects/Narration/Encounters";
-                        AssetDatabase.CreateFolder("Assets/Objects/Narration/Encounters", sheet.Source.Name);
+                        Debug.Log(sheet.Source.Name);
+                        AssetDatabase.CreateFolder(path, sheet.Source.Name);
                         
                         path += $"/{sheet.Source.Name}";
                         folders.Add(path);
                         AssetDatabase.CreateFolder(path, "Outcomes");
 
                         path += "/Outcomes";
-                        InstantiateDialogueOutcome(header, reference, path, name, sequencerSource);
+                        InstantiateDialogueOutcome(sheet, reference, path, name, sequencerSource);
                     }
                 }
             }
@@ -105,15 +104,29 @@ namespace BeauTambour.Editor
             
             return (outcome, sequencer.GetComponent<Sequencer>());
         }
-        private static void InstantiateDialogueOutcome(string header, DialogueReference reference, string path, string name, GameObject sequencerSource)
+        private static void InstantiateDialogueOutcome(RuntimeSheet sheet, DialogueReference reference, string path, string name, GameObject sequencerSource)
         {
             var result = InstantiateOutcome(path, name, sequencerSource);
             var effect = result.sequencer.GetComponent<DialogueEffect>();
-
             effect.reference = reference;
+
+            var rowKey = name.Split('-')[1];
+            TryFor("Priority", typeof(PriorityInterpreter));
+            TryFor("Emotion", typeof(IsEmotionMetInterpreter));
+            TryFor("Keep", typeof(RemovalInterpreter));
             
+            void TryFor(string key, Type type)
+            {
+                var data = sheet["Dialogues", key, rowKey];
+                if (data == string.Empty) return;
+                
+                BeauTambourUtilities.OutcomeInterpreters[type].Interpret(data, result.outcome, result.sequencer);
+            }
+            
+            var header = sheet["Dialogues", "Data", rowKey];
             if (header == string.Empty) return;
-            foreach (var interpreter in BeauTambourUtilities.OutcomeInterpreters)
+            
+            foreach (var interpreter in BeauTambourUtilities.OutcomeInterpreters.Values)
             {
                 interpreter.TryFor(header, result.outcome, result.sequencer);
             }

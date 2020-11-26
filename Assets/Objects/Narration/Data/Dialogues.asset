@@ -90,20 +90,20 @@ MonoBehaviour:
     - '[Isabelle]-Yes Exactly! It was optimism that i felt.'
     - Priority:0;Emotion:Optimism;
     - "\u24C7-Jn.w.Is"
-    - "[JeanGuy]-Bonjour\u201A je m'apelle JeanGuy.\r\n\r\n[Isabelle]-Salut JeanGuy."
-    - "[JeanGuy]-Hello\u201A my name is JeanGuy.\r\n\r\n[Isabelle]-Sup JeanGuy."
+    - "[JeanGuy]-Bonjour\u201A je m'apelle JeanGuy.\n\n[Isabelle]-Salut JeanGuy."
+    - "[JeanGuy]-Hello\u201A my name is JeanGuy.\n\n[Isabelle]-Sup JeanGuy."
     - Priority:1;
     - "\u24C7-Mc.w.Is"
-    - "[Michelle]-Bonjour\u201A je m'apelle Michelle.\r\n\r\n[Isabelle]-Salut Michelle."
-    - "[Michelle]-Hello\u201A my name is Michelle.\r\n\r\n[Isabelle]-Sup Michelle."
+    - "[Michelle]-Bonjour\u201A je m'apelle Michelle.\n\n[Isabelle]-Salut Michelle."
+    - "[Michelle]-Hello\u201A my name is Michelle.\n\n[Isabelle]-Sup Michelle."
     - Priority:1;
     - "\u24C7-Rr.w.Is"
-    - "[Rory]-Bonjour\u201A je m'apelle Rory.\r\n\r\n[Isabelle]-Salut Rory."
-    - "[Rory]-Hello\u201A my name is Rory.\r\n\r\n[Isabelle]-Sup Rory."
+    - "[Rory]-Bonjour\u201A je m'apelle Rory.\n\n[Isabelle]-Salut Rory."
+    - "[Rory]-Hello\u201A my name is Rory.\n\n[Isabelle]-Sup Rory."
     - Priority:1;
     - "\u24C7-Vn.w.Is"
-    - "[Vincent]-Bonjour\u201A je m'apelle Vincent.\r\n\r\n[Isabelle]-Salut Vincent."
-    - "[Vincent]-Hello\u201A my name is Vincent.\r\n\r\n[Isabelle]-Sup Vincent."
+    - "[Vincent]-Bonjour\u201A je m'apelle Vincent.\n\n[Isabelle]-Salut Vincent."
+    - "[Vincent]-Hello\u201A my name is Vincent.\n\n[Isabelle]-Sup Vincent."
     - Priority:1;
     size: {x: 4, y: 22}
   - name: Sample
@@ -112,37 +112,52 @@ MonoBehaviour:
     - "\u24D8-Dialogues"
     - "\u24B8-Fran\xE7ais"
     - "\u24B8-English"
+    - "\u24B8-Priority"
+    - "\u24B8-Emotion"
+    - "\u24B8-Keep"
     - "\u24B8-Data"
     - "\u24C7-Default"
     - '[Rory]-Blah.'
     - '[Rory]-Bleh.'
-    - Priority:-1;Emotion:Joy;
+    - 0
+    - Joy
+    - TRUE
+    - 
     - "\u24C7-S1"
-    - "[Vincent]-Un poisson peut pas parler.\r\n\r\n[Michelle]-Incroyable!\r\n\r\n[Vincent]-Exactement\u201A
-      je suis si heureux qu'on se comprennes."
-    - "[Vincent]-A fish can't talk.\r\n\r\n[Michelle]-Amazing!\r\n\r\n[Vincent]-Exactly\u201A
-      I am so happy that we're able to understand each other."
-    - Priority:1;Emotion:Anticipation;
+    - "[Vincent]-Un poisson peut pas parler.\nJe le sais parceque ma m\xE8re me l'as
+      dit!\n//Vraiment je devrais la remercier plus souvent.\n[Michelle]-Incroyable
+      (Yeux \xE9merveill\xE9s)!\n[Vincent]-Exactement, je suis si heureux qu'on se
+      comprennes."
+    - '[Vincent]-A fish can''t talk.
+
+      I know beacause my mother told me so!
+
+      //I
+      should thank her more often.
+
+      [Michelle]-Amazing (With shining eyes)!
+
+      [Vincent]-Exactly,
+      I am so happy that we''re able to understand each other.'
+    - 1
+    - Sadness
+    - FALSE
+    - 
     - "\u24C7-S2"
-    - '[Rory]-Pareil pour les castors.
-
-      
+    - '[Rory]-D''ailleurs, c''est pareil pour les castors.
 
       [Michelle]-Woaw!!!
 
-      
-
-      [Rory]-Trop
-      marrant. '
-    - '[Rory]-Same for beavers.
-
-      
+      [Rory]-(Riant)
+      Mec, Trop marrant.'
+    - '[Rory]-Actually, it''s the same for beavers.
 
       [Michelle]-Woaw!!!
 
-      
-
-      [Rory]-So
-      funny.'
-    - Priority:0;Emotion:Awe;
-    size: {x: 4, y: 4}
+      [Rory]-(Laughing)
+      Dude, so funny.'
+    - 1
+    - Anger
+    - FALSE
+    - 
+    size: {x: 7, y: 4}

@@ -8,7 +8,7 @@ namespace BeauTambour.Editor
 {
     public abstract class ConditionInterpreter<T> : OutcomeInterpreter where T : Condition
     {
-        protected override void Interpret(string data, Outcome outcome, Sequencer sequencer)
+        public override void Interpret(string data, Outcome outcome, Sequencer sequencer)
         {
             var condition = CreateInstance<T>();
             condition.hideFlags = HideFlags.HideInHierarchy;
