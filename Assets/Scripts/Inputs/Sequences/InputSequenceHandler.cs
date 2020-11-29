@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Flux;
+﻿using Flux;
 using UnityEngine;
 
 namespace BeauTambour
@@ -8,13 +7,6 @@ namespace BeauTambour
     public class InputSequenceHandler : MonoBehaviour
     {
         [SerializeField] private InputSequence[] sequences;
-        
         void Awake() { foreach(var sequence in sequences) sequence.Initialize(this); }
-
-        void Update()
-        {
-            foreach(var sequence in sequences) sequence.Tick(Time.deltaTime);
-            foreach(var continuousHandler in sequences.SelectMany(sequence => sequence.ContinuousHandlers)) continuousHandler.Update();
-        }
     }
 }

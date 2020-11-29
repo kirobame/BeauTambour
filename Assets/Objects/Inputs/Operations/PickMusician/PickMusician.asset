@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6690df26bc545229d6488de1895ebb6, type: 3}
+  m_Name: PickMusician
+  m_EditorClassIdentifier: 
+  parentOperation: {fileID: 11400000, guid: f9c1736e038c0df4a99e3cb97abf9218, type: 2}
+  subOperations:
+  - {fileID: 11400000, guid: 6cb371d1fec6e6f45bafae662d60a251, type: 2}
+  - {fileID: 11400000, guid: ff6bf38ab14f58c45b6cbf32ecc8d8e7, type: 2}

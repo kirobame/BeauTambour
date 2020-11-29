@@ -1,113 +1,57 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using Flux;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace BeauTambour
 {
-    [IconIndicator(863600071063726587), CreateAssetMenu(fileName = "NewInputSequence", menuName = "Beau Tambour/Input Sequence")]
-    public class InputSequence : ScriptableObject, IBindable
+    [IconIndicator(8714319771344428160)]
+    public abstract class InputSequence : ScriptableObject
     {
-        #region Encapsulated Types
+        //
+        protected MonoBehaviour hook;
+        public virtual void Initialize(MonoBehaviour hook) => this.hook = hook;
+    }
+    public abstract class InputSequence<TEnum, TElement> : InputSequence 
+        where TEnum : Enum 
+        where TElement : SequenceElement<TEnum>
+    {
+        [SerializeField] private TElement[] elements;
         
-        [Serializable]
-        public class Element
-        {
-            public InputAction Action => actionReference.action;
-            public InputHandler Handler => runtimeHandler;
-            
-            [SerializeField] private InputActionReference actionReference;
-            [SerializeField] private InputHandler handler;
-
-            private InputHandler runtimeHandler;
-            private AdvanceSequenceOperation operation;
-
-            public void Initialize(InputSequenceHandler hook, InputSequence sequence, int index)
-            {
-                runtimeHandler = Instantiate(handler);
-                runtimeHandler.Initialize(hook);
-                runtimeHandler.Bind(Action);
-                
-                operation = ScriptableObject.CreateInstance<AdvanceSequenceOperation>();
-                operation.Initialize(hook);
-                operation.Bind(runtimeHandler);
-                
-                operation.SetData(sequence, index);
-            }
-        }
-        #endregion
+        private TEnum history;
+        private int advancement;
         
-        public event Action<EventArgs> onStart;
-        public event Action<EventArgs> onUpdate;
-        public event Action<EventArgs> onEnd;
-
-        public IReadOnlyList<IContinuousHandler> ContinuousHandlers => continuousHandlers;
-        public int Advancement { get; private set; }
-
-        [SerializeField] private float spacing;
-        [SerializeField] private Element[] elements;
-        [SerializeField] private Operation[] operations;
-        
-        private IContinuousHandler[] continuousHandlers;
-        private Operation[] runtimeOperations;
-
-        private bool hasBegun;
-        private float timer;
-
-        public void Initialize(InputSequenceHandler handler)
+        public void Advance(int groupIndex, TEnum key)
         {
-            runtimeOperations = new Operation[operations.Length];
-            for (var i = 0; i < operations.Length; i++)
+            Debug.Log($"Advancing to : {groupIndex}/{key}");
+            if (groupIndex == 0 && elements[0].Contains(key))
             {
-                var runtimeOperation = Instantiate(operations[i]);
-                runtimeOperation.Initialize(handler);
-                runtimeOperation.Bind(this);
+                Debug.Log($"Start");
                 
-                runtimeOperations[i] = runtimeOperation;
+                advancement = 0;
+                history = key;
+                
+                return;
             }
 
-            Advancement = -1;
-            
-            for (var i = 0; i < elements.Length; i++) elements[i].Initialize(handler, this, i);
-            continuousHandlers = elements.Where(element => element.Handler is IContinuousHandler).Select(element => element.Handler).Cast<IContinuousHandler>().ToArray();
+            if (groupIndex == advancement + 1 && elements[groupIndex].Contains(key))
+            {
+                Debug.Log($"Moving to {groupIndex}");
+                
+                advancement = groupIndex;
+                history = Combine(history, key);
+            }
+
+            if (advancement == elements.Length - 1)
+            {
+                Debug.Log($"End");
+                HandleOutcome(history);
+
+                history = default(TEnum);
+                advancement = 0;
+            }
         }
 
-        public void Advance(int index)
-        {
-            if (index == 0)
-            {
-                Advancement = 0;
-                timer = spacing;
-            }
-            else 
-            {
-                if (Advancement + 1 == index)
-                {
-                    Advancement++;
-                    timer = spacing;
-                }
-            }
-            
-            if (Advancement != elements.Length - 1) return;
-
-            Advancement = -1;
-            timer = 0f;
-            
-            onStart.Invoke(new EventArgs());
-        }
-        public void Tick(float deltaTime)
-        {
-            if (timer <= 0f) return;
-            timer -= deltaTime;
-
-            if (timer <= 0f)
-            {
-                Advancement = -1;
-                timer = 0f;
-            }
-        }
+        protected abstract TEnum Combine(TEnum history, TEnum key);
+        protected abstract void HandleOutcome(TEnum history);
     }
 }
