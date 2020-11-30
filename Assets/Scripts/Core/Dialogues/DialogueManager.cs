@@ -26,6 +26,7 @@ namespace BeauTambour
         
         public enum EventType
         {
+            OnCueDisplaying,
             OnEnd, // Called when all cues have been played
         }
         #endregion
@@ -68,7 +69,8 @@ namespace BeauTambour
             }
             
             subTexts = new List<(string text, int height)>();
-            
+
+            Event.Open<string>(EventType.OnCueDisplaying);
             Event.Open(EventType.OnEnd);
             Event.Register(OperationEvent.Skip, Next);
         }
@@ -80,7 +82,7 @@ namespace BeauTambour
         {
             this.dialogue = dialogue;
             bounds.gameObject.SetActive(true);
-            
+
             Next();
         }
         
@@ -159,6 +161,7 @@ namespace BeauTambour
                 else
                 {
                     textMesh.text = cue.Text;
+                    Event.Call(EventType.OnCueDisplaying, cue.Text);
                     
                     // Actualize Bounds
                     ResizeBounds();
