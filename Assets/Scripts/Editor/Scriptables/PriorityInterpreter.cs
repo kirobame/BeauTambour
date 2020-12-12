@@ -7,7 +7,7 @@ namespace BeauTambour.Editor
     [CreateAssetMenu(fileName = "NewPriorityInterpreter", menuName = "Beau Tambour/Editor/Outcome Interpreters/Priority")]
     public class PriorityInterpreter : OutcomeInterpreter
     {
-        protected override void Interpret(string data, Outcome outcome, Sequencer sequencer)
+        public override void Interpret(string data, Outcome outcome, Sequencer sequencer)
         {
             var serializedObject = new SerializedObject(outcome);
             var priorityProperty = serializedObject.FindProperty("priority");

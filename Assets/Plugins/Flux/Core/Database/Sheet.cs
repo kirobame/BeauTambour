@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Ludiq.PeekCore;
 using UnityEngine;
 
 namespace Flux
@@ -32,59 +33,65 @@ namespace Flux
                 return array[index];
             }
         }
-    
+
         public bool Process(string data)
         {
-            var splittedData =Regex.Split(data, "\r\n|\r|\n");
-            var lines = new List<string>();
+            var lines = new List<List<string>>();
+            lines.Add(new List<string>());
 
-            for (var i = 0; i < splittedData.Length; i++)
+            var y = 0;
+            var advancement = 0;
+            var occurence = data.IndexOf(',', advancement);
+
+            while (occurence != -1)
             {
-                if (!splittedData[i].Contains('"'))
+                var substring = data.Substring(advancement, occurence - advancement);
+                if (substring.Contains('"'))
                 {
-                    lines.Add(splittedData[i]);
-                    continue;
+                    occurence = data.IndexOf('"', advancement + 1) + 1;
+                    substring = data.Substring(advancement + 1, occurence - advancement - 2);
+                }
+                else
+                {
+                    var split =  Regex.Split(substring, "\r\n|\r|\n");
+                    if (split.Length == 2)
+                    {
+                        lines[y].Add(split[0]);
+                        
+                        lines.Add(new List<string>());
+                        y++;
+                        
+                        lines[y].Add(split[1]);
+                        
+                        advancement = occurence + 1;
+                        occurence = data.IndexOf(',', advancement);
+
+                        continue;
+                    }
                 }
                 
-                var line = $"{splittedData[i]}{Environment.NewLine}";
-                i++;
+                lines[y].Add(substring);
 
-                var count = splittedData[i].Count(character => character == '"');
-                while (count == 0 || count == 2)
-                {
-                    line += $"{splittedData[i]}{Environment.NewLine}";
-                    
-                    i++;
-                    count = splittedData[i].Count(character => character == '"');
-                }
-                
-                line += $"{splittedData[i]}";
+                advancement = occurence + 1;
+                occurence = data.IndexOf(',', advancement);
 
-                var toReplace = new string(new char[] {'"'});
-                line = line.Replace(toReplace, string.Empty);
-                
-                lines.Add(line);
+                if (occurence == -1) lines[y].Add(data.Substring(advancement));
             }
-            
-            var firstLine = lines.First().Split(',');
-            var width = firstLine.Length;
 
-            var indicator = firstLine.First().Split('=');
-            name = indicator[0];
-            version = indicator[1];
-            
-            if (!lines.Any() ||lines.Count < 2 || lines.First().Length < 2) return false;
-
-            size = new Vector2Int(width - 1, lines.Count - 1);
+            size = new Vector2Int(lines.First().Count - 1, lines.Count - 1);
             array = new string[size.x * size.y];
 
-            for (var y = 0; y < size.y; y++)
+            var header = lines[0][0].Split('=');
+            name = header[0];
+            version = header[1];
+
+            var index = 0;
+            for (y = 1; y < lines.Count; y++)
             {
-                var items = lines[y + 1].Split(',');
-                for (var x = 0; x < size.x; x++)
+                for (var x = 1; x < lines[y].Count; x++)
                 {
-                    var index = x + y * size.x;
-                    array[index] = items[x + 1];
+                    array[index] = lines[y][x];
+                    index++;
                 }
             }
 

@@ -5,48 +5,28 @@ namespace Flux
 {
     public abstract class SingleOperation : Operation
     {
-        protected InputHandler bindedHandler;
-        protected Operation parentOperation;
+        protected IBindable bindable;
         
-        public override void Bind(InputHandler inputHandler)
+        public override void Bind(IBindable bindable)
         {
             if (isBinded) Unbind();
-            bindedHandler = inputHandler;
+            this.bindable = bindable;
 
-            inputHandler.onStart += OnStart;
-            inputHandler.onUpdate += OnUpdate;
-            inputHandler.onEnd += OnEnd;
+            bindable.onStart += OnStart;
+            bindable.onUpdate += OnUpdate;
+            bindable.onEnd += OnEnd;
 
-            isBinded = true;
-        }
-        public override void Bind(Operation operation)
-        {
-            if (isBinded) Unbind();
-            parentOperation = operation;
-
-            operation.onStart += OnStart;
-            operation.onUpdate += OnUpdate;
-            operation.onEnd += OnEnd;
-            
             isBinded = true;
         }
         public override void Unbind()
         {
-            if (bindedHandler != null)
+            if (bindable != null)
             {
-                bindedHandler.onStart -= OnStart;
-                bindedHandler.onUpdate -= OnUpdate;
-                bindedHandler.onEnd -= OnEnd;
+                bindable.onStart -= OnStart;
+                bindable.onUpdate -= OnUpdate;
+                bindable.onEnd -= OnEnd;
 
-                bindedHandler = null;
-            }
-            else if (parentOperation != null)
-            {
-                parentOperation.onStart -= OnStart;
-                parentOperation.onUpdate -= OnUpdate;
-                parentOperation.onEnd -= OnEnd;
-
-                parentOperation = null;
+                bindable = null;
             }
 
             isBinded = false;

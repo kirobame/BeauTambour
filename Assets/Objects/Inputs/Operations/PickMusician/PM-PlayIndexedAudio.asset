@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59cff0548d3e49629fb7a8cc585608cc, type: 3}
+  m_Name: PM-PlayIndexedAudio
+  m_EditorClassIdentifier: 
+  volume: 1
+  clips:
+  - {fileID: 8300000, guid: 7cebb3f5be1d35646b45bfc08223bcef, type: 3}
+  - {fileID: 8300000, guid: 38445845817e5d7449999140d9ddee59, type: 3}
+  - {fileID: 8300000, guid: 941c9adbe1d7eaf488fb153d44857ad5, type: 3}
+  - {fileID: 8300000, guid: bfc06cf210ab85344bf918c14171a76a, type: 3}

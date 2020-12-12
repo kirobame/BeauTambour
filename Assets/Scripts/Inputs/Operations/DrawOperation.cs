@@ -29,9 +29,9 @@ namespace BeauTambour
         
         private (Shape shape, PoolableDrawing drawing) currentPair;
 
-        public override void Initialize(OperationHandler operationHandler)
+        public override void Initialize(MonoBehaviour hook)
         {
-            base.Initialize(operationHandler);
+            base.Initialize(hook);
 
             Event.Open(EventType.OnStart);
             Event.Open(EventType.OnShapeMatch);
@@ -99,7 +99,7 @@ namespace BeauTambour
             currentPair = (null,null);
             
             isDrawing = false;
-            bindedHandler.OnCanceled();
+            if (bindable is InputHandler handler) handler.OnCanceled();
         }
         public override void OnEnd(EventArgs inArgs)
         {

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using UnityEditor;
+using UnityEngine;
 
 namespace BeauTambour
 {
@@ -11,22 +13,27 @@ namespace BeauTambour
         public static Dialogue Parse(string value)
         {
             value = value.Replace("-", string.Empty);
-            var split = value.Split('[', ']').Where(subItem => subItem != string.Empty).ToList();
-            
-            var cues = new Cue[split.Count / 2];
-            var cueIndex = 0;
-            
-            for (var i = 0; i < cues.Length; i++)
+            var split = value.Split(new char[] {'[', ']'}, StringSplitOptions.RemoveEmptyEntries);
+
+            var cues = new List<Cue>();
+            for (var i = 0; i < split.Length; i += 2)
             {
-                var actor = (Actor)Enum.Parse(typeof(Actor), split[cueIndex]);
-                var text = split[cueIndex + 1];
-                
-                cues[i] = new Cue(actor, text);
-                
-                cueIndex += 2;
+                var actor = (Actor)Enum.Parse(typeof(Actor), split[i]);
+                var texts = split[i + 1].Split(new string[] {"//"}, StringSplitOptions.None);
+
+                foreach (var text in texts)
+                {
+                    var match = Regex.Match(text, "\r\n|\r|\n");
+                    if (match.Index == 0)
+                    {
+                        var trimmedText = text.Remove(0, match.Length);
+                        cues.Add(new Cue(actor, trimmedText));
+                    }
+                    else cues.Add(new Cue(actor, text));
+                }
             }
 
-            return new Dialogue(cues);
+            return new Dialogue(cues.ToArray());
         }
         
         public Dialogue(Cue[] cues) => this.cues = cues;
@@ -36,6 +43,20 @@ namespace BeauTambour
 
         public IReadOnlyList<Cue> Cues => cues;
         private Cue[] cues;
+
+        public Dialogue Trim(Vector2Int range)
+        {
+            var trimmedCues = new Cue[range.y - range.x + 1];
+
+            var index = 0;
+            for (var i = range.x; i <= range.y; i++)
+            {
+                trimmedCues[index] = cues[i];
+                index++;
+            }
+            
+            return new Dialogue(trimmedCues);
+        }
         
         public override string ToString()
         {

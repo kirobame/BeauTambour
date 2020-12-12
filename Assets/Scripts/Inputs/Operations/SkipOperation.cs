@@ -8,9 +8,9 @@ namespace BeauTambour
     [CreateAssetMenu(fileName = "NewSkipOperation", menuName = "Beau Tambour/Operations/Skip")]
     public class SkipOperation : SingleOperation
     {
-        public override void Initialize(OperationHandler operationHandler)
+        public override void Initialize(MonoBehaviour hook)
         {
-            base.Initialize(operationHandler);
+            base.Initialize(hook);
             Event.Open(OperationEvent.Skip);
         }
 

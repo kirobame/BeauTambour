@@ -1,40 +1,49 @@
-﻿using Flux;
+﻿using System;
+using Flux;
 using UnityEngine;
 using Event = Flux.Event;
 
 namespace BeauTambour
 {
     [CreateAssetMenu(fileName = "NewPickMusicianOperation", menuName = "Beau Tambour/Operations/Pick Musician")]
-    public class PickMusicianOperation : RythmOperation
+    public class PickMusicianOperation : SingleOperation
     {
-        [SerializeField] private Musician musician;
+        [SerializeField] private Musician left, right, up, down;
 
-        public override void Initialize(OperationHandler operationHandler)
+        public override void Initialize(MonoBehaviour hook)
         {
-            base.Initialize(operationHandler);
+            base.Initialize(hook);
             
-            Event.Open(TempEvent.OnAnyMusicianPicked);
-            Event.Open(TempEvent.OnMusicianPicked, musician);
+            Event.Open(TempEvent.OnMusicianPicked, left);
+            Event.Open(TempEvent.OnMusicianPicked, right);
+            Event.Open(TempEvent.OnMusicianPicked, up);
+            Event.Open(TempEvent.OnMusicianPicked, down);
         }
-
-        protected override bool TryGetAction(out IRythmQueueable action)
+        
+        public override void OnStart(EventArgs inArgs)
         {
-            action = new BeatAction(0, 0, Action);
-            return true;
-        }
+            if (!(inArgs is Vector2EventArgs axisArgs)) return;
 
-        private void Action(int beat)
-        {
-            var attributes = musician.Prompt();
-            
-            Event.Call(TempEvent.OnAnyMusicianPicked);
-            Event.CallLocal(TempEvent.OnMusicianPicked, musician);
-
-            var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
-            var outcomePhase = phaseHandler.Get<OutcomePhase>(PhaseType.Outcome);
-
-            outcomePhase.BeginNote();
-            outcomePhase.EnqueueNoteAttributes(attributes);
+            if (axisArgs.value.x == -1)
+            {
+                GameplaySequence.pickedMusician = left;
+                Begin(new SingleEventArgs<int>(0));
+            }
+            else if (axisArgs.value.x == 1)
+            {
+                GameplaySequence.pickedMusician = right;
+                Begin(new SingleEventArgs<int>(1));
+            }
+            else if (axisArgs.value.y == 1)
+            {
+                GameplaySequence.pickedMusician = up;
+                Begin(new SingleEventArgs<int>(2));
+            }
+            else
+            {
+                GameplaySequence.pickedMusician = down;
+                Begin(new SingleEventArgs<int>(3));
+            }
         }
     }
 }

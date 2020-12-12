@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [IconIndicator(-3461654150298456965), CreateAssetMenu(fileName = "NewShape", menuName = "Beau Tambour/Shape")]
+    [IconIndicator(-3461654150298456965), CreateAssetMenu(fileName = "NewShape", menuName = "Beau Tambour/General/Shape")]
     public class Shape : ScriptableObject
     {
         public Emotion Emotion => emotion;
