@@ -20,8 +20,8 @@ namespace BeauTambour
         // Start is called before the first frame update
         private void Start()
         {
-            Event.Register(DialogueManager.EventType.OnEnd,Stop);
-            Event.Register<string>(DialogueManager.EventType.OnCueDisplaying, Begin);
+            Event.Register(DialogueManager.EventType.OnEnd, Stop);
+            Event.Register<int, string>(DialogueManager.EventType.OnNext, Begin);
 
             audioDict = new Dictionary<char, AudioClip>();
             int start = 'A';
@@ -62,7 +62,7 @@ namespace BeauTambour
             }*/
         }
 
-        public void Begin(string text)
+        public void Begin(int advancement, string text)
         {
             isStarted = true;
             cueAudio = new AudioClip[text.Length];

@@ -69,10 +69,9 @@ namespace BeauTambour
             }
             
             subTexts = new List<(string text, int height)>();
-
-            Event.Open<string>(EventType.OnCueDisplaying);
+            
             Event.Open(EventType.OnEnd);
-            Event.Open<int>(EventType.OnNext);
+            Event.Open<int, string>(EventType.OnNext);
             
             Event.Register(OperationEvent.Skip, Next);
         }
@@ -162,14 +161,13 @@ namespace BeauTambour
                 else
                 {
                     textMesh.text = cue.Text;
-                    Event.Call(EventType.OnCueDisplaying, cue.Text);
-                    
+
                     // Actualize Bounds
                     ResizeBounds();
                     PlaceBounds();
                 }
                 
-                Event.Call<int>(EventType.OnNext, advancement);
+                Event.Call<int, string>(EventType.OnNext, advancement, cue.Text);
             }
         }
         
