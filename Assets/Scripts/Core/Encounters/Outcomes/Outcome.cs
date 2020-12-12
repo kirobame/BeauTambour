@@ -32,10 +32,6 @@ namespace BeauTambour
             if (!Application.isPlaying) return;
 
             var parent = Repository.GetSingle<Transform>(Parent.Outcomes);
-            
-            Debug.Log($"{name} - Runtime : {runtimeSequencer}");
-            Debug.Log($"{name} - Prefab : {sequencerPrefab}");
-            
             runtimeSequencer = Instantiate(sequencerPrefab, parent);
         }
 

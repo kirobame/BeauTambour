@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 
 namespace BeauTambour
 {
-    [IconIndicator(7705900795600745325), CreateAssetMenu(fileName = "NewEncounter", menuName = "Beau Tambour/Resolution/Encounter")]
+    [IconIndicator(7705900795600745325), CreateAssetMenu(fileName = "NewEncounter", menuName = "Beau Tambour/Encounter")]
     public class Encounter : ScriptableObject
     {
         public Note[][] Historic => historic.ToArray();

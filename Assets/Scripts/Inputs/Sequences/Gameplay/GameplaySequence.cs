@@ -4,7 +4,7 @@ using Event = Flux.Event;
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewGameplaySequenceOperation", menuName = "Beau Tambour/Sequences/Gameplay")]
+    [CreateAssetMenu(fileName = "NewGameplaySequenceOperation", menuName = "Beau Tambour/Inputs/Sequences/Gameplay/Base")]
     public class GameplaySequence : InputSequence<GameplaySequenceKeys, GameplaySequenceElement>
     {
         public static Musician pickedMusician;
@@ -20,7 +20,6 @@ namespace BeauTambour
         protected override GameplaySequenceKeys Combine(GameplaySequenceKeys history, GameplaySequenceKeys key) => history | key;
         protected override void HandleOutcome(GameplaySequenceKeys history)
         {
-            Debug.Log("Handling outcome");
             if (history == (GameplaySequenceKeys.Start | GameplaySequenceKeys.PickMusician | GameplaySequenceKeys.End))
             {
                 var attributes = pickedMusician.Prompt();

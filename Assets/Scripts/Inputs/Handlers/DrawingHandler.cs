@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewDrawingHandler", menuName = "Beau Tambour/Handlers/Drawing")]
+    [CreateAssetMenu(fileName = "NewDrawingHandler", menuName = "Beau Tambour/Inputs/Handlers/Drawing")]
     public class DrawingHandler : InputHandler<Vector2>, IContinuousHandler
     {
         [SerializeField] private Shape[] shapes;

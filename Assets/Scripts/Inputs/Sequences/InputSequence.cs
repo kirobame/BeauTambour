@@ -7,7 +7,6 @@ namespace BeauTambour
     [IconIndicator(8714319771344428160)]
     public abstract class InputSequence : ScriptableObject
     {
-        //
         protected MonoBehaviour hook;
         public virtual void Initialize(MonoBehaviour hook) => this.hook = hook;
     }
@@ -22,11 +21,8 @@ namespace BeauTambour
         
         public void Advance(int groupIndex, TEnum key)
         {
-            Debug.Log($"Advancing to : {groupIndex}/{key}");
             if (groupIndex == 0 && elements[0].Contains(key))
             {
-                Debug.Log($"Start");
-                
                 advancement = 0;
                 history = key;
                 
@@ -35,15 +31,12 @@ namespace BeauTambour
 
             if (groupIndex == advancement + 1 && elements[groupIndex].Contains(key))
             {
-                Debug.Log($"Moving to {groupIndex}");
-                
                 advancement = groupIndex;
                 history = Combine(history, key);
             }
 
             if (advancement == elements.Length - 1)
             {
-                Debug.Log($"End");
                 HandleOutcome(history);
 
                 history = default(TEnum);

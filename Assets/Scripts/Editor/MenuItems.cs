@@ -11,7 +11,7 @@ namespace BeauTambour.Editor
 {
     public static class MenuItems
     {
-        [MenuItem("Assets/Create/Beau Tambour/Resolution/Outcome", priority = -999999999)]
+        [MenuItem("Assets/Create/Beau Tambour/Outcome", priority = -999999999)]
         public static void CreateOutcome()
         {
             var path = AssetDatabase.GetAssetPath(Selection.activeObject);

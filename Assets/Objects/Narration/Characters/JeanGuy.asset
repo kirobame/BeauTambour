@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: JeanGuy
   m_EditorClassIdentifier: 
   actor: 0
+  anchor: 0
+  font: {fileID: 0}
+  fontColor: {r: 0, g: 0, b: 0, a: 0}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0}

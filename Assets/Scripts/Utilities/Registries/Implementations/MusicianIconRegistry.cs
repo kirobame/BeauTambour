@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewMusicianIconRegistry", menuName = "Beau Tambour/Utilities/Registries/Musician Icon")]
+    [CreateAssetMenu(fileName = "NewMusicianIconRegistry", menuName = "Beau Tambour/General/Registries/Musician Icon")]
     public class MusicianIconRegistry : Registry<Musician, Sprite>
     {
         #region Encapsulated Types

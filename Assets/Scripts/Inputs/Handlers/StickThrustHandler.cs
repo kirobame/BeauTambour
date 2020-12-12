@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewStickThrustHandler", menuName = "Beau Tambour/Handlers/Stick Thrust")]
+    [CreateAssetMenu(fileName = "NewStickThrustHandler", menuName = "Beau Tambour/Inputs/Handlers/Stick Thrust")]
     public class StickThrustHandler : ContinuousHandler<Vector2>
     {
         [Space, SerializeField] private Vector2 range;

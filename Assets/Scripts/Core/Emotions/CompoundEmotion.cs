@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [IconIndicator(-1684237209172799180), CreateAssetMenu(fileName = "NewCompoundEmotion", menuName = "Beau Tambour/Compound Emotion")]
+    [IconIndicator(-1684237209172799180), CreateAssetMenu(fileName = "NewCompoundEmotion", menuName = "Beau Tambour/General/Compound Emotion")]
     public class CompoundEmotion : ScriptableObject
     {
         [SerializeField] private Emotion[] emotions;

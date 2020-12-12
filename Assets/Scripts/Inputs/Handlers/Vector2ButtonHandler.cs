@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewVector2ButtonHandler", menuName = "Beau Tambour/Handlers/Vector2 Button")]
+    [CreateAssetMenu(fileName = "NewVector2ButtonHandler", menuName = "Beau Tambour/Inputs/Handlers/Vector2 Button")]
     public class Vector2ButtonHandler : InputHandler<Vector2>
     {
         public override bool OnStarted(Vector2 input)

@@ -2,7 +2,7 @@
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewRuntimeSettings", menuName = "Beau Tambour/Settings")]
+    [CreateAssetMenu(fileName = "NewRuntimeSettings", menuName = "Beau Tambour/Editor/Settings")]
     public class RuntimeSettings : ScriptableObject
     {
         public SupportedLanguage Language => language;
