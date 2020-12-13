@@ -1,5 +1,8 @@
 ﻿using Flux;
 using System.Collections;
+using System.Text.RegularExpressions;
+using Febucci.UI;
+using TMPro;
 using UnityEngine;
 
 namespace BeauTambour
@@ -12,8 +15,12 @@ namespace BeauTambour
             set => renderer.color = value;
         }
         public float Width => rectTransform.rect.width;
+        public TextMeshPro TextMesh => textMesh;
+
+        [Space, SerializeField] private TextMeshPro textMesh;
+        [SerializeField] private TextAnimatorPlayer textAnimatorPlayer;
         
-        [SerializeField] private RectTransform rectTransform;
+        [Space, SerializeField] private RectTransform rectTransform;
         [SerializeField] private RectTransform texTransform;
         [SerializeField] private new SpriteRenderer renderer;
         
@@ -27,8 +34,8 @@ namespace BeauTambour
 
         public void Reboot() // Prepare bounds to correctly calculate width a height
         {
-            rectTransform.sizeDelta = new Vector2(initialWidth, 1000f);
-            texTransform.sizeDelta = new Vector2(initialWidth, 1000f);
+            rectTransform.sizeDelta = new Vector2(1000f, 1000f);
+            texTransform.sizeDelta = new Vector2(1000f, 1000f);
         }
 
         public void Place(Vector2 position, Vector2 lineAnchor, Vector2 side, bool isLineVertical = false)
@@ -45,7 +52,6 @@ namespace BeauTambour
             line.SetPosition(0, lineAnchor);
             line.SetPosition(1, end);
         }
-
         public void Resize(Vector2 size)
         {
             rectTransform.sizeDelta = size;
@@ -61,7 +67,6 @@ namespace BeauTambour
             var diff = 0f;
             if (side.x == -1)
             {
-                //diff = position.x - (cam.rect.position.x + (camWidth / 2f) * side.x);
                 diff = position.x - (cam.rect.position.x + (sceneWidth / 2f) * side.x);
                 if(diff < 0)
                 {
@@ -70,13 +75,19 @@ namespace BeauTambour
             }
             else if (side.x == 1)
             {
-                //diff = (position.x + rectTransform.rect.width) - (cam.rect.position.x + (camWidth / 2f) * side.x);
                 diff = (position.x + rectTransform.rect.width) - (cam.rect.position.x + (sceneWidth / 2f) * side.x);
                 if (diff > 0)
                 {
                     rectTransform.position = rectTransform.position - new Vector3(diff + 0.5f, 0) * side.x;
                 }
             }
+        }
+
+        public void SetText(string text)
+        {
+            textAnimatorPlayer.StopShowingText();
+            textAnimatorPlayer.ShowText(text);
+            textAnimatorPlayer.StartShowingText();
         }
     }
 }

@@ -59,7 +59,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trim: 1
-  trimRange: {x: 0, y: 0}
+  from: 0
+  to: 0
   reference:
     encounterIndex: 1
     id: Mc.w.Is

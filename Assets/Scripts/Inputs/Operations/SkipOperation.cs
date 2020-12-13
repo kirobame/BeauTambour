@@ -14,10 +14,6 @@ namespace BeauTambour
             Event.Open(OperationEvent.Skip);
         }
 
-        public override void OnStart(EventArgs inArgs)
-        {
-            Debug.Log("Skip");
-            Event.Call(OperationEvent.Skip);
-        }
+        public override void OnStart(EventArgs inArgs) => Event.Call(OperationEvent.Skip);
     }
 }
