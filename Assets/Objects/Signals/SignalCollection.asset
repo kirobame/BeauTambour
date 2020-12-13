@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a63ca5a1bc45c1a802d395a5afd549, type: 3}
+  m_Name: SignalCollection
+  m_EditorClassIdentifier: 
+  values:
+  - {fileID: 11400000, guid: dabc9a43b1fb4c84998c2d30daea73f3, type: 2}
+  - {fileID: 11400000, guid: 20891fd710c8dd144bb5ef40e8b75bba, type: 2}
+  - {fileID: 11400000, guid: c41eb85b281a0364abf880b91f116ae9, type: 2}

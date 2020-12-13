@@ -33,6 +33,10 @@ namespace BeauTambour
         #endregion
         
         //--------------------------------------------------------------------------------------------------------------
+
+        public Character SpeakingCharacter => character;
+        
+        //--------------------------------------------------------------------------------------------------------------
         
         [SerializeField] private ActorCharacterRegistry actorCharacterRegistry; // Enum By ScriptableObject AssetDictionary
         [SerializeField] private AnchorPoint[] anchorPoints;
@@ -124,7 +128,7 @@ namespace BeauTambour
                 bounds.Reboot();
                 bounds.TextMesh.ForceMeshUpdate();
                 
-                var info = bounds.TextMesh.GetTextInfo(Regex.Replace(cue.Text, "<.\\w+>", string.Empty));
+                var info = bounds.TextMesh.GetTextInfo(Regex.Replace(cue.Text, "\\<(.*?)\\>", string.Empty));
                 if (info.lineCount > lineCount) // Cue is too large, split it into smaller cues
                 {
                     // Prepare small cues container
