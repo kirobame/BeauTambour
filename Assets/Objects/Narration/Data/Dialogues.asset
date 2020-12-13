@@ -172,7 +172,7 @@ MonoBehaviour:
     - '[Rory]-Bonjour, je m''apelle<wave>Rory</wave>.
 
       [Isabelle]-Salut Rory.'
-    - '[Rory]-Hello, my name is<?E:Debug/Anger,1,TRUE/Rory''s message> <wave>Rory</wave>.
+    - '[Rory]-Hello, my name is<?E:Vfx/Anger,1,TRUE/Null> <wave>Rory</wave>.
 
       [Isabelle]-Sup
       Rory.'

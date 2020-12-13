@@ -6,5 +6,8 @@ namespace BeauTambour
     {
         public Transform DialoguePoint => dialoguePoint;
         [SerializeField] private Transform dialoguePoint;
+
+        public Transform VisualEffectPoint => visualEffectPoint;
+        [SerializeField] private Transform visualEffectPoint;
     }
 }

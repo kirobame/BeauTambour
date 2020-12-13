@@ -22,12 +22,14 @@ namespace BeauTambour
 
         void HandleEvent(string message)
         {
+            Debug.Log($"Message : {message}");
             if (message.Substring(0, 2) != "e:") return;
 
             var trimmedMessage = message.Substring(2, message.Length - 2);
             var split = trimmedMessage.Split('/');
 
             var category = split[0];
+            Debug.Log($"Category : {category}");
             var mainArgs = split[1].Split(',');
 
             var emotionName = mainArgs[0];
@@ -38,6 +40,8 @@ namespace BeauTambour
             var await = bool.Parse(mainArgs[2]);
 
             currentSignal = signalCollection.Select(category, emotion, clarity);
+            Debug.Log(currentSignal);
+            
             if (await)
             {
                 currentSignal.OnEnd += OnSignalEnd;
