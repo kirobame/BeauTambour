@@ -24,6 +24,9 @@ namespace BeauTambour
         public Color BackgroundColor => backgroundColor;
         [SerializeField] private Color backgroundColor;
 
+        public LetterAudioRegistry LetterAudioRegistry => letterAudioRegistry;
+        [Space, SerializeField] private LetterAudioRegistry letterAudioRegistry;
+
         public virtual void BootUp() { }
     }
 }

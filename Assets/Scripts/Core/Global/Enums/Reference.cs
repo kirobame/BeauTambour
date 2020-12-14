@@ -14,6 +14,6 @@ namespace BeauTambour
         DialogueManager,
         Camera, 
         Hook,
-        DrawOperation
+        DrawOperation,
     }
 }

@@ -464,6 +464,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae31fc9667543e8b902596d888a515b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assets:
+  - {fileID: 11400000, guid: 965bbdeb8a0214c4cb80aa122dc7d844, type: 2}
+  - {fileID: 11400000, guid: 3d6658634dbc22b46b0c47b96147a616, type: 2}
+  - {fileID: 11400000, guid: 5a82e0fa9c502004089c016af6c0eb52, type: 2}
+  - {fileID: 11400000, guid: 6f33f2735eb220543befe59834bf0c20, type: 2}
 --- !u!4 &138730726
 Transform:
   m_ObjectHideFlags: 0
@@ -8093,6 +8098,7 @@ GameObject:
   - component: {fileID: 1854567206954891027}
   - component: {fileID: 1854567206954891030}
   - component: {fileID: 1854567206954891029}
+  - component: {fileID: 1854567206954891031}
   m_Layer: 0
   m_Name: BubbleText
   m_TagString: Untagged
@@ -8317,6 +8323,20 @@ MonoBehaviour:
   useDynamicScaling: 1
   referenceFontSize: 10
   timeScale: 0
+--- !u!114 &1854567206954891031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854567206954891025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2bbaab6f4a473995b208c0660b2823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textAnimatorPlayer: {fileID: 1854567206954891029}
+  gap: 3
 --- !u!1001 &2585554642832954008
 PrefabInstance:
   m_ObjectHideFlags: 0

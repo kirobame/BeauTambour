@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Febucci.UI.Core;
 using Flux;
 using TMPro;
 using UnityEngine;
@@ -118,7 +119,7 @@ namespace BeauTambour
                 }
                 
                 character = actorCharacterRegistry[cue.Actor]; // Retrieve associated character
-                Debug.Log(character);
+
                 // Setup text data
                 bounds.TextMesh.font = character.Font;
                 bounds.TextMesh.color = character.FontColor;
