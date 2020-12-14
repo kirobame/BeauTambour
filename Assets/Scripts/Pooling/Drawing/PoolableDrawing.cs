@@ -89,6 +89,7 @@ namespace BeauTambour
             Event.CallLocal<Color>(EventType.OnColorAssigned, gameObject, emotionColorRegistry[shape.Emotion]);
             Event.CallLocal<Vector3>(EventType.OnShapeRecognized, gameObject, Value.GetPosition(0));
         }
+
         private IEnumerator RevealPathRoutine(float goal)
         {
             Gradient gradient;
