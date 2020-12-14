@@ -1,5 +1,6 @@
 ﻿using Flux.Editor;
 using UnityEditor;
+using UnityEngine;
 
 namespace BeauTambour.Editor
 {
