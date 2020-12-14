@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f59f35691fc4bcdab4bb564361e843f, type: 3}
   m_Name: Contempt
   m_EditorClassIdentifier: 
-  emotions: 0100000004000000
+  emotions: 0400000001000000

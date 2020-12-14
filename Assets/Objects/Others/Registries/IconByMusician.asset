@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairs:
   - key: {fileID: 11400000, guid: adaf503684cbb2141b10e9501bab0836, type: 2}
-    value: {fileID: 21300000, guid: ef301df54b2252d4199e39b5223f48a4, type: 3}
+    value: {fileID: 21300000, guid: e9feab235320a3f4c849fb9fa8436ae5, type: 3}
   - key: {fileID: 11400000, guid: b01b20f9993be474eafac52bfff716ad, type: 2}
-    value: {fileID: 21300000, guid: 713e20b9eaa4294498b01db451877588, type: 3}
-  - key: {fileID: 11400000, guid: aaa6b55dfb5d5604dac9213301887a51, type: 2}
-    value: {fileID: 21300000, guid: d240d180b482a9640a358ec1d1eadb83, type: 3}
+    value: {fileID: 21300000, guid: 3be13ac21a282d841a74ddabb32ccd3b, type: 3}
