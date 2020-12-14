@@ -34,4 +34,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ca2372744a877148b4e5144be6c129c, type: 2}
   - {fileID: 11400000, guid: 56eae9b1b44b583409b29d9cdfb36774, type: 2}
   - {fileID: 11400000, guid: 65df14fb9d3d62b4d8e920f64a8eb9b2, type: 2}
-  characterInputs: []
+  - {fileID: 11400000, guid: 455734aa4bb57f94a928f3c28e988f0a, type: 2}
+  - {fileID: 11400000, guid: a8e65b5276454cb4494b4209e8f81ef2, type: 2}
+  - {fileID: 11400000, guid: 6c93bb5bfd28f9e47840781f76a7ef0e, type: 2}
+  characters:
+  - {fileID: 11400000, guid: aaa6b55dfb5d5604dac9213301887a51, type: 2}
+  - {fileID: 11400000, guid: b01b20f9993be474eafac52bfff716ad, type: 2}
+  - {fileID: 11400000, guid: adaf503684cbb2141b10e9501bab0836, type: 2}
+  initialInterlocutor: {fileID: 11400000, guid: 03a012dfba0742f4596a9b98b36a1d3c,
+    type: 2}

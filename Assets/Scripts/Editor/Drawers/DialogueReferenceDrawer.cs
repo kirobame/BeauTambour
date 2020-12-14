@@ -37,11 +37,11 @@ namespace BeauTambour.Editor
             property.NextVisible(true);
             EditorGUI.PropertyField(indexRect, property, GUIContent.none);
 
-            var encounterIndex = property.intValue;
+            var encounterId = property.stringValue;
             property.NextVisible(false);
             var id = property.stringValue;
 
-            var match = BeauTambourUtilities.DialogueProvider.TryGetDialogue(encounterIndex - 1, id, runtimeSettings.Language, out var dialogue);
+            var match = BeauTambourUtilities.DialogueProvider.TryGetDialogue(encounterId, id, runtimeSettings.Language, out var dialogue);
             
             var baseGuiColor = GUI.color;
             if (match) GUI.color = new Color(0.4f,0.85f,0.35f, 0.75f);
@@ -108,12 +108,12 @@ namespace BeauTambour.Editor
             if (!isExpanded) return EditorGUIUtility.singleLineHeight;
             
             property.NextVisible(true);
-            var encounterIndex = property.intValue;
+            var encounterId = property.stringValue;
 
             property.NextVisible(false);
             var id = property.stringValue;
 
-            var match = BeauTambourUtilities.DialogueProvider.TryGetDialogue(encounterIndex - 1, id, runtimeSettings.Language, out var dialogue);
+            var match = BeauTambourUtilities.DialogueProvider.TryGetDialogue(encounterId, id, runtimeSettings.Language, out var dialogue);
 
             if (match)
             {

@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9b158a0a4ae4c29936ce715f3e67dac, type: 3}
-  m_Name: Isabelle
+  m_Name: Vincent
   m_EditorClassIdentifier: 
-  actor: 4
-  anchor: 1
+  actor: 2
+  anchor: 0
   font: {fileID: 11400000, guid: 2951f4977f124f34b91d3ed4d0cb7548, type: 2}
-  fontColor: {r: 0.08235294, g: 0.09803922, b: 0.03529412, a: 1}
+  fontColor: {r: 0.079860054, g: 0.09433961, b: 0.031594872, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  letterAudioRegistry: {fileID: 11400000, guid: 6f33f2735eb220543befe59834bf0c20,
+    type: 2}

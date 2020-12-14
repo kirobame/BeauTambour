@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
+using Febucci.UI.Core;
 using Flux;
 using TMPro;
 using UnityEngine;
@@ -32,12 +34,15 @@ namespace BeauTambour
         #endregion
         
         //--------------------------------------------------------------------------------------------------------------
+
+        public Character SpeakingCharacter => character;
+        
+        //--------------------------------------------------------------------------------------------------------------
         
         [SerializeField] private ActorCharacterRegistry actorCharacterRegistry; // Enum By ScriptableObject AssetDictionary
         [SerializeField] private AnchorPoint[] anchorPoints;
 
         [Space, SerializeField] private DialogueBounds bounds; // Bounds used to display text inside
-        [SerializeField] private TextMeshPro textMesh; // Text of the bounds
         [SerializeField] private int lineCount = 2; // Max allowed amount of line inside bounds
 
         //--------------------------------------------------------------------------------------------------------------
@@ -92,12 +97,14 @@ namespace BeauTambour
             if (subAdvancement != -1) // If there are small cues, play them
             {
                 var tuple = subTexts[subAdvancement]; // Retrieve small cue
-                textMesh.text = tuple.text;
+                bounds.TextMesh.GetTextInfo(Regex.Replace(tuple.text, "<.\\w+>", string.Empty));
                 
-                // Actualize Bounds
+                //Actualize bounds
                 ResizeBounds();
                 PlaceBounds();
 
+                bounds.SetText(tuple.text);
+                
                 // Update small cue current index
                 if (subAdvancement + 1 >= subTexts.Count) subAdvancement = -1;
                 else subAdvancement++;
@@ -112,17 +119,17 @@ namespace BeauTambour
                 }
                 
                 character = actorCharacterRegistry[cue.Actor]; // Retrieve associated character
-                
+
                 // Setup text data
-                textMesh.font = character.Font;
-                textMesh.color = character.FontColor;
+                bounds.TextMesh.font = character.Font;
+                bounds.TextMesh.color = character.FontColor;
                 bounds.color = character.BackgroundColor;
                 
                 // Reboot bounds & text for correct actualization
                 bounds.Reboot();
-                textMesh.ForceMeshUpdate();
+                bounds.TextMesh.ForceMeshUpdate();
                 
-                var info = textMesh.GetTextInfo(cue.Text);
+                var info = bounds.TextMesh.GetTextInfo(Regex.Replace(cue.Text, "\\<(.*?)\\>", string.Empty));
                 if (info.lineCount > lineCount) // Cue is too large, split it into smaller cues
                 {
                     // Prepare small cues container
@@ -160,11 +167,11 @@ namespace BeauTambour
                 }
                 else
                 {
-                    textMesh.text = cue.Text;
-
                     // Actualize Bounds
                     ResizeBounds();
                     PlaceBounds();
+                    
+                    bounds.SetText(cue.Text);
                 }
                 
                 Event.Call<int, string>(EventType.OnNext, advancement, cue.Text);
@@ -199,21 +206,19 @@ namespace BeauTambour
                 Debug.LogError($"Undefined anchor for dialogue display : {character.Anchor} at {character}");
                 Debug.Break();
             }
-            
-           
         }
         private void ResizeBounds()
         {
             // Necessary to force visual update
-            textMesh.enabled = false;
-            textMesh.enabled = true;
+            bounds.TextMesh.enabled = false;
+            bounds.TextMesh.enabled = true;
             
-            var height = textMesh.textInfo.lineInfo.First().lineHeight * textMesh.textInfo.lineCount;
-            height += textMesh.margin.y + textMesh.margin.w;
+            var height = bounds.TextMesh.textInfo.lineInfo.First().lineHeight * bounds.TextMesh.textInfo.lineCount;
+            height += bounds.TextMesh.margin.y + bounds.TextMesh.margin.w;
             
-            var maximumWidth = textMesh.textInfo.lineInfo.Max(line => line.maxAdvance);
-            maximumWidth += textMesh.margin.z;
-            
+            var maximumWidth = bounds.TextMesh.textInfo.lineInfo.Max(line => line.maxAdvance);
+            maximumWidth += bounds.TextMesh.margin.z;
+
             bounds.Resize(new Vector2(maximumWidth, height));
         }
     }

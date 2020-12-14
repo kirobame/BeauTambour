@@ -6,6 +6,7 @@ namespace BeauTambour
     public enum Pool
     {
         Drawing, 
-        Audio
+        Audio,
+        VisualEffect
     }
 }

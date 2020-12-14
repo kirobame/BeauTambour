@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Flux;
+using Shapes;
 using UnityEngine;
 using Event = Flux.Event;
 
@@ -57,15 +58,16 @@ namespace BeauTambour
             Event.Open(EventType.OnDisgust);
             Event.Open(EventType.OnAnger);
             Event.Open(EventType.OnAnticipation);
-
             Event.Register(EventType.OnShapeMatch,()=> { Event.Call(EventType.OnShapeEnd); });
             Event.Register(EventType.OnShapeLoss,()=> { Event.Call(EventType.OnShapeEnd); });
+
+            Repository.Reference(this, Reference.DrawOperation);
         }
 
         public override void OnStart(EventArgs inArgs)
         {
             if (isBusy || isDrawing || !(inArgs is ShapeEventArgs shapeEventArgs)) return;
-
+            
             isBusy = true;
             Event.Call(EventType.OnStart);
             CallShapeEvent(shapeEventArgs.Value.Emotion);
@@ -141,8 +143,10 @@ namespace BeauTambour
             }
         }
 
-        private void End(bool outcome)
+        public void End(bool outcome)
         {
+            if (!isDrawing) return;
+            
             currentPair.drawing.Complete(outcome);
             currentPair = (null,null);
             

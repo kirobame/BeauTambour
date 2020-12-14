@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Flux;
+using Flux.Editor;
 using UnityEditor;
 using UnityEngine;
 
@@ -48,9 +49,9 @@ namespace BeauTambour.Editor
             }
 
             var sequencerSource = Resources.Load<GameObject>("Prefabs/DialogueSequencer");
-            for (var encounterIndex = 0; encounterIndex < BeauTambourUtilities.DialogueProvider.Sheets.Count; encounterIndex++)
+            foreach (var keyValuePair in BeauTambourUtilities.DialogueProvider.Sheets)
             {
-                var sheet = BeauTambourUtilities.DialogueProvider.Sheets[encounterIndex];
+                var sheet = keyValuePair.Value;
                 
                 var rowKeys = sheet.RowKeys["Dialogues"];
                 foreach (var rowKey in rowKeys)
@@ -60,7 +61,7 @@ namespace BeauTambour.Editor
                     var exists = outcomes.Exists(outcome => outcome.name == name);
                     if (exists) continue;
 
-                    var reference = new DialogueReference(encounterIndex + 1, rowKey);
+                    var reference = new DialogueReference(keyValuePair.Key, rowKey);
                     var folder = folders.FirstOrDefault(path => path.Split('/').Last() == sheet.Source.Name);
                     
                     if (folder != null) InstantiateDialogueOutcome(sheet, reference, $"{folder}/Outcomes", name, sequencerSource);
@@ -79,7 +80,7 @@ namespace BeauTambour.Editor
                     }
                 }
             }
-            
+
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }
@@ -110,6 +111,8 @@ namespace BeauTambour.Editor
             var effect = result.sequencer.GetComponent<DialogueEffect>();
             effect.reference = reference;
 
+            AddPhaseCondition(reference, result.outcome);
+            
             var rowKey = name.Split('-')[1];
             TryFor("Priority", typeof(PriorityInterpreter));
             TryFor("Emotion", typeof(IsEmotionMetInterpreter));
@@ -130,6 +133,28 @@ namespace BeauTambour.Editor
             {
                 interpreter.TryFor(header, result.outcome, result.sequencer);
             }
+        }
+
+        private static void AddPhaseCondition(DialogueReference dialogueReference, Outcome outcome)
+        {
+            var condition = ScriptableObject.CreateInstance<PhaseCondition>();
+            condition.hideFlags = HideFlags.HideInHierarchy;
+            condition.name = $"{Guid.NewGuid()}-{typeof(PhaseCondition).Name}";
+            
+            AssetDatabase.AddObjectToAsset(condition, outcome);
+            AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(condition));
+            
+            var conditionSerializedObject = new SerializedObject(condition);
+            var targetProperty = conditionSerializedObject.FindProperty("joinedIds");
+
+            targetProperty.stringValue = dialogueReference.EncounterId;
+            conditionSerializedObject.ApplyModifiedProperties();
+            
+            var serializedObject = new SerializedObject(outcome);
+            var conditionsProperty = serializedObject.FindProperty("conditions");
+            
+            conditionsProperty.AddElement(condition);
+            serializedObject.ApplyModifiedProperties();
         }
     }
 }

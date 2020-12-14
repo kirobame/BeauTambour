@@ -2,6 +2,7 @@
 using System.Collections;
 using Flux;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace BeauTambour
 {
@@ -53,6 +54,7 @@ namespace BeauTambour
 
             return true;
         }
+        
         private IEnumerator DeactivationRoutine()
         {
             yield return  new WaitForSeconds(deactivationTime);
@@ -64,7 +66,6 @@ namespace BeauTambour
             
             End(new EventArgs());
         }
-
         void IContinuousHandler.Update()
         {
             if (isActive)

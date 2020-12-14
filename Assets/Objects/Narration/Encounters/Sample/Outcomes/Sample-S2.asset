@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8536928242133511083
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: 24d28a70-7eab-40f4-ae0f-f48c94797bbb-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: Sample
 --- !u!114 &-794614768710700582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31,5 +44,6 @@ MonoBehaviour:
   shouldBeRemoved: 1
   conditions:
   - {fileID: -794614768710700582}
+  - {fileID: -8536928242133511083}
   sequencerPrefab: {fileID: 5614385688149014047, guid: 564829b3fb313904d9190a53bb4fc6ec,
     type: 3}

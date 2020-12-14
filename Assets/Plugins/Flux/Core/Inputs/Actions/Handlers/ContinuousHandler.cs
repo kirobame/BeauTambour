@@ -5,7 +5,7 @@ namespace Flux
     public abstract class ContinuousHandler<T> : InputHandler<T>, IContinuousHandler
     {
         protected bool isActive;
-        private T input;
+        protected T input;
 
         public override bool OnStarted(T input)
         {

@@ -13,7 +13,18 @@ namespace BeauTambour
         }
         #endregion
 
-        void Awake() => Event.Open(EventType.OnBootup);
+        [SerializeField] private ScriptableObject[] assets;
+
+        void Awake()
+        {
+            Event.Open(EventType.OnBootup);
+            foreach (var asset in assets)
+            {
+                if (!(asset is IBootable bootable)) return;
+                bootable.BootUp();
+            }
+        }
+
         void Start() => Event.Call(EventType.OnBootup);
     }
 }

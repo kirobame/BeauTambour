@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b158a0a4ae4c29936ce715f3e67dac, type: 3}
-  m_Name: JeanGuy
+  m_Script: {fileID: 11500000, guid: 98571a3065eb443d8242975442123380, type: 3}
+  m_Name: JoyDebugSignal
   m_EditorClassIdentifier: 
-  actor: 0
-  anchor: 0
-  font: {fileID: 0}
-  fontColor: {r: 0, g: 0, b: 0, a: 0}
-  backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  key: 0
+  clarity: 1
+  duration: 2
