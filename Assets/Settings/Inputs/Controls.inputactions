@@ -6,10 +6,18 @@
             "id": "0233a0b8-dac3-4dc1-a96b-ff03705ea8d5",
             "actions": [
                 {
-                    "name": "Draw",
+                    "name": "Draw - Gamepad",
                     "type": "Value",
                     "id": "662083a1-1576-455e-bdfd-fc50c6a151c5",
                     "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Draw - Keyboard & Mouse",
+                    "type": "Value",
+                    "id": "fb449e93-6cf8-478f-bde5-6f5fa94f3529",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
@@ -30,10 +38,18 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Finish Sequence",
+                    "name": "Finish Sequence - Gamepad",
                     "type": "Value",
                     "id": "1043c93d-c4c2-494a-93f6-ce2dc796721e",
                     "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Finish Sequence - Keyboard & Mouse",
+                    "type": "Button",
+                    "id": "2b0a3bda-2b5c-4907-b787-1d47cb6218b8",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 },
@@ -62,7 +78,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Draw",
+                    "action": "Draw - Gamepad",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -70,6 +86,17 @@
                     "name": "",
                     "id": "a7cba384-2da4-499d-9183-cf3615d36ef7",
                     "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Complete Partition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6414a4eb-6d19-4bb3-8659-ececc2264b2a",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -90,12 +117,23 @@
                 },
                 {
                     "name": "",
+                    "id": "89698851-e311-4c58-9140-97bad2581b0f",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Clear Notes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5907ac75-eb68-4ffc-b1b3-c904f97522b8",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Finish Sequence",
+                    "action": "Finish Sequence - Gamepad",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -155,6 +193,61 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "ArrowKeys",
+                    "id": "868d06c5-f7ea-4b9f-bfed-a199c893fd18",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Musician",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "4249f868-98a7-49bd-9235-13de73ba20c8",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Musician",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "c5b1d755-af83-4758-a26d-1f0adeeeae4a",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Musician",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "9ddef838-d7a5-4ff5-bf56-0e5b560b2215",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Musician",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "e1db80ce-0228-4d7e-9a83-cab80d635c6d",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pick Musician",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "3be32798-331d-4542-bfc0-ab27fc07f15e",
                     "path": "<Gamepad>/dpad",
@@ -162,6 +255,83 @@
                     "processors": "",
                     "groups": "",
                     "action": "Start Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "WASD",
+                    "id": "6bf6a13f-fec6-4c7b-82cf-ebd8f6cf06f4",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start Sequence",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "8004c6d6-9c15-4bed-827b-67aed02956c8",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "95412335-eea9-4aeb-b6f8-569df426f9d8",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "3b6290fd-daf7-4e82-aa36-1890606f303c",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "63df9ee5-e5c7-4582-a38c-a901b791fba4",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start Sequence",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "7eff4f6b-39cd-4099-a45f-f88d6e274740",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Finish Sequence - Keyboard & Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03b880af-bd40-4894-bfd2-8a98ba7a6b89",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw - Keyboard & Mouse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -185,6 +355,17 @@
                     "name": "",
                     "id": "ecfac7c3-046f-4ae2-8c64-77af8fe0aecf",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c6fccb8-3c40-4255-96d9-d3edd2e99430",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

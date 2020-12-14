@@ -52,7 +52,14 @@ namespace Flux.Editor
             GUI.enabled = true;
         
             if (!Recipient.Sheets.Any() || Recipient.Sheets.Any(sheet => !sheet.IsInitialized)) EditorGUILayout.HelpBox("Recipient has no full backup value for the moment! Please fetch.", MessageType.Warning);
-            else if (GUILayout.Button("Display backup")) { foreach (var sheet in Recipient.Sheets) Debug.Log(sheet); }
+            else if (GUILayout.Button("Display backup")) 
+            {
+                foreach (var sheet in Recipient.Sheets)
+                {
+                    Debug.Log(sheet.Name);
+                    Debug.Log(sheet);
+                }
+            }
 
             if (!prolong) return;
             

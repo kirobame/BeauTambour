@@ -79,7 +79,7 @@ namespace Flux
         public virtual bool OnStarted(TInput input)
         {
             if (phase != Phase.Canceled) return false;
-            
+
             phase = Phase.Started;
             return true;
         }

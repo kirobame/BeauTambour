@@ -23,5 +23,7 @@ namespace BeauTambour
 
         public Color BackgroundColor => backgroundColor;
         [SerializeField] private Color backgroundColor;
+
+        public virtual void BootUp() { }
     }
 }

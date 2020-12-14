@@ -15,7 +15,6 @@ namespace BeauTambour
             registry = new Dictionary<string, Dictionary<Emotion, List<Signal>[]>>();
             foreach (var group in values.GroupBy(value => value.Category))
             {
-                Debug.Log($"Categories -> {group.Key}");
                 registry.Add(group.Key, new Dictionary<Emotion, List<Signal>[]>());
                 
                 foreach (var subGroup in group.GroupBy(signal => signal.Key))
@@ -23,11 +22,7 @@ namespace BeauTambour
                     registry[group.Key].Add(subGroup.Key, new List<Signal>[3]);
                     for (var i = 0; i < 3; i++) registry[group.Key][subGroup.Key][i] = new List<Signal>();
 
-                    foreach (var signal in subGroup)
-                    {
-                        Debug.Log("Signal : " + signal.name);
-                        registry[group.Key][subGroup.Key][signal.Clarity].Add(signal);
-                    }
+                    foreach (var signal in subGroup) registry[group.Key][subGroup.Key][signal.Clarity].Add(signal);
                 }
             }
         }

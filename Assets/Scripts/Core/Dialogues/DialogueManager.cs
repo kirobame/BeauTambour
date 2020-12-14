@@ -118,7 +118,7 @@ namespace BeauTambour
                 }
                 
                 character = actorCharacterRegistry[cue.Actor]; // Retrieve associated character
-                
+                Debug.Log(character);
                 // Setup text data
                 bounds.TextMesh.font = character.Font;
                 bounds.TextMesh.color = character.FontColor;

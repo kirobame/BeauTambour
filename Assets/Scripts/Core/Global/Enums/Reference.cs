@@ -12,6 +12,8 @@ namespace BeauTambour
         RuntimeSettings,
         PhaseHandler,
         DialogueManager,
-        Camera
+        Camera, 
+        Hook,
+        DrawOperation
     }
 }

@@ -62,5 +62,5 @@ MonoBehaviour:
   from: 0
   to: 0
   reference:
-    encounterIndex: 1
+    encounterId: Demo
     id: Mc.w.Is

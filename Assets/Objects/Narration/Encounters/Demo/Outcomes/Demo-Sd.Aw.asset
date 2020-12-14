@@ -18,6 +18,7 @@ MonoBehaviour:
   shouldBeRemoved: 1
   conditions:
   - {fileID: 5996703222199287466}
+  - {fileID: 6538286914362065062}
   sequencerPrefab: {fileID: 5614385688149014047, guid: c65283f28a9070b4a80da1c9ca8ad101,
     type: 3}
 --- !u!114 &5996703222199287466
@@ -33,3 +34,16 @@ MonoBehaviour:
   m_Name: a4aa6465-3dc1-491c-b1fa-a0279b3d7515-EmotionCondition
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 323f2759a308cc748aee6fed2687d19a, type: 2}
+--- !u!114 &6538286914362065062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: 055f179a-c36f-47ab-9a67-b185b3f21600-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: Demo
