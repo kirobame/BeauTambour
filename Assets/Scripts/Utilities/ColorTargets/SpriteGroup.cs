@@ -3,19 +3,21 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    public class SpriteGroup : MonoBehaviour
+    public class SpriteGroup : ColorTarget
     {
-        public Color Color => sprites.First().color;
+        public override Color StartingColor => sprites.First().color;
+        public override float StartingAlpha => sprites.First().color.a;
 
         public SpriteRenderer this[int index] => sprites[index];
 
         [SerializeField] private SpriteRenderer[] sprites;
 
-        public void SetColor(Color color)
+        public override void Set(Color color)
         {
             foreach (var sprite in sprites) sprite.color = color;
         }
-        public void SetAlpha(float alpha)
+
+        public override void SetAlpha(float alpha)
         {
             foreach (var sprite in sprites)
             {

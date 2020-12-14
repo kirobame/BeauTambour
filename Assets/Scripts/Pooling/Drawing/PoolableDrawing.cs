@@ -67,7 +67,6 @@ namespace BeauTambour
             
             Event.CallLocal<Vector3>(EventType.OnDraw, gameObject, Value.GetPosition(0));
 
-            Debug.Log(shape.Emotion);
             var color = emotionColorRegistry[shape.Emotion];
             color.r -= 0.21f;
             color.g -= 0.21f;

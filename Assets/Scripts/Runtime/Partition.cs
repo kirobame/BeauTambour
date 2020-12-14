@@ -111,7 +111,7 @@ namespace BeauTambour
         }
         private IEnumerator NoteAlphaRoutine(Coroutine routine, SpriteGroup group, float alphaGoal)
         {
-            var start = group.Color.a;
+            var start = group.StartingAlpha;
             
             var time = 0f;
             var goal = 0.6f;

@@ -34,10 +34,12 @@ namespace BeauTambour
         #endregion
 
         [SerializeField] private int subDivision;
+        [SerializeField] private float activationDelay = 0.2f;
 
         private bool isDrawing;
         private bool isBusy;
-        
+
+        private Coroutine delayedActivationRoutine;
         private (Shape shape, PoolableDrawing drawing) currentPair;
 
         public override void Initialize(MonoBehaviour hook)
@@ -58,6 +60,7 @@ namespace BeauTambour
             Event.Open(EventType.OnDisgust);
             Event.Open(EventType.OnAnger);
             Event.Open(EventType.OnAnticipation);
+            
             Event.Register(EventType.OnShapeMatch,()=> { Event.Call(EventType.OnShapeEnd); });
             Event.Register(EventType.OnShapeLoss,()=> { Event.Call(EventType.OnShapeEnd); });
 
@@ -66,15 +69,21 @@ namespace BeauTambour
 
         public override void OnStart(EventArgs inArgs)
         {
-            if (isBusy || isDrawing || !(inArgs is ShapeEventArgs shapeEventArgs)) return;
+            if (isBusy || isDrawing || delayedActivationRoutine != null || !(inArgs is ShapeEventArgs shapeEventArgs)) return;
             
             isBusy = true;
+            
             Event.Call(EventType.OnStart);
             CallShapeEvent(shapeEventArgs.Value.Emotion);
-            timeSinceStart = Time.time;
-            startEvents = shapeEventArgs;
-            delayedStart = true;
-            /*var pool = Repository.GetSingle<DrawingPool>(Pool.Drawing);
+
+            delayedActivationRoutine = hook.StartCoroutine(DelayedActivationRoutine(shapeEventArgs));
+        }
+
+        private IEnumerator DelayedActivationRoutine(ShapeEventArgs shapeEventArgs)
+        {
+            yield return new WaitForSeconds(activationDelay);
+            
+            var pool = Repository.GetSingle<DrawingPool>(Pool.Drawing);
             var drawing = pool.RequestSinglePoolable();
 
             var drawingsParent = Repository.GetSingle<Transform>(Parent.Drawings);
@@ -83,33 +92,17 @@ namespace BeauTambour
 
             drawing.AssignShape(shapeEventArgs.Value, subDivision);
 
-            currentPair = (shapeEventArgs.Value, null);
-            isDrawing = true;*/
-        }
+            currentPair = (shapeEventArgs.Value, drawing);
+            isDrawing = true;
 
-        float timeSinceStart = 0;
-        ShapeEventArgs startEvents;
-        bool delayedStart = false;
+            Event.Call(EventType.OnDelayedStart);
+            delayedActivationRoutine = null;
+        }
+        
 
         public override void OnUpdate(EventArgs inArgs)
         {
-            if(delayedStart && Time.time - timeSinceStart > 1.0f )
-            {
-                var pool = Repository.GetSingle<DrawingPool>(Pool.Drawing);
-                var drawing = pool.RequestSinglePoolable();
-
-                var drawingsParent = Repository.GetSingle<Transform>(Parent.Drawings);
-                drawing.transform.SetParent(drawingsParent);
-                drawing.transform.localPosition = Vector2.zero;
-
-                drawing.AssignShape(startEvents.Value, subDivision);
-
-                currentPair = (startEvents.Value, drawing);
-                isDrawing = true;
-                delayedStart = false;
-                Event.Call(EventType.OnDelayedStart);
-                Debug.Log("Delayed");
-            }
+            if (delayedActivationRoutine != null) return;
             if (!(inArgs is ShapeAnalyzerResultEventArgs shapeAnalyzerResultEventArgs)) return;
             
             var values = shapeAnalyzerResultEventArgs.Value;

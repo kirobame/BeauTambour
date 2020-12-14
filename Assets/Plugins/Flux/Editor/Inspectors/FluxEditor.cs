@@ -72,9 +72,11 @@ namespace Flux.Editor
             GUI.enabled = true;
 
             Draw(iterator);
+            ExtendInspectorGUI();
 
             serializedObject.ApplyModifiedProperties();
         }
+        protected virtual void ExtendInspectorGUI() { }
 
         protected virtual void Draw(SerializedProperty iterator) { while (iterator.NextVisible(false)) DrawProperty(iterator); }
         protected virtual void DrawProperty(SerializedProperty property)

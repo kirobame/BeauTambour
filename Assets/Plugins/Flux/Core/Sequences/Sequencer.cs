@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 namespace Flux
@@ -7,6 +10,7 @@ namespace Flux
     {
         public event Action OnCompletion;
         
+        public IReadOnlyList<Effect> Effects => effects;
         [SerializeField] private Effect[] effects;
 
         private bool isPlaying;
@@ -17,7 +21,8 @@ namespace Flux
         void OnValidate()
         {
             if (Application.isPlaying || effects == null) return;
-            foreach (var effect in effects)
+
+            foreach (var effect in GetComponents<Effect>())
             {
                 if (effect.hideFlags == HideFlags.HideInInspector) continue;
                 effect.hideFlags = HideFlags.HideInInspector;

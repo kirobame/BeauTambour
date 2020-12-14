@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Boo.Lang;
 using Ludiq.PeekCore;
 using UnityEditor;
 using UnityEditor.Graphs;
@@ -72,12 +73,33 @@ namespace Flux.Editor
                     var references = DragAndDrop.objectReferences;
                     var type = PropertyUtilities.GetArrayPropertyType(reorderableList.serializedProperty);
 
-                    if (!references.All(reference => type.IsInstanceOfType(reference))) return;
+                    var values = new List<Object>();
+                    
+                    if (!references.All(reference =>
+                    {
+                        if (type.IsInstanceOfType(reference))
+                        {
+                            values.Add(reference);
+                            return true;
+                        }
+
+                        if (reference is GameObject gameObject)
+                        {
+                            var components = gameObject.GetComponents(type);
+                            if (components.Length > 0)
+                            {
+                                values.AddRange(components);
+                                return true;
+                            }
+                            else return false;
+                        }
+                        else return false;
+                    })) return;
                 
                     DragAndDrop.visualMode = DragAndDropVisualMode.Copy;
                     if (Ev.type == EventType.DragPerform)
                     {
-                        foreach (var reference in references)
+                        foreach (var reference in values)
                         {
                             AddElement();
                         

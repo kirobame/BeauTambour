@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Draw
   m_EditorClassIdentifier: 
   subDivision: 64
-  smoothing: 0
+  activationDelay: 0.2

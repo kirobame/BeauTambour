@@ -3,6 +3,7 @@ using System.Collections;
 using Flux;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
@@ -15,13 +16,19 @@ namespace BeauTambour
         private ShapeAnalyzer analyzer;
         
         private Vector2 input;
+        
         private bool isActive;
-
+        private bool canAct;
+        
         private Coroutine deactivationRoutine;
         
         public override void Initialize(MonoBehaviour hook)
         {
             base.Initialize(hook);
+            canAct = false;
+
+            Event.Register(TempEvent.OnAnyMusicianPicked, () => canAct = true);
+            Event.Register(DrawOperation.EventType.OnShapeMatch, () => canAct = false);
             
             analyzer = new ShapeAnalyzer(shapes);
             analyzer.OnEvaluationStart += shape => Begin(new ShapeEventArgs(shape));
@@ -29,7 +36,7 @@ namespace BeauTambour
         
         public override bool OnStarted(Vector2 input)
         {
-            if (!base.OnStarted(input)) return false;
+            if (!base.OnStarted(input) || !canAct) return false;
             if (deactivationRoutine != null) hook.StopCoroutine(deactivationRoutine);
 
             isActive = true;

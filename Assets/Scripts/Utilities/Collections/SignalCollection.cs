@@ -29,8 +29,6 @@ namespace BeauTambour
 
         public Signal Select(string category, Emotion emotion, int clarity)
         {
-            Debug.Log("Gotten category : " + category);
-            
             var runtimeSettings = Repository.GetSingle<RuntimeSettings>(Reference.RuntimeSettings);
             clarity = runtimeSettings.GlobalClarity > clarity ? runtimeSettings.GlobalClarity : clarity;
 

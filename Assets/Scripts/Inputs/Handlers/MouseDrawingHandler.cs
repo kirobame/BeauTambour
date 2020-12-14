@@ -23,10 +23,15 @@ namespace BeauTambour
         private bool isActive;
         private Coroutine deactivationRoutine;
 
+        private bool canAct;
         private bool isMatch;
 
         void Setup()
         {
+            canAct = true;
+            
+            if (!DeviceAlternationHandler.IsMouse) return;
+
             isActive = true;
             OnStarted(Vector2.zero);
         }
@@ -34,14 +39,19 @@ namespace BeauTambour
         public override void Initialize(MonoBehaviour hook)
         {
             base.Initialize(hook);
+            canAct = false;
 
             phase = Phase.Canceled;
             isActive = false;
 
             Event.Register(TempEvent.OnAnyMusicianPicked, Setup);
             Event.Register(DrawOperation.EventType.OnShapeLoss, () => isMatch = false);
-            Event.Register(DrawOperation.EventType.OnShapeMatch, () => isMatch = true);
-
+            Event.Register(DrawOperation.EventType.OnShapeMatch, () =>
+            {
+                isMatch = true;
+                canAct = false;
+            });
+            
             analyzer = new ShapeAnalyzer(shapes);
             analyzer.OnEvaluationStart += shape => Begin(new ShapeEventArgs(shape));
             
@@ -56,7 +66,7 @@ namespace BeauTambour
         
         public override bool OnStarted(Vector2 input)
         {
-            if (phase != Phase.Canceled || !isActive) return false;
+            if (phase != Phase.Canceled || !isActive || !canAct) return false;
             if (deactivationRoutine != null) hook.StopCoroutine(deactivationRoutine);
 
             isMatch = false;
@@ -69,7 +79,7 @@ namespace BeauTambour
         public override bool OnPerformed(Vector2 input)
         {
             if (!base.OnPerformed(input)) return false;
-            
+     
             ComputeInput(input);
             return true;
         }
