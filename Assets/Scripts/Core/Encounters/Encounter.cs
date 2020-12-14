@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,26 +13,35 @@ namespace BeauTambour
     {
         public Note[][] Historic => historic.ToArray();
         public Outcome CurrentOutcome => results[outcomeAdvancement];
+        public Interlocutor Interlocutor => interlocutor;
         
         public IReadOnlyList<Outcome> Outcomes => outcomes;
         [SerializeField] private Outcome[] outcomes;
 
-        public IEnumerable<Character> Characters => characterInputs.Select(input => input.Character);
-        [SerializeField] private CharacterInput[] characterInputs;
-
+        [SerializeField] private Character[] characters;
+        [SerializeField] private Interlocutor initialInterlocutor;
+        
         private HashSet<Outcome> runtimeOutcomes;
         private List<Outcome> results;
 
         private Stack<Note[]> historic = new Stack<Note[]>();
         private int outcomeAdvancement;
+
+        private Interlocutor interlocutor;
+        private int blockAdvancement;
+        private int goToNextBlock;
         
         public void BootUp()
         {
             outcomeAdvancement = -1;
+            goToNextBlock = 0;
+
+            interlocutor = initialInterlocutor;
+            interlocutor.BootUp();
+            foreach (var character in characters) character.BootUp();
             
             foreach (var outcome in outcomes) outcome.BootUp();
-            foreach (var characterInput in characterInputs) characterInput.Execute();
-            
+
             runtimeOutcomes = new HashSet<Outcome>(outcomes);
             results = new List<Outcome>();
         }
@@ -42,6 +50,45 @@ namespace BeauTambour
         {
             if (outcomeAdvancement >= 0) return;
             
+            var hook = Repository.GetSingle<Hook>(Reference.Hook);
+            hook.StartCoroutine(EvaluationRoutine(notes));
+        }
+
+        private IEnumerator EvaluationRoutine(Note[] notes)
+        {
+            if (interlocutor.CurrentBlock.Emotion.Matches(notes))
+            {
+                if (interlocutor.isAtLastBlock)
+                {
+                    Debug.Log("Win !");
+                    goToNextBlock = 2;
+                }
+                else
+                {
+                    Debug.Log("Success !");
+                    goToNextBlock = 1;
+                }
+                
+                yield return new WaitForSeconds(2);
+                Debug.Log("Resuming");
+            }
+
+            PrintNotes(notes);
+            if (!GetOutcomes(notes))
+            {
+                Debug.LogError("No outcome found !");
+                Debug.Break();
+                
+                yield break;
+            }
+            
+            PrintOutcomes();
+            
+            results[0].Play(this, notes);
+            results[0].Sequencer.OnCompletion += OnOutcomeDone;
+        }
+        private void PrintNotes(Note[] notes)
+        {
             var builder = new StringBuilder();
             builder.AppendLine("Evaluating outcomes with :");
             for (var i = 0; i < notes.Length; i++)
@@ -50,23 +97,19 @@ namespace BeauTambour
                 foreach (var attribute in notes[i].Attributes) builder.AppendLine($"------{attribute}");
             }
             Debug.Log(builder.ToString());
-            
+        }
+        private bool GetOutcomes(Note[] notes)
+        {
             historic.Push(notes);
-            
             results.Clear();
+            
             foreach (var outcome in runtimeOutcomes)
             {
                 if (!outcome.IsOperational(this, notes)) continue;
                 results.Add(outcome);
             }
 
-            if (!results.Any())
-            {
-                Debug.LogError("No outcome found !");
-                Debug.Break();
-
-                return;
-            }
+            if (!results.Any()) return false;
             
             results.Sort((first, second) =>
             {
@@ -76,14 +119,16 @@ namespace BeauTambour
             });
             
             outcomeAdvancement = 0;
-
+            return true;
+        }
+        private void PrintOutcomes()
+        {
+            var builder = new StringBuilder();
+            
             builder.Clear();
             builder.AppendLine("Outcomes :");
             foreach (var result in results) builder.AppendLine($"---{result}");
             Debug.Log(builder.ToString());
-            
-            results[0].Play(this, notes);
-            results[0].Sequencer.OnCompletion += OnOutcomeDone;
         }
 
         private void OnOutcomeDone()
@@ -108,6 +153,19 @@ namespace BeauTambour
             
             void End()
             {
+                if (goToNextBlock == 1)
+                {
+                    interlocutor.PushTrough();
+                    goToNextBlock = 0;
+                    
+                    Debug.Log("Moving on to next phase");
+                }
+                else if (goToNextBlock == 2)
+                {
+                    Debug.Log("Encounter is done");
+                    goToNextBlock = 0;
+                }
+                
                 outcomeAdvancement = -1;
 
                 var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);

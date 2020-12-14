@@ -7,9 +7,9 @@ namespace BeauTambour
     [Serializable]
     public struct DialogueReference
     {
-        public DialogueReference(int encounterIndex, string id)
+        public DialogueReference(string encounterId, string id)
         {
-            this.encounterIndex = encounterIndex;
+            this.encounterId = encounterId;
             this.id = id;
         }
 
@@ -22,10 +22,10 @@ namespace BeauTambour
             }
         }
 
-        public int EncounterIndex => encounterIndex;
+        public string EncounterId => encounterId;
         public string Id => id;
         
-        [SerializeField] private int encounterIndex;
+        [SerializeField] private string encounterId;
         [SerializeField] private string id;
     }
 }

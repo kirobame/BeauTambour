@@ -58,6 +58,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d945ce4d54841f3946366b3790d4d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trim: 0
+  from: 0
+  to: 0
   reference:
-    encounterIndex: 1
+    encounterId: Demo
     id: Sd.Ct

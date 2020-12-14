@@ -15,4 +15,4 @@ MonoBehaviour:
   left: {fileID: 11400000, guid: adaf503684cbb2141b10e9501bab0836, type: 2}
   right: {fileID: 11400000, guid: b01b20f9993be474eafac52bfff716ad, type: 2}
   up: {fileID: 11400000, guid: aaa6b55dfb5d5604dac9213301887a51, type: 2}
-  down: {fileID: 11400000, guid: 21efbdf7ea2e3c344869bbb4139edcce, type: 2}
+  down: {fileID: 11400000, guid: aaa6b55dfb5d5604dac9213301887a51, type: 2}

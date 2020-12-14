@@ -5,7 +5,8 @@ using UnityEngine;
 using Event = Flux.Event;
 
 namespace BeauTambour
-{    public class DialogueAudio : MonoBehaviour
+{
+    public class DialogueAudio : MonoBehaviour
     {
         [SerializeField] private AudioClip[] audioFillTempTab;
 

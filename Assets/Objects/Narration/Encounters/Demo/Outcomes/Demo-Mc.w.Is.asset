@@ -13,6 +13,19 @@ MonoBehaviour:
   m_Name: e971fc86-63d1-4a31-a082-46064ea27dde-MusicianCondition
   m_EditorClassIdentifier: 
   musician: {fileID: 11400000, guid: adaf503684cbb2141b10e9501bab0836, type: 2}
+--- !u!114 &-1559954353329237609
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: 480b6d9d-cd26-4ce8-b705-70c5946ca67d-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: Demo
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,5 +44,6 @@ MonoBehaviour:
   shouldBeRemoved: 1
   conditions:
   - {fileID: -7147377128780099875}
+  - {fileID: -1559954353329237609}
   sequencerPrefab: {fileID: 5614385688149014047, guid: 65c54a4d3eb430943a740bec6449e760,
     type: 3}
