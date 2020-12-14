@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewDrawingHandler", menuName = "Beau Tambour/Handlers/Drawing")]
+    [CreateAssetMenu(fileName = "NewDrawingHandler", menuName = "Beau Tambour/Inputs/Handlers/Drawing")]
     public class DrawingHandler : InputHandler<Vector2>, IContinuousHandler
     {
         [SerializeField] private Shape[] shapes;
@@ -18,9 +18,9 @@ namespace BeauTambour
 
         private Coroutine deactivationRoutine;
         
-        public override void Initialize(OperationHandler handler)
+        public override void Initialize(MonoBehaviour hook)
         {
-            base.Initialize(handler);
+            base.Initialize(hook);
             
             analyzer = new ShapeAnalyzer(shapes);
             analyzer.OnEvaluationStart += shape => Begin(new ShapeEventArgs(shape));
@@ -29,7 +29,7 @@ namespace BeauTambour
         public override bool OnStarted(Vector2 input)
         {
             if (!base.OnStarted(input)) return false;
-            if (deactivationRoutine != null) handler.StopCoroutine(deactivationRoutine);
+            if (deactivationRoutine != null) hook.StopCoroutine(deactivationRoutine);
 
             isActive = true;
             this.input = input;
@@ -49,7 +49,7 @@ namespace BeauTambour
             if (!base.OnCanceled(input)) return false;
             
             this.input = input;
-            deactivationRoutine = handler.StartCoroutine(DeactivationRoutine());
+            deactivationRoutine = hook.StartCoroutine(DeactivationRoutine());
 
             return true;
         }

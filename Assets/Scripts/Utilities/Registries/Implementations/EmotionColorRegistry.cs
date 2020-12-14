@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewEmotionColorRegistry", menuName = "Beau Tambour/Utilities/Registries/Emotion Color")]
+    [CreateAssetMenu(fileName = "NewEmotionColorRegistry", menuName = "Beau Tambour/General/Registries/Emotion Color")]
     public class EmotionColorRegistry : Registry<Emotion, Color>
     {
         #region Encapsulated Types

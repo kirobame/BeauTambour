@@ -1,0 +1,19 @@
+Sample=1.0.0,,,,,,,
+,ⓘ-Dialogues,Ⓒ-Français,Ⓒ-English,Ⓒ-Priority,Ⓒ-Emotion,Ⓒ-Keep,Ⓒ-Data
+,Ⓡ-Default,[Rory]-Blah.,[Rory]-Bleh.,0,Joy,TRUE,
+,Ⓡ-S1,"[Vincent]-Un poisson peut pas parler.
+Je le sais parceque ma mère me l'as dit!
+//
+Vraiment je devrais la remercier plus souvent.
+[Michelle]-Incroyable (Yeux émerveillés)!
+[Vincent]-Exactement, je suis si heureux qu'on se comprennes.","[Vincent]-A fish can't talk.
+I know beacause my mother told me so!
+//
+I should thank her more often.
+[Michelle]-Amazing (With shining eyes)!
+[Vincent]-Exactly, I am so happy that we're able to understand each other.",1,Sadness,FALSE,
+,Ⓡ-S2,"[Rory]-D'ailleurs, c'est pareil pour les castors.
+[Michelle]-Woaw!!!
+[Rory]-(Riant) Mec, Trop marrant.","[Rory]-Actually, it's the same for beavers.
+[Michelle]-Woaw!!!
+[Rory]-(Laughing) Dude, so funny.",1,Anger,FALSE,

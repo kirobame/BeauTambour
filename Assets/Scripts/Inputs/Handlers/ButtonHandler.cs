@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewButtonHandler", menuName = "Beau Tambour/Handlers/Button")]
+    [CreateAssetMenu(fileName = "NewButtonHandler", menuName = "Beau Tambour/Inputs/Handlers/Button")]
     public class ButtonHandler : InputHandler<bool>
     {
         public override bool OnPerformed(bool input)

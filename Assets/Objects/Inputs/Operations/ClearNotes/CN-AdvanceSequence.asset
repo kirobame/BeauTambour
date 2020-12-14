@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e240a21e315a419b90121e26cb7a09d6, type: 3}
+  m_Name: CN-AdvanceSequence
+  m_EditorClassIdentifier: 
+  sequence: {fileID: 11400000, guid: 23f7b2fe260a924408d3663537bd5d30, type: 2}
+  groupIndex: 1
+  key: 2

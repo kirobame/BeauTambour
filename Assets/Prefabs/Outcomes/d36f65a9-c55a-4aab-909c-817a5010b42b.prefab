@@ -58,6 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d945ce4d54841f3946366b3790d4d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trim: 1
+  trimRange: {x: 0, y: 0}
   reference:
     encounterIndex: 1
     id: Mc.w.Is

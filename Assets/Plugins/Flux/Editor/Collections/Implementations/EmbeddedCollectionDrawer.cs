@@ -93,13 +93,13 @@ namespace Flux.Editor
 
                 var elementRect = headerRect;
                 elementRect.x -= 14f;
-                elementRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 3f;
+                elementRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2f;
 
                 EditorGUI.indentLevel++;
                 while (iterator.NextVisible(false))
                 {
                     EditorGUI.PropertyField(elementRect, iterator);
-                    elementRect.y += EditorGUI.GetPropertyHeight(iterator) + EditorGUIUtility.standardVerticalSpacing * 3f;
+                    elementRect.y += EditorGUI.GetPropertyHeight(iterator) + EditorGUIUtility.standardVerticalSpacing * 2f;
                 }
                 EditorGUI.indentLevel--;
             }
@@ -147,7 +147,7 @@ namespace Flux.Editor
                 var iterator = serializedObject.GetIterator();
                 iterator.NextVisible(true);
 
-                while (iterator.NextVisible(false)) height += EditorGUI.GetPropertyHeight(iterator) + EditorGUIUtility.standardVerticalSpacing * 3f;
+                while (iterator.NextVisible(false)) height += EditorGUI.GetPropertyHeight(iterator) + EditorGUIUtility.standardVerticalSpacing * 2f;
             }
             
             return height;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [IconIndicator(-1933036960013795040), CreateAssetMenu(fileName = "NewAttributeGenerator", menuName = "Beau Tambour/Inputs/Attribute Generator")]
+    [IconIndicator(-1933036960013795040), CreateAssetMenu(fileName = "NewAttributeGenerator", menuName = "Beau Tambour/Deprecated/Attribute Generator")]
     public class CompoundAttributeGenerator : ScriptableObject
     {
         [SerializeField] private NoteAttributeGenerator[] subGenerators;

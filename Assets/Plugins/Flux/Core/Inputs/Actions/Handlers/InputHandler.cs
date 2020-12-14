@@ -5,16 +5,16 @@ using UnityEngine.InputSystem;
 
 namespace Flux
 {
-    public abstract class InputHandler : ScriptableObject
+    public abstract class InputHandler : ScriptableObject, IBindable
     {
         public event Action<EventArgs> onStart;
         public event Action<EventArgs> onUpdate;
         public event Action<EventArgs> onEnd;
         
         protected InputAction bindedAction;
-        protected OperationHandler handler;
+        protected MonoBehaviour hook;
 
-        public virtual void Initialize(OperationHandler handler) => this.handler = handler;
+        public virtual void Initialize(MonoBehaviour hook) => this.hook = hook;
         protected virtual void OnDestroy() => Unbind();
         
         public virtual void Bind(InputAction inputAction)
@@ -47,9 +47,9 @@ namespace Flux
         private ActionCallbacks<InputAction.CallbackContext> inputCallbacks;
         protected Phase phase = Phase.Canceled;
 
-        public override void Initialize(OperationHandler handler)
+        public override void Initialize(MonoBehaviour hook)
         {
-            base.Initialize(handler);
+            base.Initialize(hook);
             inputCallbacks = new ActionCallbacks<InputAction.CallbackContext>()
             {
                 onStart = ctxt => OnStarted((TInput) Convert.ChangeType(ctxt.ReadValueAsObject(), typeof(TInput))),

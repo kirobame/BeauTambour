@@ -7,13 +7,32 @@ using Event = Flux.Event;
 
 namespace BeauTambour
 {
+   
     public class Helper : MonoBehaviour
     {
-        [SerializeField] private TextMeshPro textMesh;
+        [ContextMenuItem("Execute", "Process")]
+        [SerializeField] private TextAsset asset;
 
-        void Update()
+        public void Process()
         {
-            Debug.Log($"{textMesh.textInfo.lineInfo[0].maxAdvance} / {textMesh.textInfo.lineCount}");
+            var sheet = new Sheet();
+            sheet.Process(asset.text);
+
+            var runtimeSheet = new RuntimeSheet();
+            runtimeSheet.Process(sheet);
+
+            foreach (var key in runtimeSheet.ColumnKeys["Dialogues"])
+            {
+                Debug.Log(key);
+            }            
+            
+            Debug.Log( runtimeSheet["Dialogues", SupportedLanguage.Français.ToString(), "S1"]);
+            
+            var data = runtimeSheet["Dialogues", SupportedLanguage.Français.ToString(), "S1"];
+            var dialogue = Dialogue.Parse(data);
+           
+            Debug.Log(data);
+            Debug.Log(dialogue);
         }
     }
 }

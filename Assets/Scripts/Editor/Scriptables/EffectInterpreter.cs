@@ -7,7 +7,7 @@ namespace BeauTambour.Editor
 {
     public abstract class EffectInterpreter<T> : OutcomeInterpreter where T : Effect
     {
-        protected override void Interpret(string data, Outcome outcome, Sequencer sequencer)
+        public override void Interpret(string data, Outcome outcome, Sequencer sequencer)
         {
             var effect = sequencer.AddComponent<T>();
             HandleEffect(data, sequencer, effect);

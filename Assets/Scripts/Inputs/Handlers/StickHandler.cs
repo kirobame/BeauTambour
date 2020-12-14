@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    [CreateAssetMenu(fileName = "NewStickHandler", menuName = "Beau Tambour/Handlers/Stick")]
+    [CreateAssetMenu(fileName = "NewStickHandler", menuName = "Beau Tambour/Inputs/Handlers/Stick")]
     public class StickHandler : ContinuousHandler<Vector2>
     {
         public override bool OnStarted(Vector2 input)
