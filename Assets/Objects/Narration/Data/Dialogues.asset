@@ -23,176 +23,173 @@ MonoBehaviour:
     - "\u24B8-Priority"
     - "\u24B8-Emotion"
     - "\u24B8-Keep"
+    - "\u24B8-Needed Musician"
     - "\u24B8-Data"
     - "\u24C7-Default"
-    - '[Isabelle]-Bof.'
-    - '[Isabelle]-Meh.'
+    - '[Cat]-Bof.'
+    - '[Cat]-Meh.'
     - 0
     - None
     - TRUE
-    - 
+    - None
+    - Masks:Default/None;
     - "\u24C7-Pr.Jy"
-    - '[Isabelle]-Non, pas de la joie.'
-    - '[Isabelle]-No, t''was not joy.'
+    - '[Cat]-Non, pas de la joie.'
+    - '[Cat]-No, t''was not joy.'
     - 1
     - Joy
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Pr.Tr"
-    - '[Isabelle]-Non, pas de la confiance.'
-    - '[Isabelle]-No, t''was not trust.'
+    - '[Cat]-Non, pas de la confiance.'
+    - '[Cat]-No, t''was not trust.'
     - 1
     - Trust
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Pr.Fr"
-    - '[Isabelle]-Non, pas de la peur.'
-    - '[Isabelle]-No, t''was not fear.'
+    - '[Cat]-Non, pas de la peur.'
+    - '[Cat]-No, t''was not fear.'
     - 1
     - Fear
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Pr.Sr"
-    - '[Isabelle]-Non, pas de la surprise.'
-    - '[Isabelle]-No, t''was not surprise.'
+    - '[Cat]-Non, pas de la surprise.'
+    - '[Cat]-No, t''was not surprise.'
     - 1
     - Surprise
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Pr.Sd"
-    - '[Isabelle]-Non, pas de la tristesse.'
-    - '[Isabelle]-No, t''was not sadness.'
+    - '[Cat]-Non, pas de la tristesse.'
+    - '[Cat]-No, t''was not sadness.'
     - 1
     - Sadness
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Pr.Ds"
-    - "[Isabelle]-Non, pas du d\xE9go\xFBt."
-    - '[Isabelle]-No, t''was not disgust.'
+    - "[Cat]-Non, pas du d\xE9go\xFBt."
+    - '[Cat]-No, t''was not disgust.'
     - 1
     - Disgust
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Pr.Ang"
-    - "[Isabelle]-Non, pas de la col\xE8re."
-    - '[Isabelle]-No, t''was not anger.'
+    - "[Cat]-Non, pas de la col\xE8re."
+    - '[Cat]-No, t''was not anger.'
     - 1
     - Anger
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Pr.Ant"
-    - '[Isabelle]-Non, pas de l''anticipation.'
-    - '[Isabelle]-No, t''was not anticipation'
+    - '[Cat]-Non, pas de l''anticipation.'
+    - '[Cat]-No, t''was not anticipation'
     - 1
     - Anticipation
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Sd.Lv"
-    - '[Isabelle]-Non, pas de l''amour.'
-    - '[Isabelle]-No, t''was not love.'
+    - '[Cat]-Non, pas de l''amour.'
+    - '[Cat]-No, t''was not love.'
+    - 1
+    - Love
+    - FALSE
+    - None
+    - Masks:Emotion/Default;
+    - "\u24C7-Sd.Sb"
+    - '[Cat]-Non, pas de la soumission.'
+    - '[Cat]-No, t''was not submission.'
     - 1
     - Submission
     - FALSE
-    - 
-    - "\u24C7-Sd.Sb"
-    - '[Isabelle]-Non, pas de la soumission.'
-    - '[Isabelle]-No, t''was not submission.'
+    - None
+    - Masks:Emotion/Default;
+    - "\u24C7-Sd.Ds"
+    - "[Cat]-Non, pas de la d\xE9sapprobation."
+    - '[Cat]-No, t''was not disapproval.'
     - 1
     - Disapproval
     - FALSE
-    - 
-    - "\u24C7-Sd.Aw"
-    - '[Isabelle]-Non, pas de l''effroi respectueux.'
-    - '[Isabelle]-No, t''was not awe.'
-    - 1
-    - Remorse
-    - FALSE
-    - 
-    - "\u24C7-Sd.Ds"
-    - "[Isabelle]-Non, pas de la d\xE9sapprobation."
-    - '[Isabelle]-No, t''was not disapproval.'
-    - 1
-    - Contempt
-    - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Sd.Rm"
-    - '[Isabelle]-Non, pas du remord.'
-    - '[Isabelle]-No, t''was not remorse.'
+    - '[Cat]-Non, pas du remord.'
+    - '[Cat]-No, t''was not remorse.'
     - 1
     - Remorse
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Sd.Ct"
-    - "[Isabelle]-Non, pas du m\xE9pris."
-    - '[Isabelle]-No, t''was not contempt.'
+    - "[Cat]-Non, pas du m\xE9pris."
+    - '[Cat]-No, t''was not contempt.'
     - 1
     - Contempt
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Sd.Ag"
-    - "[Isabelle]-Non, pas de l'agressivit\xE9."
-    - '[Isabelle]-No, t''was not aggressivity.'
+    - "[Cat]-Non, pas de l'agressivit\xE9."
+    - '[Cat]-No, t''was not aggressivity.'
     - 1
     - Aggressiveness
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-Sd.Op"
-    - "[Isabelle]-C'est \xE7a! De l'optimisme."
-    - '[Isabelle]-Yes Exactly! It was optimism that i felt.'
+    - "[Cat]-C'est \xE7a! De l'optimisme."
+    - '[Cat]-Yes Exactly! It was optimism that i felt.'
     - 1
     - Optimism
     - FALSE
-    - 
-    - "\u24C7-Jn.w.Is"
-    - '[JeanGuy]-Bonjour, je m''apelle <wave>JeanGuy</wave>.
-
-      [Isabelle]-Salut
-      JeanGuy.'
-    - '[JeanGuy]-Hello, my name is <wave>JeanGuy</wave>.
-
-      [Isabelle]-Sup JeanGuy.'
-    - 2
     - None
-    - FALSE
-    - 
+    - Masks:Emotion/Default;
     - "\u24C7-Mc.w.Is"
-    - '[Michelle]-Bonjour, je m''apelle <wave>Michelle</wave>.
+    - '[Mouse]-Bonjour, je m''apelle <wave>Michelle</wave>.
 
-      [Isabelle]-Salut
-      Michelle.'
-    - '[Michelle]-Hello, my name is Michelle.<?E:Debug/Joy,1,FALSE/Michelle''s message>
+      [Cat]-Salut Michelle.'
+    - '[Mouse]-Hello, my name is Michelle.<?E:Debug/Joy,1,FALSE/Michelle''s message>
       Very cool name, i know.
 
-      [Isabelle]-Sup Michelle.'
+      [Cat]-Sup Michelle.'
     - 2
     - None
     - FALSE
-    - 
+    - Mouse
+    - Masks:Conversation/Emotion, Default;
     - "\u24C7-Rr.w.Is"
-    - '[Rory]-Bonjour, je m''apelle<wave>Rory</wave>.
+    - '[Bird]-Bonjour, je m''apelle<wave>Rory</wave>.
 
-      [Isabelle]-Salut Rory.'
-    - '[Rory]-Hello, my name is<?E:Vfx/Anger,1,TRUE/Null> <wave>Rory</wave>.
+      [Cat]-Salut Rory.'
+    - '[Bird]-Hello, my name is<?E:Vfx/Anger,1,TRUE/Null> <wave>Rory</wave>.
 
-      [Isabelle]-Sup
+      [Cat]-Sup
       Rory.'
     - 2
     - None
     - FALSE
-    - 
-    - "\u24C7-Vn.w.Is"
-    - '[Vincent]-Bonjour, je m''apelle <wave>Vincent</wave>.
+    - Bird
+    - Masks:Conversation/Emotion, Default;
+    - "\u24C7-B.Spe"
+    - "[Bird]-J'suis en <shake>col\xE8re</shake>!.\n[Cat]-Euh d'accord."
+    - '[Bird]-I''m <shake>angry</shake>!.
 
-      [Isabelle]-Salut
-      Vincent.'
-    - '[Vincent]-Hello, my name is <wave>Vincent</wave>.
-
-      [Isabelle]-Sup Vincent.'
+      [Cat]-Euh ok.'
     - 2
     - None
     - FALSE
-    - 
-    size: {x: 7, y: 22}
+    - None
+    - Masks:Conversation/Emotion, Default;MEPair:Bird/Anger;
+    size: {x: 8, y: 20}
   - name: Sample
     version: 1.0.0
     array:
@@ -202,736 +199,52 @@ MonoBehaviour:
     - "\u24B8-Priority"
     - "\u24B8-Emotion"
     - "\u24B8-Keep"
+    - "\u24B8-Needed Musician"
     - "\u24B8-Data"
     - "\u24C7-Default"
-    - '[Rory]-Blah.'
-    - '[Rory]-Bleh.'
+    - '[Cat]-Blah.'
+    - '[Cat]-Bleh.'
     - 0
     - Joy
     - TRUE
-    - 
+    - None
+    - Masks:Default/None;
     - "\u24C7-S1"
-    - "[Vincent]-Un poisson peut pas parler.\nJe le sais parceque ma m\xE8re me l'as
-      dit!\n//Vraiment je devrais la remercier plus souvent.\n[Michelle]-Incroyable
-      (Yeux \xE9merveill\xE9s)!\n[Vincent]-Exactement, je suis si heureux qu'on se
-      comprennes."
-    - '[Vincent]-A fish can''t talk.
+    - "[Cat]-Un poisson peut pas parler.\nJe le sais parceque ma m\xE8re me l'as
+      dit!\n//Vraiment je devrais la remercier plus souvent.\n[Mouse]-Incroyable
+      (Yeux \xE9merveill\xE9s)!\n[Cat]-Exactement, je suis si heureux qu'on se comprennes."
+    - '[Cat]-A fish can''t talk.
 
       I know beacause my mother told me so!
 
       //I
       should thank her more often.
 
-      [Michelle]-Amazing (With shining eyes)!
+      [Mouse]-Amazing (With shining eyes)!
 
-      [Vincent]-Exactly,
+      [Cat]-Exactly,
       I am so happy that we''re able to understand each other.'
     - 1
     - Sadness
     - FALSE
-    - 
+    - None
+    - Masks:Emotion/Default;
     - "\u24C7-S2"
-    - '[Rory]-D''ailleurs, c''est pareil pour les castors.
+    - '[Bird]-D''ailleurs, c''est pareil pour les castors.
 
-      [Michelle]-Woaw!!!
+      [Mouse]-Woaw!!!
 
-      [Rory]-(Riant)
+      [Bird]-(Riant)
       Mec, Trop marrant.'
-    - '[Rory]-Actually, it''s the same for beavers.
+    - '[Bird]-Actually, it''s the same for beavers.
 
-      [Michelle]-Woaw!!!
+      [Mouse]-Woaw!!!
 
-      [Rory]-(Laughing)
+      [Bird]-(Laughing)
       Dude, so funny.'
     - 1
     - Anger
     - FALSE
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - FALSE
-    - 
-    - Chpt2_Part1_Joie_Chat
-    - "[Chat]-Un morrceau bien joyeux, \nTe moques-tu de mon malheurr ? \n[Oiseau]-Pourquoi
-      ce reproche, \nVous n'\xEAtes pas d'humeur ? \n[Chat]-Sshhh ! Vous plaisantez
-      !? "
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleJoie
-    - Chpt2_Part1_Peur_Chat
-    - "[Chat]-Mon instinct me dicte la peurr, \nMais mon c\u0153urr \xE9prrouve autrre
-      chose...\n[Souris]-Parceque tu peux \xE9prouver !? \nTu te m\xE9tamorphoses! "
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsemblePeur
-    - Chpt2_Part1_Trist_Chat
-    - "[Chat]-(Fond en larme) Il m'a abandonn\xE9 ! \nJe pensais qu'il m'aimait,
-      \nMais un chat ne peut avoirrr de loup pour p\xE8rrre !\n[Oiseau]-Nous avons
-      trouv\xE9, ce que vous avez ! \nDonc c'est le chagrin, qui dans votre bouche,
-      \nLaisse un go\xFBt amer !\n[Chat]-Je ne suis pas m\xE9chant, \nMes crrocs
-      ne sont pas trranchants ! \n//Si seulement jamais je n'eut cette id\xE9e !\n[Souris]-Me
-      voil\xE0 rassur\xE9e... \n//Mais de quoi parles-tu ? \nDe quoi cette tristesse
-      est fond\xE9e ?"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleTristesse
-    - Chpt2_Part1_Dego_Chat
-    - "[Chat]-J'en ai perrdu l'app\xE9tit,\nCe que je rressens n'est que d\xE9go\xFBt...\n[Souris]-Tant
-      mieux si ze ne suis pas \xE0 ton go\xFBt !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleDegout
-    - Chpt2_Part1_Conf_Chat
-    - "[Chat]-J'avais confiance en lui... \nComment-a-t-il pu me jeter ainsi...\n[Souris]-Moi
-      ze comprends pourquoi... Chat \xE9gal soucis !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleConfiance
-    - Chpt2_Part1_Surp_Chat
-    - "[Chat]-Cette musique est admirrable !\n[Souris]-C'est un compliment l\xE0
-      ! incroyable!\n[Chat]-Mais mon coeurr demeurre ind\xE9chiffrrable..."
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleSurprise
-    - Chpt2_Part1_Cole_Chat
-    - "[Chat]-Cessez votrre musique ! Vous m'insupporrtez ! \n[Oiseau]-Encore une
-      fois, c'est un rat\xE9...\n[Chat]-Pas d'humeurr, la musique n'est pas adapt\xE9e
-      !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleColere
-    - Chpt2_Part1_Vigi_Chat
-    - "[Souris]-Aouuuh !\n[Chat]-Qu'est-ce que !? Ce n'est que le vent...\n[Souris]-Hihihi,
-      il tremble !\n[Oiseau]-Arr\xEAtes tes moqueries !\nNous devons l'aider Souris
-      !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleVigilance
-    - Chpt2_Part1_Amou_Chat
-    - "[Chat]-Je l'aimais tant, maintenant je suis vide, je n'ai envie de rrien...\n[Oiseau]-On
-      est bien loin de ce qu'il semble ressentir je le crains.\n[Souris]-En m\xEAme
-      temps... \nUn chat peut-il aimer ? Ces vauriens..."
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleAmour
-    - Chpt2_Part1_Soum_Chat
-    - "[Chat]-Je ne peux rien faire face \xE0 sa furie, je suis \xE0 sa merci..."
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleSoumission
-    - Chpt2_Part1_Cyni_Chat
-    - "[Chat]-Mon loup de p\xE8rre \xE9tait tout pour moi ! Mon mod\xE8le!\n[Oiseau]-On
-      se rapproche de ce qu'il ressent !\n[Chat]-Ca m'a servi de rester fid\xE8le
-      !\n[Souris]-z'ai peur qu'il nous faille encore chercher bon sang !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleCynisme
-    - "Chpt2_Part1_D\xE9sa_Chat"
-    - "[Chat]-(des larmes commences \xE0 couler) Comment peut-il m'abandonner...
-      \n[Oiseau]-Presque, nos notes le font frissonner !\nLa raison de vos tourments,
-      allez-vous cette fois nous donner !?"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleDesapprobation
-    - Chpt2_Part1_Remo_Chat
-    - "[Chat]-(commence \xE0 pleurer) Si seulement je ne lui avais pas donn\xE9,\nSa
-      vue il n'aurrrait pas rrrecouvrr\xE9... \n//Je ne serrrai pas sans foyer...\n[Oiseau]-On
-      s'approche mais il faut encore oeuvrer, \nA force de pleurer il va se noyer
-      !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleRegret
-    - Chpt2_Part1_Mepr_Chat
-    - "[Chat]-Sshhh ! Vous \xEAtes de bien pi\xE8trre musiciens... \nVotre musique
-      me rr\xE9volte... \nJe devrrais peut-\xEAtrre bel et bien vous d\xE9vorrer
-      !\n[Souris]-Nous l'avons mis de mauvais poil, il est enerv\xE9 !\n[Oiseau]-
-      MAIS INSULTE MOI ENCORE ET JE TE \n//*cui-cui-cui-cui*!"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleMepris
-    - Chpt2_Part1_Anx_Chat
-    - "[Chat]-Si jamais il m'attrrape... je dois rrester sur mes garrdes.\n[Souris]-
-      L\xE0 un loup regardes !\n[Chat]-Quoi ! Au secourrs ! O\xF9 \xE7a ? O\xF9 \xE7a
-      ?\n[Souris]-C'est juste une blague !\n[Chat]-Sshhh !!!"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleAnxiete
-    - Chpt2_Part1_Ravi_Chat
-    - "[Chat]-Si seulement mes crrocs pouvaient carrresser ta gorrge... \nJ'imagine
-      sa douceurr...\n[Souris]-Ahahah, que tu es dr\xF4le, quel farceur !\n[Souris]-C'est
-      bien juste pour me faire peur ?"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleRavissement
-    - Chpt2_Part1_Dese_Chat
-    - "[Chat]-(pleure) Que fairre ? Je n'ai nul parrt o\xF9 aller... Si seulement...\n[Oiseau]-Nous
-      ne sommes pas loin de savoir son sentiment..."
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleDesespoir
-    - Chpt2_Part1_Hont_Chat
-    - "[Chat]-Perdu, d\xE9boussol\xE9 devant une Souris et un Oiseau... \nJe pr\xE9f\xE8re
-      encore \xEAtre d\xE9vor\xE9.\n[Souris]-Oh oui ! Z'aurais ador\xE9 !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleHonte
-    - Chpt2_Part1_Incr_Chat
-    - "[Chat]-(des larmes commences \xE0 couler) Je pensais qu'il m'aimait, je me
-      leurrrais...\n[Souris]-Pas loin, notre air le fait pleurer !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleDeception
-    - Chpt2_Part1_Outr_Chat
-    - "[Chat]-Une sourris qui ose me rrr\xE9conforrter !?\n[Souris]- Pourquoi s'emporter
-      ? \nOn ne fait que parler !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleOutrage
-    - Chpt2_Part1_Fier_Chat
-    - "[Chat]-La musique de mon p\xE8rre est bien plus belle que \xE7a !\nC'\xE9tait
-      le meilleurr, il chantait pour moi.\nMaintenant le vent est ma seule chanson.\n[Souris]-En
-      voil\xE0 des fa\xE7ons !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleFierte
-    - Chpt2_Part1_Agre_Chat
-    - "[Chat]-C'est quoi cette musique !? Changez tout de suite !\n[Souris]-Son poil
-      s'h\xE9risse ! Ce n'est pas une r\xE9ussite ! \nChangeons de musique ou prenons
-      la fuite !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleAgressivite
-    - Chpt2_Part1_Opti_Chat
-    - "[Chat]-Je suis exil\xE9, sans foyer...\nSans avenirr, le malheurr m'a foudrroy\xE9...\n[Oiseau]-En
-      voil\xE0 des mani\xE8res ! \nTr\xE8s bien, nous changeons d'air !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleOptimisme
-    - Chpt2_Part1_Curi_Chat
-    - "[Chat]-Quelle est cette \xE9trrange m\xE9lodie !\n[Oiseau]-Mais quel est donc
-      ton ressenti!? \nNous le trouverons, je pr\xE9dis !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleCuriosite
-    - Chpt2_Part1_Domi_Chat
-    - "[Chat]-Je n'ai pas besoin de vous !\nJe suis chat garrrou !\nDe cette forr\xEAt
-      je suis le ma\xEEtrre !\n[Oiseau]-Voyons, cessez de para\xEEtre !\nVotre mal
-      il faut admettre !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleDominance
-    - Chpt2_Part1_Pess_Chat
-    - "[Chat]-(pleure) Je n'ai nul parrt o\xF9 dorrmirr... \nJe suis destin\xE9 \xE0
-      \xEAtrre un chat d'\xE9gout... Si seulement...\n[Souris]-Oui, nous allons r\xE9ussir,
-      \nEt peut-\xEAtre qu'ensuite je serai plus pour lui qu'un aliment !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsemblePessimime
-    - Chpt2_Part1_Espo_Chat
-    - "[Chat]-Votre m\xE9lodie ne peut m'atteindrre, je suis d\xE9sesp\xE9rr\xE9...\n[Oiseau]-
-      A ce rythme il va retourner errer...\nSes \xE9motions nous allons lib\xE9rer
-      !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleEspoir
-    - Chpt2_Part1_Nost_Chat
-    - "[Chat]-(entrain de pleurer) Je me souviens quand il m'a apprris \xE0 hurler...\n[Oiseau]-Il
-      est profond\xE9ment plong\xE9\nDans un souvenir refoul\xE9 !\n[Souris]-Presque,
-      pas le moment de reculer !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - EnsembleNostalgie
-    - Chpt2_Part1_Joie_Sour
-    - "[Souris]-Z\u2019adore zouer ce morceau, z\u2019ai envi de chanter !\n[Chat]-
-      Piti\xE9 non ! laisse tes \xAB ze \xBB dans cette bouche tourrment\xE9e !"
-    - 
-    - 11
-    - Joy
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Peur_Sour
-    - "[Souris]-On dirait que t\u2019as peur !\n[Chat]-De moi un loup est pr\xE9dateurr
-      !\n[Souris]-Blabla\u2026 Oui et bien \xAB de moi un chat est pr\xE9dateur \xBB
-      !"
-    - 
-    - 11
-    - Fear
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Trist_Sour
-    - "[Souris]-Z\u2019ai une histoire qui m\u2019vient avec ces notes !\n[Chat]-Piti\xE9,
-      une belle histoirre, une rr\xE9conforrtante, une qui rr\xE9chauffe !\n[Souris]-Il
-      \xE9tait une fois un chat seul et sans potes\u2026\n[Chat]-..."
-    - 
-    - 11
-    - Sadness
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dego_Sour
-    - "[Souris]-C\u2019est vrai que vous vous lavez avec vos langues et tout ?\n[Chat]-Contrrairrement
-      aux rrats,\nNous sommes en tout temps prroprres parrtout !\n[Souris]-Beurk\u2026\n[Chat]-Sshhhh
-      !"
-    - 
-    - 11
-    - Disgust
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Conf_Sour
-    - "[Souris]-Z\u2019ai rencontr\xE9 un loup un zour, il ne m\u2019a pas manz\xE9
-      !\n[Chat]-Vois-tu ! Nous ne sommes pas tous des b\xEAtes,\nCerrtains ont de
-      bonnes t\xEAtes !\n[Souris]-C\u2019est mon fr\xE8re qu\u2019il a manz\xE9\u2026\n[Chat]-Ah..."
-    - 
-    - 11
-    - Trust
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Surp_Sour
-    - "[Souris]-Ze ne savais pas que \xE7a pouvait existait un chat-loup !\n[Chat]-Tu
-      es surprrise ? \nAlorrs que tu es \xE0 la fois verrte et sourris !\n[Souris]-Ah
-      oui ! Mais toi tu es en m\xEAme temps chat-loup et roux !\n"
-    - 
-    - 11
-    - Surprise
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Cole_Sour
-    - "[Souris]-Z\u2019ai envi de frapper mon fr\xE8re !\n[Oiseau]-Souris que dis-tu
-      !? \nPourquoi ces soucis ? \nSurtout si soudain !\n[Souris]-Ces notes remontent
-      mon pass\xE9 zudiciaire\u2026\n[Oiseau]-Quoi !?"
-    - 
-    - 11
-    - Anger
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial1_Sour
-    - "[Souris]-T\u2019es s\xFBr que tu ne veux pas partir manzer d\u2019autres souris
-      ? \nZe suis pas bien grasse\u2026\n[Chat]-N\u2019ais crrainte, j'ai d'autres
-      soucis. \nLe mis\xE9rrable chat que je suis est en disgrr\xE2ce\u2026"
-    - 
-    - 10
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial2_Sour
-    - "[Souris]-Chat ? Ze pensais que t\u2019\xE9tais un loup, faut savoir ce que
-      t\u2019es !\n[Chat]-Je le crroyais aussi\u2026 Mais me voil\xE0 rrejet\xE9\u2026"
-    - 
-    - 9
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial3_Sour
-    - "[Souris]-Comment \xE7a sfait que t\u2019es pas un loup ? \nT\u2019as dit que
-      ton p\xE8re en \xE9tait un !\n[Chat]-Pas mon vrrai p\xE8rre, j\u2019\xE9tais
-      perrdu surr le coup, \nle loup m\u2019a rrecueilli un matin !"
-    - 
-    - 8
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial4_Sour
-    - "[Souris]-Faut voir pour croire ! Un loup qui accepte un chat pour \xEAtre
-      p\xE8re !\n[Chat]-C\u2019est justement le point\u2026 Lui ne voyait pas, il
-      \xE9tait sans rep\xE8rres."
-    - 
-    - 7
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial5_Sour
-    - "[Souris]-S\u2019il ne voyait pas il sentait : Un chat \xE7a fait fr\xE9mir
-      les moustaches !\n[Chat]-Sshhhhh ! Tu veux que je me f\xE2che !? \nSache que
-      je me lave, que je suis sans taches ! "
-    - 
-    - 6
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial6_Sour
-    - "[Souris]-Avec ta langue tu te laves ! Et on dit les Souris d\xE9go\xFBtantes\u2026\n[Chat]-Sshhhh
-      ! Tu prr\xE9f\xE8rres \xEAtre rragoutante ?"
-    - 
-    - 5
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial7_Sour
-    - "[Souris]-Pourquoi t\u2019es roux, alors que ton p\xE8re est gris t\u2019as
-      dit tout \xE0 l\u2019heure ?\n[Chat]-Je l\u2019ai d\xE9j\xE0 rr\xE9v\xE9l\xE9
-      il me semble, le loup m\u2019a \xE9lev\xE9 mais je suis n\xE9 ailleurrs ! "
-    - 
-    - 4
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial8_Sour
-    - "[Souris]-Toujours se m\xE9fier des chats, mais alors les chats roux\u2026\n[Chat]-J\u2019ai
-      connu une sourris verrte, c'est fou !\nElle courrait dans l\u2019herrbe avant
-      de tomber sur nous !"
-    - 
-    - 3
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial9_Sour
-    - "[Souris]-Tu dis que tu connais ma tante Berthe ?\nC\u2019est la seule de la
-      famille \xE0 \xEAtre verte !\n[Chat]-A parrt toi, c\u2019est pourr \xE7a qu\u2019\xE0
-      la forr\xEAt tu as \xE9t\xE9 offerrte ?"
-    - 
-    - 2
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Dial10_Sour
-    - "[Souris]-Moi ? Non ! J\u2019ai piqu\xE9 la noix de mon p\xE8re pendant qu'il
-      dort \nEt je l\u2019ai \xE9chang\xE9e contre un cailloux jaune brillant !\n[Chat]-Tu
-      as chang\xE9 une noix en orrrr !?\nEt ton p\xE8rre n\u2019est pas accueillant
-      ?\n[Souris]-Papa n\u2019\xE9tait pas tr\xE8s content\u2026 \nIl s\u2019y est
-      cass\xE9 une dent."
-    - 
-    - 1
-    - 
-    - FALSE
-    - NoteSouris
-    - Chpt2_Part1_Set1_Sour
-    - "[Souris]-Petit chat sournois !\n[Chat]- Te d\xE9vorrer je devrrais ! Mais
-      je suis trrop en \xE9moi\u2026"
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteSouris
-    - Chpt2_Part1_Set2_Sour
-    - "[Souris]- Pourquoi t\u2019as peur ! Les chats n\u2019ont pas 9 vies ? \n[Chat]-Ce
-      qui reste 8 vies \xE0 subirr sans envie\u2026"
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteSouris
-    - Chpt2_Part1_Set3_Sour
-    - "[Souris]- Eh le loup !\n[Chat]- Je ne veux parrler\u2026\n[Souris]- Il croit
-      vraiment \xEAtre loup ce filou !\n[Chat]-Sshhh ! Je vais t\u2019avaler !"
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteSouris
-    - Chpt2_Part1_Set4_Sour
-    - "[Souris]-Papa m\u2019a toujours dit \xE0 quel point les chats se plaignaient\u2026\n[Chat]-Mon
-      c\u0153urr se larrmoie, dans mes larrmes je me noie\n[Souris]-Il \xE9tait bien
-      renseign\xE9\u2026"
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteSouris
-    - Chpt2_Part1_Set5_Sour
-    - "[Souris]- Ce chat a vraiment un grain\u2026\n//Ou alors il a vraiment du chagrin\n//Je
-      ne sais plus\u2026"
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteSouris
-    - Chpt2_Part1_Joie_Oise
-    - "[Oiseau]-Quitter mon nid la nuit,\nPartir \xE0 l\u2019aventure,\nCroiser un
-      chat qui fuit !\n[Souris]-Qu\u2019est-ce que tu racontes, tu es folle ?\n[Oiseau]-Chanter
-      me met en joie ! Des voyages je raffole !"
-    - 
-    - 11
-    - Joy
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Peur_Oise
-    - "[Souris]-Ca va Oiseau ? Tu parles moins\u2026\n[Oiseau]-Je songe encore aux
-      Musiciens\u2026 \nJ\u2019ai laiss\xE9 les miens pour chanter\u2026 \nS\u2019ils
-      me disent\u2019 que je ne vaux rien\u2026\n[Chat]-Au moins toi, de rr\xE9ussirr
-      tu garrdes espoirr. Moi c\u2019est terrmin\xE9, je suis un vaurrien."
-    - 
-    - 11
-    - Fear
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Trist_Oise
-    - "[Oiseau]-Voir ce chat qui se morfond,\nSes yeux aux couleurs de nuit, \nCa
-      m\u2019attriste au plus profond.\n[Chat]-Sshhh !!! Je me fiche de ta compassion\u2026\n//Mais
-      je suis mis\xE9rrable\u2026 Tu as raison...\n[Oiseau]-Me voil\xE0 \xE9perdue,\nDe
-      larmes son \u0153il luit, \nQu\u2019il aille\u2019 mieux esp\xE9rons !"
-    - 
-    - 11
-    - Sadness
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dego_Oise
-    - "[Oiseau]-Quand je pense \xE0 tous ceux qui de ma voix se gaussaient !\n//Pour
-      ne pas croire en moi ils m\xE9ritent de se faire rosser !\n[Chat]-De mon int\xE9rr\xEAt
-      pour votrre histoirre, il ne faut pas crroirre\u2026\n[Oiseau]-Malotru,\n//Malpoli
-      \n//Sc\xE9l\xE9rat !\n[Souris]-Un rat ? O\xF9 \xE7a ?"
-    - 
-    - 11
-    - Disgust
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Conf_Oise
-    - "[Oiseau]-Je dois avouer, m\xEAme si mon chant est lou\xE9 (ou le sera), j\u2019aime
-      jouer avec vous !\n[Souris]-Eh bien ! M\xEAme si z\u2019ai du mal \xE0 comprendre
-      ce que tu dis, z\u2019t\u2019taimes bien ze l\u2019avoue !\n[Oiseau]-Me comprendre
-      ?\n\xAB z\u2019ai du mal \xE0 comprendre ce que tu dis \xBB aussi !\nMais merci
-      !"
-    - 
-    - 11
-    - Trust
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Surp_Oise
-    - "[Oiseau]-Ouah ! Je sais que c\u2019est moi qui chante,\nMais ma prestation
-      est surprenante !\n[Chat]-Pourr \xEAtrre surrprris je le suis, \xE0 un moment
-      je pensais mes orreilles mourrantes !\n[Oiseau]-Tu n\u2019es qu\u2019un mis\xE9rable
-      chat qui m\xE9rite l\u2019abandon !!!"
-    - 
-    - 11
-    - Surprise
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Cole_Oise
-    - "[Oiseau]-C\u2019est ce morceau, je me rappelle, mon fr\xE8re chantait\u2026\n//Cet
-      esp\xE8ce d\u2019enfoi*cui-cui-cui-cui-cui* mangeur de vers !\n[Souris]-Ahahah,
-      l\xE0 je te retrouve mon pioupiou !\n[Chat]-Et c\u2019est moi qu\u2019on disait
-      fou\u2026"
-    - 
-    - 11
-    - Anger
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial1_Oise
-    - "[Oiseau]-Pour un loup \xE9conduit, vous \xEAtes bien joli\u2026\n[Chat]-SShhh
-      !!! Joli moi ? \nJe suis un loup,\nD\xE9trrompez-vous, \nIci tous fuient devant
-      moi !"
-    - 
-    - 10
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial2_Oise
-    - "[Oiseau]-Vous tentez de grogner, \nMais vous ronronnez, \nQuelle m\xE9lancolie
-      !\n[Chat]-SShhh !!! Arrrr\xEAtez de vous moquer ! \nC\u2019est mon p\xE8rre
-      qui de hurler m\u2019a appris !"
-    - 
-    - 9
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial3_Oise
-    - "[Oiseau]-Votre loup de p\xE8re, \nDe tous vos soucis,\nSemble \xEAtre le rep\xE8re\u2026\n//Avez-vous
-      peur d\u2019\xEAtre attaqu\xE9 \nComm\u2019 Souris d\u2019\xEAtre croqu\xE9e
-      ?\n[Chat]-Oui, mais c\u2019est le quotidien pourr avoirr \xE9t\xE9 exil\xE9
-      de son rrepairre\u2026"
-    - 
-    - 8
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial4_Oise
-    - "[Oiseau]-Ah oui c'est vrai, j\u2019oublie !\nLe monde sans voler, pr\xE9sente
-      des dangers !\n[Chat]-D\xE9trompez-vous, je suis affaibli !\nSi le c\u0153urr
-      ne m\u2019\xE9tait pas si lourrd je pourrrrais sur vous plonger ! "
-    - 
-    - 7
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial5_Oise
-    - "[Oiseau]-Alors qu\u2019y-a-t-il ? Un animal avec un tel poil chatoyant\u2026\n//De
-      la solitude votre c\u0153ur ne doit pas \xEAtre larmoyant !\n[Chat]-D\xE9trrompez-vous,
-      je n\u2019ai que mon p\xE8rre\u2026 Enfin plus rrien maintenant\u2026"
-    - 
-    - 6
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial6_Oise
-    - "[Oiseau]-Pour vous avoir jet\xE9 votre p\xE8re ne voit pas bien\u2026\n[Chat]-L\xE0
-      est le prrobl\xE8me, c\u2019est la vue rrecouvrr\xE9e qu\u2019il m\u2019a exil\xE9
-      !\n[Oiseau]-Eh bien sans ses yeux, \nIl voyait forrt mieux !"
-    - 
-    - 5
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial7_Oise
-    - "[Oiseau]-Quel langage ! Si votre ramage se rapporte \xE0 votre pelage\u2026\n[Souris]-Ah
-      non mais c\u2019est bon l\xE0, t\u2019es vraiment entrain de draguer un chat
-      ?\n[Oiseau]-On ne t\u2019a pas sonn\xE9 Souris, tais-toi !!!\n[Souris]-Je comprends
-      mieux quand tu parles comme \xE7a ! "
-    - 
-    - 4
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial8_Oise
-    - "[Oiseau]-Ne faites pas attention \xE0 Souris,\nVous disiez avant qu\u2019elle
-      ne nous nuise ?\n[Chat]-Je n\u2019ai rien \xE0 redire, de mon histoire c\u2019est
-      la fin, je m\u2019\xE9puise\u2026\n[Oiseau]-Ne soyez pas malheureux,\nC'est
-      peut-\xEAtre le d\xE9but\u2026 d\u2019un chapitre affectueux\u2026"
-    - 
-    - 3
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial9_Oise
-    - "[Oiseau]-Mais d\xEEtes-moi, par quel exploit avez-vous r\xE9ussi \xE0 fuir
-      dans ces bois !\n[Chat]-Mon p\xE8re est lent et vieux, le fuir est ais\xE9\u2026\nLa
-      cime d\u2019un arbre \xE9tait mon alli\xE9."
-    - 
-    - 2
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Dial10_Oise
-    - "[Oiseau]-Vous avez grimp\xE9, quelle riche id\xE9e\u2026\nEt avez-vous un
-      endroit o\xF9 aller ?\n[Chat]-Trrois secondes pour grrimper, \nTrrois jourrs
-      pour descendrre, \nDans l\u2019arrbrre j\u2019\xE9tais coinc\xE9\u2026 \n//Non,
-      nul parrt o\xF9 me rrendre, j\u2019errre,\nJe ne suis plus d\u2019humeurr \xE0
-      avancer\u2026"
-    - 
-    - 1
-    - 
-    - FALSE
-    - NoteOiseau
-    - Chpt2_Part1_Set1_Oise
-    - "[Oiseau]-Pourquoi ne pas nous accompagner\nComme vous n'avez nul part o\xF9
-      aller...\n[Souris]-Et mon avis alors !\n[Chat]-Je pr\xE9f\xE8re encore dormir
-      dehors !"
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteOiseau
-    - Chpt2_Part1_Set2_Oise
-    - "[Oiseau]-Les id\xE9es commencent \xE0 nous faire d\xE9faut ! \nPas facile
-      de trouver ce qu'il vous faut !"
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteOiseau
-    - Chpt2_Part1_Set3_Oise
-    - '[Oiseau]-Nous allons rendre un chat heureux !
-
-      Avec un rythme chalheureux
-      !'
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteOiseau
-    - Chpt2_Part1_Set4_Oise
-    - "[Oiseau]-Votre \xE9motion on trouvera !\nComme on dit, \xE0 bon chat bon rat
-      !\n[Souris]-Quoi ?\n[Chat]-Quoi ?"
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteOiseau
-    - Chpt2_Part1_Set5_Oise
-    - "[Oiseau]-J'adore les myst\xE8res !\n[Chat]-Alors je dois vous plairre...\n[Oiseau]-Vous
-      aveez bien du flair..."
-    - 
-    - 0
-    - 
-    - TRUE
-    - NoteOiseau
-    - Chpt2_Part1
-    - "[Souris]- Attention, ze suis certaine, une chose est entrain de nous flairer,
-      qui est l\xE0 ?\n[Chat]- Ce n'est rrien, ce n'est rrien, juste moi, un loup
-      SShhassant sa prroie ! \n[Oiseau]- Qu'est-ce-que ! A-t-il tout son esprit ?\nLoup-lui
-      ? Il d\xE9lire, il n'est que chat ! \n[Chat]- Moque-toi, moque-toi ! Je n\u2019ai
-      que fairre de tes quolibets ! Mon rrepas ici c\u2019est toi !\n[Souris]- Chat
-      ou loup, j'ai la frousse, pour l\u2019un au l\u2019autre ze n'suis qu'un dessert
-      !\n[Oiseau]- L'effroi t\u2019aveugle,Souris ! \nDe lui, ce petit chat ? \nN'en
-      fait pas un concert !\n//Qu'il nous dise avant d'o\xF9 il vient ! Il semble
-      perdu, tout va bien ?\n[Chat]- SShhh !!! Mon corrps est chat mais mon c\u0153urr
-      est loup !\n//Je suis n\xE9 crraintif, mon p\xE8rre a fait de moi la terrrreurr
-      de ces bois !\n//Alors crraignez crr\xE9atures ! Mi-chat, mi-loup je suis SShhhat-garrou
-      !\n[Souris]- Arr\xEAte \xE7a sfait pas, ze me rend mais \xE9pargne-moi !\n[Oiseau]-
-      Voyez comme il est mignon, il ronronne !\nLui, il est plus chanteurrr que pr\xE9dateurrrr
-      ! \n[Souris]- Facile \xE0 dire pour toi ! C'est pas zuste, tu peux voler !\n[Oiseau]-
-      Chat ou loup dis nous quel est ton malheur !\n//Comment se fait-il que tu sois
-      ici ? Egar\xE9, isol\xE9 !\n[Chat]- J'abandonne... Comment surrvivrre si m\xEAme
-      oiseau et sourris devant moi ne fuient !\n//J\u2019avais un foyer et une famille
-      hierr, je suis seul aujourrd\u2019hui.\n//J\u2019en veux au monde, j\u2019en
-      veux \xE0 lui.\n//Pourr me laisser l\xE0 seul et d\xE9muni\u2026\n//Tant d\u2019ann\xE9es
-      \xE0 apprrendre \xE0 l\u2019aimer, un seul jour pour le ha\xEFrr.\n//Aujourd\u2019hui
-      me voil\xE0 perrdu, laissant le d\xE9sespoirr m\u2019envahirr.\n//Celui qui
-      m\u2019a \xE9lev\xE9 n\u2019y voyait rrien, c\u2019\xE9tait un loup bien \xE2g\xE9\u2026\n//Aujourrd\u2019hui
-      il voit mieux, et ne d\xE9sirre que me manger !\n//SShhh ! Je crrache ma rrage
-      sur ce grrand renarrd grris !\n//Mais me voil\xE0 devant vous, fuyant, tout
-      affam\xE9 et aigrri !\n[Oiseau]- Grenouille, il nous faut l\u2019aider, seul,
-      *couic*, il est condamn\xE9.\n[Souris]- Faut le laisser ce chat, ze suis partante
-      pour l\u2019abandonner !"
-    - 
-    - 1
-    - 
-    - FALSE
-    - 
-    size: {x: 7, y: 78}
+    - None
+    - Masks:Emotion/Default;
+    size: {x: 8, y: 4}

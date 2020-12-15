@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8144991616332815504
+--- !u!114 &-8419438410054654423
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,22 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
-  m_Name: 852b8a46-89e2-4ae9-a187-f5cb1551f349-EmotionCondition
+  m_Name: 161dd588-b020-424e-966b-06f1a5a08edb-EmotionCondition
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: ba244580af4d4c344ae8c225c59972f0, type: 2}
---- !u!114 &-2683792133379138978
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
-  m_Name: 6df68789-85ea-4005-ad1c-01fa475eeee4-PhaseCondition
-  m_EditorClassIdentifier: 
-  joinedIds: Demo
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,12 +25,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
   m_Name: Demo-Pr.Tr
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask: 2
-  successionMask: 4
+  successionMask: 1
   shouldBeRemoved: 1
   conditions:
-  - {fileID: -8144991616332815504}
-  - {fileID: -2683792133379138978}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: ef29ac954d99dea45b0dff860720f58e,
+  - {fileID: 3056429367310808079}
+  - {fileID: -8419438410054654423}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 940f885309e167b4ba5789e6b017a4e5,
     type: 3}
+--- !u!114 &3056429367310808079
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: cefc68ad-5bef-44d3-993f-1a155e1421f3-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: Demo

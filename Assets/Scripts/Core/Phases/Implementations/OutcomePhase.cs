@@ -23,6 +23,8 @@ namespace BeauTambour
         [SerializeField] private InputMapReference mapReference;
         [SerializeField] private Encounter encounter;
         [SerializeField] private int partitionLength;
+
+        [Space, SerializeField] private KeyMelodyRegistry keyMelodyRegistry;
         
         private List<Note> notes;
         private List<NoteAttribute> noteAttributes;
@@ -64,12 +66,31 @@ namespace BeauTambour
         public void CompleteNote()
         {
             if (!IsNoteBeingProcessed) return;
-            
-            if (NoteCount < partitionLength) notes.Add(new Note(this.noteAttributes));
+
+            var note = new Note(this.noteAttributes);
+            if (NoteCount < partitionLength) notes.Add(note);
             else
             {
                 for (var i = 1; i < partitionLength; i++) notes[i - 1] = notes[i];
-                notes[partitionLength - 1] = new Note(this.noteAttributes);
+                notes[partitionLength - 1] = note;
+            }
+
+            var emotion = string.Empty;
+            var musician = string.Empty;
+
+            foreach (var attribute in note.Attributes)
+            {
+                if (attribute is EmotionAttribute emotionAttribute) emotion = emotionAttribute.Emotion.ToString();
+                else if (attribute is MusicianAttribute musicianAttribute) musician = musicianAttribute.Musician.name;
+            }
+
+            if (emotion != string.Empty && musician != string.Empty)
+            {
+                var audioPool = Repository.GetSingle<AudioPool>(Pool.Audio);
+                var audioSource = audioPool.RequestSingle();
+
+                audioSource.clip = keyMelodyRegistry[$"{musician}-{emotion}"];
+                audioSource.Play();
             }
             
             IsNoteBeingProcessed = false;

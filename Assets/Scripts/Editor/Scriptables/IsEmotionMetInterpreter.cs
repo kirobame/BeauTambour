@@ -21,7 +21,7 @@ namespace BeauTambour.Editor
             {
                 var path = AssetDatabase.GUIDToAssetPath(guid);
                 var emotion = AssetDatabase.LoadAssetAtPath<CompoundEmotion>(path);
-                
+                //
                 emotions.Add(emotion.name, emotion);
             }
         }

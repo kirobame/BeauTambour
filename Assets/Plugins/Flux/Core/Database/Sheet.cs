@@ -57,12 +57,12 @@ namespace Flux
                     if (split.Length == 2)
                     {
                         lines[y].Add(split[0]);
-                        
+
                         lines.Add(new List<string>());
                         y++;
                         
                         lines[y].Add(split[1]);
-                        
+
                         advancement = occurence + 1;
                         occurence = data.IndexOf(',', advancement);
 
@@ -73,6 +73,12 @@ namespace Flux
                 lines[y].Add(substring);
 
                 advancement = occurence + 1;
+                if (advancement >= data.Length)
+                {
+                    occurence = -1;
+                    continue;
+                }
+
                 occurence = data.IndexOf(',', advancement);
 
                 if (occurence == -1) lines[y].Add(data.Substring(advancement));
@@ -84,11 +90,11 @@ namespace Flux
             var header = lines[0][0].Split('=');
             name = header[0];
             version = header[1];
-
+            
             var index = 0;
             for (y = 1; y < lines.Count; y++)
             {
-                for (var x = 1; x < lines[y].Count; x++)
+                for (var x = 1; x < size.x + 1; x++)
                 {
                     array[index] = lines[y][x];
                     index++;

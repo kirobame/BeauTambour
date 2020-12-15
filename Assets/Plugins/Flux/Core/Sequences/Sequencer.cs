@@ -12,6 +12,7 @@ namespace Flux
         
         public IReadOnlyList<Effect> Effects => effects;
         [SerializeField] private Effect[] effects;
+        [SerializeField] private bool isUnscaled;
 
         private bool isPlaying;
         private int advancement;
@@ -72,7 +73,7 @@ namespace Flux
             var prolong = true;
             while (prolong)
             {
-                var next = effects[advancement].Evaluate(advancement, effects, Time.deltaTime, out prolong);
+                var next = effects[advancement].Evaluate(advancement, effects, !isUnscaled ? Time.deltaTime : Time.unscaledDeltaTime, out prolong);
                 if (next == advancement) continue;
                 
                 if (next < 0 || next >= effects.Length)

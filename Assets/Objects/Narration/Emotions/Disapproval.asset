@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f59f35691fc4bcdab4bb564361e843f, type: 3}
   m_Name: Disapproval
   m_EditorClassIdentifier: 
-  emotions: 0200000005000000
+  emotions: 0600000004000000

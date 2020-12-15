@@ -29,5 +29,15 @@ namespace BeauTambour
             if (dictionary.TryGetValue(key, out value)) return true;
             else return false;
         }
+
+        public TValue GetSafe(TKey key)
+        {
+            foreach (var keyValuePair in keyValuePairs)
+            {
+                if (keyValuePair.Key.Equals(key)) return keyValuePair.Value;
+            }
+
+            return default;
+        }
     }
 }

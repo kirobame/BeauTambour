@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Linq;
 using Febucci.UI;
 using Febucci.UI.Core;
 using Flux;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Event = Flux.Event;
@@ -12,29 +14,31 @@ namespace BeauTambour
 {
     public class Helper : MonoBehaviour
     {
-        [ContextMenuItem("Execute", "Process")]
-        [SerializeField] private TextAsset asset;
+        [SerializeField] private OutcomeType mask;
+        [SerializeField] private OutcomeType successionMask;
+        
+        [ContextMenuItem("Execute", "Process")] [SerializeField]
+        private string input;
 
         public void Process()
         {
-            var sheet = new Sheet();
-            sheet.Process(asset.text);
-
-            var runtimeSheet = new RuntimeSheet();
-            runtimeSheet.Process(sheet);
-
-            foreach (var key in runtimeSheet.ColumnKeys["Dialogues"])
-            {
-                Debug.Log(key);
-            }            
+            var serializedObject = new SerializedObject(this);
             
-            Debug.Log( runtimeSheet["Dialogues", SupportedLanguage.Français.ToString(), "S1"]);
+            var split = input.Split('/');
             
-            var data = runtimeSheet["Dialogues", SupportedLanguage.Français.ToString(), "S1"];
-            var dialogue = Dialogue.Parse(data);
-           
-            Debug.Log(data);
-            Debug.Log(dialogue);
+            var mask = Enum.Parse(typeof(OutcomeType), split[0]);
+            Debug.Log(mask);
+            
+            var maskProperty = serializedObject.FindProperty("mask");
+            maskProperty.intValue = (int)mask;
+            
+            var successionMask = Enum.Parse(typeof(OutcomeType), split[1]);
+            Debug.Log(successionMask);
+            
+            var successionMaskProperty = serializedObject.FindProperty("successionMask");
+            successionMaskProperty.intValue = (int)successionMask;
+
+            serializedObject.ApplyModifiedProperties();
         }
     }
 }
