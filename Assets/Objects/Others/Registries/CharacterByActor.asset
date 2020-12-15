@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: CharacterByActor
   m_EditorClassIdentifier: 
   pairs:
-  - key: 1
+  - key: 0
     value: {fileID: 11400000, guid: adaf503684cbb2141b10e9501bab0836, type: 2}
-  - key: 2
-    value: {fileID: 11400000, guid: aaa6b55dfb5d5604dac9213301887a51, type: 2}
-  - key: 3
+  - key: 1
     value: {fileID: 11400000, guid: b01b20f9993be474eafac52bfff716ad, type: 2}
-  - key: 4
+  - key: 3
     value: {fileID: 11400000, guid: 03a012dfba0742f4596a9b98b36a1d3c, type: 2}

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace BeauTambour
@@ -10,6 +11,7 @@ namespace BeauTambour
 
         public SpriteRenderer this[int index] => sprites[index];
 
+        public IReadOnlyList<SpriteRenderer> Sprites => sprites;
         [SerializeField] private SpriteRenderer[] sprites;
 
         public override void Set(Color color)

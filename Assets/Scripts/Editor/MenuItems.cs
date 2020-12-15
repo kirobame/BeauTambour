@@ -43,11 +43,11 @@ namespace BeauTambour.Editor
                 var folder = string.Empty;
                 for (var i = 0; i < split.Length - 2; i++) folder += $"{split[i]}/";
                 folder = folder.Remove(folder.Length - 1);
-
+                
                 folders.Add(folder);
                 outcomes.Add(AssetDatabase.LoadAssetAtPath<Outcome>(path));
             }
-
+            
             var sequencerSource = Resources.Load<GameObject>("Prefabs/DialogueSequencer");
             foreach (var keyValuePair in BeauTambourUtilities.DialogueProvider.Sheets)
             {
@@ -63,8 +63,14 @@ namespace BeauTambour.Editor
 
                     var reference = new DialogueReference(keyValuePair.Key, rowKey);
                     var folder = folders.FirstOrDefault(path => path.Split('/').Last() == sheet.Source.Name);
-                    
-                    if (folder != null) InstantiateDialogueOutcome(sheet, reference, $"{folder}/Outcomes", name, sequencerSource);
+
+                    if (folder != null)
+                    {
+                        var path = $"{folder}/Outcomes";
+                        if (!AssetDatabase.IsValidFolder(path)) AssetDatabase.CreateFolder(folder, "Outcomes");
+                        
+                        InstantiateDialogueOutcome(sheet, reference, path, name, sequencerSource);
+                    }
                     else
                     {
                         var path = "Assets/Objects/Narration/Encounters";
@@ -117,11 +123,12 @@ namespace BeauTambour.Editor
             TryFor("Priority", typeof(PriorityInterpreter));
             TryFor("Emotion", typeof(IsEmotionMetInterpreter));
             TryFor("Keep", typeof(RemovalInterpreter));
+            TryFor("Needed Musician", typeof(NeedsMusicianInterpreter));
             
             void TryFor(string key, Type type)
             {
                 var data = sheet["Dialogues", key, rowKey];
-                if (data == string.Empty) return;
+                if (data == string.Empty || data == "None") return;
                 
                 BeauTambourUtilities.OutcomeInterpreters[type].Interpret(data, result.outcome, result.sequencer);
             }

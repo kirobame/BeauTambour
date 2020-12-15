@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8113806237863495415
+--- !u!114 &-8038257478061864482
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
-  m_Name: 454cacb9-d595-49b7-91bf-a209054a97d8-PhaseCondition
+  m_Name: 2884f58d-10d3-4285-a6ab-413cd3433a33-PhaseCondition
   m_EditorClassIdentifier: 
   joinedIds: Demo
 --- !u!114 &11400000
@@ -25,16 +25,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
   m_Name: Demo-Rr.w.Is
   m_EditorClassIdentifier: 
-  priority: 1
+  priority: 2
   mask: 4
-  successionMask: 6
+  successionMask: -1
   shouldBeRemoved: 1
   conditions:
-  - {fileID: 3508596593685582509}
-  - {fileID: -8113806237863495415}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: 377b109e89446b445b647f269817d58f,
+  - {fileID: -8038257478061864482}
+  - {fileID: 2076385800711491833}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 3ddf24173f045f640b490d18d60ef499,
     type: 3}
---- !u!114 &3508596593685582509
+--- !u!114 &2076385800711491833
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d0c2dec15c54f0d8945fb551fbe78e0, type: 3}
-  m_Name: 2fcc8312-8fef-4fc4-9712-2de91d242810-MusicianCondition
+  m_Name: 79357da4-9357-4ec6-8d01-44a77d64ef79-MusicianCondition
   m_EditorClassIdentifier: 
   musician: {fileID: 11400000, guid: b01b20f9993be474eafac52bfff716ad, type: 2}

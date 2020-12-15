@@ -23,13 +23,8 @@ namespace BeauTambour
 
         private void Execute()
         {
-            if (!canClear) return;
-
             var drawOperations = Repository.GetAll<DrawOperation>(Reference.DrawOperation);
             foreach (var drawOperation in drawOperations) drawOperation.End(false);
-            
-            Event.Call(DrawOperation.EventType.OnShapeLoss);
-            canClear = false;
         }
     }
 }

@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2978220282231541596
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
-  m_Name: 56f53fb0-b11c-4db8-b862-d65f2d27de37-EmotionCondition
-  m_EditorClassIdentifier: 
-  target: {fileID: 11400000, guid: e27eb92446293cc419f20f639375fca0, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
   m_Name: Demo-Pr.Ds
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask: 2
-  successionMask: 4
+  successionMask: 1
   shouldBeRemoved: 1
   conditions:
-  - {fileID: -2978220282231541596}
-  - {fileID: 8427102070897841164}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: 4311534153ef65d449e8a88b7d4adee7,
+  - {fileID: 6409756682614024556}
+  - {fileID: 7272991224544114243}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: d0f2421a501737c46a9480cceae6613e,
     type: 3}
---- !u!114 &8427102070897841164
+--- !u!114 &6409756682614024556
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,6 +31,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
-  m_Name: faf17dde-13de-400f-8940-3e4d52d76745-PhaseCondition
+  m_Name: df1ce7b9-2b8c-4f6d-a2e5-5f52a24c29e2-PhaseCondition
   m_EditorClassIdentifier: 
   joinedIds: Demo
+--- !u!114 &7272991224544114243
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
+  m_Name: 4023b14f-c7c4-4fb7-9526-2b251214eb50-EmotionCondition
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: e27eb92446293cc419f20f639375fca0, type: 2}
