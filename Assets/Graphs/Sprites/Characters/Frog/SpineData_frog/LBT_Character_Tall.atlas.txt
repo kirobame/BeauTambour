@@ -5,106 +5,106 @@ format: RGBA8888
 filter: Linear,Linear
 repeat: none
 LBT_character_RIG/images/drum_frog/drum_frog_arm.L
-  rotate: 270
-  xy: 1621, 3
-  size: 220, 116
-  orig: 220, 116
+  rotate: false
+  xy: 994, 126
+  size: 248, 144
+  orig: 248, 144
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_arm.R
   rotate: 270
-  xy: 1513, 73
-  size: 228, 120
-  orig: 228, 120
+  xy: 1781, 126
+  size: 256, 148
+  orig: 256, 148
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_body
   rotate: false
-  xy: 2, 15
-  size: 468, 286
-  orig: 468, 286
-  offset: 0, 0
+  xy: 10, 72
+  size: 495, 311
+  orig: 496, 314
+  offset: 0, 3
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_bowtie
   rotate: false
-  xy: 1165, 8
+  xy: 1230, 331
   size: 116, 50
   orig: 116, 50
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_drum_bottom
-  rotate: 270
-  xy: 436, 14
-  size: 287, 255
-  orig: 287, 255
+  rotate: true
+  xy: 484, 67
+  size: 315, 283
+  orig: 315, 283
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_drum_top
-  rotate: 270
-  xy: 870, 19
+  rotate: false
+  xy: 1589, 87
   size: 239, 170
-  orig: 239, 170
-  offset: 0, 0
+  orig: 267, 198
+  offset: 14, 14
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_eye
   rotate: false
-  xy: 1606, 225
+  xy: 772, 36
   size: 188, 54
   orig: 188, 54
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_hand.L
-  rotate: true
-  xy: 1730, 12
-  size: 125, 98
-  orig: 125, 98
+  rotate: false
+  xy: 1885, 11
+  size: 153, 126
+  orig: 153, 126
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_hand.R
-  rotate: false
-  xy: 1336, 8
-  size: 125, 99
-  orig: 125, 99
+  rotate: true
+  xy: 1909, 230
+  size: 153, 127
+  orig: 153, 127
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_head
   rotate: true
-  xy: 693, 46
-  size: 255, 193
-  orig: 255, 193
-  offset: 0, 0
+  xy: 777, 100
+  size: 283, 207
+  orig: 283, 221
+  offset: 0, 14
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_leg.L
-  rotate: true
-  xy: 961, 4
-  size: 156, 373
-  orig: 156, 373
-  offset: 0, 0
+  rotate: 270
+  xy: 1386, 212
+  size: 170, 385
+  orig: 184, 401
+  offset: 0, 2
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_leg.R
   rotate: true
-  xy: 1026, 114
-  size: 187, 371
-  orig: 187, 371
-  offset: 0, 0
+  xy: 982, 170
+  size: 213, 399
+  orig: 215, 399
+  offset: 2, 0
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_stick.L
   rotate: true
-  xy: 620, 3
-  size: 41, 205
-  orig: 41, 205
-  offset: 0, 0
+  xy: 970, 50
+  size: 68, 226
+  orig: 69, 233
+  offset: 0, 5
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_stick.R
   rotate: true
-  xy: 620, 3
-  size: 41, 205
-  orig: 41, 205
-  offset: 0, 0
+  xy: 1479, 30
+  size: 66, 224
+  orig: 69, 233
+  offset: 1, 3
   index: -1
 LBT_character_RIG/images/drum_frog/drum_frog_strap
-  rotate: 270
-  xy: 1362, 34
+  rotate: 180
+  xy: 1316, 32
   size: 267, 205
   orig: 267, 205
   offset: 0, 0

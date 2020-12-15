@@ -17,8 +17,20 @@ MonoBehaviour:
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: d04828af974f20843abb6bfc1d9de9e4, type: 3}
   skeletonDataModifiers: []
-  fromAnimation: []
-  toAnimation: []
-  duration: []
+  fromAnimation:
+  - small_empty
+  - small_empty
+  - mouse_play
+  - small_talk
+  toAnimation:
+  - mouse_play
+  - small_talk
+  - small_empty
+  - small_empty
+  duration:
+  - 5
+  - 5
+  - 5
+  - 5
   defaultMix: 0.2
   controller: {fileID: 9100000, guid: dbf8953dd6984d6419e650146536abca, type: 2}
