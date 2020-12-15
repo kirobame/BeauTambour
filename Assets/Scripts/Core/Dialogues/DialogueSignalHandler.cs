@@ -37,7 +37,7 @@ namespace BeauTambour
             var clarity = int.Parse(mainArgs[1]);
             var await = bool.Parse(mainArgs[2]);
 
-            currentSignal = signalCollection.Select(category, emotion, clarity);
+            if (!signalCollection.TrySelect(category, emotion, clarity, out currentSignal)) return;
             
             if (await)
             {

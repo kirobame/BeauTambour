@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6473983941500474646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
+  m_Name: 70227ac3-f1f4-46b4-9c02-cf9718e1f99f-EmotionCondition
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 0b8291cfa7f617c4d941da7a782b2217, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
+  m_Name: ChatLoupA-Chpt2_Part1_Surp_Chat
+  m_EditorClassIdentifier: 
+  priority: 12
+  mask: 0
+  successionMask: 0
+  shouldBeRemoved: 1
+  conditions:
+  - {fileID: 4227583881702025809}
+  - {fileID: -6473983941500474646}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: e945f9cf0d01da14394d89c3ab870153,
+    type: 3}
+--- !u!114 &4227583881702025809
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: 186aab1d-5d77-4e45-822a-5420dec566b7-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: ChatLoupA

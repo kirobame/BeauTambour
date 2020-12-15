@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
+  m_Name: ChatLoupA-Chpt2_Part1_Vigi_Chat
+  m_EditorClassIdentifier: 
+  priority: 12
+  mask: 0
+  successionMask: 0
+  shouldBeRemoved: 1
+  conditions:
+  - {fileID: 1704727099919331896}
+  - {fileID: 4991071156810004104}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 883e9619a3e023440b68dabcf6f5a58f,
+    type: 3}
+--- !u!114 &1704727099919331896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: 938c6f5a-5082-4782-baf8-16c664fc963d-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: ChatLoupA
+--- !u!114 &4991071156810004104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
+  m_Name: 7bdbc038-510a-4c59-81d5-e949a4a0c923-EmotionCondition
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 080072e0aca4d994eabd69cbc12edcda, type: 2}

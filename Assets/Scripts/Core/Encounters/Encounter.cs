@@ -16,6 +16,7 @@ namespace BeauTambour
         public Interlocutor Interlocutor => interlocutor;
         
         public IReadOnlyList<Outcome> Outcomes => outcomes;
+        [SerializeField] private Outcome firstOutcome;
         [SerializeField] private Outcome[] outcomes;
 
         [SerializeField] private Character[] characters;
@@ -40,12 +41,21 @@ namespace BeauTambour
             interlocutor.BootUp();
             foreach (var character in characters) character.BootUp();
             
+            firstOutcome.BootUp();
             foreach (var outcome in outcomes) outcome.BootUp();
-
             runtimeOutcomes = new HashSet<Outcome>(outcomes);
+            
             results = new List<Outcome>();
         }
 
+        public void Start()
+        {
+            results.Add(firstOutcome);
+            outcomeAdvancement = 0;
+            
+            results[0].Play(this, new Note[0]);
+            results[0].Sequencer.OnCompletion += OnOutcomeDone;
+        }
         public void Evaluate(Note[] notes)
         {
             if (outcomeAdvancement >= 0) return;
@@ -107,6 +117,8 @@ namespace BeauTambour
             {
                 if (!outcome.IsOperational(this, notes)) continue;
                 results.Add(outcome);
+
+                if (results.Count >= 3) break;
             }
 
             if (!results.Any()) return false;

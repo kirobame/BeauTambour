@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Flux;
@@ -28,9 +29,13 @@ namespace BeauTambour
         private List<Note> notes;
         private List<NoteAttribute> noteAttributes;
 
+        private bool hasBeenRan;
+
         protected override void Awake()
         {
             base.Awake();
+
+            hasBeenRan = false;
             
             Event.Open<Note[]>(EventType.OnNoteCompleted);
             Event.Open(EventType.OnNoteCleared);
@@ -99,11 +104,24 @@ namespace BeauTambour
         public override void Begin()
         {
             base.Begin();
+
             mapReference.Value.Enable();
-            
-            encounter.Evaluate(notes.ToArray());
-            ClearNotes();
+            if (hasBeenRan)
+            {
+                encounter.Evaluate(notes.ToArray());
+                ClearNotes();
+            }
+            else StartCoroutine(DelayedBeginRoutine());
         }
+
+        private IEnumerator DelayedBeginRoutine()
+        {
+            yield return new WaitForEndOfFrame();
+            
+            encounter.Start();
+            hasBeenRan = true;
+        }
+        
         public override void End()
         {
             base.End();

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
+  m_Name: ChatLoupA-Chpt2_Part1_Conf_Oise
+  m_EditorClassIdentifier: 
+  priority: 11
+  mask: 4
+  successionMask: 3
+  shouldBeRemoved: 1
+  conditions:
+  - {fileID: 3624796101794308975}
+  - {fileID: 7243167318875143746}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 3ee173ec3d37ec74d8246d11ca079b8d,
+    type: 3}
+--- !u!114 &3624796101794308975
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: e2fdfe02-635e-4ab2-a46c-2245d7b14a8e-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: ChatLoupA
+--- !u!114 &7243167318875143746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d128a1cacc844d079f5bd5c468cae36d, type: 3}
+  m_Name: 888b02e7-fc66-4aff-800a-7e5684238bd7-MusicianEmotionPairCondition
+  m_EditorClassIdentifier: 
+  musician: {fileID: 11400000, guid: b01b20f9993be474eafac52bfff716ad, type: 2}
+  emotion: 7

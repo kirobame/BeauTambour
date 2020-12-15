@@ -1349,7 +1349,7 @@ MonoBehaviour:
   mapReference:
     asset: {fileID: -944628639613478452, guid: a444952bf6f563a468389bc6c1ee3326, type: 3}
     name: Outcome
-  encounter: {fileID: 11400000, guid: c1affc22075f43b44ac7e7993d09735a, type: 2}
+  encounter: {fileID: 11400000, guid: 9c0ef24787198a94a8921856781e6e95, type: 2}
   partitionLength: 2
 --- !u!1 &318671148
 GameObject:
@@ -8282,8 +8282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phases:
-  - {fileID: 1165440433}
   - {fileID: 310217151}
+  - {fileID: 1165440433}
 --- !u!4 &2068757007
 Transform:
   m_ObjectHideFlags: 0
@@ -9178,6 +9178,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818323546780022708, guid: 11bf4356402f6194c824cdcf39181a51,
+        type: 3}
+      propertyPath: links.Array.data[1].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818323546780022708, guid: 11bf4356402f6194c824cdcf39181a51,
+        type: 3}
+      propertyPath: links.Array.data[2].isEnabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bf4356402f6194c824cdcf39181a51, type: 3}

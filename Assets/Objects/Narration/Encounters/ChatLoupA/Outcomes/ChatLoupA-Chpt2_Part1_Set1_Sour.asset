@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2949338865752207536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0c2dec15c54f0d8945fb551fbe78e0, type: 3}
+  m_Name: 897d72fc-c50b-4475-abf5-452231fb0387-MusicianCondition
+  m_EditorClassIdentifier: 
+  musician: {fileID: 11400000, guid: adaf503684cbb2141b10e9501bab0836, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
+  m_Name: ChatLoupA-Chpt2_Part1_Set1_Sour
+  m_EditorClassIdentifier: 
+  priority: 0
+  mask: 0
+  successionMask: 0
+  shouldBeRemoved: 0
+  conditions:
+  - {fileID: 1526825734105691824}
+  - {fileID: -2949338865752207536}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 48a95f662c126fb4badcb9a58aa9f1d4,
+    type: 3}
+--- !u!114 &1526825734105691824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: ee95c98f-aeae-4ab6-97a0-c6892a0c0c15-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: ChatLoupA

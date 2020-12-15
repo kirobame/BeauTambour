@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2634b91b39f8488c85eb07c24cd584af, type: 3}
   m_Name: RuntimeSettings
   m_EditorClassIdentifier: 
-  language: 1
+  language: 0
+  clarityFailThreshold: 0

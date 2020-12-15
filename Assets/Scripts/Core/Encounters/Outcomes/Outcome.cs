@@ -31,10 +31,11 @@ namespace BeauTambour
         {
             if (!Application.isPlaying) return;
 
+            Debug.Log($"Booting up : {name}");
             var parent = Repository.GetSingle<Transform>(Parent.Outcomes);
             
-            //if (sequencerPrefab == null) Debug.Log(name);
-           /* else*/ runtimeSequencer = Instantiate(sequencerPrefab, parent);
+            if (sequencerPrefab == null) Debug.Log(name);
+            else runtimeSequencer = Instantiate(sequencerPrefab, parent);
         }
 
         public bool IsOperational(Encounter encounter, Note[] notes)

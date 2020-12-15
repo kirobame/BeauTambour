@@ -5,9 +5,9 @@ namespace BeauTambour
     [EnumAddress, TrackEnumReferencing]
     public enum Actor
     {
-        Mouse,
-        Bird,
+        Souris,
+        Oiseau,
         Frog,
-        Cat
+        Chat
     }
 }

@@ -35,5 +35,27 @@ namespace BeauTambour
             var index = Random.Range(0, registry[category][emotion][clarity].Count);
             return registry[category][emotion][clarity][index];
         }
+        public bool TrySelect(string category, Emotion emotion, int clarity, out Signal signal)
+        {
+            signal = default;
+            
+            var runtimeSettings = Repository.GetSingle<RuntimeSettings>(Reference.RuntimeSettings);
+            clarity = runtimeSettings.GlobalClarity > clarity ? runtimeSettings.GlobalClarity : clarity;
+            
+            if (registry.TryGetValue(category, out var subDictionary))
+            {
+                if (subDictionary.TryGetValue(emotion, out var signals))
+                {
+                    if (signals[clarity].Count == 0) return false;
+                    
+                    var index = Random.Range(0, signals[clarity].Count);
+                    signal = signals[clarity][index];
+
+                    return true;
+                }
+                else return false;
+            }
+            else return false;
+        }
     }
 }
