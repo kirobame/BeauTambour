@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actor: 0
   anchor: 0
-  font: {fileID: 11400000, guid: 2951f4977f124f34b91d3ed4d0cb7548, type: 2}
+  font: {fileID: 11400000, guid: eb1fe65780f0f804cbeb803ca1cc0158, type: 2}
   fontColor: {r: 0.08235294, g: 0.09803922, b: 0.03529412, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   letterAudioRegistry: {fileID: 11400000, guid: 6f33f2735eb220543befe59834bf0c20,

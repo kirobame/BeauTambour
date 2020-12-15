@@ -37,8 +37,8 @@ MonoBehaviour:
     - 
     - "\u24C7-Chpt2_Part1_Peur_Chat"
     - "[Chat]-Mon instinct me dicte la peurr, \n<?E:Vfx/Sadness,1,FALSE/><wave>Mais
-      mon c\u0153urr \xE9prrouve autrre chose...</wave>\n[Souris]-Parceque tu peux
-      \xE9prouver !? \nTu te m\xE9tamorphoses!"
+      mon coeurr \xE9prrouve autrre chose...</wave>\n[Souris]-Parceque tu peux \xE9prouver
+      !? \nTu te m\xE9tamorphoses!"
     - 
     - 12
     - Fear
@@ -518,7 +518,7 @@ MonoBehaviour:
     - 
     - "\u24C7-Chpt2_Part1_Set4_Sour"
     - "[Souris]-Papa m\u2019a toujours dit \xE0 quel point les chats se plaignaient\u2026\n[Chat]-<?E:Music/Sadness,3,TRUE/><?E:Music/Sadness,3,TRUE/><wave>Mon
-      c\u0153urr se larrmoie, dans mes larrmes je me noie</wave>\n[Souris]-Il \xE9tait
+      coeurr se larrmoie, dans mes larrmes je me noie</wave>\n[Souris]-Il \xE9tait
       bien renseign\xE9\u2026"
     - 
     - 0
@@ -561,7 +561,7 @@ MonoBehaviour:
     - "[Oiseau]-Voir ce chat qui se morfond,\nSes yeux aux couleurs de nuit, \n<wave>Ca
       m\u2019attriste au plus profond.<wave>\n[Chat]-Sshhh !!! Je me fiche de ta
       compassion\u2026\n//<?E:Vfx/Sadness,3,TRUE/><color=#6FA1D0>Mais je suis mis\xE9rrable\u2026</color>
-      Tu as raison...\n[Oiseau]-Me voil\xE0 \xE9perdue,\nDe larmes son \u0153il luit,
+      Tu as raison...\n[Oiseau]-Me voil\xE0 \xE9perdue,\nDe larmes son oeil luit,
       \nQu\u2019il aille\u2019 mieux esp\xE9rons !"
     - 
     - 11
@@ -648,8 +648,7 @@ MonoBehaviour:
     - "\u24C7-Chpt2_Part1_Dial4_Oise"
     - "[Oiseau]-Ah oui c'est vrai, j\u2019oublie !\nLe monde sans voler, pr\xE9sente
       des dangers !\n[Chat]-D\xE9trompez-vous, je suis affaibli !\n<?E:Music/Sadness,3,TRUE/>Si
-      le c\u0153urr ne m\u2019\xE9tait pas si lourrd je pourrrrais sur vous plonger
-      ! "
+      le coeurr ne m\u2019\xE9tait pas si lourrd je pourrrrais sur vous plonger ! "
     - 
     - 7
     - None
@@ -658,7 +657,7 @@ MonoBehaviour:
     - 
     - "\u24C7-Chpt2_Part1_Dial5_Oise"
     - "[Oiseau]-Alors qu\u2019y-a-t-il ? Un animal avec un tel poil chatoyant\u2026\n//De
-      la solitude votre c\u0153ur ne doit pas \xEAtre larmoyant !\n[Chat]-D\xE9trrompez-vous,
+      la solitude votre coeur ne doit pas \xEAtre larmoyant !\n[Chat]-D\xE9trrompez-vous,
       je n\u2019ai que mon p\xE8rre\u2026 <?E:Vfx/Sadness,3,TRUE/><wave>Enfin plus
       rrien maintenant\u2026</wave>"
     - 
@@ -730,7 +729,7 @@ MonoBehaviour:
     - 0
     - None
     - TRUE
-    - None
+    - Bird
     - 
     - "\u24C7-Chpt2_Part1_Set2_Oise"
     - "[Oiseau]-Les id\xE9es commencent \xE0 nous faire d\xE9faut ! \nPas facile
@@ -740,7 +739,7 @@ MonoBehaviour:
     - 0
     - None
     - TRUE
-    - None
+    - Bird
     - 
     - "\u24C7-Chpt2_Part1_Set3_Oise"
     - '[Oiseau]-Nous allons rendre un chat heureux !
@@ -754,7 +753,7 @@ MonoBehaviour:
     - 0
     - None
     - TRUE
-    - None
+    - Bird
     - 
     - "\u24C7-Chpt2_Part1_Set4_Oise"
     - "[Oiseau]-Votre \xE9motion on trouvera !\nComme on dit, \xE0 bon chat bon rat
@@ -763,7 +762,7 @@ MonoBehaviour:
     - 0
     - None
     - TRUE
-    - None
+    - Bird
     - 
     - "\u24C7-Chpt2_Part1_Set5_Oise"
     - "[Oiseau]-J'adore les myst\xE8res !\n[Chat]-<?E:Vfx/Sadness,1,TRUE/>Alors je
@@ -772,35 +771,35 @@ MonoBehaviour:
     - 0
     - None
     - TRUE
-    - None
+    - Bird
     - 
     - "\u24C7-Chpt2_Part1"
-    - "[Souris]- Attention, ze suis certaine, une chose est entrain de nous flairer,
-      qui est l\xE0 ?\n[Chat]- Ce n'est rrien, ce n'est rrien, juste moi, un loup
-      SShhassant sa prroie ! \n[Oiseau]- Qu'est-ce-que ! A-t-il tout son esprit ?\nLoup-lui
-      ? Il d\xE9lire, il n'est que chat ! \n[Chat]- Moque-toi, moque-toi ! Je n\u2019ai
-      que fairre de tes quolibets ! Mon rrepas ici c\u2019est toi !\n[Souris]- Chat
+    - "[Souris]-Attention, ze suis certaine, une chose est entrain de nous flairer,
+      qui est l\xE0 ?\n[Chat]-Ce n'est rrien, ce n'est rrien, juste moi, un loup
+      SShhassant sa prroie ! \n[Oiseau]-Qu'est-ce-que ! A-t-il tout son esprit ?\nLoup-lui
+      ? Il d\xE9lire, il n'est que chat ! \n[Chat]-Moque-toi, moque-toi ! Je n\u2019ai
+      que fairre de tes quolibets ! Mon rrepas ici c\u2019est toi !\n[Souris]-Chat
       ou loup, j'ai la frousse, pour l\u2019un au l\u2019autre ze n'suis qu'un dessert
-      !\n[Oiseau]- L'effroi t\u2019aveugle,Souris ! \nDe lui, ce petit chat ? \nN'en
+      !\n[Oiseau]-L'effroi t\u2019aveugle, Souris ! \nDe lui, ce petit chat ? \nN'en
       fait pas un concert !\n//Qu'il nous dise avant d'o\xF9 il vient ! Il semble
-      perdu, tout va bien ?\n[Chat]- SShhh !!! Mon corrps est chat mais mon c\u0153urr
+      perdu, tout va bien ?\n[Chat]-SShhh !!! Mon corrps est chat mais mon coeurr
       est loup !\n//Je suis n\xE9 crraintif, mon p\xE8rre a fait de moi la terrrreurr
       de ces bois !\n//Alors crraignez crr\xE9atures ! Mi-chat, mi-loup je suis SShhhat-garrou
-      !\n[Souris]- Arr\xEAte \xE7a sfait pas, ze me rend mais \xE9pargne-moi !\n[Oiseau]-
-      Voyez comme il est mignon, il ronronne !\nLui, il est plus chanteurrr que pr\xE9dateurrrr
-      ! \n[Souris]- Facile \xE0 dire pour toi ! C'est pas zuste, tu peux voler !\n[Oiseau]-
-      Chat ou loup dis nous quel est ton malheur !\n//Comment se fait-il que tu sois
-      ici ? Egar\xE9, isol\xE9 !\n[Chat]- <?E:Music/Sadness,2,TRUE/>J'abandonne...
-      Comment surrvivrre si m\xEAme oiseau et sourris devant moi ne fuient !\n//<?E:Music/Sadness,2,TRUE/>J\u2019avais
+      !\n[Souris]-Arr\xEAte \xE7a sfait pas, ze me rend mais \xE9pargne-moi !\n[Oiseau]-Voyez
+      comme il est mignon, il ronronne !\nLui, il est plus chanteurrr que pr\xE9dateurrrr
+      ! \n[Souris]-Facile \xE0 dire pour toi ! C'est pas zuste, tu peux voler !\n[Oiseau]-Chat
+      ou loup dis nous quel est ton malheur !\n//Comment se fait-il que tu sois ici
+      ? Egar\xE9, isol\xE9 !\n[Chat]-<?E:Music/Sadness,2,TRUE/>J'abandonne... Comment
+      surrvivrre si m\xEAme oiseau et sourris devant moi ne fuient !\n//<?E:Music/Sadness,2,TRUE/>J\u2019avais
       un foyer et une famille hierr, <?E:Vfx/Sadness,1,TRUE/>je suis seul aujourrd\u2019hui.\n//J\u2019en
       veux au monde, j\u2019en veux \xE0 lui.\n//Pourr me laisser l\xE0 seul et d\xE9muni\u2026\n//Tant
       d\u2019ann\xE9es \xE0 apprrendre \xE0 l\u2019aimer, un seul jour pour le ha\xEFrr.\n//Aujourd\u2019hui
       me voil\xE0 perrdu, laissant le d\xE9sespoirr m\u2019envahirr.\n//Celui qui
       m\u2019a \xE9lev\xE9 n\u2019y voyait rrien, c\u2019\xE9tait un loup bien \xE2g\xE9\u2026\n//Aujourrd\u2019hui
       il voit mieux, et ne d\xE9sirre que me manger !\n//SShhh ! Je crrache ma rrage
-      sur ce grrand renarrd grris !\n//<?E:Music/Sadness,2,TRUE/><waveMais me voil\xE0
-      devant vous, fuyant, tout affam\xE9 et aigrri !</wave>\n[Oiseau]- Grenouille,
-      il nous faut l\u2019aider, seul, *couic*, il est condamn\xE9.\n[Souris]- Faut
+      sur ce grrand renarrd grris !\n//<?E:Music/Sadness,2,TRUE/><wave>Mais me voil\xE0
+      devant vous, fuyant, tout affam\xE9 et aigrri !</wave>\n[Oiseau]-Grenouille,
+      il nous faut l\u2019aider, seul, *couic*, il est condamn\xE9.\n[Souris]-Faut
       le laisser ce chat, ze suis partante pour l\u2019abandonner !"
     - 
     - 13

@@ -12,15 +12,19 @@ namespace BeauTambour
     {
         public static Dialogue Parse(string value)
         {
-            value = value.Replace("-", string.Empty);
             var split = value.Split(new char[] {'[', ']'}, StringSplitOptions.RemoveEmptyEntries);
 
             var cues = new List<Cue>();
             for (var i = 0; i < split.Length; i += 2)
             {
                 var actor = (Actor)Enum.Parse(typeof(Actor), split[i]);
-                var texts = split[i + 1].Split(new string[] {"//"}, StringSplitOptions.None);
 
+                var body = split[i + 1];
+                
+                var index = body.IndexOf('-');
+                if (index != -1) body = body.Remove(index, 1);
+                
+                var texts = body.Split(new string[] {"//"}, StringSplitOptions.None);
                 foreach (var text in texts)
                 {
                     var match = Regex.Match(text, "\r\n|\r|\n");

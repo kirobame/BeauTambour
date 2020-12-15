@@ -44,6 +44,8 @@ namespace BeauTambour
 
         [Space, SerializeField] private DialogueBounds bounds; // Bounds used to display text inside
         [SerializeField] private int lineCount = 2; // Max allowed amount of line inside bounds
+        [SerializeField] private float heightReduction;
+        [SerializeField] private float extra;
 
         //--------------------------------------------------------------------------------------------------------------
         
@@ -215,6 +217,8 @@ namespace BeauTambour
             
             var height = bounds.TextMesh.textInfo.lineInfo.First().lineHeight * bounds.TextMesh.textInfo.lineCount;
             height += bounds.TextMesh.margin.y + bounds.TextMesh.margin.w;
+            height -= heightReduction * bounds.TextMesh.textInfo.lineCount;
+            height -= extra * (bounds.TextMesh.textInfo.lineCount - 1);
             
             var maximumWidth = bounds.TextMesh.textInfo.lineInfo.Max(line => line.maxAdvance);
             maximumWidth += bounds.TextMesh.margin.z;
