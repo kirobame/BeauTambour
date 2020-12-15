@@ -1,0 +1,437 @@
+fileFormatVersion: 2
+guid: cfb6d5b7a63ca5945b9c8d5020f3d0ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1458200574919176793
+    second: emote_clear_disgust_spritesheet_0
+  - first:
+      213: 5002925146650707195
+    second: emote_clear_disgust_spritesheet_1
+  - first:
+      213: -5418418140551287538
+    second: emote_clear_disgust_spritesheet_2
+  - first:
+      213: 8933655721295355403
+    second: emote_clear_disgust_spritesheet_3
+  - first:
+      213: -1877282123090416995
+    second: emote_clear_disgust_spritesheet_4
+  - first:
+      213: 4217874996088546279
+    second: emote_clear_disgust_spritesheet_5
+  - first:
+      213: -2899709531253890894
+    second: emote_clear_disgust_spritesheet_6
+  - first:
+      213: -6604197463822102739
+    second: emote_clear_disgust_spritesheet_7
+  - first:
+      213: 5021152593476163072
+    second: emote_clear_disgust_spritesheet_8
+  - first:
+      213: 3121410602072971695
+    second: emote_clear_disgust_spritesheet_9
+  - first:
+      213: -1444839407709898726
+    second: emote_clear_disgust_spritesheet_10
+  - first:
+      213: -6854250753878481635
+    second: emote_clear_disgust_spritesheet_11
+  - first:
+      213: 4681384175008184746
+    second: emote_clear_disgust_spritesheet_12
+  - first:
+      213: -8824327429677889309
+    second: emote_clear_disgust_spritesheet_13
+  - first:
+      213: 2023767870193035349
+    second: emote_clear_disgust_spritesheet_14
+  - first:
+      213: 6628667148765017943
+    second: emote_clear_disgust_spritesheet_15
+  - first:
+      213: 9122562674924307027
+    second: emote_clear_disgust_spritesheet_16
+  - first:
+      213: 4487810891224155181
+    second: emote_clear_disgust_spritesheet_17
+  - first:
+      213: -1874940079887252661
+    second: emote_clear_disgust_spritesheet_18
+  - first:
+      213: -2153179696815712063
+    second: emote_clear_disgust_spritesheet_19
+  - first:
+      213: -500302514764160816
+    second: emote_clear_disgust_spritesheet_20
+  - first:
+      213: 5302299732960997557
+    second: emote_clear_disgust_spritesheet_21
+  - first:
+      213: -7116677925582480711
+    second: emote_clear_disgust_spritesheet_22
+  - first:
+      213: -1474864895422305497
+    second: emote_clear_disgust_spritesheet_23
+  - first:
+      213: -6287289380728213982
+    second: emote_clear_disgust_spritesheet_24
+  - first:
+      213: -6193967799766601245
+    second: emote_clear_disgust_spritesheet_25
+  - first:
+      213: -8734916490892245035
+    second: emote_clear_disgust_spritesheet_26
+  - first:
+      213: 7760991199061550303
+    second: emote_clear_disgust_spritesheet_27
+  - first:
+      213: -6272235372889015513
+    second: emote_clear_disgust_spritesheet_28
+  - first:
+      213: 1578151911095334684
+    second: emote_clear_disgust_spritesheet_29
+  - first:
+      213: -1324391621247784475
+    second: emote_clear_disgust_spritesheet_30
+  - first:
+      213: 5846599336885483186
+    second: emote_clear_disgust_spritesheet_31
+  - first:
+      213: -4527058301368440665
+    second: emote_clear_disgust_spritesheet_32
+  - first:
+      213: -4333754318857378174
+    second: emote_clear_disgust_spritesheet_33
+  - first:
+      213: -1153924118522283227
+    second: emote_clear_disgust_spritesheet_34
+  - first:
+      213: 3239962647232938396
+    second: emote_clear_disgust_spritesheet_35
+  - first:
+      213: 5948363874188292363
+    second: emote_clear_disgust_spritesheet_36
+  - first:
+      213: 8657824886796833400
+    second: emote_clear_disgust_spritesheet_37
+  - first:
+      213: -9181843271785120020
+    second: emote_clear_disgust_spritesheet_38
+  - first:
+      213: 8730214437623632926
+    second: emote_clear_disgust_spritesheet_39
+  - first:
+      213: -6343544630773757721
+    second: emote_clear_disgust_spritesheet_40
+  - first:
+      213: 7598051006828230369
+    second: emote_clear_disgust_spritesheet_41
+  - first:
+      213: 7423446017791508031
+    second: emote_clear_disgust_spritesheet_42
+  - first:
+      213: -1675792709348629978
+    second: emote_clear_disgust_spritesheet_43
+  - first:
+      213: 40849051525051808
+    second: emote_clear_disgust_spritesheet_44
+  - first:
+      213: -2617717343877031744
+    second: emote_clear_disgust_spritesheet_45
+  - first:
+      213: -3937703407681755546
+    second: emote_clear_disgust_spritesheet_46
+  - first:
+      213: 8610056586883760627
+    second: emote_clear_disgust_spritesheet_47
+  - first:
+      213: -238793693639132549
+    second: emote_clear_disgust_spritesheet_48
+  - first:
+      213: 4748242715457847576
+    second: emote_clear_disgust_spritesheet_49
+  - first:
+      213: -906316715658350695
+    second: emote_clear_disgust_spritesheet_50
+  - first:
+      213: -1085489343922148736
+    second: emote_clear_disgust_spritesheet_51
+  - first:
+      213: -2976144699231235217
+    second: emote_clear_disgust_spritesheet_52
+  - first:
+      213: -449660510209708427
+    second: emote_clear_disgust_spritesheet_53
+  - first:
+      213: -7440149719281305987
+    second: emote_clear_disgust_spritesheet_54
+  - first:
+      213: -1364640616037138621
+    second: emote_clear_disgust_spritesheet_55
+  - first:
+      213: 5219058794748699706
+    second: emote_clear_disgust_spritesheet_56
+  - first:
+      213: -8864412826231407564
+    second: emote_clear_disgust_spritesheet_57
+  - first:
+      213: -3520773885752757025
+    second: emote_clear_disgust_spritesheet_58
+  - first:
+      213: 2690446143860753633
+    second: emote_clear_disgust_spritesheet_59
+  - first:
+      213: 3619728964897548388
+    second: emote_clear_disgust_spritesheet_60
+  - first:
+      213: 1840571922175432457
+    second: emote_clear_disgust_spritesheet_61
+  - first:
+      213: -438651832625702584
+    second: emote_clear_disgust_spritesheet_62
+  - first:
+      213: -7977565845740817716
+    second: emote_clear_disgust_spritesheet_63
+  - first:
+      213: 1066326355493095215
+    second: emote_clear_disgust_spritesheet_64
+  - first:
+      213: -6555971361820371763
+    second: emote_clear_disgust_spritesheet_65
+  - first:
+      213: 1640922541381062051
+    second: emote_clear_disgust_spritesheet_66
+  - first:
+      213: -2438889388341559395
+    second: emote_clear_disgust_spritesheet_0
+  - first:
+      213: 2842286200643361670
+    second: emote_clear_disgust_spritesheet_1
+  - first:
+      213: -7514880071475075210
+    second: emote_clear_disgust_spritesheet_2
+  - first:
+      213: 286729293908713773
+    second: emote_clear_disgust_spritesheet_3
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: emote_clear_disgust_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 211
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f7e69e503572ed0800000000000000
+      internalID: -2438889388341559395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_disgust_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 176
+        width: 211
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b975b8d34d17720800000000000000
+      internalID: 2842286200643361670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_disgust_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 211
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677e01af368c5b790800000000000000
+      internalID: -7514880071475075210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_disgust_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 0
+        width: 211
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21a02e06caaaf300800000000000000
+      internalID: 286729293908713773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
