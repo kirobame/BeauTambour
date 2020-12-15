@@ -42,7 +42,7 @@ namespace BeauTambour
         }
         
         private void CacheDialogue()
-        {
+        {           
             if (trim)
             {
                 var value = reference.Value;
