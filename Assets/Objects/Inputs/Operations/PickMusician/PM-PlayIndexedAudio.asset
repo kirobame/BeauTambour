@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: 1
   clips:
-  - {fileID: 8300000, guid: 7cebb3f5be1d35646b45bfc08223bcef, type: 3}
-  - {fileID: 8300000, guid: 38445845817e5d7449999140d9ddee59, type: 3}
-  - {fileID: 8300000, guid: 941c9adbe1d7eaf488fb153d44857ad5, type: 3}
-  - {fileID: 8300000, guid: bfc06cf210ab85344bf918c14171a76a, type: 3}
+  - {fileID: 8300000, guid: a9c79f41b8101674ab9861f74213daf9, type: 3}
+  - {fileID: 8300000, guid: a1179b7c1221dee46894ab92780bcd6d, type: 3}
+  - {fileID: 8300000, guid: a905005e14b34a64f9b9edd62e56b2bd, type: 3}
+  - {fileID: 8300000, guid: b7eb8786e298abd46b1551b20e5e0c0b, type: 3}

@@ -16,3 +16,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3536b962d6443104186e0ab4d196b316, type: 2}
   - {fileID: 11400000, guid: 3b427cc288a113749ab112242583a369, type: 2}
   - {fileID: 11400000, guid: 413565263e2a95f409aa90296e0bbff8, type: 2}
+  successAudio: {fileID: 8300000, guid: b2e705bf328ea944b99812d33c70efac, type: 3}
+  failAudio: {fileID: 8300000, guid: c1f2b406d880e604e999e6fed04786ef, type: 3}

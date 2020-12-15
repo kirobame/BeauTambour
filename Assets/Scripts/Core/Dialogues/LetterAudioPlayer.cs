@@ -2,20 +2,26 @@
 using Febucci.UI;
 using Flux;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Event = Flux.Event;
 
 namespace BeauTambour
 {
     public class LetterAudioPlayer : MonoBehaviour
     {
+        [SerializeField] private InputActionReference skipAction;
         [SerializeField] private TextAnimatorPlayer textAnimatorPlayer;
         [SerializeField] private int gap;
 
         private DialogueManager dialogueManager;
         private int counter;
 
+        private bool hasBegun;
+
         void Awake()
         {
+            hasBegun = false;
+            
             dialogueManager = Repository.GetSingle<DialogueManager>(Reference.DialogueManager);
             Event.Register<int,string>(DialogueManager.EventType.OnNext, OnNewCue);
         }
@@ -27,6 +33,19 @@ namespace BeauTambour
         }
         void OnDisable() => textAnimatorPlayer.onCharacterVisible.RemoveListener(OnCharacterVisible);
 
+        void Update()
+        {
+            if (hasBegun && textAnimatorPlayer.textAnimator.allLettersShown)
+            {
+                Debug.Log("CUE HAS ENDED !");
+                
+                dialogueManager.SpeakingCharacter.Instance.StopTalking();
+                
+                skipAction.action.Enable();
+                hasBegun = false;
+            }
+        }
+        
         private void OnCharacterVisible(char character)
         {
             if (counter <= 0)
@@ -48,6 +67,14 @@ namespace BeauTambour
             else counter--;
         }
 
-        private void OnNewCue(int index, string text) => counter = 0;
+        private void OnNewCue(int index, string text)
+        {
+            dialogueManager.SpeakingCharacter.Instance.BeginTalking();
+            
+            skipAction.action.Disable();
+            hasBegun = true;
+            
+            counter = 0;
+        }
     }
 }

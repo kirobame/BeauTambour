@@ -49,7 +49,6 @@ namespace BeauTambour
         {
             if (advancement >= 2)
             {
-                Debug.Log("Shift");
                 foreach (var activeGroup in activeGroups)
                 {
                     var noteSprite = noteSprites[activeGroup];
@@ -121,7 +120,6 @@ namespace BeauTambour
         {
             var start = cursor.localPosition.x;
             var end = startX + gap * Mathf.Clamp(advancement, 0, 1);
-            Debug.Log(end);
 
             var time = 0f;
             var goal = 0.6f;

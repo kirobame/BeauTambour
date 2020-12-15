@@ -14,7 +14,7 @@ namespace BeauTambour
         where TEnum : Enum 
         where TElement : SequenceElement<TEnum>
     {
-        [SerializeField] private TElement[] elements;
+        [SerializeField] protected TElement[] elements;
         
         private TEnum history;
         private int advancement;
@@ -34,6 +34,7 @@ namespace BeauTambour
                 advancement = groupIndex;
                 history = Combine(history, key);
             }
+            else HandleFailure(history, groupIndex, key);
 
             if (advancement == elements.Length - 1)
             {
@@ -46,5 +47,6 @@ namespace BeauTambour
 
         protected abstract TEnum Combine(TEnum history, TEnum key);
         protected abstract void HandleOutcome(TEnum history);
+        protected abstract void HandleFailure(TEnum history, int groupIndex, TEnum key);
     }
 }

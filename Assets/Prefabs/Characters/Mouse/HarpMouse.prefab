@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9065122105449424455}
   - component: {fileID: 9065122105449424454}
   m_Layer: 0
-  m_Name: Spine Mecanim GameObject (LBT_Character_small)
+  m_Name: HarpMouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

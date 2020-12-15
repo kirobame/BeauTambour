@@ -8,7 +8,10 @@ namespace BeauTambour
     public class GameplaySequence : InputSequence<GameplaySequenceKeys, GameplaySequenceElement>
     {
         public static Musician pickedMusician;
-        //
+
+        [SerializeField] private AudioClip successAudio;
+        [SerializeField] private AudioClip failAudio;
+        
         public override void Initialize(MonoBehaviour hook)
         {
             base.Initialize(hook);
@@ -20,6 +23,12 @@ namespace BeauTambour
         protected override GameplaySequenceKeys Combine(GameplaySequenceKeys history, GameplaySequenceKeys key) => history | key;
         protected override void HandleOutcome(GameplaySequenceKeys history)
         {
+            var audioPool = Repository.GetSingle<AudioPool>(Pool.Audio);
+            var audioSource = audioPool.RequestSingle();
+
+            audioSource.clip = successAudio;
+            audioSource.Play();
+            
             if (history == (GameplaySequenceKeys.Start | GameplaySequenceKeys.PickMusician | GameplaySequenceKeys.End))
             {
                 var attributes = pickedMusician.Prompt();
@@ -47,6 +56,16 @@ namespace BeauTambour
             
                 if (outcomePhase.NoteCount > 0) phaseHandler.SkipToNext();
             }
+        }
+        protected override void HandleFailure(GameplaySequenceKeys history, int groupIndex, GameplaySequenceKeys key)
+        {
+            if (key != GameplaySequenceKeys.End) return;
+            
+            var audioPool = Repository.GetSingle<AudioPool>(Pool.Audio);
+            var audioSource = audioPool.RequestSingle();
+
+            audioSource.clip = failAudio;
+            audioSource.Play();
         }
     }
 }

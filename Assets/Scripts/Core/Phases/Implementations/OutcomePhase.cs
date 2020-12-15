@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Flux;
 using UnityEngine;
@@ -23,8 +24,6 @@ namespace BeauTambour
         [SerializeField] private InputMapReference mapReference;
         [SerializeField] private Encounter encounter;
         [SerializeField] private int partitionLength;
-
-        [Space, SerializeField] private KeyMelodyRegistry keyMelodyRegistry;
         
         private List<Note> notes;
         private List<NoteAttribute> noteAttributes;
@@ -75,23 +74,8 @@ namespace BeauTambour
                 notes[partitionLength - 1] = note;
             }
 
-            var emotion = string.Empty;
-            var musician = string.Empty;
-
-            foreach (var attribute in note.Attributes)
-            {
-                if (attribute is EmotionAttribute emotionAttribute) emotion = emotionAttribute.Emotion.ToString();
-                else if (attribute is MusicianAttribute musicianAttribute) musician = musicianAttribute.Musician.name;
-            }
-
-            if (emotion != string.Empty && musician != string.Empty)
-            {
-                var audioPool = Repository.GetSingle<AudioPool>(Pool.Audio);
-                var audioSource = audioPool.RequestSingle();
-
-                audioSource.clip = keyMelodyRegistry[$"{musician}-{emotion}"];
-                audioSource.Play();
-            }
+            var musicianAttribute = (MusicianAttribute)note.Attributes.First(attribute => attribute is MusicianAttribute);
+            musicianAttribute.Musician.Instance.PlayMusic(note);
             
             IsNoteBeingProcessed = false;
             Event.Call<Note[]>(EventType.OnNoteCompleted, notes.ToArray());

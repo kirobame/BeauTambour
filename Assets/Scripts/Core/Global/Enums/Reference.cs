@@ -15,5 +15,6 @@ namespace BeauTambour
         Camera, 
         Hook,
         DrawOperation,
+        Frog,
     }
 }
