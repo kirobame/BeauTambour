@@ -1,110 +1,110 @@
 
 LBT_Character_cat.png
-size: 2048,512
+size: 1024,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 LBT_character_RIG/images/Red_Cat/Red_Cat_Scarf_back
-  rotate: false
-  xy: 439, 42
-  size: 218, 312
-  orig: 218, 312
+  rotate: true
+  xy: 281, 246
+  size: 232, 326
+  orig: 246, 340
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_arm.L
   rotate: true
-  xy: 1138, 95
-  size: 259, 85
-  orig: 259, 85
+  xy: 706, 328
+  size: 287, 113
+  orig: 287, 113
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_arm.R
-  rotate: true
-  xy: 1225, 95
-  size: 259, 82
-  orig: 259, 82
+  rotate: false
+  xy: 522, 187
+  size: 287, 110
+  orig: 287, 110
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_body
   rotate: false
-  xy: 2, 26
-  size: 435, 328
-  orig: 435, 328
+  xy: 10, 360
+  size: 463, 356
+  orig: 463, 356
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_eyes
   rotate: false
-  xy: 1139, 20
+  xy: 259, 17
   size: 167, 67
   orig: 167, 67
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_head
-  rotate: 270
-  xy: 629, 103
-  size: 251, 202
-  orig: 251, 202
+  rotate: true
+  xy: 466, 437
+  size: 279, 230
+  orig: 279, 230
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_leg.L
-  rotate: false
-  xy: 982, 26
-  size: 155, 223
-  orig: 155, 223
-  offset: 0, 0
+  rotate: true
+  xy: 10, 190
+  size: 183, 245
+  orig: 183, 251
+  offset: 0, 6
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_leg.R
-  rotate: false
-  xy: 833, 140
-  size: 147, 214
-  orig: 147, 214
-  offset: 0, 0
+  rotate: true
+  xy: 10, 12
+  size: 170, 239
+  orig: 175, 242
+  offset: 5, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_mouth
   rotate: false
-  xy: 601, 6
+  xy: 43, 427
   size: 28, 34
   orig: 28, 34
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_pupil.L
   rotate: false
-  xy: 959, 11
+  xy: 10, 467
   size: 23, 51
   orig: 23, 51
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_pupil.R
   rotate: false
-  xy: 984, 3
+  xy: 10, 406
   size: 23, 51
   orig: 23, 51
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_rope.L
   rotate: false
-  xy: 439, 62
+  xy: 576, 17
   size: 33, 160
   orig: 33, 160
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_rope.R
-  rotate: true
-  xy: 439, 7
+  rotate: false
+  xy: 533, 17
   size: 33, 160
   orig: 33, 160
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_scarf_front
   rotate: false
-  xy: 695, 6
-  size: 262, 132
-  orig: 262, 132
-  offset: 0, 0
+  xy: 233, 94
+  size: 290, 146
+  orig: 290, 160
+  offset: 0, 14
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Head_snout
   rotate: false
-  xy: 645, 19
+  xy: 10, 671
   size: 53, 44
   orig: 53, 44
   offset: 0, 0

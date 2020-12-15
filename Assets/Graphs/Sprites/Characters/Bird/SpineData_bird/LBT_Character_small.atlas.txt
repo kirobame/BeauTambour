@@ -5,226 +5,226 @@ format: RGBA8888
 filter: Linear,Linear
 repeat: none
 clarinet_bird/clarinet_bird_arm.L
-  rotate: true
-  xy: 1501, 185
+  rotate: false
+  xy: 801, 85
   size: 185, 162
   orig: 185, 162
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_arm.R
   rotate: true
-  xy: 1653, 170
-  size: 200, 144
-  orig: 200, 144
+  xy: 1502, 275
+  size: 228, 158
+  orig: 228, 172
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_beak.1
   rotate: false
-  xy: 2, 319
-  size: 49, 51
-  orig: 49, 51
+  xy: 1307, 225
+  size: 77, 79
+  orig: 77, 79
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_beak.2
   rotate: false
-  xy: 357, 340
-  size: 49, 30
-  orig: 49, 30
+  xy: 684, 444
+  size: 77, 58
+  orig: 77, 58
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_beanie
   rotate: false
-  xy: 2, 65
-  size: 139, 112
-  orig: 139, 112
+  xy: 1533, 31
+  size: 167, 140
+  orig: 167, 140
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_body
   rotate: 180
-  xy: 310, 72
-  size: 380, 298
-  orig: 380, 298
+  xy: 374, 176
+  size: 408, 326
+  orig: 408, 326
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_clarinet
   rotate: 180
-  xy: 1004, 6
-  size: 111, 365
-  orig: 111, 365
+  xy: 996, 109
+  size: 139, 393
+  orig: 139, 393
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_clarinet_button
   rotate: false
-  xy: 1420, 147
-  size: 79, 223
-  orig: 79, 223
+  xy: 1670, 252
+  size: 107, 251
+  orig: 107, 251
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_eye_eyeball
   rotate: false
-  xy: 1945, 290
+  xy: 1910, 422
   size: 79, 80
   orig: 79, 80
   offset: 0, 0
   index: -1
 harp_mouse/harp_mouse_eye_eyeball
   rotate: false
-  xy: 1945, 290
+  xy: 1910, 422
   size: 79, 80
   orig: 79, 80
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_eye_pupil
   rotate: false
-  xy: 1501, 248
+  xy: 1842, 155
   size: 51, 49
   orig: 51, 49
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_head
   rotate: true
-  xy: 1098, 208
-  size: 162, 155
-  orig: 162, 155
+  xy: 1309, 313
+  size: 190, 183
+  orig: 190, 183
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_leg.L
   rotate: true
-  xy: 715, 79
-  size: 78, 215
-  orig: 78, 215
-  offset: 0, 0
+  xy: 197, 84
+  size: 106, 238
+  orig: 106, 243
+  offset: 0, 3
   index: -1
 clarinet_bird/clarinet_bird_leg.R
-  rotate: true
-  xy: 1641, 62
-  size: 122, 215
-  orig: 122, 215
-  offset: 0, 0
+  rotate: 270
+  xy: 1593, 119
+  size: 147, 239
+  orig: 150, 243
+  offset: 3, 0
   index: -1
 clarinet_bird/clarinet_bird_scarf.1
-  rotate: false
-  xy: 1166, 122
-  size: 175, 85
-  orig: 175, 85
+  rotate: true
+  xy: 1787, 300
+  size: 203, 113
+  orig: 203, 113
   offset: 0, 0
   index: -1
 clarinet_bird/clarinet_bird_scarf.2
   rotate: false
-  xy: 1501, 35
+  xy: 10, 96
   size: 158, 171
   orig: 158, 171
   offset: 0, 0
   index: -1
 harp_mouse/harp_mouse_arm.L
-  rotate: true
-  xy: 1235, 188
-  size: 182, 183
-  orig: 182, 183
-  offset: 0, 0
+  rotate: 180
+  xy: 1814, 214
+  size: 196, 197
+  orig: 210, 211
+  offset: 0, 14
   index: -1
 harp_mouse/harp_mouse_arm.R
-  rotate: true
-  xy: 1793, 172
+  rotate: 180
+  xy: 593, 70
   size: 198, 150
-  orig: 198, 150
-  offset: 0, 0
+  orig: 226, 178
+  offset: 14, 14
   index: -1
 harp_mouse/harp_mouse_bag.back
   rotate: false
-  xy: 1945, 255
-  size: 81, 33
-  orig: 81, 33
-  offset: 0, 0
+  xy: 1731, 186
+  size: 95, 55
+  orig: 109, 61
+  offset: 0, 6
   index: -1
 harp_mouse/harp_mouse_bag.front
   rotate: 180
-  xy: 1659, 3
-  size: 256, 136
-  orig: 256, 136
+  xy: 957, 12
+  size: 270, 150
+  orig: 284, 164
   offset: 0, 0
   index: -1
 harp_mouse/harp_mouse_body
   rotate: false
-  xy: 2, 66
-  size: 392, 304
-  orig: 392, 304
+  xy: 10, 171
+  size: 420, 332
+  orig: 420, 332
   offset: 0, 0
   index: -1
 harp_mouse/harp_mouse_ear.L
   rotate: false
-  xy: 1906, 109
-  size: 139, 126
-  orig: 139, 126
-  offset: 0, 0
+  xy: 1395, 157
+  size: 167, 152
+  orig: 167, 154
+  offset: 0, 2
   index: -1
 harp_mouse/harp_mouse_ear.R
   rotate: false
-  xy: 591, 281
-  size: 94, 89
-  orig: 94, 89
-  offset: 0, 0
+  xy: 446, 54
+  size: 122, 115
+  orig: 122, 117
+  offset: 0, 2
   index: -1
 harp_mouse/harp_mouse_eye_pupil
   rotate: false
-  xy: 1799, 241
+  xy: 1472, 98
   size: 51, 49
   orig: 51, 49
   offset: 0, 0
   index: -1
 harp_mouse/harp_mouse_harp
   rotate: false
-  xy: 692, 152
-  size: 166, 218
-  orig: 166, 218
+  xy: 792, 257
+  size: 194, 246
+  orig: 194, 246
   offset: 0, 0
   index: -1
 harp_mouse/harp_mouse_harp_strap
   rotate: false
-  xy: 932, 67
+  xy: 1918, 157
   size: 120, 97
   orig: 120, 97
   offset: 0, 0
   index: -1
 harp_mouse/harp_mouse_harp_string.1
   rotate: false
-  xy: 644, 30
-  size: 45, 127
-  orig: 45, 127
-  offset: 0, 0
+  xy: 870, 23
+  size: 68, 138
+  orig: 73, 155
+  offset: 0, 7
   index: -1
 harp_mouse/harp_mouse_harp_string.2
   rotate: false
-  xy: 1657, 195
-  size: 33, 103
-  orig: 33, 103
-  offset: 0, 0
+  xy: 10, 49
+  size: 60, 113
+  orig: 61, 131
+  offset: 1, 9
   index: -1
 harp_mouse/harp_mouse_harp_string.3
   rotate: false
-  xy: 661, 254
-  size: 29, 70
-  orig: 29, 70
-  offset: 0, 0
+  xy: 1486, 318
+  size: 51, 77
+  orig: 57, 98
+  offset: 3, 10
   index: -1
 harp_mouse/harp_mouse_head
-  rotate: true
-  xy: 860, 151
-  size: 219, 157
-  orig: 219, 157
+  rotate: 270
+  xy: 1118, 255
+  size: 247, 185
+  orig: 247, 185
   offset: 0, 0
   index: -1
 harp_mouse/harp_mouse_leg.L
   rotate: true
-  xy: 1117, 42
-  size: 78, 215
-  orig: 78, 215
-  offset: 0, 0
+  xy: 1810, 51
+  size: 104, 228
+  orig: 106, 243
+  offset: 0, 1
   index: -1
 harp_mouse/harp_mouse_leg.R
-  rotate: true
-  xy: 1343, 31
-  size: 122, 215
-  orig: 122, 215
+  rotate: 270
+  xy: 1170, 98
+  size: 150, 241
+  orig: 150, 243
   offset: 0, 0
   index: -1

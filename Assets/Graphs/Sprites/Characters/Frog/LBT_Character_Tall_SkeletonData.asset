@@ -17,8 +17,14 @@ MonoBehaviour:
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: 2c4ef6e9294c0f6459a1cb6aa122a00d, type: 3}
   skeletonDataModifiers: []
-  fromAnimation: []
-  toAnimation: []
-  duration: []
-  defaultMix: 0.2
-  controller: {fileID: 9100000, guid: da44f954a9a5c814cbef252c10bd51cc, type: 2}
+  fromAnimation:
+  - PlayingDrum.L
+  - PlayingDrum.R
+  toAnimation:
+  - tall_empty
+  - tall_empty
+  duration:
+  - 2
+  - 2
+  defaultMix: 0
+  controller: {fileID: 9100000, guid: 00192065d94e43a40b682787b6a997bb, type: 2}
