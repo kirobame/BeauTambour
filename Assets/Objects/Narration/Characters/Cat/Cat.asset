@@ -17,7 +17,7 @@ MonoBehaviour:
   font: {fileID: 11400000, guid: 2951f4977f124f34b91d3ed4d0cb7548, type: 2}
   fontColor: {r: 0.08235294, g: 0.09803922, b: 0.03529412, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  letterAudioRegistry: {fileID: 11400000, guid: 6f33f2735eb220543befe59834bf0c20,
+  letterAudioRegistry: {fileID: 11400000, guid: 5356aaf46c454154aacf4add5575b8f7,
     type: 2}
   blocks:
   - emotion: {fileID: 11400000, guid: 2200d03da3e03b142a822a251711f057, type: 2}
