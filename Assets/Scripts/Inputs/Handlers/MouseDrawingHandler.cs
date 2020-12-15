@@ -11,6 +11,7 @@ namespace BeauTambour
     public class MouseDrawingHandler : InputHandler<Vector2>, IContinuousHandler
     {
         [SerializeField] private Shape[] shapes;
+        [SerializeField] private float activationTime;
         [SerializeField] private float deactivationTime;
         
         private ShapeAnalyzer analyzer;
@@ -21,6 +22,8 @@ namespace BeauTambour
         private Vector2 input;
         
         private bool isActive;
+
+        private Coroutine activationRoutine;
         private Coroutine deactivationRoutine;
 
         private bool canAct;
@@ -44,7 +47,7 @@ namespace BeauTambour
             phase = Phase.Canceled;
             isActive = false;
 
-            Event.Register(TempEvent.OnAnyMusicianPicked, Setup);
+            Event.Register(TempEvent.OnAnyMusicianPicked, () => activationRoutine = hook.StartCoroutine(ActivationRoutine()));
             Event.Register(DrawOperation.EventType.OnShapeLoss, () => isMatch = false);
             Event.Register(DrawOperation.EventType.OnShapeMatch, () =>
             {
@@ -62,6 +65,11 @@ namespace BeauTambour
 
             var offset = drawingPool.transform.position + Vector3.right * drawingPool.transform.localScale.x;
             radius = Vector2.Distance(center, camera.WorldToScreenPoint(offset));
+        }
+        private IEnumerator ActivationRoutine()
+        {
+            yield return new WaitForSeconds(activationTime);
+            Setup();
         }
         
         public override bool OnStarted(Vector2 input)
@@ -95,8 +103,12 @@ namespace BeauTambour
         
         private IEnumerator DeactivationRoutine()
         {
+            canAct = false;
+            
             yield return  new WaitForSeconds(deactivationTime);
             deactivationRoutine = null;
+            
+            canAct = true;
             
             analyzer.Stop();
             isActive = true;

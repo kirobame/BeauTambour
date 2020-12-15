@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68526f43e6514c838eb31d8211a0c8d4, type: 3}
+  m_Name: MelodyByKey
+  m_EditorClassIdentifier: 
+  pairs:
+  - key: Mouse-Anger
+    value: {fileID: 8300000, guid: 54a18eee15328f545980455b851c880f, type: 3}
+  - key: Mouse-Trust
+    value: {fileID: 8300000, guid: 9730a4b5c6bec2949870abf626443bba, type: 3}
+  - key: Mouse-Disgust
+    value: {fileID: 8300000, guid: feb83db0e467ed645a2339dcaa04ea45, type: 3}
+  - key: Mouse-Joy
+    value: {fileID: 8300000, guid: 3c41e93865f1d0d448d12eb9f06669fe, type: 3}
+  - key: Mouse-Fear
+    value: {fileID: 8300000, guid: e9876610ba8012240af53ce3c9f8d46f, type: 3}
+  - key: Mouse-Surprise
+    value: {fileID: 8300000, guid: 18d251d8a0a0f8c4eb18c8b5f00ae502, type: 3}
+  - key: Mouse-Sadness
+    value: {fileID: 8300000, guid: b8366b9566130a645a5a4b097bb9e4f5, type: 3}
+  - key: Mouse-Anticipation
+    value: {fileID: 8300000, guid: b97cb472f1314be4eb3fb24d52b901ad, type: 3}
+  - key: Bird-Anger
+    value: {fileID: 8300000, guid: 016aa0254ddfc934dada0f29f5dae43e, type: 3}
+  - key: Bird-Trust
+    value: {fileID: 8300000, guid: 37a56521e9d28cb4792ab5881be7eadf, type: 3}
+  - key: Bird-Disgust
+    value: {fileID: 8300000, guid: 74d9344e02ce65a4fb04b6777fee152c, type: 3}
+  - key: Bird-Joy
+    value: {fileID: 8300000, guid: 3c7babbee23933d488ea2566e3164701, type: 3}
+  - key: Bird-Fear
+    value: {fileID: 8300000, guid: 2e37cd00f8f4935459a862f4172c0949, type: 3}
+  - key: Bird-Surprise
+    value: {fileID: 8300000, guid: eb096ca6630f3474f857be343c86919c, type: 3}
+  - key: Bird-Sadness
+    value: {fileID: 8300000, guid: fdae85f4cd8ffe346a91dfed30da83a6, type: 3}
+  - key: Bird-Anticipation
+    value: {fileID: 8300000, guid: 161aaca4518746e44b70767432f4b487, type: 3}

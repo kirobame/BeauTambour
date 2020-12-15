@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4917881942171755878
+--- !u!114 &-7656621625473485694
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,9 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
-  m_Name: c440fe73-373d-42b6-8f67-e1ca186c5b23-PhaseCondition
+  m_Name: cf154547-f294-4c60-a38c-1cd7f5ee41b9-PhaseCondition
   m_EditorClassIdentifier: 
   joinedIds: Sample
+--- !u!114 &-2109066482131336258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
+  m_Name: 8cc08685-0186-4753-ad34-3dd431c96ab6-EmotionCondition
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: f58b902f47701624fa94e7d97b75cbad, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,24 +39,11 @@ MonoBehaviour:
   m_Name: Sample-Default
   m_EditorClassIdentifier: 
   priority: 0
-  mask: 0
+  mask: 1
   successionMask: 0
   shouldBeRemoved: 0
   conditions:
-  - {fileID: 7495195559362795894}
-  - {fileID: -4917881942171755878}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: 55479b8fc961d25459b6b6b8c0d346fc,
+  - {fileID: -7656621625473485694}
+  - {fileID: -2109066482131336258}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: b2d6d88fb169c1e4eae6a8985a26c1a5,
     type: 3}
---- !u!114 &7495195559362795894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
-  m_Name: 4c5b4fa5-ad75-468e-9bab-3b896eb57849-EmotionCondition
-  m_EditorClassIdentifier: 
-  target: {fileID: 11400000, guid: f58b902f47701624fa94e7d97b75cbad, type: 2}

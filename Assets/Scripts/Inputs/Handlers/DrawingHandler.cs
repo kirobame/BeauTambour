@@ -11,6 +11,7 @@ namespace BeauTambour
     public class DrawingHandler : InputHandler<Vector2>, IContinuousHandler
     {
         [SerializeField] private Shape[] shapes;
+        [SerializeField] private float activationTime;
         [SerializeField] private float deactivationTime;
         
         private ShapeAnalyzer analyzer;
@@ -19,7 +20,8 @@ namespace BeauTambour
         
         private bool isActive;
         private bool canAct;
-        
+
+        private Coroutine activationRoutine;
         private Coroutine deactivationRoutine;
         
         public override void Initialize(MonoBehaviour hook)
@@ -27,11 +29,16 @@ namespace BeauTambour
             base.Initialize(hook);
             canAct = false;
 
-            Event.Register(TempEvent.OnAnyMusicianPicked, () => canAct = true);
+            Event.Register(TempEvent.OnAnyMusicianPicked, () => activationRoutine = hook.StartCoroutine(ActivationRoutine()));
             Event.Register(DrawOperation.EventType.OnShapeMatch, () => canAct = false);
             
             analyzer = new ShapeAnalyzer(shapes);
             analyzer.OnEvaluationStart += shape => Begin(new ShapeEventArgs(shape));
+        }
+        private IEnumerator ActivationRoutine()
+        {
+            yield return new WaitForSeconds(activationTime);
+            canAct = true;
         }
         
         public override bool OnStarted(Vector2 input)

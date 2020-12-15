@@ -142,7 +142,7 @@ namespace BeauTambour
                 StopCoroutine(revealPathRoutine);
                 revealPathRoutine = null;
             }
-
+            
             Event.CallLocal<Vector3>(EventType.OnCompletion, gameObject, Value.GetPosition(Value.positionCount - 1));
             
             if (success) Event.CallLocal(EventType.OnMatch, gameObject);

@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-781234462714366260
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
-  m_Name: 7485a821-a63e-42d9-8477-6be5c40fef88-PhaseCondition
-  m_EditorClassIdentifier: 
-  joinedIds: Demo
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
   m_Name: Demo-Pr.Sd
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask: 2
-  successionMask: 4
+  successionMask: 1
   shouldBeRemoved: 1
   conditions:
-  - {fileID: 8569991161522995846}
-  - {fileID: -781234462714366260}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: 1aecd54859ad0c64ea93519412c075d2,
+  - {fileID: 8623609059600931686}
+  - {fileID: 1539978319900745252}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: 63a5502f64459974d9a70711b348e3d4,
     type: 3}
---- !u!114 &8569991161522995846
+--- !u!114 &1539978319900745252
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,6 +31,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
-  m_Name: e580bf33-ccd0-4fc4-8e1c-14016688f14f-EmotionCondition
+  m_Name: ec844ee1-445b-46ea-b2a0-1d08760365c9-EmotionCondition
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 8156500a3bb490a4bb374184e1415085, type: 2}
+--- !u!114 &8623609059600931686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: 8a252215-ccf9-4194-931e-095dd2d92d64-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: Demo

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-924544299994219856
+--- !u!114 &-3780772999449204002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
-  m_Name: 5e8f94ea-42ef-46d4-956e-c958be02d6c1-EmotionCondition
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: 52731e1c-47ee-4b57-a9e4-073a46878eba-PhaseCondition
   m_EditorClassIdentifier: 
-  target: {fileID: 11400000, guid: a7cb0362d2f194946ba7026ce9b7adfd, type: 2}
+  joinedIds: Demo
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25,16 +25,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
   m_Name: Demo-Sd.Sb
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask: 2
-  successionMask: 4
+  successionMask: 1
   shouldBeRemoved: 1
   conditions:
-  - {fileID: -924544299994219856}
-  - {fileID: 5814311869668996571}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: 2928ba26c2b9aa747ba14b9b69b34f8c,
+  - {fileID: -3780772999449204002}
+  - {fileID: 1985582420037041194}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: fe7091c7b35eaf74d98898bb6d5dedfa,
     type: 3}
---- !u!114 &5814311869668996571
+--- !u!114 &1985582420037041194
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
-  m_Name: 90fe88a6-3033-4e2b-abb5-57a97b0f1c8a-PhaseCondition
+  m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
+  m_Name: f9fe58ff-5a58-4107-825c-456f7664a5c4-EmotionCondition
   m_EditorClassIdentifier: 
-  joinedIds: Demo
+  target: {fileID: 11400000, guid: a7cb0362d2f194946ba7026ce9b7adfd, type: 2}

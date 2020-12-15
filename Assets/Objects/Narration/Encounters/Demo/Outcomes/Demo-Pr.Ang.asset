@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
   m_Name: Demo-Pr.Ang
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   mask: 2
-  successionMask: 4
+  successionMask: 1
   shouldBeRemoved: 1
   conditions:
-  - {fileID: 6329316373222616976}
-  - {fileID: 7532051497730729630}
-  sequencerPrefab: {fileID: 5614385688149014047, guid: a439c1bf64da6714f9f4a4fef0876efb,
+  - {fileID: 8329042189316374550}
+  - {fileID: 5019997808200618216}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: f4be757ddea17b44b9787ad0d78b252d,
     type: 3}
---- !u!114 &6329316373222616976
+--- !u!114 &5019997808200618216
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31,10 +31,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa9a65a9e9d14e02aa0281540ac7a18a, type: 3}
-  m_Name: 9f910e59-5e8f-4368-ade3-d49f213ed311-EmotionCondition
+  m_Name: f36770c7-8e2e-4933-9772-40ae23bcd4cc-EmotionCondition
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 4d75ccccd42a3994e89fdd1a919dea2b, type: 2}
---- !u!114 &7532051497730729630
+--- !u!114 &8329042189316374550
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
-  m_Name: aecdb2c5-d160-441a-b031-5f6e5c7fb4dd-PhaseCondition
+  m_Name: e434090c-1a92-42b4-a860-8fb82f12d0be-PhaseCondition
   m_EditorClassIdentifier: 
   joinedIds: Demo

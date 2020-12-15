@@ -14,8 +14,10 @@ namespace BeauTambour
         public override void Execute(MonoBehaviour hook, Character character, string[] args)
         {
             var visualEffectPool = Repository.GetSingle<VisualEffectPool>(Pool.VisualEffect);
-            
+
             runtimePoolable = visualEffectPool.RequestSinglePoolable(poolable);
+
+            runtimePoolable.transform.position = character.Instance.VisualEffectPoint.position;
             runtimePoolable.Value.SetTrigger("Play");
 
             runtimePoolable.OnDone += OnPoolableDeactivation;

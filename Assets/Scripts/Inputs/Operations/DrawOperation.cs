@@ -18,14 +18,17 @@ namespace BeauTambour
         public enum EventType
         {
             OnStart,
+            
             OnShapeMatch,
             OnShapeLoss,
             OnShapeEnd,
+            
             OnDelayedStart,
+            
             OnJoy,
             OnTrust,
             OnFear,
-            OnSuprise,
+            OnSurprise,
             OnSadness,
             OnDisgust,
             OnAnger,
@@ -55,7 +58,7 @@ namespace BeauTambour
             Event.Open(EventType.OnJoy);
             Event.Open(EventType.OnTrust);
             Event.Open(EventType.OnFear);
-            Event.Open(EventType.OnSuprise);
+            Event.Open(EventType.OnSurprise);
             Event.Open(EventType.OnSadness);
             Event.Open(EventType.OnDisgust);
             Event.Open(EventType.OnAnger);
@@ -65,6 +68,11 @@ namespace BeauTambour
             Event.Register(EventType.OnShapeLoss,()=> { Event.Call(EventType.OnShapeEnd); });
 
             Repository.Reference(this, Reference.DrawOperation);
+        }
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            Repository.Dereference(this, Reference.DrawOperation);
         }
 
         public override void OnStart(EventArgs inArgs)
@@ -78,7 +86,6 @@ namespace BeauTambour
 
             delayedActivationRoutine = hook.StartCoroutine(DelayedActivationRoutine(shapeEventArgs));
         }
-
         private IEnumerator DelayedActivationRoutine(ShapeEventArgs shapeEventArgs)
         {
             yield return new WaitForSeconds(activationDelay);
@@ -114,8 +121,7 @@ namespace BeauTambour
                 if (analysis.IsComplete)
                 {
                     End(true);
-                    Event.Call(EventType.OnShapeMatch);
-                    
+
                     var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
                     var outcomePhase = phaseHandler.Get<OutcomePhase>(PhaseType.Outcome);
                     
@@ -129,8 +135,6 @@ namespace BeauTambour
                 else if (!analysis.IsValid)
                 {
                     End(false);
-                    Event.Call(EventType.OnShapeLoss);
-                    
                     return;
                 }
             }
@@ -139,6 +143,9 @@ namespace BeauTambour
         public void End(bool outcome)
         {
             if (!isDrawing) return;
+            
+            if (outcome) Event.Call(EventType.OnShapeMatch);
+            else Event.Call(EventType.OnShapeLoss);
             
             currentPair.drawing.Complete(outcome);
             currentPair = (null,null);
@@ -178,7 +185,7 @@ namespace BeauTambour
                     Event.Call(EventType.OnDisgust);
                     break;
                 case Emotion.Surprise:
-                    Event.Call(EventType.OnSuprise);
+                    Event.Call(EventType.OnSurprise);
                     break;
                 case Emotion.Anticipation:
                     Event.Call(EventType.OnAnticipation);
