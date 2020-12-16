@@ -16,7 +16,7 @@ MonoBehaviour:
   toleranceRadiusRange: {x: 0.05, y: 0.3}
   standardToleranceRadius: 0.1
   radiusToleranceForgiveness: 0.5
-  curveSubdivision: 2
+  curveSubdivision: 3
   recognitionErrorThreshold: 1e+9
   headingErrorFactor: 0.275
   spacingErrorFactor: 1.5

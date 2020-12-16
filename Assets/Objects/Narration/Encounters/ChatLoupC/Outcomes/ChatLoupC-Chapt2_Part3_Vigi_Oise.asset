@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6549218566905928997
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d2d842fc2040888c8e063ef084ded2, type: 3}
+  m_Name: 0fa2b32d-68cf-4c21-898c-cbf70858c3c3-PhaseCondition
+  m_EditorClassIdentifier: 
+  joinedIds: ChatLoupC
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf47440da4b2b14187d311242e26cb5, type: 3}
+  m_Name: ChatLoupC-Chapt2_Part3_Vigi_Oise
+  m_EditorClassIdentifier: 
+  priority: 11
+  mask: 8
+  successionMask: 8
+  shouldBeRemoved: 1
+  conditions:
+  - {fileID: -6549218566905928997}
+  - {fileID: 7686532603305831959}
+  sequencerPrefab: {fileID: 5614385688149014047, guid: f7c4b90a56f15cc45bac539e6adb48c0,
+    type: 3}
+--- !u!114 &7686532603305831959
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d128a1cacc844d079f5bd5c468cae36d, type: 3}
+  m_Name: 46e12414-88b3-4942-914b-4d8a83a1ea77-MusicianEmotionPairCondition
+  m_EditorClassIdentifier: 
+  musician: {fileID: 11400000, guid: b01b20f9993be474eafac52bfff716ad, type: 2}
+  emotion: 6

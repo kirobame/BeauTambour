@@ -26,8 +26,8 @@ MonoBehaviour:
   m_Name: ChatLoupA-Chpt2_Part1_Remo_Chat
   m_EditorClassIdentifier: 
   priority: 12
-  mask: 0
-  successionMask: 0
+  mask: 8
+  successionMask: 8
   shouldBeRemoved: 1
   conditions:
   - {fileID: 6321442448552925831}

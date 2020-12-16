@@ -193,8 +193,9 @@ namespace BeauTambour
         
         private void PlaceBounds()
         {
-            var offset = Vector2.left * (bounds.Width / 2f) + Vector2.up * 0.2f;
+            var offset = Vector2.left * (bounds.Width / 2f) + Vector2.up * 1.2f;
             var position = (Vector2)character.Instance.DialoguePoint.position + offset;
+            
             if (character.Anchor == Anchor.Right) 
             {                
                 bounds.Place(position, character.Instance.DialoguePoint.position, Vector2.right, true);

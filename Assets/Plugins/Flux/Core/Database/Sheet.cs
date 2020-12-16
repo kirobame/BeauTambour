@@ -97,8 +97,8 @@ namespace Flux
                 for (var x = 1; x < size.x + 1; x++)
                 {
                     
-                    Debug.Log($"For CURRENT : ({x - 1}, {y - 1}) / TOTAL : ({size.x}, {size.y}) || LENGTH : ({lines[y].Count})");
-                    Debug.Log($"Entry is : {lines[y][x]} --- {index}/{array.Length}");
+                    //Debug.Log($"For CURRENT : ({x - 1}, {y - 1}) / TOTAL : ({size.x}, {size.y}) || LENGTH : ({lines[y].Count})");
+                    //Debug.Log($"Entry is : {lines[y][x]} --- {index}/{array.Length}");
                     
                     array[index] = lines[y][x];
                     index++;

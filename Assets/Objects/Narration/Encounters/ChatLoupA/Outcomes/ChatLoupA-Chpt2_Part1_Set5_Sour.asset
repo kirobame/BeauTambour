@@ -26,8 +26,8 @@ MonoBehaviour:
   m_Name: ChatLoupA-Chpt2_Part1_Set5_Sour
   m_EditorClassIdentifier: 
   priority: 0
-  mask: 0
-  successionMask: 0
+  mask: 8
+  successionMask: 8
   shouldBeRemoved: 0
   conditions:
   - {fileID: -1320811400730826620}

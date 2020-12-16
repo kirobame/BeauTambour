@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: AnticipationShape
   m_EditorClassIdentifier: 
-  color: {r: 0.5107923, g: 0.32039872, b: 0.9056604, a: 1}
   emotion: 6
   points:
   - position: {x: 0.5909569, y: 0.80670315}

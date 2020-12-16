@@ -18,6 +18,7 @@ namespace BeauTambour
             
             Event.Open(TempEvent.OnPartitionCompleted);
             Event.Open(TempEvent.OnAnyMusicianPicked);
+            Event.Open<Musician>(TempEvent.OnMusicianPickedExtended);
         }
         
         protected override GameplaySequenceKeys Combine(GameplaySequenceKeys history, GameplaySequenceKeys key) => history | key;
@@ -32,9 +33,10 @@ namespace BeauTambour
             if (history == (GameplaySequenceKeys.Start | GameplaySequenceKeys.PickMusician | GameplaySequenceKeys.End))
             {
                 var attributes = pickedMusician.Prompt();
-            
+
                 Event.Call(TempEvent.OnAnyMusicianPicked);
                 Event.CallLocal(TempEvent.OnMusicianPicked, pickedMusician);
+                Event.Call(TempEvent.OnMusicianPickedExtended, pickedMusician);
 
                 var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
                 var outcomePhase = phaseHandler.Get<OutcomePhase>(PhaseType.Outcome);

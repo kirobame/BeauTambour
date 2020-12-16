@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ChatLoupA-Chpt2_Part1_Joie_Sour
   m_EditorClassIdentifier: 
   priority: 11
-  mask: 0
-  successionMask: 0
+  mask: 8
+  successionMask: 8
   shouldBeRemoved: 1
   conditions:
   - {fileID: 6998484409366597618}

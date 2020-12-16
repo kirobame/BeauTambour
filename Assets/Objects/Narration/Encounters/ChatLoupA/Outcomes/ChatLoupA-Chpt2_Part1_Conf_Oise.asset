@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ChatLoupA-Chpt2_Part1_Conf_Oise
   m_EditorClassIdentifier: 
   priority: 11
-  mask: 4
-  successionMask: 3
+  mask: 8
+  successionMask: 8
   shouldBeRemoved: 1
   conditions:
   - {fileID: 3624796101794308975}

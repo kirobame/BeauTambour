@@ -28,8 +28,7 @@ namespace BeauTambour.Editor
         [MenuItem("Tools/Beau Tambour/Update Outcomes")]
         public static void UpdateOutcomes()
         {
-            BeauTambourUtilities.LoadOutcomeInterpreters();
-            BeauTambourUtilities.CreateTemporaryDialogueProvider();
+            BeauTambourUtilities.Bootup();
             
             var folders = new HashSet<string>();
             var outcomes = new List<Outcome>();

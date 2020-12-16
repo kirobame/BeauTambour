@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: SignalCollection
   m_EditorClassIdentifier: 
   values:
-  - {fileID: 11400000, guid: dabc9a43b1fb4c84998c2d30daea73f3, type: 2}
-  - {fileID: 11400000, guid: 20891fd710c8dd144bb5ef40e8b75bba, type: 2}
-  - {fileID: 11400000, guid: c41eb85b281a0364abf880b91f116ae9, type: 2}
-  - {fileID: 11400000, guid: 2a0e8dce43c988546a45d9158e8e800b, type: 2}
+  - {fileID: 11400000, guid: 1e05d542fc4f4114abb6e39a5df4fc16, type: 2}
+  - {fileID: 11400000, guid: c2ab4ed1423018647b49028d8a1f5647, type: 2}
+  - {fileID: 11400000, guid: a62c048373064db46adcedc3fda2b450, type: 2}
+  - {fileID: 11400000, guid: 01fecb395863f274c90dcc2f3b89c501, type: 2}
+  - {fileID: 11400000, guid: 1d3b094ff8a448d49bb5bbe872e4a982, type: 2}
+  - {fileID: 11400000, guid: 33f007c33f056114a99eb0fa12c58b87, type: 2}
+  - {fileID: 11400000, guid: 41278be39699fa745a293fc6c3440c28, type: 2}
+  - {fileID: 11400000, guid: 84cd5bf725fc6bd48a7dbfd1fc1fde2d, type: 2}

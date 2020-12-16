@@ -52,7 +52,13 @@ namespace Flux
         //--------------------------------------------------------------------------------------------------------------
         
         public string[,] this[string arrayKey] => values[arrayKey];
-        public string this[string arrayKey, string columnKey, string rowKey] => values[arrayKey][columns[columnKey], rows[rowKey]];
+        public string this[string arrayKey, string columnKey, string rowKey]
+        {
+            get
+            {
+                return values[arrayKey][columns[columnKey], rows[rowKey]];
+            }
+        }
 
         public bool TryGet(string arrayKey, string columnKey, string rowKey , out string result)
         {

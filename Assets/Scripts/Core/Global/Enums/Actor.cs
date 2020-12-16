@@ -8,6 +8,7 @@ namespace BeauTambour
         Souris,
         Oiseau,
         Frog,
-        Chat
+        Chat,
+        Loup
     }
 }

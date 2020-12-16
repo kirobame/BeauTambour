@@ -7,6 +7,7 @@ namespace BeauTambour
     {
         OnMusicianPicked,
         OnAnyMusicianPicked,
-        OnPartitionCompleted
+        OnPartitionCompleted,
+        OnMusicianPickedExtended,
     }
 }

@@ -20,7 +20,7 @@ MonoBehaviour:
   letterAudioRegistry: {fileID: 11400000, guid: 5356aaf46c454154aacf4add5575b8f7,
     type: 2}
   blocks:
-  - emotion: {fileID: 11400000, guid: 2200d03da3e03b142a822a251711f057, type: 2}
-    id: Demo
-  - emotion: {fileID: 11400000, guid: 4d75ccccd42a3994e89fdd1a919dea2b, type: 2}
-    id: Sample
+  - emotion: {fileID: 11400000, guid: 8156500a3bb490a4bb374184e1415085, type: 2}
+    id: ChatLoupA
+  - emotion: {fileID: 11400000, guid: e0f9d3dda870abb4398442e635ec7e81, type: 2}
+    id: ChatLoupB

@@ -5,18 +5,29 @@ using System.Text;
 using Flux;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
     [IconIndicator(7705900795600745325), CreateAssetMenu(fileName = "NewEncounter", menuName = "Beau Tambour/Encounter")]
     public class Encounter : ScriptableObject
     {
+        #region Encapsulated Types
+
+        [EnumAddress]
+        public enum EventType
+        {
+            OnSuccess
+        }
+
+        #endregion
+        
         public Note[][] Historic => historic.ToArray();
         public Outcome CurrentOutcome => results[outcomeAdvancement];
         public Interlocutor Interlocutor => interlocutor;
         
         public IReadOnlyList<Outcome> Outcomes => outcomes;
-        [SerializeField] private Outcome firstOutcome;
+        [SerializeField] private Outcome[] firstOutcomes;
         [SerializeField] private Outcome[] outcomes;
 
         [SerializeField] private Character[] characters;
@@ -34,6 +45,8 @@ namespace BeauTambour
         
         public void BootUp()
         {
+            Event.Open(EventType.OnSuccess);
+            
             outcomeAdvancement = -1;
             goToNextBlock = 0;
 
@@ -41,7 +54,7 @@ namespace BeauTambour
             interlocutor.BootUp();
             foreach (var character in characters) character.BootUp();
             
-            firstOutcome.BootUp();
+            foreach (var outcome in firstOutcomes) outcome.BootUp();
             foreach (var outcome in outcomes) outcome.BootUp();
             runtimeOutcomes = new HashSet<Outcome>(outcomes);
             
@@ -50,7 +63,7 @@ namespace BeauTambour
 
         public void Start()
         {
-            results.Add(firstOutcome);
+            results.Add(firstOutcomes[0]);
             outcomeAdvancement = 0;
             
             results[0].Play(this, new Note[0]);
@@ -71,11 +84,15 @@ namespace BeauTambour
                 if (interlocutor.isAtLastBlock)
                 {
                     Debug.Log("Win !");
+                    
+                    Event.Call(EventType.OnSuccess);
                     goToNextBlock = 2;
                 }
                 else
                 {
                     Debug.Log("Success !");
+                    
+                    Event.Call(EventType.OnSuccess);
                     goToNextBlock = 1;
                 }
                 
@@ -117,8 +134,6 @@ namespace BeauTambour
             {
                 if (!outcome.IsOperational(this, notes)) continue;
                 results.Add(outcome);
-
-                if (results.Count >= 3) break;
             }
 
             if (!results.Any()) return false;
@@ -129,6 +144,8 @@ namespace BeauTambour
                 else if (first.Priority > second.Priority) return -1;
                 else return 1;
             });
+            
+            if (results.Count > 3) results.RemoveRange(3, results.Count - 3);
             
             outcomeAdvancement = 0;
             return true;
@@ -171,6 +188,16 @@ namespace BeauTambour
                     goToNextBlock = 0;
                     
                     Debug.Log("Moving on to next phase");
+                    
+                    if (results.Count > 1) results.RemoveRange(1, results.Count - 1);
+                    results.Add(firstOutcomes[interlocutor.blockIndex]);
+                    
+                    outcomeAdvancement++;
+                    
+                    CurrentOutcome.Play(this, historic.Peek());
+                    CurrentOutcome.Sequencer.OnCompletion += OnOutcomeDone;
+
+                    return;
                 }
                 else if (goToNextBlock == 2)
                 {

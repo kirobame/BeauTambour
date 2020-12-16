@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Name: ChatLoupA-Chpt2_Part1_Trist_Oise
   m_EditorClassIdentifier: 
   priority: 11
-  mask: 4
-  successionMask: 3
+  mask: 8
+  successionMask: 8
   shouldBeRemoved: 1
   conditions:
   - {fileID: -552234905667586886}

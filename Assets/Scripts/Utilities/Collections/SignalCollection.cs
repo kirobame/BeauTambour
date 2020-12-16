@@ -37,6 +37,7 @@ namespace BeauTambour
         }
         public bool TrySelect(string category, Emotion emotion, int clarity, out Signal signal)
         {
+            clarity--;
             signal = default;
             
             var runtimeSettings = Repository.GetSingle<RuntimeSettings>(Reference.RuntimeSettings);
@@ -46,7 +47,19 @@ namespace BeauTambour
             {
                 if (subDictionary.TryGetValue(emotion, out var signals))
                 {
-                    if (signals[clarity].Count == 0) return false;
+                    if (signals[clarity].Count == 0)
+                    {
+                        for (var i = 0; i < 3; i++)
+                        {
+                            if (signals[i].Count > 0)
+                            {
+                                clarity = i;
+                                break;
+                            }
+                        }
+
+                        if (signals[clarity].Count == 0) return false;
+                    }
                     
                     var index = Random.Range(0, signals[clarity].Count);
                     signal = signals[clarity][index];

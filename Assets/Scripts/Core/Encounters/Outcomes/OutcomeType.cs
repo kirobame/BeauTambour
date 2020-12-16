@@ -10,6 +10,8 @@ namespace BeauTambour
         Default = 1,
         
         Emotion = 2,
-        Conversation = 4
+        Conversation = 4,
+        Dialogue = 8,
+        Block = 16
     }
 }

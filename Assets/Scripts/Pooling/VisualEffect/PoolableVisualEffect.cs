@@ -9,7 +9,8 @@ namespace BeauTambour
     public class PoolableVisualEffect : Poolable<Animator>
     {
         public event Action OnDone;
-        
+
+        [SerializeField] private Vector2 offset;
         private Coroutine deactivationRoutine;
 
         void Update()
@@ -21,6 +22,7 @@ namespace BeauTambour
         }
 
         public void ReceivedEndSignal() => OnDone?.Invoke();
+        public void Place(Vector2 position) => transform.position = position + offset;
         
         private IEnumerator DeactivationRoutine()
         {

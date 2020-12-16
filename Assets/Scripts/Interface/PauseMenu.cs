@@ -18,10 +18,14 @@ namespace BeauTambour
         }
         #endregion
 
-        [SerializeField] private InputMapReference[] mapReferences;
+        [SerializeField] private InputMapReference gameplayMap;
+        [SerializeField] private InputMapReference outcomeMap;
+        private bool isPaused;
 
         void Awake()
         {
+            isPaused = false;
+            
             Event.Open(EventType.OnPause);
             Event.Open(EventType.OnUnpause);
 
@@ -29,22 +33,36 @@ namespace BeauTambour
             Event.Register(EventType.OnUnpause, OnUnpause);
         }
 
-        public void Pause() => Event.Call(EventType.OnPause);
+        public void Pause()
+        {
+            if (isPaused) return;
+            Event.Call(EventType.OnPause);
+        }
+
         public void Unpause()
         {
-            Debug.Log("Test");
+            if (!isPaused) return;
             Event.Call(EventType.OnUnpause);
         }
 
         void OnPause()
         {
             Time.timeScale = 0;
-            foreach (var mapReference in mapReferences) mapReference.Value.Disable();
+
+            gameplayMap.Value.Disable();
+            outcomeMap.Value.Disable();
+            
+            isPaused = true;
         }
         void OnUnpause()
         {
             Time.timeScale = 1;
-            foreach (var mapReference in mapReferences) mapReference.Value.Enable();
+            
+            var phaseHandler = Repository.GetSingle<PhaseHandler>(Reference.PhaseHandler);
+            if (phaseHandler.CurrentType == PhaseType.Outcome) outcomeMap.Value.Enable();
+            else gameplayMap.Value.Enable();
+            
+            isPaused = false;
         }
 
         public void Quit() => Application.Quit();

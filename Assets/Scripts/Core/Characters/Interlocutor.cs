@@ -7,6 +7,7 @@ namespace BeauTambour
     {
         public Block CurrentBlock => blocks[currentBlockIndex];
         public bool isAtLastBlock => currentBlockIndex == blocks.Length - 1;
+        public int blockIndex => currentBlockIndex;
         
         [SerializeField] private Block[] blocks;
         private int currentBlockIndex;

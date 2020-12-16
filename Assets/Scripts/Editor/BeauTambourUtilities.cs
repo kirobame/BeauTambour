@@ -26,7 +26,7 @@ namespace BeauTambour.Editor
         //--------------------------------------------------------------------------------------------------------------
         
         [InitializeOnLoadMethod]
-        private static void Bootup()
+        public static void Bootup()
         {
             LoadOutcomeInterpreters();
             RegisterOutcomes();
@@ -98,6 +98,11 @@ namespace BeauTambour.Editor
             else if (TryGetPrefabName(outcome, out var prefabName))
             {
                 var path = AssetDatabase.GetAssetPath(outcome);
+                if (outcomes.ContainsKey(path))
+                {
+                    outcomes[path] = prefabName;
+                    return;
+                }
                 
                 outcomes.Add(path, prefabName);
                 pathHistoric.Add(outcome, path);

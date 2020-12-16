@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ChatLoupA-Chpt2_Part1
   m_EditorClassIdentifier: 
   priority: 13
-  mask: 0
+  mask: 16
   successionMask: 0
   shouldBeRemoved: 1
   conditions:

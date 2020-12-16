@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: AngerShape
   m_EditorClassIdentifier: 
-  color: {r: 0.8867924, g: 0.2642927, b: 0.20496619, a: 1}
   emotion: 1
   points:
   - position: {x: 0.0054944227, y: 0.99998486}

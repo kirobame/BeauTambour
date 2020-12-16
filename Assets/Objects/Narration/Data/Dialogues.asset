@@ -26,15 +26,15 @@ MonoBehaviour:
     - "\u24B8-Needed Musician"
     - "\u24B8-Data"
     - "\u24C7-Chpt2_Part1_Joie_Chat"
-    - "[Chat]-Un morrceau bien joyeux,\n<?E:Music/Sadness,1,TRUE/>Te moques-tu de
-      mon malheurr ? \n[Oiseau]-Pourquoi ce reproche, \nVous n'\xEAtes pas d'humeur
-      ? \n[Chat]-SSHHH !Vous plaisantez !?"
+    - "[Chat]-Un morrceau bien joyeux,\n<?E:Sfx/Sadness,1,TRUE/>Te moques-tu de mon
+      malheurr ? \n[Oiseau]-Pourquoi ce reproche, \nVous n'\xEAtes pas d'humeur ?
+      \n[Chat]-SSHHH !Vous plaisantez !?"
     - 
     - 12
     - Joy
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Peur_Chat"
     - "[Chat]-Mon instinct me dicte la peurr, \n<?E:Vfx/Sadness,1,FALSE/><wave>Mais
       mon coeurr \xE9prrouve autrre chose...</wave>\n[Souris]-Parceque tu peux \xE9prouver
@@ -44,7 +44,7 @@ MonoBehaviour:
     - Fear
     - 
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Trist_Chat"
     - "[Chat]-<?E:Vfx/Sadness,3,TRUE/><?E:Sfx/Sadness,3,TRUE/><color=#6FA1D0><wave>Il
       m'a abandonn\xE9 !</wave></color>\nJe pensais qu'il m'aimait, \nMais un chat
@@ -59,7 +59,7 @@ MonoBehaviour:
     - Sadness
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/None;
     - "\u24C7-Chpt2_Part1_Dego_Chat"
     - "[Chat]-<color=#6FA1D0><wave>J'en ai perrdu l'app\xE9tit...</wave></color>\nCe
       que je rressens n'est que d\xE9go\xFBt...\n[Souris]-Tant mieux si ze ne suis
@@ -69,7 +69,7 @@ MonoBehaviour:
     - Disgust
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Conf_Chat"
     - "[Chat]-J'avais confiance en lui... \n<?E:Sfx/Sadness,1,TRUE/>Comment-a-t-il
       pu me jeter ainsi...\n[Souris]-Moi ze comprends pourquoi... Chat \xE9gal soucis
@@ -79,7 +79,7 @@ MonoBehaviour:
     - Trust
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Surp_Chat"
     - "[Chat]-Cette musique est admirrable !\n[Souris]-C'est un compliment l\xE0
       ! incroyable!\n[Chat]-<?E:Vfx/Sadness,1,FALSE/>Mais mon coeurr demeurre ind\xE9chiffrrable..."
@@ -88,7 +88,7 @@ MonoBehaviour:
     - Surprise
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Cole_Chat"
     - "[Chat]-Cessez votrre musique ! Vous m'insupporrtez !\n[Oiseau]-Encore une
       fois, c'est un rat\xE9...\n[Chat]-<?E:Sfx/Sadness,1,TRUE/><color=#6FA1D0><wave>Pas
@@ -98,9 +98,9 @@ MonoBehaviour:
     - Anger
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Vigi_Chat"
-    - "[Souris]-Aouuuh !\n[Chat]-Qu'est-ce que !? <?E:Music/Sadness,1,TRUE/>Ce n'est
+    - "[Souris]-Aouuuh !\n[Chat]-Qu'est-ce que !? <?E:Sfx/Sadness,1,TRUE/>Ce n'est
       rien juste le vent...\n[Souris]-Hihihi, il tremble !\n[Oiseau]-Arr\xEAtes tes
       moqueries !\nNous devons l'aider Souris !"
     - 
@@ -108,9 +108,9 @@ MonoBehaviour:
     - Anticipation
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Amou_Chat"
-    - "[Chat]-Je l'aimais tant, <?E:Music/Sadness,1,TRUE/>maintenant je suis vide,
+    - "[Chat]-Je l'aimais tant, <?E:Sfx/Sadness,1,TRUE/>maintenant je suis vide,
       \n<?E:Sfx/Sadness,1,TRUE/> <wave>je n'ai envie de rrien...</wave>\n[Oiseau]-On
       est bien loin de ce qu'il semble ressentir je le crains.\n[Souris]-En m\xEAme
       temps... \nUn chat peut-il aimer ? Ces vauriens..."
@@ -119,7 +119,7 @@ MonoBehaviour:
     - Love
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Soum_Chat"
     - "[Chat]-Je ne peux rien faire face \xE0 sa furie, <?E:Vfx/Sadness,1,TRUE/>je
       suis \xE0 sa merci..."
@@ -128,7 +128,7 @@ MonoBehaviour:
     - Submission
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Cyni_Chat"
     - "[Chat]-Mon loup de p\xE8rre \xE9tait tout pour moi ! Mon mod\xE8le!\n[Chat]-<?Vfx/Sadness,1,TRUE/>Ca
       m'a servi de rester fid\xE8le !\n[Souris]-z'ai peur qu'il nous faille encore
@@ -138,9 +138,9 @@ MonoBehaviour:
     - Cynicism
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_D\xE9sa_Chat"
-    - '[Chat]-<?E:Music/Sadness,1,TRUE/><?E:Vfx/Sadness,1,TRUE/>Comment peut-il m''abandonner...
+    - '[Chat]-<?E:Sfx/Sadness,1,TRUE/><?E:Vfx/Sadness,1,TRUE/>Comment peut-il m''abandonner...
 
       La
       raison de vos tourments, allez-vous cette fois nous donner !?'
@@ -149,9 +149,9 @@ MonoBehaviour:
     - Disapproval
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Remo_Chat"
-    - "[Chat]-<?E:Music/Sadness,2,TRUE/><?E:Vfx/Sadness,2,TRUE/>Si seulement je ne
+    - "[Chat]-<?E:Sfx/Sadness,2,TRUE/><?E:Vfx/Sadness,2,TRUE/>Si seulement je ne
       lui avais pas donn\xE9,\nSa vue il n'aurrrait pas rrrecouvrr\xE9... \n//<wave>Je
       ne serrrai pas sans foyer...<wav/e>\n[Oiseau]-On s'approche mais il faut encore
       oeuvrer, \nA force de pleurer il va se noyer !"
@@ -160,18 +160,18 @@ MonoBehaviour:
     - Remorse
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Mepr_Chat"
-    - "[Chat]-<?E:Music/Sadness,1,TRUE/>Sshhh ! Vous \xEAtes de bien pi\xE8trres
-      musiciens... \nVotre musique me rr\xE9volte... \nJe devrrais peut-\xEAtrre
-      bel et bien vous d\xE9vorrer !\n[Souris]-Nous l'avons mis de mauvais poil,
-      il est enerv\xE9 !\n[Oiseau]- MAIS INSULTE MOI ENCORE ET JE TE \n//*cui-cui-cui-cui*!"
+    - "[Chat]-<?E:Sfx/Sadness,1,TRUE/>Sshhh ! Vous \xEAtes de bien pi\xE8trres Sfxiens...
+      \nVotre musique me rr\xE9volte... \nJe devrrais peut-\xEAtrre bel et bien vous
+      d\xE9vorrer !\n[Souris]-Nous l'avons mis de mauvais poil, il est enerv\xE9
+      !\n[Oiseau]- MAIS INSULTE MOI ENCORE ET JE TE \n//*cui-cui-cui-cui*!"
     - 
     - 12
     - Contempt
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Anx_Chat"
     - "[Chat]-<?E:Vfx/Sadness,1,TRUE/>Si jamais il m'attrrape... je dois rrester
       sur mes garrdes.\n[Souris]- L\xE0 un loup regardes !\n[Chat]-Quoi ! Au secourrs
@@ -182,9 +182,9 @@ MonoBehaviour:
     - Anxiety
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Ravi_Chat"
-    - "[Chat]-<?E:Music/Sadness,1,TRUE/>Si seulement mes crrocs pouvaient carrresser
+    - "[Chat]-<?E:Sfx/Sadness,1,TRUE/>Si seulement mes crrocs pouvaient carrresser
       ta gorrge... \nJ'imagine sa douceurr...\n[Souris]-Ahahah, que tu es dr\xF4le,
       quel farceur !\n[Souris]-C'est bien juste pour me faire peur ?"
     - 
@@ -192,7 +192,7 @@ MonoBehaviour:
     - Delight
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dese_Chat"
     - "[Chat]-(pleure) Que fairre ? Je n'ai nul parrt o\xF9 aller... Si seulement...\n[Oiseau]-Nous
       ne sommes pas loin de savoir son sentiment..."
@@ -201,7 +201,7 @@ MonoBehaviour:
     - Despair
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Hont_Chat"
     - "[Chat]-Perdu, d\xE9boussol\xE9 devant une Souris et un Oiseau... \n<?E:Vfx/Sadness,1,TRUE/>Je
       pr\xE9f\xE8re encore \xEAtre d\xE9vor\xE9.\n[Souris]-Oh oui ! Z'aurais ador\xE9
@@ -211,28 +211,28 @@ MonoBehaviour:
     - Shame
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Incr_Chat"
     - "[Chat]-La musique de mon p\xE8rre est bien plus belle que \xE7a !\nC'\xE9tait
-      le meilleurr, il chantait pour moi.\n<?E:Music/Sadness,2,TRUE/><?E:Vfx/Sadness,1,TRUE/>Maintenant
+      le meilleurr, il chantait pour moi.\n<?E:Sfx/Sadness,2,TRUE/><?E:Vfx/Sadness,1,TRUE/>Maintenant
       le vent est ma seule chanson.\n[Souris]-En voil\xE0 des fa\xE7ons !"
     - 
     - 12
     - Unbelief
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Outr_Chat"
-    - "[Chat]-<?E:Music/Sadness,1,TRUE/>Une sourris qui ose me rrr\xE9conforrter
-      !?\n[Souris]- Pourquoi s'emporter ? \nOn ne fait que parler !"
+    - "[Chat]-<?E:Sfx/Sadness,1,TRUE/>Une sourris qui ose me rrr\xE9conforrter !?\n[Souris]-
+      Pourquoi s'emporter ? \nOn ne fait que parler !"
     - 
     - 12
     - Outrage
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Envi_Chat"
-    - "[Chat]-<?E:Music/Sadness,1,TRUE/>Quand je vous vois ensemble jouer... \n<?E:Music/Sadness,2,TRUE/>Je
+    - "[Chat]-<?E:Sfx/Sadness,1,TRUE/>Quand je vous vois ensemble jouer... \n<?E:Sfx/Sadness,2,TRUE/>Je
       pensais avoirr une famille aussi, <wave>je me leurrrais...</wave>\n[Souris]-Pas
       loin, notre air le fait pleurer !"
     - 
@@ -240,19 +240,19 @@ MonoBehaviour:
     - Envy
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Agre_Chat"
-    - "[Chat]-C'est quoi cette musique !? <?E:Music/Sadness,1,TRUE/>Changez tout
-      de suite !\n[Souris]-Son poil s'h\xE9risse ! Ce n'est pas une r\xE9ussite !
-      \nChangeons de musique ou prenons la fuite !"
+    - "[Chat]-C'est quoi cette musique !? <?E:Sfx/Sadness,1,TRUE/>Changez tout de
+      suite !\n[Souris]-Son poil s'h\xE9risse ! Ce n'est pas une r\xE9ussite ! \nChangeons
+      de musique ou prenons la fuite !"
     - 
     - 12
     - Aggressiveness
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Opti_Chat"
-    - "[Chat]-<?E:Music/Sadness,1,TRUE/>Je suis exil\xE9, sans foyer...\nSans avenirr,
+    - "[Chat]-<?E:Sfx/Sadness,1,TRUE/>Je suis exil\xE9, sans foyer...\nSans avenirr,
       le malheurr m'a foudrroy\xE9...\n[Oiseau]-En voil\xE0 des mani\xE8res ! \nTr\xE8s
       bien, nous changeons d'air !"
     - 
@@ -260,16 +260,16 @@ MonoBehaviour:
     - Optimism
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Curi_Chat"
-    - "[Chat]-<?E:Vfxc/Sadness,1,TRUE/>Quelle est cette \xE9trrange m\xE9lodie !\n[Oiseau]-Mais
+    - "[Chat]-<?E:Vfx/Sadness,1,TRUE/>Quelle est cette \xE9trrange m\xE9lodie !\n[Oiseau]-Mais
       quel est donc ton ressenti!? \nNous le trouverons, je pr\xE9dis !"
     - 
     - 12
     - Curiosity
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Domi_Chat"
     - "[Chat]-<?E:Vfx/Sadness,1,TRUE/>Je n'ai pas besoin de vous !\nJe suis chat
       garrrou !\nDe cette forr\xEAt je suis le ma\xEEtrre !\n[Oiseau]-Voyons, cessez
@@ -279,9 +279,9 @@ MonoBehaviour:
     - Dominance
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Pess_Chat"
-    - "[Chat]-<?E:Music/Sadness,3,TRUE/> Je n'ai nul parrt o\xF9 dorrmirr... \n<?E:Music/Sadness,2,TRUE/>Je
+    - "[Chat]-<?E:Sfx/Sadness,3,TRUE/> Je n'ai nul parrt o\xF9 dorrmirr... \n<?E:Sfx/Sadness,2,TRUE/>Je
       suis destin\xE9 \xE0 \xEAtrre un chat d'\xE9gout... <wave>Si seulement...<wave>\n[Souris]-Oui,
       nous allons r\xE9ussir, \nEt peut-\xEAtre qu'ensuite je serai plus pour lui
       qu'un aliment !"
@@ -290,19 +290,19 @@ MonoBehaviour:
     - Pessimism
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Espo_Chat"
-    - "[Chat]-<?E:Music/Sadness,2,TRUE/>Votre m\xE9lodie ne peut m'atteindrre, je
-      suis d\xE9sesp\xE9rr\xE9...\n[Oiseau]- A ce rythme il va retourner errer...\nSes
+    - "[Chat]-<?E:Sfx/Sadness,2,TRUE/>Votre m\xE9lodie ne peut m'atteindrre, je suis
+      d\xE9sesp\xE9rr\xE9...\n[Oiseau]- A ce rythme il va retourner errer...\nSes
       \xE9motions nous allons lib\xE9rer !"
     - 
     - 12
     - Hope
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Nost_Chat"
-    - "[Chat]-<?E:Vfx/Sadness,1,TRUE/><?E:Music/Sadness,2,TRUE/>Je me souviens quand
+    - "[Chat]-<?E:Vfx/Sadness,1,TRUE/><?E:Sfx/Sadness,2,TRUE/>Je me souviens quand
       il m'a apprris \xE0 hurler...\n[Oiseau]-Il est profond\xE9ment plong\xE9\nDans
       un souvenir refoul\xE9 !\n[Souris]-Presque, pas le moment de reculer !"
     - 
@@ -310,19 +310,21 @@ MonoBehaviour:
     - Nostalgy
     - FALSE
     - None
-    - 
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Joie_Sour"
     - "[Souris]-Z\u2019adore zouer ce morceau, <bounce>z\u2019ai envi de chanter
-      !</bounce>\n[Chat]- Piti\xE9 non ! \n<?E:Music/Sadness,1,TRUE/>Laisse tes \xAB
+      !</bounce>\n[Chat]- Piti\xE9 non ! \n<?E:Sfx/Sadness,1,TRUE/>Laisse tes \xAB
       ze \xBB dans cette bouche tourrment\xE9e !"
     - 
     - 11
     - None
     - FALSE
     - None
-    - MEPair:Mouse/Joy;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Souris/Joy;'
     - "\u24C7-Chpt2_Part1_Peur_Sour"
-    - "[Souris]-On dirait que t\u2019as peur !\n[Chat]-<?E:Music/Sadness,1,TRUE/>De
+    - "[Souris]-On dirait que t\u2019as peur !\n[Chat]-<?E:Sfx/Sadness,1,TRUE/>De
       moi un loup est pr\xE9dateurr !\n[Souris]-Blabla\u2026 Oui et bien \xAB de
       moi un chat est pr\xE9dateur \xBB !"
     - 
@@ -330,7 +332,9 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - MEPair:Mouse/Fear;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Souris/Fear;'
     - "\u24C7-Chpt2_Part1_Trist_Sour"
     - "[Souris]-Z\u2019ai une histoire qui m\u2019vient avec ces notes !\n[Chat]-<?E:Vfx/Sadness,2,TRUE/>Piti\xE9,
       une belle histoirre, une rr\xE9conforrtante !\n[Souris]-Il \xE9tait une fois
@@ -340,18 +344,22 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - MEPair:Mouse/Sadness;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Souris/Sadness;'
     - "\u24C7-Chpt2_Part1_Dego_Sour"
     - "[Souris]-C\u2019est vrai que vous vous lavez avec vos langues et tout ?\n[Chat]-Contrrairrement
       aux rrats,\nNous sommes en tout temps prroprres parrtout !\n[Souris]-<slide>Beurk,
-      mieux vaut se salir\u2026</slide>\n[Chat]-Sshhhh ! <?E:Music/Sadness,2,TRUE/>Pas
+      mieux vaut se salir\u2026</slide>\n[Chat]-Sshhhh ! <?E:Sfx/Sadness,2,TRUE/>Pas
       d'humeur, ne me cherche pas de poux !\n[Souris]-De puce tu veux dire\u2026"
     - 
     - 11
     - None
     - FALSE
     - None
-    - MEPair:Mouse/Disgust;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Souris/Disgust;'
     - "\u24C7-Chpt2_Part1_Conf_Sour"
     - "[Souris]-Z\u2019ai rencontr\xE9 un loup un zour, il ne m\u2019a pas manz\xE9
       !\n[Chat]-Vois-tu ! Nous ne sommes pas tous des b\xEAtes,\nCerrtains ont de
@@ -362,7 +370,9 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - MEPair:Mouse/Trust;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Souris/Trust;'
     - "\u24C7-Chpt2_Part1_Surp_Sour"
     - "[Souris]-Ze ne savais pas que \xE7a pouvait existait un chat-loup !\n[Chat]-Tu
       es surprrise ? \n<?E:Vfx/Sadness,1,TRUE/>Alorrs que tu es \xE0 la fois verrte
@@ -373,7 +383,9 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - MEPair:Mouse/Surprise;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Souris/Surprise;'
     - "\u24C7-Chpt2_Part1_Cole_Sour"
     - "[Souris]-<shake>Z\u2019ai envi de frapper mon fr\xE8re !</shake>\n[Oiseau]-Souris
       que dis-tu !? \nPourquoi ces soucis ? \nSurtout si soudain !\n[Souris]-Ces
@@ -383,48 +395,50 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - MEPair:Mouse/Anger;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Souris/Anger;'
     - "\u24C7-Chpt2_Part1_Dial1_Sour"
     - "[Souris]-T\u2019es s\xFBr que tu ne veux pas partir manzer d\u2019autres souris
-      ? \nZe suis pas bien grasse\u2026\n[Chat]-<?E:Music/Sadness,1,TRUE/>N\u2019ais
+      ? \nZe suis pas bien grasse\u2026\n[Chat]-<?E:Sfx/Sadness,1,TRUE/>N\u2019ais
       crrainte, j'ai d'autres soucis. \n<wave>Le mis\xE9rrable chat que je suis est
       en disgrr\xE2ce\u2026</wave>"
     - 
     - 10
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial2_Sour"
     - "[Souris]-Chat ? Ze pensais que t\u2019\xE9tais un loup, faut savoir ce que
-      t\u2019es !\n[Chat]-Je le crroyais aussi\u2026 <?E:Music/Sadness,1,TRUE/>Mais
+      t\u2019es !\n[Chat]-Je le crroyais aussi\u2026 <?E:Sfx/Sadness,1,TRUE/>Mais
       me voil\xE0 rrejet\xE9\u2026"
     - 
     - 9
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial3_Sour"
     - "[Souris]-Comment \xE7a sfait que t\u2019es pas un loup ? \nT\u2019as dit que
-      ton p\xE8re en \xE9tait un !\n[Chat]-Pas mon vrrai p\xE8rre, <?E:Music/Sadness,2,TRUE/>j\u2019\xE9tais
+      ton p\xE8re en \xE9tait un !\n[Chat]-Pas mon vrrai p\xE8rre, <?E:Sfx/Sadness,2,TRUE/>j\u2019\xE9tais
       perrdu surr le coup, \nle loup m\u2019a rrecueilli un matin !"
     - 
     - 8
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial4_Sour"
     - "[Souris]-Faut voir pour croire ! Un loup qui accepte un chat pour \xEAtre
-      p\xE8re !\n[Chat]-<?E:Music/Sadness,2,TRUE/>C\u2019est justement le point\u2026
+      p\xE8re !\n[Chat]-<?E:Sfx/Sadness,2,TRUE/>C\u2019est justement le point\u2026
       Lui ne voyait pas, il \xE9tait sans rep\xE8rres."
     - 
     - 7
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial5_Sour"
     - "[Souris]-S\u2019il ne voyait pas il sentait : Un chat \xE7a fait fr\xE9mir
       les moustaches !\n[Chat]-Sshhhhh ! <?E:vfx/Sadness,1,TRUE/>Tu veux que je me
@@ -433,8 +447,8 @@ MonoBehaviour:
     - 6
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial6_Sour"
     - "[Souris]-Avec ta <slide>langue</slide> tu te laves ! Et on dit les Souris
       d\xE9go\xFBtantes\u2026\n[Chat]-Sshhhh ! Tu prr\xE9f\xE8rres \xEAtre rragoutante
@@ -443,19 +457,19 @@ MonoBehaviour:
     - 5
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial7_Sour"
     - "[Souris]-Pourquoi t\u2019es roux, alors que ton p\xE8re est gris t\u2019as
-      dit tout \xE0 l\u2019heure ?\n[Chat]-<?E:Music/Sadness,2,TRUE/>Je l\u2019ai
-      d\xE9j\xE0 rr\xE9v\xE9l\xE9 il me semble, le loup m\u2019a \xE9lev\xE9 mais
-      je suis n\xE9 ailleurrs ! "
+      dit tout \xE0 l\u2019heure ?\n[Chat]-<?E:Sfx/Sadness,2,TRUE/>Je l\u2019ai d\xE9j\xE0
+      rr\xE9v\xE9l\xE9 il me semble, le loup m\u2019a \xE9lev\xE9 mais je suis n\xE9
+      ailleurrs ! "
     - 
     - 4
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial8_Sour"
     - "[Souris]-Toujours se m\xE9fier des chats, mais alors les chats roux\u2026\n[Chat]-<?E:Vfx/Sadness,2,TRUE/>J\u2019ai
       connu une sourris verrte, c'est fou !\nElle courrait dans l\u2019herrbe avant
@@ -464,21 +478,21 @@ MonoBehaviour:
     - 3
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial9_Sour"
     - "[Souris]-Tu dis que tu connais ma tante Berthe ?\nC\u2019est la seule de la
-      famille \xE0 \xEAtre verte !\n[Chat]<?E:Music/Sadness,3,TRUE/>-A parrt toi,
-      c\u2019est pourr \xE7a qu\u2019\xE0 la forr\xEAt tu as \xE9t\xE9 offerrte ?"
+      famille \xE0 \xEAtre verte !\n[Chat]<?E:Sfx/Sadness,3,TRUE/>-A parrt toi, c\u2019est
+      pourr \xE7a qu\u2019\xE0 la forr\xEAt tu as \xE9t\xE9 offerrte ?"
     - 
     - 2
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial10_Sour"
     - "[Souris]-Moi ? Non ! J\u2019ai piqu\xE9 la noix de mon p\xE8re pendant qu'il
-      dort \nEt je l\u2019ai \xE9chang\xE9e contre un cailloux jaune brillant !\n[Chat]-<?E:Music/Sadness,3,TRUE/>Tu
+      dort \nEt je l\u2019ai \xE9chang\xE9e contre un cailloux jaune brillant !\n[Chat]-<?E:Sfx/Sadness,3,TRUE/>Tu
       as chang\xE9 une noix en orrrr ?\nEt ton p\xE8rre n\u2019est pas accueillant
       ?\n[Souris]-Papa n\u2019\xE9tait pas tr\xE8s content\u2026 \nIl s\u2019y est
       cass\xE9 une dent."
@@ -486,8 +500,8 @@ MonoBehaviour:
     - 1
     - None
     - FALSE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set1_Sour"
     - "[Souris]-Petit chat sournois !\n[Chat]- Te d\xE9vorrer je devrrais ! <?E:Vfx/Sadness,3,TRUE/><wave>Mais
       je suis trrop en \xE9moi\u2026</wave>"
@@ -495,37 +509,37 @@ MonoBehaviour:
     - 0
     - None
     - TRUE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set2_Sour"
-    - "[Souris]- Pourquoi t\u2019as peur ! Les chats n\u2019ont pas 9 vies ? \n[Chat]-<?E:Music/Sadness,3,TRUE/><?E:Sfx/Sadness,1,TRUE/>Ce
+    - "[Souris]- Pourquoi t\u2019as peur ! Les chats n\u2019ont pas 9 vies ? \n[Chat]-<?E:Sfx/Sadness,3,TRUE/><?E:Sfx/Sadness,1,TRUE/>Ce
       qui reste 8 vies \xE0 subirr sans envie\u2026"
     - 
     - 0
     - None
     - TRUE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set3_Sour"
-    - "[Souris]- Eh le loup !\n[Chat]- <?E:Music/Sadness,3,TRUE/><wave>Je ne veux
-      parrler\u2026</wave>\n[Souris]- Il croit vraiment \xEAtre loup ce filou !\n[Chat]-Sshhh
-      ! Je vais t\u2019avaler !"
+    - "[Souris]- Eh le loup !\n[Chat]- <?E:Sfx/Sadness,3,TRUE/><wave>Je ne veux parrler\u2026</wave>\n[Souris]-
+      Il croit vraiment \xEAtre loup ce filou !\n[Chat]-Sshhh ! Je vais t\u2019avaler
+      !"
     - 
     - 0
     - None
     - TRUE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set4_Sour"
-    - "[Souris]-Papa m\u2019a toujours dit \xE0 quel point les chats se plaignaient\u2026\n[Chat]-<?E:Music/Sadness,3,TRUE/><?E:Music/Sadness,3,TRUE/><wave>Mon
+    - "[Souris]-Papa m\u2019a toujours dit \xE0 quel point les chats se plaignaient\u2026\n[Chat]-<?E:Sfx/Sadness,3,TRUE/><?E:Sfx/Sadness,3,TRUE/><wave>Mon
       coeurr se larrmoie, dans mes larrmes je me noie</wave>\n[Souris]-Il \xE9tait
       bien renseign\xE9\u2026"
     - 
     - 0
     - None
     - TRUE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set5_Sour"
     - "[Souris]- Ce chat a vraiment un grain\u2026\n//Ou alors il a vraiment du <wave>chagrin</wave>\n//Je
       ne sais plus\u2026"
@@ -533,8 +547,8 @@ MonoBehaviour:
     - 0
     - None
     - TRUE
-    - Mouse
-    - 
+    - Souris
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Joie_Oise"
     - "[Oiseau]-Quitter mon nid la nuit,\nPartir \xE0 l\u2019aventure,\nCroiser un
       chat qui fuit !\n[Souris]-Qu\u2019est-ce que tu racontes, tu es folle ?\n[Oiseau]-<bounce>Chanter
@@ -544,11 +558,13 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - Masks:Conversation/Emotion, Default;MEPair:Bird/Joy;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Oiseau/Joy;'
     - "\u24C7-Chpt2_Part1_Peur_Oise"
     - "[Souris]-Ca va Oiseau ? Tu parles moins\u2026\n[Oiseau]-Je songe encore aux
-      Musiciens\u2026 \nJ\u2019ai laiss\xE9 les miens pour chanter\u2026 \nS\u2019ils
-      me disent\u2019 que <shake>je ne vaux rien\u2026</shake>\n[Chat]-<?E:Music/Sadness,3,TRUE/>Au
+      Sfxiens\u2026 \nJ\u2019ai laiss\xE9 les miens pour chanter\u2026 \nS\u2019ils
+      me disent\u2019 que <shake>je ne vaux rien\u2026</shake>\n[Chat]-<?E:Sfx/Sadness,3,TRUE/>Au
       moins toi, de rr\xE9ussirr tu garrdes espoirr. Moi c\u2019est terrmin\xE9,
       <wave>je suis un vaurrien</wave>."
     - 
@@ -556,7 +572,9 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - Masks:Conversation/Emotion, Default;MEPair:Bird/Fear;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Oiseau/Fear;'
     - "\u24C7-Chpt2_Part1_Trist_Oise"
     - "[Oiseau]-Voir ce chat qui se morfond,\nSes yeux aux couleurs de nuit, \n<wave>Ca
       m\u2019attriste au plus profond.<wave>\n[Chat]-Sshhh !!! Je me fiche de ta
@@ -568,7 +586,9 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - Masks:Conversation/Emotion, Default;MEPair:Bird/Sadness;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Oiseau/Sadness;'
     - "\u24C7-Chpt2_Part1_Dego_Oise"
     - "[Oiseau]-Quand je pense \xE0 tous ceux qui <slide>de ma voix se gaussaient
       !<slide>\n//Pour ne pas croire en moi ils m\xE9ritent de se faire rosser !\n[Chat]-De
@@ -579,7 +599,9 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - Masks:Conversation/Emotion, Default;MEPair:Bird/Disgust;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Oiseau/Disgust;'
     - "\u24C7-Chpt2_Part1_Conf_Oise"
     - "[Oiseau]-Je dois avouer, m\xEAme si mon chant est lou\xE9 (ou le sera), j\u2019aime
       jouer avec vous !\n[Souris]-Eh bien ! M\xEAme si z\u2019ai du mal \xE0 comprendre
@@ -591,10 +613,12 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - Masks:Conversation/Emotion, Default;MEPair:Bird/Trust;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Oiseau/Trust;'
     - "\u24C7-Chpt2_Part1_Surp_Oise"
     - "[Oiseau]-Ouah ! Je sais que c\u2019est moi qui chante,\nMais ma prestation
-      est surprenante !\n[Chat]-Pourr \xEAtrre surrprris je le suis, <?E:Music/Sadness,2,TRUE/>\xE0
+      est surprenante !\n[Chat]-Pourr \xEAtrre surrprris je le suis, <?E:Sfx/Sadness,2,TRUE/>\xE0
       un moment je pensais mes orreilles mourrantes !\n[Oiseau]-Tu n\u2019es qu\u2019un
       mis\xE9rable chat qui m\xE9rite l\u2019abandon !!!"
     - 
@@ -602,28 +626,32 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - Masks:Conversation/Emotion, Default;MEPair:Bird/Surprise;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Oiseau/Surprise;'
     - "\u24C7-Chpt2_Part1_Cole_Oise"
     - "[Oiseau]-C\u2019est ce morceau, je me rappelle, mon fr\xE8re chantait\u2026\n//Cet
       esp\xE8ce d\u2019enfoi*cui-cui-cui-cui-cui* mangeur de vers !\n[Souris]-Ahahah,
-      l\xE0 je te retrouve mon pioupiou !\n[Chat]-<?E:Music/Sadness,2,TRUE/>Et c\u2019est
+      l\xE0 je te retrouve mon pioupiou !\n[Chat]-<?E:Sfx/Sadness,2,TRUE/>Et c\u2019est
       moi qu\u2019on disait fou\u2026"
     - 
     - 11
     - None
     - FALSE
     - None
-    - Masks:Conversation/Emotion, Default;MEPair:Bird/Anger;
+    - 'Masks:Dialogue/Dialogue,
+
+      MEPair:Oiseau/Anger;'
     - "\u24C7-Chpt2_Part1_Dial1_Oise"
     - "[Oiseau]-Pour un loup \xE9conduit, vous \xEAtes bien joli\u2026\n[Chat]-SShhh
-      !!! Joli moi ? \nJe suis un loup,\nD\xE9trrompez-vous, \n<?E:Music/Sadness,1,TRUE/>Ici
+      !!! Joli moi ? \nJe suis un loup,\nD\xE9trrompez-vous, \n<?E:Sfx/Sadness,1,TRUE/>Ici
       tous fuient devant moi !"
     - 
     - 10
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial2_Oise"
     - "[Oiseau]-Vous tentez de grogner, \nMais vous ronronnez, \nQuelle m\xE9lancolie
       !\n[Chat]-SShhh !!! Arrrr\xEAtez de vous moquer ! \n<?E:Vfx/Sadness,2,TRUE/>C\u2019est
@@ -632,8 +660,8 @@ MonoBehaviour:
     - 9
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial3_Oise"
     - "[Oiseau]-Votre loup de p\xE8re, \nDe tous vos soucis,\nSemble \xEAtre le rep\xE8re\u2026\n//Avez-vous
       peur d\u2019\xEAtre attaqu\xE9 \nComm\u2019 Souris d\u2019\xEAtre croqu\xE9e
@@ -643,18 +671,18 @@ MonoBehaviour:
     - 8
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial4_Oise"
     - "[Oiseau]-Ah oui c'est vrai, j\u2019oublie !\nLe monde sans voler, pr\xE9sente
-      des dangers !\n[Chat]-D\xE9trompez-vous, je suis affaibli !\n<?E:Music/Sadness,3,TRUE/>Si
+      des dangers !\n[Chat]-D\xE9trompez-vous, je suis affaibli !\n<?E:Sfx/Sadness,3,TRUE/>Si
       le coeurr ne m\u2019\xE9tait pas si lourrd je pourrrrais sur vous plonger ! "
     - 
     - 7
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial5_Oise"
     - "[Oiseau]-Alors qu\u2019y-a-t-il ? Un animal avec un tel poil chatoyant\u2026\n//De
       la solitude votre coeur ne doit pas \xEAtre larmoyant !\n[Chat]-D\xE9trrompez-vous,
@@ -664,18 +692,18 @@ MonoBehaviour:
     - 6
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial6_Oise"
-    - "[Oiseau]-Pour vous avoir jet\xE9 votre p\xE8re ne voit pas bien\u2026\n[Chat]-<?E:Music/Sadness,3,TRUE/>L\xE0
+    - "[Oiseau]-Pour vous avoir jet\xE9 votre p\xE8re ne voit pas bien\u2026\n[Chat]-<?E:Sfx/Sadness,3,TRUE/>L\xE0
       est le prrobl\xE8me, c\u2019est la vue rrecouvrr\xE9e qu\u2019il m\u2019a exil\xE9
       !\n[Oiseau]-Eh bien sans ses yeux, \nIl voyait forrt mieux !"
     - 
     - 5
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial7_Oise"
     - "[Oiseau]-Quel langage ! Si votre ramage se rapporte \xE0 votre pelage\u2026\n[Souris]-Ah
       non mais c\u2019est bon l\xE0, t\u2019es vraiment entrain de draguer un chat
@@ -685,8 +713,8 @@ MonoBehaviour:
     - 4
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial8_Oise"
     - "[Oiseau]-Ne faites pas attention \xE0 Souris,\nVous disiez avant qu\u2019elle
       ne nous nuise ?\n[Chat]-<?E:Vfx/Sadness,3,TRUE/>Je n\u2019ai rien \xE0 redire,
@@ -697,64 +725,64 @@ MonoBehaviour:
     - 3
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial9_Oise"
     - "[Oiseau]-Mais d\xEEtes-moi, par quel exploit avez-vous r\xE9ussi \xE0 fuir
-      dans ces bois !\n[Chat]-<?E:Music/Sadness,3,TRUE/>Mon p\xE8re est lent et vieux,
+      dans ces bois !\n[Chat]-<?E:Sfx/Sadness,3,TRUE/>Mon p\xE8re est lent et vieux,
       le fuir est ais\xE9\u2026\nLa cime d\u2019un arbre \xE9tait mon alli\xE9."
     - 
     - 2
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Dial10_Oise"
     - "[Oiseau]-Vous avez grimp\xE9, quelle riche id\xE9e\u2026\nEt avez-vous un
       endroit o\xF9 aller ?\n[Chat]-Trrois secondes pour grrimper, \nTrrois jourrs
-      pour descendrre, \nDans l\u2019arrbrre j\u2019\xE9tais coinc\xE9\u2026 \n//<?E:Music/Sadness,3,TRUE/><?E:Sfx/Sadness,3,TRUE/>Non,
+      pour descendrre, \nDans l\u2019arrbrre j\u2019\xE9tais coinc\xE9\u2026 \n//<?E:Sfx/Sadness,3,TRUE/><?E:Sfx/Sadness,3,TRUE/>Non,
       nul parrt o\xF9 me rrendre, j\u2019errre,\n<wave>Je ne suis plus d\u2019humeurr
       \xE0 avancer\u2026</wave>"
     - 
     - 1
     - None
     - FALSE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set1_Oise"
     - "[Oiseau]-Pourquoi ne pas nous accompagner\nComme vous n'avez nul part o\xF9
-      aller...\n[Souris]-Et mon avis alors !\n[Chat]-<?E:Music/Sadness,3,TRUE/>Je
-      pr\xE9f\xE8re encore dormir dehors !"
+      aller...\n[Souris]-Et mon avis alors !\n[Chat]-<?E:Sfx/Sadness,3,TRUE/>Je pr\xE9f\xE8re
+      encore dormir dehors !"
     - 
     - 0
     - None
     - TRUE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set2_Oise"
     - "[Oiseau]-Les id\xE9es commencent \xE0 nous faire d\xE9faut ! \nPas facile
-      de trouver ce qu'il vous faut !\n[Chat]-<?E:Vfx/Sadness,3,FALSE/><?E:Music/Sadness,3,TRUE/><color=#6FA1D0>Le
+      de trouver ce qu'il vous faut !\n[Chat]-<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Sadness,3,TRUE/><color=#6FA1D0>Le
       chagrrin me d\xE9vorre</color>, \n<wave>Laissez-moi \xE0 mon sorrt !</wave>"
     - 
     - 0
     - None
     - TRUE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set3_Oise"
     - '[Oiseau]-Nous allons rendre un chat heureux !
 
       Avec un rythme chalheureux
       !
 
-      [Chat]-<?E:Music/Sadness,3,TRUE/><?E:Vfx/Sadness,3,TRUE/>Impossible,
+      [Chat]-<?E:Sfx/Sadness,3,TRUE/><?E:Vfx/Sadness,3,TRUE/>Impossible,
       je suis bien trop malheurreux...'
     - 
     - 0
     - None
     - TRUE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set4_Oise"
     - "[Oiseau]-Votre \xE9motion on trouvera !\nComme on dit, \xE0 bon chat bon rat
       !\n[Souris]-Quoi ?\n[Chat]-Quoi ?"
@@ -762,8 +790,8 @@ MonoBehaviour:
     - 0
     - None
     - TRUE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Set5_Oise"
     - "[Oiseau]-J'adore les myst\xE8res !\n[Chat]-<?E:Vfx/Sadness,1,TRUE/>Alors je
       dois vous plairre...\n[Oiseau]-Vous aveez bien du flair..."
@@ -771,8 +799,8 @@ MonoBehaviour:
     - 0
     - None
     - TRUE
-    - Bird
-    - 
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1"
     - "[Souris]-Attention, ze suis certaine, une chose est entrain de nous flairer,
       qui est l\xE0 ?\n[Chat]-Ce n'est rrien, ce n'est rrien, juste moi, un loup
@@ -789,15 +817,15 @@ MonoBehaviour:
       comme il est mignon, il ronronne !\nLui, il est plus chanteurrr que pr\xE9dateurrrr
       ! \n[Souris]-Facile \xE0 dire pour toi ! C'est pas zuste, tu peux voler !\n[Oiseau]-Chat
       ou loup dis nous quel est ton malheur !\n//Comment se fait-il que tu sois ici
-      ? Egar\xE9, isol\xE9 !\n[Chat]-<?E:Music/Sadness,2,TRUE/>J'abandonne... Comment
-      surrvivrre si m\xEAme oiseau et sourris devant moi ne fuient !\n//<?E:Music/Sadness,2,TRUE/>J\u2019avais
+      ? Egar\xE9, isol\xE9 !\n[Chat]-<?E:Sfx/Sadness,2,TRUE/>J'abandonne... Comment
+      surrvivrre si m\xEAme oiseau et sourris devant moi ne fuient !\n//<?E:Sfx/Sadness,2,TRUE/>J\u2019avais
       un foyer et une famille hierr, <?E:Vfx/Sadness,1,TRUE/>je suis seul aujourrd\u2019hui.\n//J\u2019en
       veux au monde, j\u2019en veux \xE0 lui.\n//Pourr me laisser l\xE0 seul et d\xE9muni\u2026\n//Tant
       d\u2019ann\xE9es \xE0 apprrendre \xE0 l\u2019aimer, un seul jour pour le ha\xEFrr.\n//Aujourd\u2019hui
       me voil\xE0 perrdu, laissant le d\xE9sespoirr m\u2019envahirr.\n//Celui qui
       m\u2019a \xE9lev\xE9 n\u2019y voyait rrien, c\u2019\xE9tait un loup bien \xE2g\xE9\u2026\n//Aujourrd\u2019hui
       il voit mieux, et ne d\xE9sirre que me manger !\n//SShhh ! Je crrache ma rrage
-      sur ce grrand renarrd grris !\n//<?E:Music/Sadness,2,TRUE/><wave>Mais me voil\xE0
+      sur ce grrand renarrd grris !\n//<?E:Sfx/Sadness,2,TRUE/><wave>Mais me voil\xE0
       devant vous, fuyant, tout affam\xE9 et aigrri !</wave>\n[Oiseau]-Grenouille,
       il nous faut l\u2019aider, seul, *couic*, il est condamn\xE9.\n[Souris]-Faut
       le laisser ce chat, ze suis partante pour l\u2019abandonner !"
@@ -806,5 +834,1586 @@ MonoBehaviour:
     - None
     - FALSE
     - None
-    - Masks:Bloc/Nothing
+    - Masks:Block/None
     size: {x: 8, y: 74}
+  - name: ChatLoupB
+    version: 1.0.0
+    array:
+    - "\u24D8-Dialogues"
+    - "\u24B8-Fran\xE7ais"
+    - "\u24B8-English"
+    - "\u24B8-Priority"
+    - "\u24B8-Emotion"
+    - "\u24B8-Keep"
+    - "\u24B8-Needed Musician"
+    - "\u24B8-Data"
+    - "\u24C7-Chpt2_Part2_Joie_Chat"
+    - "[Chat]-Malgrr\xE9 ma peine, <?E:Sfx/Joy,3,TRUE/><?E:Sfx/Joy,3,TRUE/>votrre
+      musique me rrappelle tellement de bons souvenirs !\n[Oiseau]-C\u2019est donc
+      la <swing>joie</swing>, que tu ressens ?\n[Chat]-<?E:Sfx/Trust,2,TRUE/>On s\u2019en
+      rapprroche je pense, quel est ce sentiment naissant ?"
+    - 
+    - 12
+    - Joy
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Peur_Chat"
+    - "[Loup]-Aouuuhhh\n[Chat]-Qu\u2019est-ce que !? Est-ce le loup ?\n[Chat]-<?E:Sfx/Joy,1,TRUE/>Change
+      de musique, je ne suis plus rrassur\xE9 d\u2019un coup !"
+    - 
+    - 12
+    - Fear
+    - 
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Trist_Chat"
+    - "[Chat]-Je suis sans p\xE8rre ni foyer\u2026\n[Oiseau]-Restez, rejoignez-nous
+      ! Nous allons vous choyer !\n[Chat]-<?E:Sfx/Joy,1,TRUE/> Merrci, votrre prr\xE9sence
+      peut peut-\xEAtrre me consoler...\n"
+    - 
+    - 12
+    - Sadness
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dego_Chat"
+    - "[Chat]-Sshhh ! Je ne suis plus stupide qu\u2019un rrat, j\u2019aimerrai me
+      frrapper !\n[Souris]-Fait-le donc et arr\xEAte de nous manquer de respect !?\n[Chat]-<?E:Vfx/Joy,TRUE/>
+      Je me rrappelle un jourr avoirr \xE9t\xE9 de si bon aspect !\n"
+    - 
+    - 12
+    - Disgust
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Conf_Chat"
+    - "[Chat]-<?E:Sfx/Trust,3,FALSE/><?E:Sfx/Trust,3,TRUE/>Cette m\xE9lodie\u2026
+      Elle rr\xE9sonne encorre en moi\u2026\n[Chat]-Il veut me nuirre, mais <bounce>je
+      lui confierrai ma vie</bounce>, quel \xE9moi !\n[Oiseau]-Moi je ne vous d\xE9cevrai,
+      mon amour vous recevrez !\n"
+    - 
+    - 12
+    - Trust
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Surp_Chat"
+    - "[Chat]-Un son bien \xE9tonnant\u2026\n[Chat]-<?E:Sfx/Trust,1,TRUE/> Aussi
+      surrprrenant que la rr\xE9action du loup aprr\xE8s mon pr\xE9sent\u2026"
+    - 
+    - 12
+    - Surprise
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Cole_Chat"
+    - "[Chat]-Cette m\xE9lodie me rr\xE9volte !\n[Souris]-Calme toi, on est potes
+      ?\n[Chat]-Faire <bounce>confiance</bounce> \xE0 une sourris !? Jamais, tu es
+      bien sotte !\n"
+    - 
+    - 12
+    - Anger
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Vigi_Chat"
+    - "[Chat]-Aujourd'hui aux dangers de la forr\xEAt je veille, j'en deviens fou...\n<?E:Sfx/Trust,2,TRUE/>Hierr
+      j'aurrai confi\xE9 volontier ma vie au loup."
+    - 
+    - 12
+    - Anticipation
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Amou_Chat"
+    - "[Chat ]-<?E:Sfx/Trust,3,FALSE/><?E:Vfx/Joy,3,TRUE/>Si mon corprrs est chat,
+      il a fait de mon coeurr un loup\u2026 \nJe l\u2019aime malgr\xE9 tout\u2026\n[Oiseau
+      ]-Et c\u2019est donc cela qui vous hante, \nl\u2019amour qui vous lie vous
+      tourmente ?\n[Chat ]-Oui je m\u2019en rend compte, <?E:Vfx/Trust,3,FALSE/><?E:Sfx/Joy,3,TRUE/>il
+      rreste pourr moi un p\xE8rre parr-dessus tout !\n[Souris]-Tout \xE7a para\xEEt
+      bizarre\u2026 \nTu nous mens pas par hasard ?\n[Chat ]-Comment oses tu douter
+      de ma sinc\xE9rrit\xE9 ! Aie confiance, <?E:Sfx/Trust,3,TRUE/>Ce que je dis
+      est <bounce>v\xE9rrit\xE9</bounce> !\n"
+    - 
+    - 12
+    - Love
+    - FALSE
+    - None
+    - Masks:Dialogue/None;
+    - "\u24C7-Chpt2_Part2_Soum_Chat"
+    - "[Chat]-<?E:Sfx/Trust,3,TRUE/><?E:Sfx/Trust,2,TRUE/>Je suis \xE0 l'aise, cette
+      m\xE9lodie me donne des frrissons !\n[Oiseau]-L\u2019aurions-nous enfin trouv\xE9
+      ? Votre discr\xE8te \xE9motion ?\n[Chat]-Je ne pense pas, elle me fait un peu
+      trrop peurr, du moins qu\u2019une porrtion\u2026\n"
+    - 
+    - 12
+    - Submission
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_D\xE9sa_Chat"
+    - "[Chat]-Jamais je ne pouvais pr\xE9voirr telle rr\xE9action !\n[Chat]-<?E:Sfx/Trust,12TRUE/>Mais
+      je lui parrdonne, on fait tous des errreurrs dans l\u2019action\u2026\n"
+    - 
+    - 12
+    - Disapproval
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Remo_Chat"
+    - "[Chat]-Je rregrrette mon cadeau\u2026\n[Chat]-<?E:Vfx/Joy,1,TRUE/>Avec lui
+      j'\xE9tais heurreux, cette errreur est mon farrdeau\u2026\n"
+    - 
+    - 12
+    - Remorse
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Mepr_Chat"
+    - "[Chat]-\xCAtre rr\xE9duit \xE0 parrler avec une sourris\u2026\n[Souris]-Parler
+      avec un chat aussi c\u2019est pourri ! \n[Chat]-<?E:Sfx/Joy,2,TRUE/>Pour dire
+      vrai j'aime bien nos plaisanterie !"
+    - 
+    - 12
+    - Contempt
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Agres_Chat"
+    - "[Chat]-<?E:Sfx/Trust,1,TRUE/>Sshhh ! Changez votrre m\xE9lodie ou soyez mon
+      rrepas !\n[Souris]-Apparemment cette musique ne lui va pas\u2026\n"
+    - 
+    - 12
+    - Aggressiveness
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Opti_Chat"
+    - "[Chat]-<?E:Sfx/Trust,1,TRUE/><?E:Vfx/Joy,3,TRUE/>Cette m\xE9lodie me donne
+      <bounce>espoirr</bounce> en l\u2019avenirr.\n[Chat]-Mais j\u2019apprr\xE9hende
+      encorre ce qui va venirr\u2026\n[Oiseau]-On effleure son sentiment. Il a encore
+      peur... Courage, nous devons r\xE9ussir !"
+    - 
+    - 12
+    - Optimism
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Deli_Chat"
+    - "[Chat]-Oui, cette musique\u2026 <?E:Vfx/Joy,3,TRUE/>Mon p\xE8rre adorrait
+      chanter quand j\u2019\xE9tais petit\u2026\n[Chat]-On vivait <color=#e5a810><bounce>heureux<bounce></color>,
+      notre amourr \xE9tait b\xE2ti.\n[Chat]-<?E:Sfx/Trust,2,TRUE/>Ce son rrepr\xE9sente
+      prresque ce que je rressens pour lui !\n"
+    - 
+    - 12
+    - Delight
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Curi_Chat"
+    - "[Chat]-<?E:Sfx/Joy,2,TRUE/>Vous m\xE9lodies m\u2019intrriguent !\n[Oiseau]-Sur
+      votre coeur elles naviguent ?\n[Chat]-Non, sans \xEAtre odieux, ce son est
+      juste currieux\u2026\n"
+    - 
+    - 12
+    - Curiosity
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dese_Chat"
+    - "[Chat]-Ma trristesse est infinie, mon futurr est terrni.\n[Oiseau]-Peut-\xEAtre
+      changer de registre, ce son le rend vraiment sinistre\u2026\n[Chat]-<?E:Sfx/Trust,2,TRUE/>Je
+      vous fais confiance, r\xE9essayez, vous \xEAtes permis !"
+    - 
+    - 12
+    - Despair
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Hont_Chat"
+    - "[Chat]-<?E:Sfx/Trust,1,TRUE/>Pouvez-vous changer de m\xE9lodie ?\n[Chat]-Elle
+      me rrappelle trrop mon errreurr, cette trrag\xE9die.\n"
+    - 
+    - 12
+    - Shame
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dece_Chat"
+    - "[Chat]-J\u2019ai beau lui parrdonner, lui faire confiance son acte m\u2019a
+      d\xE9\xE7u.\n[Chat]-Je l\u2019adorre, mais pourrquoi m\u2019\xEAtrre \xE0 ce
+      point tomber dessus ?\n"
+    - 
+    - 12
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Incr_Chat"
+    - "[Chat]-Quelles sont ces notes !\n[Souris]-Elles vous bottent ?\n[Chat]-Oh
+      que non, elles d\xE9notent !\n<?E:Vfx/Joy2,TRUE/>Mais elles sont rigolotes
+      !"
+    - 
+    - 12
+    - Unbelief
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Outr_Chat"
+    - "[Chat]-<?E:Sfx/Trust,1,TRUE/>Il \xE9tait tout pourr moi, comment a-t-il os\xE9
+      me chasser !\n[Souris]-Il s\u2019est peut-\xEAtre senti menac\xE9 !\n[Chat]-Comment
+      la parrole tu oses m\u2019adrresser !\n[Oiseau]-Il faut changer de son, il
+      le rend courrouc\xE9 !\n"
+    - 
+    - 12
+    - Outrage
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Envi_Chat"
+    - "[Chat]-<?E:Sfx/Joie,1,TRUE/>La chaleurr de son foyer me manque terrriblement\u2026\n[Chat]-Je
+      suis prr\xEAt \xE0 tuer pour le rretrouver\u2026\n[Souris]-Comment ?\n[Chat]-Euh\u2026
+      Je n\u2019ai rrien dit, la musique m\u2019a emporrt\xE9\u2026\n"
+    - 
+    - 12
+    - Envy
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Pessi_Chat"
+    - "[Chat]-On dirrait bien quand mon avenirr est en p\xE9rril.\n[Chat]-<?E:Vfx/Joy,1,TRUE/>J'\xE9tais
+      si bien, maintenant tout espoirr est st\xE9rrile\u2026"
+    - 
+    - 12
+    - Pessimism
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Cyni_Chat"
+    - "[Chat]-Incrroyable, que vous \xEAtes talentueux !\n[Oiseau]-Vous le pensez
+      ? C\u2019est fabuleux !\n[Chat]-<?E:Sfx/Joy,2,TRUE/>Ahah, non, je n\u2019ai
+      rrien entend de si d\xE9sastrreux !"
+    - 
+    - 12
+    - Cynicism
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Nost_Chat"
+    - "[Chat]-Drr\xF4le d\u2019\xE9motion dans cette musique\u2026\n[Chat]-<?E:Vfx/Joy,3,TRUE/><?E:Sfx/Joy,2,TRUE/>Je
+      suis trriste, mais elle me rrappelle des moments <color=#e5a810><swing>magiques</swing></color>\u2026\n[Souris]-On
+      n'est plus tr\xE8s loin, \xE7a parait logique !"
+    - 
+    - 12
+    - Nostalgy
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Domi_Chat"
+    - "[Chat]-Si vous jouez devant moi, au moins jouez bien !\n[Souris]-Tu n\u2019es
+      pas tr\xE8s sympa, en musique tu y connais rien !\n[Chat]-<?E:Vfx/Trust,3,FALSE/><?E:Sfx/Trust,3,TRUE/>Au
+      contraire, j'ai \xE9t\xE9 \xE9duqu\xE9 par le meilleur, ce <bounce>talent</bounce>
+      est le mien !"
+    - 
+    - 12
+    - Dominance
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Espo_Chat"
+    - "[Chat]-<?E:Vfx/Trust,3,TRUE/>Votrre musique me rredonne envie d\u2019y crroirre
+      !\n[Oiseau]-As-tu retrouv\xE9 ton espoir ? Ou es-tu toujours dans le noir ?\n[Chat]-Encorre
+      dans le noirr, mais c\u2019est le bon genrre de r\xE9perrtoire !\n[Chat]-<?E:Sfx/Trust,3,TRUE/>Mon
+      \xE9motion est non loin, vous \xEAtes prroche de la victoirre !\n"
+    - 
+    - 12
+    - Hope
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Anxi_Chat"
+    - "[Chat]-Changez ce son strrident, il m\u2019opprresse !\n[Souris]-Pourquoi
+      tu stresses ?\n[Chat]-<?E:Sfx/Trust,1,TRUE/>Changes-le c\u2019est tout, ou
+      je t\u2019agrresse !\n"
+    - 
+    - 12
+    - Anxiety
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Joie_Sour"
+    - "[Souris]-Bien contente que tu sois triste et non en col\xE8re, \nje n\u2019ai
+      pas envie de finir dans une marmite cuisin\xE9e dans du vin et de la terre
+      !\n[Chat]-<?E:Sfx/Joy,3,TRUE/>Les souris vertes je peux aussi les tremper dans
+      l\u2019eau ou dans l\u2019huile.\n[Souris]-Tu parles d'une tuile !"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Joy;
+    - "\u24C7-Chpt2_Part2_Peur_Sour"
+    - "[Chat]-Il ne me pardonnera jamais\u2026\n[Souris]-Pardonner quoi ? Tu as peur
+      de quoi exactement\u2026\n"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Fear;
+    - "\u24C7-Chpt2_Part2_Trist_Sour"
+    - "[Souris]-<wave>Si seulement il m\u2019avait \xE9cout\xE9\u2026</wave>\n[Souris]-S\u2019il
+      avait pris la p\xE9pite sans la gouter\u2026\n[Souris]-Mon p\xE8re aurait encore
+      toutes ses dents\u2026\n[Souris]-Et moi un foyer sans cet incident\u2026\n"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Sadness;
+    - "\u24C7-Chpt2_Part2_Dego_Sour"
+    - "[Souris]-Il y a longtemps, un chat a chass\xE9 et d\xE9vor\xE9 la moiti\xE9
+      des miens pr\xE8s du chemin des fleurs\u2026\n[Souris]-Depuis je hais les chats,
+      <shake><color=#d73d47>ces causeurs de malheurs !</color></shake> \n[Souris]-Mais
+      j\u2019y pense\u2026 Le Petit Chat Peureux Roux disparut \xE0 la m\xEAme heure
+      !\n"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Disgust;
+    - "\u24C7-Chpt2_Part2_Conf_Sour"
+    - "[Souris]-Oiseau, comment ton instinct peut-il \xEAtre si <bounce>confiant</bounce>
+      !?\n[Oiseau]-Souris c\u2019est toi qui perd l\u2019esprit, \nDans ta m\xE9fiance
+      ton coeur est pris !\n[Souris]-Une taupe opticienne et un loup aveugle ! \nOn
+      croirait une histoire pour enfant !\n"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Trust;
+    - "\u24C7-Chpt2_Part2_Surp_Sour"
+    - "[Souris]-Une taupe qui vend des lunettes <wiggle>\xE7a n\u2019\xE9tonne vraiment
+      personne</wiggle> ?\n[Oiseau]-Rien de tel ne me choque, pourquoi toi \xE7a
+      te sonne ?\n[Souris]-<color=#d842b0><wiggle>Allo Eh bien</wiggle></color> !
+      \nTout le monde sait que les taupes ne voient quasi rien !\n"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Surprise;
+    - "\u24C7-Chpt2_Part2_Vigi_Sour"
+    - "[Souris]-Tout \xE7a est trop bizarre\u2026 Je ne crois pas \xE0 ton histoire\n[Chat]-<?E:Sfx/Trust,2,TRUE/>Je
+      ne te demande pas de me croire.\n[Souris]-Qu\u2019as-tu pu bien faire au loup
+      pour qu\u2019il te chasse\u2026\n"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Anticipation;
+    - "\u24C7-Chpt2_Part2_Cole_Sour"
+    - "[Souris]-Tu as failli tu\xE9 ma tante Berthe ! \n[Chat]-<?E:Vfx/Trust,2,TRUE/>
+      Ne me provoque pas ou c\u2019est toi qui finiras inerte !\n[Souris]-Tu prends
+      un peu la confiance ! Mais je vais rester en alerte..."
+    - 
+    - 11
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Anger;
+    - "\u24C7-Chpt2_Part2_Dial1_Sour"
+    - "[Souris]-C\u2019est bizarre toute cette histoire\u2026\n[Chat]-D\u2019un p\xE8rre
+      avoirr \xE9t\xE9 prriv\xE9 de foyer, de dortoirr ?\n[Souris]-Tu as d\xFB avant
+      mettre le bazar !\n"
+    - 
+    - 10
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial2_Sour"
+    - "[Souris]-Comment la taupe a pu examiner le loup si c\u2019\xE9tait une surprise
+      !?\n[Chat]-<?E:Sfx/Trust,3,TRUE/>Grr\xE2ce \xE0 une de mes rruses, la taupe
+      \xE0 pu juger sa vue sans \xEAtrre prrise !\n[Souris]-Tu veux dire ta roublardise
+      !\n"
+    - 
+    - 9
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial3_Sour"
+    - "[Souris]-Et alors, les lunettes, quelle \xE9tait ton plan ?\n[Chat]-<?E:Vfx/Trust,2,TRUE/><?E:Sfx/Trust,2,TRUE/>je
+      suis <bounce>dou\xE9</bounce> en d\xE9guisement, je me suis chang\xE9 en lapin
+      blanc\u2026\n// Je courrais autourr de lui, d\xE9fiant ses yeux lents !\n"
+    - 
+    - 8
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial4_Sour"
+    - "[Souris]-En lapin blanc ? Pourquoi ?\n[Chat]-D\xE8s qu\u2019il voit un lapin
+      il saute dessus, hurrle et aboie ! \n// Tom, cach\xE9, note quand il hurrle
+      pour savoirr \xE0 partirr d\u2019o\xF9 il voit !\n"
+    - 
+    - 7
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial5_Sour"
+    - "[Souris]-Si tu \xE9tais en lapin blanc pourquoi il ne t\u2019as pas manz\xE9
+      !? \nN\u2019\xE9tais-tu pas peureux ?\n[Chat]-<?E:Vfx/Joie,3,TRUE/>C\u2019est
+      vrrai, mais je l\u2019aime et je veux tout fairre pour le rrendrre <bounce>heurreux</bounce>
+      !\n[Souris]-Mais comment tu savais que le d\xE9guisement n\u2019allait pas
+      \xEAtre foireux\u2026"
+    - 
+    - 6
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial6_Sour"
+    - "[Souris]-Et pourquoi il ne t\u2019a pas d\xE9vor\xE9 quand il t\u2019a rencontr\xE9
+      ?\n[Chat]-Je te l\u2019ai dit, il m\u2019a prris pour un louveteau, que cherrches-tu
+      \xE0 illustrrer !?\n[Souris]-Pas un chat, pas un renard...\nMais un louveteau
+      roux ? Bizarre ! \n"
+    - 
+    - 5
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial7_Sour"
+    - "[Souris]-Il ne verrait pas ta rougeur, mais reconna\xEEt le blanc du lapin\u2026\n[Chat]-Heu\u2026
+      Peut-\xEAtrre que pourr lui seul le blanc d\xE9peint\u2026\n[Souris]-Mouais...
+      Tout \xE7a\u2026 \xE7a sent le sapin\u2026"
+    - 
+    - 4
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial8_Sour"
+    - "[Souris]-Te souviens-tu de notre village ?\n[Chat]-<?E:Vfx/Trust,2,FALSE/><?E:Sfx/Joy,2,TRUE/>Ainsi
+      que de ma pauvrre m\xE8rre que j\u2019aimais tant, mais c\u2019est flou, j\u2019\xE9tais
+      en bas \xE2ges\u2026\n"
+    - 
+    - 3
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial9_Sour"
+    - "[Souris]-Pourquoi ne pas retrouver ta m\xE8re !\n[Chat]-<?E:Vfx/Joy,3,FALSE/><?E:Sfx/Joy,3,TRUE/>Malgrr\xE9
+      tout je ne veux pas abandonner le loup, j\u2019\xE9tais <bounce><color=#e5a810>heurreux</color></bounce>
+      avec lui, j\u2019avais un p\xE8rre\u2026\n[Souris]-Tu cela me semble suspicieux.\n"
+    - 
+    - 2
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial10_Sour"
+    - "[Souris]-Tu souhaites encore vivre avec le loup !?\n[Chat]-Si cela est possible
+      oui, je sais, \xE7a peut parra\xEEtre fou\u2026\n[Chat]-<color=#e58410><bounce>Mais
+      la confiance peut rrevenir,</bounce></color>\n nous \xE9tions si joyeux, et
+      ici je peux aller parrtout\u2026\n"
+    - 
+    - 1
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set1_Sour"
+    - "[Souris]-Moi je n'ai pas besoin de lunettes pour ne pas t'appr\xE9cier !\nA
+      toi je ne peux me fier !\n[Chat]-<?E:Sfx/Trust,3,TRUE/>Peu imporrte, il n'y
+      a qu'en moi que je ne peux me soucier !"
+    - 
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set2_Sour"
+    - '[Souris]-Peu importe ce que nous jouons il n''est jamais content !
+
+      Abandonner
+      est tentant...
+
+      [Chat]-<?E:Vfx/Joy,3,TRUE/><?E:Sfx/Joy,3,TRUE/>Vous voirr
+      tourrner en rrond c''est <bounce><color=#e5a810>amusant</color> </bounce>!'
+    - 
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set3_Sour"
+    - "[Souris]-Dire que tu lui fais encore <bounce><color=#e58410>confiance</color></bounce>,
+      t'es pas malin !\nC'est qu'il \xE9tait heureux avec le loup ce f\xE9lin !"
+    - 
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set4_Sour"
+    - '[Souris]-Tu n''aurais pas une noix ?
+
+      J''aimerai que papa soit fier
+      de moi...'
+    - 
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set5_Sour"
+    - "[Chat]-J'en ai vu des vertes et des pas m\xFBres...\n[Souris]-Tu parles de
+      tante Berthe je suis s\xFBre !"
+    - 
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Joie_Oise"
+    - "[Oiseau]-Votre histoire est bien triste, mais c\u2019est plus fort que moi,
+      je me sens bien <bounce>ravie<bounce> !\n[Chat]-Pourquoi dont mon malheurr
+      vous donne envie ?\n[Oiseau]-Non \xE9videmment, mais votre chemin, \xE0 crois\xE9e
+      nos vies\u2026"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Joy;
+    - "\u24C7-Chpt2_Part2_Peur_Oise"
+    - "[Oiseau]-Je vais vous avouer mon grand secret\u2026\n[Oiseau]-Ma panique que
+      je garde discret\u2026\n[Oiseau]-De finir seule, sans public, sans amour\u2026\n[Oiseau]-J\u2019aimerai
+      seulement qu\u2019on m\u2019aime un jour\u2026"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Fear;
+    - "\u24C7-Chpt2_Part2_Trist_Oise"
+    - "[Oiseau]-Vous savez ce que \xE7a fait ? D\u2019aimer si fort sa famille\u2026\n[Oiseau]-Quand
+      sans doute vous aime aussi, mais dont la confiance vacille\u2026\n[Chat]-<?E:Vfx/Trust,1,TRUE/><?E:Sfx/Joy,1,TRUE/>Aimer
+      demande de la <bounce>confiance<bounce>, parfois c\u2019est douloureux mais
+      c\u2019est souvent <bounce>joyeux<bounce> !"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Sadness;
+    - "\u24C7-Chpt2_Part2_Dego_Oise"
+    - "[Oiseau]-J\u2019ai quitt\xE9 ma famille, elle se moquait de moi\u2026\r\n[Chat]-Pourrquoi
+      \xE7a, ils voulaient quoi ?\r\n[Oiseau]-Plus jamais entendre ma voix, que jamais
+      je ne les revoie !\r"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Disgust;
+    - "\u24C7-Chpt2_Part2_Conf_Oise"
+    - "[Oiseau]-Vous devrez venir avec nous\u2026 <bounce>J\u2019ai confiance en
+      vous !<bounce>\n[Chat]-<?E:Sfx/Trust,3,TRUE/>Mon p\xE8rre est la seule perrsonne
+      en qui j\u2019ai confiance\u2026\n[Chat]-<?E:Sfx/Joy,3,TRUE/>Mais merrci, votre
+      bont\xE9 trrouve audience.\n"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Trust;
+    - "\u24C7-Chpt2_Part2_Surp_Oise"
+    - "[Oiseau]-Donc vous vous \xEAtes d\xE9guis\xE9, pour votre loup de p\xE8re
+      aider\u2026\n[Chat]-Oui, en lapin, pour sa vue examiner.\n[Oiseau]-Admirable
+      ! Formidable ! Quelle id\xE9e ! Quel g\xE9nie ! \n"
+    - 
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Surprise;
+    - "\u24C7-Chpt2_Part2_Cole_Oise"
+    - "[Oiseau]-Si je croise ce sc\xE9l\xE9rat de loup qui abandonne son enfant !\n[Chat]-<?E:Vfx/Trust,2,TRUE/>Ne
+      vous mettez pas dans vos \xE9tats, il ne le m\xE9rrite pas\u2026\n[Oiseau]-Tu
+      ne le m\xE9rites pas non plus, ton p\xE8re est un malfrat !\n"
+    - 
+    - 11
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Anger;
+    - "\u24C7-Chpt2_Part2_Vigi_Oise"
+    - "[Souris]-M\xE9fie-toi Oiseau, confiance donn\xE9e trop vite m\xE8ne \xE0 la
+      marmite !\r\n[Souris]-Ma tante Berthe l\u2019a appris \xE0 ses d\xE9pens\u2026
+      \r\n[Oiseau]-Garde tes avertissements ! Ta m\xE9fiance Chats ne m\xE9rite !\r"
+    - 
+    - 11
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Anticipation;
+    - "\u24C7-Chpt2_Part2_Dial1_Oise"
+    - "[Oiseau]-Comment a-t-il os\xE9 ! Vous rejeter ainsi, alors que votre but,
+      \xE9tait de faire plaisir !?\n[Chat]-Malheurreux que je suis\u2026 Qu\u2019il
+      soit heurreux lui aussi \xE9tait mon seul d\xE9sirr!\n[Oiseau]-Que votre coeur
+      est admirable, mal lui a pris de vous bannir !\n"
+    - 
+    - 10
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial2_Oise"
+    - "[Oiseau]-Comment avez-vous fait ? Pour vivre tout ce temps !?\n[Chat]-<?E:Vfx/Joy,2,TRUE/>Je
+      n\u2019\xE9tais pas \xE0 plaindrre,\n<?E:Sfx/Joy,3,TRUE/>Loup et moi \xE9tions
+      heurreux chaque instant !"
+    - 
+    - 9
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial3_Oise"
+    - "[Oiseau]-Mais pour vous nourrir tous les deux ? Alors que le loup ne peut
+      voir !\n[Chat]-Il m\u2019apprrit les bases de la chasse, ainsi je chassais
+      pour deux.\n[Chat]-<?E:Sfx/Trust,3,TRUE/>Sans lui mon futurr aurrait \xE9t\xE9
+      bien hasarrdeux\u2026\n"
+    - 
+    - 8
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial4_Oise"
+    - "[Oiseau]-Vous chassiez donc pour le foyer ?\r\n[Chat]-Oui, il rraffole des
+      lapins blancs, et moi quelques sourris sont assez !\r\n[Souris]-Meurtrier !!!\r\n[Oiseau]-C\u2019est
+      bien triste en effet, mais manger est forc\xE9\u2026\r"
+    - 
+    - 7
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial5_Oise"
+    - "[Oiseau]-D\u2019o\xF9 cette id\xE9e saugrenue, de lui offrir ces lunettes
+      !\n[Chat]-Je pensais que c\u2019\xE9tait une id\xE9e honn\xEAte\u2026\n[Chat]-Un
+      nouveau t\xE9l\xE9phone aurrait \xE9t\xE9 moins prrise de t\xEAte\u2026"
+    - 
+    - 6
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial6_Oise"
+    - "[Oiseau]-Vous \xEAtes mignon, quand vous \xEAtes tristes\u2026\n[Chat]-Mignon
+      moi ? Alors que je voulais vous d\xE9vorrer, je ne vais pas le nier !\n[Chat]-<?E:Vfx/Joy,3,TRUE/><?E:Sfx/Joy,2,TRUE/>Mais
+      si je suis en peine, mes bons souvenirrs surpassent les derniers."
+    - 
+    - 5
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial7_Oise"
+    - "[Oiseau]-Que d\xEEtes vous de nous accompagner, rester ici n\u2019est pas
+      une bonne id\xE9e !\n[Chat]-<?E:Vfx/Joy,2,FALSE/><?E:Sfx/Trust,2,TRUE/>Je ne
+      peux quitter le loup, je l\u2019aime comme un p\xE8rre\u2026 vous comprrenez
+      ?\n[Oiseau]-Je comprends, mon coeur vous fa\xEEtes pleurer\u2026\n"
+    - 
+    - 4
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial8_Oise"
+    - "[Oiseau]-Est-ce la v\xE9rit\xE9 ? que des fleurs vous cueilliez, pour votre
+      m\xE8re en peine, quand vous vous \xEAt(es) perdu ?\n[Chat]-Oui, la pauvrre
+      \xE9tait souffrrante, d\u2019id\xE9e j\u2019\xE9tais d\xE9pourrvu\u2026\n[Chat]-Il
+      y a un chemin de fleur qui traverse la for\xEAt.\n"
+    - 
+    - 3
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial9_Oise"
+    - "[Oiseau]-Comment vous \xEAtes-vous perdu ?\n[Chat]-C\u2019est simple, j\u2019ai
+      cueilli toutes les fleurrs du chemin des fleurrs\u2026\n[Chat]-Ducoup il n\u2019y
+      avait plus de sentier \xE0 mon rretourr, pourr mon plus grrand malheurr\u2026"
+    - 
+    - 2
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Dial10_Oise"
+    - "[Oiseau]-C\u2019est une belle chance pour vous, chez le loup vous vous \xEAt(es)
+      r\xE9fugi\xE9 !\n[Chat]-Eh bien oui, malgrr\xE9 les rrumeurrs et les contes,
+      je suis prrivil\xE9gi\xE9\u2026\n[Oiseau]-Je suis bien <bounce><color=#e5a810>heureuse</color></bounce>,
+      sur nous cette fois, vous \xEAtes tomb\xE9\u2026"
+    - 
+    - 1
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set1_Oise"
+    - "[Oiseau]-J'esp\xE8re qu'avec nous vous allez restez !\n[Chat]-J'h\xE9site,
+      mais pourquoi pas vous accompagner..."
+    - 
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set2_Oise"
+    - "[Oiseau]-Se perdre \xE0 cause de votre bont\xE9... Le destin ne vous a pas
+      g\xE2t\xE9...\n[Chat]-Peut-\xEAtrre, mais le loup j'ai pu rrencontrr\xE9, \n<?E:Vfx/Joy,3,FALSE/><?E:Sfx/Trust,3,TRUE/>Pourr
+      rrien au monde je ne l'aurrais rr\xE2t\xE9 !"
+    - 
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set3_Oise"
+    - "[Oiseau]-Suivez mon coeur ! Euh votre coeur...\n[Chat]-Je le suis en rrestant
+      ici,\n<?E:Vfx/Joy,3,FALSE/><?E:Sfx/Trust,3,TRUE/>En rrestant prr\xE8s de lui..."
+    - 
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set4_Oise"
+    - "[Oiseau]-Votre pelage va tr\xE8s bien avec mon plumage...\nQue pensez vous
+      du <bounce>mariage</bounce> ?\n[Chat]-!?\n[Souris]-Trop t\xF4t Oiseau..."
+    - 
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2_Set5_Oise"
+    - '[Oiseau]-<bounce><color=#e5a810>Chantons, jouons ! Votre sentiment nous trouverons
+      !</bounce></color>'
+    - 
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part2"
+    - "[Chat ]-Je voulais qu\u2019il soit <bounce>fierr de moi</bounce>,\nEt parr-dessus
+      tout qu\u2019il me voit ! \nAu d\xE9but de cette aventure, je n\u2019\xE9tais
+      qu\u2019un petit chat peurreux,\nVivant dans le village Marr\xE9cage !\n[Souris]-Grenouille,
+      c\u2019est notre village !\nMais jamais on ne t\u2019a crois\xE9 dans les parages
+      !\n[Chat ]-Pas de surrprrise, trr\xE8s jeune je me perrdis dans la forr\xEAt\u2026\nC\u2019est
+      comme \xE7a que le loup je connus.\n[Souris]-Mais oui, l\u2019histoire du loup
+      qui d\xE9vorait !\nEt la l\xE9gende du chat perdu !\n[Souris]-L\u2019histoire
+      du Petit Chat Peureux Roux !\n[Chat ]-<?E:Vfx/Trust,2,FALSE/><?E:Sfx/Trust,1,TRUE/>
+      Tu veux dirre du valeurreux chat garrou !\n[Souris]-Non non, pas du tout\u2026\n[Oiseau
+      ]-Cette chanson je connais, dans l\u2019ombre un chat fredonnait\u2026\n[Oiseau
+      ]-Parti seul cueillir des fleurs, pour une m\xE8re en douleur,\n[Oiseau ]-Dans
+      la for\xEAt il s\u2019engouffra, sur ces trac(es) le loup, ce malfrat\u2026\n[Oiseau
+      ]-Le destin attrapa l\u2019enfant, le ventre du loup triomphant\u2026\n[Chat
+      ]-Plaisanterrie que ceci ? \nJe me suis perdu oui, \nMais chez le loup je me
+      suis endormi !\n[Souris]-Quoi !? Et il ne t\u2019a pas mis entre du pain de
+      mie ? \n[Chat ]-Non qu\u2019elle id\xE9e ! Il n\u2019y voyait rrien le pauvre,
+      il me prrit pour un louveteau !\n[Chat ]-Mais au cas o\xF9, je voulus partirr,
+      le lendemain je me levai t\xF4t !\n[Chat ]-Mais j\u2019\xE9tais perrdu, o\xF9
+      aller ? Le loup m\u2019accepta alorrs en fils.\n[Souris]-Pas si m\xE9chant
+      ce loup, c\u2019est un sacr\xE9 service !\n[Chat ]-<?E:Vfx/Trust,2,FALSE/><?E:Sfx/Joy,1,TRUE/>Au
+      contrairre, il est adorrable, pendant des ann\xE9es nous \xE9tions ins\xE9parrables
+      !\n[Chat ]-Mais plus le temps avan\xE7ait, et plus sa vue baissait !\n[Chat
+      ]-Jusqu\u2019\xE0 ne plus rrien voirr\u2026\n[Chat ]-HierR c\u2019\xE9tait
+      sa f\xEAte, et je savais qu\u2019elle pRr\xE9sent j\u2019allais concevoir !\n[Oiseau
+      ]-Laissez-moi deviner, c\u2019est cette id\xE9e ? Qui votre relation va terminer
+      ?\n[Chat ]-Malheureusement oui\u2026 <?E:Sfx/Trust,3,TRUE/>Si je n\u2019avais
+      eu cette pens\xE9e, cette vanit\xE9 !\n[Chat ]-Je voulais qu\u2019il me voie,
+      qu\u2019il soit fierr \xE9tait la finalit\xE9 !\n[Chat ]-Je me rrendis alors
+      chez la vieille taupe, Tom le Taupticien.\n[Chat ]-Il faisait des verrres,
+      des monocles ce magicien !\n[Chat ]-<?E:Sfx/Trust,2,TRUE/>J\u2019en prris deux,
+      et avec rruse je les liai en lunettes !\n[Chat ]-Je rretrouvai le loup qui
+      sans attendrre rrecouvrra une vue nette !\n[Chat ]-Il obserrva le ciel, les
+      arrbrres et ces yeux tomb\xE8rrent enfin sur moi\u2026\n[Chat ]-Pourr me voirr
+      il me vit, il se rrendit compte que je n\u2019\xE9tais que chat, que je n\u2019\xE9tais
+      que prroie.\n[Chat ]-La suite vous la connaissez d\xE9j\xE0.\n[Oiseau ]-Quelle
+      histoire, quel malheur ! Grenouille, jouons, chantons !\n[Oiseau ]-Il nous
+      faut lui faire retrouver le bonheur !\n"
+    - 
+    - 13
+    - 
+    - FALSE
+    - 
+    - Masks:Block/None
+    size: {x: 8, y: 77}
+  - name: ChatLoupC
+    version: 1.0.0
+    array:
+    - "\u24D8-Dialogues"
+    - "\u24B8-Fran\xE7ais"
+    - "\u24B8-Priority"
+    - "\u24B8-Emotion"
+    - "\u24B8-Keep"
+    - "\u24B8-Needed Musician"
+    - "\u24B8-Data"
+    - "\u24C7-Chapt2_Part3_Joie_Chat"
+    - "[Loup]-<?E:Vfx/Sadness,1,TRUE/>Cette m-musique\u2026 Elle me rappelle ma r-rencontre
+      avec Luperca...\n//Une louve du s-sud, magnifique au p-pelage d\xE9licat\u2026\n//
+      <?E:Sfx/Sadness,2,TRUE/>Trop de m-mauvais souvenir dans cette musique, de tracas
+      \u2026\n"
+    - 12
+    - Joy
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Peur_Chat"
+    - "[Loup]-J-je vivais seul avec m-mon fils.\n//J-je ne savais comment l\u2019\xE9duquer
+      sans notice\u2026\n//<?E:Vfx/Sadness,1,TRUE/><?E:Sfx/Disgust,1,TRUE/>Ces n-notes
+      me rappelle que je l\u2019ai m-mang\xE9\u2026\n[Souris]-Oula, il faut chanzer\n"
+    - 12
+    - Fear
+    - 
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Trist_Chat"
+    - "[Loup]-<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Sadness,3,TRUE/>Oui, ce son fait r-ressurgir
+      <wave><color=#6fa1d0>mon chagrin</color></wave>\u2026\n//Je suis un vieux loup
+      seul, d-d\xE9vorer mon premier fils j\u2019ai \xE9t\xE9 c-contraint\u2026\n//<?E:Sfx/Disgust,2,TRUE/>Par
+      col\xE8re au second fils je renonce\u2026\n[Souris]-Il r\xE9agit, on a je pense
+      une partie de la r\xE9ponse !\n"
+    - 12
+    - Sadness
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dego_Chat"
+    - "[Loup]-<?E:Vfx/Sadness,3,TRUE/><?E:Sfx/Disgust,3,TRUE/>CE SON ME CORRESPOND
+      !\n// IL RESSORT MON <slide>DEGO\xDBT PROFOND</slide> !\n//DE CELLE QUI M\u2019A
+      QUITTE ! DE CELUI QUI M\u2019A TRAHI !\n//<?E:Sfx/Sadness,1,TRUE/>Mais s-surtout
+      de m-moi, qui suit par la b\xEAtise \xE9bloui\u2026\n[Souris]-Presque, il manque
+      quelque chose \xE0 notre musique\u2026\n"
+    - 12
+    - Disgust
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Conf_Chat"
+    - "[Loup]-<?E:Sfx/Disgust,1,TRUE/>JE LUI AI CONFIE MON COEUR, MA FLAMME\u2026\n//ELLE
+      M\u2019A LAISSEE SEUL, ME LAISSANT UN LOUVETEAU, EMPORTANT MON \xC2ME\u2026\n//<?E:Sfx/Sadness,1,TRUE/>P-pouvez
+      vous changer de m-m\xE9lodie ?\n"
+    - 12
+    - Trust
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Surp_Chat"
+    - "<?E:Vfx/Sadness,1,FALSE/>[Loup]-<?E:Sfx/Sadness,1,TRUE/>Du j-jour au lendemain
+      ma louve m-me laissa\u2026\n[Loup]-Ma vue b-baissait, un loup plus j-jeune
+      elle trouva\n//Depuis ce c-choc, sois je hurle, s-sois je b-b\xE9gaye\u2026\n//
+      M-mauvais souvenir que je b-balaye\u2026\n"
+    - 12
+    - Surprise
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Cole_Chat"
+    - "[Loup]-<?E:Sfx/Disgust,1,TRUE/>SALETE D\u2019INTERNET !!!\n[Souris]-Comment
+      ? Pourquoi s\u2019enrager contre le net ?\n[Loup]-<?E:Vfx/Disgust,1,FALSE/><?E:Sfx/Disgust,1,TRUE/>MAUVAISES
+      RENCONTRE ! J\u2019AI RENCONTRE LA LOUVE QUI M\u2019A QUITTE SUR LOUVOO\n//
+      UN SITE OU SE RENCONTRENT LES LOUPS\u2026\n"
+    - 12
+    - Anger
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Amou_Chat"
+    - "[Loup]-<?E:Sfx/Disgust,1,TRUE/>AH NON, CETTE MUSIQUE NE ME VA PAS !\n//ELLE
+      ME FAIT PENSER A L\u2019AMOUR !\n//J\u2019AI AIME UNE LOUVE, UN LOUVETEAU ET
+      UN CHAT\u2026\n//<?E:Vfx/Disgust,2,TRUE/><?E:Sfx/Disgust,1,TRUE/>AUCUNE TENDRESSE
+      QU\u2019AUJOURD\u2019HUI JE NE SAVOURE\u2026"
+    - 12
+    - Love
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Soum_Chat"
+    - "[Oiseau]-Est-ce toi le loup de la chanson ? Que tous fuyaient sans concession
+      ?\n[Loup]-<?E:Sfx/Disgust,1,TRUE/>JE DETESTE CETTE CHANSON !\n//Je je ne suis
+      pas m-m\xE9chant\u2026\n// A cause de ma vue j-je n\u2019ai jamais pu chasser,
+      c\u2019est c-consternant.\n"
+    - 12
+    - Submission
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Admi_Chat"
+    - "[Loup]-Ces notes\u2026 Elles me rappellent le regard du chat sur moi\u2026\n//P\xE9tillant
+      d\u2019admiration, il me regardait comme un p\xE8re\u2026\n//S\u2019il te plait,
+      change d\u2019air, je n\u2019ai pas la foi.\n"
+    - 12
+    - Disapproval
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_D\xE9sa_Chat"
+    - "[Loup]-<?E:Sfx/Disgust,2,FALSE/><?E:Sfx/Disgust,3,TRUE/>POURQUOI LES HABITANTS
+      DU VILLAGES ONT PEUR DE MOI ?\n// <?E:Vfx/Sadness,1,TRUE/>Je ne mange m-m\xEAme
+      plus de lapin blanc depuis la d-derni\xE8re fois !\n[Souris]-C\u2019est triste,
+      on fuit les gentils loups, on aime les m\xE9chants chats !\n"
+    - 12
+    - Disapproval
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Remo_Chat"
+    - "[Loup]-<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Sadness,3,TRUE/>Ce-ette musique\u2026 
+      \nElle elle est magnifique\u2026 \nMoi aussi je j-jouais mais pour ma louve
+      qui n\u2019aimait pas j\u2019ai tout p-plaqu\xE9.\n<?E:Sfx/Sadness,3,TRUE/>Au
+      final elle ne m-m\u2019aimait pas et m\u2019a p-plaqu\xE9\u2026 \nT-toujours
+      des <slide>regrets\u2026</slide>\n[Souris]-Le Grand m\xE9chant loup n\u2019est
+      pas si mauvais !\n[Oiseau]-Nous sommes souvent trahis par les visages et contours
+      !\nLe plumage ne fait pas forc\xE9ment le vautour !\n[Loup]-Une m-morale aussi
+      belle que t-triste\nQui dans la d-douleur se r\xE9v\xE9la\u2026\n[Oiseau]-C\u2019est
+      toujours comme cela\u2026\n[Loup]-D\u2019une louve sans c-coeur j\u2019ai \xE9t\xE9
+      \xE9pris. \nJ\u2019ai par m-m\xE9garde d\xE9vor\xE9 mon fils, j\u2019en ai
+      banni un d-deuxi\xE8me\u2026 \nMaintenant je suis vieux et ha\xEF, le m-malheur
+      je s\xE8me\u2026\n[Souris]-T\u2019es pas si vieux, et moi je t\u2019aimes bien
+      !\nSurtout si t\u2019es Sfxien !\n[Oiseau]-Souris a raison, un Sfxien ne peut
+      avoir mauvais fond ! \nC\u2019est d\u2019ailleurs pour voir les meilleurs qu\u2019on
+      s\u2019engage dans la for\xEAt !\n[Loup]-C-comment ? V-voir les Grands Sfxiens
+      est votre int\xE9r\xEAt ? \n[Souris]-Vous les connaissez ?\n[Loup]-<shake>ET
+      COMMENT ! QUAND J\u2019ETAIS JEUNE ET VIGOUREUX SACHEZ QUE J\u2019EN FAISAIS
+      PARTIE !</shake>\n[Souris]-Hein !\n[Oiseau]-Quoi ! Vraiment !?\n[Loup]-C\u2019\xE9tait
+      il y a longtemps m-maintenant\u2026\nM-mais certains des Sfxiens actuels connaissent
+      encore m-mon nom. \nD\xEEtes-leur que vous v-venez de la part du vieux G\xE9vaudan,
+      ils vous r-recevront !\n[Souris]-Hors de Question !\n[Oiseau]-Souris a raison\u2026\nVous
+      laissez seul dans la tristesse hors de question ! \nPrenez votre instrument,
+      vous venez avec nous !\n[Loup]-Vous\u2026 vous voulez vraiment du grand m\xE9chant
+      loup avec vous ? \n[Souris]-Le grand m\xE9chant loup ? Jamais ! \n//Par contre
+      un nouvel ami ? Volontiers !\n[Loup]-Je je ne sais que dire\u2026 \n[Oiseau]-D\xEEtes-
+      oui !\n[Souris]-Et en revenant tu nous suivras au village !\nLe chat roux a
+      d\xFB rentrer chez sa m\xE8re ou dans les parages !\n[Loup]-EH BIEN C\u2019EST
+      D\u2019ACCORD ! JE VOUS AIDERAI DANS VOTRE AVENTURE !\n"
+    - 12
+    - Remorse
+    - FALSE
+    - None
+    - Masks:Dialogue/None;
+    - "\u24C7-Chapt2_Part3_Mepr_Chat"
+    - "[Loup]-<?E:Vfx/Disgust,3,TRUE/><?E:Sfx/Disgust,2,TRUE/>SI JE N\u2019AVAIT
+      PAS RENCONTRE CETTE LOUVE\u2026\n[Oiseau]-Tr\xE8s bien ! Changeons d\u2019air
+      !\n[Loup]-<?E:Vfx/Sadness,1,TRUE/>LE MONDE IRAIT BIEN MIEUX SANS LOUVES\u2026\n[Oiseau]-Elles
+      sont moins responsables que vous dans cette affaire !\n[Souris]-Il y a trop
+      de col\xE8re !\n"
+    - 12
+    - Contempt
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Agres_Chat"
+    - "[Loup]-<?E:Sfx/Disgust,1,TRUE/>SI J\u2019ATTRAPE CE CHAT ENTRE MES GRIFFES
+      !\n[Oiseau]-Voyons, laissons-le s\u2019expliquer, restons objectifs !\n[Souris]-Parce
+      que tu parles sans affectif ?\n"
+    - 12
+    - Aggressiveness
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Opti_Chat"
+    - "[Loup]-<?E:Sfx/Sadness,2,TRUE/>Un jour j-j\u2019\xE9tais gravement malade,
+      je n-ne pouvais bouger.\n//Le chat m-m\u2019a nourri, s-soign\xE9 et p-prot\xE9g\xE9\u2026\n//Aujourd\u2019hui
+      j-je suis s-seul et \xE2g\xE9\u2026\n[Souris]-Pour lui donner du courage c\u2019est
+      rat\xE9\u2026\n"
+    - 12
+    - Optimism
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Deli_Chat"
+    - "[Loup]-<swing>LAPIN BLANC LAPIN BLANC LAPIN BLANC</swing>\n[Oiseau]-Que fait
+      ce malheureux, est-il fou ? Est-ce le disque qui est ray\xE9 ?\n[Souris]-On
+      dirait que notre musique l\u2019a fait d\xE9railler !\n"
+    - 12
+    - Delight
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Curi_Chat"
+    - "[Loup]-Quelle c-curieuse m\xE9lodie\u2026\n[Souris]-Qu\u2019est-ce qu\u2019elle
+      vous dit ?\n[Loup]-<?E:Sfx/Sadness,2,TRUE/>Que ma vie n\u2019est qu\u2019une
+      trag\xE9die\u2026\n"
+    - 12
+    - Curiosity
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Hont_Chat"
+    - "[Loup]-<?E:Sfx/Disgust,3,TRUE/>ME FAIRE BERNER PAR UN CHAT\u2026\n[Loup]-<?E:Vfx/Sadness,1,TRUE/>SI
+      \xC7A S\u2019EBRUITE, AU MOINS L\u2019ES GENS N\u2019AURONT PLUS PEUR DE MOI\u2026\n[Souris]-Jouons
+      encore une fois ! C'est presque \xE7a !\n"
+    - 12
+    - Shame
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Vigi_Chat"
+    - "[Loup]-TOUS CEUX QUI S\u2019APPROCHENT DE MOI M\u2019ABUSE\u2026\n[Loup]-TOUT
+      LE MONDE RUSE ! \n[Loup]-<?E:Sfx/Disgust,1,TRUE/>Je suis le pire de tous\u2026
+      Je n-n\u2019ai pas d\u2019excuses.\n"
+    - 12
+    - Anticipation
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Incr_Chat"
+    - "[Loup]-<?E:Vfx/Disgust,3,FALSE/><?E:Sfx/Disgust,3,TRUE/>POUR UNE SURPRISE,
+      CE FUT UNE SACREE SURPRISE !\n[Loup]-LES LUNETTES\u2026 QU\u2019ELLE IDEE IDIOTE
+      LUI A PRISE !\n[Oiseau]-Il voulait juste votre fiert\xE9 ! Il ne voulait pas
+      vous alertez !\n[Loup]-<?E:Sfx/Sadness,1,TRUE/>BIEN C\u2019EST STUPIDEMENT
+      RATE\u2026\n"
+    - 12
+    - Unbelief
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Outr_Chat"
+    - "[Loup]-COMMENT UN CHAT PEUT-IL \xCATRE AUSSI VICIEUX !\n[Oiseau]-Un fils vous
+      voulez agresser ! Mais c\u2019est vous qui semblez outr\xE9 ?\n[Loup]-<?E:Sfx/Sadness,1,TRUE/>V-vous
+      avez raison, je suis q-qui pour juger\u2026\n"
+    - 12
+    - Outrage
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Envi_Chat"
+    - "[Loup]-TOUS LES HABITANTS DU VILLAGE ME DETESTE\u2026\n[Loup]-<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Disgust,1,TRUE/>CE
+      QUE JE VEUX C\u2019EST ETRE COMME EUX : UNE FAMILLE, UN FOYER, UN GENTIL GESTE\u2026\n"
+    - 12
+    - Envy
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Pessi_Chat"
+    - "[Loup]-<?E:Vfx/Sadness,1,TRUE/>Le chat est m-malhonn\xEAte\u2026 Mais il m\u2019\xE9tait
+      d-devenu cher\u2026\n//Je je l\u2019ai chang\xE9 en chat garou, il m-m\u2019a
+      chang\xE9 en p\xE8re\u2026\n[Loup]-<?E:Sfx/Sadness,3,TRUE/>Continuer sans lui,
+      q-quel mis\xE8re\u2026\n[Souris]-C\u2019est \xE7a ! Changeons une note pour
+      le satisfaire !\n"
+    - 12
+    - Pessimism
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Cyni_Chat"
+    - "[Loup]-VOTRE MUSIQUE ME DONNE ENVIE DE GAMBADER !\n[Souris]-C\u2019est vrai
+      ? Vous voulez vous balader !?\n[Loup]-<?E:Sfx/Disgust,3,TRUE/>SUR LES TRACES
+      DU CHAT POUR LE TAILLADER !\n"
+    - 12
+    - Cynicism
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Nost_Chat"
+    - "[Loup]-<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Sadness,2,TRUE/>Vivre avec q-quelqu\u2019un
+      \xE0 mes c\xF4t\xE9s me m-manque\u2026\n//P-peut-\xEAtre retourner sur internet
+      ?\n//S-sur Louveteau D\u2019avant\u2026."
+    - 12
+    - Nostalgy
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Domi_Chat"
+    - "[Loup]-<?E:Sfx/Sadness,1,TRUE/>C\u2019est m-marrant, les villageois pensent
+      que j-je suis autoritaire !\n//D-dans la famille, c\u2019\xE9tait la louve
+      qui c-commander\u2026\n//Moi le m-m\xE9nage, la vaisselle je d-devais faire\u2026"
+    - 12
+    - Dominance
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Espo_Chat"
+    - "[Loup]-<?E:Vfx/Sadness,2,TRUE/> \u2026\n[Souris]-Pas de r\xE9action, on doit
+      \xEAtre loin de son \xE9motion\u2026\n"
+    - 12
+    - Hope
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Anxi_Chat"
+    - "[Loup]-<?E:Vfx/Disgust,1,TRUE/>VOTRE MUSIQUE EST STRIDENTE !\n[Souris]-Elle
+      ne te plais pas ?\n[Loup]-JOUEZ-LA QUAND LE CHAT JE FRAPPERAI D\u2019UNE PATTE
+      PUISSANTE !\n[Souris]-Elle ne lui pla\xEEt pas\u2026\n"
+    - 12
+    - Anxiety
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Joie_Sour"
+    - "[Souris]-<bounce>Ze le savais ! Z\u2019avais raison de me m\xE9fier !</bounce>\n//
+      Lui qui se disait chat garou, regardez-le se d\xE9filer !\n"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Joy;
+    - "\u24C7-Chapt2_Part3_Peur_Sour"
+    - "[Souris]-Merci d\u2019avoir fait fuir ce chat-ssassin !\n//Mais tu ne vas
+      pas me manzer, vous n\u2019avez pas faim ?\n[Loup]-<?E:Sfx/Disgust,1,TRUE/>J\u2019AI
+      FAIM DE CHAT ROUX ! Pas de vous\u2026\n"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Fear;
+    - "\u24C7-Chapt2_Part3_Trist_Sour"
+    - "[Souris]-Oiseau, ze sais que tu l\u2019aimais bien\u2026\n[Oiseau]-Peut-\xEAtre
+      que le loup ment, qu\u2019il se trompe\u2019 sur le f\xE9lin\u2026\n[Loup]-<?E:Sfx/Disgust,1,TRUE/>MENTIR
+      MOI ? <?E:Vfx/Sadness,1,TRUE/>C-croyez-moi j\u2019aimerai bien\u2026"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Sadness;
+    - "\u24C7-Chapt2_Part3_Dego_Sour"
+    - "[Souris]-On ne peut pas faire confiance aux chats, ces truands\u2026\n//Ces
+      d\xE9mons se lave le derri\xE8re\u2026\n//<slide>Avec leur langue !!! D\xE9go\xFBtant\u2026</slide>"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Disgust;
+    - "\u24C7-Chapt2_Part3_Conf_Sour"
+    - "[Souris]-Ze crois \xE0 ton r\xE9cit !\n[Loup]-FORCEMENT CA C\u2019EST PASSE
+      AINSI !\n[Souris]-Et tu me fais tr\xE8s peur aussi !"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Trust;
+    - "\u24C7-Chapt2_Part3_Surp_Sour"
+    - "[Loup]-<?E:Sfx/Disgust,1,TRUE/>CE CHAT M\u2019AURA BIEN EU \n//<?E:Sfx/Sadness,2,TRUE/>Je-je
+      ne s-sais pas q-quoi faire, je suis p-perdu\u2026\n[Souris]-Tu cries ou tu
+      pleures, je ne sais plus !"
+    - 11
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Surprise;
+    - "\u24C7-Chapt2_Part3_Vigi_Sour"
+    - "[Souris]-Bon le loup, r\xE9p\xE8tes apr\xE8s moi :\n//Les chats sont tous
+      sournois, m\xE9fie-toi.\n[Loup]-<?E:Sfx/Disgust,2,TRUE/>LES CHATS SONT TOUS
+      SOURNOIS ! MEFIES-TOI !\n[Souris]-J\u2019adore \xE7a !\n"
+    - 11
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Anticipation;
+    - "\u24C7-Chapt2_Part3_Cole_Sour"
+    - "[Souris]-Ce chat\u2026 \n//Manzeur de souris !\n//Briseur de c\u0153ur d\u2019oiseau
+      !\n//Pi\xE9zeur de Loup !\n[Oiseau]-Je n\u2019avais AUCUN sentiment pour lui,
+      <wave>je-je vais TRES BIEN depuis qu\u2019il a fui\u2026</wave>"
+    - 11
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;MEPair:Souris/Anger;
+    - "\u24C7-Chapt2_Part3_Dial1_Sour"
+    - "[Souris]-Mais ze n\u2019ai touzours pas compris cette histoire de lapin blanc\u2026\n[Loup]-IL
+      EST RENTRE CHEZ MOI QUAND JE N\u2019Y ETAIS PAS !\n//IL A VU MON FILS ! LUI
+      A COLLE DES FEUILLE BLANCHE SUR LES OREILLES !\n// IL L\u2019A PEINT TOUT EN
+      BLANC JUSQU\u2019AUX ORTEILS !"
+    - 10
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial2_Sour"
+    - "[Souris]-Mais dans quel but d\xE9guiser le louveteau ?\n[Loup]-<?E:Vfx/Disgust,2,TRUE/>C\u2019EST
+      MA FAUTE ! JE RAFFOLE DES LAPINS BLANCS\n//JE LES VOIS JE LES CROQUE AUSSIT\xD4T
+      !\n//ET EN PLUS JE NE VOYAIS RIEN AVEC YEUX ACCABLANTS !\n"
+    - 9
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial3_Sour"
+    - "[Souris]-Tu veux dire que tu a manz\xE9 ton fils en le voyant !?\n[Loup]-<?E:Vfx/Sadness,2,FALSE/><?E:Sfx/Disgust,1,TRUE/>Oui
+      !!! Le-le chat m\u2019a p-pi\xE9g\xE9 !\nJe je m\u2019en veux tellement !\n[Souris]-Tu
+      b\xE9gayes !?\n[Loup]-S-seulement quand je s-suis d\xE9boussol\xE9 !"
+    - 8
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial4_Sour"
+    - "[Souris]-T\u2019en fais pas, moi ze te comprends bien !\n[Loup]-J-je me suis
+      jet\xE9 sur mon fils p-pensant que c\u2019\xE9tait un lapin !\n//J\u2019ai
+      p-pris le chat pour mon fils, il en a p-profit\xE9 ce Scapin !\n//<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Disgust,2,TRUE/>J-je
+      serai hant\xE9 par le remord jusqu\u2019\xE0 la fin\u2026\n"
+    - 7
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial5_Sour"
+    - "[Souris]-Ce Scapin ? C\u2019est quoi \xE7a !?\n[Loup]-C\u2019EST LE NOM DE
+      CE SCELERAT DE CHAT !\n[Souris]-Ne cries pas comme \xE7a !\n[Oiseau]-Voil\xE0
+      maintenant un Loup aux \xE9motions vice-versa !"
+    - 6
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial6_Sour"
+    - "[Souris]-Ze savais bien que ce chat \xE9tait malhonn\xEAte !\n[Loup]-ET IDIOT
+      DE M\u2019AVOIR OFFERT CES LUNETTES !\n[Souris]-Ze t\u2019aime bien, lui voulait
+      me changer en rillette !\n"
+    - 5
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial7_Sour"
+    - "[Souris]-Ze suis s\xFBr que c\u2019est lui le boucher du sentier des fleurs
+      !\n[Loup]-<?E:Sfx/Sadness,1,TRUE/>Qu-qu\u2019elle est cette hist-histoire ?
+      \n[Souris]-Le jour o\xF9 il s\u2019est perdu, beaucoup de souris ont disparu
+      !"
+    - 4
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial8_Sour"
+    - "[Souris]-Il a dit cueillir des fleurs mais je me m\xE9fie\u2026\n[Loup]-Il
+      il m\u2019a dit un jour avoir chass\xE9 tout un c-camp de souris !\n[Souris]-Il
+      a dit cueillir des fleurs ce sale chat bouffi !"
+    - 3
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial9_Sour"
+    - "[Souris]-Ce chat c\u2019est bien moqu\xE9 de nous !\n[Loup]-<?E:Vfx/Disgust,3,TRUE/><?E:Sfx/Disgust,3,TRUE/>IL
+      NOUS A EU TOUS LES DEUX CE CHAT ROUX !\n[Loup]-SI JE L\u2019ATTRAPE CE RAT,
+      CE FOU !\n[Souris]-Eh !\n[Loup]-<?E:Vfx/Sadness,3,TRUE/><?E:Sfx/Sadness,3,TRUE/>D\xE9-d\xE9sol\xE9,
+      pour moi je ne ressens que <slide><color=#a16ad5>d\xE9go\xFBt...</color></slide>"
+    - 2
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial10_Sour"
+    - "[Souris]-Dire que tu l\u2019as aim\xE9 ce chat !\n[Loup]-<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Disgust,3,TRUE/>CE
+      FOURBE, CE MALFRAT !\n//Mais-mais au final, c\u2019est m-moi qui aie mang\xE9
+      mon f-fils ! Pas lui ! Moi !\n"
+    - 1
+    - None
+    - FALSE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Set1_Sour"
+    - "[Souris]-Avec le loup on va cr\xE9er le club anti-chat !\n[Loup]-<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Disgust,3,TRUE/>..."
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Set2_Sour"
+    - "[Souris]-Ce loup est bizarre... Il est <wave><color=#6fa1d0>tristes de ne
+      plus le voir...</color></wave>\nMais le chat <slide><color=#a16ad5>le d\xE9goute
+      aussi</color></slide>, je ne sais pas quoi croire !\n[Loup]-<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Sadness,3,TRUE/>C'est
+      m-moi qui <slide><color=#a16ad5>m-me d\xE9go\xFBte! </color></slide>"
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Set3_Sour"
+    - "[Souris]-En tout cas Oiseau...\nElle doit tomber de Haut...\nLa pauvre aussi
+      doit \xEAtres <wave><color=#6fa1d0>attrist\xE9e</wave></color>\nM\xEAme si
+      elle fait semblant d'\xEAtre \xE9nerv\xE9e..."
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Set4_Sour"
+    - "[Souris]-Dire que c'est toi le grand m\xE9chant loup !\nMais t'es tout gentil
+      c'est fou !"
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Set5_Sour"
+    - '[Souris]-Heureusement que ze ne suis pas un lapin blanc...
+
+      [Loup]-LAPIN
+      BLANC !!!!!'
+    - 0
+    - None
+    - TRUE
+    - Souris
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Joie_Oise"
+    - "[Oiseau]-\u2026\n[Souris]-Oiseau tu ne parles pas ?\n[Oiseau]-<wave>Je n\u2019ai
+      pas le c\u0153ur en joie.<wave>"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Joy;
+    - "\u24C7-Chapt2_Part3_Peur_Oise"
+    - "[Oiseau]-<wave>Mes chansons ne m\u2019ont attir\xE9 que chagrin\u2026\n//Je
+      vais finir seule et sans amours, je le crains\u2026\n//Oiseau sans public aux
+      pi\xE8tres alexandrins\u2026</wave>\n"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Fear;
+    - "\u24C7-Chapt2_Part3_Trist_Oise"
+    - "[Oiseau]-\u2026 \n[Souris]-Oiseau tu m\u2019inqui\xE8tes !\n[Oiseau]-<wave>Des
+      notes parfaites, pour un c\u0153ur en miette.</wave>"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Sadness;
+    - "\u24C7-Chapt2_Part3_Dego_Oise"
+    - "[Oiseau]-<slide>Ce monde est r\xE9voltant !<slide>\n//On donne sa confiance
+      aux non m\xE9ritant !\n[Loup]-<?E:Sfx/Disgust,1,TRUE/>COMME VOUS LE D\xCETES
+      !"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Disgust;
+    - "\u24C7-Chapt2_Part3_Conf_Oise"
+    - "[Oiseau]-Que cette histoire serve de le\xE7on.\n//On ne peut se fier qu\u2019\xE0
+      soi !\n[Souris]-Allons, passons, Oiseau, tu as Grenouille tu as moi !"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Trust;
+    - "\u24C7-Chapt2_Part3_Surp_Oise"
+    - "[Oiseau]-Le chat ? Un fourbe flatteur ? Un sale profiteur ? Vraiment !?\n[Loup]-<?E:Sfx/Sadness,2,TRUE/>J-je
+      sais c\u2019est d-dur, mais c-croyez-moi\u2026"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Surprise;
+    - "\u24C7-Chapt2_Part3_Cole_Oise"
+    - "[Oiseau]-\xCAtes-vous satisfait Loup ? Est-ce le plan ? D\u2019ainsi semer
+      le doute dans nos c\u0153urs !\n[Loup]-JE DIS VRAI ! <?E:Sfx/Sadness,1,TRUE/>Je
+      je comprends votre f-fureur\u2026\n[Oiseau]-\xE7a suffit ! Vous et le chat
+      \xEAtes que des <shake>enf*cui-cui-cui-cui*</shake> !"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Anger;
+    - "\u24C7-Chapt2_Part3_Vigi_Oise"
+    - "[Oiseau]-Une chose est certaine, aujourd\u2019hui j\u2019ai appris !\n//Plus
+      jamais de personne mon c\u0153ur sera \xE9pris !\n"
+    - 11
+    - None
+    - FALSE
+    - None
+    - Masks:Dialogue/Dialogue;MEPair:Oiseau/Anticipation;
+    - "\u24C7-Chapt2_Part3_Dial1_Oise"
+    - "[Oiseau]-Ne mentez pas Loup ! Ce chat \xE9l\xE9gant\u2026 Tout cela est fou
+      !\n[Loup]-TRAITEZ-MOI DE MENTEUR ! MAIS LA VERITE EST LA !\n[Oiseau]-Impossible,
+      pas lui\u2026 Qui croire dans tout \xE7a !\n"
+    - 10
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial2_Oise"
+    - "[Oiseau]-Je suis dans le doute ! Il faut me convaincre !\r\n[Loup]-CESSEZ
+      DE GEINDRE ! POURQUOI MENTIRAI-JE !? \r\n[Oiseau]-Pour que d\xE9\xE7u de lui,
+      nous le livrons \xE0 vous ? Qu\u2019en sais-je !\r"
+    - 9
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial3_Oise"
+    - "[Oiseau]-Les verres sur votre nez, vous vous \xEAtes jet\xE9 sur lui !\n//Comment
+      avoir compris si vite ?\n[Loup]-<?E:Sfx/Disgust,1,TRUE/>CETTE HISTOIRE DE LAPIN
+      NE ME M\u2019A JAMAIS FUI !"
+    - 8
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial4_Oise"
+    - "[Oiseau]-Comment avoir compris si vite !?\n[Loup]-<?E:Sfx/Disgust,2,TRUE/>JE
+      M\u2019EN DOUTAIS DEPUIS LONGTEMPS !\n[Oiseau]-Comment, est-ce vrai ? Vous
+      n\u2019avez rien fait ? Vraiment insolite.\n[Loup]-<?E:Sfx/Sadness,1,TRUE/>J-j\u2019\xE9tais
+      aveugl\xE9, priant de me t-tromper, d\u2019oublier avec le t-temps!\n"
+    - 7
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial5_Oise"
+    - "[Oiseau]-Quelle est cette histoire !? Que voulez-vous dire ?\n[Loup]-<?E:Sfx/Disgust,3,TRUE/>J\u2019ai
+      j\u2019ai croqu\xE9 mon fils, de cette pens\xE9e je voulais f-fuir\u2026\n[//<?E:Vfx/Sadness,1,TRUE/>Mais
+      mais quand je l\u2019ai vu en chat, je je ne pouvais que r\xE9agir\u2026"
+    - 6
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial6_Oise"
+    - "[Oiseau]-Je pense, je doute, j\u2019h\xE9site\u2026  Je commence \xE0 vous
+      croire\u2026\n[Loup]-<?E:Sfx/Sadness,2,TRUE/>Ce-cette col\xE8re me permet de
+      tenir, rien d\u2019autre je ne v-veux voir !\n"
+    - 5
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial7_Oise"
+    - "[Oiseau]-Avez-vous une preuve \xE0 avancer ? Je ne peux me soumettre \xE0
+      cette id\xE9e !\n[Loup]-C\u2019EST VOUS QUI \xCATES AVEUGLE !\n[Souris]-Oiseau\u2026
+      C\u2019est la v\xE9rit\xE9, tu le sais\u2026\n"
+    - 4
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial8_Oise"
+    - "[Oiseau]-Je ne veux y croire. Je ne peux y croire.\n[Loup]-<?E:Sfx/Sadness,3,TRUE/>Je
+      je vous comprends, c\u2019est mille fois mon s-sentiment\u2026\n//D-dites-moi,
+      prendriez vous un v-ver pour fils ce soir ?\n[Oiseau]-Pas par choix, par devoir.\n[Loup]-Oui\u2026
+      et seulement en s-s\u2019aveuglant\u2026\n"
+    - 3
+    - None
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial9_Oise"
+    - "[Oiseau]-\u2026\n[Souris]-\xE7a va Oiseau ?\n[Oiseau]-\u2026\n[Souris]-Oiseau
+      ?\n[Oiseau]-<wave><color=#6fa1d0>Je lui avais offert mon c\u0153ur \xE0</color></wave>
+      <shake><color=#a16ad5>cet esp\xE8ce de sal*cui-cui-cui*</color>\n//<shake><color=#a16ad5>*cui-cui*</color><shake>"
+    - 2
+    - 
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3_Dial10_Oise"
+    - "[Oiseau]-Bien bien, je me fis \xE0 vous, mais grand est mon d\xE9sarroi\u2026\n[Loup]-<?E:Vfx/Sadness,3,FALSE/><?E:Sfx/Disgust,3,TRUE/>Je
+      vous c-comprends, j\u2019ai appris \xE0 l\u2019aimer, du rr-emord je suis roi\u2026\n//IL
+      M\u2019A PRIS MON FILS, m-mais l\u2019a r-remplac\xE9\u2026 Je s-suis honteux.\n//Aujourd\u2019hui
+      je m-m\u2019en veux, je suis triste, d\u2019avoir p-perdu les deux."
+    - 1
+    - 
+    - FALSE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part3_Set1_Oise"
+    - '[Oiseau]-<wave><color=#6fa1d0>Trahie, le coeur meurtri... </color></wave>
+
+      [Loup]-<wave><color=#6fa1d0>M-moi
+      aussi...</color></wave>'
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part3_Set2_Oise"
+    - '[Oiseau]-<shake><color=#a16ad5>Sale *cui-cui-cui-cui* de chat de *cui-cui*!</color><shake>
+
+      [Souris]-C''est
+      du tout cui !'
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part3_Set3_Oise"
+    - "[Oiseau]-La v\xE9rit\xE9 je ne veux voir...\nMais sinc\xE8re semble le loup...\nEn
+      sa version il me faut croire..."
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part3_Set4_Oise"
+    - "[Oiseau]-Je ressens le m\xEAme sentiment que le loup...\nSon coeur est empli
+      de <wave><color=#6fa1d0>tristesse</color></wave> et <slide><color=#a16ad5>de
+      d\xE9go\xFBt.</color></slide>"
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chpt2_Part3_Set5_Oise"
+    - "[Oiseau]-Maintenant quand je pense \xE0 lui j'en perd mon latin !\n[Loup]-Personne
+      n'est \xE0 l'abri des Fourberies de Scapin !"
+    - 0
+    - 
+    - TRUE
+    - Oiseau
+    - Masks:Dialogue/Dialogue;
+    - "\u24C7-Chapt2_Part3"
+    - "[Loup]-Aouuuuh !\n[Chat]-Oh non, c\u2019est le loup !\n[Oiseau]-Vite, h\xE2te-toi,
+      sauve-toi ! Il ne me passera pas, Chat tu peux compter sur moi !\n[Chat]-Merrci
+      de votre charrit\xE9, ne me le d\xEEtes pas deux fois !\nLe chat s\u2019enfuit,
+      le loup arrive\n[Loup]-<?E:Sfx/Disgust,2,TRUE/>O\xD9 EST CE VAURIEN DE CHAT
+      ! QUE JE LE FASSE CRIER ENTRE MES CROCS !\n[Souris]-Il est part l\xE0, ne nous
+      manzez pas, ze ne suis pas bien gros !\n[Oiseau]-Souris tais-toi ! Monsieur
+      le Loup, n\u2019avez-vous honte ? De traiter ainsi un fils ?\n[Loup]-<?E:Vfx/Disgust,1,FALSE/><?E:Sfx/Disgust,1,TRUE/>ECARTE-TOI
+      ? TU NE SAIS RIEN POUR PARLER AINSI DE MA PROIE !\n[Oiseau]-Je sais tout au
+      contraire, comment vous l\u2019avez trahi, quand vos yeux se sont rouverts
+      !\n[Loup]-Ahah ! ALORS C\u2019EST-CE QU\u2019IL DIT ? QUE JE L\u2019AI TRAHI
+      ? \n[Oiseau]-Eh bien oui pourquoi ? Ce n\u2019est pas le cas ? Le r\xE9cit
+      diff\xE8re ?\n[Loup]-<?E:Vfx/Disgust,1,FALSE/><?E:Sfx/Disgust,1,TRUE/>LA VERITE
+      LA VOILA ! \nDES ANNEES AUPARAVANT, J\u2019EUS UN FILS AVEC UNE LOUVE DU SUD
+      QUI DEPUIS EST PARTIE.\nTOUT ALLAIT BIEN JUSQUE-L\xC0\u2026\nMAIS VOILA QUE
+      MA VUE COMMENCA A ME FAIRE DEFAUT\nNE CROYEZ PAS LE CHAT ! CE QU\u2019IL DIT
+      EST FAUX !\nQUAND JE SUIS RENTRE CETTE JOURNEE, CHOSE ETRANGE ME FIT FACE\nUN
+      GROS LAPIN BLANC ENDORMI, AUBAINE SUITE A MA MAUVAISE CHASSE !\nMES FAIBLES
+      YEUX NE S\u2019OFFUSQUERENT PAS DE MON FILS QUI ROUGE ETAIT DEVENU\u2026\nMON
+      VENTRE OEUVRA ENSUITE, LE LAPIN JE DEVORAI TOUT CRU !\n[Oiseau]-Pourquoi toute
+      cette histoire ? Quel int\xE9r\xEAt ce menu ? \n[Loup]-<?E:Vfx/Disgust,1,FALSE/><?E:Sfx/Disgust,1,TRUE/>PATIENCE,
+      VOUS DECOUVRIREZ L\u2019INTRUS !\nLES ANNEES PASSERENT, PLUTOT BIEN JE DOIS
+      L\u2019ADMETTRE.\nSANS MEFIANCE\u2026\nAPRES TOUT J\u2019ETAIS PERE ET LUI
+      ETAIT FILS, MON SAVOIR JE POUVAIS TRANSMETTRE.\nMAIS QUAND HIER CE BOUGRE M\u2019A
+      OFFERT CES LUNETTES\nET QUE DE NOUVEAU MA VU FUT NETTE\u2026\nJE COMPRIS AUSSIT\xD4T\u2026\nSI
+      LE LOUVETEAU ETAIT LE CHAT, ALORS QUI ETAIT LE LOUVETEAU ?\nRAPPELEZ-VOUS ALORS
+      DE L\u2019HISTOIRE DU LAPIN TANT\xD4T\u2026\n[Souris]-Je ne comprends pas trop\u2026\n[Oiseau]-J\u2019ai
+      peur d\u2019avoir compris, de me tromper je prie\u2026 \n[Loup]-<?E:Vfx/Sadness,1,FALSE/><?E:Sfx/Disgust,1,TRUE/>LE
+      LAPIN DEVORE ETAIT MON FILS DEGUISE !\n[Souris]-Comment !?\n[Loup]-LE CHAT
+      ET SON VICE M\u2019ONT PRIS MON FILS !\nEN LAPIN BLANC IL LE TRAVESTIT POUR
+      QUE MES YEUX ME TRAHISSENT\u2026\nEN MON ABSENCE, IL M\u2019A PIEGE POUR AVOIR
+      UN FOYER !\n[Oiseau]-Grenouille ! Jouons, Chantons pour le loup ! La v\xE9rit\xE9
+      il nous faut creuser !\n"
+    - 13
+    - 
+    - 
+    - FALSE
+    - Masks:Block/None
+    size: {x: 7, y: 76}

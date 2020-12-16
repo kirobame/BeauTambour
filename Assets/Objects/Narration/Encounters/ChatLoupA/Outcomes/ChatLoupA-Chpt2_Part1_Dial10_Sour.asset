@@ -39,8 +39,8 @@ MonoBehaviour:
   m_Name: ChatLoupA-Chpt2_Part1_Dial10_Sour
   m_EditorClassIdentifier: 
   priority: 1
-  mask: 0
-  successionMask: 0
+  mask: 8
+  successionMask: 8
   shouldBeRemoved: 1
   conditions:
   - {fileID: -6815042475586029006}

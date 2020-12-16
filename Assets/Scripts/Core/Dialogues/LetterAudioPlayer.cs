@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Febucci.UI;
 using Flux;
 using UnityEngine;
@@ -24,6 +25,13 @@ namespace BeauTambour
             
             dialogueManager = Repository.GetSingle<DialogueManager>(Reference.DialogueManager);
             Event.Register<int,string>(DialogueManager.EventType.OnNext, OnNewCue);
+
+            Event.Register(PauseMenu.EventType.OnUnpause, () => { StartCoroutine(FixRoutine()); });
+        }
+        private IEnumerator FixRoutine()
+        {
+            yield return new WaitForEndOfFrame();
+            if (hasBegun) skipAction.action.Disable();
         }
         
         void OnEnable()
