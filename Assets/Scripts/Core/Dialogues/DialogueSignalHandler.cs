@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Febucci.UI;
 using Flux;
 using Ludiq.PeekCore;
@@ -13,10 +14,14 @@ namespace BeauTambour
         [Space, SerializeField] private TextAnimator textAnimator;
         [SerializeField] private TextAnimatorPlayer textAnimatorPlayer;
 
-        private Signal currentSignal;
+        private Queue<System.Collections.Generic.KeyValuePair<Signal, string[]>> currentSignals;
         
-        void Awake() => signalCollection.Initialize();
-        
+        void Awake()
+        {
+            currentSignals = new Queue<System.Collections.Generic.KeyValuePair<Signal, string[]>>();
+            signalCollection.Initialize();
+        }
+
         void OnEnable() => textAnimator.onEvent += HandleEvent;
         void OnDisable() => textAnimator.onEvent -= HandleEvent;
 
@@ -38,26 +43,37 @@ namespace BeauTambour
             var await = bool.Parse(mainArgs[2]);
 
             if (!signalCollection.TrySelect(category, emotion, clarity, out var signal)) return;
-
-            currentSignal = signal;
-            Debug.Log($"FOR : {message} --> PLAYING SIGNAL : {currentSignal}");
+            Debug.Log($"FOR : {message} --> PLAYING SIGNAL : {signal}");
             
+            var subArgs = split[2].Split(',');
             if (await)
             {
-                currentSignal.OnEnd += OnSignalEnd;
+                var kvp = new System.Collections.Generic.KeyValuePair<Signal, string[]>(signal, subArgs);
+                currentSignals.Enqueue(kvp);
+                if (currentSignals.Count > 1) return;
+                
+                signal.OnEnd += OnSignalEnd;
                 textAnimatorPlayer.StopShowingText();
             }
 
             var dialogueManager = Repository.GetSingle<DialogueManager>(Reference.DialogueManager);
-            var subArgs = split[2].Split(',');
-            
-            currentSignal.Execute(this, dialogueManager.SpeakingCharacter, subArgs);
+            signal.Execute(this, dialogueManager.SpeakingCharacter, subArgs);
         }
 
         void OnSignalEnd()
         {
-            currentSignal.OnEnd -= OnSignalEnd;
-            textAnimatorPlayer.StartShowingText();
+            var kvp = currentSignals.Dequeue();
+            kvp.Key.OnEnd -= OnSignalEnd;
+            
+            if (currentSignals.Count > 0)
+            {
+                var newKvp = currentSignals.Peek();
+                newKvp.Key.OnEnd += OnSignalEnd;
+                
+                var dialogueManager = Repository.GetSingle<DialogueManager>(Reference.DialogueManager);
+                newKvp.Key.Execute(this, dialogueManager.SpeakingCharacter, newKvp.Value);
+            }
+            else textAnimatorPlayer.StartShowingText();
         }
     }
 }

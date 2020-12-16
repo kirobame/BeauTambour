@@ -11,7 +11,4 @@ namespace BeauTambour
         public IReadOnlyList<T> Values => values;
         [SerializeField] protected T[] values;
     }
-
-    [CreateAssetMenu(fileName = "NewAudioCollection", menuName = "Beau Tambour/General/Collections/Audio")]
-    public class AudioCollection : Collection<AudioClip> { }
 }

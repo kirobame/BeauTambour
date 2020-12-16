@@ -31,9 +31,16 @@ namespace BeauTambour
         {
             isMouse = true;
             
-            mouseDevice = InputSystem.GetDevice("Mouse");
             gamepadDevice = InputSystem.GetDevice("XInputControllerWindows");
+            if (gamepadDevice == null)
+            {
+                Debug.Log("No need for device alternation : Shutting down");
+                gameObject.SetActive(false);
 
+                return;
+            }
+            mouseDevice = InputSystem.GetDevice("Mouse");
+            
             foreach (var gamepadInput in gamepadInputs) gamepadInput.action.Disable();
             Event.Open(EventType.OnChange);
         }

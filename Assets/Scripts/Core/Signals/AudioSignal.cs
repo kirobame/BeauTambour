@@ -13,6 +13,8 @@ namespace BeauTambour
         
         public override void Execute(MonoBehaviour hook, Character character, string[] args)
         {
+            Debug.Log(character);
+            
             var audioClips = characterAudioSignalRegistry[character];
             var audioClip = audioClips[Random.Range(0, audioClips.Values.Count)];
 
