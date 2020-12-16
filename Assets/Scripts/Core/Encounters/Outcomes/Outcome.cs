@@ -21,7 +21,8 @@ namespace BeauTambour
         [SerializeField] private OutcomeType mask;
         [SerializeField] private OutcomeType successionMask;
         [SerializeField] private bool shouldBeRemoved = true;
-        
+
+        [SerializeField] private Sequencer backupReference;
         [SerializeField] private Condition[] conditions;
         [SerializeField] private Sequencer sequencerPrefab;
 
@@ -33,7 +34,7 @@ namespace BeauTambour
 
             var parent = Repository.GetSingle<Transform>(Parent.Outcomes);
             
-            if (sequencerPrefab == null) Debug.Log(name);
+            if (sequencerPrefab == null) runtimeSequencer = Instantiate(backupReference, parent);
             else runtimeSequencer = Instantiate(sequencerPrefab, parent);
         }
 

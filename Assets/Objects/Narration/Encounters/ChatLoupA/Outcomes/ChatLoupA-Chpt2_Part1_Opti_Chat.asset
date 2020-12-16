@@ -42,6 +42,8 @@ MonoBehaviour:
   mask: 8
   successionMask: 8
   shouldBeRemoved: 1
+  backupReference: {fileID: 5614385688149014047, guid: ccefdd6621193d541a4aae9f44639bd3,
+    type: 3}
   conditions:
   - {fileID: -4144885097777571618}
   - {fileID: -3396139378030759598}

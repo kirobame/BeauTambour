@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using Ludiq.PeekCore;
 using UnityEngine;
 
 namespace Flux
@@ -96,7 +95,6 @@ namespace Flux
             {
                 for (var x = 1; x < size.x + 1; x++)
                 {
-                    
                     //Debug.Log($"For CURRENT : ({x - 1}, {y - 1}) / TOTAL : ({size.x}, {size.y}) || LENGTH : ({lines[y].Count})");
                     //Debug.Log($"Entry is : {lines[y][x]} --- {index}/{array.Length}");
                     

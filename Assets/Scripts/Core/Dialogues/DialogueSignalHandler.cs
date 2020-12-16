@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Febucci.UI;
 using Flux;
-using Ludiq.PeekCore;
 using UnityEngine;
 
 namespace BeauTambour
@@ -36,7 +35,10 @@ namespace BeauTambour
             var mainArgs = split[1].Split(',');
 
             var emotionName = mainArgs[0];
-            emotionName = emotionName.FirstCharacterToUpper();
+            var charArray = emotionName.ToCharArray();
+            charArray[0] = Char.ToUpper(charArray[0]);
+            emotionName = new string(charArray);
+            
             var emotion = (Emotion)Enum.Parse(typeof(Emotion), emotionName);
             
             var clarity = int.Parse(mainArgs[1]);

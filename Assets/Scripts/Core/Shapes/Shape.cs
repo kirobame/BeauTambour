@@ -26,6 +26,7 @@ namespace BeauTambour
 
         #region Edition
 
+        #if UNITY_EDITOR
         public void SetPointPosition(int index, Vector2 position)
         {
             var point = points[index];
@@ -83,6 +84,8 @@ namespace BeauTambour
         
             points.RemoveRange(range.x, range.y);
         }
+        #endif
+        
         #endregion
 
         #region Generation

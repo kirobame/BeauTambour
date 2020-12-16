@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ea52862c964a749f6f5dd4fd8defe1, type: 3}
+  m_Name: 1-Trust-AudioPacksByCharacter
+  m_EditorClassIdentifier: 
+  pairs:
+  - key: {fileID: 11400000, guid: 03a012dfba0742f4596a9b98b36a1d3c, type: 2}
+    value: {fileID: 11400000, guid: b54cb6eea88322b4cb94696937436d55, type: 2}

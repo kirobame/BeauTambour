@@ -8,9 +8,28 @@ namespace BeauTambour.Editor
     public class OutcomeEditor : ScriptableObjectEditor
     {
         private EffectSequenceDrawer effectsDrawer;
-        
+
+        protected override void Initialize()
+        {
+            base.Initialize();
+
+            var iterator = serializedObject.GetIterator();
+            iterator.NextVisible(true);
+            
+            for (var i = 0; i < 5; i++) iterator.NextVisible(false);
+            var copy = iterator.Copy();
+            
+            for (var i = 0; i < 2; i++) iterator.NextVisible(false);
+            copy.objectReferenceValue = iterator.objectReferenceValue;
+
+            serializedObject.ApplyModifiedProperties();
+        }
+
         protected override void Draw(SerializedProperty iterator)
         {
+            iterator.NextVisible(false);
+            EditorGUILayout.PropertyField(iterator);
+            
             iterator.NextVisible(false);
             EditorGUILayout.PropertyField(iterator);
             

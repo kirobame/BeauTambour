@@ -16,6 +16,8 @@ MonoBehaviour:
   mask: 0
   successionMask: 0
   shouldBeRemoved: 1
+  backupReference: {fileID: 5614385688149014047, guid: f2ef8c332c500f54fb65f552dbec0669,
+    type: 3}
   conditions:
   - {fileID: 1773450918385027313}
   sequencerPrefab: {fileID: 5614385688149014047, guid: f2ef8c332c500f54fb65f552dbec0669,

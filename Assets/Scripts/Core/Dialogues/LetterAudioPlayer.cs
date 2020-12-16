@@ -26,7 +26,11 @@ namespace BeauTambour
             dialogueManager = Repository.GetSingle<DialogueManager>(Reference.DialogueManager);
             Event.Register<int,string>(DialogueManager.EventType.OnNext, OnNewCue);
 
-            Event.Register(PauseMenu.EventType.OnUnpause, () => { StartCoroutine(FixRoutine()); });
+            Event.Register(PauseMenu.EventType.OnUnpause, () =>
+            {
+                if (!gameObject.activeInHierarchy) return;
+                StartCoroutine(FixRoutine());
+            });
         }
         private IEnumerator FixRoutine()
         {
