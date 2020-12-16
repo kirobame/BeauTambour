@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effects:
   - {fileID: 8482310313690638156}
+  isUnscaled: 0
 --- !u!114 &8482310313690638156
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -97,6 +98,7 @@ GameObject:
   - component: {fileID: 6668613826175272437}
   - component: {fileID: 3322604310390374350}
   - component: {fileID: 2640118652814379836}
+  - component: {fileID: 2017096792782416657}
   m_Layer: 0
   m_Name: DrawingSequencer
   m_TagString: Untagged
@@ -131,8 +133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effects:
+  - {fileID: 2017096792782416657}
   - {fileID: 3322604310390374350}
   - {fileID: 2640118652814379836}
+  isUnscaled: 0
 --- !u!114 &3322604310390374350
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -186,6 +190,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 3253960096948700806}
   state: 0
+--- !u!114 &2017096792782416657
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964277263425386603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4725ad00281d4a91a7212cab0bc16471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Rceived On Completion
 --- !u!1 &2187671853350159795
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effects:
   - {fileID: 840405380010488938}
+  isUnscaled: 0
 --- !u!114 &840405380010488938
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10418,6 +10436,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4929415228554749183}
   - component: {fileID: 4493986711171652138}
+  - component: {fileID: 2405107925846155092}
+  - component: {fileID: 3666646909427657232}
   m_Layer: 0
   m_Name: OnShapeRecognized
   m_TagString: Untagged
@@ -10488,10 +10508,49 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2405107925846155092}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   address:
     stringedType: BeauTambour.PoolableDrawing+EventType, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     rawValue: 0
+--- !u!114 &2405107925846155092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7123372163600159529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99151b52d47c44f0b5b0dab03ab574ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 3666646909427657232}
+  isUnscaled: 0
+--- !u!114 &3666646909427657232
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7123372163600159529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4725ad00281d4a91a7212cab0bc16471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Received Shape Recognized
 --- !u!1 &7807210555389867184
 GameObject:
   m_ObjectHideFlags: 0
@@ -10570,6 +10629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effects:
   - {fileID: 7250009426648128691}
+  isUnscaled: 0
 --- !u!114 &7250009426648128691
 MonoBehaviour:
   m_ObjectHideFlags: 2

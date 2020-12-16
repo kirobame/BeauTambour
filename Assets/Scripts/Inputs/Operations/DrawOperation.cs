@@ -38,6 +38,7 @@ namespace BeauTambour
 
         [SerializeField] private int subDivision;
         [SerializeField] private float activationDelay = 0.2f;
+        [SerializeField] private PoolableDrawing drawingPrefab;
 
         private bool isDrawing;
         private bool isBusy;
@@ -91,7 +92,7 @@ namespace BeauTambour
             yield return new WaitForSeconds(activationDelay);
             
             var pool = Repository.GetSingle<DrawingPool>(Pool.Drawing);
-            var drawing = pool.RequestSinglePoolable();
+            var drawing = pool.RequestSinglePoolable(drawingPrefab);
 
             var drawingsParent = Repository.GetSingle<Transform>(Parent.Drawings);
             drawing.transform.SetParent(drawingsParent);

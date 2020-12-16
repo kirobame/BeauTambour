@@ -55,6 +55,8 @@ namespace BeauTambour
                 if (currentSignals.Count > 1) return;
                 
                 signal.OnEnd += OnSignalEnd;
+
+                Debug.Log("1 - TAnimPlayer : " + textAnimatorPlayer);
                 textAnimatorPlayer.StopShowingText();
             }
 
@@ -75,7 +77,11 @@ namespace BeauTambour
                 var dialogueManager = Repository.GetSingle<DialogueManager>(Reference.DialogueManager);
                 newKvp.Key.Execute(this, dialogueManager.SpeakingCharacter, newKvp.Value);
             }
-            else textAnimatorPlayer.StartShowingText();
+            else
+            {
+                Debug.Log("2 - TAnimPlayer : " + textAnimatorPlayer);
+                textAnimatorPlayer.StartShowingText();
+            }
         }
     }
 }

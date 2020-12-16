@@ -29,7 +29,7 @@ namespace Flux.Editor
             }
             var countLabel = new GUIContent($"Count : {count} / {property.intValue}");
             
-            EditorGUI.IntSlider(rect, property, 1, 100, countLabel);
+            EditorGUI.IntSlider(rect, property, 0, 100, countLabel);
             
             rect.y += rect.height + EditorGUIUtility.standardVerticalSpacing * 2f;
             rect.x += EditorGUI.indentLevel * 14f;
@@ -38,22 +38,26 @@ namespace Flux.Editor
             GUI.enabled = prefab != null;
             if (GUI.Button(rect, new GUIContent("Fill")))
             {
-                var component = (Component)property.serializedObject.targetObject;
-                
-                for (var i = 0; i < copy.arraySize; i++)
+                if (property.intValue == 0) copy.arraySize = 0;
+                else
                 {
-                    var instance = (Component)copy.GetArrayElementAtIndex(i).objectReferenceValue;
-                    if (instance != null) Object.DestroyImmediate(instance.gameObject);
-                }
+                    var component = (Component)property.serializedObject.targetObject;
                 
-                copy.arraySize = property.intValue;
-                for (var i = 0; i < copy.arraySize; i++)
-                {
-                    var instance = (Component)PrefabUtility.InstantiatePrefab(prefab, component.transform);
-                    instance.gameObject.SetActive(false);
+                    for (var i = 0; i < copy.arraySize; i++)
+                    {
+                        var instance = (Component)copy.GetArrayElementAtIndex(i).objectReferenceValue;
+                        if (instance != null) Object.DestroyImmediate(instance.gameObject);
+                    }
+                
+                    copy.arraySize = property.intValue;
+                    for (var i = 0; i < copy.arraySize; i++)
+                    {
+                        var instance = (Component)PrefabUtility.InstantiatePrefab(prefab, component.transform);
+                        instance.gameObject.SetActive(false);
 
-                    var elementProperty = copy.GetArrayElementAtIndex(i);
-                    elementProperty.objectReferenceValue = instance;
+                        var elementProperty = copy.GetArrayElementAtIndex(i);
+                        elementProperty.objectReferenceValue = instance;
+                    }
                 }
             }
             GUI.enabled = true;

@@ -137,6 +137,8 @@ namespace BeauTambour
 
         public void Complete(bool success)
         {
+            Debug.Log($"Completing drawing : {this}");
+            
             if (revealPathRoutine != null)
             {
                 StopCoroutine(revealPathRoutine);

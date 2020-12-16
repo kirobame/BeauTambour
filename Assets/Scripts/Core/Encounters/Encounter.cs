@@ -32,7 +32,8 @@ namespace BeauTambour
 
         [SerializeField] private Character[] characters;
         [SerializeField] private Interlocutor initialInterlocutor;
-        
+
+        private Outcome[] runtimeInitialOutcomes;
         private HashSet<Outcome> runtimeOutcomes;
         private List<Outcome> results;
 
@@ -53,17 +54,30 @@ namespace BeauTambour
             interlocutor = initialInterlocutor;
             interlocutor.BootUp();
             foreach (var character in characters) character.BootUp();
+
+            runtimeInitialOutcomes = new Outcome[firstOutcomes.Length];
+            for (var i = 0; i < firstOutcomes.Length; i++)
+            {
+                var runtimeOutcome = Instantiate(firstOutcomes[i]);
+                runtimeOutcome.BootUp();
+
+                runtimeInitialOutcomes[i] = runtimeOutcome;
+            }
             
-            foreach (var outcome in firstOutcomes) outcome.BootUp();
-            foreach (var outcome in outcomes) outcome.BootUp();
-            runtimeOutcomes = new HashSet<Outcome>(outcomes);
-            
-            results = new List<Outcome>();
+            runtimeOutcomes = new HashSet<Outcome>();
+            foreach (var outcome in outcomes)
+            {
+                var runtimeOutcome = Instantiate(outcome);
+                runtimeOutcome.BootUp();
+
+                runtimeOutcomes.Add(runtimeOutcome);
+            }
         }
 
         public void Start()
         {
-            results.Add(firstOutcomes[0]);
+            results = new List<Outcome>();
+            results.Add(runtimeInitialOutcomes[0]);
             outcomeAdvancement = 0;
             
             results[0].Play(this, new Note[0]);
@@ -190,7 +204,7 @@ namespace BeauTambour
                     Debug.Log("Moving on to next phase");
                     
                     if (results.Count > 1) results.RemoveRange(1, results.Count - 1);
-                    results.Add(firstOutcomes[interlocutor.blockIndex]);
+                    results.Add(runtimeInitialOutcomes[interlocutor.blockIndex]);
                     
                     outcomeAdvancement++;
                     

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subDivision: 64
   activationDelay: 0.2
+  drawingPrefab: {fileID: 3253960096948700801, guid: 32d5e3ced362da34c91fc764c56e0455,
+    type: 3}
