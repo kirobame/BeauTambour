@@ -11,6 +11,7 @@ namespace BeauTambour
 
         [SerializeField] private AudioClip successAudio;
         [SerializeField] private AudioClip failAudio;
+        [SerializeField] private Vector4 settings;
         
         public override void Initialize(MonoBehaviour hook)
         {
@@ -28,6 +29,8 @@ namespace BeauTambour
             var audioSource = audioPool.RequestSingle();
 
             audioSource.clip = successAudio;
+            audioSource.volume = settings.x;
+            audioSource.pitch = settings.y;
             audioSource.Play();
             
             if (history == (GameplaySequenceKeys.Start | GameplaySequenceKeys.PickMusician | GameplaySequenceKeys.End))
@@ -67,6 +70,8 @@ namespace BeauTambour
             var audioSource = audioPool.RequestSingle();
 
             audioSource.clip = failAudio;
+            audioSource.volume = settings.z;
+            audioSource.pitch = settings.w;
             audioSource.Play();
         }
     }

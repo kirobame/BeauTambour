@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59cff0548d3e49629fb7a8cc585608cc, type: 3}
   m_Name: PM-PlayIndexedAudio
   m_EditorClassIdentifier: 
-  volume: 1
+  volume: 0.4
   clips:
   - {fileID: 8300000, guid: a9c79f41b8101674ab9861f74213daf9, type: 3}
-  - {fileID: 8300000, guid: a1179b7c1221dee46894ab92780bcd6d, type: 3}
   - {fileID: 8300000, guid: a905005e14b34a64f9b9edd62e56b2bd, type: 3}
+  - {fileID: 8300000, guid: a1179b7c1221dee46894ab92780bcd6d, type: 3}
   - {fileID: 8300000, guid: b7eb8786e298abd46b1551b20e5e0c0b, type: 3}

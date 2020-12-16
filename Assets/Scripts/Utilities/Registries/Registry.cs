@@ -23,7 +23,7 @@ namespace BeauTambour
             }
         }
 
-        public TValue Get(TKey key) => keyValuePairs.First(keyValuePair => keyValuePair.Key.Equals(key)).Value;
+        public virtual TValue Get(TKey key) => keyValuePairs.First(keyValuePair => keyValuePair.Key.Equals(key)).Value;
         public bool TryGet(TKey key, out TValue value)
         {
             if (dictionary.TryGetValue(key, out value)) return true;

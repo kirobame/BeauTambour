@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfad6064e48c33429bdc3e4dea71020, type: 3}
   m_Name: EGS-PlayAudio
   m_EditorClassIdentifier: 
-  volume: 1
-  pitch: 1
+  volume: 0.5
+  pitch: 0.9
   clip: {fileID: 8300000, guid: 7313e7de528b4d14bbc6631c7ed09ac0, type: 3}

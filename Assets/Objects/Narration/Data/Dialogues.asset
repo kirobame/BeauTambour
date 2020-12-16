@@ -314,8 +314,8 @@ MonoBehaviour:
     - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part1_Joie_Sour"
     - "[Souris]-Z\u2019adore zouer ce morceau, <bounce>z\u2019ai envi de chanter
-      !</bounce>\n[Chat]- Piti\xE9 non ! \n<?E:Sfx/Sadness,1,TRUE/> Laisse tes \xAB
-      ze \xBB dans cette bouche tourrment\xE9e !"
+      !</bounce>\n[Chat]- Piti\xE9 non ! \n<?E:Sfx/Sadness,1,TRUE/> Laisse tes *ze*
+      dans cette bouche tourrment\xE9e !"
     - 
     - 11
     - None
@@ -325,9 +325,9 @@ MonoBehaviour:
 
       MEPair:Souris/Joy;'
     - "\u24C7-Chpt2_Part1_Peur_Sour"
-    - "[Souris]-On dirait que t\u2019as peur !\n[Chat]-<?E:Sfx/Sadness,1,TRUE/> De
-      moi un loup est pr\xE9dateurr !\n[Souris]-Blabla\u2026 Oui et bien \xAB de
-      moi un chat est pr\xE9dateur \xBB !"
+    - "[Souris]-Z\u2019adore zouer ce morceau, <bounce>z\u2019ai envi de chanter
+      !</bounce>\n[Chat]- Piti\xE9 non ! \n<?E:Sfx/Sadness,1,TRUE/> Laisse tes *
+      ze * dans cette bouche tourrment\xE9e !"
     - 
     - 11
     - None
@@ -375,10 +375,10 @@ MonoBehaviour:
 
       MEPair:Souris/Trust;'
     - "\u24C7-Chpt2_Part1_Surp_Sour"
-    - "[Souris]-Ze ne savais pas que \xE7a pouvait existait un chat-loup !\n[Chat]-Tu
-      es surprrise ? \n<?E:Vfx/Sadness,1,TRUE/> Alorrs que tu es \xE0 la fois verrte
-      et sourris...\n[Souris]-Ah oui ! Mais toi tu es en m\xEAme temps chat-loup
-      et roux !\n"
+    - "[Souris]-Z\u2019ai rencontr\xE9 un loup un zour, il ne m\u2019a pas manz\xE9
+      !\n[Chat]-Vois-tu ! Nous ne sommes pas tous des b\xEAtes,\nCerrtains ont de
+      bonnes t\xEAtes !\n[Souris]-<wave>C\u2019est mon fr\xE8re qu\u2019il a manz\xE9\u2026</wave>\n[Chat]-<?E:Vfx/Sadness,2,TRUE/>
+      Oh... D\xE9sol\xE9..."
     - 
     - 11
     - None
@@ -608,8 +608,7 @@ MonoBehaviour:
     - "[Oiseau]-Je dois avouer, m\xEAme si mon chant est lou\xE9 (ou le sera), j\u2019aime
       jouer avec vous !\n[Souris]-Eh bien ! M\xEAme si z\u2019ai du mal \xE0 comprendre
       ce que tu dis, z\u2019t\u2019taimes bien ze l\u2019avoue !\n[Oiseau]-Me comprendre
-      ?\n\xAB z\u2019ai du mal \xE0 comprendre ce que tu dis \xBB aussi !\nMais merci
-      !"
+      ?\n* z\u2019ai du mal \xE0 comprendre ce que tu dis * aussi !\nMais merci !"
     - 
     - 11
     - None

@@ -71,8 +71,9 @@ namespace BeauTambour
                     var audio = audioPool.RequestSingle();
                 
                     audio.clip = letterAudioRegistry[character];
+                    audio.volume = letterAudioRegistry.Volume;
+                    
                     audio.Play();
-                
                     counter = gap;
                 }
             }

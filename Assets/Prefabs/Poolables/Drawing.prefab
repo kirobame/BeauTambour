@@ -371,7 +371,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
   address:
     stringedType: BeauTambour.PoolableDrawing+EventType, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -10643,7 +10643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: f3228d0772051eb46aa63dd3a1940e82, type: 3}
-  volume: 1
+  volume: 0.8
   pitch: 1
 --- !u!1 &8929844775269755134
 GameObject:

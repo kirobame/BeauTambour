@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59cff0548d3e49629fb7a8cc585608cc, type: 3}
   m_Name: SGS-PlayIndexedAudio
   m_EditorClassIdentifier: 
-  volume: 1
+  volume: 0.6
   clips:
-  - {fileID: 8300000, guid: b286db694dbc5e44e98f0d42c6124eb5, type: 3}
-  - {fileID: 8300000, guid: eb764db367bf4434ba562d32fb64afba, type: 3}
-  - {fileID: 8300000, guid: d2f6da6168986de45be76a232a0079bf, type: 3}
-  - {fileID: 8300000, guid: 86a7ec437fb6d2f4aa69fd88bb5dd764, type: 3}
+  - {fileID: 8300000, guid: 7cebb3f5be1d35646b45bfc08223bcef, type: 3}
+  - {fileID: 8300000, guid: 38445845817e5d7449999140d9ddee59, type: 3}
+  - {fileID: 8300000, guid: 941c9adbe1d7eaf488fb153d44857ad5, type: 3}
+  - {fileID: 8300000, guid: bfc06cf210ab85344bf918c14171a76a, type: 3}

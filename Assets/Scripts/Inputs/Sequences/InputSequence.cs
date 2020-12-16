@@ -17,8 +17,10 @@ namespace BeauTambour
         [SerializeField] protected TElement[] elements;
         
         private TEnum history;
-        private int advancement;
-        
+        private int advancement = -1;
+
+        void OnEnable() => advancement = -1;
+
         public void Advance(int groupIndex, TEnum key)
         {
             if (groupIndex == 0 && elements[0].Contains(key))
@@ -41,7 +43,7 @@ namespace BeauTambour
                 HandleOutcome(history);
 
                 history = default(TEnum);
-                advancement = 0;
+                advancement = -1;
             }
         }
 

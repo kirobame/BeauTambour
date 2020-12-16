@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfad6064e48c33429bdc3e4dea71020, type: 3}
   m_Name: CP-PlayAudio
   m_EditorClassIdentifier: 
-  volume: 1
+  volume: 0.25
   pitch: 1
   clip: {fileID: 8300000, guid: e36896f3d511d414289b38cfad9d7e3b, type: 3}

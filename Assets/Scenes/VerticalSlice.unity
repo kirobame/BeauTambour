@@ -3915,7 +3915,7 @@ MonoBehaviour:
   bounds: {fileID: 4932453251545394590}
   lineCount: 4
   heightReduction: 0.55
-  extra: 0.2
+  extra: 0.15
 --- !u!114 &865006924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9587,6 +9587,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: adaf503684cbb2141b10e9501bab0836,
         type: 2}
+    - target: {fileID: 5151173403507197554, guid: 0acb8eb35fd9ac9449c16ed560a0dd54,
+        type: 3}
+      propertyPath: volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5151173403507197559, guid: 0acb8eb35fd9ac9449c16ed560a0dd54,
         type: 3}
       propertyPath: m_Name
@@ -9819,6 +9824,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: b01b20f9993be474eafac52bfff716ad,
         type: 2}
+    - target: {fileID: 8295580992034984998, guid: aff15b5555393f24c8a3188c510e97f0,
+        type: 3}
+      propertyPath: volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8295580992034984999, guid: aff15b5555393f24c8a3188c510e97f0,
         type: 3}
       propertyPath: address.rawValue

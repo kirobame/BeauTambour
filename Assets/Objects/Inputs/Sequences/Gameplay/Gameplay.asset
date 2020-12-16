@@ -18,3 +18,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 413565263e2a95f409aa90296e0bbff8, type: 2}
   successAudio: {fileID: 8300000, guid: b2e705bf328ea944b99812d33c70efac, type: 3}
   failAudio: {fileID: 8300000, guid: c1f2b406d880e604e999e6fed04786ef, type: 3}
+  settings: {x: 0.2, y: 0.9, z: 0.6, w: 1}

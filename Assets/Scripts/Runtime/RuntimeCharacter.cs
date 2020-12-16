@@ -19,6 +19,7 @@ namespace BeauTambour
         [SerializeField] private Animator animator;
         
         [Space, SerializeField] private KeyMelodyRegistry keyMelodyRegistry;
+        [SerializeField, Range(0,1)] private float volume;
 
         [Space, SerializeField] private SkeletonMecanim skeleton;
         [SerializeField] private Animator selectionVfx;
@@ -93,6 +94,7 @@ namespace BeauTambour
                 pooledMusic.OnDone += OnMusicEnd;
                 
                 pooledMusic.Value.clip = keyMelodyRegistry[$"{musician}-{emotion}"];
+                pooledMusic.Value.volume = volume;
                 pooledMusic.Value.Play();
             }
             
