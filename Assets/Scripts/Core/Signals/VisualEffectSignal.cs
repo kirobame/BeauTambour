@@ -25,7 +25,7 @@ namespace BeauTambour
 
             runtimePoolable.transform.localScale = localScale;
             runtimePoolable.transform.position = character.Instance.VisualEffectPoint.position;
-            
+
             runtimePoolable.Value.SetTrigger("Play");
             runtimePoolable.OnDone += OnPoolableDeactivation;
         }

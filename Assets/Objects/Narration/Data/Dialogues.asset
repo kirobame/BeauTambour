@@ -52,7 +52,7 @@ MonoBehaviour:
       que vous avez ! \nDonc c'est le <color=#6FA1D0><wave>chagrin</wave></color>,
       qui dans votre bouche, \nLaisse un go\xFBt amer !\n[Chat]-<?E:Vfx/Sadness,3,FALSE/>
       Je ne suis pas m\xE9chant, \nMes crrocs ne sont pas trranchants ! \n//Si seulement
-      jamais je n'eut cette id\xE9e !\n[Souris]-Me voil\xE0 rassur\xE9e... \n//Mais
+      jamais je n'eus cette id\xE9e !\n[Souris]-Me voil\xE0 rassur\xE9e... \n//Mais
       de quoi parles-tu ? \nDe quoi cette tristesse est fond\xE9e ?"
     - 
     - 12
@@ -1056,7 +1056,7 @@ MonoBehaviour:
     - Masks:Dialogue/Dialogue;
     - "\u24C7-Chpt2_Part2_Incr_Chat"
     - "[Chat]-Quelles sont ces notes !\n[Souris]-Elles vous bottent ?\n[Chat]-Oh
-      que non, elles d\xE9notent !\n<?E:Vfx/Joy2,TRUE/> Mais elles sont rigolotes
+      que non, elles d\xE9notent !\n<?E:Vfx/Joy,2,TRUE/> Mais elles sont rigolotes
       !"
     - 
     - 12
@@ -1633,12 +1633,12 @@ MonoBehaviour:
       c\u2019est notre village !\nMais jamais on ne t\u2019a crois\xE9 dans les parages
       !\n[Chat ]-Pas de surrprrise, trr\xE8s jeune je me perrdis dans la forr\xEAt\u2026\nC\u2019est
       comme \xE7a que le loup je connus.\n[Souris]-Mais oui, l\u2019histoire du loup
-      qui d\xE9vorait !\nEt la l\xE9gende du chat perdu !\n[Souris]-L\u2019histoire
-      du Petit Chat Peureux Roux !\n[Chat ]-<?E:Vfx/Trust,2,FALSE/> <?E:Sfx/Trust,1,TRUE/> 
+      qui d\xE9vorait !\nEt la rumeur du chat perdu !\n[Souris]-L\u2019histoire du
+      Petit Chat Peureux Roux !\n[Chat ]-<?E:Vfx/Trust,2,FALSE/> <?E:Sfx/Trust,1,TRUE/> 
       Tu veux dirre du valeurreux chat garrou !\n[Souris]-Non non, pas du tout\u2026\n[Oiseau
       ]-Cette chanson je connais, dans l\u2019ombre un chat fredonnait\u2026\n[Oiseau
       ]-Parti seul cueillir des fleurs, pour une m\xE8re en douleur,\n[Oiseau ]-Dans
-      la for\xEAt il s\u2019engouffra, sur ces trac(es) le loup, ce malfrat\u2026\n[Oiseau
+      la for\xEAt il s\u2019engouffra, sur ces traces le loup, ce malfrat\u2026\n[Oiseau
       ]-Le destin attrapa l\u2019enfant, le ventre du loup triomphant\u2026\n[Chat
       ]-Plaisanterrie que ceci ? \nJe me suis perdu oui, \nMais chez le loup je me
       suis endormi !\n[Souris]-Quoi !? Et il ne t\u2019a pas mis entre du pain de
