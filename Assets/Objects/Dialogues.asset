@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bd759e0e4aafd44833fb08d666bc7c, type: 3}
+  m_Name: Dialogues
+  m_EditorClassIdentifier: 
+  baseUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vTtn9DzdPz05Pf_g3qvDvPCy1a1KmktrVJZHTNa-Ur_i7bI4l7plLpM8gPXMjqnA3Cb78pqFDp6RSO4/pub?output=csv
+  sheets:
+  - name: Encounter.A
+    version: 1.0
+    array:
+    - "\u24D8-Dialogues"
+    - "\u24B8-Source"
+    - "\u24B8-Type"
+    - "\u24B8-Fran\xE7ais"
+    - "\u24B8-English"
+    - "\u24B8-Data"
+    - "\u24C7-B.Fls.00"
+    - Bird
+    - Hint
+    - '[Bird]-Three.'
+    - '[Bird]-Trois.'
+    - 'Name : Standard;'
+    - "\u24C7-B.Fls.01"
+    - Bird
+    - Hint
+    - '[Bird]-Two.'
+    - '[Bird]-Deux.'
+    - 'Name : Standard;'
+    - "\u24C7-B.End"
+    - Bird
+    - Hint
+    - '[Bird]-One.'
+    - '[Bird]-Un.'
+    - 'Name : End;'
+    - "\u24C7-Diag.01"
+    - Bird
+    - Advance
+    - '[Bird]-Bonjour le monde.'
+    - '[Bird]-Hello world.'
+    - 'Root : 1;
+
+      Emotion : None;
+
+      Failsafe : Standard;
+
+      Childs
+      : Diag.02;'
+    - "\u24C7-Diag.02"
+    - Bird
+    - Advance
+    - "[Mouse]-Nous sommes.\n[Bird]-Les amis.\n[Cat]-De la for\xEAt!"
+    - '[Mouse]-We are.
+
+      [Bird]-The friends.
+
+      [Cat]-Of the forest!'
+    - 'Emotion : Joy;
+
+      Failsafe : Standard;
+
+      Childs : Empty;'
+    size: {x: 6, y: 6}

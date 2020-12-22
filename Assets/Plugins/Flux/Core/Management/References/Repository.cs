@@ -90,8 +90,8 @@ namespace Flux
         public static T GetSingle<T>(Enum address) => Get<T>(address.GetNiceName(), 0);
         public static T GetSingle<T>(string address) => Get<T>(address, 0);
         
-        public static IEnumerable<T> GetAll<T>(Enum address) => GetALl<T>(address.GetNiceName());
-        public static IEnumerable<T> GetALl<T>(string address) => globalReferences[address].Cast<T>();
+        public static IEnumerable<T> GetAll<T>(Enum address) => GetAll<T>(address.GetNiceName());
+        public static IEnumerable<T> GetAll<T>(string address) => globalReferences[address].Cast<T>();
         
         public static T Get<T>(Enum address, int index) => Get<T>(address.GetNiceName(), index);
         public static T Get<T>(string address, int index) => (T)globalReferences[address][index];
@@ -99,8 +99,8 @@ namespace Flux
         public static T GetSingle<T>(Enum address, object key) => Get<T>(address.GetNiceName(), 0, key);
         public static T GetSingle<T>(string address, object key) => Get<T>(address, 0, key);
         
-        public static IEnumerable<T> GetAll<T>(Enum address, object key) => GetALl<T>(address.GetNiceName(), key);
-        public static IEnumerable<T> GetALl<T>(string address, object key) => localReferences[address][key.GetHashCode()].Cast<T>();
+        public static IEnumerable<T> GetAll<T>(Enum address, object key) => GetAll<T>(address.GetNiceName(), key);
+        public static IEnumerable<T> GetAll<T>(string address, object key) => localReferences[address][key.GetHashCode()].Cast<T>();
         
         public static T Get<T>(Enum address, int index, object key) => Get<T>(address.GetNiceName(), index, key);
         public static T Get<T>(string address, int index, object key) => (T)localReferences[address][key.GetHashCode()][index];
