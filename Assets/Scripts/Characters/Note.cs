@@ -2,12 +2,12 @@
 {
     public class Note
     {
-        public Musician musician;
+        public ISpeaker speaker;
         public Emotion emotion;
 
         public void Clear()
         {
-            musician = null;
+            speaker = null;
             emotion = Emotion.None;
         }
     }

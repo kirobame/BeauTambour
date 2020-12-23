@@ -14,7 +14,7 @@ namespace BeauTambour
 
         public void Display()
         {
-            GameState.Note.musician = musician;
+            GameState.Note.speaker = musician;
             GameState.Note.emotion = emotion;
             
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);

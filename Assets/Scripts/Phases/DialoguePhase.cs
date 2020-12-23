@@ -10,9 +10,9 @@ namespace BeauTambour
         public override void Begin()
         {
             var dialogueHandler = Repository.GetSingle<DialogueHandler>(References.DialogueHandler);
-            var dialogue = GameState.Note.musician.GetDialogue(GameState.Note.emotion);
+            var dialogue = GameState.Note.speaker.GetDialogue(GameState.Note.emotion);
             
-            dialogueHandler.Play(dialogue);
+            dialogueHandler.Enqueue(dialogue);
         }
         public override void End()
         {

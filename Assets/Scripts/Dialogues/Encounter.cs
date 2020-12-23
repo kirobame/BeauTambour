@@ -22,8 +22,6 @@ namespace BeauTambour
         {
             Repository.Reference(this, References.Encounter);
             Event.Open(GameEvents.OnEncounterBootedUp);
-            
-            foreach (var musician in initialMusicians) GameState.RegisterMusicianForUse(musician);
 
             if (!useBackup) hook.StartCoroutine(dialogueRecipient.Download(OnDialogueSheetsDownloaded));
             else OnDialogueSheetsDownloaded(dialogueRecipient.Sheets.ToArray());
@@ -54,31 +52,39 @@ namespace BeauTambour
                 switch (type)
                 {
                     case "Hint":
-                        if (TryGetMusician(row, out var hintMusician)) HandleHint(row, texts, data, hintMusician);
+                        if (TryGetCharacter<Musician>(runtimeSheet["Dialogues", "Source", row], out var hintMusician)) HandleHint(row, texts, data, hintMusician);
                         break;
                     
                     case "Advance":
-                        if (TryGetMusician(row, out var advanceMusician)) HandleAdvance(row, texts, data, advanceMusician);
+                        if (TryGetCharacter<Musician>(runtimeSheet["Dialogues", "Source", row], out var advanceMusician)) HandleAdvance(row, texts, data, advanceMusician);
                         break;
                     
                     case "Event":
                         HandleEventBoundDialogue();
+                        break;
+                    
+                    case "Harmony":
+                        if (TryGetCharacter<Interlocutor>(runtimeSheet["Dialogues", "Source", row], out var interlocutor))  HandleHarmonyDialogue(texts, data, interlocutor);
                         break;
                 }
             }
             
             Event.Call(GameEvents.OnEncounterBootedUp);
             GameState.PassBlock();
-
-            bool TryGetMusician(string row, out Musician musician)
-            {
-                musician = null;
-                
-                var source = runtimeSheet["Dialogues", "Source", row];
-                return Enum.TryParse<Actor>(source, out var actor) && GameState.TryGetMusician(actor, out musician);
-            }
         }
 
+        private bool TryGetCharacter<TChar>(string source, out TChar musician) where TChar : Character
+        {
+            musician = null;
+            
+            if (Enum.TryParse<Actor>(source, out var actor)) return false;
+            else
+            {
+                musician = Extensions.GetCharacter<TChar>(actor);
+                return true;
+            }
+        }
+        
         private void HandleHint(string row, string[] texts, Dictionary<string, string> data, Musician musician)
         {
             if (!data.ContainsKey("Name")) return;
@@ -92,6 +98,20 @@ namespace BeauTambour
             if (data.ContainsKey("Root")) musician.AddDialogueNodeRootKey(row, int.Parse(data["Root"]) - 1);
             musician.AddDialogueNode(dialogueNode);
         }
+        
+        private void HandleHarmonyDialogue(string[] texts, Dictionary<string, string> data, Interlocutor interlocutor)
+        {
+            if (!data.ContainsKey("Emotion") || Enum.TryParse<Emotion>(data["Emotion"], out var emotion)) return;
+            
+            if (!data.ContainsKey("Block")) return;
+            var block = int.Parse(data["Block"]);
+            
+            if (!data.ContainsKey("IsCorrect")) return;
+            
+            if (bool.Parse(data["IsCorrect"]) == true) interlocutor.AddBlockDialogue(emotion, texts, block);
+            else interlocutor.AddDialogueOption(emotion, texts, block);
+        }
+        
         private void HandleEventBoundDialogue()
         {
             Debug.LogWarning("Event bound dialogues are not supported for the moment");

@@ -7,8 +7,8 @@ namespace BeauTambour
 {
     public static class GameState
     {
-        public static IEnumerable<Musician> Musicians => musicians.Values;
-        private static Dictionary<Actor, Musician> musicians;
+        public static IEnumerable<ISpeaker> Speakers => speakers.Values;
+        private static Dictionary<Actor, ISpeaker> speakers;
         
         public static int BlockIndex { get; private set; }
         public static Language UsedLanguage { get; private set; }
@@ -16,7 +16,7 @@ namespace BeauTambour
 
         public static void Bootup()
         {
-            musicians = new Dictionary<Actor, Musician>();
+            speakers = new Dictionary<Actor, ISpeaker>();
 
             BlockIndex = -1;
             UsedLanguage = Language.Français;
@@ -25,18 +25,18 @@ namespace BeauTambour
             Event.Open(GameEvents.OnBlockPassed);
         }
 
-        public static void RegisterMusicianForUse(Musician musician)
+        public static void RegisterSpeakerForUse(ISpeaker speaker)
         {
-            if (musicians.ContainsKey(musician.Actor)) return;
-            musicians.Add(musician.Actor, musician);
+            if (speakers.ContainsKey(speaker.Actor)) return;
+            speakers.Add(speaker.Actor, speaker);
         }
-        public static void UnregisterMusicianForUse(Musician musician) => musicians.Remove(musician.Actor);
+        public static void UnregisterSpeakerForUse(Musician musician) => speakers.Remove(musician.Actor);
 
-        public static bool TryGetMusician(Actor actor, out Musician musician) => musicians.TryGetValue(actor, out musician);
-        public static Musician GetMusician(Actor actor) => musicians[actor];
-        public static Musician[] GetSortedMusicians()
+        public static bool TryGetSpeaker(Actor actor, out ISpeaker musician) => speakers.TryGetValue(actor, out musician);
+        public static ISpeaker GetSpeaker(Actor actor) => speakers[actor];
+        public static ISpeaker[] GetSortedSpeakers()
         {
-            var list = new List<Musician>(Musicians);
+            var list = new List<ISpeaker>(Speakers);
             list.Sort((first, second) =>
             {
                 var firstX = first.RuntimeLink.transform.position.x;

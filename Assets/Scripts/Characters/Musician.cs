@@ -5,10 +5,8 @@ using Event = Flux.Event;
 
 namespace BeauTambour
 {
-    public class NoteAttribute { }
-    
     [CreateAssetMenu(fileName = "NewMusician", menuName = "Beau Tambour/Characters/Musician")]
-    public class Musician : Character
+    public class Musician : Character, ISpeaker
     {
         #region Encapsulated Types
         
@@ -62,12 +60,12 @@ namespace BeauTambour
 
         #region Dialogue Initialization
         
-        public void AddDialogueNodeRootKey(string name, int phaseIndex)
+        public void AddDialogueNodeRootKey(string name, int blockIndex)
         {
-            var difference = phaseIndex - (rootNodeKeys.Count - 1);
+            var difference = blockIndex - (rootNodeKeys.Count - 1);
             if (difference > 0) for (var i = 0; i < difference; i++) rootNodeKeys.Add("Empty");
 
-            rootNodeKeys[phaseIndex] = name;
+            rootNodeKeys[blockIndex] = name;
         }
         public void AddDialogueNode(DialogueNode node) => nodes.Add(node.Name, node);
         public void AddDialogueFailsafe(string name, string[] texts)
@@ -81,10 +79,12 @@ namespace BeauTambour
         }
         #endregion
 
-        public override void Inject(RuntimeCharacter runtimeCharacter)
+        public override void Bootup(RuntimeCharacter runtimeCharacter)
         {
-            base.Inject(runtimeCharacter);
+            base.Bootup(runtimeCharacter);
             CastedRuntimeLink = (RuntimeMusician) runtimeCharacter;
+
+            GameState.RegisterSpeakerForUse(this);
             
             rootNodeKeys = new List<string>();
             nodes = new Dictionary<string, DialogueNode>();

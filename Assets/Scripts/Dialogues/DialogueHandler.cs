@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Flux;
 using UnityEngine;
@@ -16,17 +17,25 @@ namespace BeauTambour
         private int advancement;
         private Actor actor;
 
+        private Queue<Dialogue> queue;
         private bool isPlaying;
 
         private void Awake()
         {
             Repository.Reference(this, References.DialogueHandler);
             
+            queue = new Queue<Dialogue>();
+            
             Event.Open<Cue>(GameEvents.OnNextCue);
             Event.Open<Dialogue>(GameEvents.OnDialogueFinished);
         }
 
-        public void Play(Dialogue dialogue)
+        public void Enqueue(Dialogue dialogue)
+        {
+            if (isPlaying) queue.Enqueue(dialogue);
+            else Assign(dialogue);
+        }
+        private void Assign(Dialogue dialogue)
         {
             this.dialogue = dialogue;
             
@@ -44,14 +53,19 @@ namespace BeauTambour
             advancement++;
             if (advancement >= dialogue.Length) 
             {
-                End();
+                if (queue.Count > 0)
+                {
+                    var dialogue = queue.Dequeue();
+                    Assign(dialogue);
+                }
+                else End();
+                
                 return;
             }
 
             var newActor = cue.Actor;
 
-            var characters = Repository.GetAll<Character>(References.Characters);
-            var character = characters.First(item => item.Actor == newActor);
+            var character = Extensions.GetCharacter<Character>(cue.Actor);
             character.SetupDialogueHolder(holder);
             
             holder.Bootup();

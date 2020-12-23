@@ -8,6 +8,6 @@ namespace BeauTambour
     {
         [SerializeField] private Character asset;
 
-        void Awake() => asset.Inject(this);
+        void Awake() => asset.Bootup(this);
     }
 }
