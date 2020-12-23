@@ -9,12 +9,14 @@ namespace BeauTambour
     public class DialogueHandler : MonoBehaviour
     {
         [SerializeField] private DialogueHolder holder;
-        
+
         private Cue cue => dialogue[advancement];
 
         private Dialogue dialogue;
         private int advancement;
         private Actor actor;
+
+        private bool isPlaying;
 
         private void Awake()
         {
@@ -30,12 +32,15 @@ namespace BeauTambour
             
             advancement = -1;
             actor = Actor.None;
-            
+
+            isPlaying = true;
             Continue();
         }
 
         public void Continue()
         {
+            if (!isPlaying) return;
+            
             advancement++;
             if (advancement >= dialogue.Length) 
             {
@@ -49,26 +54,48 @@ namespace BeauTambour
             var character = characters.First(item => item.Actor == newActor);
             character.SetupDialogueHolder(holder);
             
-            holder.Reboot();
+            holder.Bootup();
             holder.TextMesh.ForceMeshUpdate();
             var info = holder.TextMesh.GetTextInfo(Regex.Replace(cue.Text, "\\<(.*?)\\>", string.Empty));
 
             holder.TextMesh.enabled = false;
             holder.TextMesh.enabled = true;
+
+            var lineSpacing = holder.TextMesh.lineSpacing / 100.0f;
+            var height = 0f;
             
-            var height = info.lineInfo.First().lineHeight * info.lineCount;
+            for (var i = 0; i < info.lineCount; i++)
+            {
+                var ascend = info.lineInfo[i].ascender - info.lineInfo[i].baseline;
+                var descend = info.lineInfo[i].baseline - info.lineInfo[i].descender;
+                var strictLineHeight = ascend + descend;
+
+                height += strictLineHeight;
+
+                if (i + 1 < info.lineCount)
+                {
+                    height += info.lineInfo[i].lineHeight - strictLineHeight;
+                    height += lineSpacing;
+                }
+            }
+            height += holder.TextMesh.margin.y + holder.TextMesh.margin.w;
+
             var maximumWidth = info.lineInfo.Max(line => line.maxAdvance);
+            maximumWidth += holder.TextMesh.margin.x + holder.TextMesh.margin.z;
+            
             var size = new Vector2(maximumWidth, height);
-            
-            holder.SetText(cue.Text);
-            
-            if (newActor != actor) holder.Place(character.GetPositionForDialogueHolder(), size);
-            else holder.Resize(size);
+
+            if (newActor != actor) holder.Renew(character.GetPositionForDialogueHolder(), size, cue.Text);
+            else holder.Refresh(size, cue.Text);
 
             actor = newActor;
             Event.Call<Cue>(GameEvents.OnNextCue, cue);
         }
 
-        public void End() => Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
+        public void End()
+        {
+            isPlaying = false;
+            Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
+        }
     }
 }

@@ -26,14 +26,34 @@ MonoBehaviour:
     - "\u24C7-B.Fls.00"
     - Bird
     - Hint
-    - '[Bird]-Three.'
-    - '[Bird]-Trois.'
+    - '[Bird]-Three.
+
+      Hoola hoop.
+
+      Yas girl!
+
+      //Kawabunga.
+
+      Baby!!!'
+    - '[Bird]-Trois.
+
+      Hoola hoop.
+
+      Yas girl!
+
+      //Kawabunga.
+
+      Baby!!!'
     - 'Name : Standard;'
     - "\u24C7-B.Fls.01"
     - Bird
     - Hint
-    - '[Bird]-Two.'
-    - '[Bird]-Deux.'
+    - '[Bird]-Two.
+
+      Roger, roger.'
+    - '[Bird]-Deux.
+
+      Roger, roger.'
     - 'Name : Standard;'
     - "\u24C7-B.End"
     - Bird

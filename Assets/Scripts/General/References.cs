@@ -2,8 +2,11 @@
 
 namespace BeauTambour
 {
+    [EnumAddress]
     public enum References
     {
+        Camera,
+    
         Characters,
         Encounter,
         

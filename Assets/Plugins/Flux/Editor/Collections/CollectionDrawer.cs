@@ -258,7 +258,7 @@ namespace Flux.Editor
                 if (count == 0)
                 {
                     //Debug.Log($"A.1 + {elementProperty.name}");
-                    height -= EditorGUIUtility.singleLineHeight;
+                    //height -= EditorGUIUtility.singleLineHeight;
                 }
                 else if (count > 1)
                 {

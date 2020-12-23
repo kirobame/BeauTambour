@@ -8,6 +8,8 @@ namespace BeauTambour
     public class Helper : MonoBehaviour
     {
         [SerializeField] private Musician musician;
+        
+        [ContextMenuItem("Continue", "Continue")]
         [SerializeField, ContextMenuItem("Display", "Display")] private Emotion emotion;
 
         public void Display()
@@ -17,6 +19,11 @@ namespace BeauTambour
             
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
             phaseHandler.Play(PhaseCategory.Dialogue);
+        }
+        public void Continue()
+        {
+            var dialogueHandler = Repository.GetSingle<DialogueHandler>(References.DialogueHandler);
+            dialogueHandler.Continue();
         }
     }
 }
