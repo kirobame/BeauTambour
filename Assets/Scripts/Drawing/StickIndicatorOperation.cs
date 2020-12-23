@@ -28,24 +28,6 @@ namespace BeauTambour
         public override void OnEnd(EventArgs inArgs)
         {
             Flux.Event.Call(EventType.OnEnd, Vector2.zero);
-        }
-
-        // Use Game state
-        //
-        // SELECTION
-        //  Check cursor position comparing to emotions position (lerp, grow the section)
-        //      IF catch zone magnetize cursor
-        //          THEN IF validation Input -> drawing phase 
-        //      ELSE
-        //          demagnetize cursor and desactivate Inputs
-        // DRAWING
-        //  
-        //
-        //
-        //
-        //
-        //
-
-
+        } 
     }
 }
