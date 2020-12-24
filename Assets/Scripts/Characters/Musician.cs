@@ -52,6 +52,9 @@ namespace BeauTambour
         public override RuntimeCharacter RuntimeLink => CastedRuntimeLink;
         public RuntimeMusician CastedRuntimeLink { get; private set; }
 
+        public AudioCharMapPackage AudioCharMap => audioCharMap;
+        [Space, SerializeField] private AudioCharMapPackage audioCharMap;
+
         private List<string> rootNodeKeys;
         private Dictionary<string, DialogueNode> nodes;
         private Dictionary<string, DialogueFailsafe> failsafes;
@@ -102,7 +105,11 @@ namespace BeauTambour
                 var child = nodes[childName];
                 if (child.RequiredEmotion == emotion)
                 {
-                    if (child.Childs[0] == "Empty") Debug.Log($"End of narrative arc for : {name}");
+                    if (child.Childs[0] == "Empty")
+                    {
+                        GameState.NotifyMusicianArcEnd();
+                        Debug.Log($"End of narrative arc for : {name}");
+                    }
                     
                     currentNode = child;
                     return child.GetDialogue();;

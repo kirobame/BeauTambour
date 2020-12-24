@@ -10,6 +10,8 @@ namespace BeauTambour
         Characters,
         Encounter,
         
+        AudioPool,
+        
         PhaseHandler,
         DialogueHandler
     }

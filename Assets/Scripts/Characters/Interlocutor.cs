@@ -28,6 +28,9 @@ namespace BeauTambour
         
         public override RuntimeCharacter RuntimeLink => CastedRuntimeLink;
         public RuntimeInterlocutor CastedRuntimeLink { get; private set; }
+        
+        public AudioCharMapPackage AudioCharMap => audioCharMap;
+        [Space, SerializeField] private AudioCharMapPackage audioCharMap;
 
         private List<DialogueBlock> blocks;
         private List<Dictionary<Emotion, DialogueFailsafe>> options;
@@ -67,11 +70,23 @@ namespace BeauTambour
             if (block.Emotion == emotion)
             {
                 Debug.Log("Go to next block");
-
+                
+                GameState.UnregisterSpeakerForUse(this);
                 GameState.PassBlock();
+                
                 return block.Dialogues[(int)GameState.UsedLanguage];
             }
             else return options[GameState.BlockIndex][emotion].GetDialogue();
+        }
+
+        void ReceiveNarrativeEvent(string message)
+        {
+            switch (message)
+            {
+                case "HarmonyBegun" :
+                    GameState.RegisterSpeakerForUse(this);
+                    break;
+            }
         }
     }
 }

@@ -8,7 +8,11 @@ namespace BeauTambour
         OnEncounterBootedUp,
         
         OnNextCue,
+        OnCueFinished,
+        OnCueSkipped,
         OnDialogueFinished,
+
+        OnNarrativeEvent,
         
         OnBlockPassed,
     }

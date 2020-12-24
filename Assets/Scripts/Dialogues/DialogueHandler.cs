@@ -11,11 +11,13 @@ namespace BeauTambour
     {
         [SerializeField] private DialogueHolder holder;
 
+        public ISpeaker Speaker { get; private set; }
+        private Actor actor;
+        
         private Cue cue => dialogue[advancement];
 
         private Dialogue dialogue;
         private int advancement;
-        private Actor actor;
 
         private Queue<Dialogue> queue;
         private bool isPlaying;
@@ -68,6 +70,8 @@ namespace BeauTambour
             var character = Extensions.GetCharacter<Character>(cue.Actor);
             character.SetupDialogueHolder(holder);
             
+            Speaker = character as ISpeaker;
+
             holder.Bootup();
             holder.TextMesh.ForceMeshUpdate();
             var info = holder.TextMesh.GetTextInfo(Regex.Replace(cue.Text, "\\<(.*?)\\>", string.Empty));
@@ -108,7 +112,9 @@ namespace BeauTambour
 
         public void End()
         {
+            holder.Deactivate();
             isPlaying = false;
+            
             Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
         }
     }

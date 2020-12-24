@@ -27,12 +27,18 @@ namespace BeauTambour
         private TextMeshPro textMesh;
         private TextAnimatorPlayer textAnimatorPlayer;
 
+        private bool isOperational;
         private Vector2 previousSize;
 
         void Awake()
         {
+            isOperational = false;
+            
             textMesh = GetComponent<TextMeshPro>();
             textAnimatorPlayer = GetComponent<TextAnimatorPlayer>();
+
+            textMesh.text = string.Empty;
+            dialogueLine.RectTransform.localScale = Vector3.zero;
         }
 
         public void Bootup()
@@ -42,9 +48,9 @@ namespace BeauTambour
             boundsTransform.sizeDelta = new Vector2(1000f, 1000f);
             textTransform.sizeDelta = new Vector2(1000f, 1000f);
         }
-        
-        public void Renew(Vector2 position, Vector2 size, string text) => StartCoroutine(RenewRoutine(position, size, text));
-        private IEnumerator RenewRoutine(Vector2 position, Vector2 size, string text)
+
+        public void Deactivate() => StartCoroutine(DeactivationRoutine(true));
+        private IEnumerator DeactivationRoutine(bool shutdown)
         {
             ToggleTextAnimation(false);
             
@@ -59,8 +65,21 @@ namespace BeauTambour
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
-
+            
             textMesh.text = string.Empty;
+            
+            if (shutdown)
+            {
+                isOperational = false;
+                dialogueLine.RectTransform.localScale = Vector3.zero;
+            }
+        }
+        
+        public void Renew(Vector2 position, Vector2 size, string text) => StartCoroutine(RenewRoutine(position, size, text));
+        private IEnumerator RenewRoutine(Vector2 position, Vector2 size, string text)
+        {
+            if (isOperational) yield return DeactivationRoutine(false);
+            else isOperational = true;
             
             var camera = Repository.GetSingle<Camera>(References.Camera);
             var screenPosition = camera.WorldToViewportPoint(position);
@@ -85,7 +104,9 @@ namespace BeauTambour
                 else SetBoundsX(dialogueLine.RectTransform.sizeDelta.x - (size.x / 2.0f));
             }
 
-            time = 0f;
+            var time = 0f;
+            var goal = 0.4f;
+            
             while (time < goal)
             {
                 var ratio = time / goal;
@@ -110,7 +131,7 @@ namespace BeauTambour
             textTransform.sizeDelta = previousSize;
             
             var time = 0f;
-            var goal = 0.25f;
+            var goal = 0.2f;
             
             while (time < goal)
             {

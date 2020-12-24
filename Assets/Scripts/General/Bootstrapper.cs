@@ -9,10 +9,7 @@ namespace BeauTambour
         [SerializeField] private Encounter encounter;
         [SerializeField] private bool useBackup;
 
-        void Start()
-        {
-            GameState.Bootup();
-            encounter.Bootup(this, useBackup);
-        }
+        void Awake() => GameState.Bootup();
+        void Start() => encounter.Bootup(this, useBackup);
     }
 }

@@ -48,7 +48,7 @@ namespace BeauTambour
                 var data = new Dictionary<string, string>();
                 var splittedData = rawData.Split(new char[] {':', ';'}, StringSplitOptions.RemoveEmptyEntries);
                 for (var i = 0; i < splittedData.Length - 1; i += 2) data.Add(splittedData[i], splittedData[i + 1]);
-                
+
                 switch (type)
                 {
                     case "Hint":
@@ -60,7 +60,7 @@ namespace BeauTambour
                         break;
                     
                     case "Event":
-                        HandleEventBoundDialogue();
+                        HandleEventBoundDialogue(texts, data);
                         break;
                     
                     case "Harmony":
@@ -76,13 +76,13 @@ namespace BeauTambour
         private bool TryGetCharacter<TChar>(string source, out TChar musician) where TChar : Character
         {
             musician = null;
-            
-            if (Enum.TryParse<Actor>(source, out var actor)) return false;
-            else
+
+            if (Enum.TryParse<Actor>(source, out var actor))
             {
                 musician = Extensions.GetCharacter<TChar>(actor);
                 return true;
             }
+            else return false;
         }
         
         private void HandleHint(string row, string[] texts, Dictionary<string, string> data, Musician musician)
@@ -112,9 +112,12 @@ namespace BeauTambour
             else interlocutor.AddDialogueOption(emotion, texts, block);
         }
         
-        private void HandleEventBoundDialogue()
+        private void HandleEventBoundDialogue(string[] texts, Dictionary<string, string> data)
         {
-            Debug.LogWarning("Event bound dialogues are not supported for the moment");
+            if (!data.ContainsKey("Key")) return;
+            
+            var eventBoundDialogue = new EventBoundDialogue(data["Key"], texts);
+            GameState.AddEventBoundDialogue(eventBoundDialogue);
         }
     }
 }

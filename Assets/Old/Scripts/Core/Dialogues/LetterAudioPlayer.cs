@@ -62,18 +62,19 @@ namespace Deprecated
         {
             if (counter <= 0)
             {
-                var letterAudioRegistry = dialogueManager.SpeakingCharacter.LetterAudioRegistry;
+                //var letterAudioRegistry = dialogueManager.SpeakingCharacter.AudioCharMap;
                 character = char.ToLower(character);
 
-                if (letterAudioRegistry.TryGet(character, out var clip))
+                if (true) // (letterAudioRegistry.TryGet(character, out var clip))
                 {
-                    var audioPool = Repository.GetSingle<AudioPool>(Pool.Audio);
+                    /*var audioPool = Repository.GetSingle<AudioPool>(Pool.Audio);
                     var audio = audioPool.RequestSingle();
                 
                     audio.clip = letterAudioRegistry[character];
                     audio.volume = letterAudioRegistry.Volume;
                     
-                    audio.Play();
+                    audio.Play();*/
+                    
                     counter = gap;
                 }
             }

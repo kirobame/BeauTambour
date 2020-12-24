@@ -5,6 +5,8 @@
         Actor Actor { get; }
         RuntimeCharacter RuntimeLink { get; }
         
+        AudioCharMapPackage AudioCharMap { get; }
+        
         Dialogue GetDialogue(Emotion emotion);
     }
 }
