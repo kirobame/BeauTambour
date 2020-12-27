@@ -6,14 +6,30 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    public abstract class Registry<TKey,TValue> : ScriptableObject, IBootable
+    public abstract class Registry<TKey,TValue> : ScriptableObject
     {
-        public TValue this[TKey key] => dictionary[key];
+        public TValue this[TKey key]
+        {
+            get
+            {
+                if (!hasBeenBootedUp)
+                {
+                    BootUp();
+                    hasBeenBootedUp = true;
+                }
+                
+                return dictionary[key];
+            }
+        }
+
+        public IReadOnlyList<KeyValuePair<TKey, TValue>> KeyValuePairs => keyValuePairs;
         
         protected abstract KeyValuePair<TKey, TValue>[] keyValuePairs { get; }
         private Dictionary<TKey, TValue> dictionary;
 
-        public void BootUp()
+        private bool hasBeenBootedUp;
+
+        private void BootUp()
         {
             dictionary = new Dictionary<TKey, TValue>();
             foreach (var keyValuePair in keyValuePairs)
@@ -23,22 +39,17 @@ namespace BeauTambour
                 dictionary.Add(keyValuePair.Key, keyValuePair.Value);
             }
         }
-
-        public virtual TValue Get(TKey key) => keyValuePairs.First(keyValuePair => keyValuePair.Key.Equals(key)).Value;
+        
         public bool TryGet(TKey key, out TValue value)
         {
+            if (!hasBeenBootedUp)
+            {
+                BootUp();
+                hasBeenBootedUp = true;
+            }
+            
             if (dictionary.TryGetValue(key, out value)) return true;
             else return false;
-        }
-
-        public TValue GetSafe(TKey key)
-        {
-            foreach (var keyValuePair in keyValuePairs)
-            {
-                if (keyValuePair.Key.Equals(key)) return keyValuePair.Value;
-            }
-
-            return default;
         }
     }
 }

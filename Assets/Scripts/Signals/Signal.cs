@@ -2,7 +2,7 @@
 using Flux;
 using UnityEngine;
 
-namespace Deprecated
+namespace BeauTambour
 {
     [IconIndicator(-2462194805134264945)]
     public abstract class Signal : ScriptableObject
@@ -12,12 +12,9 @@ namespace Deprecated
         public abstract string Category { get; }
         
         public Emotion Key => key;
-        public int Clarity => clarity;
-        
         [SerializeField] private Emotion key;
-        [SerializeField] private int clarity;
-
-        public abstract void Execute(MonoBehaviour hook, Character character, string[] args);
+        
+        public abstract void Execute(MonoBehaviour hook, ISpeaker speaker, string[] args);
 
         protected void End() => OnEnd?.Invoke();
     }

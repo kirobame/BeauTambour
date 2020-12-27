@@ -27,6 +27,6 @@ namespace BeauTambour
             dialogueHolder.TextMesh.color = fontColor;
             dialogueHolder.TextMesh.font = font;
         }
-        public Vector2 GetPositionForDialogueHolder() => RuntimeLink.transform.position;
+        public Vector2 GetPositionForDialogueHolder() => RuntimeLink.DialogueAnchor;
     }
 }

@@ -71,6 +71,7 @@ namespace BeauTambour
             character.SetupDialogueHolder(holder);
             
             Speaker = character as ISpeaker;
+            Speaker.BeginTalking();
 
             holder.Bootup();
             holder.TextMesh.ForceMeshUpdate();
@@ -116,6 +117,9 @@ namespace BeauTambour
             isPlaying = false;
             
             Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
+
+            var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
+            phaseHandler.Play(PhaseCategory.MusicianSelection);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Deprecated.Editor
             var serializedObject = new SerializedObject(condition);
             var targetProperty = serializedObject.FindProperty("musician");
 
-            targetProperty.objectReferenceValue = actorCharacterRegistry.GetSafe((Actor)Enum.Parse(typeof(Actor), data));
+            targetProperty.objectReferenceValue = actorCharacterRegistry[(Actor)Enum.Parse(typeof(Actor), data)];
             serializedObject.ApplyModifiedProperties();
         }
     }

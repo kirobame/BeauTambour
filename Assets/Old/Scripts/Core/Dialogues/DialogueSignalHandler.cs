@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BeauTambour;
 using Febucci.UI;
 using Flux;
 using UnityEngine;
@@ -18,7 +19,7 @@ namespace Deprecated
         void Awake()
         {
             currentSignals = new Queue<System.Collections.Generic.KeyValuePair<Signal, string[]>>();
-            signalCollection.Initialize();
+            signalCollection.BootUp();
         }
 
         void OnEnable() => textAnimator.onEvent += HandleEvent;
@@ -44,7 +45,7 @@ namespace Deprecated
             var clarity = int.Parse(mainArgs[1]);
             var await = bool.Parse(mainArgs[2]);
 
-            if (!signalCollection.TrySelect(category, emotion, clarity, out var signal)) return;
+            /*if (!signalCollection.TrySelect(category, emotion, clarity, out var signal)) return;
             Debug.Log($"FOR : {message} --> PLAYING SIGNAL : {signal}");
             
             var subArgs = split[2].Split(',');
@@ -60,8 +61,8 @@ namespace Deprecated
                 textAnimatorPlayer.StopShowingText();
             }
 
-            var dialogueManager = Repository.GetSingle<DialogueManager>(Reference.DialogueManager);
-            signal.Execute(this, dialogueManager.SpeakingCharacter, subArgs);
+            var dialogueManager = Repository.GetSingle<DialogueManager>(Reference.DialogueManager);*/
+            //signal.Execute(this, dialogueManager.SpeakingCharacter, subArgs);
         }
 
         void OnSignalEnd()
@@ -75,7 +76,7 @@ namespace Deprecated
                 newKvp.Key.OnEnd += OnSignalEnd;
                 
                 var dialogueManager = Repository.GetSingle<DialogueManager>(Reference.DialogueManager);
-                newKvp.Key.Execute(this, dialogueManager.SpeakingCharacter, newKvp.Value);
+                //newKvp.Key.Execute(this, dialogueManager.SpeakingCharacter, newKvp.Value);
             }
             else
             {

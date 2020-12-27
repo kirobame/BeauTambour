@@ -13,6 +13,8 @@ namespace BeauTambour
 
         private bool hasBeenBootedUp;
 
+        void OnDisable() => hasBeenBootedUp = false;
+
         private void BootUp()
         {
             packages = new Dictionary<TKey, AudioPackage>();
@@ -44,7 +46,7 @@ namespace BeauTambour
                 BootUp();
                 hasBeenBootedUp = true;
             }
-            
+
             if (packages.TryGetValue(key, out value)) return true;
             else return false;
         }

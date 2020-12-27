@@ -119,6 +119,9 @@ namespace BeauTambour
             return failsafes[currentNode.Failsafe].GetDialogue();
         }
 
+        void ISpeaker.BeginTalking() => CastedRuntimeLink.BeginTalking();
+        void ISpeaker.StopTalking() => CastedRuntimeLink.StopTalking();
+        
         void OnBlockPassed()
         {
             if (rootNodeKeys.Count == 0) return;

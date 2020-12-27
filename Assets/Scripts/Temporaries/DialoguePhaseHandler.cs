@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace BeauTambour
 {
-    public class Helper : MonoBehaviour
+    public class DialoguePhaseHandler : MonoBehaviour
     {
         [SerializeField] private Musician musician;
         

@@ -1,10 +1,11 @@
 ﻿using System.Collections;
+using BeauTambour;
 using UnityEngine;
 
 namespace Deprecated
 {
     //[CreateAssetMenu(fileName = "newDebugSignal", menuName = "Beau Tambour/Signals/Debug")]
-    public class DebugSignal : Signal
+    /*public class DebugSignal : Signal
     {
         public override string Category => "debug";
         
@@ -23,5 +24,5 @@ namespace Deprecated
             End();
             Debug.Log($"EVENT {name} : end");
         }
-    }
+    }*/
 }

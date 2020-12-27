@@ -8,5 +8,8 @@
         AudioCharMapPackage AudioCharMap { get; }
         
         Dialogue GetDialogue(Emotion emotion);
+
+        void BeginTalking();
+        void StopTalking();
     }
 }

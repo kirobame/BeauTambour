@@ -36,7 +36,7 @@ namespace BeauTambour
 
         void OnTextShown()
         {
-            Debug.Log("FINISHED");
+            dialogueHandler.Speaker.StopTalking();
             Event.Call(GameEvents.OnCueFinished);
         }
         void OnCharacterVisible(char character)

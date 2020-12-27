@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Deprecated
+namespace BeauTambour
 {
     public abstract class Collection<T> : ScriptableObject where T: UnityEngine.Object
     {

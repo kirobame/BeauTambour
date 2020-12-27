@@ -1,11 +1,12 @@
-﻿using Flux;
+﻿using BeauTambour;
+using Flux;
 using UnityEngine;
 using UnityEngine.Audio;
 
 namespace Deprecated
 {
     //[CreateAssetMenu(fileName = "newVisualEffectSignal", menuName = "Beau Tambour/Signals/Visual Effect")]
-    public class VisualEffectSignal : Signal
+   /*public class VisualEffectSignal : Signal
     {
         public override string Category => "vfx";
 
@@ -35,5 +36,5 @@ namespace Deprecated
             runtimePoolable.OnDone -= OnPoolableDeactivation;
             End();
         }
-    }
+    }*/
 }
