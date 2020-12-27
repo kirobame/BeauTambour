@@ -27,6 +27,7 @@ namespace BeauTambour
         }
 
         public Transform Anchor { get => anchor;}
+        public float CatchZonedistance { get => catchZonedistance; }
 
         public bool IsInSection(Vector2 input)
         {

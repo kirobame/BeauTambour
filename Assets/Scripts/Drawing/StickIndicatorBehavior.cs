@@ -14,6 +14,15 @@ namespace BeauTambour
         {
             OnMagnetize,
             OnUnMagnetize,
+            OnDrawing,
+            OnValidation
+        }
+
+        public enum DrawingState
+        {
+            Selection,
+            Drawing,
+            Validation
         }
 
         [SerializeField] private List<Section> sections;
@@ -23,15 +32,20 @@ namespace BeauTambour
         private Transform stickIndicator;
         private Vector2 cursorPos;
         private Section magnetizedSection;
+        private DrawingState state;
 
+        //----------------------UNITY LIFE STEP---------------------------------------
         private void Awake()
         {
             magnetizedSection = null;
+            state = DrawingState.Selection;
             Event.Open(EventType.OnMagnetize);
             Event.Open(EventType.OnUnMagnetize);
 
             Event.Register<Vector2>(StickIndicatorOperation.EventType.OnUpdate, OnUpdate);
             Event.Register<Vector2>(StickIndicatorOperation.EventType.OnEnd, OnEnd);
+
+            Event.Register(SelectionValidationOperation.EventType.OnStart, OnValidation);
         }
 
         private void Start()
@@ -39,7 +53,44 @@ namespace BeauTambour
             stickIndicator = Repository.GetSingle<Transform>(Reference.StickIndicator);
         }
 
+        //----------------------EVENT STEP---------------------------------------
         private void OnUpdate(Vector2 input)
+        {
+            switch (state)
+            {
+                case DrawingState.Selection:
+                    HandleSelection(input);
+                    break;
+                case DrawingState.Drawing:
+                    break;
+                case DrawingState.Validation:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void OnEnd(Vector2 input)
+        {
+            if (magnetizedSection != null)
+            {
+                magnetizedSection = null;
+            }
+            Place(input, false);
+            foreach (Section section in sections)
+            {
+                section.ScaleAnchor(cursorPos);
+            }
+        }
+
+        private void OnValidation()
+        {
+            state = DrawingState.Drawing;
+            Debug.Log(state);
+        }
+
+        //----------------------FUNCTIONS---------------------------------------
+        private void HandleSelection(Vector2 input)
         {
             if (magnetizedSection != null)
             {
@@ -54,8 +105,7 @@ namespace BeauTambour
             else
             {
                 Place(input, true);
-                cursorPos = stickIndicator.localPosition;
-            }            
+            }
             foreach (Section section in sections)
             {
                 if (section.IsInSection(cursorPos))
@@ -74,20 +124,6 @@ namespace BeauTambour
             }
         }
 
-        private void OnEnd(Vector2 input)
-        {
-            if (magnetizedSection != null)
-            {
-                magnetizedSection = null;
-            }
-            Place(input, false);
-            cursorPos = stickIndicator.localPosition;
-            foreach (Section section in sections)
-            {
-                section.ScaleAnchor(cursorPos);
-            }
-        }
-
         private void Place(Vector2 input, bool smooth)
         {
             if (smooth)
@@ -98,12 +134,12 @@ namespace BeauTambour
             {
                 stickIndicator.localPosition = input;
             }
+            cursorPos = stickIndicator.localPosition;
         }
 
         private void MagnetizeCursorToSection()
         {
             Place(magnetizedSection.Anchor.localPosition, true);
-            cursorPos = stickIndicator.localPosition;
             magnetizedSection.ScaleAnchor(magnetizedSection.Anchor.localPosition);
         }
 
@@ -113,7 +149,7 @@ namespace BeauTambour
             foreach (var item in sections)
             {
                 Gizmos.color = Color.black;
-                Gizmos.DrawWireSphere(item.Anchor.position, 0.3f);
+                Gizmos.DrawWireSphere(item.Anchor.position, item.CatchZonedistance);
             }
         }
 #endif
