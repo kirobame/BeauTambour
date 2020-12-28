@@ -1,10 +1,11 @@
-﻿using Flux;
+﻿using BeauTambour;
+using Flux;
 using UnityEngine;
 
 namespace Deprecated
 {
     //[CreateAssetMenu(fileName = "newAudioEffectSignal", menuName = "Beau Tambour/Signals/Audio")]
-    public class AudioSignal : Signal
+    /*public class AudioSignal : Signal
     {
         public override string Category => "sfx";
 
@@ -32,5 +33,5 @@ namespace Deprecated
             poolableAudio.OnDone -= OnPoolableDeactivation;
             End();
         }
-    }
+    }*/
 }

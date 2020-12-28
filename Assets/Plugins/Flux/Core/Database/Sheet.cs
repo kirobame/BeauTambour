@@ -79,8 +79,13 @@ namespace Flux
                 }
 
                 occurence = data.IndexOf(',', advancement);
-
-                if (occurence == -1) lines[y].Add(data.Substring(advancement));
+                if (occurence == -1)
+                {
+                    var entry = data.Substring(advancement);
+                    entry = entry.Replace(new string(new char[] { (char)34 }), string.Empty);
+                    
+                    lines[y].Add(entry);
+                }
             }
 
             size = new Vector2Int(lines.First().Count - 1, lines.Count - 1);

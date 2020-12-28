@@ -1,4 +1,5 @@
-﻿using Flux;
+﻿using BeauTambour;
+using Flux;
 using TMPro;
 using UnityEngine;
 
@@ -23,9 +24,6 @@ namespace Deprecated
 
         public Color BackgroundColor => backgroundColor;
         [SerializeField] private Color backgroundColor;
-
-        public LetterAudioRegistry LetterAudioRegistry => letterAudioRegistry;
-        [Space, SerializeField] private LetterAudioRegistry letterAudioRegistry;
 
         public virtual void BootUp() { }
     }

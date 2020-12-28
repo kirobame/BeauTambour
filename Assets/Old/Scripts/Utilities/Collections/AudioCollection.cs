@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BeauTambour;
+using UnityEngine;
 
 namespace Deprecated
 {

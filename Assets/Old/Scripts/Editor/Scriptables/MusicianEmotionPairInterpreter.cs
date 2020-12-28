@@ -16,7 +16,7 @@ namespace Deprecated.Editor
             var serializedObject = new SerializedObject(condition);
             
             var musicianProperty = serializedObject.FindProperty("musician");
-            musicianProperty.objectReferenceValue = actorCharacterRegistry.GetSafe((Actor)Enum.Parse(typeof(Actor), split[0]));
+            musicianProperty.objectReferenceValue = actorCharacterRegistry[(Actor) Enum.Parse(typeof(Actor), data)];
             
             var emotionProperty = serializedObject.FindProperty("emotion");
             emotionProperty.enumValueIndex = (int) Enum.Parse(typeof(Emotion), split[1]);

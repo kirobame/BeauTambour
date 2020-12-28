@@ -1,0 +1,55 @@
+{
+    "name": "ReworkedControls",
+    "maps": [
+        {
+            "name": "Dialogue",
+            "id": "8aea1572-2f4e-4e46-9109-227f4536d60d",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "e520c4f3-c636-4bde-b388-4f541951cf6f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cdfebb89-dc2b-47f9-85bc-a1f1b4b53412",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c420aff8-52e0-407a-8a5f-3759df8ae269",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cdff67d9-321d-4ab1-829d-afcec1c12603",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

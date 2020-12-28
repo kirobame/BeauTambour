@@ -47,7 +47,7 @@ namespace Flux
 
         public bool EvaluateIdSheet(string data, out string[] ids)
         {
-            if (data.Substring(0, 7) != "Indexes") Debug.LogError("Id sheet was not parameterized to be considered like one.");
+            if (data.Substring(0, 7) != "Indices") Debug.LogError("Id sheet was not parameterized to be considered like one.");
             else
             {
                 var split = data.Split(',');

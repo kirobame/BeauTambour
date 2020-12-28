@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections.Generic;
 
 namespace Febucci.UI.Core
@@ -20,17 +21,31 @@ namespace Febucci.UI.Core
 
         public void ResetVertices()
         {
-            for (byte i = 0; i < sources.vertices.Length; i++)
+            try
             {
-                data.vertices[i] = sources.vertices[i];
+                for (byte i = 0; i < sources.vertices.Length; i++)
+                {
+                    data.vertices[i] = sources.vertices[i];
+                }
+            }
+            catch (NullReferenceException nullReferenceException)
+            {
+                Debug.LogWarning(nullReferenceException);
             }
         }
 
         public void ResetColors()
         {
-            for (byte i = 0; i < sources.colors.Length; i++)
+            try
             {
-                data.colors[i] = sources.colors[i];
+                for (byte i = 0; i < sources.colors.Length; i++)
+                {
+                    data.colors[i] = sources.colors[i];
+                }
+            }
+            catch (NullReferenceException nullReferenceException)
+            {
+                Debug.LogWarning(nullReferenceException);
             }
         }
     }

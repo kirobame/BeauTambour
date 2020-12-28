@@ -57,8 +57,8 @@ namespace Deprecated.Editor
 
             iterator.NextVisible(false);
             
-            var emotionColor = emotionColorRegistry.Get(emotion);
-            Handles.color = emotionColor;
+            var emotionColor = emotionColorRegistry.KeyValuePairs.First(value => value.Key == emotion);
+            Handles.color = emotionColor.Value;
 
             DisplayRuntimeData(rect);
             for (var i = 0; i < iterator.arraySize; i += 3)
@@ -71,7 +71,7 @@ namespace Deprecated.Editor
                     var p3 = GetPosition(iterator, i + 2, rect);
                     var p4 = GetPosition(iterator, i + 3, rect);
             
-                    Handles.DrawBezier(p1,p4, p2,p3, emotionColor,null, 2);
+                    Handles.DrawBezier(p1,p4, p2,p3, emotionColor.Value,null, 2);
                 }
 
                 var size = rect.width * 0.005f;
