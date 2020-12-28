@@ -10,7 +10,7 @@ namespace BeauTambour
         
         private PhaseHandler owner;
 
-        void Awake()
+        protected virtual void Awake()
         {
             Event.Open($"{Category}.{PhaseCallback.Start}");
             Event.Open($"{Category}.{PhaseCallback.End}");

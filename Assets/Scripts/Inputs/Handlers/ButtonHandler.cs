@@ -2,9 +2,9 @@
 using Flux;
 using UnityEngine;
 
-namespace Deprecated
+namespace BeauTambour
 {
-    //[CreateAssetMenu(fileName = "NewButtonHandler", menuName = "Beau Tambour/Inputs/Handlers/Button")]
+    [CreateAssetMenu(fileName = "NewButtonHandler", menuName = "Beau Tambour/Inputs/Handlers/Button")]
     public class ButtonHandler : InputHandler<bool>
     {
         public override bool OnPerformed(bool input)

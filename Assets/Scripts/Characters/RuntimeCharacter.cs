@@ -9,7 +9,10 @@ namespace BeauTambour
         [SerializeField] private Character asset;
 
         public Vector3 DialogueAnchor => dialogueAnchor.position;
-        [SerializeField] private Transform dialogueAnchor;
+        [Space, SerializeField] private Transform dialogueAnchor;
+
+        public Vector3 TopCenter => topCenter.position;
+        [SerializeField] private Transform topCenter;
 
         void Awake() => asset.Bootup(this);
     }

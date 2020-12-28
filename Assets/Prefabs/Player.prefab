@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asset: {fileID: -944628639613478452, guid: dc047b6d8e0287540bb3f95d1a774f5a, type: 3}
   links:
+  - name: SpeakerSelection
+    isEnabled: 1
   - name: Dialogue
     isEnabled: 1
 --- !u!114 &6942601182823591048
@@ -67,3 +69,21 @@ MonoBehaviour:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
       - {fileID: 11400000, guid: d5a369440a25e6243a715988abb168aa, type: 2}
+  - reference: {fileID: -2844947299344910772, guid: dc047b6d8e0287540bb3f95d1a774f5a,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
+      operations:
+      - {fileID: 11400000, guid: a7dde4332da9a06408e8091159fa04ef, type: 2}
+  - reference: {fileID: -2206156187949691126, guid: dc047b6d8e0287540bb3f95d1a774f5a,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
+      operations:
+      - {fileID: 11400000, guid: c32d8873bec8c914189bdb82c8a22ab4, type: 2}
+  - reference: {fileID: -2623986960670889493, guid: dc047b6d8e0287540bb3f95d1a774f5a,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
+      operations:
+      - {fileID: 11400000, guid: 1d235291b2486ff4f99e9d07437da86c, type: 2}

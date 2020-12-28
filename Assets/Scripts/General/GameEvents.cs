@@ -11,6 +11,8 @@ namespace BeauTambour
         OnCueFinished,
         OnCueSkipped,
         OnDialogueFinished,
+        
+        OnSpeakerSelected,
 
         OnNarrativeEvent,
         

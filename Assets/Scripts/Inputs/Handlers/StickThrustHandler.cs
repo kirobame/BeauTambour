@@ -2,9 +2,9 @@
 using Flux;
 using UnityEngine;
 
-namespace Deprecated
+namespace BeauTambour
 {
-    //[CreateAssetMenu(fileName = "NewStickThrustHandler", menuName = "Beau Tambour/Inputs/Handlers/Stick Thrust")]
+    [CreateAssetMenu(fileName = "NewStickThrustHandler", menuName = "Beau Tambour/Inputs/Handlers/Stick Thrust")]
     public class StickThrustHandler : ContinuousHandler<Vector2>
     {
         [Space, SerializeField] private Vector2 range;
