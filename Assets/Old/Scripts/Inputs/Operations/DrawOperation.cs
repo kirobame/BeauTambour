@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using BeauTambour;
 using Flux;
 using Shapes;
 using UnityEngine;
@@ -154,6 +155,7 @@ namespace Deprecated
             isDrawing = false;
             if (bindable is InputHandler handler) handler.OnCanceled();
         }
+
         public override void OnEnd(EventArgs inArgs)
         {
             isBusy = false;

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Deprecated;
 
 namespace BeauTambour
 {
@@ -10,7 +9,7 @@ namespace BeauTambour
     {
         [SerializeField] private Transform anchor;
         [SerializeField] private float errorOffset = 0.2f;// 45 degrees max per emotion (max 0.5 as dotResult)
-        [SerializeField] private Emotion emotion;
+        [SerializeField] private Shape shape;
         [SerializeField] private float catchZonedistance = 0.3f;
 
         private float maxScale = 1.0f;
@@ -18,11 +17,11 @@ namespace BeauTambour
         
         private float velocity;
 
-        public Emotion Emotion
+        public Shape Shape
         {
             get
             {
-                return emotion;
+                return shape;
             }
         }
 
@@ -34,7 +33,7 @@ namespace BeauTambour
             float dotResult = Vector2.Dot(input.normalized, anchor.localPosition);
             if (dotResult >= 1 - errorOffset)
             {
-                Debug.Log(emotion);
+                Debug.Log(shape);
                 return true;
             }
             return false;
