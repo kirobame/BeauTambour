@@ -1,4 +1,5 @@
-﻿using Flux;
+﻿using BeauTambour;
+using Flux;
 
 namespace Deprecated
 {

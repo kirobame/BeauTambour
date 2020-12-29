@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BeauTambour;
 using Flux;
 using UnityEngine;
 
@@ -65,7 +66,7 @@ namespace Deprecated
                     continue;
                 }
                 
-                trackedShapes[i] = analysis.Source.Evaluate(analysis, input);
+                //trackedShapes[i] = analysis.Source.Evaluate(analysis, input);
             }
             
             lastInput = input;

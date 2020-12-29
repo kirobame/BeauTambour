@@ -68,6 +68,22 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Validation",
+                    "type": "Button",
+                    "id": "8a19e6f8-6cea-4bad-9128-e0965d8ba891",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Cancel ",
+                    "type": "Button",
+                    "id": "5ff6817a-7000-47fc-ae09-3bda18c160b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -332,6 +348,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Draw - Keyboard & Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "141788f9-130d-4c9d-9574-f43a0a202710",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Validation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9594de83-5158-455a-be96-e14d4ab248f4",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel ",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
