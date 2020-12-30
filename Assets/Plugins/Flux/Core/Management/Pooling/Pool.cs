@@ -83,13 +83,14 @@ namespace Flux
             poolable.gameObject.SetActive(false);
             
             StartCoroutine(ParentingRoutine(poolable));
-
-            availableInstances[(TPoolable)poolable.Key].Enqueue(poolable);
-            usedInstances.Remove(poolable);
         }
         private IEnumerator ParentingRoutine(TPoolable poolable)
         {
             yield return new WaitForEndOfFrame();
+
+            availableInstances[(TPoolable)poolable.Key].Enqueue(poolable);
+            usedInstances.Remove(poolable);
+            
             poolable.transform.SetParent(transform);
         }
 

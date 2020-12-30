@@ -1,0 +1,120 @@
+{
+    "name": "Alt-ReworkedControls",
+    "maps": [
+        {
+            "name": "Dialogue",
+            "id": "8aea1572-2f4e-4e46-9109-227f4536d60d",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "e520c4f3-c636-4bde-b388-4f541951cf6f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cdfebb89-dc2b-47f9-85bc-a1f1b4b53412",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c420aff8-52e0-407a-8a5f-3759df8ae269",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cdff67d9-321d-4ab1-829d-afcec1c12603",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Drawing",
+            "id": "acc65541-8482-4ca8-b269-aadfa96ab0f4",
+            "actions": [
+                {
+                    "name": "DrawByStick",
+                    "type": "Value",
+                    "id": "5731bb90-aa96-46ea-abe5-b03787c18309",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Validate",
+                    "type": "Button",
+                    "id": "b01de6c1-3e15-4d66-8e8a-898fbe1c6fb5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "d8a1a8c5-1442-4833-9e53-7eb3fcca23aa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a98d6702-8a70-40a4-afc6-81ebb4ab0568",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DrawByStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6b190d39-4f78-48b8-87c3-30149a8eaf29",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Validate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e1d8fd43-af85-4339-82b9-97f3ca8aa884",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

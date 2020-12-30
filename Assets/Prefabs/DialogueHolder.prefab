@@ -67,7 +67,7 @@ MonoBehaviour:
   address:
     stringedType: BeauTambour.GameEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-    rawValue: 3
+    name: OnCueSkipped
 --- !u!114 &1336782543387612536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.59, y: -2.88}
+  m_AnchoredPosition: {x: 4.590027, y: -2.880005}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1336782543987848311
@@ -851,7 +851,7 @@ MonoBehaviour:
   address:
     stringedType: BeauTambour.GameEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-    rawValue: 2
+    name: OnCueFinished
 --- !u!114 &1336782544423718482
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,8 +9,12 @@ namespace Flux
         public Type Type => Type.GetType(stringedType);
 
         [SerializeField] private string stringedType;
-        [SerializeField] private int rawValue;
+        [SerializeField] private string name;
         
-        public string Get() => ((Enum)Enum.ToObject(Type, rawValue)).GetNiceName();
+        public string Get()
+        {
+            if (name == string.Empty) return "None";
+            else return ((Enum) Enum.Parse(Type, name)).GetNiceName();
+        }
     }
 }

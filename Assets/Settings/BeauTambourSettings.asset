@@ -20,5 +20,5 @@ MonoBehaviour:
   recognitionErrorThreshold: 1e+9
   headingErrorFactor: 0.275
   spacingErrorFactor: 1.5
-  validationRadius: 0.045
+  validationRadius: 0.1
   completionQuota: 0.975

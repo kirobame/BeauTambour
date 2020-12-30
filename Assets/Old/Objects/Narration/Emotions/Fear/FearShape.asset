@@ -12,32 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: FearShape
   m_EditorClassIdentifier: 
-  color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
-  emotion: 3
+  emotion: 4
   points:
-  - position: {x: 0.70973057, y: -0.70447326}
-    toleranceRadius: 0.23111057
-  - position: {x: 1.0677166, y: -0.35527563}
+  - position: {x: 0.9999772, y: 0.006756603}
+    toleranceRadius: 0.20847523
+  - position: {x: 0.4, y: 0.00754717}
     toleranceRadius: 0.125
-  - position: {x: 1.0979528, y: 0.31748033}
+  - position: {x: -0.40377358, y: -0}
     toleranceRadius: 0.125
-  - position: {x: 0.700268, y: 0.71388006}
-    toleranceRadius: 0.18948652
-  - position: {x: 0.34912997, y: 0.35793048}
+  - position: {x: -0.99999356, y: 0.0036231647}
+    toleranceRadius: 0.17771634
+  - position: {x: -1.0037736, y: -0.49056605}
     toleranceRadius: 0.1
-  - position: {x: -0.35314602, y: -0.35396862}
+  - position: {x: -0.6, y: -0.99622643}
     toleranceRadius: 0.1
-  - position: {x: -0.704284, y: -0.7099183}
-    toleranceRadius: 0.2371195
-  - position: {x: -1.1017324, y: -0.29480317}
-    toleranceRadius: 0.1
-  - position: {x: -1.0828347, y: 0.32125986}
-    toleranceRadius: 0.1
-  - position: {x: -0.6973229, y: 0.7029922}
-    toleranceRadius: 0.2557822
-  - position: {x: -0.37322837, y: 0.37889767}
-    toleranceRadius: 0.1
-  - position: {x: 0.2749607, y: -0.2692914}
-    toleranceRadius: 0.1
-  - position: {x: 0.48944885, y: -0.49511814}
-    toleranceRadius: 0.22550832
+  - position: {x: 0, y: -1}
+    toleranceRadius: 0.18175992

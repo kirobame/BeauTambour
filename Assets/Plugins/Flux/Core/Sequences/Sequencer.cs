@@ -35,6 +35,8 @@ namespace Flux
         
         public void Play()
         {
+            if (!gameObject.activeInHierarchy) return;
+            
             isPlaying = true;
             foreach (var effect in effects) effect.Initialize();
             
@@ -47,6 +49,8 @@ namespace Flux
                 Stop();
                 return;
             }
+
+            Execute();
         }
         public void Stop()
         {

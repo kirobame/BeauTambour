@@ -29,6 +29,8 @@ namespace BeauTambour
 
         private bool hasBeenBootedUp;
 
+        void OnDisable() => hasBeenBootedUp = false;
+        
         private void BootUp()
         {
             dictionary = new Dictionary<TKey, TValue>();

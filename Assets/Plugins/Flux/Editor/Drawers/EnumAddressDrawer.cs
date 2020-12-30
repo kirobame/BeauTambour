@@ -44,12 +44,12 @@ namespace Flux.Editor
             var options = availableValues.Length > 0 ? Enum.GetNames(selectedType) : new string[] {"Null"};
 
             property.NextVisible(false);
-            var enumRect = new Rect(typeRect.position + typeRect.width.ToX(), typeRect.size);
+            var enumRect = new Rect(typeRect.position + typeRect.width.ToX(), new Vector2(typeRect.size.x - 23f, typeRect.size.y));
 
             if (options[enumSelection] == "Null") GUI.enabled = false;
             
             enumSelection = EditorGUI.Popup(enumRect, enumSelection, options);
-            property.intValue = Convert.ToInt32(availableValues[enumSelection]);
+            property.stringValue = availableValues[enumSelection].ToString();
             GUI.enabled = true;
             
             EditorGUI.EndProperty();
@@ -80,8 +80,9 @@ namespace Flux.Editor
                 var values = Enum.GetValues(type).Cast<Enum>().Select(Convert.ToInt32).ToArray();
                     
                 initializationProperty.NextVisible(false);
-                var index = values.IndexOf(initializationProperty.intValue);
+                if (initializationProperty.stringValue == string.Empty) return;
 
+                var index = Convert.ToInt32(Enum.Parse(type, initializationProperty.stringValue));
                 if (index != -1) enumSelection = values[index];
             }
         }

@@ -31,7 +31,7 @@ namespace BeauTambour
             base.OnUpdate(inArgs);
             
             if (phaseHandler.CurrentCategory != phase) return;
-            RelayedOnStart(inArgs);
+            RelayedOnUpdate(inArgs);
         }
         protected virtual void RelayedOnUpdate(EventArgs inArgs) { }
 
@@ -40,7 +40,7 @@ namespace BeauTambour
             base.OnEnd(inArgs);
             
             if (phaseHandler.CurrentCategory != phase) return;
-            RelayedOnStart(inArgs);
+            RelayedOnEnd(inArgs);
         }
         protected virtual void RelayedOnEnd(EventArgs inArgs) { }
     }

@@ -12,26 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: DisgustShape
   m_EditorClassIdentifier: 
-  color: {r: 0.5566038, g: 0.34712863, b: 0.22316661, a: 1}
-  emotion: 4
+  emotion: 5
   points:
-  - position: {x: 1, y: -0}
-    toleranceRadius: 0.20413557
-  - position: {x: 0.7540158, y: -0.003779528}
+  - position: {x: -0.7071068, y: -0.7071068}
+    toleranceRadius: 0.20481777
+  - position: {x: -0.18867925, y: -0.18867925}
     toleranceRadius: 0.125
-  - position: {x: -0.47811028, y: 0.003779528}
+  - position: {x: 0.2, y: 0.20377359}
     toleranceRadius: 0.125
-  - position: {x: -0.9999812, y: 0.0061442773}
-    toleranceRadius: 0.1514838
-  - position: {x: -1.0034647, y: 0.60094494}
+  - position: {x: 0.70894104, y: 0.7052678}
+    toleranceRadius: 0.17990473
+  - position: {x: 0.36226416, y: 1.0641509}
     toleranceRadius: 0.1
-  - position: {x: -0.45165357, y: 0.99779534}
+  - position: {x: -0.34339622, y: 1.1018867}
     toleranceRadius: 0.1
-  - position: {x: 0.009327953, y: 0.9999565}
-    toleranceRadius: 0.15538093
-  - position: {x: 0.0065295473, y: 0.4999678}
-    toleranceRadius: 0.1
-  - position: {x: 0.00093273725, y: -0.50000954}
-    toleranceRadius: 0.1
-  - position: {x: -0.0018656685, y: -0.9999983}
-    toleranceRadius: 0.13617946
+  - position: {x: -0.7018868, y: 0.7056604}
+    toleranceRadius: 0.18175992

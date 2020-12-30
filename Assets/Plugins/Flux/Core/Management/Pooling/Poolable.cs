@@ -16,9 +16,6 @@ namespace Flux
         protected virtual void OnDisable()
         {
             origin.Stock(this);
-
-            key = null;
-            origin = null;
         }
             
         public void SetOrigin(Pool<T> origin, Poolable<T> key)
@@ -27,7 +24,7 @@ namespace Flux
             this.origin = origin;
         }
         public virtual void Prepare() { }
-        
+
         public virtual void Reboot() { }
     }
 }

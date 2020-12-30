@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using BeauTambour;
 using UnityEngine;
 using Event = Flux.Event;
 
@@ -79,7 +80,7 @@ namespace Deprecated
             var musicianAttribute = (MusicianAttribute)notes.Last().Attributes.First(attribute => attribute is MusicianAttribute);
             var emotionAttribute = (EmotionAttribute)notes.Last().Attributes.First(attribute => attribute is EmotionAttribute);
 
-            var color = emotionColorRegistry[emotionAttribute.Emotion];
+            var color = Color.white;
             color.a = noteSprites[usedGroup][0].color.a;
             noteSprites[usedGroup][0].color = color;
             

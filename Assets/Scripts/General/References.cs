@@ -2,7 +2,7 @@
 
 namespace BeauTambour
 {
-    [EnumAddress]
+    [TrackEnumReferencing, EnumAddress]
     public enum References
     {
         Camera,
@@ -11,8 +11,17 @@ namespace BeauTambour
         Encounter,
         
         AudioPool,
+        AnimationPool,
+        DrawingPool,
+        
+        DrawingsParent,
         
         PhaseHandler,
-        DialogueHandler
+        DialogueHandler,
+        DrawingHandler,
+        
+        ColorByEmotion,
+        
+        Settings,
     }
 }

@@ -84,7 +84,7 @@ namespace Deprecated
             isBusy = true;
             
             Event.Call(EventType.OnStart);
-            CallShapeEvent(shapeEventArgs.Value.Emotion);
+            //CallShapeEvent(shapeEventArgs.Value.Emotion);
 
             delayedActivationRoutine = hook.StartCoroutine(DelayedActivationRoutine(shapeEventArgs));
         }
@@ -129,7 +129,7 @@ namespace Deprecated
                     
                     if (!outcomePhase.IsNoteBeingProcessed) return;
                     
-                    outcomePhase.EnqueueNoteAttribute(new EmotionAttribute(analysis.Source.Emotion));
+                    //outcomePhase.EnqueueNoteAttribute(new EmotionAttribute(analysis.Source.Emotion));
                     outcomePhase.CompleteNote();
                     
                     return;
@@ -149,7 +149,7 @@ namespace Deprecated
             if (outcome) Event.Call(EventType.OnShapeMatch);
             else Event.Call(EventType.OnShapeLoss);
             
-            currentPair.drawing.Complete(outcome);
+            //currentPair.drawing.Complete(outcome);
             currentPair = (null,null);
             
             isDrawing = false;
@@ -162,7 +162,7 @@ namespace Deprecated
             if (!isDrawing) return;
             
             Event.Call(EventType.OnShapeLoss);
-            currentPair.drawing.Complete(false);
+            //currentPair.drawing.Complete(false);
             currentPair = (null,null);
             
             isDrawing = false;

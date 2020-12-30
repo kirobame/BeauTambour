@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: AngerShape
   m_EditorClassIdentifier: 
-  emotion: 1
+  emotion: 2
   points:
-  - position: {x: 0.0054944227, y: 0.99998486}
-    toleranceRadius: 0.17262964
-  - position: {x: 0.5461418, y: 0.99779534}
+  - position: {x: -1, y: 0}
+    toleranceRadius: 0.16603774
+  - position: {x: -0.25, y: 0}
     toleranceRadius: 0.125
-  - position: {x: 0.9996851, y: 0.5291339}
+  - position: {x: 0.02264151, y: -0.003773585}
     toleranceRadius: 0.125
-  - position: {x: 0.9999775, y: 0.006700017}
-    toleranceRadius: 0.16354029
-  - position: {x: 0.68976384, y: -0}
+  - position: {x: 1, y: -0}
+    toleranceRadius: 0.17362592
+  - position: {x: 1.0037736, y: 0.5283019}
     toleranceRadius: 0.1
-  - position: {x: -0.65574807, y: -0.011338583}
+  - position: {x: 0.5735849, y: 1}
     toleranceRadius: 0.1
-  - position: {x: -0.99999434, y: -0.0033277685}
-    toleranceRadius: 0.15987928
+  - position: {x: -0.0037313174, y: 0.99999297}
+    toleranceRadius: 0.17374004

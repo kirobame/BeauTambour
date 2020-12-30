@@ -12,44 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53df8ac6a0b3c44bf6ba3811f38e92, type: 3}
   m_Name: SadnessShape
   m_EditorClassIdentifier: 
-  color: {r: 0.24701849, g: 0.4565092, b: 0.8584906, a: 1}
-  emotion: 2
+  emotion: 3
   points:
-  - position: {x: -0.5994307, y: -0.8004267}
-    toleranceRadius: 0.15369058
-  - position: {x: -0.34204727, y: -1.024252}
+  - position: {x: 0, y: -1}
+    toleranceRadius: 0.16981132
+  - position: {x: 0.003773585, y: -0.094339624}
     toleranceRadius: 0.125
-  - position: {x: 0.12283465, y: -1.1187402}
+  - position: {x: 0, y: 0.25}
     toleranceRadius: 0.125
-  - position: {x: 0.5976436, y: -0.80176187}
-    toleranceRadius: 0.16906048
-  - position: {x: 0.87874025, y: -0.58960634}
+  - position: {x: 0, y: 1}
+    toleranceRadius: 0.17771941
+  - position: {x: -0.5735849, y: 1}
     toleranceRadius: 0.1
-  - position: {x: 0.9732284, y: -0.21921262}
+  - position: {x: -1.0037736, y: 0.509434}
     toleranceRadius: 0.1
-  - position: {x: 1, y: -0}
-    toleranceRadius: 0.17060442
-  - position: {x: 0.6595276, y: -0}
-    toleranceRadius: 0.1
-  - position: {x: -0.55748034, y: -0}
-    toleranceRadius: 0.1
-  - position: {x: -0.9999933, y: 0.0036697001}
-    toleranceRadius: 0.17119922
-  - position: {x: -1.0223622, y: 0.30614176}
-    toleranceRadius: 0.1
-  - position: {x: -0.7691339, y: 0.72944885}
-    toleranceRadius: 0.1
-  - position: {x: -0.50885224, y: 0.8608539}
-    toleranceRadius: 0.1621454
-  - position: {x: -0.0056692916, y: 1.1074016}
-    toleranceRadius: 0.1
-  - position: {x: 0.34204727, y: 0.95622057}
-    toleranceRadius: 0.1
-  - position: {x: 0.59455025, y: 0.80405843}
-    toleranceRadius: 0.18749781
-  - position: {x: 0.27401575, y: 0.37039372}
-    toleranceRadius: 0.1
-  - position: {x: -0.22110237, y: -0.2985827}
-    toleranceRadius: 0.1
-  - position: {x: -0.5196851, y: -0.6992127}
-    toleranceRadius: 0.177678
+  - position: {x: -1, y: -0}
+    toleranceRadius: 0.17423993
