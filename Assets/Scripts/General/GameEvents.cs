@@ -25,6 +25,8 @@ namespace BeauTambour
         OnDrawingCancelled,
         OnDrawingColorReception,
         OnDrawingEnd,
+        
+        OnSpeakerSelected,
 
         OnNarrativeEvent,
         

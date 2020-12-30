@@ -23,6 +23,8 @@ namespace BeauTambour
             Repository.Reference(this, References.PhaseHandler);
         }
 
+        public TPhase Get<TPhase>(PhaseCategory category) => (TPhase)phases[category];
+
         public bool TryRegister(IPhase phase)
         {
             if (phases.ContainsKey(phase.Category)) return false;

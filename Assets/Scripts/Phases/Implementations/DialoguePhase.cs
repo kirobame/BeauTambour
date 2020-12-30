@@ -16,9 +16,5 @@ namespace BeauTambour
             
             dialogueHandler.Enqueue(dialogue);
         }
-        public override void End()
-        {
-            base.End();
-        }
     }
 }

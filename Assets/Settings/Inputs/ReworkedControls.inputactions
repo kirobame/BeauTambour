@@ -49,6 +49,93 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "SpeakerSelection",
+            "id": "60203dae-f919-4818-b6f4-ccfa8a578ec4",
+            "actions": [
+                {
+                    "name": "IncrementSpeakerSelection",
+                    "type": "Button",
+                    "id": "0db3e580-6da6-4b5a-ab7c-3222b93ee5d8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DecrementSelection",
+                    "type": "Button",
+                    "id": "eab4525e-8e65-4be0-a04e-3ba93b279881",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "0aaefc3b-5504-43b6-b18e-128ee4b02fe8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3eada095-3267-4163-be42-af55ee84a1e2",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IncrementSpeakerSelection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d7410f67-a638-4dcc-9346-5eea1f49bb9d",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IncrementSpeakerSelection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc838b0e-84ba-4ba5-8556-cc1cf841ca64",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DecrementSelection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a7f249b-de43-49d5-8332-7079d6691306",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DecrementSelection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e7d7f341-020c-45f0-9132-b79833fbfc0d",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

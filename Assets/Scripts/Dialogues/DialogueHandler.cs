@@ -119,7 +119,7 @@ namespace BeauTambour
             Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
 
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
-            phaseHandler.Play(PhaseCategory.MusicianSelection);
+            phaseHandler.Play(PhaseCategory.SpeakerSelection);
         }
     }
 }

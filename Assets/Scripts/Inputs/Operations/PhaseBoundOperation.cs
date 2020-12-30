@@ -8,8 +8,8 @@ namespace BeauTambour
 {
     public abstract class PhaseBoundOperation : SingleOperation
     {
-        [SerializeField] private PhaseCategory phase;
-        private PhaseHandler phaseHandler;
+        [SerializeField] protected PhaseCategory phase;
+        protected PhaseHandler phaseHandler;
 
         public override void Initialize(MonoBehaviour hook)
         {

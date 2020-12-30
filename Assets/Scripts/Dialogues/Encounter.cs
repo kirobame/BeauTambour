@@ -24,7 +24,12 @@ namespace BeauTambour
             Event.Open(GameEvents.OnEncounterBootedUp);
 
             if (!useBackup) hook.StartCoroutine(dialogueRecipient.Download(OnDialogueSheetsDownloaded));
-            else OnDialogueSheetsDownloaded(dialogueRecipient.Sheets.ToArray());
+            else hook.StartCoroutine(SimulatedDownloadRoutine());
+        }
+        private IEnumerator SimulatedDownloadRoutine()
+        {
+            yield return new WaitForEndOfFrame();
+            OnDialogueSheetsDownloaded(dialogueRecipient.Sheets.ToArray());
         }
 
         private void OnDialogueSheetsDownloaded(Sheet[] sheets)
@@ -71,6 +76,10 @@ namespace BeauTambour
             
             Event.Call(GameEvents.OnEncounterBootedUp);
             GameState.PassBlock();
+
+            Debug.Log("TEST");
+            var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
+            phaseHandler.Play(PhaseCategory.SpeakerSelection);
         }
 
         private bool TryGetCharacter<TChar>(string source, out TChar musician) where TChar : Character
