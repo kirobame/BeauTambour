@@ -16,3 +16,4 @@ MonoBehaviour:
   sheetIndex: 0
   initialMusicians:
   - {fileID: 11400000, guid: 482f099fc4d8c9545a7eff7f5f3b4400, type: 2}
+  - {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}

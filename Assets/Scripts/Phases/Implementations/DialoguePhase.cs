@@ -1,5 +1,6 @@
 ﻿using Flux;
 using UnityEngine;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
@@ -7,14 +8,24 @@ namespace BeauTambour
     {
         public override PhaseCategory Category => PhaseCategory.Dialogue;
 
+        private bool hasBeenBootedUp;
+
         public override void Begin()
         {
             base.Begin();
+
+            if (!hasBeenBootedUp)
+            {
+                Event.Call<string>(GameEvents.OnNarrativeEvent, "Start");
+                hasBeenBootedUp = true;
+            }
+            else
+            {
+                var dialogueHandler = Repository.GetSingle<DialogueHandler>(References.DialogueHandler);
+                var dialogue = GameState.Note.speaker.GetDialogue(GameState.Note.emotion);
             
-            var dialogueHandler = Repository.GetSingle<DialogueHandler>(References.DialogueHandler);
-            var dialogue = GameState.Note.speaker.GetDialogue(GameState.Note.emotion);
-            
-            dialogueHandler.Enqueue(dialogue);
+                dialogueHandler.Enqueue(dialogue);
+            }
         }
     }
 }

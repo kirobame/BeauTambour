@@ -8,7 +8,7 @@ namespace BeauTambour
     {
         public abstract PhaseCategory Category { get; }
         
-        private PhaseHandler owner;
+        protected PhaseHandler owner;
 
         protected virtual void Awake()
         {

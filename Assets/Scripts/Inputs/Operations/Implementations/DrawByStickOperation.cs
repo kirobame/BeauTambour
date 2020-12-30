@@ -8,7 +8,7 @@ namespace BeauTambour
     public class DrawByStickOperation : PhaseBoundOperation
     {
         private DrawingHandler drawingHandler;
-
+        //
         public override void Initialize(MonoBehaviour hook)
         {
             base.Initialize(hook);

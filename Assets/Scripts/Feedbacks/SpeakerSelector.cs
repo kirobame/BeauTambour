@@ -10,10 +10,6 @@ namespace BeauTambour
     {
         void Awake() => Event.Register<ISpeaker>(GameEvents.OnSpeakerSelected, OnSpeakerSelected);
 
-        void OnSpeakerSelected(ISpeaker speaker)
-        {
-            Debug.Log("Speaker selection !");
-            transform.position = speaker.RuntimeLink.TopCenter;
-        }
+        void OnSpeakerSelected(ISpeaker speaker) => transform.position = speaker.RuntimeLink.TopCenter;
     }
 }

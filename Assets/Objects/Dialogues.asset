@@ -23,6 +23,12 @@ MonoBehaviour:
     - "\u24B8-Fran\xE7ais"
     - "\u24B8-English"
     - "\u24B8-Data"
+    - "\u24C7-G.Start"
+    - Global
+    - Event
+    - '[Cat]-Ah que bonjour.'
+    - '[Cat]-Well, hello there.'
+    - 'Key : Start;'
     - "\u24C7-Fnl.Tr"
     - Cat
     - Harmony
@@ -117,7 +123,7 @@ MonoBehaviour:
       [Cat]-Of the forest!'
     - 'Emotion : Joy;
 
-      Failsafe : Standard;
+      Failsafe : End;
 
       Childs : Empty;'
-    size: {x: 6, y: 9}
+    size: {x: 6, y: 10}

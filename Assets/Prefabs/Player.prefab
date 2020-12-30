@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6942601182823591050
+--- !u!1 &3909732300908616714
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6942601182823591051}
-  - component: {fileID: 6942601182823591049}
-  - component: {fileID: 6942601182823591048}
+  - component: {fileID: 3909732300908616715}
+  - component: {fileID: 3909732300908616713}
+  - component: {fileID: 3909732300908616712}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6942601182823591051
+--- !u!4 &3909732300908616715
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6942601182823591050}
+  m_GameObject: {fileID: 3909732300908616714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,58 +32,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6942601182823591049
+--- !u!114 &3909732300908616713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6942601182823591050}
+  m_GameObject: {fileID: 3909732300908616714}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e94817128ac482fa0dca7914d32cbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asset: {fileID: -944628639613478452, guid: dc047b6d8e0287540bb3f95d1a774f5a, type: 3}
+  asset: {fileID: -944628639613478452, guid: a444952bf6f563a468389bc6c1ee3326, type: 3}
   links:
-  - name: SpeakerSelection
-    isEnabled: 1
   - name: Dialogue
     isEnabled: 1
---- !u!114 &6942601182823591048
+  - name: Validation
+    isEnabled: 1
+  - name: Drawing
+    isEnabled: 1
+  - name: Selection
+    isEnabled: 1
+--- !u!114 &3909732300908616712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6942601182823591050}
+  m_GameObject: {fileID: 3909732300908616714}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9661ce89f06045169240b76ef922426e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inputLinks:
-  - reference: {fileID: 8990588366809817634, guid: dc047b6d8e0287540bb3f95d1a774f5a,
-      type: 3}
-    groups:
-    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
-      operations:
-      - {fileID: 11400000, guid: d5a369440a25e6243a715988abb168aa, type: 2}
-  - reference: {fileID: -2844947299344910772, guid: dc047b6d8e0287540bb3f95d1a774f5a,
+  - reference: {fileID: -6443269316407947935, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
       - {fileID: 11400000, guid: a7dde4332da9a06408e8091159fa04ef, type: 2}
-  - reference: {fileID: -2206156187949691126, guid: dc047b6d8e0287540bb3f95d1a774f5a,
+  - reference: {fileID: 8095451006809754320, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
       - {fileID: 11400000, guid: c32d8873bec8c914189bdb82c8a22ab4, type: 2}
-  - reference: {fileID: -2623986960670889493, guid: dc047b6d8e0287540bb3f95d1a774f5a,
+  - reference: {fileID: 9048231682583444503, guid: a444952bf6f563a468389bc6c1ee3326,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 2e31e57c32b959244892cb3bce7f731b, type: 2}
+      operations:
+      - {fileID: 11400000, guid: a7dde4332da9a06408e8091159fa04ef, type: 2}
+    - inputHandler: {fileID: 11400000, guid: 8b4355d019ce59043a31ae785efbc5bf, type: 2}
+      operations:
+      - {fileID: 11400000, guid: c32d8873bec8c914189bdb82c8a22ab4, type: 2}
+  - reference: {fileID: -1687517349431849494, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
-      - {fileID: 11400000, guid: 1d235291b2486ff4f99e9d07437da86c, type: 2}
+      - {fileID: 11400000, guid: f50f394501cc8cd4595e0b816d2aa532, type: 2}
+  - reference: {fileID: 8049609404083558296, guid: a444952bf6f563a468389bc6c1ee3326,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 152ab6b20ec74b34791c7e4e4a1a6d41, type: 2}
+      operations:
+      - {fileID: 11400000, guid: 1308c7f59c15e8741b6154fc84cf9269, type: 2}
+  - reference: {fileID: -252028235006359253, guid: a444952bf6f563a468389bc6c1ee3326,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
+      operations:
+      - {fileID: 11400000, guid: 08cdc82f6c7448849806216e8dbf5531, type: 2}
+  - reference: {fileID: 5460665586504654246, guid: a444952bf6f563a468389bc6c1ee3326,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
+      operations:
+      - {fileID: 11400000, guid: e94ee7f161a0eb444b71c596ecd67050, type: 2}
+  - reference: {fileID: -7775490667147521007, guid: a444952bf6f563a468389bc6c1ee3326,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
+      operations:
+      - {fileID: 11400000, guid: d5a369440a25e6243a715988abb168aa, type: 2}
+  - reference: {fileID: -130938725507625371, guid: a444952bf6f563a468389bc6c1ee3326,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
+      operations:
+      - {fileID: 11400000, guid: 34e700d2ca27b3e4882a5facf5a9a0b8, type: 2}
+  - reference: {fileID: 6376062750024456896, guid: a444952bf6f563a468389bc6c1ee3326,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
+      operations:
+      - {fileID: 11400000, guid: 2b1129241a71e114f9e74d565cc228cb, type: 2}

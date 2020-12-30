@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33616237edcf3c46ad7b2dc86e28c52, type: 3}
   m_Name: BeauTambourSettings
   m_EditorClassIdentifier: 
-  rythmMarginTolerance: 0.3499999940395355
+  rythmMarginTolerance: 0.009999999776482582
   toleranceRadiusRange: {x: 0.05, y: 0.3}
-  standardToleranceRadius: 0.1
-  radiusToleranceForgiveness: 0.5
-  curveSubdivision: 3
-  recognitionErrorThreshold: 1e+9
-  headingErrorFactor: 0.275
-  spacingErrorFactor: 1.5
-  validationRadius: 0.1
-  completionQuota: 0.975
+  standardToleranceRadius: 0.05
+  radiusToleranceForgiveness: 0
+  curveSubdivision: 2
+  recognitionErrorThreshold: 0.5
+  headingErrorFactor: 0.01
+  spacingErrorFactor: 0.01
+  validationRadius: 0.15
+  completionQuota: 0.95

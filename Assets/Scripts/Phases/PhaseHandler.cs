@@ -43,6 +43,8 @@ namespace BeauTambour
         public void Play(PhaseCategory category)
         {
             if (!phases.ContainsKey(category)) return;
+            
+            Debug.Log($"-||--> SWITCHING TO : {category}");
             if (currentCategory != PhaseCategory.None) CurrentPhase.End();
             
             phases[category].Begin();

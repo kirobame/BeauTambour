@@ -98,7 +98,7 @@ namespace BeauTambour
 
         public Dialogue GetDialogue(Emotion emotion)
         {
-            if (currentNode.Childs[0] == "Empty") return failsafes["End"].GetDialogue();
+            if (currentNode.Childs[0] == "Empty") return failsafes[currentNode.Failsafe].GetDialogue();
             
             foreach (var childName in currentNode.Childs)
             {

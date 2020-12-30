@@ -15,7 +15,12 @@ namespace BeauTambour
         protected override void Awake()
         {
             base.Awake();
+            
             Event.Open<ISpeaker>(GameEvents.OnSpeakerSelected);
+            Event.Open(GameEvents.OnSpeakerChoice);
+            Event.Open(GameEvents.OnSpeakerChoiceDone);
+
+            Event.Register(GameEvents.OnSpeakerChoiceDone, OnSpeakerChoiceDone);
         }
 
         public override void Begin()
@@ -39,6 +44,11 @@ namespace BeauTambour
 
             SpeakerIndex = index;
             Event.Call<ISpeaker>(GameEvents.OnSpeakerSelected, SelectedSpeaker);
+        }
+
+        void OnSpeakerChoiceDone()
+        {
+            owner.Play(PhaseCategory.EmotionDrawing);
         }
     }
 }

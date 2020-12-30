@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f8089149a1423c9bddc197dfb95664, type: 3}
   m_Name: StickRightThrushtHandler
   m_EditorClassIdentifier: 
-  range: {x: 315, y: 45}
+  range: {x: 45, y: 315}
   thresholds: {x: 0.9, y: 0.25}
   wrap: 1

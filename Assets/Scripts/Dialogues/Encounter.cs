@@ -77,9 +77,8 @@ namespace BeauTambour
             Event.Call(GameEvents.OnEncounterBootedUp);
             GameState.PassBlock();
 
-            Debug.Log("TEST");
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
-            phaseHandler.Play(PhaseCategory.SpeakerSelection);
+            phaseHandler.Play(PhaseCategory.Dialogue);
         }
 
         private bool TryGetCharacter<TChar>(string source, out TChar musician) where TChar : Character

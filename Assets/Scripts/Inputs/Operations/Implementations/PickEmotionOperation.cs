@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Flux;
 using System;
-using Event = Flux.Event;
 
 namespace BeauTambour
 {

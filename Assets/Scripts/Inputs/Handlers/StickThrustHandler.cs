@@ -27,7 +27,7 @@ namespace BeauTambour
                 {
                     if (angle >= range.x && angle <= range.y) Activate();
                 }
-                else  if (angle >= range.y || angle <= range.x) Activate();
+                else  if (angle <= range.x || angle >= range.y) Activate();
             }
             else
             {
