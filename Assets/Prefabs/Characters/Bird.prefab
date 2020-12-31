@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7181756667945175186}
   - component: {fileID: 7181756667945175187}
+  - component: {fileID: 8979176307181938845}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -79,7 +80,22 @@ MonoBehaviour:
   asset: {fileID: 11400000, guid: 482f099fc4d8c9545a7eff7f5f3b4400, type: 2}
   dialogueAnchor: {fileID: 7181756668852219953}
   topCenter: {fileID: 7181756667884976768}
+  intermediary: {fileID: 8979176307181938845}
+--- !u!114 &8979176307181938845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181756667945175184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673f57457f3f48c4bfb5cc88de704a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   animator: {fileID: 1344533231568898137}
+  emotionMelodyRegistry: {fileID: 11400000, guid: dc1f512526f3f7043899986d4b65a1d4,
+    type: 2}
 --- !u!1 &7181756668852219918
 GameObject:
   m_ObjectHideFlags: 0

@@ -79,8 +79,10 @@ namespace BeauTambour
             else return options[GameState.BlockIndex][emotion].GetDialogue();
         }
 
-        void ISpeaker.BeginTalking() => CastedRuntimeLink.BeginTalking();
-        void ISpeaker.StopTalking() => CastedRuntimeLink.StopTalking();
+        void ISpeaker.BeginTalking() => CastedRuntimeLink.Intermediary.BeginTalking();
+        void ISpeaker.StopTalking() => CastedRuntimeLink.Intermediary.StopTalking();
+
+        void ISpeaker.PlayMelodyFor(Emotion emotion) => CastedRuntimeLink.Intermediary.PlayMelodyFor(emotion);
         
         void ReceiveNarrativeEvent(string message)
         {

@@ -1,4 +1,6 @@
-﻿using Flux;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Flux;
 using UnityEngine;
 using Event = Flux.Event;
 
@@ -10,6 +12,12 @@ namespace BeauTambour
         [SerializeField] private bool useBackup;
 
         void Awake() => GameState.Bootup();
-        void Start() => encounter.Bootup(this, useBackup);
+        void Start() => StartCoroutine(StartRoutine());
+        
+        private IEnumerator StartRoutine()
+        {
+            yield return new WaitForSeconds(0.5f);
+            encounter.Bootup(this, useBackup);
+        }
     }
 }

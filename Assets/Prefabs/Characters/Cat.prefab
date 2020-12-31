@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7961205450448299400}
   - component: {fileID: 7961205450448299401}
+  - component: {fileID: 2878645895820014792}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -109,7 +110,21 @@ MonoBehaviour:
   asset: {fileID: 11400000, guid: 0f85a343b67edc34ab116ac1474a19f8, type: 2}
   dialogueAnchor: {fileID: 7961205450220400662}
   topCenter: {fileID: 7961205449932691981}
+  intermediary: {fileID: 2878645895820014792}
+--- !u!114 &2878645895820014792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961205450448299402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673f57457f3f48c4bfb5cc88de704a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   animator: {fileID: 5912440382659146094}
+  emotionMelodyRegistry: {fileID: 0}
 --- !u!1001 &7961205450195227854
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,5 +11,7 @@
 
         void BeginTalking();
         void StopTalking();
+
+        void PlayMelodyFor(Emotion emotion);
     }
 }

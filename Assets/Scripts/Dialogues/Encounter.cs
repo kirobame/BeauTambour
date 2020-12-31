@@ -24,12 +24,7 @@ namespace BeauTambour
             Event.Open(GameEvents.OnEncounterBootedUp);
 
             if (!useBackup) hook.StartCoroutine(dialogueRecipient.Download(OnDialogueSheetsDownloaded));
-            else hook.StartCoroutine(SimulatedDownloadRoutine());
-        }
-        private IEnumerator SimulatedDownloadRoutine()
-        {
-            yield return new WaitForEndOfFrame();
-            OnDialogueSheetsDownloaded(dialogueRecipient.Sheets.ToArray());
+            else OnDialogueSheetsDownloaded(dialogueRecipient.Sheets.ToArray());
         }
 
         private void OnDialogueSheetsDownloaded(Sheet[] sheets)

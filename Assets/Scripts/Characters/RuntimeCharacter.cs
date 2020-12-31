@@ -14,6 +14,6 @@ namespace BeauTambour
         public Vector3 TopCenter => topCenter.position;
         [SerializeField] private Transform topCenter;
 
-        void Awake() => asset.Bootup(this);
+        void Start() => asset.Bootup(this);
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6318084767594822544}
   - component: {fileID: 6318084767594822547}
+  - component: {fileID: 8132125443632432337}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -49,7 +50,22 @@ MonoBehaviour:
   asset: {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}
   dialogueAnchor: {fileID: 6318084767949486948}
   topCenter: {fileID: 6318084769163878324}
+  intermediary: {fileID: 8132125443632432337}
+--- !u!114 &8132125443632432337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318084767594822546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673f57457f3f48c4bfb5cc88de704a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   animator: {fileID: 3054443412200171740}
+  emotionMelodyRegistry: {fileID: 11400000, guid: 2ebf166ec892c034883f9061a7d50a9e,
+    type: 2}
 --- !u!1 &6318084767949486951
 GameObject:
   m_ObjectHideFlags: 0

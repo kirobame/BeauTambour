@@ -29,6 +29,11 @@ namespace BeauTambour
         OnSpeakerSelected,
         OnSpeakerChoice,
         OnSpeakerChoiceDone,
+        
+        OnNoteValidation,
+        OnNoteValidationDone,
+        OnNoteDeletion,
+        OnNoteDeletionDone,
 
         OnNarrativeEvent,
         

@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5050f7dce0a7414782cc5e27edcefda0, type: 3}
-  m_Name: GoToSelectionPhase
+  m_Script: {fileID: 11500000, guid: c0e0ea407c694fc280e367d3e1dd0c95, type: 3}
+  m_Name: SendNote
   m_EditorClassIdentifier: 
   phase: 3
-  destination: 1
