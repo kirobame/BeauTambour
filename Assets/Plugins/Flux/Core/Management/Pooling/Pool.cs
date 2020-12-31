@@ -12,8 +12,10 @@ namespace Flux
     }
     public abstract class Pool<T, TPoolable> : Pool<T> where TPoolable : Poolable<T>
     {
+        public IEnumerable<TPoolable> UsedInstances => usedInstances;
+        
         protected abstract Provider<T,TPoolable>[] Providers { get; }
-
+        
         private Dictionary<TPoolable, Queue<TPoolable>> availableInstances = new Dictionary<TPoolable, Queue<TPoolable>>();
         private HashSet<TPoolable> usedInstances = new HashSet<TPoolable>();
 

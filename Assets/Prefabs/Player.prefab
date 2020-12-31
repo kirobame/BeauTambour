@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asset: {fileID: -944628639613478452, guid: a444952bf6f563a468389bc6c1ee3326, type: 3}
   links:
+  - name: Global
+    isEnabled: 1
   - name: Dialogue
     isEnabled: 1
   - name: Validation
@@ -73,27 +75,32 @@ MonoBehaviour:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
       - {fileID: 11400000, guid: a7dde4332da9a06408e8091159fa04ef, type: 2}
+      - {fileID: 11400000, guid: ed08cc30676fe7041af440091313a7df, type: 2}
   - reference: {fileID: 8095451006809754320, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
       - {fileID: 11400000, guid: c32d8873bec8c914189bdb82c8a22ab4, type: 2}
+      - {fileID: 11400000, guid: ed08cc30676fe7041af440091313a7df, type: 2}
   - reference: {fileID: 9048231682583444503, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:
     - inputHandler: {fileID: 11400000, guid: 2e31e57c32b959244892cb3bce7f731b, type: 2}
       operations:
       - {fileID: 11400000, guid: a7dde4332da9a06408e8091159fa04ef, type: 2}
+      - {fileID: 11400000, guid: ed08cc30676fe7041af440091313a7df, type: 2}
     - inputHandler: {fileID: 11400000, guid: 8b4355d019ce59043a31ae785efbc5bf, type: 2}
       operations:
       - {fileID: 11400000, guid: c32d8873bec8c914189bdb82c8a22ab4, type: 2}
+      - {fileID: 11400000, guid: ed08cc30676fe7041af440091313a7df, type: 2}
   - reference: {fileID: -1687517349431849494, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
       - {fileID: 11400000, guid: f50f394501cc8cd4595e0b816d2aa532, type: 2}
+      - {fileID: 11400000, guid: ed08cc30676fe7041af440091313a7df, type: 2}
   - reference: {fileID: 8049609404083558296, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:
@@ -106,12 +113,14 @@ MonoBehaviour:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
       - {fileID: 11400000, guid: 08cdc82f6c7448849806216e8dbf5531, type: 2}
+      - {fileID: 11400000, guid: b75323e5fd1d58947bae9fb51acbaf97, type: 2}
   - reference: {fileID: 5460665586504654246, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
       - {fileID: 11400000, guid: e94ee7f161a0eb444b71c596ecd67050, type: 2}
+      - {fileID: 11400000, guid: b75323e5fd1d58947bae9fb51acbaf97, type: 2}
   - reference: {fileID: -7775490667147521007, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:
@@ -123,6 +132,7 @@ MonoBehaviour:
     groups:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
+      - {fileID: 11400000, guid: 8298e9a0ef904194ba0811d9f3df6687, type: 2}
       - {fileID: 11400000, guid: 5006f0d7e3c8c4a4bbc42257bba66778, type: 2}
   - reference: {fileID: 6376062750024456896, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
@@ -130,3 +140,10 @@ MonoBehaviour:
     - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
       operations:
       - {fileID: 11400000, guid: 7b326149ec106a74e970cd0b62a37332, type: 2}
+      - {fileID: 11400000, guid: 8298e9a0ef904194ba0811d9f3df6687, type: 2}
+  - reference: {fileID: 2196222408900945557, guid: a444952bf6f563a468389bc6c1ee3326,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 48a880a1c4bb5814daf6465849808bd1, type: 2}
+      operations:
+      - {fileID: 11400000, guid: 7cedcfb61d587e54c9c2e57c3adebaa9, type: 2}

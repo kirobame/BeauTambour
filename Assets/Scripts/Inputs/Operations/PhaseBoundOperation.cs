@@ -21,7 +21,7 @@ namespace BeauTambour
         {
             base.OnStart(inArgs);
             
-            if (phaseHandler.CurrentCategory != phase) return;
+            if (phase != PhaseCategory.None && phaseHandler.CurrentCategory != phase) return;
             RelayedOnStart(inArgs);
         }
         protected virtual void RelayedOnStart(EventArgs inArgs) { }
@@ -30,7 +30,7 @@ namespace BeauTambour
         {
             base.OnUpdate(inArgs);
             
-            if (phaseHandler.CurrentCategory != phase) return;
+            if (phase != PhaseCategory.None && phaseHandler.CurrentCategory != phase) return;
             RelayedOnUpdate(inArgs);
         }
         protected virtual void RelayedOnUpdate(EventArgs inArgs) { }
@@ -39,7 +39,7 @@ namespace BeauTambour
         {
             base.OnEnd(inArgs);
             
-            if (phaseHandler.CurrentCategory != phase) return;
+            if (phase != PhaseCategory.None && phaseHandler.CurrentCategory != phase) return;
             RelayedOnEnd(inArgs);
         }
         protected virtual void RelayedOnEnd(EventArgs inArgs) { }

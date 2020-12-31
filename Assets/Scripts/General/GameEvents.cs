@@ -34,6 +34,12 @@ namespace BeauTambour
         OnNoteValidationDone,
         OnNoteDeletion,
         OnNoteDeletionDone,
+        
+        OnFrogFeedback,
+        
+        OnPauseToggled,
+        OnGamePaused,
+        OnGameResumed,
 
         OnNarrativeEvent,
         

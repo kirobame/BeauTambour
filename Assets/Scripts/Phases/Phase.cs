@@ -23,5 +23,8 @@ namespace BeauTambour
 
         public virtual void Begin() => Event.Call($"{Category}.{PhaseCallback.Start}");
         public virtual void End() => Event.Call($"{Category}.{PhaseCallback.End}");
+        
+        public virtual void Pause() { }
+        public virtual void Resume() { }
     }
 }

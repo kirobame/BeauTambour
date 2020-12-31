@@ -22,6 +22,8 @@ namespace BeauTambour
         
         ColorByEmotion,
         
+        PauseMenu,
+        
         Settings,
     }
 }
