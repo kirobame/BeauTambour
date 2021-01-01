@@ -29,6 +29,18 @@ MonoBehaviour:
     - '[Cat]-Ah que bonjour.'
     - '[Cat]-Well, hello there.'
     - 'Key : Start;'
+    - "\u24C7-G.Rvl.1"
+    - Global
+    - Event
+    - "[Cat]-Oh que oui tu as devin\xE9!"
+    - '[Cat]-Oh you guessed it!'
+    - 'Key : Block.1;'
+    - "\u24C7-G.Rvl.2"
+    - Global
+    - Event
+    - "[Cat]-Encore une fois, tu as devin\xE9!"
+    - '[Cat]-Again, you guessed it!'
+    - 'Key : Block.2;'
     - "\u24C7-Fnl.Tr"
     - Cat
     - Harmony
@@ -37,6 +49,16 @@ MonoBehaviour:
     - 'Emotion : Sadness;
 
       IsCorrect : TRUE;
+
+      Block : 1;'
+    - "\u24C7-Fe.Srp"
+    - Cat
+    - Harmony
+    - '[Cat]-Non, pas de la surprise.'
+    - '[Cat]-No, not surprise.'
+    - 'Emotion : Surprise;
+
+      IsCorrect : FALSE;
 
       Block : 1;'
     - "\u24C7-Fe.Jy"
@@ -49,16 +71,100 @@ MonoBehaviour:
       IsCorrect : FALSE;
 
       Block : 1;'
-    - "\u24C7-Fe.Ang"
-    - Cat
-    - Harmony
-    - "[Cat]-Non, pas de la col\xE8re."
-    - '[Cat]-No, not anger.'
+    - "\u24C7-M.Flsf.A.1"
+    - Mouse
+    - Hint
+    - '[Mouse]-J''aimerais bien m''acheter un yacht.'
+    - '[Mouse]-I''d like to buy a yacht.'
+    - 'Name : Failsafe-01;'
+    - "\u24C7-M.Flsf.B.1"
+    - Mouse
+    - Hint
+    - '[Mouse]-Hey ben, je me mangerais bien du fromage.'
+    - '[Mouse]-Well, i wouldn''t say no to a piece of cheese.'
+    - 'Name : Failsafe-02;'
+    - "\u24C7-M.Flsf.B.2"
+    - Mouse
+    - Hint
+    - "[Mouse]-Est-ce que j'ai pr\xE9cis\xE9 que j'aim\xE9 le fromage?"
+    - '[Mouse]-Did i mention that i like cheese?'
+    - 'Name : Failsafe-02;'
+    - "\u24C7-M.Flsf.C.1"
+    - Mouse
+    - Hint
+    - "[Mouse]-C'est beaucoup de parl\xE9."
+    - '[Mouse]-That''s a lot of talking.'
+    - 'Name : Failsafe-03;'
+    - "\u24C7-M.Flsf.C.2"
+    - Mouse
+    - Hint
+    - '[Mouse]-On peut pas prendre une pause?'
+    - '[Mouse]-Can''t we take a break?'
+    - 'Name : Failsafe-03;'
+    - "\u24C7-M.Rt"
+    - Mouse
+    - Advance
+    - 
+    - 
+    - 'Root : 1;
+
+      Emotion : None;
+
+      Failsafe : Failsafe-01;
+
+      Childs
+      : M.Diag.1/M.Diag.2;'
+    - "\u24C7-M.Diag.1"
+    - Mouse
+    - Advance
+    - "[Mouse]-Beep boop :\nL'option 1 a \xE9t\xE9 choisie."
+    - '[Mouse]-Beep boop :
+
+      Option 1 has been selected.'
     - 'Emotion : Anger;
 
-      IsCorrect : FALSE;
+      Failsafe : Failsafe-02;
 
-      Block : 1;'
+      Childs : M.Diag.1.1;'
+    - "\u24C7-M.Diag.2"
+    - Mouse
+    - Advance
+    - "[Mouse]-Beep boop :\nL'option 2 a \xE9t\xE9 choisie."
+    - '[Mouse]-Beep boop :
+
+      Option 2 has been selected.'
+    - 'Emotion : Fear;
+
+      Failsafe : Failsafe-02;
+
+      Childs : M.Diag.2.1;'
+    - "\u24C7-M.Diag.1.1"
+    - Mouse
+    - Advance
+    - "[Mouse]-Beep boop :\nL'option 1-1 a \xE9t\xE9 choisie."
+    - '[Mouse]-Beep boop :
+
+      Option 1-1 has been selected.'
+    - 'Emotion : Sadness;
+
+      Failsafe : Failsafe-03;
+
+      Childs : Empty;'
+    - "\u24C7-M.Diag.2.1"
+    - Mouse
+    - Advance
+    - "[Mouse]-Beep boop :\nL'option 2-1 a \xE9t\xE9 choisie."
+    - '[Mouse]-Beep boop :
+
+      Option 2-1 has been selected.'
+    - 'Emotion : Joy;
+
+      GivenAttributes : SomeAttribute;
+
+      Failsafe : Failsafe-03;
+
+      Childs
+      : Empty;'
     - "\u24C7-B.Fls.00"
     - Bird
     - Hint
@@ -99,11 +205,11 @@ MonoBehaviour:
     - '[Bird]-One.'
     - '[Bird]-Un.'
     - 'Name : End;'
-    - "\u24C7-Diag.01"
+    - "\u24C7-B.Rt"
     - Bird
     - Advance
-    - '[Bird]-Bonjour le monde.'
-    - '[Bird]-Hello world.'
+    - 
+    - 
     - 'Root : 1;
 
       Emotion : None;
@@ -111,8 +217,8 @@ MonoBehaviour:
       Failsafe : Standard;
 
       Childs
-      : Diag.02;'
-    - "\u24C7-Diag.02"
+      : Diag.01;'
+    - "\u24C7-Diag.01"
     - Bird
     - Advance
     - "[Mouse]-Nous sommes.\n[Bird]-Les amis.\n[Cat]-De la for\xEAt!"
@@ -126,4 +232,71 @@ MonoBehaviour:
       Failsafe : End;
 
       Childs : Empty;'
-    size: {x: 6, y: 10}
+    - "\u24C7-M.Rt.2"
+    - Mouse
+    - Advance
+    - 
+    - 
+    - 'Root : 2;
+
+      Emotion : None;
+
+      Failsafe : Failsafe-01;
+
+      Childs
+      : M.2.Diag/M.2.Diag.Alt;'
+    - "\u24C7-M.2.Diag"
+    - Mouse
+    - Advance
+    - '[Mouse]-Beep boop :
+
+      Phase 2 correcte.'
+    - '[Mouse]-Beep boop :
+
+      Phase 2 correct.'
+    - 'Emotion : Trust;
+
+      Failsafe : Failsafe-02;
+
+      Childs : Empty;'
+    - "\u24C7-M.2.Diag.Alt"
+    - Mouse
+    - Advance
+    - '[Mouse]-Beep boop :
+
+      Jackpot!!!'
+    - '[Mouse]-Beep boop :
+
+      Jackpot!!!'
+    - 'Emotion : Sadness;
+
+      NeededAttributes : SomeAttribute;
+
+      Failsafe
+      : Failsafe-02;
+
+      Childs : Empty;'
+    - "\u24C7-B.2.Rt"
+    - Bird
+    - Advance
+    - 
+    - 
+    - 'Root : 2;
+
+      Emotion : None;
+
+      Failsafe : Standard;
+
+      Childs
+      : B.2.Diag;'
+    - "\u24C7-B.2.Diag"
+    - Bird
+    - Advance
+    - '[Bird]-Ah que cui cui.'
+    - '[Bird]-If that''s it, piou piou!'
+    - 'Emotion : Disgust;
+
+      Failsafe : End;
+
+      Childs : Empty;'
+    size: {x: 6, y: 27}

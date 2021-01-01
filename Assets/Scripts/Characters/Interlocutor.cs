@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
@@ -62,36 +63,27 @@ namespace BeauTambour
         {
             base.Bootup(runtimeCharacter);
             CastedRuntimeLink = (RuntimeInterlocutor)runtimeCharacter;
+            
+            blocks = new List<DialogueBlock>();
+            options = new List<Dictionary<Emotion, DialogueFailsafe>>();
         }
         
-        public Dialogue GetDialogue(Emotion emotion)
+        public Dialogue[] GetDialogues(Emotion emotion)
         {
             var block = blocks[GameState.BlockIndex];
             if (block.Emotion == emotion)
             {
                 Debug.Log("Go to next block");
-                
-                GameState.UnregisterSpeakerForUse(this);
                 GameState.PassBlock();
-                
-                return block.Dialogues[(int)GameState.UsedLanguage];
+
+                return new Dialogue[] { block.Dialogues[(int)GameState.UsedLanguage] };
             }
-            else return options[GameState.BlockIndex][emotion].GetDialogue();
+            else return new Dialogue[] { options[GameState.BlockIndex][emotion].GetDialogue() };
         }
 
         void ISpeaker.BeginTalking() => CastedRuntimeLink.Intermediary.BeginTalking();
         void ISpeaker.StopTalking() => CastedRuntimeLink.Intermediary.StopTalking();
 
-        void ISpeaker.PlayMelodyFor(Emotion emotion) => CastedRuntimeLink.Intermediary.PlayMelodyFor(emotion);
-        
-        void ReceiveNarrativeEvent(string message)
-        {
-            switch (message)
-            {
-                case "HarmonyBegun" :
-                    GameState.RegisterSpeakerForUse(this);
-                    break;
-            }
-        }
+        void ISpeaker.PlayMelodyFor(Emotion emotion) => RuntimeLink.Delay(() => Event.Call(GameEvents.OnNoteValidationDone), 1);
     }
 }

@@ -33,6 +33,8 @@ namespace BeauTambour
             Event.Register(GameEvents.OnPauseToggled, OnPauseToggled);
         }
 
+        public void Quit() => Application.Quit();
+        
         void OnPauseToggled()
         {
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);

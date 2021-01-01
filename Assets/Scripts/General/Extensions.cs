@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using Flux;
+using UnityEngine;
 
 namespace BeauTambour
 {
@@ -14,6 +16,13 @@ namespace BeauTambour
             var character = characters.First(item => item.Actor == actor);
 
             return character as TChar;
+        }
+
+        public static void Delay(this MonoBehaviour hook, Action call, int frameCount) => hook.StartCoroutine(DelayRoutine(call, frameCount));
+        private static IEnumerator DelayRoutine(Action call, int frameCount)
+        {
+            for (var i = 0; i < frameCount; i++) yield return new WaitForEndOfFrame();
+            call();
         }
     }
 }

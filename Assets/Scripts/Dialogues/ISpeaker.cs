@@ -7,7 +7,7 @@
         
         AudioCharMapPackage AudioCharMap { get; }
         
-        Dialogue GetDialogue(Emotion emotion);
+        Dialogue[] GetDialogues(Emotion emotion);
 
         void BeginTalking();
         void StopTalking();

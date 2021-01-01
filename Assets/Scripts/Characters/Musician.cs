@@ -24,7 +24,13 @@ namespace BeauTambour
 
                 if (!data.ContainsKey("Childs")) return false;
                 else childs = data["Childs"].Split('/');
-
+                
+                if (data.ContainsKey("NeededAttributes")) neededAttributes = data["NeededAttributes"].Split('/');
+                else neededAttributes = new string[0];
+                
+                if (data.ContainsKey("GivenAttributes")) givenAttributes = data["GivenAttributes"].Split('/');
+                else givenAttributes = new string[0];
+                
                 dialogues = new Dialogue[texts.Length];
                 for (var i = 0; i < texts.Length; i++) dialogues[i] = Dialogue.Parse(texts[i]);
 
@@ -33,6 +39,9 @@ namespace BeauTambour
 
             public string Name => name;
             private string name;
+            
+            public IReadOnlyList<string> NeededAttributes => neededAttributes;
+            private string[] neededAttributes;
 
             public Emotion RequiredEmotion => requiredEmotion;
             private Emotion requiredEmotion;
@@ -42,6 +51,9 @@ namespace BeauTambour
 
             public IReadOnlyList<string> Childs => childs;
             private string[] childs;
+
+            public IReadOnlyList<string> GivenAttributes => givenAttributes;
+            private string[] givenAttributes;
             
             public Dialogue GetDialogue() => dialogues[(int)GameState.UsedLanguage];
             private Dialogue[] dialogues;
@@ -58,6 +70,7 @@ namespace BeauTambour
         private List<string> rootNodeKeys;
         private Dictionary<string, DialogueNode> nodes;
         private Dictionary<string, DialogueFailsafe> failsafes;
+        private HashSet<string> attributes;
 
         private DialogueNode currentNode;
 
@@ -92,31 +105,41 @@ namespace BeauTambour
             rootNodeKeys = new List<string>();
             nodes = new Dictionary<string, DialogueNode>();
             failsafes = new Dictionary<string, DialogueFailsafe>();
+            attributes = new HashSet<string>();
 
             Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
         }
 
-        public Dialogue GetDialogue(Emotion emotion)
+        public Dialogue[] GetDialogues(Emotion emotion)
         {
-            if (currentNode.Childs[0] == "Empty") return failsafes[currentNode.Failsafe].GetDialogue();
+            if (currentNode.Childs[0] == "Empty") return new Dialogue[] { failsafes[currentNode.Failsafe].GetDialogue() };
             
             foreach (var childName in currentNode.Childs)
             {
                 var child = nodes[childName];
-                if (child.RequiredEmotion == emotion)
+                if (child.RequiredEmotion == emotion && attributes.IsSupersetOf(child.NeededAttributes))
                 {
+                    foreach (var attribute in child.GivenAttributes) attributes.Add(attribute);
+                    currentNode = child;
+                    
                     if (child.Childs[0] == "Empty")
                     {
-                        GameState.NotifyMusicianArcEnd();
                         Debug.Log($"End of narrative arc for : {name}");
+                        if (GameState.NotifyMusicianArcEnd(out var blockDialogue))
+                        {
+                            return new Dialogue[]
+                            {
+                                child.GetDialogue(),
+                                blockDialogue
+                            };
+                        }
                     }
                     
-                    currentNode = child;
-                    return child.GetDialogue();;
+                    return new Dialogue[] { child.GetDialogue() };
                 }
             }
             
-            return failsafes[currentNode.Failsafe].GetDialogue();
+            return new Dialogue[] { failsafes[currentNode.Failsafe].GetDialogue() };
         }
 
         void ISpeaker.BeginTalking() => CastedRuntimeLink.Intermediary.BeginTalking();

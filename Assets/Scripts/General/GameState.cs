@@ -12,6 +12,7 @@ namespace BeauTambour
         private static Dictionary<Actor, ISpeaker> speakers;
 
         private static int finishedArcsCount;
+        private static bool arcsMinimumCompletion;
         
         public static int BlockIndex { get; private set; }
         public static Language UsedLanguage { get; private set; }
@@ -23,6 +24,9 @@ namespace BeauTambour
 
         public static void Bootup()
         {
+            finishedArcsCount = 0;
+            arcsMinimumCompletion = false;
+            
             eventDialogues = new Dictionary<string, EventBoundDialogue>();
             speakers = new Dictionary<Actor, ISpeaker>();
 
@@ -73,17 +77,36 @@ namespace BeauTambour
             dialogueHandler.Enqueue(eventDialogues[message].GetDialogue());
         }
 
-        public static void NotifyMusicianArcEnd()
+        public static bool NotifyMusicianArcEnd(out Dialogue dialogue)
         {
             finishedArcsCount++;
-            if (finishedArcsCount == speakers.Count - 1) Event.Call<string>(GameEvents.OnNarrativeEvent, $"HarmonyBegun-{BlockIndex + 1}");
+            
+            if (!arcsMinimumCompletion && finishedArcsCount == speakers.Count - 1)
+            {
+                var encounter = Repository.GetSingle<Encounter>(References.Encounter);
+                RegisterSpeakerForUse(encounter.Interlocutor);
+                
+                dialogue = eventDialogues[$"Block.{BlockIndex + 1}"].GetDialogue();
+                arcsMinimumCompletion = true;
+                
+                return true;
+            }
+            else
+            {
+                dialogue = null;
+                return false;
+            }
         }
         
         public static void PassBlock()
         {
-            finishedArcsCount = 0;
-            BlockIndex++;
+            var encounter = Repository.GetSingle<Encounter>(References.Encounter);
+            UnregisterSpeakerForUse(encounter.Interlocutor);
             
+            finishedArcsCount = 0;
+            arcsMinimumCompletion = false;
+            
+            BlockIndex++;
             Event.Call(GameEvents.OnBlockPassed);
         }
     }

@@ -22,6 +22,8 @@ namespace BeauTambour
         }
         #endregion
 
+        public float Radius => radius;
+        
         [SerializeField] private float radius;
         [SerializeField] private int definition;
         

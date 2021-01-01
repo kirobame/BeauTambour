@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673f57457f3f48c4bfb5cc88de704a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dismiss: 1
   animator: {fileID: 5912440382659146094}
   emotionMelodyRegistry: {fileID: 0}
 --- !u!1001 &7961205450195227854

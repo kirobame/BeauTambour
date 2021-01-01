@@ -6,7 +6,10 @@ namespace BeauTambour
     public enum GameEvents
     {
         OnEncounterBootedUp,
-        
+        OnIntroStart,
+        OnIntroEnd,
+        OnIntroConfirmed,
+
         OnNextCue,
         OnCueFinished,
         OnCueSkipped,
@@ -44,5 +47,7 @@ namespace BeauTambour
         OnNarrativeEvent,
         
         OnBlockPassed,
+        
+        OnStickUsed,
     }
 }

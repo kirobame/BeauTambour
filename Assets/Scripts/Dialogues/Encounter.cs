@@ -13,13 +13,18 @@ namespace BeauTambour
     [IconIndicator(7705900795600745325), CreateAssetMenu(fileName = "NewEncounter", menuName = "Beau Tambour/Encounter")]
     public class Encounter : ScriptableObject
     {
+        public Interlocutor Interlocutor { get; private set; }
+        
         [SerializeField] private CSVRecipient dialogueRecipient;
         [SerializeField] private int sheetIndex;
-        
+
+        [Space, SerializeField] private Interlocutor initialInterlocutor;
         [SerializeField] private Musician[] initialMusicians;
-        
+
         public void Bootup(MonoBehaviour hook, bool useBackup)
         {
+            Interlocutor = initialInterlocutor;
+            
             Repository.Reference(this, References.Encounter);
             Event.Open(GameEvents.OnEncounterBootedUp);
 
@@ -71,9 +76,6 @@ namespace BeauTambour
             
             Event.Call(GameEvents.OnEncounterBootedUp);
             GameState.PassBlock();
-
-            var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
-            phaseHandler.Play(PhaseCategory.Dialogue);
         }
 
         private bool TryGetCharacter<TChar>(string source, out TChar musician) where TChar : Character
@@ -104,10 +106,10 @@ namespace BeauTambour
         
         private void HandleHarmonyDialogue(string[] texts, Dictionary<string, string> data, Interlocutor interlocutor)
         {
-            if (!data.ContainsKey("Emotion") || Enum.TryParse<Emotion>(data["Emotion"], out var emotion)) return;
+            if (!data.ContainsKey("Emotion") || !Enum.TryParse<Emotion>(data["Emotion"], out var emotion)) return;
             
             if (!data.ContainsKey("Block")) return;
-            var block = int.Parse(data["Block"]);
+            var block = int.Parse(data["Block"]) - 1;
             
             if (!data.ContainsKey("IsCorrect")) return;
             

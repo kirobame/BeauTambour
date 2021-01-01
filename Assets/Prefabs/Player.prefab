@@ -107,6 +107,12 @@ MonoBehaviour:
     - inputHandler: {fileID: 11400000, guid: 152ab6b20ec74b34791c7e4e4a1a6d41, type: 2}
       operations:
       - {fileID: 11400000, guid: 1308c7f59c15e8741b6154fc84cf9269, type: 2}
+  - reference: {fileID: -2547596735000895576, guid: a444952bf6f563a468389bc6c1ee3326,
+      type: 3}
+    groups:
+    - inputHandler: {fileID: 11400000, guid: 7e8fa69c51a87144aa59280f00bed05b, type: 2}
+      operations:
+      - {fileID: 11400000, guid: ccf9f4a5f42afb14bb02febcedfa4969, type: 2}
   - reference: {fileID: -252028235006359253, guid: a444952bf6f563a468389bc6c1ee3326,
       type: 3}
     groups:

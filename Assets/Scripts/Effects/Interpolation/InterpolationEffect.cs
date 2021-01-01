@@ -17,6 +17,8 @@ namespace BeauTambour
             base.Initialize();
             
             time = Mathf.Abs(time);
+            if (time == 0f) time = Mathf.Epsilon;
+            
             runtime = 0f;
         }
 
