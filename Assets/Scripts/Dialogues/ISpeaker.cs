@@ -7,6 +7,8 @@
         
         AudioCharMapPackage AudioCharMap { get; }
         
+        bool IsArcEnded { get; }
+
         Dialogue GetDialogue(Emotion emotion);
 
         void BeginTalking();

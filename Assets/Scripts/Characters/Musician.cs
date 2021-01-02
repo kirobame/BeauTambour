@@ -53,6 +53,16 @@ namespace BeauTambour
         public RuntimeMusician CastedRuntimeLink { get; private set; }
 
         public AudioCharMapPackage AudioCharMap => audioCharMap;
+
+        public bool IsArcEnded
+        {
+            get
+            {
+                return currentNode == null || currentNode.Childs[0] == "Empty";
+            }
+            
+        }
+
         [Space, SerializeField] private AudioCharMapPackage audioCharMap;
 
         private List<string> rootNodeKeys;

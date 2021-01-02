@@ -29,11 +29,15 @@ namespace BeauTambour
         public override RuntimeCharacter RuntimeLink => CastedRuntimeLink;
         public RuntimeInterlocutor CastedRuntimeLink { get; private set; }
         
-        public AudioCharMapPackage AudioCharMap => audioCharMap;
+        public AudioCharMapPackage AudioCharMap => audioCharMap;        
+
         [Space, SerializeField] private AudioCharMapPackage audioCharMap;
+
+        public bool IsArcEnded => false;
 
         private List<DialogueBlock> blocks;
         private List<Dictionary<Emotion, DialogueFailsafe>> options;
+
         
         #region Dialogue Initialization
 
