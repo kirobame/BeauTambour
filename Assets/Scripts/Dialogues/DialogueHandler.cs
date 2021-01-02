@@ -10,6 +10,7 @@ namespace BeauTambour
     public class DialogueHandler : MonoBehaviour
     {
         [SerializeField] private DialogueHolder holder;
+        [SerializeField] private float widthCorrection;
 
         public ISpeaker Speaker { get; private set; }
         private Actor actor;
@@ -101,6 +102,7 @@ namespace BeauTambour
 
             var maximumWidth = info.lineInfo.Max(line => line.maxAdvance);
             maximumWidth += holder.TextMesh.margin.x + holder.TextMesh.margin.z;
+            maximumWidth -= widthCorrection;
             
             var size = new Vector2(maximumWidth, height);
 

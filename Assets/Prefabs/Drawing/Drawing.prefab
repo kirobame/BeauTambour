@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3463366923733021657}
-  - component: {fileID: 5607010429786460422}
-  - component: {fileID: 7293980486220932254}
+  - component: {fileID: 8654990315699883264}
+  - component: {fileID: 8391708012801759587}
   - component: {fileID: 3070126743701008757}
+  - component: {fileID: 7293980486220932254}
   m_Layer: 0
-  m_Name: OnDrawingPhaseEnd
+  m_Name: OnNoteChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +34,7 @@ Transform:
   m_Father: {fileID: 26951214188904480}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5607010429786460422
+--- !u!114 &8654990315699883264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,12 +43,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1331397715781795318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4213a7265cf40d5a4a4d7799f268a63, type: 3}
+  m_Script: {fileID: 11500000, guid: aa1f4113541f47f0832cfe114470b121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  address:
-    category: 2
-    callback: 1
   callback:
     m_PersistentCalls:
       m_Calls:
@@ -62,7 +60,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7293980486220932254
+  address:
+    stringedType: BeauTambour.GameEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    name: OnNoteValidation
+--- !u!114 &8391708012801759587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,12 +73,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1331397715781795318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99151b52d47c44f0b5b0dab03ab574ab, type: 3}
+  m_Script: {fileID: 11500000, guid: aa1f4113541f47f0832cfe114470b121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effects:
-  - {fileID: 3070126743701008757}
-  isUnscaled: 0
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7293980486220932254}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  address:
+    stringedType: BeauTambour.GameEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    name: OnNoteDeletion
 --- !u!114 &3070126743701008757
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -116,6 +133,21 @@ MonoBehaviour:
   time: 0.6
   target: {fileID: 13075132075408503}
   goal: 0
+--- !u!114 &7293980486220932254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331397715781795318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99151b52d47c44f0b5b0dab03ab574ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 3070126743701008757}
+  isUnscaled: 0
 --- !u!1 &2187671853350159795
 GameObject:
   m_ObjectHideFlags: 0

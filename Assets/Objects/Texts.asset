@@ -23,6 +23,24 @@ MonoBehaviour:
     - "\u24C7-Fallback"
     - Nulle
     - Null
+    - "\u24C7-Volume"
+    - Volume
+    - Volume
+    - "\u24C7-SfxVol"
+    - Effets
+    - Effects
+    - "\u24C7-MusVol"
+    - Musique
+    - Music
+    - "\u24C7-IntVol"
+    - Interface
+    - Interface
+    - "\u24C7-Quit"
+    - Quitter
+    - Quit
+    - "\u24C7-Resume"
+    - Reprendre
+    - Resume
     - "\u24C7-Intro"
     - '<size=100%><b>Premier chapitre</b></size>
 
@@ -30,4 +48,4 @@ MonoBehaviour:
     - '<size=100%><b>First chapter</b></size>
 
       <size=50%>The scaredy cat</size>'
-    size: {x: 3, y: 3}
+    size: {x: 3, y: 9}

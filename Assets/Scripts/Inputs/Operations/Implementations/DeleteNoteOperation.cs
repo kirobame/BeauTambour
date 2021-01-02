@@ -12,8 +12,6 @@ namespace BeauTambour
             if (GameState.validationMade) return;
             
             Event.Call(GameEvents.OnNoteDeletion);
-            Event.Call(GameEvents.OnNoteDeletionDone);
-            //
             GameState.validationMade = true;
         }
     }
