@@ -8,8 +8,14 @@ namespace BeauTambour
 {
     public class SpeakerSelector : MonoBehaviour
     {
+        public GameObject arcInProgressVisual;
+
         void Awake() => Event.Register<ISpeaker>(GameEvents.OnSpeakerSelected, OnSpeakerSelected);
 
-        void OnSpeakerSelected(ISpeaker speaker) => transform.position = speaker.RuntimeLink.TopCenter;
+        void OnSpeakerSelected(ISpeaker speaker) 
+        { 
+            transform.position = speaker.RuntimeLink.TopCenter;
+            arcInProgressVisual.SetActive(!speaker.IsArcEnded);            
+        } 
     }
 }
