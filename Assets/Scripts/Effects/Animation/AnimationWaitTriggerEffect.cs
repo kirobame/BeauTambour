@@ -13,6 +13,12 @@ namespace BeauTambour
         [SerializeField] private new string name;
 
         private bool isHandled = false;
+
+        public override void Initialize()
+        {
+            base.Initialize();
+            isHandled = false;
+        }
         public override int Evaluate(int advancement, IReadOnlyList<Effect> registry, float deltaTime, out bool prolong)
         {
             if (!isHandled)
