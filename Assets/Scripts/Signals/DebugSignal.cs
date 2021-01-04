@@ -7,7 +7,7 @@ namespace BeauTambour
     public class DebugSignal : Signal
     {
         public override string Category => "debug";
-
+        
         [SerializeField] private float waitTime;
 
         public override void Execute(MonoBehaviour hook, ISpeaker speaker, string[] args) => hook.StartCoroutine(Routine(speaker, args[0]));

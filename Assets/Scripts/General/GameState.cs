@@ -34,10 +34,19 @@ namespace BeauTambour
             UsedLanguage = Language.Français;
             Note = new Note();
 
+            Event.Open(GameEvents.OnLanguageChanged);
             Event.Open(GameEvents.OnBlockPassed);
             
             Event.Open<string>(GameEvents.OnNarrativeEvent);
             Event.Register<string>(GameEvents.OnNarrativeEvent, ReceiveNarrativeEvent);
+        }
+
+        public static void ChangeLanguage(Language language)
+        {
+            if (language == UsedLanguage) return;
+
+            UsedLanguage = language;
+            Event.Call(GameEvents.OnLanguageChanged);
         }
 
         public static void RegisterSpeakerForUse(ISpeaker speaker)

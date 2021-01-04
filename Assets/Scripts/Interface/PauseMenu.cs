@@ -13,6 +13,7 @@ namespace BeauTambour
     {
         [SerializeField] private float transitionTime;
         [SerializeField] private InputMapReference[] deactivableMaps;
+        private bool[] mapStates;
         
         [Space, SerializeField] private AudioMixerSnapshot pauseSnapshot;
         [SerializeField] private AudioMixerSnapshot normalSnapshot;
@@ -23,7 +24,8 @@ namespace BeauTambour
         private void Awake()
         {
             state = false;
-            
+            mapStates = new bool[deactivableMaps.Length];
+
             Repository.Reference(this, References.PauseMenu);
             
             Event.Open(GameEvents.OnGamePaused);
@@ -41,8 +43,6 @@ namespace BeauTambour
 
             if (!state)
             {
-                foreach (var mapReference in deactivableMaps) mapReference.Value.Disable();
-
                 phaseHandler.CurrentPhase.Pause();
                 pauseSnapshot.TransitionTo(transitionTime);
                 
@@ -54,8 +54,6 @@ namespace BeauTambour
             }
             else
             {
-                foreach (var mapReference in deactivableMaps) mapReference.Value.Enable();
-                
                 phaseHandler.CurrentPhase.Resume();
                 normalSnapshot.TransitionTo(transitionTime);
                 
@@ -82,6 +80,27 @@ namespace BeauTambour
             
             ToggleAudio(state);
 
+            if (state)
+            {
+                for (var i = 0; i < deactivableMaps.Length; i++)
+                {
+                    if (mapStates[i] == true) deactivableMaps[i].Value.Enable();
+                }
+            }
+            else
+            {
+                for (var i = 0; i < deactivableMaps.Length; i++)
+                {
+                    var value = deactivableMaps[i].Value;
+                    if (value.enabled == false) mapStates[i] = false;
+                    else
+                    {
+                        value.Disable();
+                        mapStates[i] = true;
+                    }
+                }
+            }
+            
             Time.timeScale = goal;
             pauseRoutine = null;
         }

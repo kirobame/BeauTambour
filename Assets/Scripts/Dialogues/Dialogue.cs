@@ -9,7 +9,7 @@ namespace BeauTambour
 {
     public class Dialogue
     {
-        public static Dialogue Parse(string value)
+        public static Dialogue Parse(string name, string value)
         {
             var split = value.Split(new char[] {'[', ']'}, StringSplitOptions.RemoveEmptyEntries);
 
@@ -36,11 +36,18 @@ namespace BeauTambour
                 }
             }
 
-            return new Dialogue(cues.ToArray());
+            return new Dialogue(name, cues.ToArray());
         }
         
-        public Dialogue(Cue[] cues) => this.cues = cues;
+        public Dialogue(string name, Cue[] cues)
+        {
+            this.name = name;
+            this.cues = cues;
+        }
 
+        public string Name => name;
+        private string name;
+        
         public Cue this[int index] => cues[index];
         public int Length => cues.Length;
 
@@ -58,7 +65,7 @@ namespace BeauTambour
                 index++;
             }
             
-            return new Dialogue(trimmedCues);
+            return new Dialogue(name, trimmedCues);
         }
         
         public override string ToString()

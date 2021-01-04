@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e7d6df01c44a56b5d2674fb4669922, type: 3}
   m_Name: Bird
   m_EditorClassIdentifier: 
-  actor: 3
-  fontColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
+  actor: 4
+  fontColor: {r: 0.1764706, g: 0.2, b: 0.16862746, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   font: {fileID: 11400000, guid: eb1fe65780f0f804cbeb803ca1cc0158, type: 2}
   audioCharMap: {fileID: 11400000, guid: fb49052e3f50da14b9bf5beb076297c3, type: 2}

@@ -32,7 +32,7 @@ namespace BeauTambour
                 else givenAttributes = new string[0];
                 
                 dialogues = new Dialogue[texts.Length];
-                for (var i = 0; i < texts.Length; i++) dialogues[i] = Dialogue.Parse(texts[i]);
+                for (var i = 0; i < texts.Length; i++) dialogues[i] = Dialogue.Parse(name, texts[i]);
 
                 return true;
             }
@@ -86,11 +86,11 @@ namespace BeauTambour
         public void AddDialogueNode(DialogueNode node) => nodes.Add(node.Name, node);
         public void AddDialogueFailsafe(string name, string[] texts)
         {
-            if (failsafes.ContainsKey(name)) failsafes[name].TryAddOption(texts);
+            if (failsafes.ContainsKey(name)) failsafes[name].TryAddOption(this.name, texts);
             else
             {
                 var dialogueFailsafe = new DialogueFailsafe(name);
-                if (dialogueFailsafe.TryAddOption(texts)) failsafes.Add(name, dialogueFailsafe);
+                if (dialogueFailsafe.TryAddOption(this.name, texts)) failsafes.Add(name, dialogueFailsafe);
             }
         }
         #endregion
@@ -150,6 +150,8 @@ namespace BeauTambour
         void OnBlockPassed()
         {
             if (rootNodeKeys.Count == 0) return;
+            
+            Debug.Log($"{name} : {rootNodeKeys[GameState.BlockIndex]}");
             currentNode = nodes[rootNodeKeys[GameState.BlockIndex]];
         }
     }

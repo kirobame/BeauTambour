@@ -17,12 +17,12 @@ namespace BeauTambour
             public Dialogue[] Dialogues => dialogues;
             private Dialogue[] dialogues;
 
-            public void Set(Emotion emotion, string[] texts)
+            public void Set(string name, Emotion emotion, string[] texts)
             {
                 this.emotion = emotion;
                
                 dialogues = new Dialogue[texts.Length];
-                for (var i = 0; i < texts.Length; i++) dialogues[i] = Dialogue.Parse(texts[i]);
+                for (var i = 0; i < texts.Length; i++) dialogues[i] = Dialogue.Parse(name, texts[i]);
             }
         }
         #endregion
@@ -38,23 +38,23 @@ namespace BeauTambour
         
         #region Dialogue Initialization
 
-        public void AddBlockDialogue(Emotion emotion, string[] texts, int blockIndex)
+        public void AddBlockDialogue(string name, Emotion emotion, string[] texts, int blockIndex)
         {
             var difference = blockIndex - (blocks.Count - 1);
             if (difference > 0) for (var i = 0; i < difference; i++) blocks.Add(new DialogueBlock());
 
-            blocks[blockIndex].Set(emotion, texts);
+            blocks[blockIndex].Set(name, emotion, texts);
         }
-        public void AddDialogueOption(Emotion emotion, string[] texts, int blockIndex)
+        public void AddDialogueOption(string name, Emotion emotion, string[] texts, int blockIndex)
         {
             var difference = blockIndex - (options.Count - 1);
             if (difference > 0) for (var i = 0; i < difference; i++) options.Add(new Dictionary<Emotion, DialogueFailsafe>());
             
-            if (options[blockIndex].ContainsKey(emotion)) options[blockIndex][emotion].TryAddOption(texts);
+            if (options[blockIndex].ContainsKey(emotion)) options[blockIndex][emotion].TryAddOption(name, texts);
             else
             {
                 var dialogueOption = new DialogueFailsafe(emotion.ToString());
-                if (dialogueOption.TryAddOption(texts)) options[blockIndex].Add(emotion, dialogueOption);
+                if (dialogueOption.TryAddOption(name, texts)) options[blockIndex].Add(emotion, dialogueOption);
             }
         }
         #endregion

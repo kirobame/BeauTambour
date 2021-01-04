@@ -45,6 +45,7 @@ namespace BeauTambour
         OnGameResumed,
 
         OnNarrativeEvent,
+        OnLanguageChanged,
         
         OnBlockPassed,
         

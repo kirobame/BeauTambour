@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a2c662f87542f08424bb1411e0be60, type: 3}
+  m_Name: InterlocutorSwitch
+  m_EditorClassIdentifier: 
+  key: G.Rvl.1
+  interlocutor: {fileID: 11400000, guid: 262be382cf7378e4cab84b04853f08a0, type: 2}
+  exitSpeed: 15
+  exitSpot: 1
+  entrySpeed: 5
+  entrySpot: 0

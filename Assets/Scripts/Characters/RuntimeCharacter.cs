@@ -1,4 +1,5 @@
-﻿using Flux;
+﻿using System;
+using Flux;
 using UnityEngine;
 
 namespace BeauTambour
@@ -9,11 +10,16 @@ namespace BeauTambour
         [SerializeField] private Character asset;
 
         public Vector3 DialogueAnchor => dialogueAnchor.position;
-        [Space, SerializeField] private Transform dialogueAnchor;
+        [Space, SerializeField] protected Transform dialogueAnchor;
 
         public Vector3 TopCenter => topCenter.position;
-        [SerializeField] private Transform topCenter;
+        [SerializeField] protected Transform topCenter;
 
+        public Socket HeadSocket => headSocket;
+        [SerializeField] protected Socket headSocket;
+        
         void Start() => asset.Bootup(this);
+
+        public virtual void Reinitialize() { }
     }
 }

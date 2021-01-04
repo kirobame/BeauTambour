@@ -16,10 +16,10 @@ namespace BeauTambour
             dialogues = new List<Dialogue[]>();
         }
 
-        public bool TryAddOption(string[] texts)
+        public bool TryAddOption(string name, string[] texts)
         {
             var entry = new Dialogue[texts.Length];
-            for (var i = 0; i < texts.Length; i++) entry[i] = Dialogue.Parse(texts[i]);
+            for (var i = 0; i < texts.Length; i++) entry[i] = Dialogue.Parse(name, texts[i]);
             
             availableIndices.Add(availableIndices.Count);
             dialogues.Add(entry);

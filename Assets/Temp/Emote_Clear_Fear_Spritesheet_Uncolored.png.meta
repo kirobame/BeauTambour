@@ -1,0 +1,557 @@
+fileFormatVersion: 2
+guid: b7ee721445e6a5c449af97698490473a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7365570436387770687
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_0
+  - first:
+      213: -677066833394058272
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_1
+  - first:
+      213: -8912948404210666458
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_2
+  - first:
+      213: 5911606511483679478
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_3
+  - first:
+      213: 9017095947282817179
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_4
+  - first:
+      213: -2963340674741847789
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_5
+  - first:
+      213: 7600113613339370396
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_6
+  - first:
+      213: -3943220178928008435
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_7
+  - first:
+      213: 7100614521311269291
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_8
+  - first:
+      213: -238312985869137307
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_9
+  - first:
+      213: 6527104861456752809
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_10
+  - first:
+      213: 2814110776237487853
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_11
+  - first:
+      213: 6598664199951009679
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_12
+  - first:
+      213: -5332022404149188319
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_13
+  - first:
+      213: 2610532497124689577
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_14
+  - first:
+      213: 1073707593119833534
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_0
+  - first:
+      213: -3160422651214018768
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_1
+  - first:
+      213: 8338582971073420100
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_2
+  - first:
+      213: 1617400925265533452
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_3
+  - first:
+      213: 6249429125648217815
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_4
+  - first:
+      213: 4371927567242452095
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_5
+  - first:
+      213: -7872676322043408799
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_6
+  - first:
+      213: -4449882634623256858
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_7
+  - first:
+      213: 358331276417164371
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_8
+  - first:
+      213: 8500656707149543344
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_9
+  - first:
+      213: -3763669000981948911
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_10
+  - first:
+      213: -8985652172902186617
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_11
+  - first:
+      213: -6695148728244803502
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_12
+  - first:
+      213: -7353018528855078172
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_13
+  - first:
+      213: -8707836585126961266
+    second: Emote_Clear_Fear_Spritesheet_Uncolored_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd1c800e5396ee00800000000000000
+      internalID: 1073707593119833534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0374a46e75ce324d0800000000000000
+      internalID: -3160422651214018768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_2
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bd3f0580998b370800000000000000
+      internalID: 8338582971073420100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_3
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a17d97299227610800000000000000
+      internalID: 1617400925265533452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_4
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6fd3bcdae6ab650800000000000000
+      internalID: 6249429125648217815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c593d75f43cac30800000000000000
+      internalID: 4371927567242452095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_6
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e49f8a892aeb290800000000000000
+      internalID: -7872676322043408799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_7
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6f91ff157de32c0800000000000000
+      internalID: -4449882634623256858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_8
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354e1cab56c09f400800000000000000
+      internalID: 358331276417164371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_9
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7b03b9c3668f570800000000000000
+      internalID: 8500656707149543344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11652500cf2c4cbc0800000000000000
+      internalID: -3763669000981948911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_11
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781c2fee4fc8c4380800000000000000
+      internalID: -8985652172902186617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_12
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2586f8e34bd0613a0800000000000000
+      internalID: -6695148728244803502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_13
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea4ab02b94d4f990800000000000000
+      internalID: -7353018528855078172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Uncolored_14
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f5b5d03cc872780800000000000000
+      internalID: -8707836585126961266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

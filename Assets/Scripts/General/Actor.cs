@@ -6,9 +6,11 @@
         
         Frog,
         
+        Bear,
         Mouse,
         Bird,
         
-        Cat
+        Cat,
+        Wolf,
     }
 }
