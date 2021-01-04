@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using Flux;
+using UnityEngine;
 using Event = Flux.Event;
 
 namespace BeauTambour
 {
     public class SpeakerSelectionPhase : Phase
     {
+        [SerializeField] private InputMapReference inputMap;
+
         public override PhaseCategory Category => PhaseCategory.SpeakerSelection;
 
         public ISpeaker SelectedSpeaker => sortedSpeakers[SpeakerIndex];
@@ -21,12 +24,14 @@ namespace BeauTambour
             Event.Open(GameEvents.OnSpeakerChoiceDone);
 
             Event.Register(GameEvents.OnSpeakerChoiceDone, OnSpeakerChoiceDone);
+            Event.Register(GameEvents.OnSpeakerChoice, OnSpeakerChoice);
         }
 
         public override void Begin()
         {
             base.Begin();
-            
+            inputMap.Value.Enable();
+
             SpeakerIndex = 0;
             sortedSpeakers = GameState.GetSortedSpeakers();
             
@@ -49,6 +54,11 @@ namespace BeauTambour
         void OnSpeakerChoiceDone()
         {
             owner.Play(PhaseCategory.EmotionDrawing);
+        }
+        
+        void OnSpeakerChoice()
+        {
+            inputMap.Value.Disable();
         }
     }
 }
