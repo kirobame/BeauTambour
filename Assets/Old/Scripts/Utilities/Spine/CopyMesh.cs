@@ -12,6 +12,15 @@ namespace Utilities.Spine
         [SerializeField]
         private MeshFilter copyTo = default;
         
+        public MeshFilter CopyFrom
+        {
+            set
+            {
+                if (value == null) return;
+                copyFrom = value;
+            }
+        }
+
         void LateUpdate()
         {
             if (copyTo == null || copyFrom == null)
