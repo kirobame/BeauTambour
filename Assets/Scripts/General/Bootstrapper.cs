@@ -11,8 +11,11 @@ namespace BeauTambour
         [SerializeField] private Encounter encounter;
         [SerializeField] private bool useBackup;
         [SerializeField] private bool playIntro;
+        [SerializeField] private bool skipStart;
 
-        void Awake() => GameState.Bootup();
+        [Space, SerializeField] private int staringBlock;
+
+        void Awake() => GameState.Bootup(staringBlock - 1);
         void Start()
         {
             if (!playIntro) Event.Register(GameEvents.OnEncounterBootedUp, PlayFirstPhase);
@@ -41,7 +44,15 @@ namespace BeauTambour
         void PlayFirstPhase()
         {
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
-            phaseHandler.Play(PhaseCategory.Dialogue);
+
+            if (skipStart)
+            {
+                var dialoguePhase = phaseHandler.Get<DialoguePhase>(PhaseCategory.Dialogue);
+                dialoguePhase.SkipBootUp();
+                
+                phaseHandler.Play(PhaseCategory.SpeakerSelection);
+            }
+            else phaseHandler.Play(PhaseCategory.Dialogue);
         }
     }
 }

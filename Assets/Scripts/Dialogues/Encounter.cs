@@ -14,9 +14,12 @@ namespace BeauTambour
     public class Encounter : ScriptableObject
     {
         public Interlocutor Interlocutor { get; private set; }
+
+        public int BlockCount => blockCount;
         
         [SerializeField] private CSVRecipient dialogueRecipient;
         [SerializeField] private int sheetIndex;
+        [SerializeField] private int blockCount;
 
         [Space, SerializeField] private Interlocutor initialInterlocutor;
         [SerializeField] private Musician[] initialMusicians;

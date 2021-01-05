@@ -70,6 +70,8 @@ namespace BeauTambour
         
         public Dialogue[] GetDialogues(Emotion emotion)
         {
+            Debug.Log(blocks.Count);
+            
             var block = blocks[GameState.BlockIndex];
             if (block.Emotion == emotion)
             {

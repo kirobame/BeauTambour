@@ -1,112 +1,43 @@
 fileFormatVersion: 2
-guid: e2b50ad30a08ccf40aab61bd9c398a52
+guid: 13af087f0a06b4e45b33aa8975be1606
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4359794777034035514
-    second: Spritesheet_Anger_0
+      213: 6095705391640074916
+    second: emote_clear_joy_spritesheet_0
   - first:
-      213: 7961727415019369012
-    second: Spritesheet_Anger_1
+      213: 4049023128778283383
+    second: emote_clear_joy_spritesheet_1
   - first:
-      213: -4774450503375606068
-    second: Spritesheet_Anger_2
+      213: 1294784016530083258
+    second: emote_clear_joy_spritesheet_2
   - first:
-      213: 6222114784086082
-    second: Spritesheet_Anger_3
+      213: 7529389728956594863
+    second: emote_clear_joy_spritesheet_3
   - first:
-      213: 1291729933870010858
-    second: Spritesheet_Anger_4
+      213: -70204763138813311
+    second: emote_clear_joy_spritesheet_4
   - first:
-      213: 415235905175897987
-    second: Spritesheet_Anger_5
+      213: -7660872977567529614
+    second: emote_clear_joy_spritesheet_5
   - first:
-      213: 5498938360908729911
-    second: Spritesheet_Anger_6
+      213: 2776747594267760066
+    second: emote_clear_joy_spritesheet_6
   - first:
-      213: -2762960527378042906
-    second: Spritesheet_Anger_7
+      213: 8158836566182364129
+    second: emote_clear_joy_spritesheet_7
   - first:
-      213: -7968345724482030385
-    second: Spritesheet_Anger_8
+      213: -9146921981889114244
+    second: emote_clear_joy_spritesheet_8
   - first:
-      213: -3479886570740151824
-    second: Spritesheet_Anger_9
+      213: -389142310403483674
+    second: emote_clear_joy_spritesheet_9
   - first:
-      213: -2878589297691411835
-    second: Spritesheet_Anger_10
+      213: 6968710508822847989
+    second: emote_clear_joy_spritesheet_10
   - first:
-      213: 1908021052767705842
-    second: Spritesheet_Anger_11
-  - first:
-      213: 5502299104373704755
-    second: Spritesheet_Anger_12
-  - first:
-      213: 2291123473859964764
-    second: Spritesheet_Anger_13
-  - first:
-      213: -8597526010014232878
-    second: Spritesheet_Anger_14
-  - first:
-      213: -8752005650585755960
-    second: Spritesheet_Anger_15
-  - first:
-      213: 8313507915786094940
-    second: Spritesheet_Anger_16
-  - first:
-      213: -8920960817254868052
-    second: Spritesheet_Anger_17
-  - first:
-      213: 2794891031473109883
-    second: Spritesheet_Anger_18
-  - first:
-      213: -7411549422168885859
-    second: Spritesheet_Anger_19
-  - first:
-      213: -7331258062308231207
-    second: Spritesheet_Anger_0
-  - first:
-      213: 6437133751237124749
-    second: Spritesheet_Anger_1
-  - first:
-      213: 891284150586671292
-    second: Spritesheet_Anger_2
-  - first:
-      213: 3114880196033781155
-    second: Spritesheet_Anger_3
-  - first:
-      213: -6439222706337434781
-    second: Spritesheet_Anger_4
-  - first:
-      213: 8501595391736742952
-    second: Spritesheet_Anger_5
-  - first:
-      213: 5546232305505267475
-    second: Spritesheet_Anger_6
-  - first:
-      213: 1054636022537293241
-    second: Spritesheet_Anger_7
-  - first:
-      213: -7234121717564641254
-    second: Spritesheet_Anger_8
-  - first:
-      213: -7783555848403237869
-    second: Spritesheet_Anger_9
-  - first:
-      213: 3824833585486782420
-    second: Spritesheet_Anger_10
-  - first:
-      213: -3712860756311212048
-    second: Spritesheet_Anger_11
-  - first:
-      213: -5647105648955666920
-    second: Spritesheet_Anger_13
-  - first:
-      213: -8663027171571301426
-    second: Spritesheet_Anger_14
-  - first:
-      213: -4458634360490197253
-    second: Spritesheet_Anger_15
+      213: 7565368687048219091
+    second: emote_clear_joy_spritesheet_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -240,112 +171,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_Anger_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1305
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d7366f82a3224a90800000000000000
-      internalID: -7331258062308231207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Anger_1
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 1305
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d82aa269a0b455950800000000000000
-      internalID: 6437133751237124749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Anger_2
-      rect:
-        serializedVersion: 2
-        x: 868
-        y: 1305
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb087a5763a7e5c00800000000000000
-      internalID: 891284150586671292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Anger_3
-      rect:
-        serializedVersion: 2
-        x: 1302
-        y: 1305
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ad1e72f8074a3b20800000000000000
-      internalID: 3114880196033781155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Anger_4
-      rect:
-        serializedVersion: 2
-        x: 1736
-        y: 1305
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 363b027a01943a6a0800000000000000
-      internalID: -6439222706337434781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Anger_5
+      name: emote_clear_joy_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -359,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 824019427fbbbf570800000000000000
-      internalID: 8501595391736742952
+      spriteID: 4aad32cd1cb489450800000000000000
+      internalID: 6095705391640074916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_Anger_6
+      name: emote_clear_joy_spritesheet_1
       rect:
         serializedVersion: 2
         x: 434
@@ -380,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31fef6b85ec28fc40800000000000000
-      internalID: 5546232305505267475
+      spriteID: 7799b2e3515013830800000000000000
+      internalID: 4049023128778283383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_Anger_7
+      name: emote_clear_joy_spritesheet_2
       rect:
         serializedVersion: 2
         x: 868
@@ -401,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bd8aa2ffd1d2ae00800000000000000
-      internalID: 1054636022537293241
+      spriteID: abd0126f33ff7f110800000000000000
+      internalID: 1294784016530083258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_Anger_8
+      name: emote_clear_joy_spritesheet_3
       rect:
         serializedVersion: 2
         x: 1302
@@ -422,35 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a10fe9a30ac3b9b90800000000000000
-      internalID: -7234121717564641254
+      spriteID: faabee9e014cd7860800000000000000
+      internalID: 7529389728956594863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_Anger_9
-      rect:
-        serializedVersion: 2
-        x: 1736
-        y: 870
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 314c286e1314bf390800000000000000
-      internalID: -7783555848403237869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Anger_10
+      name: emote_clear_joy_spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -464,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4df5ce391e9841530800000000000000
-      internalID: 3824833585486782420
+      spriteID: 182129fc325960ff0800000000000000
+      internalID: -70204763138813311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_Anger_11
+      name: emote_clear_joy_spritesheet_5
       rect:
         serializedVersion: 2
         x: 434
@@ -485,14 +290,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fff49f40d4497cc0800000000000000
-      internalID: -3712860756311212048
+      spriteID: 275c2bead9c1fa590800000000000000
+      internalID: -7660872977567529614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_Anger_13
+      name: emote_clear_joy_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c51043a93df88620800000000000000
+      internalID: 2776747594267760066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_joy_spritesheet_7
       rect:
         serializedVersion: 2
         x: 1302
@@ -506,35 +332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81e45e8f45371a1b0800000000000000
-      internalID: -5647105648955666920
+      spriteID: 1e384cb21a20a3170800000000000000
+      internalID: 8158836566182364129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_Anger_14
-      rect:
-        serializedVersion: 2
-        x: 1736
-        y: 435
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec38fe6afaeb6c780800000000000000
-      internalID: -8663027171571301426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_Anger_15
+      name: emote_clear_joy_spritesheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -548,8 +353,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfe71a70cafbf12c0800000000000000
-      internalID: -4458634360490197253
+      spriteID: c7f89418bea9f0180800000000000000
+      internalID: -9146921981889114244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_joy_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e75355612d799af0800000000000000
+      internalID: -389142310403483674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_joy_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1eae43945d5b060800000000000000
+      internalID: 6968710508822847989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_joy_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d95f52ecb69df860800000000000000
+      internalID: 7565368687048219091
       vertices: []
       indices: 
       edges: []
@@ -557,7 +425,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3819754692526584b89145e615025a2f
+    spriteID: 8d05a02a2b081e34fa8b3eeca912239c
     internalID: 0
     vertices: []
     indices: 

@@ -14,15 +14,20 @@ namespace BeauTambour
         public IPhase CurrentPhase => phases[currentCategory];
         public PhaseCategory CurrentCategory => currentCategory;
         private PhaseCategory currentCategory;
+
+        private bool isActive;
         
         void Awake()
         {
+            isActive = true;
+            
             phases = new Dictionary<PhaseCategory, IPhase>();
             currentCategory = PhaseCategory.None;
 
             Repository.Reference(this, References.PhaseHandler);
         }
 
+        public bool SetActive(bool state) => isActive = state;
         public TPhase Get<TPhase>(PhaseCategory category) => (TPhase)phases[category];
 
         public bool TryRegister(IPhase phase)
@@ -42,7 +47,7 @@ namespace BeauTambour
 
         public void Play(PhaseCategory category)
         {
-            if (!phases.ContainsKey(category)) return;
+            if (!isActive || !phases.ContainsKey(category)) return;
             
             Debug.Log($"-||--> SWITCHING TO : {category}");
             if (currentCategory != PhaseCategory.None) CurrentPhase.End();

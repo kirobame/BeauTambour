@@ -10,6 +10,8 @@ namespace BeauTambour
 
         private bool hasBeenBootedUp;
 
+        public void SkipBootUp() => hasBeenBootedUp = true;
+
         public override void Begin()
         {
             base.Begin();

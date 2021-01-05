@@ -1,97 +1,43 @@
 fileFormatVersion: 2
-guid: b7ee721445e6a5c449af97698490473a
+guid: 086cbe11845e7754ebc36f57f4b6efec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7365570436387770687
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_0
+      213: 1458200574919176793
+    second: emote_clear_disgust_spritesheet_0
   - first:
-      213: -677066833394058272
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_1
+      213: 5002925146650707195
+    second: emote_clear_disgust_spritesheet_1
   - first:
-      213: -8912948404210666458
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_2
+      213: -5418418140551287538
+    second: emote_clear_disgust_spritesheet_2
   - first:
-      213: 5911606511483679478
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_3
+      213: 8933655721295355403
+    second: emote_clear_disgust_spritesheet_3
   - first:
-      213: 9017095947282817179
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_4
+      213: -1877282123090416995
+    second: emote_clear_disgust_spritesheet_4
   - first:
-      213: -2963340674741847789
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_5
+      213: 4217874996088546279
+    second: emote_clear_disgust_spritesheet_5
   - first:
-      213: 7600113613339370396
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_6
+      213: -2899709531253890894
+    second: emote_clear_disgust_spritesheet_6
   - first:
-      213: -3943220178928008435
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_7
+      213: -6604197463822102739
+    second: emote_clear_disgust_spritesheet_7
   - first:
-      213: 7100614521311269291
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_8
+      213: 5021152593476163072
+    second: emote_clear_disgust_spritesheet_8
   - first:
-      213: -238312985869137307
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_9
+      213: 3121410602072971695
+    second: emote_clear_disgust_spritesheet_9
   - first:
-      213: 6527104861456752809
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_10
+      213: -1444839407709898726
+    second: emote_clear_disgust_spritesheet_10
   - first:
-      213: 2814110776237487853
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_11
-  - first:
-      213: 6598664199951009679
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_12
-  - first:
-      213: -5332022404149188319
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_13
-  - first:
-      213: 2610532497124689577
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_14
-  - first:
-      213: 1073707593119833534
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_0
-  - first:
-      213: -3160422651214018768
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_1
-  - first:
-      213: 8338582971073420100
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_2
-  - first:
-      213: 1617400925265533452
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_3
-  - first:
-      213: 6249429125648217815
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_4
-  - first:
-      213: 4371927567242452095
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_5
-  - first:
-      213: -7872676322043408799
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_6
-  - first:
-      213: -4449882634623256858
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_7
-  - first:
-      213: 358331276417164371
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_8
-  - first:
-      213: 8500656707149543344
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_9
-  - first:
-      213: -3763669000981948911
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_10
-  - first:
-      213: -8985652172902186617
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_11
-  - first:
-      213: -6695148728244803502
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_12
-  - first:
-      213: -7353018528855078172
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_13
-  - first:
-      213: -8707836585126961266
-    second: Emote_Clear_Fear_Spritesheet_Uncolored_14
+      213: -6854250753878481635
+    second: emote_clear_disgust_spritesheet_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +68,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: 1
+    aniso: 2
     mipBias: -100
     wrapU: 1
     wrapV: 1
@@ -225,7 +171,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_0
+      name: emote_clear_disgust_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -239,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd1c800e5396ee00800000000000000
-      internalID: 1073707593119833534
+      spriteID: 952f35f62b19c3410800000000000000
+      internalID: 1458200574919176793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_1
+      name: emote_clear_disgust_spritesheet_1
       rect:
         serializedVersion: 2
         x: 434
@@ -260,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0374a46e75ce324d0800000000000000
-      internalID: -3160422651214018768
+      spriteID: bf40cfb0ae5fd6540800000000000000
+      internalID: 5002925146650707195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_2
+      name: emote_clear_disgust_spritesheet_2
       rect:
         serializedVersion: 2
         x: 868
@@ -281,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44bd3f0580998b370800000000000000
-      internalID: 8338582971073420100
+      spriteID: e0d68efb869edc4b0800000000000000
+      internalID: -5418418140551287538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_3
+      name: emote_clear_disgust_spritesheet_3
       rect:
         serializedVersion: 2
         x: 1302
@@ -302,35 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0a17d97299227610800000000000000
-      internalID: 1617400925265533452
+      spriteID: b0e1275cb88bafb70800000000000000
+      internalID: 8933655721295355403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_4
-      rect:
-        serializedVersion: 2
-        x: 1736
-        y: 870
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d6fd3bcdae6ab650800000000000000
-      internalID: 6249429125648217815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_5
+      name: emote_clear_disgust_spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -344,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7c593d75f43cac30800000000000000
-      internalID: 4371927567242452095
+      spriteID: d9a2106fadd82f5e0800000000000000
+      internalID: -1877282123090416995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_6
+      name: emote_clear_disgust_spritesheet_5
       rect:
         serializedVersion: 2
         x: 434
@@ -365,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16e49f8a892aeb290800000000000000
-      internalID: -7872676322043408799
+      spriteID: 7e32cd036f6e88a30800000000000000
+      internalID: 4217874996088546279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_7
+      name: emote_clear_disgust_spritesheet_6
       rect:
         serializedVersion: 2
         x: 868
@@ -386,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e6f91ff157de32c0800000000000000
-      internalID: -4449882634623256858
+      spriteID: 2b02ccd6b8922c7d0800000000000000
+      internalID: -2899709531253890894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_8
+      name: emote_clear_disgust_spritesheet_7
       rect:
         serializedVersion: 2
         x: 1302
@@ -407,35 +332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 354e1cab56c09f400800000000000000
-      internalID: 358331276417164371
+      spriteID: d2f095ea56d2954a0800000000000000
+      internalID: -6604197463822102739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_9
-      rect:
-        serializedVersion: 2
-        x: 1736
-        y: 435
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b7b03b9c3668f570800000000000000
-      internalID: 8500656707149543344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_10
+      name: emote_clear_disgust_spritesheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -449,14 +353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11652500cf2c4cbc0800000000000000
-      internalID: -3763669000981948911
+      spriteID: 0069d293ea7bea540800000000000000
+      internalID: 5021152593476163072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_11
+      name: emote_clear_disgust_spritesheet_9
       rect:
         serializedVersion: 2
         x: 434
@@ -470,14 +374,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 781c2fee4fc8c4380800000000000000
-      internalID: -8985652172902186617
+      spriteID: fa992b6976a715b20800000000000000
+      internalID: 3121410602072971695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_12
+      name: emote_clear_disgust_spritesheet_10
       rect:
         serializedVersion: 2
         x: 868
@@ -491,14 +395,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2586f8e34bd0613a0800000000000000
-      internalID: -6695148728244803502
+      spriteID: a1837f9b636e2fbe0800000000000000
+      internalID: -1444839407709898726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_13
+      name: emote_clear_disgust_spritesheet_11
       rect:
         serializedVersion: 2
         x: 1302
@@ -512,29 +416,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ea4ab02b94d4f990800000000000000
-      internalID: -7353018528855078172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Emote_Clear_Fear_Spritesheet_Uncolored_14
-      rect:
-        serializedVersion: 2
-        x: 1736
-        y: 0
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8f5b5d03cc872780800000000000000
-      internalID: -8707836585126961266
+      spriteID: d15ae95314fc0e0a0800000000000000
+      internalID: -6854250753878481635
       vertices: []
       indices: 
       edges: []
@@ -542,7 +425,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 588e0e64b6fc5284585fa82584aa7ba0
     internalID: 0
     vertices: []
     indices: 

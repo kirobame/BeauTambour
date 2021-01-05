@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Flux;
-using UnityEngine;
 using Event = Flux.Event;
 
 namespace BeauTambour
@@ -22,7 +21,7 @@ namespace BeauTambour
 
         private static Dictionary<string, EventBoundDialogue> eventDialogues;
 
-        public static void Bootup()
+        public static void Bootup(int blockIndex)
         {
             finishedArcsCount = 0;
             arcsMinimumCompletion = false;
@@ -30,12 +29,13 @@ namespace BeauTambour
             eventDialogues = new Dictionary<string, EventBoundDialogue>();
             speakers = new Dictionary<Actor, ISpeaker>();
 
-            BlockIndex = -1;
+            BlockIndex = blockIndex - 1;
             UsedLanguage = Language.Français;
             Note = new Note();
 
             Event.Open(GameEvents.OnLanguageChanged);
             Event.Open(GameEvents.OnBlockPassed);
+            Event.Open(GameEvents.OnEncounterEnd);
             
             Event.Open<string>(GameEvents.OnNarrativeEvent);
             Event.Register<string>(GameEvents.OnNarrativeEvent, ReceiveNarrativeEvent);
@@ -114,9 +114,19 @@ namespace BeauTambour
             
             finishedArcsCount = 0;
             arcsMinimumCompletion = false;
-            
+
             BlockIndex++;
-            Event.Call(GameEvents.OnBlockPassed);
+
+            if (BlockIndex >= encounter.BlockCount)
+            {
+                var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
+                phaseHandler.SetActive(false);
+
+                Event.Register<Dialogue>(GameEvents.OnDialogueFinished, dialogue => OnEnd());
+            }
+            else Event.Call(GameEvents.OnBlockPassed);
         }
+
+        private static void OnEnd() => Event.Call(GameEvents.OnEncounterEnd);
     }
 }

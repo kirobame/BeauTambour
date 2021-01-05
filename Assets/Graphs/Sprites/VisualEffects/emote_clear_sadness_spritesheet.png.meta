@@ -1,37 +1,43 @@
 fileFormatVersion: 2
-guid: 4410a95a645b2404783ebeb4a58bc812
+guid: f751624f34f97344f87cb668220f51b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -127684247858063280
-    second: Spritesheet_surprise_0
+      213: 9031631908908035323
+    second: emote_clear_sadness_spritesheet_0
   - first:
-      213: -7733372074265174709
-    second: Spritesheet_surprise_1
+      213: 4461861739978641067
+    second: emote_clear_sadness_spritesheet_1
   - first:
-      213: -2444596631299366099
-    second: Spritesheet_surprise_2
+      213: 3815664479927139424
+    second: emote_clear_sadness_spritesheet_2
   - first:
-      213: 7035586114245949025
-    second: Spritesheet_surprise_3
+      213: -7230154502682846492
+    second: emote_clear_sadness_spritesheet_3
   - first:
-      213: 1615337926886440148
-    second: Spritesheet_surprise_4
+      213: 8043701419728618852
+    second: emote_clear_sadness_spritesheet_4
   - first:
-      213: -7005911885480213197
-    second: Spritesheet_surprise_0
+      213: -1461173228593321635
+    second: emote_clear_sadness_spritesheet_5
   - first:
-      213: 6270623639229516646
-    second: Spritesheet_surprise_1
+      213: -2609435317420998103
+    second: emote_clear_sadness_spritesheet_6
   - first:
-      213: -959192583121258279
-    second: Spritesheet_surprise_2
+      213: 8062622636658546438
+    second: emote_clear_sadness_spritesheet_7
   - first:
-      213: -2032877395915122537
-    second: Spritesheet_surprise_3
+      213: -1354770863111997026
+    second: emote_clear_sadness_spritesheet_8
   - first:
-      213: 8739461696299948758
-    second: Spritesheet_surprise_4
+      213: 2964407338270712568
+    second: emote_clear_sadness_spritesheet_9
+  - first:
+      213: -9035767407793610952
+    second: emote_clear_sadness_spritesheet_10
+  - first:
+      213: -4694147231842429369
+    second: emote_clear_sadness_spritesheet_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,7 +171,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_surprise_0
+      name: emote_clear_sadness_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfceb889e5dc65d70800000000000000
+      internalID: 9031631908908035323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_sadness_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae4550dc97bbed30800000000000000
+      internalID: 4461861739978641067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_sadness_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cf124d0a6f3f430800000000000000
+      internalID: 3815664479927139424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_sadness_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ead56c69c459ab90800000000000000
+      internalID: -7230154502682846492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_sadness_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465ca3ae2d7f0af60800000000000000
+      internalID: 8043701419728618852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_sadness_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d596262b0bed8bbe0800000000000000
+      internalID: -1461173228593321635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_sadness_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92243c8776c69cbd0800000000000000
+      internalID: -2609435317420998103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_sadness_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6075e08029034ef60800000000000000
+      internalID: 8062622636658546438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clear_sadness_spritesheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 335c342524006ce90800000000000000
-      internalID: -7005911885480213197
+      spriteID: e99f820f313e23de0800000000000000
+      internalID: -1354770863111997026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_surprise_1
+      name: emote_clear_sadness_spritesheet_9
       rect:
         serializedVersion: 2
         x: 434
@@ -200,14 +374,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66b41780afab50750800000000000000
-      internalID: 6270623639229516646
+      spriteID: 8f2ef2f94c0b32920800000000000000
+      internalID: 2964407338270712568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_surprise_2
+      name: emote_clear_sadness_spritesheet_10
       rect:
         serializedVersion: 2
         x: 868
@@ -221,50 +395,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d83edb7d6340b2f0800000000000000
-      internalID: -959192583121258279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_surprise_3
-      rect:
-        serializedVersion: 2
-        x: 1302
-        y: 0
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 798de8077c4c9c3e0800000000000000
-      internalID: -2032877395915122537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_surprise_4
-      rect:
-        serializedVersion: 2
-        x: 1736
-        y: 0
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6da5710fb1ec84970800000000000000
-      internalID: 8739461696299948758
+      spriteID: 83fd8698a618a9280800000000000000
+      internalID: -9035767407793610952
       vertices: []
       indices: 
       edges: []
@@ -272,7 +404,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f4732571be07843499686c456d0cb720
+    spriteID: e299931e92ab32b40b279e1647b26ed1
     internalID: 0
     vertices: []
     indices: 

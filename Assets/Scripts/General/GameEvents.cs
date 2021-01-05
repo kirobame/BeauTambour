@@ -48,6 +48,7 @@ namespace BeauTambour
         OnLanguageChanged,
         
         OnBlockPassed,
+        OnEncounterEnd,
         
         OnStickUsed,
     }

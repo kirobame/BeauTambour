@@ -114,6 +114,7 @@ namespace BeauTambour
         {
             if (currentNode.Childs[0] == "Empty") return new Dialogue[] { failsafes[currentNode.Failsafe].GetDialogue() };
             
+            Debug.Log($"[{Actor}] : {currentNode.Name}");
             foreach (var childName in currentNode.Childs)
             {
                 var child = nodes[childName];

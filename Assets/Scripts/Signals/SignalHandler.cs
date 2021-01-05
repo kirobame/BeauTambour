@@ -39,7 +39,7 @@ namespace BeauTambour
 
             if (split.Length != 3)
             {
-                Debug.LogError($"Signal parsing error -:- There must be 3 parts in a signal -||- ({message})");
+                Debug.LogWarning($"Signal parsing error -:- There must be 3 parts in a signal -||- ({message})");
                 return;
             }
 
@@ -48,36 +48,36 @@ namespace BeauTambour
 
             if (mainArgs.Length != 3)
             {
-                Debug.LogError($"Signal parsing error -:- There must be 3 subargs in the 2nd part -||- ({message})");
+                Debug.LogWarning($"Signal parsing error -:- There must be 3 subargs in the 2nd part -||- ({message})");
                 return;
             }
 
             if (!Enum.TryParse<Emotion>(mainArgs[0].FirstToUpper(), out var emotion))
             {
-                Debug.LogError($"Signal parsing error -:- The emotion argument could not be parsed -||- ({message})");
+                Debug.LogWarning($"Signal parsing error -:- The emotion argument could not be parsed -||- ({message})");
                 return;
             }
             if (!Enum.TryParse<Actor>(mainArgs[1].FirstToUpper(), out var actor))
             {
-                Debug.LogError($"Signal parsing error -:- The actor argument could not be parsed -||- ({message})");
+                Debug.LogWarning($"Signal parsing error -:- The actor argument could not be parsed -||- ({message})");
                 return;
             }
 
             var speaker = Extensions.GetCharacter<Character>(actor) as ISpeaker;
             if (speaker == null)
             {
-                Debug.LogError($"Signal error -:- There is no corresponding character -||- ({message})");
+                Debug.LogWarning($"Signal error -:- There is no corresponding character -||- ({message})");
                 return;
             }
 
             if (!bool.TryParse(mainArgs[2], out var await))
             {
-                Debug.LogError($"Signal parsing error -:- Await argument could not be parsed -||- ({message})");
+                Debug.LogWarning($"Signal parsing error -:- Await argument could not be parsed -||- ({message})");
                 return;
             }
             if (!signalCollection.TrySelect(category, emotion, out var signal))
             {
-                Debug.LogError($"Signal error -:- No signal found for the given arguments -||- ({message})");
+                Debug.LogWarning($"Signal error -:- No signal found for the given arguments -||- ({message})");
                 return;
             }
 
