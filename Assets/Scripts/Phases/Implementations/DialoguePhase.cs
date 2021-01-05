@@ -10,6 +10,8 @@ namespace BeauTambour
 
         private bool hasBeenBootedUp;
 
+        public void SkipBootUp() => hasBeenBootedUp = true;
+
         public override void Begin()
         {
             base.Begin();
@@ -22,9 +24,9 @@ namespace BeauTambour
             else
             {
                 var dialogueHandler = Repository.GetSingle<DialogueHandler>(References.DialogueHandler);
-                var dialogue = GameState.Note.speaker.GetDialogue(GameState.Note.emotion);
-            
-                dialogueHandler.Enqueue(dialogue);
+                var dialogues = GameState.Note.speaker.GetDialogues(GameState.Note.emotion);
+
+                foreach (var dialogue in dialogues) dialogueHandler.Enqueue(dialogue);
             }
         }
     }

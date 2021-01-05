@@ -4,9 +4,9 @@ namespace BeauTambour
 {
     public class RuntimeInterlocutor : RuntimeCharacter
     {
-        [Space, SerializeField] private Animator animator;
+        public SpeakerIntermediary Intermediary => intermediary;
+        [Space, SerializeField] private SpeakerIntermediary intermediary;
 
-        public void BeginTalking() => animator.SetBool("IsTalking", true);
-        public void StopTalking() => animator.SetBool("IsTalking", false);
+        public override void Reinitialize() => dialogueAnchor.localPosition = Vector3.zero;
     }
 }

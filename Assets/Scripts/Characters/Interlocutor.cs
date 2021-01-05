@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
@@ -16,12 +17,12 @@ namespace BeauTambour
             public Dialogue[] Dialogues => dialogues;
             private Dialogue[] dialogues;
 
-            public void Set(Emotion emotion, string[] texts)
+            public void Set(string name, Emotion emotion, string[] texts)
             {
                 this.emotion = emotion;
                
                 dialogues = new Dialogue[texts.Length];
-                for (var i = 0; i < texts.Length; i++) dialogues[i] = Dialogue.Parse(texts[i]);
+                for (var i = 0; i < texts.Length; i++) dialogues[i] = Dialogue.Parse(name, texts[i]);
             }
         }
         #endregion
@@ -41,23 +42,23 @@ namespace BeauTambour
         
         #region Dialogue Initialization
 
-        public void AddBlockDialogue(Emotion emotion, string[] texts, int blockIndex)
+        public void AddBlockDialogue(string name, Emotion emotion, string[] texts, int blockIndex)
         {
             var difference = blockIndex - (blocks.Count - 1);
             if (difference > 0) for (var i = 0; i < difference; i++) blocks.Add(new DialogueBlock());
 
-            blocks[blockIndex].Set(emotion, texts);
+            blocks[blockIndex].Set(name, emotion, texts);
         }
-        public void AddDialogueOption(Emotion emotion, string[] texts, int blockIndex)
+        public void AddDialogueOption(string name, Emotion emotion, string[] texts, int blockIndex)
         {
             var difference = blockIndex - (options.Count - 1);
             if (difference > 0) for (var i = 0; i < difference; i++) options.Add(new Dictionary<Emotion, DialogueFailsafe>());
             
-            if (options[blockIndex].ContainsKey(emotion)) options[blockIndex][emotion].TryAddOption(texts);
+            if (options[blockIndex].ContainsKey(emotion)) options[blockIndex][emotion].TryAddOption(name, texts);
             else
             {
                 var dialogueOption = new DialogueFailsafe(emotion.ToString());
-                if (dialogueOption.TryAddOption(texts)) options[blockIndex].Add(emotion, dialogueOption);
+                if (dialogueOption.TryAddOption(name, texts)) options[blockIndex].Add(emotion, dialogueOption);
             }
         }
         #endregion
@@ -66,34 +67,29 @@ namespace BeauTambour
         {
             base.Bootup(runtimeCharacter);
             CastedRuntimeLink = (RuntimeInterlocutor)runtimeCharacter;
+            
+            blocks = new List<DialogueBlock>();
+            options = new List<Dictionary<Emotion, DialogueFailsafe>>();
         }
         
-        public Dialogue GetDialogue(Emotion emotion)
+        public Dialogue[] GetDialogues(Emotion emotion)
         {
+            Debug.Log(blocks.Count);
+            
             var block = blocks[GameState.BlockIndex];
             if (block.Emotion == emotion)
             {
                 Debug.Log("Go to next block");
-                
-                GameState.UnregisterSpeakerForUse(this);
                 GameState.PassBlock();
-                
-                return block.Dialogues[(int)GameState.UsedLanguage];
+
+                return new Dialogue[] { block.Dialogues[(int)GameState.UsedLanguage] };
             }
-            else return options[GameState.BlockIndex][emotion].GetDialogue();
+            else return new Dialogue[] { options[GameState.BlockIndex][emotion].GetDialogue() };
         }
 
-        void ISpeaker.BeginTalking() => CastedRuntimeLink.BeginTalking();
-        void ISpeaker.StopTalking() => CastedRuntimeLink.StopTalking();
-        
-        void ReceiveNarrativeEvent(string message)
-        {
-            switch (message)
-            {
-                case "HarmonyBegun" :
-                    GameState.RegisterSpeakerForUse(this);
-                    break;
-            }
-        }
+        void ISpeaker.BeginTalking() => CastedRuntimeLink.Intermediary.BeginTalking();
+        void ISpeaker.StopTalking() => CastedRuntimeLink.Intermediary.StopTalking();
+
+        void ISpeaker.PlayMelodyFor(Emotion emotion) => RuntimeLink.Delay(() => Event.Call(GameEvents.OnNoteValidationDone), 1);
     }
 }

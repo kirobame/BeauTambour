@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6318084767594822544}
   - component: {fileID: 6318084767594822547}
+  - component: {fileID: 8132125443632432337}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -31,6 +32,7 @@ Transform:
   - {fileID: 3054443412200171713}
   - {fileID: 6318084767949486948}
   - {fileID: 6318084769163878324}
+  - {fileID: 5371664896528619252}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49,7 +51,23 @@ MonoBehaviour:
   asset: {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}
   dialogueAnchor: {fileID: 6318084767949486948}
   topCenter: {fileID: 6318084769163878324}
+  headSocket: {fileID: 4575459504835025753}
+  intermediary: {fileID: 8132125443632432337}
+--- !u!114 &8132125443632432337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318084767594822546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673f57457f3f48c4bfb5cc88de704a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   animator: {fileID: 3054443412200171740}
+  emotionMelodyRegistry: {fileID: 11400000, guid: 2ebf166ec892c034883f9061a7d50a9e,
+    type: 2}
 --- !u!1 &6318084767949486951
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +128,53 @@ Transform:
   m_Father: {fileID: 6318084767594822544}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8246915366618940846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5371664896528619252}
+  - component: {fileID: 4575459504835025753}
+  m_Layer: 0
+  m_Name: HeadSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5371664896528619252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8246915366618940846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6318084767594822544}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4575459504835025753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8246915366618940846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa7a739eddc4e03844d1ce22a50d645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spine: {fileID: 3054443412200171741}
+  root: {fileID: 6318084767594822544}
+  attach: {fileID: 5371664896528619252}
+  bone: head
 --- !u!1001 &6318084768082923163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201,3 +266,15 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 6318084768082923163}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3054443412200171741 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9065122105449424454, guid: 49bf1038edd095e45b464f1e8ba20184,
+    type: 3}
+  m_PrefabInstance: {fileID: 6318084768082923163}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9db98c60740638449864eb028fbe7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

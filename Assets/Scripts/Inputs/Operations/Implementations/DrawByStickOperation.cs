@@ -1,6 +1,7 @@
 ﻿using Flux;
 using System;
 using UnityEngine;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
@@ -8,14 +9,20 @@ namespace BeauTambour
     public class DrawByStickOperation : PhaseBoundOperation
     {
         private DrawingHandler drawingHandler;
-        //
+        
         public override void Initialize(MonoBehaviour hook)
         {
             base.Initialize(hook);
+
+            Event.Open(GameEvents.OnStickUsed);
             drawingHandler = Repository.GetSingle<DrawingHandler>(References.DrawingHandler);
         }
 
-        protected override void RelayedOnStart(EventArgs inArgs) => HandleInput(inArgs);
+        protected override void RelayedOnStart(EventArgs inArgs)
+        {
+            Event.Call(GameEvents.OnStickUsed);
+            HandleInput(inArgs);
+        }
         protected override void RelayedOnUpdate(EventArgs inArgs) => HandleInput(inArgs);
         protected override void RelayedOnEnd(EventArgs inArgs) => HandleInput(inArgs);
 

@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3760159741719960512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5092594196898933900}
+  - component: {fileID: 8765793338250240310}
+  m_Layer: 0
+  m_Name: HeadSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5092594196898933900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3760159741719960512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.22, y: 3.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7181756667945175186}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8765793338250240310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3760159741719960512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa7a739eddc4e03844d1ce22a50d645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spine: {fileID: 1344533231568898138}
+  root: {fileID: 7181756667945175186}
+  attach: {fileID: 5092594196898933900}
+  bone: head
 --- !u!1 &7181756667884976769
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7181756667945175186}
   - component: {fileID: 7181756667945175187}
+  - component: {fileID: 8979176307181938845}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -61,6 +109,7 @@ Transform:
   - {fileID: 1344533231568898142}
   - {fileID: 7181756668852219953}
   - {fileID: 7181756667884976768}
+  - {fileID: 5092594196898933900}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79,7 +128,23 @@ MonoBehaviour:
   asset: {fileID: 11400000, guid: 482f099fc4d8c9545a7eff7f5f3b4400, type: 2}
   dialogueAnchor: {fileID: 7181756668852219953}
   topCenter: {fileID: 7181756667884976768}
+  headSocket: {fileID: 8765793338250240310}
+  intermediary: {fileID: 8979176307181938845}
+--- !u!114 &8979176307181938845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181756667945175184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673f57457f3f48c4bfb5cc88de704a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   animator: {fileID: 1344533231568898137}
+  emotionMelodyRegistry: {fileID: 11400000, guid: dc1f512526f3f7043899986d4b65a1d4,
+    type: 2}
 --- !u!1 &7181756668852219918
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,3 +261,15 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 7181756669423923962}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1344533231568898138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8143075999615122080, guid: bf34a2c397feca94fae496bd8a48a6d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7181756669423923962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9db98c60740638449864eb028fbe7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

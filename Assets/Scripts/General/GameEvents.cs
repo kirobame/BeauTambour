@@ -6,7 +6,10 @@ namespace BeauTambour
     public enum GameEvents
     {
         OnEncounterBootedUp,
-        
+        OnIntroStart,
+        OnIntroEnd,
+        OnIntroConfirmed,
+
         OnNextCue,
         OnCueFinished,
         OnCueSkipped,
@@ -29,9 +32,24 @@ namespace BeauTambour
         OnSpeakerSelected,
         OnSpeakerChoice,
         OnSpeakerChoiceDone,
+        
+        OnNoteValidation,
+        OnNoteValidationDone,
+        OnNoteDeletion,
+        OnNoteDeletionDone,
+        
+        OnFrogFeedback,
+        
+        OnPauseToggled,
+        OnGamePaused,
+        OnGameResumed,
 
         OnNarrativeEvent,
+        OnLanguageChanged,
         
         OnBlockPassed,
+        OnEncounterEnd,
+        
+        OnStickUsed,
     }
 }

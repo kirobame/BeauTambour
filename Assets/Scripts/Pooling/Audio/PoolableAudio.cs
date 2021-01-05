@@ -9,12 +9,18 @@ namespace BeauTambour
     public class PoolableAudio : Poolable<AudioSource>
     {
         public event Action OnDone;
+
+        public Group group;
         
         private Coroutine deactivationRoutine;
-        
+
+        public override void Prepare() => group = Group.Scaled;
+
         void Update()
         {
-            if (!Value.isPlaying && deactivationRoutine == null)
+            if (Value.loop) return;
+
+            if (Value.clip.length - Value.time <= 0.1f)
             {
                 OnDone?.Invoke();
                 deactivationRoutine = StartCoroutine(DeactivationRoutine());

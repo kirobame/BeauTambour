@@ -123,7 +123,7 @@ namespace Flux
                         if (!subItem.Contains('Ⓡ')) break;
 
                         var key = subItem.Replace("Ⓡ-", string.Empty);
-                        
+ 
                         rows.Add(key, size.y);
                         rowKeys[id].Add(key);
 

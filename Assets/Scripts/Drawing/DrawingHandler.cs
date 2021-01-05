@@ -22,6 +22,8 @@ namespace BeauTambour
         }
         #endregion
 
+        public float Radius => radius;
+        
         [SerializeField] private float radius;
         [SerializeField] private int definition;
         
@@ -53,6 +55,8 @@ namespace BeauTambour
 
             Event.Register(GameEvents.OnEmotionDrawingStart, OnEmotionDrawingStart);
             Event.Register(GameEvents.OnEmotionCancellationDone, OnEmotionCancellationDone);
+
+            Event.Register($"{PhaseCategory.EmotionDrawing}.{PhaseCallback.Start}", () => indicator.position = transform.position);
             
             analyzer = new ShapeAnalyzer();
             state = State.Picking;
@@ -141,6 +145,7 @@ namespace BeauTambour
 
             if (analysis.IsComplete)
             {
+                Event.Call<string>(GameEvents.OnFrogFeedback, "Hit");
                 drawing.Complete();
 
                 state = State.Ended;
@@ -149,8 +154,6 @@ namespace BeauTambour
         }
         private void HandleEnding(Vector2 input)
         {
-            indicator.position = transform.position;
-
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
             phaseHandler.Play(PhaseCategory.NoteValidation);
             

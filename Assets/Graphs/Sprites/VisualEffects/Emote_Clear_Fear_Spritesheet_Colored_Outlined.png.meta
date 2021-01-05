@@ -1,0 +1,557 @@
+fileFormatVersion: 2
+guid: 00ab1bd08b352c04e8a74665eb1dbdfd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2603864758505515080
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_0
+  - first:
+      213: -8641761574403348478
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_1
+  - first:
+      213: -7482583902428335472
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_2
+  - first:
+      213: 9004379490743938503
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_3
+  - first:
+      213: 8160391643724043957
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_4
+  - first:
+      213: -4850271524111329522
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_5
+  - first:
+      213: 8339584001188643557
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_6
+  - first:
+      213: 8957810813464927612
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_7
+  - first:
+      213: -8100289608643167735
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_8
+  - first:
+      213: 8427762253276419827
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_9
+  - first:
+      213: 9159863229500493984
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_10
+  - first:
+      213: -402845410082441172
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_11
+  - first:
+      213: -3840519132869369577
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_12
+  - first:
+      213: 3025500559380607212
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_13
+  - first:
+      213: 2677925834263965310
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_14
+  - first:
+      213: 3463798330890751815
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_0
+  - first:
+      213: 8734892934536238081
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_1
+  - first:
+      213: -3333481719646659956
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_2
+  - first:
+      213: 1813258485334583248
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_3
+  - first:
+      213: -6506998613920532677
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_4
+  - first:
+      213: 1806637881734933597
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_5
+  - first:
+      213: 3978646357623573348
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_6
+  - first:
+      213: 7351088593503983046
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_7
+  - first:
+      213: 8910231465509581686
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_8
+  - first:
+      213: 6779176832386116940
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_9
+  - first:
+      213: 3359273188614944721
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_10
+  - first:
+      213: -266699312753183929
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_11
+  - first:
+      213: 2290520896255947533
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_12
+  - first:
+      213: 711457542057122977
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_13
+  - first:
+      213: 6591597650199580716
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f855eda32e11030800000000000000
+      internalID: 3463798330890751815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1041a1238d2983970800000000000000
+      internalID: 8734892934536238081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_2
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ad33b99081db1d0800000000000000
+      internalID: -3333481719646659956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_3
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7a4504cfcf92910800000000000000
+      internalID: 1813258485334583248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_4
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37be477c3f72b5a0800000000000000
+      internalID: -6506998613920532677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c239ad497721910800000000000000
+      internalID: 1806637881734933597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_6
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b0e0158cdf63730800000000000000
+      internalID: 3978646357623573348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_7
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c51b38c020540660800000000000000
+      internalID: 7351088593503983046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_8
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673f4383f4087ab70800000000000000
+      internalID: 8910231465509581686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_9
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4daee35969741e50800000000000000
+      internalID: 6779176832386116940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d733e6ba298e9e20800000000000000
+      internalID: 3359273188614944721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_11
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7437189536e7c4cf0800000000000000
+      internalID: -266699312753183929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_12
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03f1f39e9099cf10800000000000000
+      internalID: 2290520896255947533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_13
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac56137dda9fd900800000000000000
+      internalID: 711457542057122977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_14
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20127a932f0a7b50800000000000000
+      internalID: 6591597650199580716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

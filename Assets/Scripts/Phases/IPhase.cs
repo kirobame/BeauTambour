@@ -6,5 +6,8 @@
         
         void Begin();
         void End();
+
+        void Pause();
+        void Resume();
     }
 }

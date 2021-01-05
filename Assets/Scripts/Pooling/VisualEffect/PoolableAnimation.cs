@@ -8,11 +8,13 @@ namespace BeauTambour
 {
     public class PoolableAnimation : Poolable<Animator>
     {
+        public Action OnEnd;
+        
         [SerializeField] private string startTag;
         [SerializeField] private string resetTag;
         
         private bool hasBeenIn;
-
+        
         void Update()
         {
             var state = Value.GetCurrentAnimatorStateInfo(0);
@@ -23,6 +25,8 @@ namespace BeauTambour
             }
             else if (state.IsTag(resetTag))
             {
+                OnEnd?.Invoke();
+                
                 hasBeenIn = false;
                 gameObject.SetActive(false);
             }

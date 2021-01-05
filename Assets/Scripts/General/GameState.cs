@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Flux;
-using UnityEngine;
 using Event = Flux.Event;
 
 namespace BeauTambour
@@ -12,26 +11,42 @@ namespace BeauTambour
         private static Dictionary<Actor, ISpeaker> speakers;
 
         private static int finishedArcsCount;
+        private static bool arcsMinimumCompletion;
         
         public static int BlockIndex { get; private set; }
         public static Language UsedLanguage { get; private set; }
         public static Note Note { get; private set; }
 
+        public static bool validationMade;
+
         private static Dictionary<string, EventBoundDialogue> eventDialogues;
 
-        public static void Bootup()
+        public static void Bootup(int blockIndex)
         {
+            finishedArcsCount = 0;
+            arcsMinimumCompletion = false;
+            
             eventDialogues = new Dictionary<string, EventBoundDialogue>();
             speakers = new Dictionary<Actor, ISpeaker>();
 
-            BlockIndex = -1;
+            BlockIndex = blockIndex - 1;
             UsedLanguage = Language.Français;
             Note = new Note();
 
+            Event.Open(GameEvents.OnLanguageChanged);
             Event.Open(GameEvents.OnBlockPassed);
+            Event.Open(GameEvents.OnEncounterEnd);
             
             Event.Open<string>(GameEvents.OnNarrativeEvent);
             Event.Register<string>(GameEvents.OnNarrativeEvent, ReceiveNarrativeEvent);
+        }
+
+        public static void ChangeLanguage(Language language)
+        {
+            if (language == UsedLanguage) return;
+
+            UsedLanguage = language;
+            Event.Call(GameEvents.OnLanguageChanged);
         }
 
         public static void RegisterSpeakerForUse(ISpeaker speaker)
@@ -71,18 +86,47 @@ namespace BeauTambour
             dialogueHandler.Enqueue(eventDialogues[message].GetDialogue());
         }
 
-        public static void NotifyMusicianArcEnd()
+        public static bool NotifyMusicianArcEnd(out Dialogue dialogue)
         {
             finishedArcsCount++;
-            if (finishedArcsCount == speakers.Count - 1) Event.Call<string>(GameEvents.OnNarrativeEvent, $"HarmonyBegun-{BlockIndex + 1}");
+            
+            if (!arcsMinimumCompletion && finishedArcsCount == speakers.Count - 1)
+            {
+                var encounter = Repository.GetSingle<Encounter>(References.Encounter);
+                RegisterSpeakerForUse(encounter.Interlocutor);
+                
+                dialogue = eventDialogues[$"Block.{BlockIndex + 1}"].GetDialogue();
+                arcsMinimumCompletion = true;
+                
+                return true;
+            }
+            else
+            {
+                dialogue = null;
+                return false;
+            }
         }
         
         public static void PassBlock()
         {
-            finishedArcsCount = 0;
-            BlockIndex++;
+            var encounter = Repository.GetSingle<Encounter>(References.Encounter);
+            UnregisterSpeakerForUse(encounter.Interlocutor);
             
-            Event.Call(GameEvents.OnBlockPassed);
+            finishedArcsCount = 0;
+            arcsMinimumCompletion = false;
+
+            BlockIndex++;
+
+            if (BlockIndex >= encounter.BlockCount)
+            {
+                var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
+                phaseHandler.SetActive(false);
+
+                Event.Register<Dialogue>(GameEvents.OnDialogueFinished, dialogue => OnEnd());
+            }
+            else Event.Call(GameEvents.OnBlockPassed);
         }
+
+        private static void OnEnd() => Event.Call(GameEvents.OnEncounterEnd);
     }
 }

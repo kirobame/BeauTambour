@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b88d7b9931442c9d15cf26780879a7, type: 3}
+  m_Name: JoyVfx
+  m_EditorClassIdentifier: 
+  key: 1
+  isBlurry: 0
+  emotionEffectPrefab: {fileID: 6507297611652302086, guid: 5f9f3d1352f23f84e8b3f464ec17282d,
+    type: 3}

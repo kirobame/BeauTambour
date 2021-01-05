@@ -10,6 +10,11 @@ namespace BeauTambour
     public class DialogueHandler : MonoBehaviour
     {
         [SerializeField] private DialogueHolder holder;
+        [SerializeField] private float widthCorrection;
+
+        [Space, SerializeField] private DialogueEvent[] events;
+        private Dictionary<string, DialogueEvent> eventRegistry;
+        private DialogueEvent playedEvent;
 
         public ISpeaker Speaker { get; private set; }
         private Actor actor;
@@ -30,6 +35,9 @@ namespace BeauTambour
             
             Event.Open<Cue>(GameEvents.OnNextCue);
             Event.Open<Dialogue>(GameEvents.OnDialogueFinished);
+            
+            eventRegistry = new Dictionary<string, DialogueEvent>();
+            foreach (var dialogueEvent in events) eventRegistry.Add(dialogueEvent.Key, dialogueEvent);
         }
 
         public void Enqueue(Dialogue dialogue)
@@ -68,6 +76,11 @@ namespace BeauTambour
             var newActor = cue.Actor;
 
             var character = Extensions.GetCharacter<Character>(cue.Actor);
+            if (character == null)
+            {
+                End();
+                return;
+            }
             character.SetupDialogueHolder(holder);
             
             Speaker = character as ISpeaker;
@@ -101,6 +114,7 @@ namespace BeauTambour
 
             var maximumWidth = info.lineInfo.Max(line => line.maxAdvance);
             maximumWidth += holder.TextMesh.margin.x + holder.TextMesh.margin.z;
+            maximumWidth -= widthCorrection;
             
             var size = new Vector2(maximumWidth, height);
 
@@ -115,6 +129,24 @@ namespace BeauTambour
         {
             holder.Deactivate();
             isPlaying = false;
+
+            if (eventRegistry.TryGetValue(dialogue.Name, out playedEvent))
+            {
+                playedEvent.OnEnd += OnEventEnd;
+                playedEvent.Execute(this);
+            }
+            else
+            {
+                Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
+
+                var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
+                phaseHandler.Play(PhaseCategory.SpeakerSelection);
+            }
+        }
+
+        void OnEventEnd()
+        {
+            playedEvent.OnEnd -= OnEventEnd;
             
             Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
 

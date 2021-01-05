@@ -13,25 +13,30 @@ namespace BeauTambour
     [IconIndicator(7705900795600745325), CreateAssetMenu(fileName = "NewEncounter", menuName = "Beau Tambour/Encounter")]
     public class Encounter : ScriptableObject
     {
+        public Interlocutor Interlocutor { get; private set; }
+
+        public int BlockCount => blockCount;
+        
         [SerializeField] private CSVRecipient dialogueRecipient;
         [SerializeField] private int sheetIndex;
-        
+        [SerializeField] private int blockCount;
+
+        [Space, SerializeField] private Interlocutor initialInterlocutor;
         [SerializeField] private Musician[] initialMusicians;
-        
+
         public void Bootup(MonoBehaviour hook, bool useBackup)
         {
+            Interlocutor = initialInterlocutor;
+            
             Repository.Reference(this, References.Encounter);
             Event.Open(GameEvents.OnEncounterBootedUp);
 
             if (!useBackup) hook.StartCoroutine(dialogueRecipient.Download(OnDialogueSheetsDownloaded));
-            else hook.StartCoroutine(SimulatedDownloadRoutine());
-        }
-        private IEnumerator SimulatedDownloadRoutine()
-        {
-            yield return new WaitForEndOfFrame();
-            OnDialogueSheetsDownloaded(dialogueRecipient.Sheets.ToArray());
+            else OnDialogueSheetsDownloaded(dialogueRecipient.Sheets.ToArray());
         }
 
+        public void ChangeInterlocutor(Interlocutor interlocutor) => Interlocutor = interlocutor;
+        
         private void OnDialogueSheetsDownloaded(Sheet[] sheets)
         {
             var runtimeSheet = new RuntimeSheet();
@@ -65,20 +70,17 @@ namespace BeauTambour
                         break;
                     
                     case "Event":
-                        HandleEventBoundDialogue(texts, data);
+                        HandleEventBoundDialogue(row, texts, data);
                         break;
                     
                     case "Harmony":
-                        if (TryGetCharacter<Interlocutor>(runtimeSheet["Dialogues", "Source", row], out var interlocutor))  HandleHarmonyDialogue(texts, data, interlocutor);
+                        if (TryGetCharacter<Interlocutor>(runtimeSheet["Dialogues", "Source", row], out var interlocutor))  HandleHarmonyDialogue(row, texts, data, interlocutor);
                         break;
                 }
             }
             
             Event.Call(GameEvents.OnEncounterBootedUp);
             GameState.PassBlock();
-
-            var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
-            phaseHandler.Play(PhaseCategory.Dialogue);
         }
 
         private bool TryGetCharacter<TChar>(string source, out TChar musician) where TChar : Character
@@ -88,7 +90,7 @@ namespace BeauTambour
             if (Enum.TryParse<Actor>(source, out var actor))
             {
                 musician = Extensions.GetCharacter<TChar>(actor);
-                return true;
+                return musician != null;
             }
             else return false;
         }
@@ -107,24 +109,24 @@ namespace BeauTambour
             musician.AddDialogueNode(dialogueNode);
         }
         
-        private void HandleHarmonyDialogue(string[] texts, Dictionary<string, string> data, Interlocutor interlocutor)
+        private void HandleHarmonyDialogue(string row, string[] texts, Dictionary<string, string> data, Interlocutor interlocutor)
         {
-            if (!data.ContainsKey("Emotion") || Enum.TryParse<Emotion>(data["Emotion"], out var emotion)) return;
+            if (!data.ContainsKey("Emotion") || !Enum.TryParse<Emotion>(data["Emotion"], out var emotion)) return;
             
             if (!data.ContainsKey("Block")) return;
-            var block = int.Parse(data["Block"]);
+            var block = int.Parse(data["Block"]) - 1;
             
             if (!data.ContainsKey("IsCorrect")) return;
             
-            if (bool.Parse(data["IsCorrect"]) == true) interlocutor.AddBlockDialogue(emotion, texts, block);
-            else interlocutor.AddDialogueOption(emotion, texts, block);
+            if (bool.Parse(data["IsCorrect"]) == true) interlocutor.AddBlockDialogue(row, emotion, texts, block);
+            else interlocutor.AddDialogueOption(row, emotion, texts, block);
         }
         
-        private void HandleEventBoundDialogue(string[] texts, Dictionary<string, string> data)
+        private void HandleEventBoundDialogue(string row, string[] texts, Dictionary<string, string> data)
         {
             if (!data.ContainsKey("Key")) return;
             
-            var eventBoundDialogue = new EventBoundDialogue(data["Key"], texts);
+            var eventBoundDialogue = new EventBoundDialogue(row, data["Key"], texts);
             GameState.AddEventBoundDialogue(eventBoundDialogue);
         }
     }

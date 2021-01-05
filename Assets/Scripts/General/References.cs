@@ -20,7 +20,10 @@ namespace BeauTambour
         DialogueHandler,
         DrawingHandler,
         
+        TextProvider,
         ColorByEmotion,
+        
+        PauseMenu,
         
         Settings,
     }

@@ -7,11 +7,12 @@
         
         AudioCharMapPackage AudioCharMap { get; }
         
+        Dialogue[] GetDialogues(Emotion emotion);
         bool IsArcEnded { get; }
-
-        Dialogue GetDialogue(Emotion emotion);
 
         void BeginTalking();
         void StopTalking();
+
+        void PlayMelodyFor(Emotion emotion);
     }
 }

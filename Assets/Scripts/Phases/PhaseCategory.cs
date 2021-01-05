@@ -8,7 +8,5 @@
         EmotionDrawing,
         NoteValidation,
         Dialogue,
-        
-        Pause
     }
 }

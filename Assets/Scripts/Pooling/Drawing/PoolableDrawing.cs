@@ -51,9 +51,9 @@ namespace BeauTambour
 
             var colorByEmotion = Repository.GetSingle<EmotionColorRegistry>(References.ColorByEmotion);
             var color = colorByEmotion[shape.Emotion];
-            color.r -= 0.21f;
+            /*color.r -= 0.21f;
             color.g -= 0.21f;
-            color.b -= 0.21f;
+            color.b -= 0.21f;*/
 
             var colors = new GradientColorKey[]
             {

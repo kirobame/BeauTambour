@@ -12,7 +12,7 @@ namespace BeauTambour
         public class AnimationProvider : Provider<Animator, PoolableAnimation> { }
 
         #endregion
-
+        //
         protected override Provider<Animator, PoolableAnimation>[] Providers => providers;
         [SerializeField] private AnimationProvider[] providers;
     }
