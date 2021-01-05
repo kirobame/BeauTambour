@@ -7,6 +7,9 @@ namespace Flux.Editor
 {
     public class UnityEventAltDrawer : UnityEditorInternal.UnityEventDrawer
     {
+        private bool hasFallbackName;
+        private string fallbackName;
+        
         private ReorderableList reorderableList;
         
         protected override void SetupReorderableList(ReorderableList reorderableList)
@@ -22,13 +25,19 @@ namespace Flux.Editor
             reorderableList.displayRemove = false;
         }
 
+        public void SetFallbackName(string name)
+        {
+            hasFallbackName = true;
+            fallbackName = name;
+        }
+
         protected override void DrawEventHeader(Rect rect)
         {
             rect.x += 10f;
             rect.width -= 10f;
             
             var arrayProperty = reorderableList.serializedProperty;
-            arrayProperty.isExpanded = EditorGUI.Foldout(rect, arrayProperty.isExpanded, new GUIContent(arrayProperty.displayName));
+            arrayProperty.isExpanded = EditorGUI.Foldout(rect, arrayProperty.isExpanded, new GUIContent(hasFallbackName ? fallbackName : arrayProperty.displayName));
 
             reorderableList.draggable = arrayProperty.isExpanded;
             
@@ -82,6 +91,7 @@ namespace Flux.Editor
         public override void OnGUI(Rect rect, SerializedProperty property, GUIContent label)
         {
             rect.y += EditorGUIUtility.standardVerticalSpacing;
+            
             if (reorderableList.serializedProperty.isExpanded)
             {
                 base.OnGUI(rect, property, label);

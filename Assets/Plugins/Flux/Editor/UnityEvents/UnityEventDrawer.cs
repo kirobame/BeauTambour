@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -6,13 +7,11 @@ using UnityEngine.EventSystems;
 namespace Flux.Editor
 {
     [CustomPropertyDrawer(typeof(UnityEventBase), true)]
-    [CustomPropertyDrawer(typeof(UnityEvent), true)]
-    [CustomPropertyDrawer(typeof(UnityEvent<BaseEventData>), true)]
     public class UnityEventDrawer : PropertyDrawer
     {
         private bool hasBeenInitialized;
         private UnityEventAltDrawer drawer;
-        
+
         public override void OnGUI(Rect rect, SerializedProperty property, GUIContent label)
         {
             if (!hasBeenInitialized) Initialize();

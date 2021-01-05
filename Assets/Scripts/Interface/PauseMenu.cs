@@ -5,13 +5,16 @@ using System.Linq;
 using Flux;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 using Event = Flux.Event;
 
 namespace BeauTambour
 {
     public class PauseMenu : MonoBehaviour
     {
-        [SerializeField] private float transitionTime;
+        [SerializeField] private InputActionAsset navigationAsset;
+        
+        [Space, SerializeField] private float transitionTime;
         [SerializeField] private InputMapReference[] deactivableMaps;
         private bool[] mapStates;
         
@@ -23,6 +26,8 @@ namespace BeauTambour
         
         private void Awake()
         {
+            navigationAsset.Disable();
+            
             state = false;
             mapStates = new bool[deactivableMaps.Length];
 
@@ -80,8 +85,9 @@ namespace BeauTambour
             
             ToggleAudio(state);
 
-            if (state)
+            if (!state)
             {
+                navigationAsset.Disable();
                 for (var i = 0; i < deactivableMaps.Length; i++)
                 {
                     if (mapStates[i] == true) deactivableMaps[i].Value.Enable();
@@ -89,6 +95,7 @@ namespace BeauTambour
             }
             else
             {
+                navigationAsset.Enable();
                 for (var i = 0; i < deactivableMaps.Length; i++)
                 {
                     var value = deactivableMaps[i].Value;

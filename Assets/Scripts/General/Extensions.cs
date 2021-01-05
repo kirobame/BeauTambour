@@ -24,5 +24,13 @@ namespace BeauTambour
             for (var i = 0; i < frameCount; i++) yield return new WaitForEndOfFrame();
             call();
         }
+
+        public static string FirstToUpper(this string value)
+        {
+            var charArray = value.ToCharArray();
+            charArray[0] = Char.ToUpper(charArray[0]);
+            
+            return new string(charArray);
+        }
     }
 }

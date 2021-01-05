@@ -38,10 +38,11 @@ MonoBehaviour:
     - "\u24C7-M.Friend1"
     - Mouse
     - Advance
-    - "[Mouse]-<?E:Vfx/Anticipation, TRUE/>Un chat ! Un loup ! Un quoi !?\n//Peu
-      importe ce que t'es, ne me manze pas <shake><color=#9868da>piti\xE9 !</color></shake>\n[Cat]-<?E:BlurryVfx/Sadness,
-      TRUE/>Pour dire vrai, je n'en ai pas la foi !\n//Je t'aurais mang\xE9 volontiers
-      !\n//Mais me voil\xE0 pourchass\xE9, dans ces bois je dois me cacher..."
+    - "[Mouse]-Un chat !<?E:Vfx/Anticipation, TRUE/> Un loup ! Un quoi !?\n//Peu
+      importe ce que t'es, ne me manze pas <shake><color=#9868da>piti\xE9 !</color></shake>\n[Cat]-Pour
+      dire vrai,<?E:BlurryVfx/Sadness, TRUE/> je n'en ai pas la foi !\n//Je t'aurais
+      mang\xE9 volontiers !\n//Mais me voil\xE0 pourchass\xE9, dans ces bois je dois
+      me cacher..."
     - 
     - 'Emotion : Surprise;
 
@@ -52,11 +53,11 @@ MonoBehaviour:
     - Mouse
     - Advance
     - "[Mouse]-Ze dois me m\xE9fier, \xE7a reste un <wiggle><color=#be4952>chat m\xE9chant
-      !</color></wiggle>\n// <?E:Sfx/Trust, TRUE/>Mais ze ne suis pas seule, mes
-      amis sont pr\xE9sents.\n// <?E:Vfx/Sadness, TRUE/>Surtout apr\xE8s ce qu'il
-      s'est pass\xE9 dans la famille...\n[Cat]-M\xE9fie toi tu as raison, \n<?E:BlurryVfx/Sadness,
-      TRUE/>Moi-m\xEAme j'ai \xE9t\xE9 banni par un p\xE8re dont je pensais l'\xE2me
-      gentille.."
+      !</color></wiggle>\n// Mais ze ne suis pas seule<?E:Sfx/Trust, TRUE/>, mes
+      amis sont pr\xE9sents.\n// Surtout apr\xE8s ce qu'il s'est pass\xE9 dans la
+      famille...<?E:Vfx/Sadness, TRUE/> \n[Cat]-M\xE9fie toi tu as raison, \nMoi-m\xEAme
+      j'ai \xE9t\xE9 banni par un p\xE8re dont je pensais l'\xE2me gentille...<?E:BlurryVfx/Sadness,
+      TRUE/>"
     - 
     - 'Emotion : Anticipation;
 
@@ -67,12 +68,12 @@ MonoBehaviour:
     - "\u24C7-M.Friend3"
     - Mouse
     - Advance
-    - "[Mouse]-<?E:Vfx/Trust, TRUE/>Ze n'ai rien \xE0 craindre, ze suis avec mes
+    - "[Mouse]-Ze n'ai rien \xE0 craindre<?E:Vfx/Trust, TRUE/> ! Ze suis avec mes
       amis !\n//Mais ze reste sur mes gardes, avec sa <slide><color=#90aa31>t\xEAte
       de chat</color></slide>, c'est peut-\xEAtre un ennemi.\n//Son histoire me parle,
-      <swing><color=#818ee2> je compatis...</color></swing>\n[Cat]-<?E:BlurryVfx/Surprise,
-      TRUE/>Une sourrris qui me prrrend en piti\xE9 !? \n<?E:BlurryVfx/Disgust, TRUE/>Quelle
-      honte pour le chat que je suis !"
+      <swing><color=#818ee2> je compatis...</color></swing>\n[Cat]-Une sourrris qui
+      me prrrend en piti\xE9 !? <?E:BlurryVfx/Surprise, TRUE/> \nQuelle honte pour
+      le chat que je suis !<?E:BlurryVfx/Disgust, TRUE/> "
     - 
     - 'Emotion : Trust;
 
@@ -99,11 +100,11 @@ MonoBehaviour:
     - "\u24C7-M.Friend5"
     - Mouse
     - Advance
-    - "[Mouse]-<?E:Sfx/Fear, TRUE/>Il avoue ! Il veut me d\xE9vorer !\n[Cat]-Mais
-      non, moi-m\xEAme j'essaie d'\xE9viter mon pr\xE9dateur !\n[Mouse]-<?E:Vfx/Disgust,
-      TRUE/>Tu ne me joues pas de tour ? <swing><color=#818ee2>Qui veut t'enterrer
-      !?</color></swing>\n[Cat]-Mon loup de p\xE8re... \n<?E:BlurryVfx/Sadness, TRUE/>Il
-      voyait tr\xE8s mal jusqu'\xE0 hier, en me voyant vraiment, il perdit son coeur..."
+    - "[Mouse]-Il avoue ! Il veut me d\xE9vorer !<?E:Sfx/Fear, TRUE/> \n[Cat]-Mais
+      non, moi-m\xEAme j'essaie d'\xE9viter mon pr\xE9dateur !\n[Mouse]-Tu ne me
+      joues pas de tour <?E:Vfx/Disgust, TRUE/>? <swing><color=#818ee2>Qui veut t'enterrer
+      !?</color></swing>\n[Cat]-Mon loup de p\xE8re... \nIl voyait tr\xE8s mal jusqu'\xE0
+      hier, en me voyant vraiment, il perdit son coeur...<?E:BlurryVfx/Sadness, TRUE/> "
     - 
     - 'Emotion : Fear;
 
@@ -113,12 +114,12 @@ MonoBehaviour:
     - "\u24C7-M.Friend6"
     - Mouse
     - Advance
-    - "[Mouse]-<?E:Vfx/Sadness, TRUE/>Ton histoire est bien triste si elle est vraie...\n//<?E:Vfx/Trust,
-      TRUE/>Je sais ce que c'est de ne pas \xEAtre aimer de son p\xE8re...\n[Bird]-Nous
-      en sommes experts...\n[Mouse]-Que c'est-il pass\xE9 pour te retrouver ici \xE0
-      <shake><color=#9868da>m'effrayer ?</color></shake>\n[Cat]-<?E:Vfx/Sadness,
-      TRUE/>Je n'ai pas le coeur \xE0 en parler... <wiggle><color=#be4952>J'en veux
-      \xE0 toute la forrr\xEAt !</color></wiggle>"
+    - "[Mouse]-Ton histoire est bien triste si elle est vraie... <?E:Vfx/Sadness,
+      TRUE/>\n//Je sais ce que c'est de ne pas \xEAtre aimer de son p\xE8re...<?E:Vfx/Trust,
+      TRUE/> \n[Bird]-Nous en sommes experts...\n[Mouse]-Que c'est-il pass\xE9 pour
+      te retrouver ici \xE0 <shake><color=#9868da>m'effrayer ?</color></shake>\n[Cat]-Je
+      n'ai pas le coeur \xE0 en parler... <?E:Vfx/Sadness, TRUE/> <wiggle><color=#be4952>J'en
+      veux \xE0 toute la forrr\xEAt !</color></wiggle>"
     - 
     - 'Emotion : Sadness;
 
@@ -130,9 +131,9 @@ MonoBehaviour:
     - Advance
     - "[Mouse]-Moi mon p\xE8re n'aime pas la musique, il me traitait de fripouille...\nZ'\xE9tais
       seule et triste, mais z'ai rencontr\xE9 Grenouille !\n// Elle ne peut parler
-      mais \xE7a musique suffit...\nSa rencontre a \xE0 zamais chanz\xE9 ma vie...\n[Cat]-<?E:Vfx/Sadness,
-      TRUE/>Toi aussi ton p\xE8re ne te comprends...\n<?E:BlurryVfx/Trust, TRUE/>Au
-      final, souris ou chat ce n'est pas important..."
+      mais \xE7a musique suffit...\nSa rencontre a \xE0 zamais chanz\xE9 ma vie...
+      \n[Cat]-Toi aussi ton p\xE8re ne te comprends...<?E:Vfx/Sadness, TRUE/> \nAu
+      final, souris ou chat ce n'est pas important... <?E:BlurryVfx/Trust, TRUE/>"
     - 
     - 'Emotion : Sadness;
 
@@ -148,10 +149,10 @@ MonoBehaviour:
     - "[Mouse]-<?E:BlurryVfx/Surprise, TRUE/>Nom d'un fromage ! Un chat cach\xE9
       ! Il faut fuir <shake><color=#9868da>avant d'\xEAtre manz\xE9s !</color></shake>\n[Bird]-Rien
       \xE0 craindre, cesse de geindre !\n[Bear]-D'un ennuie...Un dangers ? \xE7a
-      ?\n[Cat]-<?E:Vfx/Fear, TRUE/>Je fuis mon loup de p\xE8re et voil\xE0 que je
-      tombe sur un ours ! \n<?E:BlurryVfx/Sadness, TRUE/>Si elle n'\xE9tait si triste,
-      ma vie ferait rire...\n[Mouse]-<?E:Vfx/Sadness, TRUE/>Ze suis trop zeune pour
-      mourir, <bounce><color=#5fc687>heureusement, il y a mes amis!</color></bounce>"
+      ?\n[Cat]-Je fuis mon loup de p\xE8re et voil\xE0 que je tombe sur un ours !
+      <?E:Vfx/Fear, TRUE/> \nSi elle n'\xE9tait si triste, ma vie ferait rire...
+      <?E:BlurryVfx/Sadness, TRUE/>\n[Mouse]-Ze suis trop zeune pour mourir<?E:Vfx/Sadness,
+      TRUE/>. <bounce><color=#5fc687>Heureusement, il y a mes amis!</color></bounce>"
     - 
     - 'Emotion : Fear;
 
@@ -161,11 +162,11 @@ MonoBehaviour:
     - "\u24C7-M.Prey2"
     - Mouse
     - Advance
-    - "[Mouse]-<?E:Sfx/Sadness, TRUE/>Pourquoi a-t-il fallu que je te suive Grenouille
-      !\n<shake><color=#9868da>Je vais finir en ratatouille !</color></shake>\n[Cat]-<?E:Sfx/Sadness,
-      TRUE/>Je ne compte pas te cuisiner...\nC'est moi qui risque d'\xEAtre le diner...\n//Maintenant
-      que la vue de mon p\xE8re va mieux,\nIl a vu que je n'\xE9tais qu'un petit
-      chat peureux..."
+    - "[Mouse]-Pourquoi a-t-il fallu que je te suive Grenouille !<?E:Sfx/Sadness,
+      TRUE/> \n<shake><color=#9868da>Je vais finir en ratatouille !</color></shake>\n[Cat]-Je
+      ne compte pas te cuisiner...<?E:Sfx/Sadness, TRUE/> \nC'est moi qui risque
+      d'\xEAtre le diner... \n//Maintenant que la vue de mon p\xE8re va mieux,\nIl
+      a vu que je n'\xE9tais qu'un petit chat peureux..."
     - 
     - 'Emotion : Sadness;
 
@@ -175,11 +176,11 @@ MonoBehaviour:
     - "\u24C7-M.Prey3"
     - Mouse
     - Advance
-    - "[Mouse]-<?E:Vfx/Fear, TRUE/>Tu n'es qu'un monstre avide de sang !\n//Z'ai
+    - "[Mouse]-Tu n'es qu'un monstre avide de sang !<?E:Vfx/Fear, TRUE/> \n//Z'ai
       crois\xE9 un chat un zour avec mon fr\xE8re en passant...\nIl ne m'a pas manz\xE9...\n[Cat]-Tu
-      vois ! Monstres ? Nous ne sommes pas tous comme \xE7a !\n[Mouse]-<?E:Vfx/Anger,
-      TRUE/>C'est mon fr\xE8re qu'il a manz\xE9 !\n[Cat]-<?E:BlurryVfx/Surprise,
-      TRUE/>Ah..."
+      vois ! Monstres ? Nous ne sommes pas tous comme \xE7a !\n[Mouse]-C'est mon
+      fr\xE8re qu'il a manz\xE9 ! <?E:Vfx/Anger, TRUE/>\n[Cat]-Ah...<?E:BlurryVfx/Surprise,
+      TRUE/> "
     - 
     - 'Emotion : Fear;
 
@@ -189,11 +190,11 @@ MonoBehaviour:
     - "\u24C7-M.Prey4"
     - Mouse
     - Advance
-    - "[Mouse]-<?E:BlurryVfx/Disgust, TRUE/>Ze sais que tu n'es qu'un tueur de souris
-      sans cervelle mais piti\xE9 !\nZe ne veux pas finir comme mon fr\xE8re !\n[Cat]-<?E:BlurryVfx/Disgust,
-      TRUE/>Salet\xE9 de rrrat ! Tu veux vivre ? Arrrr\xEAtes de m'insulter !\nJe
-      ne suis pas d'humeur, <swing><color=#818ee2> j'ai \xE9t\xE9 banni par mon loup
-      de p\xE8re !</color></swing>"
+    - "[Mouse]-Ze sais que tu n'es qu'un tueur de souris sans cervelle mais piti\xE9
+      !<?E:BlurryVfx/Disgust, TRUE/> \nZe ne veux pas finir comme mon fr\xE8re !\n[Cat]-Salet\xE9
+      de rrrat<?E:BlurryVfx/Disgust, TRUE/> ! Tu veux vivre ? Arrrr\xEAtes de m'insulter
+      !\nJe ne suis pas d'humeur, <swing><color=#818ee2> j'ai \xE9t\xE9 banni par
+      mon loup de p\xE8re !</color></swing>"
     - 
     - 'Emotion : Fear;
 
@@ -206,10 +207,10 @@ MonoBehaviour:
     - "\u24C7-M.Prey5"
     - Mouse
     - Advance
-    - "[Mouse]-//Vous allez me d\xE9fendre, n'est-ce pas M.Ernest ?\n[Bear]-Zzz...Zzz...\n[Mouse]-<?E:Vfx/Anger,
-      TRUE/>Merci les amis ! Me voil\xE0 <shake><color=#9868da>condamn\xE9e \xE0
-      mon sort funeste !</color></shake>\n[Cat]-<?E:BlurryVfx/Sadness, TRUE/>Au moins
-      tu as des amis...\nMon loup de p\xE8re \xE9tait le mien, maintenant je le fuis."
+    - "[Mouse]-//Vous allez me d\xE9fendre, n'est-ce pas M.Ernest ?\n[Bear]-Zzz...Zzz...\n[Mouse]-Merci
+      les amis<?E:Vfx/Anger, TRUE/> ! Me voil\xE0 <shake><color=#9868da>condamn\xE9e
+      \xE0 mon sort funeste !</color></shake>\n[Cat]-Au moins tu as des amis...<?E:BlurryVfx/Sadness,
+      TRUE/> \nMon loup de p\xE8re \xE9tait le mien, maintenant je le fuis."
     - 
     - 'Emotion : Trust;
 
@@ -219,11 +220,11 @@ MonoBehaviour:
     - "\u24C7-M.Prey6"
     - Mouse
     - Advance
-    - "[Mouse]-J'ai rencontr\xE9 un chat un jour avec mon fr\xE8re !\n[Cat]-<?E:BlurryVfx/Anger,
-      TRUE/>Ce n'est pas mon affaire !\n[Mouse]-<?E:Vfx/Fear, TRUE/>Heureusement
-      que ze courais plus vite que mon fr\xE8re !\n[Cat]-Navr\xE9 pour lui, es-tu
-      en rage ?\n[Mouse]-<?E:Vfx/Anger, TRUE/>C'est par principe ! Mais il me reste
-      158 fr\xE8res, pas grave."
+    - "[Mouse]-J'ai rencontr\xE9 un chat un jour avec mon fr\xE8re !\n[Cat]-Ce n'est
+      pas mon affaire !<?E:BlurryVfx/Anger, TRUE/> \n[Mouse]-Heureusement que ze
+      courais plus vite que mon fr\xE8re !<?E:Vfx/Fear, TRUE/> \n[Cat]-Navr\xE9 pour
+      lui, es-tu en rage ?\n[Mouse]-C'est par principe<?E:Vfx/Anger, TRUE/> ! Mais
+      il me reste 158 fr\xE8res, pas grave."
     - 
     - 'Emotion : Anger;
 
@@ -233,11 +234,11 @@ MonoBehaviour:
     - "\u24C7-M.Prey7"
     - Mouse
     - Advance
-    - "[Mouse]-<?E:Vfx/Fear, TRUE/>Mon p\xE8re m'a pr\xE9venu ! \n\xABSi tu t'en
+    - "[Mouse]-Mon p\xE8re m'a pr\xE9venu ! <?E:Vfx/Fear, TRUE/> \n\xABSi tu t'en
       vas de la maison un chat fera de toi son menu !\xBB\n//Les chats sont tous
-      les m\xEAmes ! <wiggle><color=#be4952>Des tueurs sanguinaires !</color></wiggle>\n[Cat]-<?E:Sfx/Fear,
-      TRUE/>Je suis traqu\xE9 par mon p\xE8re, \nJe suis \xE0 cran, alors ne me mets
-      pas <wiggle>en col\xE8re !</wiggle>"
+      les m\xEAmes ! <wiggle><color=#be4952>Des tueurs sanguinaires !</color></wiggle>\n[Cat]-Je
+      suis traqu\xE9 par mon p\xE8re, <?E:Sfx/Fear, TRUE/> \nJe suis \xE0 cran, alors
+      ne me mets pas <wiggle>en col\xE8re !</wiggle>"
     - 
     - 'Emotion : Anger;
 
@@ -249,9 +250,9 @@ MonoBehaviour:
     - Advance
     - "[Mouse]-Apr\xE8s ce qu'il s'est pass\xE9 aux souris de la carri\xE8re maudite
       ! Forc\xE9ment que je me m\xE9fie ! \n// Partis pique-niquer sans jamais revenir
-      !Toute une famille de souris !\n//<?E:BlurryVfx/Anticipation, TRUE/>Il restait
-      seulement des poils roux ! Je suis s\xFBr que c'est un chat !\n[Cat]-<?E:BlurryVfx/Anger,
-      TRUE/>Je n'ai que faire de tout \xE7a ! De mon loup de p\xE8re<shake><color=#9868da>
+      !Toute une famille de souris !\n//Il restait seulement des poils roux<?E:BlurryVfx/Anticipation,
+      TRUE/>! Je suis s\xFBr que c'est un chat !\n[Cat]-Je n'ai que faire de tout
+      \xE7a <?E:BlurryVfx/Anger, TRUE/>! De mon loup de p\xE8re<shake><color=#9868da>
       je suis la proie !</color></shake>"
     - 
     - 'Emotion : Fear;
@@ -265,11 +266,12 @@ MonoBehaviour:
     - "\u24C7-M.Prey9"
     - Mouse
     - Advance
-    - "[Mouse]-Ze me suis peut-\xEAtre enflamm\xE9e, je vais finir manz\xE9e...\n//<?E:BlurryVfx/Anticipation,
-      TRUE/> Ze dois rester prudente, les chats ont d\xE9cim\xE9 tellement de souris
-      !\n[Cat]-Restes persuad\xE9e que je te veux du mal si \xE7a te sied...\nMon
-      p\xE8re ne voyait rien mais la vue il a retrouv\xE9...\n<?E:Vfx/Sadness, FALSE/><?E:Sfx/Fear,
-      TRUE/>Maintenant il me traque apr\xE8s m'avoir rejet\xE9..."
+    - "[Mouse]-Ze me suis peut-\xEAtre enflamm\xE9e, je vais finir manz\xE9e...\n//
+      Ze dois rester prudente<?E:BlurryVfx/Anticipation, TRUE/>, les chats ont d\xE9cim\xE9
+      tellement de souris !\n[Cat]-Restes persuad\xE9e que je te veux du mal si \xE7a
+      te sied...\nMon p\xE8re ne voyait rien mais la vue il a retrouv\xE9...\nMaintenant
+      il me traque apr\xE8s m'avoir rejet\xE9...<?E:Vfx/Sadness, FALSE/><?E:Sfx/Fear,
+      TRUE/> "
     - 
     - 'Emotion : Fear;
 
@@ -296,11 +298,12 @@ MonoBehaviour:
     - "\u24C7-M.Enemy2"
     - Mouse
     - Advance
-    - "[Mouse]-<?E:BlurryVfx/Anger, TRUE/>Mais ce n'est pas tout !\nMa tante Berthe
+    - "[Mouse]-Mais ce n'est pas tout !<?E:BlurryVfx/Anger, TRUE/> \nMa tante Berthe
       m'a aussi parl\xE9 de vous !\n//Un chat a voulu la tremper dans de l'huile
-      !\n[Cat]-<?E:BlurryVfx/Surprise, TRUE/>C'est aussi une souris verte ?\n[Mouse]-<?E:BlurryVfx/Surprise,
-      TRUE/>Comment tu le sais ? C'\xE9tait toi cette attaque !?\n[Cat]-Euh... Tr\xE8ve
-      de bavardage, mon loup de p\xE8re<shake><color=#9868da> me traque !</color></shake>"
+      !\n[Cat]-C'est aussi une souris verte ?<?E:BlurryVfx/Surprise, TRUE/> \n[Mouse]-Comment
+      tu le sais <?E:BlurryVfx/Surprise, TRUE/>? C'\xE9tait toi cette attaque !?\n[Cat]-Euh...
+      Tr\xE8ve de bavardage, mon loup de p\xE8re<shake><color=#9868da> me traque
+      !</color></shake>"
     - 
     - 'Emotion : Anger;
 
@@ -2183,390 +2186,418 @@ MonoBehaviour:
     - Hint
     - "[Bear]-<?E:Vfx/Surprise, TRUE/>Je n\u2019en reviens pas que tu puisses manger
       des souris !\nC\u2019est gentil les souris !<wiggle><color=#be4952>  Ne mange
-      pas Emilie !</color></wiggle>\n"
+      pas Emilie !</color></wiggle>"
     - 
     - 'Name : Be.1.AngSur;'
     - "\u24C7-Be.FS.Arc.1.14"
     - Bear
     - Hint
     - "[Bear]-<?E:Sfx/Surprise, TRUE/>Manger de la viande ? Quelle dr\xF4le d\u2019id\xE9e
-      !\n<?E:Vfx/Anger, TRUE/>Tu veux vraiment tenter de nous d\xE9vorer !?\n"
+      !\n<?E:Vfx/Anger, TRUE/>Tu veux vraiment tenter de nous d\xE9vorer !?"
     - 
     - 'Name : Be.1.AngSur;'
     - "\u24C7-Be.FS.Arc.1.15"
     - Bear
     - Hint
     - "[Bear]-<?E:Animation/Surprise, TRUE/>Manger mes amies !?\n<?E:Vfx/Anger, TRUE/>Tu
-      as perdu l\u2019esprit !\n"
+      as perdu l\u2019esprit !"
     - 
     - 'Name : Be.1.AngSur;'
     - "\u24C7-Be.FS.Arc.1.16"
     - Bear
     - Hint
-    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !\r\nC\u2019est
-      gentil les souris ! Ne mange pas Emilie !\r\nMon ancien village pensait comme
-      toi, j\u2019ai d\xFB le fuir...\r"
+    - "[Bear]-<?E:Sfx/Disgust, TRUE/>Je n\u2019en reviens pas que tu puisses manger
+      des souris !\nC\u2019est gentil les souris ! <wiggle><color=#be4952> Ne mange
+      pas Emilie !</color></wiggle>\n<?E:Vfx/Sadness, TRUE/>Mon ancien village pensait
+      comme toi, j\u2019ai d\xFB le fuir..."
     - 
     - 'Name : Be.1.DisSadAng;'
     - "\u24C7-Be.FS.Arc.1.17"
     - Bear
     - Hint
-    - "[Bear]-Manger de la viande ? Quelle dr\xF4le d\u2019id\xE9e !\r\nTu veux vraiment
-      tenter de nous d\xE9vorer !?\r\nTu me rappelle mon village o\xF9 avant j\u2019habitais\u2026\r"
+    - "[Bear]-<?E:Sfx/Disgust, TRUE/>Manger de la viande ? Quelle dr\xF4le d\u2019id\xE9e
+      !\n<?E:Vfx/Anger, TRUE/>Tu veux vraiment tenter de nous d\xE9vorer !?\n<?E:Vfx/Sadness,
+      TRUE/>Tu me rappelle mon village o\xF9 avant j\u2019habitais\u2026"
     - 
     - 'Name : Be.1.DisSadAng;'
     - "\u24C7-Be.FS.Arc.1.18"
     - Bear
     - Hint
-    - "[Bear]-Manger mes amies !?\r\nTu as perdu l\u2019esprit !\r\nTout \xE7a me
-      rappelle mon village et ancienne amie\u2026\r"
+    - "[Bear]-<?E:Animation/Disgust, TRUE/>Manger mes amies !?\n<?E:Vfx/Anger, TRUE/>Tu
+      as perdu l\u2019esprit !\n<?E:Vfx/Sadness, TRUE/>Tout \xE7a me rappelle mon
+      village et ancienne amie\u2026"
     - 
     - 'Name : Be.1.DisSadAng;'
     - "\u24C7-Be.FS.Arc.1.19"
     - Bear
     - Hint
-    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !\r\nC\u2019est
-      gentil les souris ! Ne mange pas Emilie !\r\nMon ancien village pensait comme
-      toi, j\u2019ai d\xFB le fuir...\r"
+    - "[Bear]-<?E:Sfx/Disgust, TRUE/>Je n\u2019en reviens pas que tu puisses manger
+      des souris !\nC\u2019est gentil les souris ! Ne mange pas Emilie !\n<?E:Vfx/Sadness,
+      TRUE/>Mon ancien village pensait comme toi, j\u2019ai d\xFB le fuir..."
     - 
     - 'Name : Be.1.DisSad;'
     - "\u24C7-Be.FS.Arc.1.20"
     - Bear
     - Hint
-    - "[Bear]-Manger de la viande ? Quelle dr\xF4le d\u2019id\xE9e !\r\nTu veux vraiment
-      tenter de nous d\xE9vorer !?\r\nTu me rappelle mon village o\xF9 avant j\u2019habitais\u2026\r"
+    - "[Bear]-<?E:Sfx/Disgust, TRUE/>Manger de la viande ? Quelle dr\xF4le d\u2019id\xE9e
+      !\nTu veux vraiment tenter de nous d\xE9vorer !?\n<?E:Vfx/Sadness, TRUE/>Tu
+      me rappelle mon village o\xF9 avant j\u2019habitais\u2026"
     - 
     - 'Name : Be.1.DisSad;'
     - "\u24C7-Be.FS.Arc.1.21"
     - Bear
     - Hint
-    - "[Bear]-Manger mes amies !?\r\nTu as perdu l\u2019esprit !\r\nTout \xE7a me
-      rappelle mon village et ancienne amie\u2026\r"
+    - "[Bear]-<?E:Animation/Disgust, TRUE/>Manger mes amies !?\nTu as perdu l\u2019esprit
+      !\n<?E:Vfx/Sadness, TRUE/>Tout \xE7a me rappelle mon village et ancienne amie\u2026"
     - 
     - 'Name : Be.1.DisSad;'
     - "\u24C7-Be.FS.Arc.1.22"
     - Bear
     - Hint
-    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !\r\nC\u2019est
-      gentil les souris ! Ne mange pas Emilie !\r\nMon ancien village pensait comme
-      toi, j\u2019ai d\xFB le fuir...\r"
+    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !\nC\u2019est
+      gentil les souris ! <wiggle><color=#be4952> Ne mange pas Emilie !</color></wiggle>\n<?E:Vfx/Sadness,
+      TRUE/>Mon ancien village pensait comme toi, j\u2019ai d\xFB le fuir..."
     - 
     - 'Name : Be.1.SadAng;'
     - "\u24C7-Be.FS.Arc.1.23"
     - Bear
     - Hint
-    - "[Bear]-Manger de la viande ? Quelle dr\xF4le d\u2019id\xE9e !\r\nTu veux vraiment
-      tenter de nous d\xE9vorer !?\r\nTu me rappelle mon village o\xF9 avant j\u2019habitais\u2026\r"
+    - "[Bear]-Manger de la viande ? Quelle dr\xF4le d\u2019id\xE9e !\n<?E:Vfx/Anger,
+      TRUE/>Tu veux vraiment tenter de nous d\xE9vorer !?\n<?E:Vfx/Sadness, TRUE/>Tu
+      me rappelle mon village o\xF9 avant j\u2019habitais\u2026"
     - 
     - 'Name : Be.1.SadAng;'
     - "\u24C7-Be.FS.Arc.1.24"
     - Bear
     - Hint
-    - "[Bear]-Manger mes amies !?\r\nTu as perdu l\u2019esprit !\r\nTout \xE7a me
-      rappelle mon village et ancienne amie\u2026\r"
+    - "[Bear]-Manger mes amies !?\n<?E:Vfx/Anger, TRUE/>Tu as perdu l\u2019esprit
+      !\n<?E:Vfx/Sadness, TRUE/>Tout \xE7a me rappelle mon village et ancienne amie\u2026"
     - 
     - 'Name : Be.1.SadAng;'
     - "\u24C7-Be.FS.Arc.1.25"
     - Bear
     - Hint
-    - "[Bear]- J\u2019\xE9tais joyeux avant, mais la vie fut rude !\r\nJ\u2019imagine
-      un hiver sans nourriture\u2026\r\nNe me parlez pas de nourriture !\r"
+    - "[Bear]- J\u2019\xE9tais joyeux avant, mais la vie fut rude !\nJ\u2019imagine
+      <shake><color=#9868da> un hiver sans nourriture\u2026</color></shake>\n<?E:Vfx/Anger,
+      TRUE/><wiggle><color=#be4952> Ne me parlez pas de nourriture !</color></wiggle>"
     - 
     - 'Name : Be.1.FearAng;'
     - "\u24C7-Be.FS.Arc.1.26"
     - Bear
     - Hint
-    - "[Bear]-Emilie parfois tu es bien mesquine !\r\nJe n\u2019ai plus de miel \xE0
-      cause de toi, comment je vais faire !\r\nUn hivers sans nourriture\u2026 C\u2019est
-      l\u2019enfer !\r"
+    - "[Bear]-Emilie parfois tu es bien mesquine !\n<?E:Vfx/Anger, TRUE/>Je n\u2019ai
+      plus de miel \xE0 cause de toi, comment je vais faire !\nUn hivers sans nourriture\u2026<shake><color=#9868da>
+      C\u2019est l\u2019enfer !</color></shake>"
     - 
     - 'Name : Be.1.FearAng;'
     - "\u24C7-Be.FS.Arc.1.27"
     - Bear
     - Hint
-    - "[Bear]-Je n\u2019ai plus envie de rien\u2026\r\nEn attendant sortir me fait
-      peur, je n\u2019y peux rien !\r\nEt par-dessus tout j\u2019ai faim !\r"
+    - "[Bear]-Je n\u2019ai plus envie de rien\u2026\n<?E:Vfx/Fear, TRUE/>En attendant
+      sortir me fait peur, je n\u2019y peux rien !\n<wiggle><color=#be4952> Et par-dessus
+      tout j\u2019ai faim !</color></wiggle>"
     - 
     - 'Name : Be.1.FearAng;'
     - "\u24C7-Be.FS.Arc.1.28"
     - Bear
     - Hint
-    - "[Bear]- J\u2019\xE9tais joyeux avant, mais la vie fut rude !\r\nJ\u2019imagine
-      un hiver sans nourriture\u2026\r\nNe me parlez pas de nourriture !\r"
+    - "[Bear]- <bounce><color=#5fc687> J\u2019\xE9tais joyeux avant</color></bounce>,
+      mais la vie fut rude !\nJ\u2019imagine<shake><color=#9868da>  un hiver sans
+      nourriture\u2026</color></shake>\n<wiggle><color=#be4952> Ne me parlez pas
+      de nourriture !</color></wiggle>"
     - 
     - 'Name : Be.1.FearAngTrust;'
     - "\u24C7-Be.FS.Arc.1.29"
     - Bear
     - Hint
-    - "[Bear]-Emilie, je t\u2019aime bien mais parfois tu es bien mesquine !\r\nJe
-      n\u2019ai plus de miel \xE0 cause de toi, comment je vais faire !\r\nUn hiver
-      sans nourriture\u2026 C\u2019est l\u2019enfer !\r"
+    - "[Bear]-<?E:Vfx/Trust, TRUE/>Emilie, je t\u2019aime bien mais parfois tu es
+      bien mesquine !\n<?E:Vfx/Anger, TRUE/>Je n\u2019ai plus de miel \xE0 cause
+      de toi, comment je vais faire !\nUn hiver sans nourriture\u2026 <shake><color=#9868da>
+      C\u2019est l\u2019enfer !</color></shake>"
     - 
     - 'Name : Be.1.FearAngTrust;'
     - "\u24C7-Be.FS.Arc.1.30"
     - Bear
     - Hint
-    - "[Bear]-Sortir me fait peur, je n\u2019y peux rien !\r\nMais pour r\xE9cup\xE9rer
-      mon miel je le dois bien !\r\nJ\u2019ai tellement faim !!!\r"
+    - "[Bear]-<?E:Vfx/Fear, TRUE/>Sortir me fait peur, je n\u2019y peux rien !\n<?E:Vfx/Trust,
+      TRUE/>Mais pour r\xE9cup\xE9rer mon miel je le dois bien !\n<wiggle><color=#be4952>
+      J\u2019ai tellement faim !!!</color></wiggle>"
     - 
     - 'Name : Be.1.FearAngTrust;'
     - "\u24C7-Be.FS.Arc.1.31"
     - Bear
     - Hint
-    - "[Bear]- J\u2019\xE9tais joyeux avant, mais la vie fut rude !\nJ\u2019imagine
-      un hiver sans nourriture\u2026\nNe me parlez pas de nourriture !"
+    - "[Bear]- J\u2019\xE9tais joyeux avant, mais<swing><color=#818ee2>  la vie fut
+      rude...</color></swing>\nJ\u2019imagine<shake><color=#9868da>  un hiver sans
+      nourriture\u2026</color></shake>\n<wiggle><color=#be4952> Ne me parlez pas
+      de nourriture !</color></wiggle>"
     - 
     - 'Name : Be.1.FearAngSad;'
     - "\u24C7-Be.FS.Arc.1.32"
     - Bear
     - Hint
-    - "[Bear]-Emilie, je t\u2019aime bien mais parfois tu es bien mesquine !\r\nJe
-      n\u2019ai plus de miel \xE0 cause de toi, comment je vais faire !\r\nUn hiver
-      sans nourriture\u2026 C\u2019est l\u2019enfer !\r"
+    - "[Bear]-<?E:Vfx/Sadness, TRUE/>Emilie, je t\u2019aime bien mais parfois tu
+      es bien mesquine !\n<?E:Vfx/Anger, TRUE/>Je n\u2019ai plus de miel \xE0 cause
+      de toi, comment je vais faire !\nUn hiver sans nourriture\u2026 <shake><color=#9868da>
+      C\u2019est l\u2019enfer !</color></shake>"
     - 
     - 'Name : Be.1.FearAngSad;'
     - "\u24C7-Be.FS.Arc.1.33"
     - Bear
     - Hint
-    - "[Bear]-Sortir me fait peur, je n\u2019y peux rien !\r\nMais pour r\xE9cup\xE9rer
-      mon miel je le dois bien !\r\nJ\u2019ai tellement faim !!!\r"
+    - "[Bear]-<?E:Vfx/Fear, TRUE/>Sortir me fait peur, je n\u2019y peux rien !\n<?E:Vfx/Sadness,
+      TRUE/>Mais pour r\xE9cup\xE9rer mon miel je le dois bien...\n<wiggle><color=#be4952>
+      J\u2019ai tellement faim !!!</color></wiggle>"
     - 
     - 'Name : Be.1.FearAngSad;'
     - "\u24C7-Be.FS.Arc.1.34"
     - Bear
     - Hint
-    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !\r\nSi tu
-      les traites bien, elles sont tr\xE8s gentilles...\r"
+    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !<?E:Vfx/Anger,
+      TRUE/>\nSi tu les traites bien, <wave><color=#e893d3> elles sont tr\xE8s gentilles...</color></wave>"
     - 
     - 'Name : Be.1.JoyAng;'
     - "\u24C7-Be.FS.Arc.1.35"
     - Bear
     - Hint
-    - "[Bear]-Manger des souris ? Quelle dr\xF4le d\u2019id\xE9e !\r\nJ\u2019avais
-      une amie souris, je l\u2019adorais !\r"
+    - "[Bear]-Manger des souris ? <?E:Sfx/Anger, TRUE/> Quelle dr\xF4le d\u2019id\xE9e
+      !\nJ\u2019avais une amie souris, je l\u2019adorais !<?E:Vfx/Joy, TRUE/>"
     - 
     - 'Name : Be.1.JoyAng;'
     - "\u24C7-Be.FS.Arc.1.36"
     - Bear
     - Hint
-    - "[Bear]-Reste loin d\u2019Emilie !?\r\nLes souris sont nos amies !\r"
+    - "[Bear]-Reste loin d\u2019Emilie !?<?E:Animation/Anger, TRUE/> \nLes souris
+      sont nos amies !<?E:Vfx/Joy, TRUE/>"
     - 
     - 'Name : Be.1.JoyAng;'
     - "\u24C7-Be.FS.Arc.1.37"
     - Bear
     - Hint
-    - "[Bear]- J\u2019\xE9tais joyeux avant, mais la vie fut rude !\nJ\u2019imagine
-      un hiver sans nourriture\u2026\nNe me parlez pas de nourriture !"
+    - "[Bear]- J\u2019\xE9tais joyeux avant, mais la vie fut rude !\n<shake><color=#9868da>J\u2019imagine
+      un hiver sans nourriture\u2026</color></shake>\n<wiggle><color=#be4952> Ne
+      me parlez pas de nourriture !</color></wiggle>"
     - 
     - 'Name : Be.1.FearAng;'
     - "\u24C7-Be.FS.Arc.1.38"
     - Bear
     - Hint
-    - "[Bear]-S\u2019en prendre \xE0 des souris\u2026\r\nNe laisse pas ta nature
-      te dompter !\r\nReste loin de ma petite souris Emilie\u2026\r"
+    - "[Bear]-S\u2019en prendre \xE0 des souris\u2026\nNe laisse pas ta nature te
+      dompter <?E:Vfx/Anger, TRUE/>!\nReste loin de ma petite souris Emilie\u2026"
     - 
     - 'Name : Be.1.FearAng;'
     - "\u24C7-Be.FS.Arc.1.39"
     - Bear
     - Hint
-    - "[Bear]-J\u2019ai peur qu\u2019il arrive quelque chose \xE0 Emilie\u2026\r\nReste
-      loin de cette petite souris le chat !\r"
+    - "[Bear]-J\u2019ai peur qu\u2019il arrive quelque chose \xE0 Emilie\u2026<?E:Vfx/Fear,
+      TRUE/> \nLe chat <?E:Vfx/Anger, TRUE/>! reste loin de cette petite souris !"
     - 
     - 'Name : Be.1.FearAng;'
     - "\u24C7-Be.FS.Arc.1.40"
     - Bear
     - Hint
-    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !\r\nC\u2019est
-      gentil les souris ! Ne mange pas Emilie !\r\nMon ancien village pensait comme
-      toi, j\u2019ai d\xFB le fuir...\r"
+    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !\nC\u2019est
+      gentil les souris ! <wiggle><color=#be4952> Ne mange pas Emilie !<wiggle><color=#be4952>
+      \nMon ancien village pensait comme toi, j\u2019ai d\xFB le fuir...<?E:Sfx/Sadness,
+      TRUE/> "
     - 
     - 'Name : Be.1.SadAng;'
     - "\u24C7-Be.FS.Arc.1.41"
     - Bear
     - Hint
-    - "[Bear]-Manger de la viande ? Quelle dr\xF4le d\u2019id\xE9e !\r\nTu veux vraiment
-      tenter de nous d\xE9vorer !?\r\nTu me rappelle mon village o\xF9 avant j\u2019habitais\u2026\r"
+    - "[Bear]-Manger de la viande ? Quelle dr\xF4le d\u2019id\xE9e !\nTu veux vraiment
+      tenter de nous d\xE9vorer !?<?E:Sfx/Anger, TRUE/> \nTu me rappelle mon village
+      o\xF9 avant j\u2019habitais\u2026<?E:Vfx/Sadness, TRUE/> "
     - 
     - 'Name : Be.1.SadAng;'
     - "\u24C7-Be.FS.Arc.1.42"
     - Bear
     - Hint
-    - "[Bear]-Manger mes amies !?\r\nTu as perdu l\u2019esprit !\r\nTout \xE7a me
-      rappelle mon village et ancienne amie\u2026\r"
+    - "[Bear]-<?E:Vfx/Sadness, TRUE/>Manger mes amies !?</color></wiggle>\nTu as
+      perdu l\u2019esprit !\nTout \xE7a me rappelle mon village et ancienne amie\u2026<?E:Vfx/Sadness,
+      TRUE/>"
     - 
     - 'Name : Be.1.SadAng;'
     - "\u24C7-Be.FS.Arc.1.43"
     - Bear
     - Hint
-    - "[Bear]-Manger des souris\u2026\r\nSi tu les traites bien, elles sont tr\xE8s
-      gentilles !\r"
+    - "[Bear]-Manger des souris\u2026<?E:Vfx/Sadness, TRUE/> \nSi tu les traites
+      bien, elles sont tr\xE8s gentilles !<?E:Vfx/Joy, TRUE/> "
     - 
     - 'Name : Be.1.JoySad;'
     - "\u24C7-Be.FS.Arc.1.44"
     - Bear
     - Hint
-    - "[Bear]-Manger des souris ? Quelle triste id\xE9e !\r\nJ\u2019avais une amie
-      souris, je l\u2019adorais !\r"
+    - "[Bear]-Manger des souris ? Quelle triste id\xE9e !<?E:Vfx/Anger, TRUE/> \nJ\u2019avais
+      une amie souris, <wave><color=#e893d3> je l\u2019adorais !</color></wave>"
     - 
     - 'Name : Be.1.JoySad;'
     - "\u24C7-Be.FS.Arc.1.45"
     - Bear
     - Hint
-    - "[Bear]-Ne laisse pas ton instinct te dompter\r\nLes souris sont nos amies
-      !\r\nReste loin d\u2019Emilie\u2026\r"
+    - "[Bear]-Ne laisse pas ton instinct te dompter.<?E:Vfx/Sadness, TRUE/> \nLes
+      souris sont nos amies !<?E:Vfx/Joy, TRUE/> \nReste loin d\u2019Emilie\u2026"
     - 
     - 'Name : Be.1.JoySad;'
     - "\u24C7-Be.FS.Arc.1.46"
     - Bear
     - Hint
-    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !\r\nSi tu
-      les traites bien, elles sont tr\xE8s gentilles...\r"
+    - "[Bear]-Je n\u2019en reviens pas que tu puisses manger des souris !<?E:Sfx/Disgust,
+      TRUE/> \nSi tu les traites bien, elles sont tr\xE8s gentilles... <?E:Vfx/Joy,
+      TRUE/> "
     - 
     - 'Name : Be.1.JoyDis;'
     - "\u24C7-Be.FS.Arc.1.47"
     - Bear
     - Hint
-    - "[Bear]-Manger des souris ? Quelle dr\xF4le d\u2019id\xE9e !\r\nJ\u2019avais
-      une amie souris, je l\u2019adorais !\r"
+    - "[Bear]-Manger des souris ? Quelle dr\xF4le d\u2019id\xE9e ! <?E:Vfx/Disgust,
+      TRUE/> \nJ\u2019avais une amie souris, je l\u2019adorais !<?E:Vfx/Joy, TRUE/> "
     - 
     - 'Name : Be.1.JoyDis;'
     - "\u24C7-Be.FS.Arc.1.48"
     - Bear
     - Hint
-    - "[Bear]-Reste loin d\u2019Emilie !?\r\nLes souris sont nos amies !\r"
+    - "[Bear]-Reste loin d\u2019Emilie ! <?E:Animation/Disgust, TRUE/> \n<wave><color=#e893d3>
+      Les souris sont nos amies !</color></wave>"
     - 
     - 'Name : Be.1.JoyDis;'
     - "\u24C7-Be.FS.Arc.1.49"
     - Bear
     - Hint
-    - "[Bear]-J\u2019en ai assez de ma solitude\u2026\r\nJ\u2019\xE9tais joyeux avant,
-      mais la vie fut rude !\r\nAlors on se calme le chat, on est l\xE0 en amis\u2026\r"
+    - "[Bear]-J\u2019en ai assez de ma solitude\u2026<?E:Vfx/Sadness, TRUE/> \nJ\u2019\xE9tais
+      joyeux avant, mais la vie fut rude !\nAlors on se calme le chat, <dangle><color=#de874d>
+      on est l\xE0 en amis\u2026</color></dangle>"
     - 
     - 'Name : Be.1.TrustSad;'
     - "\u24C7-Be.FS.Arc.1.50"
     - Bear
     - Hint
-    - "[Bear]-M\xEAme si Emily est un peu mesquine,\r\nElle me fait rire cette petite
-      coquine !\r\nElle me rappelle mon ancienne amie\u2026\r"
+    - "[Bear]-M\xEAme si Emily est un peu mesquine,\nElle me fait rire cette petite
+      coquine !<?E:Vfx/Trust, TRUE/> \nElle me rappelle mon ancienne amie\u2026<?E:Vfx/Sadness,
+      TRUE/> "
     - 
     - 'Name : Be.1.TrustSad;'
     - "\u24C7-Be.FS.Arc.1.51"
     - Bear
     - Hint
-    - "[Bear]-Je n\u2019ai plus envie de rien\u2026\r\nPeut-\xEAtre vais-je retrouver
-      le go\xFBt de l\u2019aventure !\r\nMais attention le chat si tu nous veux pas
-      du bien !\r"
+    - "[Bear]-Je n\u2019ai plus envie de rien\u2026<?E:Sfx/Sadness, TRUE/> \nPeut-\xEAtre
+      vais-je retrouver le go\xFBt de l\u2019aventure ! <?E:Vfx/Trust, TRUE/>\nMais
+      attention le chat si tu nous veux pas du bien !"
     - 
     - 'Name : Be.1.TrustSad;'
     - "\u24C7-Be.FS.Arc.1.52"
     - Bear
     - Hint
-    - "[Bear]-Je n\u2019ai plus envie de rien depuis que ma petite souris est partie\u2026\r\n[Cat]-Et
-      moi dont depuis que mon p\xE8re m\u2019a banni\u2026\r"
+    - "[Bear]-Je n\u2019ai plus envie de rien depuis que ma petite souris est partie\u2026\n[Cat]-Et
+      moi dont depuis que mon p\xE8re m\u2019a banni\u2026 <?E:Sfx/Sadness, TRUE/>"
     - 
     - 'Name : Be.1.LazyEnd;'
     - "\u24C7-Be.FS.Arc.1.53"
     - Bear
     - Hint
-    - "[Bear]-On \xE9tait si heureux, depuis de quitter ma cabane je suis peureux\u2026\r\n[Cat]-Moi
-      c\u2019est d\u2019y retourner qui m\u2019effraie !\r\n[Cat]-Mon loup de p\xE8re
-      qui m\u2019a \xE9lever\u2026\r"
+    - "[Bear]-On \xE9tait si heureux, depuis de quitter ma cabane je suis peureux\u2026\n[Cat]-Moi
+      c\u2019est d\u2019y retourner qui m\u2019effraie !<?E:Animation/Fear, TRUE/>
+      \n[Cat]-Mon loup de p\xE8re qui m\u2019a \xE9lever\u2026<?E:Vfx/Sadness, TRUE/> "
     - 
     - 'Name : Be.1.LazyEnd;'
     - "\u24C7-Be.FS.Arc.1.54"
     - Bear
     - Hint
-    - "[Bear]-Emilie me fait penser \xE0 elle, elle me redonne de l\u2019espoir\u2026\r\n[Cat]-Ton
-      histoire est belle, mais un loup aux trousses, l\u2019espoir je ne peux y croire\u2026\r"
+    - "[Bear]-Emilie me fait penser \xE0 elle, elle me redonne de l\u2019espoir\u2026\n[Cat]-Ton
+      histoire est belle, mais un loup aux trousses, l\u2019espoir je ne peux y croire\u2026<?E:Sfx/Sadness,
+      TRUE/> "
     - 
     - 'Name : Be.1.LazyEnd;'
     - "\u24C7-Be.FS.Arc.1.55"
     - Bear
     - Hint
-    - "[Bear]-Plus de nourriture pour l\u2019hivers !!!!\r\n[Cat]-Pour l\u2019instant
-      ce de ne pas \xEAtre d\xE9vor\xE9 que j\u2019aimerai\u2026\r\n[Bear]-J\u2019ai
-      faim !!!!\r"
+    - "[Bear]-<shake> Plus de nourriture pour l\u2019hivers !!!!</shake> \n[Cat]-Pour
+      l\u2019instant c'est de <shake><color=#9868da> ne pas \xEAtre d\xE9vor\xE9</color></shake>
+      que j\u2019aimerai\u2026\n[Bear]-<wiggle> J\u2019ai faim !!!!</wiggle> "
     - 
     - 'Name : Be.1.GreedyEnd;'
     - "\u24C7-Be.FS.Arc.1.56"
     - Bear
     - Hint
-    - "[Bear]-Emilie ! Pourquoi m\u2019as-tu pill\xE9 !\r\n[Mouse]-C\u2019\xE9tait
-      un honn\xEAte \xE9change !\r\n[Cat]-Vous me fatiguez, des choses plus graves
-      vont m\u2019arriver\u2026\r"
+    - "[Bear]-Emilie ! Pourquoi m\u2019as-tu pill\xE9 !\n[Mouse]-C\u2019\xE9tait
+      un honn\xEAte \xE9change !\n[Cat]-Vous me fatiguez, des choses plus graves
+      vont m\u2019arriver\u2026<?E:Animation/Fear, TRUE/> "
     - 
     - 'Name : Be.1.GreedyEnd;'
     - "\u24C7-Be.FS.Arc.1.57"
     - Bear
     - Hint
-    - "[Bear]-Un hivers sans manger !!!\r\n[Cat]-Si mon loup de p\xE8re pouvait aussi
-      je\xFBner\u2026\r\n[Cat]-Lui qui m\u2019a \xE9lev\xE9 et qui veux maintenant
-      me manger\u2026\r"
+    - "[Bear]-Un hivers sans manger !!!\n[Cat]-Si mon loup de p\xE8re pouvait aussi
+      je\xFBner\u2026\n[Cat]-Lui qui m\u2019a \xE9lev\xE9 et qui veux maintenant
+      me manger\u2026<?E:Animation/Sadness, TRUE/> "
     - 
     - 'Name : Be.1.GreedyEnd;'
     - "\u24C7-Be.FS.Arc.1.58"
     - Bear
     - Hint
-    - "[Bear]-Evitez de refaire les erreurs de mon ancien peuple !\r\n[Cat]-Facile
-      \xE0 dire, mais je suis traqu\xE9 et affam\xE9\u2026\r\n[Cat]-Mon loup de p\xE8re
-      me court apr\xE8s\u2026\r"
+    - "[Bear]-Evitez de refaire les erreurs de mon ancien peuple !\n[Cat]-Facile
+      \xE0 dire, mais je suis traqu\xE9 et affam\xE9\u2026 <?E:Vfx/Fear, TRUE/> \n[Cat]-Mon
+      loup de p\xE8re me court apr\xE8s\u2026<?E:Animation/Fear, TRUE/> "
     - 
     - 'Name : Be.1.WiseEnd;'
     - "\u24C7-Be.FS.Arc.1.59"
     - Bear
     - Hint
-    - "[Bear]-Si ours et souris peuvent vivre ensemble\u2026\r\nPourquoi pas chat
-      et souris ?\r\n[Cat]-Peu importe, ce d\xE9bat s\u2019ach\xE8vera quand mon
-      p\xE8re me rattrapera\u2026\r"
+    - "[Bear]-Si ours et souris peuvent vivre ensemble\u2026\nPourquoi pas chat et
+      souris ?\n[Cat]-Peu importe, ce d\xE9bat s\u2019ach\xE8vera quand <shake><color=#9868da>
+      mon p\xE8re me rattrapera\u2026</color></shake>"
     - 
     - 'Name : Be.1.WiseEnd;'
     - "\u24C7-Be.FS.Arc.1.60"
     - Bear
     - Hint
     - "[Bear]-Ma petite souris\u2026 Si seulement mon village n\u2019\xE9tait si
-      ferm\xE9 d\u2019esprit !\r\n[Cat]-D\xEEtes cela \xE0 mon p\xE8re qui parce
-      que je suis chat veut ma vie !\r"
+      ferm\xE9 d\u2019esprit !\n[Cat]-D\xEEtes cela \xE0 mon p\xE8re qui parce que
+      je suis chat veut ma vie !<?E:Vfx/Sadness, TRUE/> "
     - 
     - 'Name : Be.1.WiseEnd;'
     - "\u24C7-Be.FS.Arc.1.61"
     - Bear
     - Hint
-    - "[Bear]-Un chat, quel ennui\u2026\r\nIl n\u2019a pas int\xE9r\xEAt \xE0 s\u2019en
-      prendre \xE0 souris !\r\nLes mangeurs de viandes sont nos ennemis !\r"
+    - "[Bear]-Un chat, quel ennui\u2026<?E:Vfx/Trust, TRUE/> \nPourvu qu'il ne s'en
+      prenne pas \xE0 souris... <?E:Vfx/Sadness, TRUE/> \nLes mangeurs de viandes
+      sont nos ennemis ! <?E:Vfx/Disgust, TRUE/>"
     - 
     - 'Name : Be.1.Start;'
     - "\u24C7-Be.FS.Arc.1.62"
     - Bear
     - Hint
-    - "[Bear]-Il m\u2019a l\u2019air perdu le pauvre chat.\r\nPlus grand et imposant
-      il m\u2019aurait fait penser \xE0 mon plus jeune moi\u2026\r\nMaintenant j\u2019ai
-      bien chang\xE9, j\u2019ai tout perdu pour une noix\u2026\r"
+    - "[Bear]-Il m\u2019a l\u2019air perdu le pauvre chat.<?E:Vfx/Sadness, TRUE/>
+      \nPlus grand et imposant il m\u2019aurait fait penser \xE0 mon plus jeune moi\u2026<?E:Sfx/Trust,
+      TRUE/> \nMaintenant j\u2019ai bien chang\xE9, j\u2019ai tout perdu pour une
+      noix\u2026<?E:Vfx/Sadness, TRUE/> "
     - 
     - 'Name : Be.1.Start;'
     - "\u24C7-Be.FS.Arc.1.63"
     - Bear
     - Hint
-    - "[Bear]-Il compte vraiment me prendre en proie ?\r\nLes mangeurs de souris
-      je d\xE9teste \xE7a\u2026\r\n\xC7a me rappelle le temps o\xF9 je vivais dans
-      le froid\u2026\r"
+    - "[Bear]-Il compte vraiment me prendre en proie ?<?E:Vfx/Trust, TRUE/> \n<slide><color=#90aa31>
+      Les mangeurs de souris je d\xE9teste \xE7a\u2026</color></slide>\n\xC7a me
+      rappelle le temps o\xF9 je vivais dans le froid\u2026<?E:Vfx/Sadness, TRUE/> "
     - 
     - 'Name : Be.1.Start;'
     - "\u24C7-Event.FirstEmo.1"
     - Global
     - Event
-    - "[Cat]-Je suis l\xE0 devant vous, feintant de vous prendre en proies\u2026\r\nMais
-      mon c\u0153ur est trop lourd pour bondir maintenant je le vois\u2026\r\nJe
-      suis trop triste pour faire quoi que ce soit\u2026\r\nMais ce n\u2019est pas
-      si simple, un autre sentiment est l\xE0 mais quoi !? \r"
+    - "[Cat]-Je suis l\xE0 devant vous, feintant de vous prendre en proies\u2026\nMais
+      mon c\u0153ur est trop lourd pour bondir... <?E:Animation/Sadness, TRUE/> maintenant
+      je le vois\u2026\nJe suis trop triste pour faire quoi que ce soit\u2026<?E:Sfx/Sadness,
+      TRUE/> \nMais ce n\u2019est pas si simple, un autre sentiment est l\xE0 mais
+      quoi !? \n"
     - 
     - 'Key : Block.1;'
     - "\u24C7-H.Joy.F"
     - Cat
     - Harmony
-    - "[Cat]-Un morceau bien joyeux, cette chanson ne me va pas\u2026\r\n[Bird]-Allons,
-      un peu de joie, un peu de confiance, voil\xE0 le d\xE9but d\u2019une romance\u2026\r\n[Cat]-Abandonn\xE9
-      par mon p\xE8re j\u2019ai le c\u0153ur en miette. Pas de romance pour moi\u2026
-      \r"
+    - "[Cat]-Un morceau bien joyeux, <swing> cette chanson ne me va pas\u2026</swing>
+      \n[Bird]-Allons, un peu de joie, un peu de confiance, voil\xE0 le d\xE9but
+      d\u2019une romance\u2026\n[Cat]-Abandonn\xE9 par mon p\xE8re j\u2019ai le c\u0153ur
+      en miette. Pas de romance pour moi\u2026 <?E:Sfx/Sadness, TRUE/> \n"
     - 
     - 'Emotion : Joy;
 
@@ -2576,9 +2607,9 @@ MonoBehaviour:
     - "\u24C7-H.Trust.F"
     - Cat
     - Harmony
-    - "[Cat]-Mon loup de p\xE8re \xE9tait le seul ami que j\u2019avais et que je
-      d\xE9sirais\u2026\r\n// Cette musique ne me va pas\u2026\r\n[Bird]-De nous
-      rencontrer tu as de la chance, tu peux nous faire confiance !\r"
+    - "[Cat]-Mon loup de p\xE8re \xE9tait le seul ami que j\u2019avais, maintenant
+      il m'effrait !<?E:Vfx/Fear, TRUE/> \n// Cette musique ne me va pas\u2026\n[Bird]-De
+      nous rencontrer tu as de la chance, tu peux nous faire confiance !\n"
     - 
     - 'Emotion : Trust;
 
@@ -2588,10 +2619,11 @@ MonoBehaviour:
     - "\u24C7-H.Fear.V2"
     - Cat
     - Harmony
-    - "[Cat]-Je suis mort de peur ! Je suis d\xE9sesp\xE9r\xE9 !\r\nLui ce vieux
-      loup qui m\u2019a \xE9lev\xE9, moi un jeune chat, et aim\xE9.\r\n//J\u2019avais
-      un p\xE8re un foyer !\r\nMaintenant il veut ma peau et me manger\u2026\r\n//Tout
-      \xE7a pour une histoire de vue et de malentendue\u2026\r"
+    - "[Cat]-Je suis <shake><color=#9868da> mort de peur !</color></shake> Je suis
+      d\xE9sesp\xE9r\xE9 !\nLui ce vieux loup qui m\u2019a \xE9lev\xE9<?E:Vfx/Sadness,
+      TRUE/> , moi un jeune chat, et aim\xE9. \n//J\u2019avais un p\xE8re un foyer
+      !\nMaintenant il veut ma peau et me manger\u2026\n//Tout \xE7a pour une histoire
+      de vue et de malentendue\u2026\n"
     - 
     - 'Emotion : Fear;
 
@@ -2601,10 +2633,11 @@ MonoBehaviour:
     - "\u24C7-H.Sadness.V1"
     - Cat
     - Harmony
-    - "[Cat]-Il y a longtemps je me suis perdu\u2026\r\nJe me suis retrouv\xE9 chez
-      un loup avec une mauvaise vu\u2026\r\n//Il me recueilli en fils, mais depuis
-      qu\u2019il retrouva les yeux,\r\nIl me jeta dehors en moins de deux\u2026\r\n//J\u2019ai
-      le c\u0153ur bris\xE9, je ne suis qu\u2019un petit chat triste et peureux\u2026\r"
+    - "[Cat]-Il y a longtemps je me suis perdu\u2026\nJe me suis retrouv\xE9 chez
+      un loup avec une mauvaise vu\u2026\n//Il me <bounce> recueilli en fils</bounce>
+      , mais depuis qu\u2019il retrouva les yeux,\nIl me jeta dehors en moins de
+      deux\u2026\n//J\u2019ai le c\u0153ur bris\xE9<?E:Vfx/Sadness, TRUE/>, je ne
+      suis qu\u2019un petit chat triste et peureux<?E:Vfx/Fear, TRUE/>\u2026\n"
     - 
     - 'Emotion : Sadness;
 
@@ -2615,8 +2648,9 @@ MonoBehaviour:
     - Cat
     - Harmony
     - "[Cat]-Je suis dos au mur, et me voil\xE0 entrain de m\u2019humilier devant
-      un rat !\r\n[Mouse]-Une souris !\r\n[Cat]-Peu importe, tu es mon repas !\r\n[Bear]-Allons,
-      pas de \xE7a !\r\n[Cat]-D\xE9sol\xE9, cette m\xE9lodie ne me r\xE9ussit pas\u2026\r"
+      un rat !<?E:Animation/Sadness, TRUE/> \n[Mouse]-Une souris !\n[Cat]-Peu importe,
+      tu es mon repas !\n[Bear]-Allons, pas de \xE7a !\n[Cat]-D\xE9sol\xE9, cette
+      m\xE9lodie ne me r\xE9ussit pas\u2026\n"
     - 
     - 'Emotion : Anger;
 
@@ -2638,10 +2672,11 @@ MonoBehaviour:
     - "\u24C7-H.Surprise.F"
     - Cat
     - Harmony
-    - "[Cat]-Comment aurais-je pu pr\xE9voir ! je pensais lui faire tellement plaisir
-      !\n[Bird]-Comment ? Lui faire plaisir ? Ou voulez-vous en venir ?\n[Cat]-C\u2019est
-      gr\xE2ce \xE0 moi qu\u2019il a retrouv\xE9 la vue\u2026\n// Une id\xE9e bien
-      ing\xE9nue\u2026 Maintenant il veut me r\xF4tir \xE0 vue !!!"
+    - "[Cat]-Comment aurais-je pu pr\xE9voir ! Je pensais lui faire tellement plaisir
+      !<?E:Sfx/Sadness, TRUE/> \n[Bird]-Comment ? Lui faire plaisir ? Ou voulez-vous
+      en venir ?\n[Cat]-C\u2019est gr\xE2ce \xE0 moi qu\u2019il a retrouv\xE9 la
+      vue\u2026\n// Une id\xE9e bien ing\xE9nue\u2026 Maintenant <shake><color=#9868da>
+      il veut me r\xF4tir \xE0 vue !!!</color></shake>"
     - 
     - 'Emotion : Surprise;
 
@@ -2651,9 +2686,10 @@ MonoBehaviour:
     - "\u24C7-H.Anticipation.F"
     - Cat
     - Harmony
-    - "[Cat]-Vigilant, je le suis. Mais ce que je ressens est plus fort\u2026\r\nJe
-      ne peux emp\xEAcher de trembler mon corrrrrps\u2026\r\n//Lui qui m\u2019a \xE9lev\xE9,
-      comment peut-il m\u2019exiler !?\r"
+    - "[Cat]-Vigilant, je le suis. Mais ce que je ressens est plus fort\u2026\nJe
+      ne peux emp\xEAcher de faire<shake><color=#9868da> trembler mon corrrrrps\u2026</color></shake>\n//Lui
+      qui m\u2019a \xE9lev\xE9, comment peut-il m\u2019exiler !?<?E:Animation/Sadness,
+      TRUE/> \n"
     - 
     - 'Emotion : Anticipation;
 
@@ -2858,34 +2894,33 @@ MonoBehaviour:
     - Hint
     - '[Cat]-Trois.
 
-      Hoola hoop<?E:Vfx/Trust,TRUE/>.
+      Hoola hoop<?E:Vfx/Trust,Bird,TRUE/>.
 
       Yas girl!
 
-      //Kawabunga<?E:Vfx/Fear,TRUE/>.
+      //Kawabunga<?E:Vfx/Fear,Cat,TRUE/>.
 
       Baby!!!'
     - '[Cat]-Three.
 
-      Hoola hoop<?E:Vfx/Trust,TRUE/>.
+      Hoola hoop<?E:Vfx/Trust,BirdTRUE/>.
 
       Yas girl!
 
-      //Kawabunga<?E:Vfx/Fear,TRUE/>.
+      //Kawabunga<?E:Vfx/Fear,Cat,TRUE/>.
 
       Baby!!!'
     - 'Name : Standard;'
     - "\u24C7-B.Fls.01"
     - Bird
     - Hint
-    - "[Bird]-Deux<?E:Vfx/Anger,TRUE/>.\nRoger, roger.\n//Oui<?E:Vfx/Surprise,TRUE/>,
-      c'est \xE7a."
-    - '[Bird]-Two<?E:Vfx/Anger,TRUE/>.
+    - "[Bird]-Deux<?E:Vfx/Anger,Bird,TRUE/>.\nRoger, roger.\n//Oui, c'est \xE7a<?E:Vfx/Surprise,Mouse,TRUE/>."
+    - '[Bird]-Two<?E:Vfx/Anger,Bird,TRUE/>.
 
       Roger, roger.
 
-      //Yep<?E:Vfx/Surprise,TRUE/>,
-      that''s it.'
+      //Yep, that''s
+      it<?E:Vfx/Surprise,Mouse,TRUE/>.'
     - 'Name : Standard;'
     - "\u24C7-B.End"
     - Bird
