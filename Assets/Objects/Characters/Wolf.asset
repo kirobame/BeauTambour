@@ -16,4 +16,4 @@ MonoBehaviour:
   fontColor: {r: 0.1764706, g: 0.2, b: 0.16862746, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   font: {fileID: 11400000, guid: eb1fe65780f0f804cbeb803ca1cc0158, type: 2}
-  audioCharMap: {fileID: 11400000, guid: fb49052e3f50da14b9bf5beb076297c3, type: 2}
+  audioCharMap: {fileID: 11400000, guid: e13d0414c9aee1249997e1e745ec04a9, type: 2}

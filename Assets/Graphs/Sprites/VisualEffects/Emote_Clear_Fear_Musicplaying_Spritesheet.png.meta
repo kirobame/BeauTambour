@@ -1,0 +1,419 @@
+fileFormatVersion: 2
+guid: 8163c3fb30e5396488404b80a0b1102e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3483154675625849899
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_0
+  - first:
+      213: 4953209671003225042
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_1
+  - first:
+      213: -2899115241122117652
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_2
+  - first:
+      213: -4227928291102328501
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_3
+  - first:
+      213: -2638849690906606704
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_4
+  - first:
+      213: -3200427594308606278
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_5
+  - first:
+      213: -7872539228690141811
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_6
+  - first:
+      213: -76897139429662956
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_7
+  - first:
+      213: 5805608152541101002
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_8
+  - first:
+      213: 3576890776970224226
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_9
+  - first:
+      213: -7532156018893716252
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_10
+  - first:
+      213: 770192947344815738
+    second: Emote_Clear_Fear_Musicplaying_Spritesheet_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b247b6219b6a65030800000000000000
+      internalID: 3483154675625849899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db3d2ad3f55db440800000000000000
+      internalID: 4953209671003225042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7cef16c0644c7d0800000000000000
+      internalID: -2899115241122117652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b497509ae916355c0800000000000000
+      internalID: -4227928291102328501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093ccd5ff2ce06bd0800000000000000
+      internalID: -2638849690906606704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6a0ef3f0cc593d0800000000000000
+      internalID: -3200427594308606278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8da891384f1fb290800000000000000
+      internalID: -7872539228690141811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f1d08857eceeef0800000000000000
+      internalID: -76897139429662956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbf255fad9a19050800000000000000
+      internalID: 5805608152541101002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2626ea1e53ba3a130800000000000000
+      internalID: 3576890776970224226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Musicplaying_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e405050208687790800000000000000
+      internalID: -7532156018893716252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d8e89f53c8e6cd749a35e8d4303e1c1e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

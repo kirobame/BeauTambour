@@ -9,9 +9,9 @@ AnimatorOverrideController:
   m_Name: SignalIndicator
   m_Controller: {fileID: 9100000, guid: 8ef3a21fe6fb18843acf147ee38ecd27, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: ad83aabb931ea714aa8315c185b4d40a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ca436bc4230c07d47a9e2e77a3aec047, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: fd1cbf8d54c999e49a5ccee295d210a7, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: debd252991a79964ca953dd803b77873, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: ef73a5ae43606df4d9e7c7119dbcd949, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 692d780e35a6c584593ae2342d36d972, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 41d10e8505bffbc4f9be7fb3143e056c, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 3302474a26e60894b8cd1638dfd4d474, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: beb4858fd775c1142a7d151b59176d8b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ef73a5ae43606df4d9e7c7119dbcd949, type: 2}

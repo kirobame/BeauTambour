@@ -366,7 +366,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1336782543469946252}
   m_maskType: 0
-  _SortingLayer: 2
   _SortingLayerID: 2
   _SortingOrder: 0
 --- !u!114 &1336782543469946249
@@ -775,7 +774,7 @@ Animator:
   m_GameObject: {fileID: 1336782544307396207}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8ef3a21fe6fb18843acf147ee38ecd27, type: 2}
+  m_Controller: {fileID: 22100000, guid: 9cb4306c0473b014da4d8cf4d95371f1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

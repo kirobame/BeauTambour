@@ -103,7 +103,7 @@ namespace BeauTambour
             if (!indicator.GetCurrentAnimatorStateInfo(0).IsTag("Void")) return;
 
             speaker.StopTalking();
-            if (textAnimator.latestCharacterShown.index + 2 <= textAnimator.tmproText.textInfo.characterCount)
+            if (textAnimator.latestCharacterShown.index + 2 < textAnimator.tmproText.textInfo.characterCount)
             {
                 awaitingIndication = true;
 

@@ -1,0 +1,419 @@
+fileFormatVersion: 2
+guid: cfaeeca672040c34fbf471b7a6985cca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4386616162544605163
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_0
+  - first:
+      213: 8318494880345405707
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_1
+  - first:
+      213: -8127239030635113874
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_2
+  - first:
+      213: -7437977373813529840
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_3
+  - first:
+      213: -1890809756155193944
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_4
+  - first:
+      213: 5152352793616825566
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_5
+  - first:
+      213: 1956072870311212107
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_6
+  - first:
+      213: -6708392133555799400
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_7
+  - first:
+      213: -3024201169598168819
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_8
+  - first:
+      213: 4667905520131594883
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_9
+  - first:
+      213: 5603445673071039160
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_10
+  - first:
+      213: -231156462651596008
+    second: Emote_Clear_Trust_Musicplaying_Spritesheet_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be75576982460ec30800000000000000
+      internalID: 4386616162544605163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09b4e8350b317370800000000000000
+      internalID: 8318494880345405707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62dd4e592f363f80800000000000000
+      internalID: -8127239030635113874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013a3729cfef6c890800000000000000
+      internalID: -7437977373813529840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5d6827b8e72c5e0800000000000000
+      internalID: -1890809756155193944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcb5054195d08740800000000000000
+      internalID: 5152352793616825566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44bdad69ed552b10800000000000000
+      internalID: 1956072870311212107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ab169a5e007e2a0800000000000000
+      internalID: -6708392133555799400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01c7c42f01e706d0800000000000000
+      internalID: -3024201169598168819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a5784c65bb7c040800000000000000
+      internalID: 4667905520131594883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Trust_Musicplaying_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2599db62073cd40800000000000000
+      internalID: 5603445673071039160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 346c12d793e95d044bfdc3802e5113a1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

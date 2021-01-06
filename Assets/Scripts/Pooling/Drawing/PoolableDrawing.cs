@@ -51,9 +51,6 @@ namespace BeauTambour
 
             var colorByEmotion = Repository.GetSingle<EmotionColorRegistry>(References.ColorByEmotion);
             var color = colorByEmotion[shape.Emotion];
-            /*color.r -= 0.21f;
-            color.g -= 0.21f;
-            color.b -= 0.21f;*/
 
             var colors = new GradientColorKey[]
             {
@@ -119,23 +116,25 @@ namespace BeauTambour
 
         public void Stop()
         {
-            if (revealPathRoutine != null)
-            {
-                StopCoroutine(revealPathRoutine);
-                revealPathRoutine = null;
-            }
-            
+            End();
             Event.CallLocal(GameEvents.OnDrawingCancelled, gameObject, Value.GetPosition(Value.positionCount - 1));
         }
         public void Complete()
+        {
+            End();
+            Event.CallLocal(GameEvents.OnDrawingEnd, gameObject, Value.GetPosition(Value.positionCount - 1));
+        }
+
+        private void End()
         {
             if (revealPathRoutine != null)
             {
                 StopCoroutine(revealPathRoutine);
                 revealPathRoutine = null;
             }
-
-            Event.CallLocal(GameEvents.OnDrawingEnd, gameObject, Value.GetPosition(Value.positionCount - 1));
+            
+            Value.positionCount = points.Length;
+            Value.SetPositions(points);
         }
     }
 }

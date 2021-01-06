@@ -145,6 +145,8 @@ MonoBehaviour:
   animator: {fileID: 1344533231568898137}
   emotionMelodyRegistry: {fileID: 11400000, guid: dc1f512526f3f7043899986d4b65a1d4,
     type: 2}
+  emotionEffectRegistry: {fileID: 11400000, guid: 45e48f002f035914690a293f1a7c8e7a,
+    type: 2}
 --- !u!1 &7181756668852219918
 GameObject:
   m_ObjectHideFlags: 0

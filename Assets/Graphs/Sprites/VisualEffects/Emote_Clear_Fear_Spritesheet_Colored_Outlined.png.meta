@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00ab1bd08b352c04e8a74665eb1dbdfd
+guid: d008d52ef3b898b44bfa04878ad9218d
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -48,6 +48,21 @@ TextureImporter:
       213: 2677925834263965310
     second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_14
   - first:
+      213: -1471262811732750617
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_15
+  - first:
+      213: -3502646022419030844
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_16
+  - first:
+      213: 1885719762765767500
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_17
+  - first:
+      213: 5505547343663873192
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_18
+  - first:
+      213: 4239812500562863931
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_19
+  - first:
       213: 3463798330890751815
     second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_0
   - first:
@@ -92,6 +107,12 @@ TextureImporter:
   - first:
       213: 6591597650199580716
     second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_14
+  - first:
+      213: 2907734138234264210
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_15
+  - first:
+      213: 4320906007998334009
+    second: Emote_Clear_Fear_Spritesheet_Colored_Outlined_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +143,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: 1
+    aniso: 2
     mipBias: -100
     wrapU: 1
     wrapV: 1
@@ -229,7 +250,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 870
+        y: 1305
         width: 434
         height: 435
       alignment: 6
@@ -250,7 +271,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 434
-        y: 870
+        y: 1305
         width: 434
         height: 435
       alignment: 6
@@ -271,7 +292,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 868
-        y: 870
+        y: 1305
         width: 434
         height: 435
       alignment: 6
@@ -292,7 +313,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1302
-        y: 870
+        y: 1305
         width: 434
         height: 435
       alignment: 6
@@ -313,7 +334,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1736
-        y: 870
+        y: 1305
         width: 434
         height: 435
       alignment: 6
@@ -334,7 +355,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 435
+        y: 870
         width: 434
         height: 435
       alignment: 6
@@ -355,7 +376,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 434
-        y: 435
+        y: 870
         width: 434
         height: 435
       alignment: 6
@@ -376,7 +397,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 868
-        y: 435
+        y: 870
         width: 434
         height: 435
       alignment: 6
@@ -397,7 +418,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1302
-        y: 435
+        y: 870
         width: 434
         height: 435
       alignment: 6
@@ -418,7 +439,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1736
-        y: 435
+        y: 870
         width: 434
         height: 435
       alignment: 6
@@ -439,7 +460,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 435
         width: 434
         height: 435
       alignment: 6
@@ -460,7 +481,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 434
-        y: 0
+        y: 435
         width: 434
         height: 435
       alignment: 6
@@ -481,7 +502,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 868
-        y: 0
+        y: 435
         width: 434
         height: 435
       alignment: 6
@@ -502,7 +523,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1302
-        y: 0
+        y: 435
         width: 434
         height: 435
       alignment: 6
@@ -523,7 +544,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1736
-        y: 0
+        y: 435
         width: 434
         height: 435
       alignment: 6
@@ -539,10 +560,52 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29adabafac85a5820800000000000000
+      internalID: 2907734138234264210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emote_Clear_Fear_Spritesheet_Colored_Outlined_16
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93487920f11f6fb30800000000000000
+      internalID: 4320906007998334009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 095a79c6dd350ed46a8c8205042d44aa
     internalID: 0
     vertices: []
     indices: 

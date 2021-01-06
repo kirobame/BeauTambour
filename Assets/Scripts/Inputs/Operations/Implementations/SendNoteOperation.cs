@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using Event = Flux.Event;
 
@@ -10,11 +11,17 @@ namespace BeauTambour
         protected override void RelayedOnStart(EventArgs inArgs)
         {
             if (GameState.validationMade) return;
-
-            Event.Call(GameEvents.OnNoteValidation);
-            GameState.Note.speaker.PlayMelodyFor(GameState.Note.emotion);
-            //
+            
             GameState.validationMade = true;
+            hook.StartCoroutine(ActivationRoutine());
+        }
+
+        private IEnumerator ActivationRoutine()
+        {
+            Event.Call(GameEvents.OnNoteValidation);
+            yield return new WaitForSeconds(0.75f);
+            
+            GameState.Note.speaker.PlayMelodyFor(GameState.Note.emotion);
         }
     }
 }

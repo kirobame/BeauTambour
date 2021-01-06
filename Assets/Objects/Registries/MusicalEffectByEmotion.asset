@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf590fb15c094bfab1708d9bee4c6a83, type: 3}
+  m_Name: MusicalEffectByEmotion
+  m_EditorClassIdentifier: 
+  pairs:
+  - key: 2
+    value: {fileID: 9000536156283295052, guid: 4c3083e70df946942a65356ee334453b, type: 3}
+  - key: 4
+    value: {fileID: 6541758033897409214, guid: 25a16af03b05d774dab52ff6a0d87296, type: 3}
+  - key: 6
+    value: {fileID: 4908433483761215570, guid: 25e328a3e180a914b8073882102502c7, type: 3}
+  - key: 8
+    value: {fileID: 4375944241171459546, guid: 1f1cbcc445b9065468b507756ed8ebec, type: 3}

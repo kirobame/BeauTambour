@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace BeauTambour
 {
@@ -6,5 +7,7 @@ namespace BeauTambour
     {
         public SpeakerIntermediary Intermediary => intermediary;
         [Space, SerializeField] private SpeakerIntermediary intermediary;
+
+        void Awake() => intermediary.SetSource(this);
     }
 }
