@@ -22,15 +22,18 @@ MonoBehaviour:
   - small_empty
   - mouse_play
   - small_talk
+  - small_empty
   toAnimation:
   - mouse_play
   - small_talk
   - small_empty
   - small_empty
+  - small_EMOTE_joie
   duration:
   - 5
   - 5
   - 5
   - 5
+  - 10
   defaultMix: 0.2
   controller: {fileID: 9100000, guid: dbf8953dd6984d6419e650146536abca, type: 2}

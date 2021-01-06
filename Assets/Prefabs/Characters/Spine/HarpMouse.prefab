@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9db98c60740638449864eb028fbe7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 0a8a7191025f8874eae8dd3d532ff4c5, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: fcd35460eff9fb64587485d92d2d5f99, type: 2}
   initialSkinName: harp_mouse
   initialFlipX: 0
   initialFlipY: 0
