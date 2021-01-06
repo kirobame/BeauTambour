@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SomeEncounter
   m_EditorClassIdentifier: 
   dialogueRecipient: {fileID: 11400000, guid: 8be0248422fdbd9488abe654f98850a0, type: 2}
-  sheetIndex: 1
-  blockCount: 2
+  sheetIndex: 0
+  blockCount: 1
   initialInterlocutor: {fileID: 11400000, guid: 0f85a343b67edc34ab116ac1474a19f8,
     type: 2}
   initialMusicians:

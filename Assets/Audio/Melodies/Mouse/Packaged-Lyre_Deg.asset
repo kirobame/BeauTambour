@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Packaged-Lyre_Deg
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: d29608a94a0077c4ba5977bbfa98044f, type: 3}
-  mixerGroup: {fileID: 0}
+  mixerGroup: {fileID: 2017174795584013982, guid: f4df48e3c09ff3947b0ee384f7a558e2,
+    type: 2}
   volume: 1
   pitch: 1

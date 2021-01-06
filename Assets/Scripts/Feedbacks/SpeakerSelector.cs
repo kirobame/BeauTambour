@@ -31,8 +31,14 @@ namespace BeauTambour
             arcInProgressVisual.SetActive(!speaker.IsArcEnded);
 
             Vector3 speakerPos = speaker.RuntimeLink.transform.position;
-            outline.transform.position = new Vector3(speakerPos.x,speakerPos.y+0.01f);
-            outline.CopyFrom = speaker.RuntimeLink.GetComponentInChildren<MeshFilter>();
+            outline.transform.position = new Vector3(speakerPos.x,speakerPos.y);
+            
+            if (speaker is Interlocutor) outline.transform.localScale = new Vector3(-1,1,1);
+            else outline.transform.localScale = new Vector3(1,1,1);
+            
+            var lookup = speaker.RuntimeLink.GetComponentInChildren<OutlineLookup>();
+            outline.CopyFrom = lookup.Filter;
+            outline.SetMaterial(lookup.Large);
         }
 
         void OnSpeakerChoice()

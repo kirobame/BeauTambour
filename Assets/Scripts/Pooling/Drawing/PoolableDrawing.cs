@@ -116,16 +116,16 @@ namespace BeauTambour
 
         public void Stop()
         {
-            End();
-            Event.CallLocal(GameEvents.OnDrawingCancelled, gameObject, Value.GetPosition(Value.positionCount - 1));
+            if (revealPathRoutine != null)
+            {
+                StopCoroutine(revealPathRoutine);
+                revealPathRoutine = null;
+            }
+            
+            var index = Mathf.Clamp(Mathf.RoundToInt(goal * points.Length), 0, points.Length - 1);
+            Event.CallLocal(GameEvents.OnDrawingCancelled, gameObject, Value.GetPosition(index));
         }
         public void Complete()
-        {
-            End();
-            Event.CallLocal(GameEvents.OnDrawingEnd, gameObject, Value.GetPosition(Value.positionCount - 1));
-        }
-
-        private void End()
         {
             if (revealPathRoutine != null)
             {
@@ -135,6 +135,8 @@ namespace BeauTambour
             
             Value.positionCount = points.Length;
             Value.SetPositions(points);
+            
+            Event.CallLocal(GameEvents.OnDrawingEnd, gameObject, Value.GetPosition(Value.positionCount - 1));
         }
     }
 }

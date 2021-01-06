@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4356906216667108038}
   - component: {fileID: 4356906216667108039}
   - component: {fileID: 4356906216667108036}
+  - component: {fileID: 7045906073421116374}
   m_Layer: 0
   m_Name: Outline
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 55b27aac0e30e9449a0bd8fb16c6a9a8, type: 2}
+  - {fileID: 2100000, guid: 3098dedf35ba5c64ea2bd97b6dd425bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,6 +95,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   copyFrom: {fileID: 4356906217249498530}
   copyTo: {fileID: 4356906216667108038}
+  destinationRenderer: {fileID: 4356906216667108039}
+--- !u!114 &7045906073421116374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356906216667108034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b25f1247f24bb0aaa2f04c4c42de57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter: {fileID: 4356906216667108038}
+  small: {fileID: 2100000, guid: 3098dedf35ba5c64ea2bd97b6dd425bd, type: 2}
+  large: {fileID: 2100000, guid: 051ebf7731e49744198674831d33e101, type: 2}
 --- !u!1 &4356906217249498543
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +125,7 @@ GameObject:
   - component: {fileID: 4356906217249498528}
   - component: {fileID: 4356906217249498529}
   m_Layer: 0
-  m_Name: Spine Mecanim GameObject (LBT_Character_cat)
+  m_Name: RedCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

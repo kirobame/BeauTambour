@@ -7,10 +7,12 @@ namespace Utilities.Spine
     [ExecuteAlways]
     public class CopyMesh : MonoBehaviour
     {
-        [SerializeField]
-        private MeshFilter copyFrom = default;
-        [SerializeField]
-        private MeshFilter copyTo = default;
+        [SerializeField] private MeshFilter copyFrom = default;
+        [SerializeField] private MeshFilter copyTo = default;
+        
+        [Space, SerializeField] private MeshRenderer destinationRenderer;
+
+        public void SetMaterial(Material material) => destinationRenderer.material = material;
         
         public MeshFilter CopyFrom
         {
@@ -20,7 +22,7 @@ namespace Utilities.Spine
                 copyFrom = value;
             }
         }
-
+        
         void LateUpdate()
         {
             if (copyTo == null || copyFrom == null)

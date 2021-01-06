@@ -21,5 +21,7 @@ namespace BeauTambour
         void Start() => asset.Bootup(this);
 
         public virtual void Reinitialize() { }
+        
+        public virtual void ActOut(Emotion emotion) { }
     }
 }

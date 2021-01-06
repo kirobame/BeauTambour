@@ -64,6 +64,7 @@ namespace BeauTambour
         public override RuntimeCharacter RuntimeLink => CastedRuntimeLink;
         public RuntimeMusician CastedRuntimeLink { get; private set; }
 
+        public Animator Animator => CastedRuntimeLink.Intermediary.Animator;
         public AudioCharMapPackage AudioCharMap => audioCharMap;
 
         public bool IsArcEnded
@@ -157,12 +158,11 @@ namespace BeauTambour
         void ISpeaker.StopTalking() => CastedRuntimeLink.Intermediary.StopTalking();
 
         void ISpeaker.PlayMelodyFor(Emotion emotion) => CastedRuntimeLink.Intermediary.PlayMelodyFor(emotion);
+        void ISpeaker.ActOut(Emotion emotion) => CastedRuntimeLink.Intermediary.ActOut(emotion);
         
         void OnBlockPassed()
         {
             if (rootNodeKeys.Count == 0) return;
-            
-            Debug.Log($"{name} : {rootNodeKeys[GameState.BlockIndex]}");
             currentNode = nodes[rootNodeKeys[GameState.BlockIndex]];
         }
     }

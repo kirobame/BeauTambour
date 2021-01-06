@@ -461,6 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   copyFrom: {fileID: 0}
   copyTo: {fileID: 6030785480804907562}
+  destinationRenderer: {fileID: 6030785480804907563}
 --- !u!1 &6030785481063153247
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arcInProgressVisual: {fileID: 6030785480000071868}
   outline: {fileID: 6030785480804907556}
+  selectionEffect: {fileID: 0}
 --- !u!1 &6030785481314715802
 GameObject:
   m_ObjectHideFlags: 0

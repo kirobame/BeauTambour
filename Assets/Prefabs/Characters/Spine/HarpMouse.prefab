@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 9065122106656631220}
   - component: {fileID: 9065122106656631223}
   - component: {fileID: 9065122106656631222}
+  - component: {fileID: 8276851508207568288}
   m_Layer: 0
   m_Name: Outline
   m_TagString: Untagged
@@ -234,3 +235,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   copyFrom: {fileID: 9065122105449424453}
   copyTo: {fileID: 9065122106656631220}
+  destinationRenderer: {fileID: 9065122106656631223}
+--- !u!114 &8276851508207568288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9065122106656631216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b25f1247f24bb0aaa2f04c4c42de57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter: {fileID: 9065122106656631220}
+  small: {fileID: 2100000, guid: d9f192b6d0ce9a449ac5c14323a1e8c8, type: 2}
+  large: {fileID: 2100000, guid: 72ff8f50640271b43a510cb578a0bbaf, type: 2}

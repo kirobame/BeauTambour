@@ -8,6 +8,8 @@ namespace BeauTambour
 {
     public class SpeakerIntermediary : MonoBehaviour
     {
+        public Animator Animator => animator;
+        
         [Space, SerializeField] private Animator animator;
         [SerializeField] private EmotionMelodyRegistry emotionMelodyRegistry;
         [SerializeField] private EmotionEffectRegistry emotionEffectRegistry;
@@ -42,20 +44,22 @@ namespace BeauTambour
 
                 poolableAnimation.transform.parent = source.HeadSocket.Attach;
                 poolableAnimation.transform.localPosition = Vector3.zero;
+                poolableAnimation.transform.localScale = Vector3.one;
                 
                 poolableAnimation.Value.SetTrigger("In");
             }
         }
+
+        public void ActOut(Emotion emotion) => animator.SetTrigger(emotion.ToString());
 
         void OnMelodyEnd()
         {
             poolableAudio.OnDone -= OnMelodyEnd;
             StartCoroutine(MelodyTerminationRoutine());
         }
-
         private IEnumerator MelodyTerminationRoutine()
         {
-            poolableAnimation.Value.SetTrigger("Out");
+            if (poolableAnimation != null) poolableAnimation.Value.SetTrigger("Out");
             animator.SetBool("IsPlaying", false);
             
             yield return new WaitForSeconds(0.75f);

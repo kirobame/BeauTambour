@@ -78,7 +78,7 @@ namespace BeauTambour
             var character = Extensions.GetCharacter<Character>(cue.Actor);
             if (character == null)
             {
-                End();
+                Continue();
                 return;
             }
             character.SetupDialogueHolder(holder);

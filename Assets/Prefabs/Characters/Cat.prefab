@@ -173,7 +173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5912440382659146094}
-  emotionMelodyRegistry: {fileID: 0}
+  emotionMelodyRegistry: {fileID: 11400000, guid: 0625e330213dab04eb7e30426ad1de5d,
+    type: 2}
+  emotionEffectRegistry: {fileID: 11400000, guid: 45e48f002f035914690a293f1a7c8e7a,
+    type: 2}
 --- !u!1001 &7961205450195227854
 PrefabInstance:
   m_ObjectHideFlags: 0

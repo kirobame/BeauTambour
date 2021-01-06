@@ -2860,20 +2860,20 @@ MonoBehaviour:
     - "\u24C7-M.Flsf.A.1"
     - Mouse
     - Hint
-    - "[Mouse]-J'aimerais bien m'acheter un yacht<?E:Vfx/Joy,Mouse,TRUE/>.\n//Mais
-      je serais seul<?E:Vfx/Sadness,Mouse,TRUE/>, au millieu de l'oc\xE9an.\n[Cat]-Quelles
-      envies cheloux<?E:Vfx/Disgust,Mouse,TRUE/>. Je veux dire y'a mieux.\nT'as besoin
-      de te raffraichir l'esprit<?E:Vfx/Anticipation,Mouse,TRUE/>."
-    - '[Mouse]-I''d like to buy a yacht<?E:Vfx/Joy,Mouse,TRUE/>.
+    - "[Mouse]-J'aimerais bien m'acheter un yacht<?E:Animation/Joy,Mouse,FALSE/><?E:Vfx/Joy,Mouse,TRUE/>.\n//Mais
+      je serais seul<?E:Vfx/Sadness,Mouse,FALSE/><?E:Animation/Sadness,Mouse,TRUE/>,
+      au millieu de l'oc\xE9an.\n[Cat]-Quelles envies cheloux<?E:Vfx/Disgust,Mouse,TRUE/>.
+      Je veux dire y'a mieux.\nT'as besoin de te raffraichir l'esprit<?E:Vfx/Anticipation,Mouse,TRUE/>."
+    - '[Mouse]-I''d like to buy a yacht<?E:Animation/Joy,Mouse,FALSE/><?E:Vfx/Joy,Mouse,TRUE/>.
 
-      //But then
-      i would be alone<?E:Vfx/Sadness,Mouse,TRUE/>, in the middle of the sea.
+      //But
+      then i would be alone<?E:Vfx/Sadness,Mouse,FALSE/><?E:Animation/Sadness,Mouse,TRUE/>,
+      in the middle of the sea.
 
-      [Cat]-Such
-      strange fantasies<?E:Vfx/Disgust,Mouse,TRUE/>. i mean common.
+      [Cat]-Such strange fantasies<?E:Vfx/Disgust,Mouse,TRUE/>.
+      i mean common.
 
-      You need
-      to go explore<?E:Vfx/Anticipation,Mouse,TRUE/>.'
+      You need to go explore<?E:Vfx/Anticipation,Mouse,TRUE/>.'
     - 'Name : Failsafe-01;'
     - "\u24C7-M.Flsf.B.1"
     - Mouse

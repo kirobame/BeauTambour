@@ -5,10 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Old/Scenes/VerticalSlice.unity
-    guid: 3f6588ab153fc3f4f803628c5c05c736
+    path: Assets/Scenes/Main.unity
+    guid: 5eaa3431cf3d0c749b6ac0244a6c72c9
   m_configObjects: {}

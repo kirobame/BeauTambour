@@ -30,6 +30,7 @@ namespace BeauTambour
         public override RuntimeCharacter RuntimeLink => CastedRuntimeLink;
         public RuntimeInterlocutor CastedRuntimeLink { get; private set; }
         
+        public Animator Animator => CastedRuntimeLink.Intermediary.Animator;
         public AudioCharMapPackage AudioCharMap => audioCharMap;        
 
         [Space, SerializeField] private AudioCharMapPackage audioCharMap;
@@ -74,8 +75,6 @@ namespace BeauTambour
         
         public Dialogue[] GetDialogues(Emotion emotion)
         {
-            Debug.Log(blocks.Count);
-            
             var block = blocks[GameState.BlockIndex];
             if (block.Emotion == emotion)
             {
@@ -90,6 +89,7 @@ namespace BeauTambour
         void ISpeaker.BeginTalking() => CastedRuntimeLink.Intermediary.BeginTalking();
         void ISpeaker.StopTalking() => CastedRuntimeLink.Intermediary.StopTalking();
 
-        void ISpeaker.PlayMelodyFor(Emotion emotion) => RuntimeLink.Delay(() => Event.Call(GameEvents.OnNoteValidationDone), 1);
+        void ISpeaker.PlayMelodyFor(Emotion emotion) => CastedRuntimeLink.Intermediary.PlayMelodyFor(emotion);
+        void ISpeaker.ActOut(Emotion emotion) => CastedRuntimeLink.Intermediary.ActOut(emotion);
     }
 }
