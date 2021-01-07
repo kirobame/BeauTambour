@@ -2673,7 +2673,7 @@ MonoBehaviour:
     - Harmony
     - "[Cat]-Je suis <shake><color=#9868da> mort de peur !</color></shake> Je suis
       d\xE9sesp\xE9r\xE9 !\nLui ce vieux loup qui m\u2019a \xE9lev\xE9<?E:Vfx/Sadness,
-      Cat, TRUE/> , moi un jeune chat, et aim\xE9. \n//J\u2019avais un p\xE8re un
+      Cat, TRUE/>, moi un jeune chat, et aim\xE9. \n//J\u2019avais un p\xE8re un
       foyer !\nMaintenant il veut ma peau et me manger\u2026\n//Tout \xE7a pour une
       histoire de vue et de malentendue\u2026"
     - 
@@ -2968,18 +2968,20 @@ MonoBehaviour:
     - Hint
     - '[Cat]-Trois.
 
-      Hoola hoop<?E:Vfx/Trust,Bird,TRUE/>.
+      Hoola hoop, plus grande ligne s''iouplait<?E:Vfx/Trust,Bird,TRUE/>.
 
-      Yas girl!
+      Yas
+      girl!
 
       //Kawabunga<?E:Vfx/Fear,Cat,TRUE/>.
 
       Baby!!!'
     - '[Cat]-Three.
 
-      Hoola hoop<?E:Vfx/Trust,BirdTRUE/>.
+      Hoola hoop, longer line please<?E:Vfx/Trust,BirdTRUE/>.
 
-      Yas girl!
+      Yas
+      girl!
 
       //Kawabunga<?E:Vfx/Fear,Cat,TRUE/>.
 

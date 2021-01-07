@@ -30,6 +30,8 @@ namespace BeauTambour
         private bool isOperational;
         private Vector2 previousSize;
 
+        private bool isOnRight;
+
         void Awake()
         {
             isOperational = false;
@@ -95,6 +97,8 @@ namespace BeauTambour
 
                 if (size.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f) SetBoundsX(-size.x);
                 else SetBoundsX((-size.x / 2.0f) - dialogueLine.RectTransform.sizeDelta.x);
+
+                isOnRight = true;
             }
             else
             {
@@ -102,6 +106,8 @@ namespace BeauTambour
 
                 if (size.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f) SetBoundsX(0.0f);
                 else SetBoundsX(dialogueLine.RectTransform.sizeDelta.x - (size.x / 2.0f));
+
+                isOnRight = false;
             }
 
             var time = 0f;
@@ -115,6 +121,7 @@ namespace BeauTambour
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }
+            dialogueLine.RectTransform.localScale = Vector3.one * renewCurve.Evaluate(1);
             
             ToggleTextAnimation(true);
             SetText(text);
@@ -146,15 +153,32 @@ namespace BeauTambour
             while (time < goal)
             {
                 var ratio = time / goal;
-                var lerpedSize = Vector2.Lerp(previousSize, size, refreshCurve.Evaluate(ratio));
-                
-                boundsTransform.sizeDelta = lerpedSize;
-                boundsRenderer.size = lerpedSize;
-                
-                textTransform.sizeDelta = lerpedSize;
+                Execute(ratio);
                 
                 time += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
+            }
+            Execute(1);
+
+            void Execute(float val)
+            {
+                var lerpedSize = Vector2.Lerp(previousSize, size, refreshCurve.Evaluate(val));
+                
+                boundsTransform.sizeDelta = lerpedSize;
+                boundsRenderer.size = lerpedSize;
+
+                if (isOnRight)
+                {
+                    if (lerpedSize.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f) SetBoundsX(-lerpedSize.x);
+                    else SetBoundsX((-lerpedSize.x / 2.0f) - dialogueLine.RectTransform.sizeDelta.x);
+                }
+                else
+                {
+                    if (lerpedSize.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f) SetBoundsX(0.0f);
+                    else SetBoundsX(dialogueLine.RectTransform.sizeDelta.x - (lerpedSize.x / 2.0f));
+                }
+                
+                textTransform.sizeDelta = lerpedSize;
             }
 
             textMesh.alpha = 1f;

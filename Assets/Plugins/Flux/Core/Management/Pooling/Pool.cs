@@ -26,6 +26,23 @@ namespace Flux
                 var queue = new Queue<TPoolable>(provider.Instances);
                 availableInstances.Add(provider.Prefab, queue);
             }
+
+            StartCoroutine(BootupRoutine());
+        }
+
+        private IEnumerator BootupRoutine()
+        {
+            foreach (var availableInstance in availableInstances.SelectMany(kvp => kvp.Value))
+            {
+                availableInstance.gameObject.SetActive(true);
+            }
+            
+            yield return new WaitForEndOfFrame();
+            
+            foreach (var availableInstance in availableInstances.SelectMany(kvp => kvp.Value))
+            {
+                availableInstance.gameObject.SetActive(false);
+            }
         }
 
         public T RequestSingle() => RequestSinglePoolable().Value;
@@ -47,6 +64,7 @@ namespace Flux
                 for (index = 0; index < count - queue.Count; index++)
                 {
                     var instance = Instantiate(key, transform);
+                    instance.BypassBootup();
                     Claim(instance, key);
                     
                     request[index] = instance;
@@ -67,6 +85,7 @@ namespace Flux
                 for (var i = 0; i < count; i++)
                 {
                     var instance = Instantiate(key);
+                    instance.BypassBootup();
                     Claim(instance, key);
                     
                     request[i] = instance;

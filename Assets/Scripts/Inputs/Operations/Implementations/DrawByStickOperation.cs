@@ -29,6 +29,8 @@ namespace BeauTambour
         private void HandleInput(EventArgs inArgs)
         {
             if (!(inArgs is Vector2EventArgs vector2EventArgs)) return;
+            
+            //Debug.Log($"-------||-> SENDING STICK DRAW INPUT FROM {name} / {GetInstanceID()}");
             drawingHandler.Execute(vector2EventArgs.value);
         }
     }

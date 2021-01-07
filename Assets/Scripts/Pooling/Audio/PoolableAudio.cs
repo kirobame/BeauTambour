@@ -18,7 +18,7 @@ namespace BeauTambour
 
         void Update()
         {
-            if (Value.loop) return;
+            if (!hasBeenBootedUp || Value.loop) return;
 
             if (Value.clip.length - Value.time <= 0.1f)
             {

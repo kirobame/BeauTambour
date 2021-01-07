@@ -20,10 +20,10 @@ namespace BeauTambour
 
         private Shape shape;
         private Vector3[] points;
-
+        
         private Coroutine revealPathRoutine;
 
-        void Awake()
+        protected override void Bootup()
         {
             Event.Open<Vector3>(GameEvents.OnDrawingStart, gameObject);
             Event.Open<Vector3>(GameEvents.OnDraw, gameObject);
@@ -32,7 +32,7 @@ namespace BeauTambour
 
             Event.Open<Color>(GameEvents.OnDrawingColorReception, gameObject);
         }
-
+        
         public void AssignShape(Shape shape, int subDivision)
         {
             this.shape = shape;

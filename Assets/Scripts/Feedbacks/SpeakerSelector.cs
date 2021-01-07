@@ -48,6 +48,7 @@ namespace BeauTambour
 
             animator.transform.parent = speaker.RuntimeLink.HeadSocket.Attach;
             animator.transform.localPosition = Vector3.zero;
+            animator.transform.localScale = Vector3.one;
             
             animator.SetTrigger("In");
         }

@@ -45,6 +45,7 @@ namespace BeauTambour
             var result = (vector2EventArgs.value - screenCenter) / radius;
             if (result.magnitude > 1) result.Normalize();
             
+            //Debug.Log($"-------||-> SENDING MOUSE DRAW INPUT FROM {name} / {GetInstanceID()}");
             drawingHandler.Execute(result);
             previousInput = vector2EventArgs.value;
         }

@@ -17,8 +17,9 @@ namespace BeauTambour
         
         void Update()
         {
+            if (!hasBeenBootedUp) return;
+            
             var state = Value.GetCurrentAnimatorStateInfo(0);
-
             if (!hasBeenIn)
             {
                 if (state.IsTag(startTag)) hasBeenIn = true;
