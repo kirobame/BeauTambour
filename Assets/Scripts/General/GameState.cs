@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Flux;
+using UnityEngine;
 using Event = Flux.Event;
 
 namespace BeauTambour
@@ -23,6 +24,8 @@ namespace BeauTambour
 
         public static void Bootup(int blockIndex)
         {
+            Debug.Log("BOOTING UP GAME STATE");
+            
             finishedArcsCount = 0;
             arcsMinimumCompletion = false;
             
@@ -66,8 +69,8 @@ namespace BeauTambour
                 var firstX = first.RuntimeLink.transform.position.x;
                 var secondX = second.RuntimeLink.transform.position.x;
 
-                if (firstX > secondX) return 1;
-                else return -1;
+                if (firstX > secondX) return -1;
+                else return 1;
             });
 
             return list.ToArray();

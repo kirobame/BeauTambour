@@ -162,6 +162,8 @@ namespace BeauTambour
         
         void OnBlockPassed()
         {
+            Debug.Log($"ON BLOCK PASSED FOR {Actor} / {name} / {GetInstanceID()}");
+            
             if (rootNodeKeys.Count == 0) return;
             currentNode = nodes[rootNodeKeys[GameState.BlockIndex]];
         }

@@ -13,14 +13,20 @@ namespace BeauTambour
         [SerializeField] private bool playIntro;
         [SerializeField] private bool skipStart;
 
-        [Space, SerializeField] private int staringBlock;
+        [Space, SerializeField] private int startingBlock;
 
-        void Awake() => GameState.Bootup(staringBlock - 1);
+        void Awake() => GameState.Bootup(startingBlock - 1);
         void Start()
         {
-            if (!playIntro) Event.Register(GameEvents.OnEncounterBootedUp, PlayFirstPhase);
+            if (!playIntro)
+            {
+                Debug.Log("NOT PLAYING INTRO");
+                Event.Register(GameEvents.OnEncounterBootedUp, PlayFirstPhase);
+            }
             else
             {
+                Debug.Log("PLAYING INTRO");
+                
                 Event.Open(GameEvents.OnIntroConfirmed);
                 Event.Call(GameEvents.OnIntroConfirmed);
                 
@@ -47,12 +53,18 @@ namespace BeauTambour
 
             if (skipStart)
             {
+                Debug.Log("SKIPPING START");
+                
                 var dialoguePhase = phaseHandler.Get<DialoguePhase>(PhaseCategory.Dialogue);
                 dialoguePhase.SkipBootUp();
                 
                 phaseHandler.Play(PhaseCategory.SpeakerSelection);
             }
-            else phaseHandler.Play(PhaseCategory.Dialogue);
+            else
+            {
+                Debug.Log("NOT SKIPPING START");
+                phaseHandler.Play(PhaseCategory.Dialogue);
+            }
         }
     }
 }

@@ -563,7 +563,7 @@ MonoBehaviour:
   useBackup: 1
   playIntro: 1
   skipStart: 0
-  staringBlock: 1
+  startingBlock: 1
 --- !u!4 &138730726
 Transform:
   m_ObjectHideFlags: 0

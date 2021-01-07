@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: IncrementSpeakerSelection
   m_EditorClassIdentifier: 
   phase: 1
-  modification: 1
+  modification: -1

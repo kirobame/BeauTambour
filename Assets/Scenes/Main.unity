@@ -563,7 +563,7 @@ MonoBehaviour:
   useBackup: 1
   playIntro: 1
   skipStart: 0
-  staringBlock: 1
+  startingBlock: 1
 --- !u!4 &138730726
 Transform:
   m_ObjectHideFlags: 0
@@ -1019,6 +1019,11 @@ PrefabInstance:
         type: 3}
       propertyPath: prefix
       value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901824220247287034, guid: d07262e6f73f2ca4b937250e9e2be902,
+        type: 3}
+      propertyPath: range.x
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d07262e6f73f2ca4b937250e9e2be902, type: 3}
@@ -4198,6 +4203,11 @@ PrefabInstance:
       propertyPath: prefix
       value: Sfx
       objectReference: {fileID: 0}
+    - target: {fileID: 1901824220247287034, guid: d07262e6f73f2ca4b937250e9e2be902,
+        type: 3}
+      propertyPath: range.x
+      value: -50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d07262e6f73f2ca4b937250e9e2be902, type: 3}
 --- !u!224 &1621246930 stripped
@@ -4575,7 +4585,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 1
+  m_RenderPostProcessing: 0
   m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 1
@@ -5517,6 +5527,11 @@ PrefabInstance:
         type: 3}
       propertyPath: prefix
       value: Interface
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901824220247287034, guid: d07262e6f73f2ca4b937250e9e2be902,
+        type: 3}
+      propertyPath: range.x
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d07262e6f73f2ca4b937250e9e2be902, type: 3}
