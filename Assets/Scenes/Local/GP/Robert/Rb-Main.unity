@@ -561,8 +561,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounter: {fileID: 11400000, guid: d4199c732964889479eb7d28607b6505, type: 2}
   useBackup: 1
-  playIntro: 1
-  skipStart: 0
+  playIntro: 0
+  skipStart: 1
   startingBlock: 1
 --- !u!4 &138730726
 Transform:

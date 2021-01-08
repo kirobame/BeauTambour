@@ -18,7 +18,7 @@ namespace BeauTambour
         void Awake() => GameState.Bootup(startingBlock - 1);
         void Start()
         {
-            if (!playIntro)
+            if (!playIntro && useBackup)
             {
                 Debug.Log("NOT PLAYING INTRO");
                 Event.Register(GameEvents.OnEncounterBootedUp, PlayFirstPhase);

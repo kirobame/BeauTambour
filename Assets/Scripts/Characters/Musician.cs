@@ -123,20 +123,28 @@ namespace BeauTambour
 
         public Dialogue[] GetDialogues(Emotion emotion)
         {
-            if (currentNode.Childs[0] == "Empty") return new Dialogue[] { failsafes[currentNode.Failsafe].GetDialogue() };
+            if (currentNode.Childs[0] == "Empty") return GetDefaultDialogues();
             
-            Debug.Log($"[{Actor}] : {currentNode.Name}");
+            Debug.Log($"--|DIAG|-> [{Actor}] : {currentNode.Name}");
             foreach (var childName in currentNode.Childs)
             {
-                var child = nodes[childName];
+                if (!nodes.TryGetValue(childName, out var child))
+                {
+                    Debug.LogError($"For current node : {currentNode.Name} | Child {childName} does not exist");
+                    continue;
+                }
+
                 if (child.RequiredEmotion == emotion && attributes.IsSupersetOf(child.NeededAttributes))
                 {
                     foreach (var attribute in child.GivenAttributes) attributes.Add(attribute);
                     currentNode = child;
+
+                    var dialogue = child.GetDialogue();
+                    Debug.Log($"--|DIAG|-> Dialogue found : {dialogue}");
                     
                     if (child.Childs[0] == "Empty")
                     {
-                        Debug.Log($"End of narrative arc for : {name}");
+                        Debug.Log($"--|DIAG|-> End of narrative arc for : {name}");
                         if (GameState.NotifyMusicianArcEnd(out var blockDialogue))
                         {
                             return new Dialogue[]
@@ -150,8 +158,25 @@ namespace BeauTambour
                     return new Dialogue[] { child.GetDialogue() };
                 }
             }
-            
-            return new Dialogue[] { failsafes[currentNode.Failsafe].GetDialogue() };
+
+            return GetDefaultDialogues();
+        }
+        private Dialogue[] GetDefaultDialogues()
+        {
+            if (failsafes.TryGetValue(currentNode.Failsafe, out var failsafe))
+            {
+                var failsafeDialogue = failsafe.GetDialogue();
+                Debug.Log($"--|DIAG|-> Falling back to : {failsafe}");
+                
+                return new Dialogue[] { failsafeDialogue };
+            }
+            else
+            {
+                Debug.LogError($"For current node : {currentNode.Name} | Failsafe {currentNode.Failsafe} does not exist");
+                Debug.Log("--|DIAG|-> No correct options : Reverting to current");
+                
+                return new Dialogue[] { currentNode.GetDialogue() };
+            }
         }
 
         void ISpeaker.BeginTalking() => CastedRuntimeLink.Intermediary.BeginTalking();

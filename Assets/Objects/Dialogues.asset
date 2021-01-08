@@ -64,7 +64,7 @@ MonoBehaviour:
       Failsafe : M.1.TrustSadAng;
 
       Childs :
-      M.Friend3/M.Friend7/M.Enemy.6;'
+      M.Friend3/M.Friend7/M.Enemy6;'
     - "\u24C7-M.Friend3"
     - Mouse
     - Advance
@@ -209,7 +209,7 @@ MonoBehaviour:
     - "\u24C7-M.Prey5"
     - Mouse
     - Advance
-    - "[Mouse]-//Vous allez me d\xE9fendre, n'est-ce pas M.Ernest ?\n[Bear]-Zzz...Zzz...\n[Mouse]-Merci
+    - "[Mouse]-Vous allez me d\xE9fendre, n'est-ce pas M.Ernest ?\n[Bear]-Zzz...Zzz...\n[Mouse]-Merci
       les amis<?E:Vfx/Anger, Mouse, TRUE/> ! Me voil\xE0 <shake><color=#9868da>condamn\xE9e
       \xE0 mon sort funeste !</color></shake>\n[Cat]-Au moins tu as des amis...<?E:BlurryVfx/Sadness,
       Cat, TRUE/> \nMon loup de p\xE8re \xE9tait le mien, maintenant je le fuis."
@@ -723,7 +723,7 @@ MonoBehaviour:
 
       Failsafe : B.1.TrustJoySur;
 
-      Childs : B.Love9/B.Proud3/B.Proud5;'
+      Childs : B.Love8/B.Proud3/B.Proud5;'
     - "\u24C7-B.Proud3"
     - Bird
     - Advance
@@ -772,7 +772,7 @@ MonoBehaviour:
 
       Failsafe : B.1.DisTrusJoy;
 
-      Childs : B.Love9/B.Proud4/B.Proud7;'
+      Childs : B.Love8/B.Proud4/B.Proud7;'
     - "\u24C7-B.Proud6"
     - Bird
     - Advance
