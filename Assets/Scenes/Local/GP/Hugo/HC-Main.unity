@@ -5235,6 +5235,11 @@ PrefabInstance:
       propertyPath: gap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1336782543469946248, guid: 6d4c4d2c33e5a8449a4184f2b61acc17,
+        type: 3}
+      propertyPath: playSoundPos
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1336782543469946249, guid: 6d4c4d2c33e5a8449a4184f2b61acc17,
         type: 3}
       propertyPath: appearancesContainer.values.defaults.sizeAmplitude

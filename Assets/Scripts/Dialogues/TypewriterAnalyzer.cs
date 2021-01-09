@@ -11,13 +11,21 @@ namespace BeauTambour
 {
     public class TypewriterAnalyzer : MonoBehaviour
     {
+        [Serializable]
+        public enum PLAYSOUNDSYLLABEPOS
+        {
+            OnFirstVowel,
+            OnSyllabeStart
+        }
+
         [SerializeField] private TextAnimatorPlayer textAnimatorPlayer;
         [SerializeField] private int gap;
+        [SerializeField] private PLAYSOUNDSYLLABEPOS playSoundPos;
 
         private DialogueHandler dialogueHandler;        
         private List<string> syllabes;
         private int currentSyll;
-        private int counter;
+        private int currentIndexInSyll;
 
         #region Letter types constantes
         readonly static char[] consonants = new char[] {
@@ -26,15 +34,15 @@ namespace BeauTambour
             'Ñ','P','Q','R','S',
             'T','V','W','X','Y','Z'};
         readonly static char[] strongVowels = new char[] {
-            'A','Á','E','É',
+            'A','Á','E','É','È',
             'Í','O','Ó','Ú'};
         readonly static char[] weakVowels = new char[] { 'I', 'U', 'Ü' };
         readonly static char[] vowels = new char[] {
-            'A','Á','À','E','É',
+            'A','Á','À','E','É','È',
             'Í','O','Ó','Ú',
             'I','U','Ü'};
         readonly static char[] letters = new char[] {
-            'A','Á','À','E','É',
+            'A','Á','À','E','É','È',
             'Í','O','Ó','Ú',
             'I','U','Ü',
             'B','C','D','F','G',
@@ -56,7 +64,7 @@ namespace BeauTambour
 
         void OnEnable()
         {
-            counter = 0;
+            currentIndexInSyll = 0;
             currentSyll = 0;
             
             textAnimatorPlayer.onCharacterVisible.AddListener(OnCharacterVisible);
@@ -78,32 +86,41 @@ namespace BeauTambour
 
         void OnCharacterVisible(char character)
         {
-            if (counter <= 0)
+            if (punctuation.Contains(character)) return;
+            character = char.ToLower(character);
+            if (TryGetFirstVowelSound(syllabes[currentSyll], out string vowel, out int idx))
             {
-                character = char.ToLower(character);
-                if (dialogueHandler.Speaker.AudioCharMap.TryGet(character, out var package))
+                switch (playSoundPos)
                 {
-                    var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
-                    var audio = audioPool.RequestSingle();
-                    
-                    package.AssignTo(audio, EventArgs.Empty);
-                    audio.Play();
-
-                    counter = syllabes[currentSyll].Length - 1;
-                    Debug.Log($"{syllabes[currentSyll].Replace(' ','*')}");
+                    case PLAYSOUNDSYLLABEPOS.OnFirstVowel:
+                        if (currentIndexInSyll == idx)
+                        {
+                            PlayCorrespondingAudio(character);
+                        }
+                        break;
+                    case PLAYSOUNDSYLLABEPOS.OnSyllabeStart:
+                        if (currentIndexInSyll == 0)
+                        {
+                            PlayCorrespondingAudio(character);
+                        }
+                        break;
+                }             
+            }
+            currentIndexInSyll++;
+            if (currentIndexInSyll >= syllabes[currentSyll].Length)
+            {
+                if (currentSyll < syllabes.Count - 1)
+                {
                     currentSyll++;
-                    if(currentSyll > syllabes.Count)
-                    {
-                        counter = 2;
-                    }
+                    currentIndexInSyll = 0;
                 }
             }
-            else counter--;
         }
 
         void OnNextCue(Cue cue)
         {
             currentSyll = 0;
+            currentIndexInSyll = 0;
             syllabes.Clear();
 
             string text = cue.Text;
@@ -112,6 +129,20 @@ namespace BeauTambour
             {
                 if (string.IsNullOrEmpty(word)) continue;
                 syllabes.AddRange(GetWordSyllabes(word));
+            }
+
+        }
+
+        private void PlayCorrespondingAudio(char character)
+        {
+            if (dialogueHandler.Speaker.AudioCharMap.TryGet(character, out var package))
+            {
+                //Debug.Log($"{syllabes[currentSyll]}--{currentIndexInSyll}--{idx}");
+                var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
+                var audio = audioPool.RequestSingle();
+
+                package.AssignTo(audio, EventArgs.Empty);
+                audio.Play();
             }
         }
 
@@ -142,12 +173,10 @@ namespace BeauTambour
             return text;
         }
 
-        public List<string> GetWordSyllabes(string word)
+        private List<string> GetWordSyllabes(string word)
         {
             int cursor, startSyl, lengthMinusOne, nbSyl;
             List<string> wordSyllabes = new List<string>();
-            //bool space = false;
-            //bool isInBalise = false;
             word = word.ToUpper();
             cursor = 1;
             startSyl = 0;
@@ -156,36 +185,6 @@ namespace BeauTambour
             while (cursor < lengthMinusOne)
             {
                 int hyphen = 0;
-                /*if (s[cursor - 1] == '<' || s[cursor - 1] == '>')
-                {
-                    if (!isInBalise)
-                    {
-                        isInBalise = true;
-                    }
-                    else
-                    {
-                        isInBalise = false;
-                        startSyl = cursor;
-                        cursor++;
-                    }
-                }
-
-                if (s[cursor] == ' ' || s[cursor] == ',' || s[cursor] == ';' || s[cursor] == '-')
-                {
-                    if (!isInBalise)
-                    {
-                        hyphen = 1;
-                    }                    
-                    space = true;
-                }
-                if (isInBalise) {
-                    cursor++;
-                    continue;
-                }
-                if (space) { 
-                    //Nothing
-                }
-                else*/
                 if (consonants.Contains(word[cursor]))
                 {
                     if (vowels.Contains(word[cursor + 1]))
@@ -240,11 +239,7 @@ namespace BeauTambour
                     wordSyllabes.Add(word.Substring(startSyl, cursor - startSyl));
                     startSyl = cursor;
                 }
-                /*if (space) { 
-                    startSyl++;
-                    cursor++;
-                    space = false;
-                }*/
+
                 cursor++;
             }
 
@@ -255,6 +250,48 @@ namespace BeauTambour
                 wordSyllabes.Add(word.Substring(startSyl, lengthMinusOne - startSyl + 1));
 
             return wordSyllabes;
+        }
+
+        private bool TryGetFirstVowelSound(string s, out string vowel, out int vowelIndex)
+        {
+            string result = "";
+            int startIndex = 0;
+            bool vowelFound = false;
+            vowelIndex = -1;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (vowelFound) continue;
+                if (vowels.Contains(s[i]))
+                {
+                    if (i != s.Length-1 && consonants.Contains(s[i + 1]))
+                    {
+                        vowelIndex = startIndex;
+                        result = s.Substring(startIndex,i-startIndex+1);
+                        vowelFound = true;
+                    }
+                    else if (i == s.Length - 1)
+                    {
+                        vowelIndex = startIndex;
+                        result = s.Substring(startIndex, i - startIndex + 1);
+                        vowelFound = true;
+                    }                    
+                }
+                else
+                {
+                    startIndex++;
+                }
+            }
+
+            if (string.IsNullOrEmpty(result))
+            {
+                vowel = null;
+                return false;
+            }
+            else
+            {
+                vowel = result;
+                return true;
+            }
         }
     }
 }
