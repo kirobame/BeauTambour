@@ -39,6 +39,13 @@ LBT_character_RIG/images/Red_Cat/Red_Cat_eyes
   orig: 167, 67
   offset: 0, 0
   index: -1
+LBT_character_RIG/images/Red_Cat/Red_Cat_happy_closed_eyes
+  rotate: false
+  xy: 436, 47
+  size: 157, 38
+  orig: 157, 38
+  offset: 0, 0
+  index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_head
   rotate: true
   xy: 466, 437
@@ -83,14 +90,14 @@ LBT_character_RIG/images/Red_Cat/Red_Cat_pupil.R
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_rope.L
   rotate: false
-  xy: 576, 17
+  xy: 646, 18
   size: 33, 160
   orig: 33, 160
   offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Cat_rope.R
   rotate: false
-  xy: 533, 17
+  xy: 603, 18
   size: 33, 160
   orig: 33, 160
   offset: 0, 0
@@ -101,6 +108,13 @@ LBT_character_RIG/images/Red_Cat/Red_Cat_scarf_front
   size: 290, 146
   orig: 290, 160
   offset: 0, 14
+  index: -1
+LBT_character_RIG/images/Red_Cat/Red_Cat_vibing_closed_eyes
+  rotate: true
+  xy: 689, 25
+  size: 148, 34
+  orig: 148, 34
+  offset: 0, 0
   index: -1
 LBT_character_RIG/images/Red_Cat/Red_Head_snout
   rotate: false
