@@ -609,7 +609,7 @@ MonoBehaviour:
   useBackup: 1
   playIntro: 0
   skipStart: 1
-  staringBlock: 1
+  startingBlock: 0
 --- !u!4 &138730726
 Transform:
   m_ObjectHideFlags: 0
@@ -5999,13 +5999,19 @@ PrefabInstance:
     - target: {fileID: 5912440382659146095, guid: 6f611711a6e94cd46aac5360cce612f4,
         type: 3}
       propertyPath: translator.layerMixModes.Array.data[0]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5912440382659146095, guid: 6f611711a6e94cd46aac5360cce612f4,
         type: 3}
       propertyPath: translator.layerMixModes.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5912440382659146095, guid: 6f611711a6e94cd46aac5360cce612f4,
+        type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: bb2eddad6c949284daabf665fe1f74d4,
+        type: 2}
     - target: {fileID: 5912440383243552264, guid: 6f611711a6e94cd46aac5360cce612f4,
         type: 3}
       propertyPath: m_Mesh
