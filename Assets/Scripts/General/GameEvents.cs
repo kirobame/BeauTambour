@@ -44,6 +44,7 @@ namespace BeauTambour
         OnGamePaused,
         OnGameResumed,
 
+        OnDialogueTreeUpdate,
         OnNarrativeEvent,
         OnLanguageChanged,
         

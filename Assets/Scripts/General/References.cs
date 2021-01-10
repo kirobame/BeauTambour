@@ -10,6 +10,8 @@ namespace BeauTambour
         Characters,
         Encounter,
         
+        ImagePool,
+        IconPool,
         AudioPool,
         AnimationPool,
         DrawingPool,

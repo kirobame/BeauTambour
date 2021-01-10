@@ -28,7 +28,7 @@ namespace BeauTambour
             this.speaker = speaker;
             
             transform.position = speaker.RuntimeLink.TopCenter;
-            arcInProgressVisual.SetActive(!speaker.IsArcEnded);
+            arcInProgressVisual.SetActive(!speaker.HasArcEnded);
 
             Vector3 speakerPos = speaker.RuntimeLink.transform.position;
             outline.transform.position = new Vector3(speakerPos.x,speakerPos.y);

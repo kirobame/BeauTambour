@@ -67,14 +67,8 @@ namespace BeauTambour
         public Animator Animator => CastedRuntimeLink.Intermediary.Animator;
         public AudioCharMapPackage AudioCharMap => audioCharMap;
 
-        public bool IsArcEnded
-        {
-            get
-            {
-                return currentNode == null || currentNode.Childs[0] == "Empty";
-            }
-            
-        }
+        public bool HasArcEnded => currentNode == null || currentNode.Childs[0] == "Empty";
+        public int Branches => currentNode.Childs.Count;
 
         [Space, SerializeField] private AudioCharMapPackage audioCharMap;
 
@@ -126,11 +120,11 @@ namespace BeauTambour
             if (currentNode.Childs[0] == "Empty") return GetDefaultDialogues();
             
             Debug.Log($"--|DIAG|-> [{Actor}] : {currentNode.Name}");
-            foreach (var childName in currentNode.Childs)
+            for (var i = 0; i < currentNode.Childs.Count; i++)
             {
-                if (!nodes.TryGetValue(childName, out var child))
+                if (!nodes.TryGetValue(currentNode.Childs[i], out var child))
                 {
-                    Debug.LogError($"For current node : {currentNode.Name} | Child {childName} does not exist");
+                    Debug.LogError($"For current node : {currentNode.Name} | Child {currentNode.Childs[i]} does not exist");
                     continue;
                 }
 
@@ -141,10 +135,12 @@ namespace BeauTambour
 
                     var dialogue = child.GetDialogue();
                     Debug.Log($"--|DIAG|-> Dialogue found : {dialogue}");
-                    
+
                     if (child.Childs[0] == "Empty")
                     {
+                        Event.Call(GameEvents.OnDialogueTreeUpdate, Actor, emotion, i, 0);
                         Debug.Log($"--|DIAG|-> End of narrative arc for : {name}");
+                        
                         if (GameState.NotifyMusicianArcEnd(out var blockDialogue))
                         {
                             return new Dialogue[]
@@ -154,8 +150,11 @@ namespace BeauTambour
                             };
                         }
                     }
-                    
-                    return new Dialogue[] { child.GetDialogue() };
+                    else
+                    {
+                        Event.Call(GameEvents.OnDialogueTreeUpdate, Actor, emotion, i, child.Childs.Count);
+                        return new Dialogue[] {child.GetDialogue()};
+                    }
                 }
             }
 

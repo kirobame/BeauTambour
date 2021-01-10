@@ -35,7 +35,8 @@ namespace BeauTambour
 
         [Space, SerializeField] private AudioCharMapPackage audioCharMap;
 
-        public bool IsArcEnded => false;
+        public bool HasArcEnded => false;
+        public int Branches => 1;
 
         private List<DialogueBlock> blocks;
         private List<Dictionary<Emotion, DialogueFailsafe>> options;

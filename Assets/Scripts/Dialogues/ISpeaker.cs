@@ -5,6 +5,8 @@ namespace BeauTambour
     public interface ISpeaker
     {
         Actor Actor { get; }
+        bool HasArcEnded { get; }
+        int Branches { get; }
         
         RuntimeCharacter RuntimeLink { get; }
         Animator Animator { get; }
@@ -12,8 +14,7 @@ namespace BeauTambour
         AudioCharMapPackage AudioCharMap { get; }
         
         Dialogue[] GetDialogues(Emotion emotion);
-        bool IsArcEnded { get; }
-
+        
         void BeginTalking();
         void StopTalking();
 
