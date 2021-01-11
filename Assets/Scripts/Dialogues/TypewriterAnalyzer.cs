@@ -29,7 +29,9 @@ namespace BeauTambour
         private int currentIndexInSyll;
 
         private float timeToPlayNextSound;
+        private float startClock;
         private bool passNextChar = false;
+        private List<string> queueToPlay;
 
         #region Letter types constantes
         readonly static char[] consonants = new char[] {
@@ -54,16 +56,29 @@ namespace BeauTambour
             'Ñ','P','Q','R','S',
             'T','V','W','X','Y','Z'};
         readonly static char[] punctuation = new char[] {
-            '.','-','_',',',';','!','?','\n',
+            '.',',',';','!','?','\n'
+        };
+        readonly static char[] links = new char[] {
+            '-','_','\'','`','’'
         };
         #endregion
 
         void Start()
         {
             syllabes = new List<string>();
+            queueToPlay = new List<string>();
             dialogueHandler = Repository.GetSingle<DialogueHandler>(References.DialogueHandler);
             Event.Open(GameEvents.OnCueFinished);
             Event.Register<Cue>(GameEvents.OnNextCue, OnNextCue);
+        }
+
+        private void Update()
+        {
+            if(queueToPlay.Count > 0 && Time.time - startClock >= timeToPlayNextSound)
+            {
+                PlayCorrespondingAudio(queueToPlay[0][0]);
+                queueToPlay.RemoveAt(0);
+            }
         }
 
         void OnEnable()
@@ -90,7 +105,7 @@ namespace BeauTambour
 
         void OnCharacterVisible(char character)
         {
-            if (punctuation.Contains(character)) return;
+            if (punctuation.Contains(character) || links.Contains(character)) return;
 
             if (!passNextChar)
             {
@@ -114,12 +129,13 @@ namespace BeauTambour
 
                             if (consonants.Contains(char.ToUpper(character)))
                             {
-                                if (idx != -1 && currentIndexInSyll == idx - 1)
+                                if (currentIndexInSyll == idx - 1)
                                 {
                                     passNextChar = true;                                    
                                     PlayCorrespondingAudio(character);
-                                    StartCoroutine(PlayCorrespondingAudioAfterTime(vowel[0], timeToPlayNextSound));
-                                }
+                                    queueToPlay.Add(vowel[0].ToString());
+                                    startClock = Time.time;
+                                }                                
                             }
                             else
                             {
@@ -179,35 +195,38 @@ namespace BeauTambour
             }
         }
 
-        private IEnumerator PlayCorrespondingAudioAfterTime(char character, float waitTime)
-        {
-            yield return new WaitForSeconds(waitTime);
-            PlayCorrespondingAudio(character);
-        }
-
         private string GetOnlyText(string text)
         {
             bool isInBalise = false;
             int startBalise = 0;
             for (int i = 0; i < text.Length; i++)
             {
-                if(!isInBalise && text[i] == '<')
+                //Balise detection
+                if (!isInBalise && text[i] == '<')
                 {
                     isInBalise = true;
                     startBalise = i;
                 }
-                else if(isInBalise && text[i] == '>')
+                else if (isInBalise && text[i] == '>')
                 {
                     isInBalise = false;
-                    text = text.Remove(startBalise,i-startBalise+1);
-                    i = startBalise;
+                    text = text.Remove(startBalise, i - startBalise + 1);
+                    i = startBalise - 1;
                 }
 
-                if (!isInBalise && punctuation.Contains(text[i]))
-                {                    
-                    text =  text.Remove(i,1);
-                    i--;    
+                //Others
+                if (!isInBalise && i > 0) {
+                    if(punctuation.Contains(text[i]))
+                    {
+                        text = text.Remove(i, 1);
+                        i--;
+                    }
+                    else if(links.Contains(text[i]))
+                    {
+                        text = text.Replace(text[i],' ');
+                    }
                 }
+                
             }
             return text;
         }
