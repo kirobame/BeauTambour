@@ -15,17 +15,21 @@ namespace BeauTambour
         public enum PLAYSOUNDSYLLABEPOS
         {
             OnFirstVowel,
-            OnSyllabeStart
+            OnSyllabeStart,
+            OnSyllabeStartAndPreviousConsonant
         }
 
         [SerializeField] private TextAnimatorPlayer textAnimatorPlayer;
-        [SerializeField] private int gap;
         [SerializeField] private PLAYSOUNDSYLLABEPOS playSoundPos;
+        [SerializeField] private float consonantFirstVowelTimeRatio = 0.1f;
 
         private DialogueHandler dialogueHandler;        
         private List<string> syllabes;
         private int currentSyll;
         private int currentIndexInSyll;
+
+        private float timeToPlayNextSound;
+        private bool passNextChar = false;
 
         #region Letter types constantes
         readonly static char[] consonants = new char[] {
@@ -34,7 +38,7 @@ namespace BeauTambour
             'Ñ','P','Q','R','S',
             'T','V','W','X','Y','Z'};
         readonly static char[] strongVowels = new char[] {
-            'A','Á','E','É','È',
+            'A','Á','À','E','É','È',
             'Í','O','Ó','Ú'};
         readonly static char[] weakVowels = new char[] { 'I', 'U', 'Ü' };
         readonly static char[] vowels = new char[] {
@@ -87,25 +91,52 @@ namespace BeauTambour
         void OnCharacterVisible(char character)
         {
             if (punctuation.Contains(character)) return;
-            character = char.ToLower(character);
-            if (TryGetFirstVowelSound(syllabes[currentSyll], out string vowel, out int idx))
+
+            if (!passNextChar)
             {
-                switch (playSoundPos)
+                if (TryGetFirstVowelSound(syllabes[currentSyll], out string vowel, out int idx))
                 {
-                    case PLAYSOUNDSYLLABEPOS.OnFirstVowel:
-                        if (currentIndexInSyll == idx)
-                        {
-                            PlayCorrespondingAudio(character);
-                        }
-                        break;
-                    case PLAYSOUNDSYLLABEPOS.OnSyllabeStart:
-                        if (currentIndexInSyll == 0)
-                        {
-                            PlayCorrespondingAudio(character);
-                        }
-                        break;
-                }             
+                    switch (playSoundPos)
+                    {
+                        case PLAYSOUNDSYLLABEPOS.OnFirstVowel:
+                            if (currentIndexInSyll == idx)
+                            {
+                                PlayCorrespondingAudio(character);
+                            }
+                            break;
+                        case PLAYSOUNDSYLLABEPOS.OnSyllabeStart:
+                            if (currentIndexInSyll == 0)
+                            {
+                                PlayCorrespondingAudio(character);
+                            }
+                            break;
+                        case PLAYSOUNDSYLLABEPOS.OnSyllabeStartAndPreviousConsonant:
+
+                            if (consonants.Contains(char.ToUpper(character)))
+                            {
+                                if (idx != -1 && currentIndexInSyll == idx - 1)
+                                {
+                                    passNextChar = true;                                    
+                                    PlayCorrespondingAudio(character);
+                                    StartCoroutine(PlayCorrespondingAudioAfterTime(vowel[0], timeToPlayNextSound));
+                                }
+                            }
+                            else
+                            {
+                                if (currentIndexInSyll == idx)
+                                {
+                                    PlayCorrespondingAudio(character);
+                                }
+                            }
+                            break;
+                    }
+                }
             }
+            else
+            {
+                passNextChar = false;
+            }
+
             currentIndexInSyll++;
             if (currentIndexInSyll >= syllabes[currentSyll].Length)
             {
@@ -135,15 +166,23 @@ namespace BeauTambour
 
         private void PlayCorrespondingAudio(char character)
         {
+            character = char.ToLower(character);
             if (dialogueHandler.Speaker.AudioCharMap.TryGet(character, out var package))
             {
-                //Debug.Log($"{syllabes[currentSyll]}--{currentIndexInSyll}--{idx}");
+                Debug.Log("START AUDIO - " + character);
                 var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
                 var audio = audioPool.RequestSingle();
 
                 package.AssignTo(audio, EventArgs.Empty);
                 audio.Play();
+                timeToPlayNextSound =  audio.clip.length * consonantFirstVowelTimeRatio;
             }
+        }
+
+        private IEnumerator PlayCorrespondingAudioAfterTime(char character, float waitTime)
+        {
+            yield return new WaitForSeconds(waitTime);
+            PlayCorrespondingAudio(character);
         }
 
         private string GetOnlyText(string text)
