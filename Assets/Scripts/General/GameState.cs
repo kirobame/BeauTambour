@@ -11,7 +11,7 @@ namespace BeauTambour
         public static IEnumerable<ISpeaker> Speakers => speakers.Values;
         private static Dictionary<Actor, ISpeaker> speakers;
 
-        private static int finishedArcsCount;
+        public static int FinishedArcsCount { get; private set; }
         private static bool arcsMinimumCompletion;
         
         public static int BlockIndex { get; private set; }
@@ -26,7 +26,7 @@ namespace BeauTambour
         {
             Debug.Log("BOOTING UP GAME STATE");
             
-            finishedArcsCount = 0;
+            FinishedArcsCount = 0;
             arcsMinimumCompletion = false;
             
             eventDialogues = new Dictionary<string, EventBoundDialogue>();
@@ -91,10 +91,12 @@ namespace BeauTambour
 
         public static bool NotifyMusicianArcEnd(out Dialogue dialogue)
         {
-            finishedArcsCount++;
+            FinishedArcsCount++;
             
-            if (!arcsMinimumCompletion && finishedArcsCount == speakers.Count - 1)
+            if (!arcsMinimumCompletion && FinishedArcsCount == speakers.Count - 1)
             {
+                Event.Call(GameEvents.OnInterlocutorConvinced);
+                
                 var encounter = Repository.GetSingle<Encounter>(References.Encounter);
                 RegisterSpeakerForUse(encounter.Interlocutor);
                 
@@ -115,7 +117,7 @@ namespace BeauTambour
             var encounter = Repository.GetSingle<Encounter>(References.Encounter);
             UnregisterSpeakerForUse(encounter.Interlocutor);
             
-            finishedArcsCount = 0;
+            FinishedArcsCount = 0;
             arcsMinimumCompletion = false;
 
             BlockIndex++;

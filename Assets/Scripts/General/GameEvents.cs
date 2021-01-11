@@ -48,6 +48,10 @@ namespace BeauTambour
         OnNarrativeEvent,
         OnLanguageChanged,
         
+        OnSpeakerEntrance,
+        OnMusicianArcCompleted,
+        
+        OnInterlocutorConvinced,
         OnBlockPassed,
         OnEncounterEnd,
         

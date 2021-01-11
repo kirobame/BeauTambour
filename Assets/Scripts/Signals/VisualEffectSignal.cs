@@ -24,7 +24,7 @@ namespace BeauTambour
             playedEffect.OnEnd += OnEffectEnd;
             playedEffect.Value.SetTrigger("Play");
 
-            playedEffect.transform.parent = speaker.RuntimeLink.HeadSocket.Attach;
+            playedEffect.transform.parent = speaker.RuntimeLink.HeadSocket.Value;
             playedEffect.transform.localPosition = Vector3.zero;
             playedEffect.transform.localScale = Vector3.one;
         }

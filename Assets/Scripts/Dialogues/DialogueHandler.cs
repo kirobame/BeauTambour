@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Flux;
@@ -11,6 +12,8 @@ namespace BeauTambour
     {
         [SerializeField] private DialogueHolder holder;
         [SerializeField] private float widthCorrection;
+
+        [Space,SerializeField] private bool skip;
 
         [Space, SerializeField] private DialogueEvent[] events;
         private Dictionary<string, DialogueEvent> eventRegistry;
@@ -59,6 +62,12 @@ namespace BeauTambour
         public void Continue()
         {
             if (!isPlaying) return;
+
+            if (skip)
+            {
+                StartCoroutine(DelayedEndRoutine());
+                return;
+            }
             
             advancement++;
             if (advancement >= dialogue.Length) 
@@ -124,10 +133,17 @@ namespace BeauTambour
             actor = newActor;
             Event.Call<Cue>(GameEvents.OnNextCue, cue);
         }
+        private IEnumerator DelayedEndRoutine()
+        {
+            yield return new WaitForEndOfFrame();
+            
+            queue.Clear();
+            End();
+        }
 
         public void End()
         {
-            holder.Deactivate();
+            if (!skip) holder.Deactivate();
             isPlaying = false;
 
             if (eventRegistry.TryGetValue(dialogue.Name, out playedEvent))

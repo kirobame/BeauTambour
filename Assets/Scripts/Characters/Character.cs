@@ -18,7 +18,7 @@ namespace BeauTambour
         
         public abstract RuntimeCharacter RuntimeLink { get; }
 
-        public virtual void Bootup(RuntimeCharacter runtimeCharacter) => Repository.Reference(this, References.Characters);
+        public virtual void Bootup(RuntimeCharacter runtimeCharacter, params object[] args) => Repository.Reference(this, References.Characters);
 
         public virtual void SetupDialogueHolder(DialogueHolder dialogueHolder)
         {

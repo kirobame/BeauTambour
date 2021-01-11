@@ -22,25 +22,33 @@ namespace BeauTambour
         private IEnumerator WaitRoutine(ISpeaker speaker)
         {
             Debug.Log($"{Time.time} -- [Animation]:[{speaker.Actor}]:[{Key}]");
-            speaker.ActOut(Key);
-
-            var layerIndex = speaker.Animator.GetLayerIndex("Actions");
-            var state = speaker.Animator.GetCurrentAnimatorStateInfo(layerIndex);
-
-            while (!state.IsTag(Key.ToString()))
+            if (speaker.Animator == null)
             {
-                yield return new WaitForEndOfFrame();
-                state = speaker.Animator.GetCurrentAnimatorStateInfo(layerIndex);
+                yield return new WaitForSeconds(0.4f);
+                End();
             }
-            
-            while (state.IsTag(Key.ToString()))
+            else
             {
-                yield return new WaitForEndOfFrame();
-                state = speaker.Animator.GetCurrentAnimatorStateInfo(layerIndex);
-            }
+                speaker.ActOut(Key);
+
+                var layerIndex = speaker.Animator.GetLayerIndex("Actions");
+                var state = speaker.Animator.GetCurrentAnimatorStateInfo(layerIndex);
+
+                while (!state.IsTag(Key.ToString()))
+                {
+                    yield return new WaitForEndOfFrame();
+                    state = speaker.Animator.GetCurrentAnimatorStateInfo(layerIndex);
+                }
             
-            yield return new WaitForSeconds(0.4f);
-            End();
+                while (state.IsTag(Key.ToString()))
+                {
+                    yield return new WaitForEndOfFrame();
+                    state = speaker.Animator.GetCurrentAnimatorStateInfo(layerIndex);
+                }
+            
+                yield return new WaitForSeconds(0.4f);
+                End();
+            }
         }
     }
 }

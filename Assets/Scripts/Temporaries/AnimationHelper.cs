@@ -34,7 +34,7 @@ namespace BeauTambour
             var vfxPool = Repository.GetSingle<AnimationPool>(References.AnimationPool);
             var poolableVfx = vfxPool.RequestSingle(vfx);
 
-            poolableVfx.transform.parent = character.HeadSocket.Attach;
+            poolableVfx.transform.parent = character.HeadSocket.Value;
             poolableVfx.transform.localPosition = Vector3.zero;
             
             poolableVfx.SetTrigger("Play");

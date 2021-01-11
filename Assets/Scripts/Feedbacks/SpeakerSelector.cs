@@ -14,21 +14,38 @@ namespace BeauTambour
         [SerializeField] private CopyMesh outline;
 
         [Space, SerializeField] private PoolableAnimation selectionEffect;
+        [SerializeField] private SpriteRenderer leftArrow, rightArrow;
 
         private ISpeaker speaker;
 
         void Awake()
         {
-            Event.Register<ISpeaker>(GameEvents.OnSpeakerSelected, OnSpeakerSelected);
+            Event.Register<ISpeaker, int>(GameEvents.OnSpeakerSelected, OnSpeakerSelected);
             Event.Register(GameEvents.OnSpeakerChoice, OnSpeakerChoice);
         }
 
-        void OnSpeakerSelected(ISpeaker speaker)
+        void OnSpeakerSelected(ISpeaker speaker, int code)
         {
             this.speaker = speaker;
+
+            if (code == 0)
+            {
+                leftArrow.enabled = true;
+                rightArrow.enabled = true;
+            }
+            else if (code == 1)
+            {
+                leftArrow.enabled = true;
+                rightArrow.enabled = false;
+            }
+            else if (code == 2)
+            {
+                leftArrow.enabled = false;
+                rightArrow.enabled = true;
+            }
             
             transform.position = speaker.RuntimeLink.TopCenter;
-            arcInProgressVisual.SetActive(!speaker.HasArcEnded);
+            //arcInProgressVisual.SetActive(!speaker.HasArcEnded);
 
             Vector3 speakerPos = speaker.RuntimeLink.transform.position;
             outline.transform.position = new Vector3(speakerPos.x,speakerPos.y);
@@ -43,10 +60,13 @@ namespace BeauTambour
 
         void OnSpeakerChoice()
         {
+            leftArrow.enabled = false;
+            rightArrow.enabled = false;
+            
             var animationPool = Repository.GetSingle<AnimationPool>(References.AnimationPool);
             var animator = animationPool.RequestSingle(selectionEffect);
 
-            animator.transform.parent = speaker.RuntimeLink.HeadSocket.Attach;
+            animator.transform.parent = speaker.RuntimeLink.HeadSocket.Value;
             animator.transform.localPosition = Vector3.zero;
             animator.transform.localScale = Vector3.one;
             

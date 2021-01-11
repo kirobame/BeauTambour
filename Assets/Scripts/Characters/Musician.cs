@@ -61,10 +61,13 @@ namespace BeauTambour
 
         #endregion
         
-        public override RuntimeCharacter RuntimeLink => CastedRuntimeLink;
-        public RuntimeMusician CastedRuntimeLink { get; private set; }
+        public int Id => GetInstanceID();
+        
+        public override RuntimeCharacter RuntimeLink => runtimeLink;
+        private RuntimeCharacter runtimeLink;
+        //public RuntimeMusician CastedRuntimeLink { get; private set; }
 
-        public Animator Animator => CastedRuntimeLink.Intermediary.Animator;
+        public Animator Animator => runtimeLink.Animator;
         public AudioCharMapPackage AudioCharMap => audioCharMap;
 
         public bool HasArcEnded => currentNode == null || currentNode.Childs[0] == "Empty";
@@ -78,6 +81,7 @@ namespace BeauTambour
         private HashSet<string> attributes;
 
         private DialogueNode currentNode;
+        private bool hasEntered;
 
         #region Dialogue Initialization
         
@@ -100,12 +104,16 @@ namespace BeauTambour
         }
         #endregion
 
-        public override void Bootup(RuntimeCharacter runtimeCharacter)
+        public override void Bootup(RuntimeCharacter runtimeCharacter, params object[] args)
         {
             base.Bootup(runtimeCharacter);
-            CastedRuntimeLink = (RuntimeMusician) runtimeCharacter;
+            
+            runtimeLink = runtimeCharacter;
+            hasEntered = false;
+            
+            //CastedRuntimeLink = (RuntimeMusician) runtimeCharacter;
 
-            GameState.RegisterSpeakerForUse(this);
+            if (Convert.ToBoolean(args[0]) == true) GameState.RegisterSpeakerForUse(this);
             
             rootNodeKeys = new List<string>();
             nodes = new Dictionary<string, DialogueNode>();
@@ -115,6 +123,30 @@ namespace BeauTambour
             Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
         }
 
+        public bool IsValid(Emotion emotion, out int selection, out int followingBranches)
+        {
+            selection = 0;
+            followingBranches = 0;
+            
+            if (currentNode.Childs[0] == "Empty") return false;
+
+            for (var i = 0; i < currentNode.Childs.Count; i++)
+            {
+                if (!nodes.TryGetValue(currentNode.Childs[i], out var child)) continue;
+
+                if (child.RequiredEmotion == emotion && attributes.IsSupersetOf(child.NeededAttributes))
+                {
+                    selection = i;
+                    
+                    if (child.Childs[0] == "Empty") followingBranches = 0;
+                    else followingBranches = child.Childs.Count;
+                    
+                    return true;
+                }
+            }
+
+            return false;
+        }
         public Dialogue[] GetDialogues(Emotion emotion)
         {
             if (currentNode.Childs[0] == "Empty") return GetDefaultDialogues();
@@ -138,9 +170,7 @@ namespace BeauTambour
 
                     if (child.Childs[0] == "Empty")
                     {
-                        Event.Call(GameEvents.OnDialogueTreeUpdate, Actor, emotion, i, 0);
                         Debug.Log($"--|DIAG|-> End of narrative arc for : {name}");
-                        
                         if (GameState.NotifyMusicianArcEnd(out var blockDialogue))
                         {
                             return new Dialogue[]
@@ -150,11 +180,7 @@ namespace BeauTambour
                             };
                         }
                     }
-                    else
-                    {
-                        Event.Call(GameEvents.OnDialogueTreeUpdate, Actor, emotion, i, child.Childs.Count);
-                        return new Dialogue[] {child.GetDialogue()};
-                    }
+                    else return new Dialogue[] {child.GetDialogue()};
                 }
             }
 
@@ -178,18 +204,23 @@ namespace BeauTambour
             }
         }
 
-        void ISpeaker.BeginTalking() => CastedRuntimeLink.Intermediary.BeginTalking();
-        void ISpeaker.StopTalking() => CastedRuntimeLink.Intermediary.StopTalking();
+        void ISpeaker.BeginTalking() => RuntimeLink.BeginTalking();
+        void ISpeaker.StopTalking() => RuntimeLink.StopTalking();
 
-        void ISpeaker.PlayMelodyFor(Emotion emotion) => CastedRuntimeLink.Intermediary.PlayMelodyFor(emotion);
-        void ISpeaker.ActOut(Emotion emotion) => CastedRuntimeLink.Intermediary.ActOut(emotion);
+        void ISpeaker.PlayMelodyFor(Emotion emotion) => RuntimeLink.PlayMelodyFor(emotion);
+        void ISpeaker.ActOut(Emotion emotion) => RuntimeLink.ActOut(emotion);
         
         void OnBlockPassed()
         {
-            Debug.Log($"ON BLOCK PASSED FOR {Actor} / {name} / {GetInstanceID()}");
+            Debug.Log($"ON BLOCK PASSED FOR {Actor} / {name} / {rootNodeKeys[GameState.BlockIndex]} / {GetInstanceID()}");
+            if (rootNodeKeys.Count == 0 || rootNodeKeys[GameState.BlockIndex] == "Empty") return;
             
-            if (rootNodeKeys.Count == 0) return;
             currentNode = nodes[rootNodeKeys[GameState.BlockIndex]];
+            if (!hasEntered)
+            {
+                Event.Call<ISpeaker>(GameEvents.OnSpeakerEntrance, this);
+                hasEntered = true;
+            }
         }
     }
 }

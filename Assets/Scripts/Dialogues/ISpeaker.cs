@@ -4,6 +4,8 @@ namespace BeauTambour
 {
     public interface ISpeaker
     {
+        int Id { get; }
+        
         Actor Actor { get; }
         bool HasArcEnded { get; }
         int Branches { get; }
@@ -12,7 +14,8 @@ namespace BeauTambour
         Animator Animator { get; }
         
         AudioCharMapPackage AudioCharMap { get; }
-        
+
+        bool IsValid(Emotion emotion, out int selection, out int followingBranches);
         Dialogue[] GetDialogues(Emotion emotion);
         
         void BeginTalking();

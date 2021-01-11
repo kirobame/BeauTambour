@@ -11,7 +11,9 @@ namespace BeauTambour
         public Animator Animator => animator;
         
         [Space, SerializeField] private Animator animator;
-        [SerializeField] private EmotionMelodyRegistry emotionMelodyRegistry;
+        [SerializeField] private bool useAnimator = true;
+        
+        [Space, SerializeField] private EmotionMelodyRegistry emotionMelodyRegistry;
         [SerializeField] private EmotionEffectRegistry emotionEffectRegistry;
 
         private RuntimeCharacter source;
@@ -21,12 +23,20 @@ namespace BeauTambour
 
         public void SetSource(RuntimeCharacter source) => this.source = source; 
         
-        public void BeginTalking() => animator.SetBool("IsTalking", true);
-        public void StopTalking() => animator.SetBool("IsTalking", false);
+        public void BeginTalking()
+        {
+            if (!useAnimator) return;
+            animator.SetBool("IsTalking", true);
+        }
+        public void StopTalking()
+        {
+            if (!useAnimator) return;
+            animator.SetBool("IsTalking", false);
+        }
 
         public void PlayMelodyFor(Emotion emotion)
         {
-            animator.SetBool("IsPlaying", true);
+            if (useAnimator) animator.SetBool("IsPlaying", true);
             
             var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
             poolableAudio = audioPool.RequestSinglePoolable();
@@ -42,15 +52,18 @@ namespace BeauTambour
                 var animationPool = Repository.GetSingle<AnimationPool>(References.AnimationPool);
                 poolableAnimation = animationPool.RequestSinglePoolable(effectPrefab);
 
-                poolableAnimation.transform.parent = source.HeadSocket.Attach;
+                poolableAnimation.transform.parent = source.HeadSocket.Value;
                 poolableAnimation.transform.localPosition = Vector3.zero;
                 poolableAnimation.transform.localScale = Vector3.one;
                 
                 poolableAnimation.Value.SetTrigger("In");
             }
         }
-
-        public void ActOut(Emotion emotion) => animator.SetTrigger(emotion.ToString());
+        public void ActOut(Emotion emotion)
+        {
+            if (!useAnimator) return;
+            animator.SetTrigger(emotion.ToString());
+        } 
 
         void OnMelodyEnd()
         {
@@ -60,7 +73,7 @@ namespace BeauTambour
         private IEnumerator MelodyTerminationRoutine()
         {
             if (poolableAnimation != null) poolableAnimation.Value.SetTrigger("Out");
-            animator.SetBool("IsPlaying", false);
+            if (useAnimator) animator.SetBool("IsPlaying", false);
             
             yield return new WaitForSeconds(0.75f);
             

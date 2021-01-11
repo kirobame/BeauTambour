@@ -20,8 +20,17 @@ namespace BeauTambour
         {
             Event.Call(GameEvents.OnNoteValidation);
             yield return new WaitForSeconds(0.75f);
+
+            var emotion = GameState.Note.emotion;
+            if (GameState.Note.speaker.IsValid(emotion, out var selection, out var branches))
+            {
+                if (branches == 0 && GameState.Note.speaker is Musician musician) Event.Call<Musician>(GameEvents.OnMusicianArcCompleted, musician);
+                
+                var id = GameState.Note.speaker.Id;
+                Event.Call(GameEvents.OnDialogueTreeUpdate, id, emotion, selection, branches);
+            }
             
-            GameState.Note.speaker.PlayMelodyFor(GameState.Note.emotion);
+            GameState.Note.speaker.PlayMelodyFor(emotion);
         }
     }
 }
