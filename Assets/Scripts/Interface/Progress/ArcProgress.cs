@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 using Event = Flux.Event;
 
@@ -18,9 +19,12 @@ namespace BeauTambour
             Event.Register<Musician>(GameEvents.OnMusicianArcCompleted, OnMusicianArcCompleted);
         }
 
-        void OnBlockPassed()
+        void OnBlockPassed() => StartCoroutine(ActualizationRoutine());
+        private IEnumerator ActualizationRoutine()
         {
-            speakerCount = GameState.Speakers.Count() - 1;
+            yield return new WaitForEndOfFrame();
+        
+            speakerCount = GameState.ActiveSpeakers.Count() - 1;
             for (var i = 0; i < speakerCount; i++)
             {
                 segments[i].gameObject.SetActive(true);
@@ -29,6 +33,7 @@ namespace BeauTambour
 
             for (var i = speakerCount; i < segments.Length; i++) segments[i].gameObject.SetActive(false);
         }
+        
         void OnMusicianArcCompleted(Musician musician)
         {
             var index = speakerCount - 1 + GameState.FinishedArcsCount;

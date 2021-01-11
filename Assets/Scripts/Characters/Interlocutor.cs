@@ -5,7 +5,7 @@ using Event = Flux.Event;
 namespace BeauTambour
 {
     [CreateAssetMenu(fileName = "NewInterlocutor", menuName = "Beau Tambour/Characters/Interlocutor")]
-    public class Interlocutor : Character, ISpeaker
+    public class Interlocutor : Character
     {
         #region Encapsulated Types
 
@@ -31,19 +31,8 @@ namespace BeauTambour
         }
         #endregion
 
-        public int Id => GetInstanceID();
-        
-        public override RuntimeCharacter RuntimeLink => runtimeLink;
-        private RuntimeCharacter runtimeLink;
-        //public RuntimeInterlocutor CastedRuntimeLink { get; private set; }
-        
-        public Animator Animator => runtimeLink.Animator;
-        public AudioCharMapPackage AudioCharMap => audioCharMap;        
-
-        [Space, SerializeField] private AudioCharMapPackage audioCharMap;
-
-        public bool HasArcEnded => false;
-        public int Branches => 1;
+        public override bool HasArcEnded => false;
+        public override int Branches => 1;
 
         private List<DialogueBlock> blocks;
         private List<Dictionary<Emotion, DialogueFailsafe>> options;
@@ -73,22 +62,17 @@ namespace BeauTambour
         }
         #endregion
         
-        public override void Bootup(RuntimeCharacter runtimeCharacter, params object[] args)
+        public override void Bootup(RuntimeCharacterBase runtimeCharacter)
         {
             base.Bootup(runtimeCharacter);
-            
-            runtimeLink = runtimeCharacter;
-            hasEntered = false;
-            
-            //CastedRuntimeLink = (RuntimeInterlocutor)runtimeCharacter;
-            
+
             blocks = new List<DialogueBlock>();
             options = new List<Dictionary<Emotion, DialogueFailsafe>>();
 
             Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
         }
 
-        public bool IsValid(Emotion emotion, out int selection, out int followingBranches)
+        public override bool IsValid(Emotion emotion, out int selection, out int followingBranches)
         {
             selection = 0;
             followingBranches = 0;
@@ -99,34 +83,21 @@ namespace BeauTambour
             followingBranches = 0;
             return false;
         }
-        public Dialogue[] GetDialogues(Emotion emotion)
+        public override Dialogue[] GetDialogues(Emotion emotion)
         {
             var block = blocks[GameState.BlockIndex];
             if (block.Emotion == emotion)
             {
-                Debug.Log("Go to next block");
                 GameState.PassBlock();
-
                 return new Dialogue[] { block.Dialogues[(int)GameState.UsedLanguage] };
             }
             else return new Dialogue[] { options[GameState.BlockIndex][emotion].GetDialogue() };
         }
-
-        void ISpeaker.BeginTalking() => RuntimeLink.BeginTalking();
-        void ISpeaker.StopTalking() => RuntimeLink.StopTalking();
-
-        void ISpeaker.PlayMelodyFor(Emotion emotion) => RuntimeLink.PlayMelodyFor(emotion);
-        void ISpeaker.ActOut(Emotion emotion) => RuntimeLink.ActOut(emotion);
-
-        void OnBlockPassed()
+        
+        protected override void OnBlockPassed()
         {
-            if (blocks[GameState.BlockIndex].Name == "Empty") return;
-
-            if (!hasEntered)
-            {
-                Event.Call<ISpeaker>(GameEvents.OnSpeakerEntrance, this);
-                hasEntered = true;
-            }
+            if (GameState.BlockIndex >= blocks.Count) return;
+            if (blocks[GameState.BlockIndex].Name != "Empty") base.OnBlockPassed();
         }
     }
 }

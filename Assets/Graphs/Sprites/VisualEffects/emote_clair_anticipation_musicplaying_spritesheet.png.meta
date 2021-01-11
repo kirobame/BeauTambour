@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 93c08adc48e26d649baf7e4c11f0cd8c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2329770013630064344
+    second: emote_clair_anticipation_musicplaying_spritesheet_0
+  - first:
+      213: 3290199538377988905
+    second: emote_clair_anticipation_musicplaying_spritesheet_1
+  - first:
+      213: -4129872034595908966
+    second: emote_clair_anticipation_musicplaying_spritesheet_2
+  - first:
+      213: 4193688747542628231
+    second: emote_clair_anticipation_musicplaying_spritesheet_3
+  - first:
+      213: -7479970618469758029
+    second: emote_clair_anticipation_musicplaying_spritesheet_4
+  - first:
+      213: 5988312383833552893
+    second: emote_clair_anticipation_musicplaying_spritesheet_5
+  - first:
+      213: -2726536110858009801
+    second: emote_clair_anticipation_musicplaying_spritesheet_6
+  - first:
+      213: 9048806959572893627
+    second: emote_clair_anticipation_musicplaying_spritesheet_7
+  - first:
+      213: 3551217080992712960
+    second: emote_clair_anticipation_musicplaying_spritesheet_8
+  - first:
+      213: -3644275043967472598
+    second: emote_clair_anticipation_musicplaying_spritesheet_9
+  - first:
+      213: 6044699559879330221
+    second: emote_clair_anticipation_musicplaying_spritesheet_10
+  - first:
+      213: 1813881560396105683
+    second: emote_clair_anticipation_musicplaying_spritesheet_11
+  - first:
+      213: 3844053292937745411
+    second: emote_clair_anticipation_musicplaying_spritesheet_12
+  - first:
+      213: -5803636176067625111
+    second: emote_clair_anticipation_musicplaying_spritesheet_13
+  - first:
+      213: -6766570612292893232
+    second: emote_clair_anticipation_musicplaying_spritesheet_14
+  - first:
+      213: 1013445763681585664
+    second: emote_clair_anticipation_musicplaying_spritesheet_15
+  - first:
+      213: 5515764110353270776
+    second: emote_clair_anticipation_musicplaying_spritesheet_0
+  - first:
+      213: 2095646039800873877
+    second: emote_clair_anticipation_musicplaying_spritesheet_1
+  - first:
+      213: -5142857062418945380
+    second: emote_clair_anticipation_musicplaying_spritesheet_2
+  - first:
+      213: 8568640586774066776
+    second: emote_clair_anticipation_musicplaying_spritesheet_3
+  - first:
+      213: 8136315036667714195
+    second: emote_clair_anticipation_musicplaying_spritesheet_4
+  - first:
+      213: 4487432166629303948
+    second: emote_clair_anticipation_musicplaying_spritesheet_5
+  - first:
+      213: -7677796458743290476
+    second: emote_clair_anticipation_musicplaying_spritesheet_6
+  - first:
+      213: -2279535262855961921
+    second: emote_clair_anticipation_musicplaying_spritesheet_7
+  - first:
+      213: 5414605053249248406
+    second: emote_clair_anticipation_musicplaying_spritesheet_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: emote_clair_anticipation_musicplaying_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7847e0c3eeb8c40800000000000000
+      internalID: 5515764110353270776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clair_anticipation_musicplaying_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593094158fa351d10800000000000000
+      internalID: 2095646039800873877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clair_anticipation_musicplaying_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 870
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ae8efefb6e0a8b0800000000000000
+      internalID: -5142857062418945380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clair_anticipation_musicplaying_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856b9ae073de9e670800000000000000
+      internalID: 8568640586774066776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clair_anticipation_musicplaying_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a9f35fa6ff9e070800000000000000
+      internalID: 8136315036667714195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clair_anticipation_musicplaying_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 435
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86e995b7cf864e30800000000000000
+      internalID: 4487432166629303948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clair_anticipation_musicplaying_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495aadaacccf27590800000000000000
+      internalID: -7677796458743290476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clair_anticipation_musicplaying_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb26e7481c67d50e0800000000000000
+      internalID: -2279535262855961921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emote_clair_anticipation_musicplaying_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 0
+        width: 434
+        height: 435
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cd4fdab9a842b40800000000000000
+      internalID: 5414605053249248406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0e0dfcff383b2e44dab27a8c9eeb06f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

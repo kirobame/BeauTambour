@@ -9,7 +9,13 @@ namespace BeauTambour
         public override PhaseCategory Category => PhaseCategory.Dialogue;
 
         private bool hasBeenBootedUp;
+        private string startEventKey;
 
+        public void SetNewStartingKey(string key)
+        {
+            hasBeenBootedUp = false;
+            startEventKey = key;
+        }
         public void SkipBootUp() => hasBeenBootedUp = true;
 
         public override void Begin()
@@ -18,7 +24,7 @@ namespace BeauTambour
 
             if (!hasBeenBootedUp)
             {
-                Event.Call<string>(GameEvents.OnNarrativeEvent, "Start");
+                Event.Call<string>(GameEvents.OnNarrativeEvent, startEventKey);
                 hasBeenBootedUp = true;
             }
             else

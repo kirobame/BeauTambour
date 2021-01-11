@@ -10,21 +10,20 @@ namespace BeauTambour
 {
     public class SpeakerSelector : MonoBehaviour
     {
-        [SerializeField] private GameObject arcInProgressVisual;
         [SerializeField] private CopyMesh outline;
 
         [Space, SerializeField] private PoolableAnimation selectionEffect;
         [SerializeField] private SpriteRenderer leftArrow, rightArrow;
 
-        private ISpeaker speaker;
+        private Character speaker;
 
         void Awake()
         {
-            Event.Register<ISpeaker, int>(GameEvents.OnSpeakerSelected, OnSpeakerSelected);
+            Event.Register<Character, int>(GameEvents.OnSpeakerSelected, OnSpeakerSelected);
             Event.Register(GameEvents.OnSpeakerChoice, OnSpeakerChoice);
         }
 
-        void OnSpeakerSelected(ISpeaker speaker, int code)
+        void OnSpeakerSelected(Character speaker, int code)
         {
             this.speaker = speaker;
 
@@ -44,9 +43,8 @@ namespace BeauTambour
                 rightArrow.enabled = true;
             }
             
-            transform.position = speaker.RuntimeLink.TopCenter;
-            //arcInProgressVisual.SetActive(!speaker.HasArcEnded);
-
+            transform.position = speaker.RuntimeLink.SelectionAnchor;
+            
             Vector3 speakerPos = speaker.RuntimeLink.transform.position;
             outline.transform.position = new Vector3(speakerPos.x,speakerPos.y);
             
@@ -54,8 +52,14 @@ namespace BeauTambour
             else outline.transform.localScale = new Vector3(1,1,1);
             
             var lookup = speaker.RuntimeLink.GetComponentInChildren<OutlineLookup>();
-            outline.CopyFrom = lookup.Filter;
-            outline.SetMaterial(lookup.Large);
+            if (lookup == null) outline.gameObject.SetActive(false);
+            else
+            {
+                outline.gameObject.SetActive(true);
+                
+                outline.CopyFrom = lookup.Filter;
+                outline.SetMaterial(lookup.Large);
+            }
         }
 
         void OnSpeakerChoice()

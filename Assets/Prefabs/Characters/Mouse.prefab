@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6318084767594822544}
-  - component: {fileID: 6318084767594822547}
-  - component: {fileID: 8132125443632432337}
+  - component: {fileID: 1742601291313539024}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -36,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6318084767594822547
+--- !u!114 &1742601291313539024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,27 +44,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6318084767594822546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cdea8c035b148259afc4fb8cd7f5ecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asset: {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}
-  dialogueAnchor: {fileID: 6318084767949486948}
-  topCenter: {fileID: 6318084769163878324}
-  headSocket: {fileID: 4575459504835025753}
-  intermediary: {fileID: 8132125443632432337}
---- !u!114 &8132125443632432337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318084767594822546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 673f57457f3f48c4bfb5cc88de704a51, type: 3}
+  m_Script: {fileID: 11500000, guid: f54a0b12ba584b91bb20b7e584e7e4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3054443412200171740}
+  asset: {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}
+  dialogueAnchor: {fileID: 6318084767949486948}
+  selectionAnchor: {fileID: 6318084769163878324}
+  headSocket: {fileID: 4575459504835025753}
   emotionMelodyRegistry: {fileID: 11400000, guid: 2ebf166ec892c034883f9061a7d50a9e,
     type: 2}
   emotionEffectRegistry: {fileID: 11400000, guid: 45e48f002f035914690a293f1a7c8e7a,
@@ -110,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6318084769163878324}
   m_Layer: 0
-  m_Name: TopCenter
+  m_Name: SelectionAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

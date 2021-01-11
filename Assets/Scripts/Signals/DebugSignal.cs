@@ -10,9 +10,9 @@ namespace BeauTambour
         
         [SerializeField] private float waitTime;
 
-        public override void Execute(MonoBehaviour hook, ISpeaker speaker, string[] args) => hook.StartCoroutine(Routine(speaker, args[0]));
+        public override void Execute(MonoBehaviour hook, Character speaker, string[] args) => hook.StartCoroutine(Routine(speaker, args[0]));
 
-        private IEnumerator Routine(ISpeaker speaker, string message)
+        private IEnumerator Routine(Character speaker, string message)
         {
             Debug.Log($"[Debug]:[{speaker.Actor}]:[{Key}] -> {message}");
             

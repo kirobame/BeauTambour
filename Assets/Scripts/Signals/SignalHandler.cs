@@ -63,7 +63,7 @@ namespace BeauTambour
                 return;
             }
 
-            var speaker = Extensions.GetCharacter<Character>(actor) as ISpeaker;
+            var speaker = Extensions.GetCharacter<Character>(actor);
             if (speaker == null)
             {
                 Debug.LogWarning($"Signal error -:- There is no corresponding character -||- ({message})");
@@ -98,11 +98,11 @@ namespace BeauTambour
             signal.Execute(this, speaker, subArgs);
         }
 
-        private void BeginIndication(ISpeaker speaker)
+        private void BeginIndication(Character speaker)
         {
             if (!indicator.GetCurrentAnimatorStateInfo(0).IsTag("Void")) return;
 
-            speaker.StopTalking();
+            speaker.RuntimeLink.StopTalking();
             if (textAnimator.latestCharacterShown.index + 2 < textAnimator.tmproText.textInfo.characterCount)
             {
                 awaitingIndication = true;
@@ -117,19 +117,19 @@ namespace BeauTambour
         }
         private void EndIndication() => indicator.SetTrigger("Out");
 
-        private IEnumerator EndRoutine(ISpeaker speaker)
+        private IEnumerator EndRoutine(Character speaker)
         {
             if (awaitingIndication)
             {
                 EndIndication();
                 yield return new WaitUntil(() => indicator.GetCurrentAnimatorStateInfo(0).IsTag("Void"));
                 
-                speaker.BeginTalking();
+                speaker.RuntimeLink.BeginTalking();
                 textAnimatorPlayer.StartShowingText();
             }
             else
             {
-                speaker.StopTalking();
+                speaker.RuntimeLink.StopTalking();
                 Event.Call(GameEvents.OnCueFinished);
             }
         }

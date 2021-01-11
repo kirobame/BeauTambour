@@ -13,7 +13,7 @@ namespace BeauTambour
         public static TChar GetCharacter<TChar>(Actor actor) where TChar : Character
         {
             var characters = Repository.GetAll<Character>(References.Characters);
-            var character = characters.FirstOrDefault(item => item.Actor == actor && item is TChar);
+            var character = characters.FirstOrDefault(item => item.isActive && item.Actor == actor && item is TChar);
 
             return character as TChar;
         }

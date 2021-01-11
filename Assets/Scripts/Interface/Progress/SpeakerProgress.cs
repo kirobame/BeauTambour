@@ -73,25 +73,23 @@ namespace BeauTambour
             icons = new List<ProgressIcon>();
             histories = new Dictionary<int, ActorHistory>();
 
-            Event.Open<ISpeaker>(GameEvents.OnSpeakerEntrance);
-            Event.Register<ISpeaker>(GameEvents.OnSpeakerEntrance, OnSpeakerEntrance);
+            Event.Open<Character>(GameEvents.OnSpeakerEntrance);
+            Event.Register<Character>(GameEvents.OnSpeakerEntrance, OnSpeakerEntrance);
                 
-            Event.Register<ISpeaker>(GameEvents.OnSpeakerSelected, OnSpeakerSelected);
+            Event.Register<Character, int>(GameEvents.OnSpeakerSelected, OnSpeakerSelected);
             
             Event.Open<int, Emotion, int, int>(GameEvents.OnDialogueTreeUpdate);
             Event.Register<int, Emotion, int, int>(GameEvents.OnDialogueTreeUpdate, OnDialogueTreeUpdate);
 
             Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
         }
-        void OnSpeakerEntrance(ISpeaker speaker)
+        void OnSpeakerEntrance(Character speaker)
         {
-            Debug.Log($"REGISTERING : {speaker}");
-            
             var history = new ActorHistory(speaker.Branches);
             histories.Add(speaker.Id, history);
         }
 
-        void OnSpeakerSelected(ISpeaker speaker)
+        void OnSpeakerSelected(Character speaker, int code)
         {
             var id = speaker.Id;
             if (id == currentActor) return;
@@ -208,7 +206,7 @@ namespace BeauTambour
 
         void OnDialogueTreeUpdate(int id, Emotion emotion, int selection, int branches)
         {
-            Debug.Log($"RECEIVING : {id}");
+            Debug.Log($"DIALOGUE TREE UPDATE : {id} - {emotion}");
             
             histories[id].Update(emotion, branches);
             StartCoroutine(AdvanceRoutine(emotion, selection, branches));
@@ -264,7 +262,7 @@ namespace BeauTambour
 
             foreach (var history in histories.Values) history.Clear();
 
-            var speakers = Repository.GetAll<ISpeaker>(References.Characters);
+            var speakers = Repository.GetAll<Character>(References.Characters);
             foreach (var speaker in speakers)
             {
                 var id = speaker.Id;

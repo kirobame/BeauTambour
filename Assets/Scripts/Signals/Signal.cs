@@ -14,7 +14,7 @@ namespace BeauTambour
         public Emotion Key => key;
         [SerializeField] private Emotion key;
         
-        public abstract void Execute(MonoBehaviour hook, ISpeaker speaker, string[] args);
+        public abstract void Execute(MonoBehaviour hook, Character speaker, string[] args);
 
         protected void End() => OnEnd?.Invoke();
     }

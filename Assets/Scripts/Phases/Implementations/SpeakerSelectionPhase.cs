@@ -10,16 +10,16 @@ namespace BeauTambour
 
         public override PhaseCategory Category => PhaseCategory.SpeakerSelection;
 
-        public ISpeaker SelectedSpeaker { get; private set; }
+        public Character SelectedSpeaker { get; private set; }
         public int SpeakerIndex { get; private set; }
 
-        private ISpeaker[] sortedSpeakers;
+        private Character[] sortedSpeakers;
 
         protected override void Awake()
         {
             base.Awake();
             
-            Event.Open<ISpeaker, int>(GameEvents.OnSpeakerSelected);
+            Event.Open<Character, int>(GameEvents.OnSpeakerSelected);
             Event.Open(GameEvents.OnSpeakerChoice);
             Event.Open(GameEvents.OnSpeakerChoiceDone);
 
@@ -49,7 +49,7 @@ namespace BeauTambour
 
             SelectedSpeaker = sortedSpeakers[SpeakerIndex];
             var code = SpeakerIndex == 0 ? 1 : SpeakerIndex == sortedSpeakers.Length - 1 ? 2 : 0;
-            Event.Call<ISpeaker, int>(GameEvents.OnSpeakerSelected, SelectedSpeaker, code);
+            Event.Call<Character, int>(GameEvents.OnSpeakerSelected, SelectedSpeaker, code);
         }
         public override void End()
         {
@@ -65,7 +65,7 @@ namespace BeauTambour
             SelectedSpeaker = sortedSpeakers[SpeakerIndex];
             
             var code = SpeakerIndex == 0 ? 1 : SpeakerIndex == sortedSpeakers.Length - 1 ? 2 : 0;
-            Event.Call<ISpeaker, int>(GameEvents.OnSpeakerSelected, SelectedSpeaker, code);
+            Event.Call<Character, int>(GameEvents.OnSpeakerSelected, SelectedSpeaker, code);
         }
 
         void OnSpeakerChoiceDone() => owner.Play(PhaseCategory.EmotionDrawing);

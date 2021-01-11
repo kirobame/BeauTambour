@@ -2,7 +2,7 @@
 {
     public class Note
     {
-        public ISpeaker speaker;
+        public Character speaker;
         public Emotion emotion;
 
         public void Clear()

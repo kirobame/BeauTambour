@@ -3117,11 +3117,11 @@ MonoBehaviour:
       ?\n[Bear]-Tu m'as donn\xE9 une vieille noix ! De ma t\xEAte tu te fiches !?\n[Mouse]-Ze
       n'ai zamais dit qu'on \xE9tait riche..."
     - 
-    - 'Emotion : Anticipation;
+    - 'Emotion : Surprise;
 
       Failsafe : M.Tuto.1;
 
-      Childs : M.Tuto1;'
+      Childs : M.Tuto2;'
     - "\u24C7-M.Tuto2"
     - Mouse
     - Advance
@@ -3231,7 +3231,7 @@ MonoBehaviour:
       Failsafe : M.Tuto.0;
 
       Childs
-      : M.Friend1/M.Prey1/M.Enemy1;'
+      : M.Tuto1;'
     - "\u24C7-B.Root.Tuto"
     - Bird
     - Advance
@@ -3244,7 +3244,7 @@ MonoBehaviour:
       Failsafe : B.Tuto.0;
 
       Childs
-      : B.Love1/B.Music1/B.Proud1;'
+      : B.Tuto1;'
     - "\u24C7-M.FS.Tuto1"
     - Mouse
     - Hint

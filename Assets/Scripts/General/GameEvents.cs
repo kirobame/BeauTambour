@@ -55,6 +55,9 @@ namespace BeauTambour
         OnBlockPassed,
         OnEncounterEnd,
         
+        OnCurtainFall,
+        OnCurtainRaised,
+        
         OnStickUsed,
     }
 }

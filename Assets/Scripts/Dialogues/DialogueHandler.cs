@@ -15,11 +15,7 @@ namespace BeauTambour
 
         [Space,SerializeField] private bool skip;
 
-        [Space, SerializeField] private DialogueEvent[] events;
-        private Dictionary<string, DialogueEvent> eventRegistry;
-        private DialogueEvent playedEvent;
-
-        public ISpeaker Speaker { get; private set; }
+        public Character Speaker { get; private set; }
         private Actor actor;
         
         private Cue cue => dialogue[advancement];
@@ -38,9 +34,6 @@ namespace BeauTambour
             
             Event.Open<Cue>(GameEvents.OnNextCue);
             Event.Open<Dialogue>(GameEvents.OnDialogueFinished);
-            
-            eventRegistry = new Dictionary<string, DialogueEvent>();
-            foreach (var dialogueEvent in events) eventRegistry.Add(dialogueEvent.Key, dialogueEvent);
         }
 
         public void Enqueue(Dialogue dialogue)
@@ -92,8 +85,8 @@ namespace BeauTambour
             }
             character.SetupDialogueHolder(holder);
             
-            Speaker = character as ISpeaker;
-            Speaker.BeginTalking();
+            Speaker = character;
+            Speaker.RuntimeLink.BeginTalking();
 
             holder.Bootup();
             holder.TextMesh.ForceMeshUpdate();
@@ -146,28 +139,12 @@ namespace BeauTambour
             if (!skip) holder.Deactivate();
             isPlaying = false;
 
-            if (eventRegistry.TryGetValue(dialogue.Name, out playedEvent))
+            Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
+            if (!GameState.PhaseStop)
             {
-                playedEvent.OnEnd += OnEventEnd;
-                playedEvent.Execute(this);
-            }
-            else
-            {
-                Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
-
                 var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
                 phaseHandler.Play(PhaseCategory.SpeakerSelection);
             }
-        }
-
-        void OnEventEnd()
-        {
-            playedEvent.OnEnd -= OnEventEnd;
-            
-            Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
-
-            var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
-            phaseHandler.Play(PhaseCategory.SpeakerSelection);
         }
     }
 }

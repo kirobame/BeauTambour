@@ -14,7 +14,7 @@ namespace BeauTambour
         
         private EmotionEffect playedEffect;
 
-        public override void Execute(MonoBehaviour hook, ISpeaker speaker, string[] args)
+        public override void Execute(MonoBehaviour hook, Character speaker, string[] args)
         {
             Debug.Log($"{Time.time} -- [Vfx]:[{speaker.Actor}]:[{Key}]");
             

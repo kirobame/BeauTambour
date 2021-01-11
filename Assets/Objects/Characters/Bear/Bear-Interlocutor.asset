@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb1b004e281428798593576d9d5c56f, type: 3}
   m_Name: Bear-Interlocutor
   m_EditorClassIdentifier: 
+  isActive: 1
   actor: 2
   fontColor: {r: 0.08235294, g: 0.09803922, b: 0.03529412, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}

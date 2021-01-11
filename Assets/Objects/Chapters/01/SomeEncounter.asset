@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb17e41ca87230e409fd3ec9197a3629, type: 3}
+  m_Name: SomeEncounter
+  m_EditorClassIdentifier: 
+  dialogueRecipient: {fileID: 11400000, guid: 8be0248422fdbd9488abe654f98850a0, type: 2}
+  sheetIndex: 2
+  blocks:
+  - {fileID: 11400000, guid: ab8e191b0b3b5dc4792457b24e7ec81a, type: 2}
+  - {fileID: 11400000, guid: 80c2b3636eeedb24c8512551b4436326, type: 2}
