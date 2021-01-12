@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb17e41ca87230e409fd3ec9197a3629, type: 3}
-  m_Name: SomeEncounter
+  m_Name: MainEncounter
   m_EditorClassIdentifier: 
   dialogueRecipient: {fileID: 11400000, guid: 8be0248422fdbd9488abe654f98850a0, type: 2}
   sheetIndex: 2

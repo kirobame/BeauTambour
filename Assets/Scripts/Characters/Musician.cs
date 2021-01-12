@@ -100,8 +100,6 @@ namespace BeauTambour
             nodes = new Dictionary<string, DialogueNode>();
             failsafes = new Dictionary<string, DialogueFailsafe>();
             attributes = new HashSet<string>();
-
-            Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
         }
 
         public override bool IsValid(Emotion emotion, out int selection, out int followingBranches)
@@ -188,7 +186,7 @@ namespace BeauTambour
         protected override void OnBlockPassed()
         {
             if (rootNodeKeys.Count == 0 || rootNodeKeys[GameState.BlockIndex] == "Empty") return;
-            
+
             currentNode = nodes[rootNodeKeys[GameState.BlockIndex]];
             base.OnBlockPassed();
         }

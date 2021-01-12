@@ -40,6 +40,8 @@ namespace BeauTambour
         }
         #endregion
 
+        [SerializeField] private Image image;
+        [SerializeField] private MusicianIconRegistry musicianIconRegistry;
         [SerializeField] private BranchingRepresentation branchingRepresentation;
         
         [Space, SerializeField] private RectTransform tree;
@@ -81,7 +83,7 @@ namespace BeauTambour
             Event.Open<int, Emotion, int, int>(GameEvents.OnDialogueTreeUpdate);
             Event.Register<int, Emotion, int, int>(GameEvents.OnDialogueTreeUpdate, OnDialogueTreeUpdate);
 
-            Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
+            Event.Register(GameEvents.OnGoingToNextBlock, OnGoingToNextBlock);
         }
         void OnSpeakerEntrance(Character speaker)
         {
@@ -93,6 +95,9 @@ namespace BeauTambour
         {
             var id = speaker.Id;
             if (id == currentActor) return;
+
+            image.sprite = musicianIconRegistry[speaker.Actor];
+            image.SetNativeSize();
 
             currentActor = id;
             if (apparitionRoutine != null) // Stop apparition & disappear
@@ -255,7 +260,7 @@ namespace BeauTambour
             branchingRepresentation.RectTransform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, 1.0f);
         }
 
-        void OnBlockPassed() => StartCoroutine(RebootRoutine());
+        void OnGoingToNextBlock() => StartCoroutine(RebootRoutine());
         private IEnumerator RebootRoutine()
         {
             yield return StartCoroutine(ScaleRoutine(0.0f, disapparitionTime, disapparitionCurve));

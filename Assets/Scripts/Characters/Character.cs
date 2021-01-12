@@ -37,8 +37,6 @@ namespace BeauTambour
             hasActed = false;
             
             runtimeLink = runtimeCharacter;
-            Repository.Reference(this, References.Characters);
-
             Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
         }
 

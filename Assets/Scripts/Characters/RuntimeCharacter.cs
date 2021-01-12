@@ -29,7 +29,11 @@ namespace BeauTambour
         private PoolableAudio poolableAudio;
         private PoolableAnimation poolableAnimation;
 
-        protected virtual void Start() => asset.Bootup(this);
+        protected virtual void Start()
+        {
+            Repository.Reference(asset, References.Characters);
+            asset.Bootup(this);
+        }
         public override void Reboot() => dialogueAnchor.localPosition = Vector3.zero;
 
         public override bool ActOut(Emotion emotion)

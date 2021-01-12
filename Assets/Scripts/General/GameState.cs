@@ -124,14 +124,12 @@ namespace BeauTambour
             if (!hasBeenBootedUp) hasBeenBootedUp = true;
             else PhaseStop = true;
             
-            var encounter = Repository.GetSingle<Encounter>(References.Encounter);
-            UnregisterSpeakerForUse(encounter.Interlocutor);
-            
             FinishedArcsCount = 0;
             arcsMinimumCompletion = false;
 
             BlockIndex++;
 
+            var encounter = Repository.GetSingle<Encounter>(References.Encounter);
             if (BlockIndex >= encounter.BlockCount)
             {
                 var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);

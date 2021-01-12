@@ -17,7 +17,7 @@ namespace BeauTambour
         
         void Update()
         {
-            if (!hasBeenBootedUp) return;
+            if (!hasBeenBootedUp || !Value.enabled) return;
             
             var state = Value.GetCurrentAnimatorStateInfo(0);
             if (!hasBeenIn)

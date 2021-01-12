@@ -17,7 +17,11 @@ namespace BeauTambour
             foreach (var group in values.GroupBy(value => value.Category))
             {
                 var signals = new Signal[Extensions.GetEnumCount<Emotion>()];
-                foreach (var signal in group) signals[(int)signal.Key] = signal;
+                foreach (var signal in group)
+                {
+                    signal.Bootup();
+                    signals[(int)signal.Key] = signal;
+                }
                 
                 registry.Add(group.Key, signals);
             }

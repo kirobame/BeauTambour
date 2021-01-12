@@ -68,8 +68,6 @@ namespace BeauTambour
 
             blocks = new List<DialogueBlock>();
             options = new List<Dictionary<Emotion, DialogueFailsafe>>();
-
-            Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
         }
 
         public override bool IsValid(Emotion emotion, out int selection, out int followingBranches)

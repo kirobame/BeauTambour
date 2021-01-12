@@ -36,6 +36,7 @@ namespace BeauTambour
             
             Event.Open(GameEvents.OnEncounterBootedUp);
             Event.Open(GameEvents.OnCurtainFall);
+            Event.Open(GameEvents.OnGoingToNextBlock);
             Event.Open(GameEvents.OnCurtainRaised);
             
             Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
@@ -49,6 +50,25 @@ namespace BeauTambour
         {
             if (!hasBeenBootedUp)
             {
+                var characters = Repository.GetAll<Character>(References.Characters);
+                var musicianIndex = 0;
+                
+                foreach (var character in characters)
+                {
+                    if (character is Interlocutor)
+                    {
+                        var discardSpot = Repository.GetSingle<Transform>("1.InterlocutorDiscard.0");
+                        character.RuntimeLink.transform.position = discardSpot.position;
+                    }
+                    else
+                    {
+                        var discardSpot = Repository.GetSingle<Transform>($"1.MusicianDiscard.{musicianIndex}");
+                        character.RuntimeLink.transform.position = discardSpot.position;
+                        
+                        musicianIndex++;
+                    }
+                }
+                
                 GoToNextBlock();
                 hasBeenBootedUp = true;
             }
@@ -81,6 +101,7 @@ namespace BeauTambour
             previousBlock = block;
 
             Interlocutor = block.Interlocutor;
+            Event.Call(GameEvents.OnGoingToNextBlock);
         }
         
         private void OnDialogueSheetsDownloaded(Sheet[] sheets)
@@ -135,10 +156,20 @@ namespace BeauTambour
 
             if (Enum.TryParse<Actor>(source, out var actor))
             {
-                musician = Extensions.GetCharacter<TChar>(actor);
-                return musician != null;
+                musician = Extensions.GetCharacter<TChar>(actor, true);
+
+                if (musician == null)
+                {
+                    Debug.LogError($"Could not fetch : {source}");
+                    return false;
+                }
+                else return true;
             }
-            else return false;
+            else
+            {
+                Debug.LogError($"Parse fail on : {source}");
+                return false;
+            }
         }
         
         private void HandleHint(string row, string[] texts, Dictionary<string, string> data, Musician musician)
@@ -149,8 +180,12 @@ namespace BeauTambour
         private void HandleAdvance(string row, string[] texts, Dictionary<string, string> data, Musician musician)
         {
             var dialogueNode = new Musician.DialogueNode(row);
-            if (!dialogueNode.TryProcess(texts, data)) return;
-            
+            if (!dialogueNode.TryProcess(texts, data))
+            {
+                Debug.LogError($"Process fail on : {row}");
+                return;
+            }
+
             if (data.ContainsKey("Root")) musician.AddDialogueNodeRootKey(row, int.Parse(data["Root"]) - 1);
             musician.AddDialogueNode(dialogueNode);
         }

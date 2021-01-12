@@ -13,17 +13,14 @@ namespace BeauTambour
         
         void Awake()
         {
-            Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
+            Event.Register(GameEvents.OnGoingToNextBlock, OnGoingToNextBlock);
             
             Event.Open<Musician>(GameEvents.OnMusicianArcCompleted);
             Event.Register<Musician>(GameEvents.OnMusicianArcCompleted, OnMusicianArcCompleted);
         }
 
-        void OnBlockPassed() => StartCoroutine(ActualizationRoutine());
-        private IEnumerator ActualizationRoutine()
+        void OnGoingToNextBlock()
         {
-            yield return new WaitForEndOfFrame();
-        
             speakerCount = GameState.ActiveSpeakers.Count() - 1;
             for (var i = 0; i < speakerCount; i++)
             {
@@ -33,7 +30,7 @@ namespace BeauTambour
 
             for (var i = speakerCount; i < segments.Length; i++) segments[i].gameObject.SetActive(false);
         }
-        
+
         void OnMusicianArcCompleted(Musician musician)
         {
             var index = speakerCount - 1 + GameState.FinishedArcsCount;

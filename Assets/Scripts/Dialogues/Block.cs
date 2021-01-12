@@ -21,7 +21,9 @@ namespace BeauTambour
             {
                 var discardSpot = Repository.GetSingle<Transform>("1.InterlocutorDiscard.0");
                 previousBlock.interlocutor.RuntimeLink.transform.position = discardSpot.position;
+                
                 previousBlock.interlocutor.isActive = false;
+                GameState.UnregisterSpeakerForUse(previousBlock.interlocutor);
                 
                 for (var i = 0; i < previousBlock.musicians.Length; i++)
                 {
@@ -41,14 +43,17 @@ namespace BeauTambour
 
             for (var i = 0; i < musicians.Length; i++)
             {
+                var musician = musicians[i];
                 var spot = Repository.GetSingle<Transform>($"{musicians.Length}.MusicianSpot.{i}");
-                musicians[i].RuntimeLink.transform.position = spot.position;
-
-                musicians[i].isActive = true;
-                GameState.RegisterSpeakerForUse(musicians[i]);
+                
+                musician.RuntimeLink.Reboot();
+                musician.RuntimeLink.transform.position = spot.position;
+                musician.isActive = true;
+                
+                GameState.RegisterSpeakerForUse(musician);
             }
 
-            var interlocutorSpot = Repository.GetSingle<Transform>("1.Interlocutor.0");
+            var interlocutorSpot = Repository.GetSingle<Transform>($"1.Interlocutor.{(int)interlocutor.Actor}");
             interlocutor.RuntimeLink.transform.position = interlocutorSpot.position;
             interlocutor.isActive = true;
         }
