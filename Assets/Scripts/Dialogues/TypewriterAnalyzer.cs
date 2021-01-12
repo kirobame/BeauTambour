@@ -58,7 +58,7 @@ namespace BeauTambour
             'Ñ','P','Q','R','S',
             'T','V','W','X','Y','Z'};
         readonly static char[] punctuation = new char[] {
-            '.',',',';','!','?','\n','*'
+            '.',',',';','!','?','\n','*','\r'
         };
         readonly static char[] links = new char[] {
             '-','_','\'','`','’'
@@ -183,6 +183,8 @@ namespace BeauTambour
 
         private void PlayCorrespondingAudio(string chars)
         {
+            Debug.Log("START - " + chars);
+
             chars = chars.ToLower();
             if (dialogueHandler.Speaker.AudioStringMap.TryGet(chars, out var package))
             {
@@ -207,6 +209,7 @@ namespace BeauTambour
             var audio = audioPool.RequestSingle();
 
             package.AssignTo(audio, EventArgs.Empty);
+            audio.pitch = dialogueHandler.Speaker.PitchRange;
             audio.Play();
             timeToPlayNextSound = audio.clip.length * consonantFirstVowelTimeRatio;
         }
