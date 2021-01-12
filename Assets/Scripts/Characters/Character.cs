@@ -24,8 +24,8 @@ namespace BeauTambour
         [SerializeField] private Color backgroundColor;
         [SerializeField] private TMP_FontAsset font;
 
-        public AudioCharMapPackage AudioCharMap => audioCharMap;
-        [Space, SerializeField] private AudioCharMapPackage audioCharMap;
+        public AudioStringMapPackage AudioStringMap => audioStringMap;
+        [Space, SerializeField] private AudioStringMapPackage audioStringMap;
 
         public RuntimeCharacterBase RuntimeLink => runtimeLink;
         private RuntimeCharacterBase runtimeLink;

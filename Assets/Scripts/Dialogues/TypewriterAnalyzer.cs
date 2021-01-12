@@ -186,20 +186,17 @@ namespace BeauTambour
             chars = chars.ToLower();
             if (dialogueHandler.Speaker.AudioStringMap.TryGet(chars, out var package))
             {
-                Debug.Log("PLAY - "+chars);
                 AssignToAudioSource(package);
             }
             else if(vowelSoundRegistry.TryGet(chars, out string sound))
             {
                 if (dialogueHandler.Speaker.AudioStringMap.TryGet(sound, out package))
                 {
-                    Debug.Log("PLAY - " + sound);
                     AssignToAudioSource(package);
                 }
             }
             else if(dialogueHandler.Speaker.AudioStringMap.TryGet(chars[0].ToString(), out package))
             {
-                Debug.Log("PLAY - " + chars[0]);
                 AssignToAudioSource(package);
             }
         }
