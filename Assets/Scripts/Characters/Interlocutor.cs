@@ -31,9 +31,9 @@ namespace BeauTambour
         public RuntimeInterlocutor CastedRuntimeLink { get; private set; }
         
         public Animator Animator => CastedRuntimeLink.Intermediary.Animator;
-        public AudioCharMapPackage AudioCharMap => audioCharMap;        
+        public AudioStringMapPackage AudioStringMap => audioStringMap;        
 
-        [Space, SerializeField] private AudioCharMapPackage audioCharMap;
+        [Space, SerializeField] private AudioStringMapPackage audioStringMap;
 
         public bool IsArcEnded => false;
 

@@ -65,7 +65,7 @@ namespace BeauTambour
         public RuntimeMusician CastedRuntimeLink { get; private set; }
 
         public Animator Animator => CastedRuntimeLink.Intermediary.Animator;
-        public AudioCharMapPackage AudioCharMap => audioCharMap;
+        public AudioStringMapPackage AudioStringMap => audioStringMap;
 
         public bool IsArcEnded
         {
@@ -76,7 +76,7 @@ namespace BeauTambour
             
         }
 
-        [Space, SerializeField] private AudioCharMapPackage audioCharMap;
+        [Space, SerializeField] private AudioStringMapPackage audioStringMap;
 
         private List<string> rootNodeKeys;
         private Dictionary<string, DialogueNode> nodes;

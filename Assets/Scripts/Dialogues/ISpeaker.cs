@@ -9,7 +9,7 @@ namespace BeauTambour
         RuntimeCharacter RuntimeLink { get; }
         Animator Animator { get; }
         
-        AudioCharMapPackage AudioCharMap { get; }
+        AudioStringMapPackage AudioStringMap { get; }
         
         Dialogue[] GetDialogues(Emotion emotion);
         bool IsArcEnded { get; }
