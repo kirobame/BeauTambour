@@ -46,7 +46,7 @@ namespace BeauTambour
             transform.position = speaker.RuntimeLink.SelectionAnchor;
             
             Vector3 speakerPos = speaker.RuntimeLink.transform.position;
-            outline.transform.position = new Vector3(speakerPos.x,speakerPos.y);
+            outline.transform.position = new Vector3(speakerPos.x,speakerPos.y, -0.15f);
             
             if (speaker is Interlocutor) outline.transform.localScale = new Vector3(-1,1,1);
             else outline.transform.localScale = new Vector3(1,1,1);
