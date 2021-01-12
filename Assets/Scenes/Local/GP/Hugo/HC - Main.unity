@@ -8656,7 +8656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder: {fileID: 1309046916}
   widthCorrection: 0.25
-  skip: 1
+  skip: 0
 --- !u!1 &1458141577
 GameObject:
   m_ObjectHideFlags: 0

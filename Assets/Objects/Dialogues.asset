@@ -3186,11 +3186,11 @@ MonoBehaviour:
       !\r\n//Gr\xE2ce \xE0 Grenouille que je suis,\r\nJe suis apais\xE9e, entour\xE9e
       d'amis !\r\n[Bear]-A Grenouille ? Elle me semble pourtant peu loquace..."
     - 
-    - 'Emotion : Surprise;
+    - 'Emotion : Anticipation;
 
       Failsafe : B.Tuto.1;
 
-      Childs : B.Tuto1;'
+      Childs : B.Tuto2;'
     - "\u24C7-B.Tuto2"
     - Bird
     - Advance

@@ -18,4 +18,4 @@ MonoBehaviour:
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   font: {fileID: 11400000, guid: eb1fe65780f0f804cbeb803ca1cc0158, type: 2}
   audioStringMap: {fileID: 11400000, guid: fd998a3d4a4022143b150f306c24b8ca, type: 2}
-  pitchRange: -0.5
+  pitchRange: 1
