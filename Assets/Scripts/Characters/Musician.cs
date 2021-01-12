@@ -6,7 +6,7 @@ using Event = Flux.Event;
 namespace BeauTambour
 {
     [CreateAssetMenu(fileName = "NewMusician", menuName = "Beau Tambour/Characters/Musician")]
-    public class Musician : Character, ISpeaker
+    public class Musician : Character
     {
         #region Encapsulated Types
         
@@ -61,22 +61,8 @@ namespace BeauTambour
 
         #endregion
         
-        public override RuntimeCharacter RuntimeLink => CastedRuntimeLink;
-        public RuntimeMusician CastedRuntimeLink { get; private set; }
-
-        public Animator Animator => CastedRuntimeLink.Intermediary.Animator;
-        public AudioCharMapPackage AudioCharMap => audioCharMap;
-
-        public bool IsArcEnded
-        {
-            get
-            {
-                return currentNode == null || currentNode.Childs[0] == "Empty";
-            }
-            
-        }
-
-        [Space, SerializeField] private AudioCharMapPackage audioCharMap;
+        public override bool HasArcEnded => currentNode == null || currentNode.Childs[0] == "Empty";
+        public override int Branches => currentNode.Childs.Count;
 
         private List<string> rootNodeKeys;
         private Dictionary<string, DialogueNode> nodes;
@@ -106,31 +92,50 @@ namespace BeauTambour
         }
         #endregion
 
-        public override void Bootup(RuntimeCharacter runtimeCharacter)
+        public override void Bootup(RuntimeCharacterBase runtimeCharacter)
         {
             base.Bootup(runtimeCharacter);
-            CastedRuntimeLink = (RuntimeMusician) runtimeCharacter;
 
-            GameState.RegisterSpeakerForUse(this);
-            
             rootNodeKeys = new List<string>();
             nodes = new Dictionary<string, DialogueNode>();
             failsafes = new Dictionary<string, DialogueFailsafe>();
             attributes = new HashSet<string>();
-
-            Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
         }
 
-        public Dialogue[] GetDialogues(Emotion emotion)
+        public override bool IsValid(Emotion emotion, out int selection, out int followingBranches)
+        {
+            selection = 0;
+            followingBranches = 0;
+            
+            if (currentNode.Childs[0] == "Empty") return false;
+
+            for (var i = 0; i < currentNode.Childs.Count; i++)
+            {
+                if (!nodes.TryGetValue(currentNode.Childs[i], out var child)) continue;
+
+                if (child.RequiredEmotion == emotion && attributes.IsSupersetOf(child.NeededAttributes))
+                {
+                    selection = i;
+                    
+                    if (child.Childs[0] == "Empty") followingBranches = 0;
+                    else followingBranches = child.Childs.Count;
+                    
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        public override Dialogue[] GetDialogues(Emotion emotion)
         {
             if (currentNode.Childs[0] == "Empty") return GetDefaultDialogues();
             
             Debug.Log($"--|DIAG|-> [{Actor}] : {currentNode.Name}");
-            foreach (var childName in currentNode.Childs)
+            for (var i = 0; i < currentNode.Childs.Count; i++)
             {
-                if (!nodes.TryGetValue(childName, out var child))
+                if (!nodes.TryGetValue(currentNode.Childs[i], out var child))
                 {
-                    Debug.LogError($"For current node : {currentNode.Name} | Child {childName} does not exist");
+                    Debug.LogError($"For current node : {currentNode.Name} | Child {currentNode.Childs[i]} does not exist");
                     continue;
                 }
 
@@ -141,7 +146,7 @@ namespace BeauTambour
 
                     var dialogue = child.GetDialogue();
                     Debug.Log($"--|DIAG|-> Dialogue found : {dialogue}");
-                    
+
                     if (child.Childs[0] == "Empty")
                     {
                         Debug.Log($"--|DIAG|-> End of narrative arc for : {name}");
@@ -154,8 +159,7 @@ namespace BeauTambour
                             };
                         }
                     }
-                    
-                    return new Dialogue[] { child.GetDialogue() };
+                    else return new Dialogue[] {child.GetDialogue()};
                 }
             }
 
@@ -178,19 +182,13 @@ namespace BeauTambour
                 return new Dialogue[] { currentNode.GetDialogue() };
             }
         }
-
-        void ISpeaker.BeginTalking() => CastedRuntimeLink.Intermediary.BeginTalking();
-        void ISpeaker.StopTalking() => CastedRuntimeLink.Intermediary.StopTalking();
-
-        void ISpeaker.PlayMelodyFor(Emotion emotion) => CastedRuntimeLink.Intermediary.PlayMelodyFor(emotion);
-        void ISpeaker.ActOut(Emotion emotion) => CastedRuntimeLink.Intermediary.ActOut(emotion);
         
-        void OnBlockPassed()
+        protected override void OnBlockPassed()
         {
-            Debug.Log($"ON BLOCK PASSED FOR {Actor} / {name} / {GetInstanceID()}");
-            
-            if (rootNodeKeys.Count == 0) return;
+            if (rootNodeKeys.Count == 0 || rootNodeKeys[GameState.BlockIndex] == "Empty") return;
+
             currentNode = nodes[rootNodeKeys[GameState.BlockIndex]];
+            base.OnBlockPassed();
         }
     }
 }

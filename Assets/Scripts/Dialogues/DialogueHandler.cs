@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Flux;
@@ -12,11 +13,9 @@ namespace BeauTambour
         [SerializeField] private DialogueHolder holder;
         [SerializeField] private float widthCorrection;
 
-        [Space, SerializeField] private DialogueEvent[] events;
-        private Dictionary<string, DialogueEvent> eventRegistry;
-        private DialogueEvent playedEvent;
+        [Space,SerializeField] private bool skip;
 
-        public ISpeaker Speaker { get; private set; }
+        public Character Speaker { get; private set; }
         private Actor actor;
         
         private Cue cue => dialogue[advancement];
@@ -35,9 +34,6 @@ namespace BeauTambour
             
             Event.Open<Cue>(GameEvents.OnNextCue);
             Event.Open<Dialogue>(GameEvents.OnDialogueFinished);
-            
-            eventRegistry = new Dictionary<string, DialogueEvent>();
-            foreach (var dialogueEvent in events) eventRegistry.Add(dialogueEvent.Key, dialogueEvent);
         }
 
         public void Enqueue(Dialogue dialogue)
@@ -59,6 +55,12 @@ namespace BeauTambour
         public void Continue()
         {
             if (!isPlaying) return;
+
+            if (skip)
+            {
+                StartCoroutine(DelayedEndRoutine());
+                return;
+            }
             
             advancement++;
             if (advancement >= dialogue.Length) 
@@ -83,8 +85,8 @@ namespace BeauTambour
             }
             character.SetupDialogueHolder(holder);
             
-            Speaker = character as ISpeaker;
-            Speaker.BeginTalking();
+            Speaker = character;
+            Speaker.RuntimeLink.BeginTalking();
 
             holder.Bootup();
             holder.TextMesh.ForceMeshUpdate();
@@ -124,34 +126,25 @@ namespace BeauTambour
             actor = newActor;
             Event.Call<Cue>(GameEvents.OnNextCue, cue);
         }
+        private IEnumerator DelayedEndRoutine()
+        {
+            yield return new WaitForEndOfFrame();
+            
+            queue.Clear();
+            End();
+        }
 
         public void End()
         {
-            holder.Deactivate();
+            if (!skip) holder.Deactivate();
             isPlaying = false;
 
-            if (eventRegistry.TryGetValue(dialogue.Name, out playedEvent))
+            Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
+            if (!GameState.PhaseStop)
             {
-                playedEvent.OnEnd += OnEventEnd;
-                playedEvent.Execute(this);
-            }
-            else
-            {
-                Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
-
                 var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
                 phaseHandler.Play(PhaseCategory.SpeakerSelection);
             }
-        }
-
-        void OnEventEnd()
-        {
-            playedEvent.OnEnd -= OnEventEnd;
-            
-            Event.Call<Dialogue>(GameEvents.OnDialogueFinished, dialogue);
-
-            var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
-            phaseHandler.Play(PhaseCategory.SpeakerSelection);
         }
     }
 }

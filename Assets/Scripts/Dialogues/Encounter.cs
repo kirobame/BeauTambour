@@ -10,32 +10,99 @@ using Event = Flux.Event;
 
 namespace BeauTambour
 {
-    [IconIndicator(7705900795600745325), CreateAssetMenu(fileName = "NewEncounter", menuName = "Beau Tambour/Encounter")]
+    [IconIndicator(7705900795600745325), CreateAssetMenu(fileName = "NewEncounter", menuName = "Beau Tambour/Chapter/Encounter")]
     public class Encounter : ScriptableObject
     {
         public Interlocutor Interlocutor { get; private set; }
-
-        public int BlockCount => blockCount;
+        public int BlockCount => blocks.Length;
         
         [SerializeField] private CSVRecipient dialogueRecipient;
         [SerializeField] private int sheetIndex;
-        [SerializeField] private int blockCount;
 
-        [Space, SerializeField] private Interlocutor initialInterlocutor;
-        [SerializeField] private Musician[] initialMusicians;
+        [Space, SerializeField] private Block[] blocks;
+        private Block previousBlock;
+
+        private bool awaitingCurtain;
+        private bool hasBeenBootedUp;
+        
+        private MonoBehaviour hook;
 
         public void Bootup(MonoBehaviour hook, bool useBackup)
         {
-            Interlocutor = initialInterlocutor;
+            this.hook = hook;
+            hasBeenBootedUp = false;
             
             Repository.Reference(this, References.Encounter);
+            
             Event.Open(GameEvents.OnEncounterBootedUp);
-
+            Event.Open(GameEvents.OnCurtainFall);
+            Event.Open(GameEvents.OnGoingToNextBlock);
+            Event.Open(GameEvents.OnCurtainRaised);
+            
+            Event.Register(GameEvents.OnBlockPassed, OnBlockPassed);
+            Event.Register<Dialogue>(GameEvents.OnDialogueFinished, OnDialogueFinished);
+            
             if (!useBackup) hook.StartCoroutine(dialogueRecipient.Download(OnDialogueSheetsDownloaded));
             else OnDialogueSheetsDownloaded(dialogueRecipient.Sheets.ToArray());
         }
 
-        public void ChangeInterlocutor(Interlocutor interlocutor) => Interlocutor = interlocutor;
+        void OnBlockPassed()
+        {
+            if (!hasBeenBootedUp)
+            {
+                var characters = Repository.GetAll<Character>(References.Characters);
+                var musicianIndex = 0;
+                
+                foreach (var character in characters)
+                {
+                    if (character is Interlocutor)
+                    {
+                        var discardSpot = Repository.GetSingle<Transform>("1.InterlocutorDiscard.0");
+                        character.RuntimeLink.transform.position = discardSpot.position;
+                    }
+                    else
+                    {
+                        var discardSpot = Repository.GetSingle<Transform>($"1.MusicianDiscard.{musicianIndex}");
+                        character.RuntimeLink.transform.position = discardSpot.position;
+                        
+                        musicianIndex++;
+                    }
+                }
+                
+                GoToNextBlock();
+                hasBeenBootedUp = true;
+            }
+            else awaitingCurtain = true;
+        }
+        void OnDialogueFinished(Dialogue dialogue)
+        {
+            if (!awaitingCurtain) return;
+            hook.StartCoroutine(CurtainRoutine());
+        }
+        private IEnumerator CurtainRoutine()
+        {
+            Event.Call(GameEvents.OnCurtainFall);
+            
+            yield return new WaitForSeconds(1.5f);
+            GoToNextBlock();
+            yield return new WaitForSeconds(0.5f);
+            
+            Event.Call(GameEvents.OnCurtainRaised);
+            awaitingCurtain = false;
+
+            var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
+            phaseHandler.Play(PhaseCategory.Dialogue);
+        }
+        private void GoToNextBlock()
+        {
+            var block = blocks[GameState.BlockIndex];
+            
+            block.Execute(previousBlock);
+            previousBlock = block;
+
+            Interlocutor = block.Interlocutor;
+            Event.Call(GameEvents.OnGoingToNextBlock);
+        }
         
         private void OnDialogueSheetsDownloaded(Sheet[] sheets)
         {
@@ -79,8 +146,8 @@ namespace BeauTambour
                 }
             }
             
-            Event.Call(GameEvents.OnEncounterBootedUp);
             GameState.PassBlock();
+            Event.Call(GameEvents.OnEncounterBootedUp);
         }
 
         private bool TryGetCharacter<TChar>(string source, out TChar musician) where TChar : Character
@@ -89,10 +156,20 @@ namespace BeauTambour
 
             if (Enum.TryParse<Actor>(source, out var actor))
             {
-                musician = Extensions.GetCharacter<TChar>(actor);
-                return musician != null;
+                musician = Extensions.GetCharacter<TChar>(actor, true);
+
+                if (musician == null)
+                {
+                    Debug.LogError($"Could not fetch : {source}");
+                    return false;
+                }
+                else return true;
             }
-            else return false;
+            else
+            {
+                Debug.LogError($"Parse fail on : {source}");
+                return false;
+            }
         }
         
         private void HandleHint(string row, string[] texts, Dictionary<string, string> data, Musician musician)
@@ -103,8 +180,12 @@ namespace BeauTambour
         private void HandleAdvance(string row, string[] texts, Dictionary<string, string> data, Musician musician)
         {
             var dialogueNode = new Musician.DialogueNode(row);
-            if (!dialogueNode.TryProcess(texts, data)) return;
-            
+            if (!dialogueNode.TryProcess(texts, data))
+            {
+                Debug.LogError($"Process fail on : {row}");
+                return;
+            }
+
             if (data.ContainsKey("Root")) musician.AddDialogueNodeRootKey(row, int.Parse(data["Root"]) - 1);
             musician.AddDialogueNode(dialogueNode);
         }

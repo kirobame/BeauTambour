@@ -8,40 +8,47 @@ namespace BeauTambour
 {
     public static class GameState
     {
-        public static IEnumerable<ISpeaker> Speakers => speakers.Values;
-        private static Dictionary<Actor, ISpeaker> speakers;
+        public static IEnumerable<Character> ActiveSpeakers => activeSpeakers.Values;
+        private static Dictionary<Actor, Character> activeSpeakers;
 
-        private static int finishedArcsCount;
+        public static int FinishedArcsCount { get; private set; }
         private static bool arcsMinimumCompletion;
         
+        public static bool PhaseStop { get; private set; }
         public static int BlockIndex { get; private set; }
-        public static Language UsedLanguage { get; private set; }
         public static Note Note { get; private set; }
-
+        
+        public static Language UsedLanguage { get; private set; }
+        
         public static bool validationMade;
-
         private static Dictionary<string, EventBoundDialogue> eventDialogues;
+
+        private static bool hasBeenBootedUp;
 
         public static void Bootup(int blockIndex)
         {
-            Debug.Log("BOOTING UP GAME STATE");
+            hasBeenBootedUp = false;
             
-            finishedArcsCount = 0;
+            FinishedArcsCount = 0;
             arcsMinimumCompletion = false;
             
             eventDialogues = new Dictionary<string, EventBoundDialogue>();
-            speakers = new Dictionary<Actor, ISpeaker>();
+            activeSpeakers = new Dictionary<Actor, Character>();
 
+            PhaseStop = false;
             BlockIndex = blockIndex - 1;
-            UsedLanguage = Language.Français;
             Note = new Note();
-
+            
+            UsedLanguage = Language.Français;
+            
             Event.Open(GameEvents.OnLanguageChanged);
             Event.Open(GameEvents.OnBlockPassed);
             Event.Open(GameEvents.OnEncounterEnd);
             
             Event.Open<string>(GameEvents.OnNarrativeEvent);
             Event.Register<string>(GameEvents.OnNarrativeEvent, ReceiveNarrativeEvent);
+
+            Event.Register(GameEvents.OnCurtainRaised, OnCurtainRaised);
         }
 
         public static void ChangeLanguage(Language language)
@@ -52,18 +59,18 @@ namespace BeauTambour
             Event.Call(GameEvents.OnLanguageChanged);
         }
 
-        public static void RegisterSpeakerForUse(ISpeaker speaker)
+        public static void RegisterSpeakerForUse(Character speaker)
         {
-            if (speakers.ContainsKey(speaker.Actor)) return;
-            speakers.Add(speaker.Actor, speaker);
+            if (activeSpeakers.ContainsKey(speaker.Actor)) return;
+            activeSpeakers.Add(speaker.Actor, speaker);
         }
-        public static void UnregisterSpeakerForUse(ISpeaker speaker) => speakers.Remove(speaker.Actor);
+        public static void UnregisterSpeakerForUse(Character speaker) => activeSpeakers.Remove(speaker.Actor);
 
-        public static bool TryGetSpeaker(Actor actor, out ISpeaker musician) => speakers.TryGetValue(actor, out musician);
-        public static ISpeaker GetSpeaker(Actor actor) => speakers[actor];
-        public static ISpeaker[] GetSortedSpeakers()
+        public static bool TryGetSpeaker(Actor actor, out Character musician) => activeSpeakers.TryGetValue(actor, out musician);
+        public static Character GetSpeaker(Actor actor) => activeSpeakers[actor];
+        public static Character[] GetSortedSpeakers()
         {
-            var list = new List<ISpeaker>(Speakers);
+            var list = new List<Character>(ActiveSpeakers);
             list.Sort((first, second) =>
             {
                 var firstX = first.RuntimeLink.transform.position.x;
@@ -91,10 +98,12 @@ namespace BeauTambour
 
         public static bool NotifyMusicianArcEnd(out Dialogue dialogue)
         {
-            finishedArcsCount++;
+            FinishedArcsCount++;
             
-            if (!arcsMinimumCompletion && finishedArcsCount == speakers.Count - 1)
+            if (!arcsMinimumCompletion && FinishedArcsCount == activeSpeakers.Count - 1)
             {
+                Event.Call(GameEvents.OnInterlocutorConvinced);
+                
                 var encounter = Repository.GetSingle<Encounter>(References.Encounter);
                 RegisterSpeakerForUse(encounter.Interlocutor);
                 
@@ -112,14 +121,15 @@ namespace BeauTambour
         
         public static void PassBlock()
         {
-            var encounter = Repository.GetSingle<Encounter>(References.Encounter);
-            UnregisterSpeakerForUse(encounter.Interlocutor);
+            if (!hasBeenBootedUp) hasBeenBootedUp = true;
+            else PhaseStop = true;
             
-            finishedArcsCount = 0;
+            FinishedArcsCount = 0;
             arcsMinimumCompletion = false;
 
             BlockIndex++;
 
+            var encounter = Repository.GetSingle<Encounter>(References.Encounter);
             if (BlockIndex >= encounter.BlockCount)
             {
                 var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
@@ -130,6 +140,7 @@ namespace BeauTambour
             else Event.Call(GameEvents.OnBlockPassed);
         }
 
+        private static void OnCurtainRaised() => PhaseStop = false;
         private static void OnEnd() => Event.Call(GameEvents.OnEncounterEnd);
     }
 }

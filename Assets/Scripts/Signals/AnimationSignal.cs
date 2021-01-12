@@ -8,7 +8,7 @@ namespace BeauTambour
     {
         public override string Category => "animation";
 
-        public override void Execute(MonoBehaviour hook, ISpeaker speaker, string[] args)
+        public override void Execute(MonoBehaviour hook, Character speaker, string[] args)
         {
             if (speaker is Interlocutor) hook.StartCoroutine(DelayedDeactivationRoutine());
             else hook.StartCoroutine(WaitRoutine(speaker));
@@ -19,24 +19,28 @@ namespace BeauTambour
             yield return  new WaitForEndOfFrame();
             End();
         }
-        private IEnumerator WaitRoutine(ISpeaker speaker)
+        private IEnumerator WaitRoutine(Character speaker)
         {
             Debug.Log($"{Time.time} -- [Animation]:[{speaker.Actor}]:[{Key}]");
-            speaker.ActOut(Key);
 
-            var layerIndex = speaker.Animator.GetLayerIndex("Actions");
-            var state = speaker.Animator.GetCurrentAnimatorStateInfo(layerIndex);
-
-            while (!state.IsTag(Key.ToString()))
+            if (speaker.RuntimeLink.ActOut(Key))
             {
-                yield return new WaitForEndOfFrame();
-                state = speaker.Animator.GetCurrentAnimatorStateInfo(layerIndex);
-            }
+                var animator = speaker.RuntimeLink.Animator;
+                
+                var layerIndex = animator.GetLayerIndex("Actions");
+                var state = animator.GetCurrentAnimatorStateInfo(layerIndex);
+
+                while (!state.IsTag(Key.ToString()))
+                {
+                    yield return new WaitForEndOfFrame();
+                    state = animator.GetCurrentAnimatorStateInfo(layerIndex);
+                }
             
-            while (state.IsTag(Key.ToString()))
-            {
-                yield return new WaitForEndOfFrame();
-                state = speaker.Animator.GetCurrentAnimatorStateInfo(layerIndex);
+                while (state.IsTag(Key.ToString()))
+                {
+                    yield return new WaitForEndOfFrame();
+                    state = animator.GetCurrentAnimatorStateInfo(layerIndex);
+                }
             }
             
             yield return new WaitForSeconds(0.4f);

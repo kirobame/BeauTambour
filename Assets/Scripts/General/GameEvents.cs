@@ -44,11 +44,20 @@ namespace BeauTambour
         OnGamePaused,
         OnGameResumed,
 
+        OnDialogueTreeUpdate,
         OnNarrativeEvent,
         OnLanguageChanged,
         
+        OnSpeakerEntrance,
+        OnMusicianArcCompleted,
+        
+        OnInterlocutorConvinced,
         OnBlockPassed,
         OnEncounterEnd,
+        
+        OnCurtainFall,
+        OnGoingToNextBlock,
+        OnCurtainRaised,
         
         OnStickUsed,
     }

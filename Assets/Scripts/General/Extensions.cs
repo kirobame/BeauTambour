@@ -10,11 +10,14 @@ namespace BeauTambour
     {
         public static int GetEnumCount<T>() where T : Enum => Enum.GetNames(typeof(T)).Length;
         
-        public static TChar GetCharacter<TChar>(Actor actor) where TChar : Character
+        public static TChar GetCharacter<TChar>(Actor actor, bool includeInactive = false) where TChar : Character
         {
             var characters = Repository.GetAll<Character>(References.Characters);
-            var character = characters.FirstOrDefault(item => item.Actor == actor);
-
+            var character = default(Character);
+            
+            if (!includeInactive) character = characters.FirstOrDefault(item => item.isActive && item.Actor == actor && item is TChar);
+            else character = characters.FirstOrDefault(item =>item.Actor == actor && item is TChar);
+            
             return character as TChar;
         }
 

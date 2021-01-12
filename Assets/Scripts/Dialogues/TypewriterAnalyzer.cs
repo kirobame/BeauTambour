@@ -80,7 +80,7 @@ namespace BeauTambour
 
         void OnTextShown()
         {
-            dialogueHandler.Speaker.StopTalking();
+            dialogueHandler.Speaker.RuntimeLink.StopTalking();
             Event.Call(GameEvents.OnCueFinished);
         }
 
@@ -137,7 +137,6 @@ namespace BeauTambour
         {
             if (dialogueHandler.Speaker.AudioCharMap.TryGet(character, out var package))
             {
-                //Debug.Log($"{syllabes[currentSyll]}--{currentIndexInSyll}--{idx}");
                 var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
                 var audio = audioPool.RequestSingle();
 

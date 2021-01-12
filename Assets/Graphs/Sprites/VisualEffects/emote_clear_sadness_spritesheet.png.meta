@@ -380,31 +380,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: emote_clear_sadness_spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 868
-        y: 0
-        width: 434
-        height: 435
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83fd8698a618a9280800000000000000
-      internalID: -9035767407793610952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e299931e92ab32b40b279e1647b26ed1
+    spriteID: aaf689fa8b4c6e3439c99797b0dc0210
     internalID: 0
     vertices: []
     indices: 
