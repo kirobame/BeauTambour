@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e7d6df01c44a56b5d2674fb4669922, type: 3}
   m_Name: Bird
   m_EditorClassIdentifier: 
+  isActive: 1
   actor: 4
   fontColor: {r: 0.1764706, g: 0.2, b: 0.16862746, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   font: {fileID: 11400000, guid: eb1fe65780f0f804cbeb803ca1cc0158, type: 2}
   audioStringMap: {fileID: 11400000, guid: fd998a3d4a4022143b150f306c24b8ca, type: 2}
+  pitchRange: 0.5

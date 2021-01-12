@@ -26,6 +26,8 @@ namespace BeauTambour
 
         public AudioStringMapPackage AudioStringMap => audioStringMap;
         [Space, SerializeField] private AudioStringMapPackage audioStringMap;
+        public float PitchRange => pitchRange;
+        [SerializeField] private float pitchRange;
 
         public RuntimeCharacterBase RuntimeLink => runtimeLink;
         private RuntimeCharacterBase runtimeLink;
