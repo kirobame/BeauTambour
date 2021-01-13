@@ -23,6 +23,9 @@ namespace BeauTambour
         [Space, SerializeField] private DialogueLine dialogueLine;
         [SerializeField] private AnimationCurve renewCurve;
         [SerializeField] private AnimationCurve refreshCurve;
+
+        [Space, SerializeField] private float margin;
+        [SerializeField] private bool useCorrection;
         
         private TextMeshPro textMesh;
         private TextAnimatorPlayer textAnimatorPlayer;
@@ -30,6 +33,9 @@ namespace BeauTambour
         private bool isOperational;
         private Vector2 previousSize;
 
+        private float startX;
+        private float maxWidth;
+        
         private bool isOnRight;
 
         void Awake()
@@ -41,6 +47,16 @@ namespace BeauTambour
 
             textMesh.text = string.Empty;
             dialogueLine.RectTransform.localScale = Vector3.zero;
+        }
+        void Start()
+        {
+            var camera = Repository.GetSingle<Camera>(References.Camera);
+            
+            var start = camera.ViewportToWorldPoint(Vector2.zero);
+            var end = camera.ViewportToWorldPoint(Vector2.one);
+
+            startX = start.x + margin;
+            maxWidth = (end - start).x - margin * 2.0f;
         }
 
         public void Bootup()
@@ -95,18 +111,14 @@ namespace BeauTambour
             {
                 dialogueLine.Place(position, true);
 
-                if (size.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f) SetBoundsX(-size.x);
-                else SetBoundsX((-size.x / 2.0f) - dialogueLine.RectTransform.sizeDelta.x);
-
+                PlaceOnRight(position, size);
                 isOnRight = true;
             }
             else
             {
                 dialogueLine.Place(position, false);
 
-                if (size.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f) SetBoundsX(0.0f);
-                else SetBoundsX(dialogueLine.RectTransform.sizeDelta.x - (size.x / 2.0f));
-
+                PlaceOnLeft(position, size);
                 isOnRight = false;
             }
 
@@ -125,6 +137,30 @@ namespace BeauTambour
             
             ToggleTextAnimation(true);
             SetText(text);
+        }
+
+        private void PlaceOnRight(Vector2 position, Vector2 size)
+        {
+            if (size.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f)
+            {
+                var endX = Mathf.Abs(startX + maxWidth);
+                var difference = endX - position.x;
+                var correction = Mathf.Clamp(difference + size.x - maxWidth, 0.0f, float.PositiveInfinity);
+                
+                SetBoundsX(-size.x + correction);
+            }
+            else SetBoundsX((-size.x / 2.0f) - dialogueLine.RectTransform.sizeDelta.x);
+        }
+        private void PlaceOnLeft(Vector2 position, Vector2 size)
+        {
+            if (size.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f)
+            {
+                var difference = Mathf.Abs(position.x - startX);
+                var correction = Mathf.Clamp(difference + size.x - maxWidth, 0.0f, float.PositiveInfinity);
+                
+                SetBoundsX(-correction);
+            }
+            else SetBoundsX(dialogueLine.RectTransform.sizeDelta.x - (size.x / 2.0f));
         }
 
         public void Refresh(Vector2 size, string text) => StartCoroutine(RefreshRoutine(size, text));
@@ -163,20 +199,13 @@ namespace BeauTambour
             void Execute(float val)
             {
                 var lerpedSize = Vector2.Lerp(previousSize, size, refreshCurve.Evaluate(val));
-                
+
+                var position = dialogueLine.transform.position;
                 boundsTransform.sizeDelta = lerpedSize;
                 boundsRenderer.size = lerpedSize;
 
-                if (isOnRight)
-                {
-                    if (lerpedSize.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f) SetBoundsX(-lerpedSize.x);
-                    else SetBoundsX((-lerpedSize.x / 2.0f) - dialogueLine.RectTransform.sizeDelta.x);
-                }
-                else
-                {
-                    if (lerpedSize.x > dialogueLine.RectTransform.sizeDelta.x * 2.0f) SetBoundsX(0.0f);
-                    else SetBoundsX(dialogueLine.RectTransform.sizeDelta.x - (lerpedSize.x / 2.0f));
-                }
+                if (isOnRight) PlaceOnRight(position, lerpedSize);
+                else PlaceOnLeft(position, lerpedSize);
                 
                 textTransform.sizeDelta = lerpedSize;
             }

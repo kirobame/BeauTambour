@@ -21,12 +21,13 @@ namespace BeauTambour
         PhaseHandler,
         DialogueHandler,
         DrawingHandler,
+        MusicHandler,
         
         TextProvider,
         ColorByEmotion,
         
         PauseMenu,
-        
+
         Settings,
     }
 }
