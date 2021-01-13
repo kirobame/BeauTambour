@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Packaged-Voixtest1-13
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 72899af2c0193fa4dabc3d2a8306d426, type: 3}
-  mixerGroup: {fileID: 3125008770474021215, guid: f4df48e3c09ff3947b0ee384f7a558e2,
+  mixerGroup: {fileID: -1979051789647272780, guid: f4df48e3c09ff3947b0ee384f7a558e2,
     type: 2}
   volume: 1
   pitch: 1

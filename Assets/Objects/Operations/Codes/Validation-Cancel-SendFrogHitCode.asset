@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aff8ed8af10745b0a3e8307da35a248e, type: 3}
-  m_Name: Validation-SendFrogHitCode
+  m_Name: Validation-Cancel-SendFrogHitCode
   m_EditorClassIdentifier: 
   phase: 3
   address:
     stringedType: BeauTambour.GameEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     name: OnFrogFeedback
-  code: Hit
+  code: Hit.2

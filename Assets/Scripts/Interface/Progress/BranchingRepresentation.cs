@@ -53,7 +53,7 @@ namespace BeauTambour
                 }
             }
             
-            var angle = -(separation * count) / 2.0f + separation * index;
+            var angle = -(separation * (count -1)) / 2.0f + separation * index;
             if (angle != 0)
             {
                 var startingRotation = branches[index].localRotation;

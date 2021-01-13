@@ -106,8 +106,7 @@ namespace BeauTambour
             if (textAnimator.latestCharacterShown.index + 2 < textAnimator.tmproText.textInfo.characterCount)
             {
                 awaitingIndication = true;
-
-                Debug.Log(textAnimator.tmproText.textInfo.characterInfo[textAnimator.latestCharacterShown.index + 2]);
+                
                 var character = textAnimator.tmproText.textInfo.characterInfo[textAnimator.latestCharacterShown.index + 2];
                 var position = textAnimator.transform.TransformPoint(character.bottomLeft);
                 indicator.transform.parent.position = position;

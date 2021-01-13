@@ -35,6 +35,21 @@ MonoBehaviour:
     - "\u24C7-IntVol"
     - Interface
     - Interface
+    - "\u24C7-Chapter"
+    - "-S\xE9lectionner un chapitre-"
+    - -Select a chapter-
+    - "\u24C7-Download"
+    - "T\xE9l\xE9charger les mises \xE0 jours"
+    - Download updates
+    - "\u24C7-Cinematic"
+    - Jouer l'intro
+    - Play intro
+    - "\u24C7-Start"
+    - "Passer le d\xE9but"
+    - Skip start
+    - "\u24C7-GoBak"
+    - Menu principale
+    - Main menu
     - "\u24C7-Quit"
     - Quitter
     - Quit
@@ -48,4 +63,4 @@ MonoBehaviour:
     - '<size=100%><b>First chapter</b></size>
 
       <size=50%>The scaredy cat</size>'
-    size: {x: 3, y: 9}
+    size: {x: 3, y: 14}

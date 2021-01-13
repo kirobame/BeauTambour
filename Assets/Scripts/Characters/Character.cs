@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Flux;
 using TMPro;
@@ -15,7 +16,7 @@ namespace BeauTambour
         public abstract bool HasArcEnded { get; }
         public abstract int Branches { get; }
 
-        public bool isActive;
+        [NonSerialized, HideInInspector] public bool isActive;
         
         public Actor Actor => actor;
         [SerializeField] private Actor actor;

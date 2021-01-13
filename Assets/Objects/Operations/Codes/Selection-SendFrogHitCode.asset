@@ -17,4 +17,4 @@ MonoBehaviour:
     stringedType: BeauTambour.GameEvents, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     name: OnFrogFeedback
-  code: Hit
+  code: Hit.1

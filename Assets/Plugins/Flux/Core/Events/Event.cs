@@ -112,6 +112,15 @@ namespace Flux
         }
 
         //--------------------------------------------------------------------------------------------------------------
+
+        public static void Cleanup()
+        {
+            globalPorts.Clear();
+            queuedGlobalCallbacks.Clear();
+            
+            localPorts.Clear();
+            queuedLocalCallbacks.Clear();
+        }
         
         public static bool Open(Enum address) => Open(address.GetNiceName());
         public static bool Open(object address)

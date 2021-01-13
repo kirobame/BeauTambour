@@ -150,7 +150,7 @@ namespace BeauTambour
 
             if (analysis.IsComplete)
             {
-                Event.Call<string>(GameEvents.OnFrogFeedback, "Hit");
+                Event.Call<string>(GameEvents.OnFrogFeedback, "Hit.0");
                 drawing.Complete();
 
                 state = State.Ended;

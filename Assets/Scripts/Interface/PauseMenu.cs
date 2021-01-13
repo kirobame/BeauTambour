@@ -6,12 +6,14 @@ using Flux;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using Event = Flux.Event;
 
 namespace BeauTambour
 {
     public class PauseMenu : MonoBehaviour
     {
+        [SerializeField] private string mainMenuName;
         [SerializeField] private InputActionAsset navigationAsset;
         
         [Space, SerializeField] private float transitionTime;
@@ -20,12 +22,15 @@ namespace BeauTambour
         
         [Space, SerializeField] private AudioMixerSnapshot pauseSnapshot;
         [SerializeField] private AudioMixerSnapshot normalSnapshot;
-    
+
+        private bool isActive;
+        
         private bool state;
         private Coroutine pauseRoutine;
         
         private void Awake()
         {
+            isActive = true;
             navigationAsset.Disable();
             
             state = false;
@@ -41,9 +46,40 @@ namespace BeauTambour
         }
 
         public void Quit() => Application.Quit();
-        
+
+        public void GoToMainMenu() => StartCoroutine(GoToMenuRoutine());
+        private IEnumerator GoToMenuRoutine()
+        {
+            isActive = false;
+            navigationAsset.Disable();
+
+            var handle = SceneManager.LoadSceneAsync(mainMenuName);
+            handle.allowSceneActivation = false;
+
+            var hasBeenCompleted = false;
+            while (!handle.isDone)
+            {
+                if (handle.progress >= 0.9f && !hasBeenCompleted)
+                {
+                    normalSnapshot.TransitionTo(0.0f);
+                    
+                    BootstrappingRelay.RevertToDefault();
+                    Repository.Cleanup();
+                    Event.Cleanup();
+            
+                    navigationAsset.Enable();
+                    Time.timeScale = 1;
+
+                    handle.allowSceneActivation = true;
+                    hasBeenCompleted = true;
+                }
+                yield return new WaitForEndOfFrame();
+            }
+        }
+
         void OnPauseToggled()
         {
+            if (!isActive) return;
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
 
             if (!state)

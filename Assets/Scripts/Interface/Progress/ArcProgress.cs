@@ -33,7 +33,7 @@ namespace BeauTambour
 
         void OnMusicianArcCompleted(Musician musician)
         {
-            var index = speakerCount - 1 + GameState.FinishedArcsCount;
+            var index = speakerCount - GameState.FinishedArcsCount - 1;
             segments[index].Complete(musician);
         }
     }

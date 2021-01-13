@@ -1,4 +1,5 @@
-﻿using Flux;
+﻿using System;
+using Flux;
 using UnityEngine;
 
 namespace BeauTambour
@@ -21,6 +22,7 @@ namespace BeauTambour
                 runtimeSheets[i] = runtimeSheet;
             }
         }
+        void OnDestroy() => Repository.Dereference(this, References.TextProvider);
 
         public bool TryGet(int sheetIndex, string key, out string text)
         {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Packaged-Lyre_Joie
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 22c3d3eacf513d840b3f636ea7268f37, type: 3}
-  mixerGroup: {fileID: 2017174795584013982, guid: f4df48e3c09ff3947b0ee384f7a558e2,
+  mixerGroup: {fileID: -1979051789647272780, guid: f4df48e3c09ff3947b0ee384f7a558e2,
     type: 2}
   volume: 1
   pitch: 1

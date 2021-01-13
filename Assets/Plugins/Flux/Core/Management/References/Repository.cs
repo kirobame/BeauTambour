@@ -11,6 +11,31 @@ namespace Flux
         private static Dictionary<string, List<object>> globalReferences = new Dictionary<string, List<object>>();
         private static Dictionary<string, Dictionary<int, List<object>>> localReferences = new Dictionary<string, Dictionary<int, List<object>>>();
 
+        private static Dictionary<string, object> persistentReferences = new Dictionary<string, object>();
+        
+        public static void Cleanup()
+        {
+            globalReferences.Clear();
+            localReferences.Clear();
+        }
+
+        public static T GetPersistent<T>(T currentValue, Enum address) => GetPersistent<T>(currentValue, address.GetNiceName());
+        public static T GetPersistent<T>(T currentValue, string address)
+        {
+            if (persistentReferences.ContainsKey(address)) return (T)persistentReferences[address];
+            else
+            {
+                persistentReferences.Add(address, currentValue);
+                return currentValue;
+            }
+        }
+        public static void SetPersistent(object value, Enum address) => SetPersistent(value, address.GetNiceName());
+        public static void SetPersistent(object value, string address)
+        {
+            if (persistentReferences.ContainsKey(address)) persistentReferences[address] = value;
+            else persistentReferences.Add(address, value);
+        }
+        
         public static void Reference(object value, Enum address) => Reference(value, address.GetNiceName());
         public static void Reference(object value, string address)
         {

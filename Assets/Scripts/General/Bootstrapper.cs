@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Flux;
+using Shapes;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Event = Flux.Event;
 
 namespace BeauTambour
@@ -15,7 +18,15 @@ namespace BeauTambour
 
         [Space, SerializeField] private int startingBlock;
 
-        void Awake() => GameState.Bootup(startingBlock - 1);
+        void Awake()
+        {
+            if (BootstrappingRelay.StartingBlock != -1) GameState.Bootup(BootstrappingRelay.StartingBlock - 1);
+            else GameState.Bootup(startingBlock - 1);
+
+            if (BootstrappingRelay.UseBackup != -1) useBackup = BootstrappingRelay.UseBackup != 0;
+            if (BootstrappingRelay.PlayIntro != -1) playIntro = BootstrappingRelay.PlayIntro != 0; 
+            if (BootstrappingRelay.SkipStart != -1) skipStart = BootstrappingRelay.SkipStart != 0;
+        }
         void Start()
         {
             if (!playIntro && useBackup)

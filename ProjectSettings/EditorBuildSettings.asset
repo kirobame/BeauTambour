@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 57db063083ff45248a86bec81bae2060
-  - enabled: 1
-    path: Assets/Scenes/Skip.unity
-    guid: 966f76b6c783c5b4c996cd17b36ddca2
   m_configObjects: {}

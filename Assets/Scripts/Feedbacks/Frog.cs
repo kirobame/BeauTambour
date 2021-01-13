@@ -8,9 +8,11 @@ namespace BeauTambour
     public class Frog : MonoBehaviour
     {
         [SerializeField] private Animator animator;
+        [SerializeField] private AudioPackage[] hitAudios;
 
-        [Space, SerializeField] private AudioPackage hitAudio;
-
+        private int rightHitSoundIndex;
+        private int leftHitSoundIndex;
+        
         private bool isRightHit;
 
         void Awake()
@@ -24,24 +26,33 @@ namespace BeauTambour
             var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
             var audioSource = audioPool.RequestSingle();
             
-            hitAudio.AssignTo(audioSource, EventArgs.Empty);
+            hitAudios[isRightHit? leftHitSoundIndex : rightHitSoundIndex].AssignTo(audioSource, EventArgs.Empty);
             audioSource.Play();
         }
         
         void OnFrogFeedback(string code)
         {
-            switch (code)
+            var splittedCode = code.Split('.');
+            
+            var name = splittedCode[0];
+            var subCode = int.Parse(splittedCode[1]);
+
+            switch (name)
             {
                 case "Hit" :
 
                     if (isRightHit)
                     {
                         animator.SetTrigger("PlayingDrum1");
+                        rightHitSoundIndex = subCode;
+                        
                         isRightHit = false;
                     }
                     else
                     {
                         animator.SetTrigger("PlayingDrum2");
+                        leftHitSoundIndex = subCode;
+                        
                         isRightHit = true;
                     }
                     break;

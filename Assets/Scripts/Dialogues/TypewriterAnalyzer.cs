@@ -183,7 +183,7 @@ namespace BeauTambour
 
         private void PlayCorrespondingAudio(string chars)
         {
-            Debug.Log("START - " + chars);
+            //Debug.Log("START - " + chars);
 
             chars = chars.ToLower();
             if (dialogueHandler.Speaker.AudioStringMap.TryGet(chars, out var package))

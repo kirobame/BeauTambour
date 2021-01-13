@@ -55,6 +55,7 @@ namespace BeauTambour
                 
                 foreach (var character in characters)
                 {
+                    character.isActive = false;
                     if (character is Interlocutor)
                     {
                         var discardSpot = Repository.GetSingle<Transform>("1.InterlocutorDiscard.0");
