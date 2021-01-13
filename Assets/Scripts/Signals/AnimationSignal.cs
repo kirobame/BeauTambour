@@ -8,17 +8,7 @@ namespace BeauTambour
     {
         public override string Category => "animation";
 
-        public override void Execute(MonoBehaviour hook, Character speaker, string[] args)
-        {
-            if (speaker is Interlocutor) hook.StartCoroutine(DelayedDeactivationRoutine());
-            else hook.StartCoroutine(WaitRoutine(speaker));
-        }
-        
-        private IEnumerator DelayedDeactivationRoutine()
-        {
-            yield return  new WaitForEndOfFrame();
-            End();
-        }
+        public override void Execute(MonoBehaviour hook, Character speaker, string[] args) => hook.StartCoroutine(WaitRoutine(speaker));
         private IEnumerator WaitRoutine(Character speaker)
         {
             Debug.Log($"{Time.time} -- [Animation]:[{speaker.Actor}]:[{Key}]");
@@ -44,6 +34,12 @@ namespace BeauTambour
             }
             
             yield return new WaitForSeconds(0.4f);
+            End();
+        }
+        
+        private IEnumerator DelayedDeactivationRoutine()
+        {
+            yield return  new WaitForEndOfFrame();
             End();
         }
     }

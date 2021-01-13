@@ -30,7 +30,8 @@ namespace BeauTambour
         private Dictionary<int, AudioPackage> registry;
 
         private MonoBehaviour hook;
-        
+
+        private Character speaker;
         private Animator usedEffect;
         private PoolableAudio usedAudio;
         
@@ -42,13 +43,28 @@ namespace BeauTambour
 
         public override void Execute(MonoBehaviour hook, Character speaker, string[] args)
         {
+            if (speaker is Musician || !registry.TryGetValue(speaker.Id, out var audioPackage))
+            {
+                hook.StartCoroutine(FallbackRoutine());
+                return;
+            }
+            
             this.hook = hook;
-
+            this.speaker = speaker;
+            
+            hook.StartCoroutine(ActivationRoutine(audioPackage));
+        }
+        private IEnumerator ActivationRoutine(AudioPackage audioPackage)
+        {
+            yield return hook.StartCoroutine(FadeMusicRoutine(false, 0.4f));
+            
+            speaker.RuntimeLink.Animator.SetBool("IsSinging", true);
+            
             var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
             usedAudio = audioPool.RequestSinglePoolable();
 
             usedAudio.OnDone += OnSongEnd;
-            registry[speaker.Id].AssignTo(usedAudio.Value, EventArgs.Empty);
+            audioPackage.AssignTo(usedAudio.Value, EventArgs.Empty);
             usedAudio.Value.Play();
 
             var animationPool = Repository.GetSingle<AnimationPool>(References.AnimationPool);
@@ -65,10 +81,35 @@ namespace BeauTambour
         {
             usedAudio.OnDone -= OnSongEnd;
             usedEffect.SetTrigger("Out");
-            
-            yield return new WaitForSeconds(0.4f);
+            speaker.RuntimeLink.Animator.SetBool("IsSinging", false);
+
+            yield return hook.StartCoroutine(FadeMusicRoutine(true, 0.4f));
             
             End();
+        }
+        private IEnumerator FallbackRoutine()
+        {
+            yield return new WaitForSeconds(0.2f);
+            End();
+        }
+
+        private IEnumerator FadeMusicRoutine(bool shouldFadeIn, float duration)
+        {
+            var musicHandler = Repository.GetSingle<MusicHandler>(References.MusicHandler);
+            musicHandler.Prepare();
+
+            var time = 0.0f;
+            while (time < duration)
+            {
+                if (shouldFadeIn) musicHandler.In(time / duration);
+                else musicHandler.Out(time / duration);
+                
+                yield return new WaitForEndOfFrame();
+                time += Time.deltaTime;
+            }
+            
+            if (shouldFadeIn) musicHandler.In(time / duration);
+            else musicHandler.Out(time / duration);
         }
     }
 }

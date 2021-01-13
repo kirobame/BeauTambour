@@ -50,8 +50,6 @@ namespace BeauTambour
             var secondPerFrame = 1.0f / clipInfo.clip.frameRate;
             var freezeTime = frameFreeze * secondPerFrame;
 
-            Debug.Log($"-[0]--> ANIMATION HAS STARTED / Length {clipInfo.clip.length} / FrameRate : {clipInfo.clip.frameRate} / FreezeTime : {freezeTime}");
-            
             var time = clipInfo.clip.length * state.normalizedTime;
             while (time < freezeTime)
             {
@@ -59,12 +57,9 @@ namespace BeauTambour
                 
                 state = animator.GetCurrentAnimatorStateInfo(0);
                 time = clipInfo.clip.length * state.normalizedTime;
-                
-                Debug.Log($"-[0]--> WAITING FOR FREEZE / {time} / {freezeTime}");
             }
             animator.enabled = false;
 
-            Debug.Log($"-[0]--> FREEZING");
             for (var i = 0; i < cycles; i++)
             {
                 var loopTime = 0.0f;
@@ -83,8 +78,6 @@ namespace BeauTambour
                     animator.transform.localScale = Vector3.one * (1.0f + scale);
                 }
             }
-            
-            Debug.Log($"-[0]--> END FREEZE");
             animator.enabled = true;
         }
         

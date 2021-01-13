@@ -110,7 +110,8 @@ namespace Flux
                     }
                     else
                     {
-                        Debug.Log($"Download success : {request.downloadHandler.text}");
+                        //Debug.Log($"Download success : {request.downloadHandler.text}");
+                        Debug.Log($"Download success");
 
                         var versionSection = request.downloadHandler.text.Split(',').First();
                         UnityEngine.Assertions.Assert.IsTrue( versionSection.Contains('='), "Could not find a '=' at the start of the CSV" );
