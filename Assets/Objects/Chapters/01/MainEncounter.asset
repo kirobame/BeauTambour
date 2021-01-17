@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MainEncounter
   m_EditorClassIdentifier: 
   dialogueRecipient: {fileID: 11400000, guid: 8be0248422fdbd9488abe654f98850a0, type: 2}
-  sheetIndex: 2
+  sheetIndex: 0
   blocks:
   - {fileID: 11400000, guid: ab8e191b0b3b5dc4792457b24e7ec81a, type: 2}
   - {fileID: 11400000, guid: 80c2b3636eeedb24c8512551b4436326, type: 2}

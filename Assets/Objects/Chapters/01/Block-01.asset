@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f4fc3a8652d7c4e8d7e9b593ad1d68, type: 3}
   m_Name: Block-01
   m_EditorClassIdentifier: 
-  key: Start
+  key: Start.1
   interlocutor: {fileID: 11400000, guid: f65fe9a32f3676c408d14b39cf4d8e55, type: 2}
   musicians:
   - {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}

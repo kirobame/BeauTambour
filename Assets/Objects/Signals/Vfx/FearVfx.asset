@@ -16,7 +16,7 @@ MonoBehaviour:
   isBlurry: 0
   emotionEffectPrefab: {fileID: 2652218652392824857, guid: 3ad38f0005c8ec849b5a093364553787,
     type: 3}
-  frameFreeze: 12
+  frameFreeze: 7
   loopCurve:
     serializedVersion: 2
     m_Curve:

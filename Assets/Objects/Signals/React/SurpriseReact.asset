@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SurpriseReact
   m_EditorClassIdentifier: 
   key: 6
-  visualEffectSignal: {fileID: 11400000, guid: ccf276ddb52fb634a80928285d28ecb6, type: 2}
-  animationSignal: {fileID: 11400000, guid: 06a2a41ac723b3a4788aece669b1b87b, type: 2}
+  visualEffectSignal: {fileID: 11400000, guid: 7576fab1aa5fae149a8993bd634c956a, type: 2}
+  animationSignal: {fileID: 11400000, guid: 8f8f7fee87b8bf8488d06babfe549190, type: 2}

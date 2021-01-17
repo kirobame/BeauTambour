@@ -94,6 +94,8 @@ namespace BeauTambour
 
             holder.TextMesh.enabled = false;
             holder.TextMesh.enabled = true;
+            
+            holder.Revert();
 
             var lineSpacing = holder.TextMesh.lineSpacing / 100.0f;
             var height = 0f;

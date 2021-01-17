@@ -1069,7 +1069,7 @@ MonoBehaviour:
   useBackup: 1
   playIntro: 0
   skipStart: 1
-  startingBlock: 2
+  startingBlock: 1
 --- !u!4 &138730726
 Transform:
   m_ObjectHideFlags: 0
@@ -12752,7 +12752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 2031483948}
   clip: {fileID: 8300000, guid: c396be14244a3bd4e9f8cf895f581a28, type: 3}
-  volumeRange: {x: 0, y: 0.25}
+  volumeRange: {x: 0, y: 0.15}
   inCurve:
     serializedVersion: 2
     m_Curve:

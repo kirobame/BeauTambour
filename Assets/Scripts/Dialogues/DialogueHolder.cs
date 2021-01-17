@@ -66,6 +66,11 @@ namespace BeauTambour
             boundsTransform.sizeDelta = new Vector2(1000f, 1000f);
             textTransform.sizeDelta = new Vector2(1000f, 1000f);
         }
+        public void Revert()
+        {
+            boundsTransform.sizeDelta = previousSize;
+            textTransform.sizeDelta = previousSize;
+        }
 
         public void Deactivate() => StartCoroutine(DeactivationRoutine(true));
         private IEnumerator DeactivationRoutine(bool shutdown)
