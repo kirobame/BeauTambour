@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d02a55f0a224a708821a4956dfd3b73, type: 3}
+  m_Name: BlurryTrustReact
+  m_EditorClassIdentifier: 
+  key: 8
+  isBlurry: 0
+  visualEffectSignal: {fileID: 11400000, guid: 0c72196c77273ec49910df1f42e95374, type: 2}
+  animationSignal: {fileID: 11400000, guid: b7570aac24052e5488e8f23a71220b84, type: 2}

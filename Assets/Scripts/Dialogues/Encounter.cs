@@ -34,6 +34,7 @@ namespace BeauTambour
             
             Repository.Reference(this, References.Encounter);
             
+            Event.Open(GameEvents.OnShowBlockInfo);
             Event.Open(GameEvents.OnEncounterBootedUp);
             Event.Open(GameEvents.OnCurtainFall);
             Event.Open(GameEvents.OnGoingToNextBlock);
@@ -84,9 +85,9 @@ namespace BeauTambour
         {
             Event.Call(GameEvents.OnCurtainFall);
             
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.75f);
             GoToNextBlock();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1.5f);
             
             Event.Call(GameEvents.OnCurtainRaised);
             awaitingCurtain = false;

@@ -5,10 +5,12 @@ namespace BeauTambour
     [CreateAssetMenu(fileName = "NewReactSignal", menuName = "Beau Tambour/Signals/React")]
     public class ReactSignal : Signal
     {
-        [SerializeField] private VisualEffectSignal visualEffectSignal;
-        [SerializeField] private AnimationSignal animationSignal;
+        public override string Category => isBlurry ? "blurryreact" : "react";
         
-        public override string Category => "react";
+        [SerializeField] private bool isBlurry;
+        
+        [Space, SerializeField] private VisualEffectSignal visualEffectSignal;
+        [SerializeField] private AnimationSignal animationSignal;
         
         private int count;
         

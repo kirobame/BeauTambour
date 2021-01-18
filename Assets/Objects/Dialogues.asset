@@ -50,7 +50,7 @@ MonoBehaviour:
 
       Failsafe : M.Tuto.2;
 
-      Childs : M.Tuto3/M.Tuto.4;'
+      Childs : M.Tuto3/M.Tuto4;'
     - "\u24C7-M.Tuto3"
     - Mouse
     - Advance
@@ -84,10 +84,10 @@ MonoBehaviour:
     - "\u24C7-B.Tuto1"
     - Bird
     - Advance
-    - "[Bird]-Emilie... Je ne te savais pas si chipie <?E:React/Anticipation, Bird,
-      TRUE/>!\n[Mouse]-Mais non voyons ! On a fait un \xE9change honn\xEAte !\n[Bear]-Honn\xEAte
-      !? Je ne suis pas si b\xEAte !!!\n[Bird]-Calmez vous ! Comme vous, j'\xE9tais
-      une vraie b\xE9casse  !\n//Gr\xE2ce \xE0 Grenouille que je suis,\nJe suis apais\xE9e,
+    - "[Bird]-Emilie... Je ne te savais pas si chipie <?E:React/Trust, Bird, TRUE/>!\n[Mouse]-Mais
+      non voyons ! On a fait un \xE9change honn\xEAte !\n[Bear]-Honn\xEAte !? Je
+      ne suis pas si b\xEAte !!!\n[Bird]-Calmez vous ! Comme vous, j'\xE9tais une
+      vraie b\xE9casse  !\n//Gr\xE2ce \xE0 Grenouille que je suis,\nJe suis apais\xE9e,
       entour\xE9e d'amis !\n[Bear]-A Grenouille ? Elle me semble pourtant peu loquace..."
     - 
     - 'Emotion : Anticipation;
@@ -196,7 +196,7 @@ MonoBehaviour:
     - "[Mouse]-Si tu ne sais pas marchander ce n'est pas mon soucis <?E:React/Trust,
       Mouse, TRUE/>!\n[Bear]-Tu m'as arnaqu\xE9 et en plus je dois dire merci ?\n[Bird]-Sois
       plus attentive Grenouille, cherche ce qu'Emilie ressent...\nCherche les indices
-      pour aller de l'avant !\n"
+      pour aller de l'avant !"
     - 
     - 'Name : M.Tuto.1;'
     - "\u24C7-M.FS.Tuto5"
@@ -205,7 +205,7 @@ MonoBehaviour:
     - "[Mouse]-Z'aurais pas d\xFB te donner la noix si t'es pas content !\n[Bear]-Je
       me suis fais avoir comme un d\xE9butant !\n[Bird]-Emilie ne peut s'emp\xEAcher
       de se vanter <?E:React/Trust, Mouse, TRUE/>!\nGrenouille, change de note pour
-      avancer !\n"
+      avancer !"
     - 
     - 'Name : M.Tuto.1;'
     - "\u24C7-M.FS.Tuto6"
@@ -213,7 +213,7 @@ MonoBehaviour:
     - Hint
     - "[Mouse]-hi-han !\n[Bear]-Es-tu folle !?\n[Mouse]-Non, je te prends pour un
       \xE2ne, c'est dr\xF4le <?E:React/Trust, Mouse, TRUE/>!\n[Bird]-Grenouille,
-      piti\xE9, trouve la bonne musique !\nL'ours risque de devenir moins civique...\n"
+      piti\xE9, trouve la bonne musique !\nL'ours risque de devenir moins civique..."
     - 
     - 'Name : M.Tuto.1;'
     - "\u24C7-M.FS.Tuto7"
@@ -497,7 +497,7 @@ MonoBehaviour:
     - "\u24C7-H.Tuto.Anticipation.V1"
     - Bear
     - Harmony
-    - "[Bear]-Cette musique, elle r\xE9sonne dans mon c\u0153ur...\nPrudence, m\xE9fiance
+    - "[Bear]-Cette musique, elle r\xE9sonne dans mon coeur...\nPrudence, m\xE9fiance
       vigilance...\nDans une m\xEAme cadence...\n//Je me suis fait avoir une fois
       souris, pas deux <?E:React/Surprise, Bear, TRUE/>!\n[Bird]-Presque, voil\xE0
       une partie de la solution.\nMais son coeur r\xE9sonne d\u2019une seconde \xE9motion."
@@ -1740,7 +1740,7 @@ MonoBehaviour:
     - "[Mouse]-Attention ze sens quelque chose nous flairer, qui va l\xE0 ?\n[Cat]-Ce
       n\u2019est que moi, un loup affam\xE9 chassant sa proie <?E:React/Fear, Mouse,
       TRUE/>!\n[Bird]-Il est fou, il se dit loup ! Alors que ce n\u2019est qu'un
-      chat <?E:React/Surprise, Bird, TRUE/>!\n[Cat]-Mon corps est chat mais mon c\u0153ur
+      chat <?E:React/Surprise, Bird, TRUE/>!\n[Cat]-Mon corps est chat mais mon coeur
       est loup !\n//Je suis n\xE9 craintif, mon loup de p\xE8re a fait de moi la
       terreur de ces bois !\n//Alors crrraignez crrr\xE9atures ! Mi-chat, mi-loup
       je suis chat-garrrou !\n[Bear]-J'ai d\xFB rester enferm\xE9 tr\xE8s longtemps

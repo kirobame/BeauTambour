@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SampleBlock
   m_EditorClassIdentifier: 
   key: Start
+  infoKey: Block.Sample
   interlocutor: {fileID: 11400000, guid: 0f85a343b67edc34ab116ac1474a19f8, type: 2}
   musicians:
   - {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}

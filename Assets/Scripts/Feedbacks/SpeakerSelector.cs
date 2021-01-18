@@ -47,9 +47,10 @@ namespace BeauTambour
             
             Vector3 speakerPos = speaker.RuntimeLink.transform.position;
             outline.transform.position = new Vector3(speakerPos.x,speakerPos.y, -0.15f);
-            
-            if (speaker is Interlocutor) outline.transform.localScale = new Vector3(-1,1,1);
-            else outline.transform.localScale = new Vector3(1,1,1);
+
+            var scale = speaker.RuntimeLink.Animator.transform.localScale;
+            if (speaker is Interlocutor) outline.transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
+            else outline.transform.localScale = scale;
             
             var lookup = speaker.RuntimeLink.GetComponentInChildren<OutlineLookup>();
             if (lookup == null) outline.gameObject.SetActive(false);

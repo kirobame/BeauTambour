@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Flux;
 using UnityEngine;
+using Event = Flux.Event;
 
 namespace BeauTambour
 {
@@ -8,15 +9,20 @@ namespace BeauTambour
     public class Block : ScriptableObject
     {
         [SerializeField] private string key;
+        [SerializeField] private string infoKey;
         
         public Interlocutor Interlocutor => interlocutor;
-        [SerializeField] private Interlocutor interlocutor;
+        [Space, SerializeField] private Interlocutor interlocutor;
 
         public IReadOnlyList<Musician> Musicians => musicians;
         [SerializeField] private Musician[] musicians;
 
         public void Execute(Block previousBlock)
         {
+            Event.Call(GameEvents.OnShowBlockInfo);
+            var blockInfo = Repository.GetSingle<DynamicText>(References.BlockInfo);
+            blockInfo.SetText(infoKey);
+            
             if (previousBlock != null)
             {
                 var discardSpot = Repository.GetSingle<Transform>("1.InterlocutorDiscard.0");

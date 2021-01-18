@@ -7,7 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MusicalAnger
-  m_Controller: {fileID: 9100000, guid: 5b820900a3c5375418a29a65974140e4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0e9d9ba2684fef94aafec8703728efa5, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: ca436bc4230c07d47a9e2e77a3aec047, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 31205bfc8cf9ab041b545ea27f0dcc3a, type: 2}

@@ -26,6 +26,7 @@ namespace BeauTambour
         TextProvider,
         ColorByEmotion,
         
+        BlockInfo,
         PauseMenu,
 
         Settings,

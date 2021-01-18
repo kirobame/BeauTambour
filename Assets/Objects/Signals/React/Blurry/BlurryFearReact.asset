@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d02a55f0a224a708821a4956dfd3b73, type: 3}
+  m_Name: BlurryFearReact
+  m_EditorClassIdentifier: 
+  key: 4
+  isBlurry: 0
+  visualEffectSignal: {fileID: 11400000, guid: e889363dc6cfb034db4a88e120024417, type: 2}
+  animationSignal: {fileID: 11400000, guid: 17b0f9dcc9ccf8049947effe09fc31e3, type: 2}

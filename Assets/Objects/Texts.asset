@@ -56,11 +56,78 @@ MonoBehaviour:
     - "\u24C7-Resume"
     - Reprendre
     - Resume
-    - "\u24C7-Intro"
+    - "\u24C7-Story.1"
+    - "Dans le village Mar\xE9cage vivait une petite Grenouille muette qui en avait
+      assez d'\xEAtre discr\xE8te ! \nPas facile, sans dire mots, de se faire des
+      amis chez les animaux ! \nMais heureusement pour elle, gr\xE2ce \xE0 son tambour,
+      elle avait le rythme dans la peau."
+    - "Dans le village Mar\xE9cage vivait une petite Grenouille muette qui en avait
+      assez d'\xEAtre discr\xE8te ! \nPas facile, sans dire mots, de se faire des
+      amis chez les animaux ! \nMais heureusement pour elle, gr\xE2ce \xE0 son tambour,
+      elle avait le rythme dans la peau."
+    - "\u24C7-Story.2"
+    - "Un jour, une petite souris au nom d'Emilie, passa par l\xE0, charm\xE9e par
+      cette m\xE9lodie. "
+    - "Un jour, une petite souris au nom d'Emilie, passa par l\xE0, charm\xE9e par
+      cette m\xE9lodie. "
+    - "\u24C7-Story.3"
+    - "C'est alors que la rumeur apporta avec elle, la solution \xE0 ces ennuis...
+      \nLes Grands Musiciens cherchaient de nouveaux membres !\nLes plus reconnus
+      et talentueux !\nSi elle \xE9tait prise, c'est s\xFBr, les amis allaient arriver
+      nombreux ! \nIl fallait absolument s'y rendre !"
+    - "C'est alors que la rumeur apporta avec elle, la solution \xE0 ces ennuis...
+      \nLes Grands Musiciens cherchaient de nouveaux membres !\nLes plus reconnus
+      et talentueux !\nSi elle \xE9tait prise, c'est s\xFBr, les amis allaient arriver
+      nombreux ! \nIl fallait absolument s'y rendre !"
+    - "\u24C7-Story.4"
+    - "Ni une, ni deux, notre jeune Grenouille et son amie souris s'\xE9lanc\xE8rent
+      dans la for\xEAt, \ndans une aventure que jamais ils n'oublieraient..."
+    - "Ni une, ni deux, notre jeune Grenouille et son amie souris s'\xE9lanc\xE8rent
+      dans la for\xEAt, \ndans une aventure que jamais ils n'oublieraient..."
+    - "\u24C7-Story.5"
+    - "Elle semblait furieuse, mais Grenouille joua quelques notes joyeuses. \nL'effet
+      fut imm\xE9diat. Ses \xE9motions elle d\xE9lia ! "
+    - "Elle semblait furieuse, mais Grenouille joua quelques notes joyeuses. \nL'effet
+      fut imm\xE9diat. Ses \xE9motions elle d\xE9lia ! "
+    - "\u24C7-Story.6"
+    - "A peine sorties du village, ils rencontr\xE8rent un dr\xF4le d'oiseau... Un
+      rouge-gorge qui vivait plus haut. "
+    - "A peine sorties du village, ils rencontr\xE8rent un dr\xF4le d'oiseau... Un
+      rouge-gorge qui vivait plus haut. "
+    - "\u24C7-Story.7"
+    - "L'Oiseau se nommait Charlie, elle aussi jouait d'un instrument et cherchait
+      \xE0 prouver son talent ! "
+    - "L'Oiseau se nommait Charlie, elle aussi jouait d'un instrument et cherchait
+      \xE0 prouver son talent ! "
+    - "\u24C7-Story.8"
+    - "Ni une ni deux, notre jeune oiseau rejoignit les deux amis \xE0 la recherche
+      des Grands-Musiciens !\nLa petite troupe continua alors son chemin, mais encore
+      une fois, un obstacle entrava leur destin... "
+    - "Ni une ni deux, notre jeune oiseau rejoignit les deux amis \xE0 la recherche
+      des Grands-Musiciens !\nLa petite troupe continua alors son chemin, mais encore
+      une fois, un obstacle entrava leur destin... "
+    - "\u24C7-Story.9"
+    - Se dressait devant eux un ours en furie ! Il s'approcha du groupe et d'un coup
+      rugit...
+    - Se dressait devant eux un ours en furie ! Il s'approcha du groupe et d'un coup
+      rugit...
+    - "\u24C7-Block.Sample"
+    - "<size=100%><b>Chapitre perdu</b></size>\n<size=50%>Le terrain d'exp\xE9rimentation</size>"
+    - '<size=100%><b>Lost chapter</b></size>
+
+      <size=50%>The testing ground</size>'
+    - "\u24C7-Block.1"
     - '<size=100%><b>Premier chapitre</b></size>
 
-      <size=50%>Le chat peureux</size>'
+      <size=50%>Le miel de l''ours</size>'
     - '<size=100%><b>First chapter</b></size>
 
+      <size=50%>The honey of the bear</size>'
+    - "\u24C7-Block.2"
+    - '<size=100%><b>Second chapitre</b></size>
+
+      <size=50%>Le chat peureux</size>'
+    - '<size=100%><b>Second chapter</b></size>
+
       <size=50%>The scaredy cat</size>'
-    size: {x: 3, y: 14}
+    size: {x: 3, y: 25}

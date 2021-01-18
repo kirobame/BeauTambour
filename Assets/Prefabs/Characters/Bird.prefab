@@ -201,11 +201,62 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7181756667945175186}
     m_Modifications:
+    - target: {fileID: 8143075999615122080, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: translator.layerMixModes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143075999615122080, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: translator.layerBlendModes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143075999615122080, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0a8a7191025f8874eae8dd3d532ff4c5,
+        type: 2}
+    - target: {fileID: 8143075999615122080, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: translator.layerMixModes.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143075999615122080, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: translator.layerBlendModes.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143075999615122080, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: initialSkinName
+      value: clarinet_bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143075999615122080, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143075999615122080, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: zSpacing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8143075999615122081, guid: bf34a2c397feca94fae496bd8a48a6d2,
         type: 3}
       propertyPath: m_Name
       value: ClarinetBird
       objectReference: {fileID: 0}
+    - target: {fileID: 8143075999615122082, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143075999615122083, guid: bf34a2c397feca94fae496bd8a48a6d2,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e5d70467dec42024398f71f5c9c702c7, type: 2}
     - target: {fileID: 8143075999615122084, guid: bf34a2c397feca94fae496bd8a48a6d2,
         type: 3}
       propertyPath: m_LocalRotation.x
