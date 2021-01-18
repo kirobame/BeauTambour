@@ -85,9 +85,9 @@ namespace BeauTambour
         {
             Event.Call(GameEvents.OnCurtainFall);
             
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSeconds(1.75f);
             GoToNextBlock();
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2.5f);
             
             Event.Call(GameEvents.OnCurtainRaised);
             awaitingCurtain = false;
@@ -98,7 +98,12 @@ namespace BeauTambour
         private void GoToNextBlock()
         {
             var block = blocks[GameState.BlockIndex];
+
+            var blockInfo = Repository.GetSingle<DynamicText>(References.BlockInfo);
+            blockInfo.SetText(block.InfoKey);
             
+            if (hasBeenBootedUp) Event.Call(GameEvents.OnShowBlockInfo);
+
             block.Execute(previousBlock);
             previousBlock = block;
 

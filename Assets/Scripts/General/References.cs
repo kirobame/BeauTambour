@@ -15,6 +15,7 @@ namespace BeauTambour
         AudioPool,
         AnimationPool,
         DrawingPool,
+        StoryBitPool,
         
         DrawingsParent,
         

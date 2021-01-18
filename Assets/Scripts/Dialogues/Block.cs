@@ -8,6 +8,8 @@ namespace BeauTambour
     [IconIndicator(7705900795600745325), CreateAssetMenu(fileName = "NewEncounter", menuName = "Beau Tambour/Chapter/Block")]
     public class Block : ScriptableObject
     {
+        public string InfoKey => infoKey;
+        
         [SerializeField] private string key;
         [SerializeField] private string infoKey;
         
@@ -19,10 +21,6 @@ namespace BeauTambour
 
         public void Execute(Block previousBlock)
         {
-            Event.Call(GameEvents.OnShowBlockInfo);
-            var blockInfo = Repository.GetSingle<DynamicText>(References.BlockInfo);
-            blockInfo.SetText(infoKey);
-            
             if (previousBlock != null)
             {
                 var discardSpot = Repository.GetSingle<Transform>("1.InterlocutorDiscard.0");

@@ -6,6 +6,7 @@ namespace BeauTambour
     public enum ExtraEvents
     {
         OnIntroBitSkipped,
+        OnIntroAllTextShown,
         OnIntroStoryEnd,
     }
 }

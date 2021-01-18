@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Flux;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Event = Flux.Event;
 
 namespace BeauTambour
@@ -9,77 +11,101 @@ namespace BeauTambour
     public class IntroSequencer : MonoBehaviour
     {
         [SerializeField] private InputMapReference mapReference;
+
+        [Space, SerializeField] private string key;
+        [SerializeField] private int sheetIndex;
+        [SerializeField] private int range;
+
+        [Space, SerializeField] private VerticalLayoutGroup layout;
+        [SerializeField] private Animator nextBitIndicator;
+        [SerializeField] private float spacing;
         
-        [Space, SerializeField] private StoryBit[] bits;
-        [SerializeField] private AnimationCurve apparitionCurve;
-        [SerializeField] private float apparitionTime;
+        private StoryBit[] storyBits;
 
         private int index;
-        private Coroutine apparitionRoutine;
+        private bool isShowingText;
         
         void Awake()
         {
-            index = 0;
-
             Event.Open(ExtraEvents.OnIntroStoryEnd);
+            Event.Open(ExtraEvents.OnIntroAllTextShown);
             
             Event.Open(ExtraEvents.OnIntroBitSkipped);
             Event.Register(ExtraEvents.OnIntroBitSkipped, OnIntroBitSkipped);
         }
-
-        public void Begin() => apparitionRoutine = StartCoroutine(ApparitionRoutine());
-        private IEnumerator ApparitionRoutine()
-        {
-            var time = 0.0f;
-            while (time < apparitionTime)
-            {
-                Execute(time / apparitionTime);
-                
-                yield return new WaitForEndOfFrame();
-                time += Time.deltaTime;
-            }
-            Execute(1.0f);
-            
-            yield return new WaitForSeconds(bits[index].WaitTime);
-
-            apparitionRoutine = null;
-            if (index + 1 >= bits.Length)
-            {
-                End();
-                yield break;
-            }
-
-            index++;
-            apparitionRoutine = StartCoroutine(ApparitionRoutine());
-        }
-        private void Execute(float ratio)
-        {
-            var color = bits[index].Text.color;
-            color.a = Mathf.Lerp(0.0f, 1.0f, apparitionCurve.Evaluate(ratio));
-            bits[index].Text.color = color;
-        }
         
-        void OnIntroBitSkipped()
+        void Start() => StartCoroutine(BootupRoutine());
+        private IEnumerator BootupRoutine()
         {
-            if (apparitionRoutine == null) return;
-            
-            StopCoroutine(apparitionRoutine);
-            Execute(1.0f);
-
-            if (index + 1 >= bits.Length)
+            storyBits = new StoryBit[range];
+            for (var i = 0; i < range; i++)
             {
-                End();
+                var storyBitPool = Repository.GetSingle<StoryBitPool>(References.StoryBitPool);
+                storyBits[i] = storyBitPool.RequestSingle();
+                
+                storyBits[i].Execute(sheetIndex, $"{key}.{i+1}");
+                storyBits[i].transform.parent = layout.transform;
+            }
+
+            layout.enabled = false;
+            yield return new WaitForEndOfFrame();
+            layout.enabled = true;
+        }
+
+        public void Begin() => SetupCurrentBit();
+
+        private void SetupCurrentBit()
+        {
+            isShowingText = true;
+            
+            storyBits[index].Show();
+            storyBits[index].Player.onTextShowed.AddListener(OnTextShowed);
+        }
+
+        void OnTextShowed()
+        {
+            storyBits[index].Player.onTextShowed.RemoveListener(OnTextShowed);
+            isShowingText = false;
+            
+            if (index + 1 >= range)
+            {
+                Event.Call(ExtraEvents.OnIntroAllTextShown);
                 return;
             }
 
-            index++;
-            apparitionRoutine = StartCoroutine(ApparitionRoutine());
+            var searchIndex = 1;
+            var info = storyBits[index].TextMesh.textInfo;
+            var charInfo = info.characterInfo[info.characterCount - searchIndex];
+
+            while (!char.IsLetter(charInfo.character))
+            {
+                searchIndex++;
+                charInfo = info.characterInfo[info.characterCount - searchIndex];
+            }
+            var point = charInfo.bottomRight + (charInfo.topRight - charInfo.bottomRight) * 0.5f;
+                
+            nextBitIndicator.transform.position = storyBits[index].transform.TransformPoint(point) + Vector3.right * (searchIndex * spacing);
+            nextBitIndicator.SetTrigger("In");
         }
 
-        private void End()
+        void OnIntroBitSkipped()
         {
-            mapReference.Value.Disable();
-            Event.Call(ExtraEvents.OnIntroStoryEnd);
+            if (isShowingText) storyBits[index].Player.SkipTypewriter();
+            else
+            {
+                if (index + 1 >= range)
+                {
+                    mapReference.Value.Disable();
+                    Event.Call(ExtraEvents.OnIntroStoryEnd);
+                    
+                    return;
+                }
+
+                nextBitIndicator.SetTrigger("Out");
+                
+                index++;
+                SetupCurrentBit();
+            }
         }
     }
 }
