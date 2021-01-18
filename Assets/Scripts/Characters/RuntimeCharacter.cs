@@ -29,8 +29,12 @@ namespace BeauTambour
         private PoolableAudio poolableAudio;
         private PoolableAnimation poolableAnimation;
 
+        private bool isInterlocutor;
+
         protected virtual void Start()
         {
+            isInterlocutor = asset is Interlocutor;
+            
             Repository.Reference(asset, References.Characters);
             asset.Bootup(this);
         }
@@ -43,7 +47,7 @@ namespace BeauTambour
         }
         public override bool PlayMelodyFor(Emotion emotion)
         {
-            animator.SetBool("IsPlaying", true);
+            animator.SetBool(!isInterlocutor ? "IsPlaying" : "IsSinging", true);
             
             var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
             poolableAudio = audioPool.RequestSinglePoolable();
@@ -84,7 +88,7 @@ namespace BeauTambour
         private IEnumerator MelodyTerminationRoutine()
         {
             poolableAnimation.Value.SetTrigger("Out");
-            animator.SetBool("IsPlaying", false);
+            animator.SetBool(!isInterlocutor ? "IsPlaying" : "IsSinging", false);
             
             yield return new WaitForSeconds(0.75f);
             

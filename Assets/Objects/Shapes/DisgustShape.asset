@@ -16,15 +16,39 @@ MonoBehaviour:
   points:
   - position: {x: -0.7071068, y: -0.7071068}
     toleranceRadius: 0.20481777
-  - position: {x: -0.18867925, y: -0.18867925}
+  - position: {x: -0.4, y: -0.4}
     toleranceRadius: 0.125
-  - position: {x: 0.2, y: 0.20377359}
+  - position: {x: -0.32830188, y: -0.32830188}
     toleranceRadius: 0.125
-  - position: {x: 0.70894104, y: 0.7052678}
+  - position: {x: -0.19622642, y: -0.2}
     toleranceRadius: 0.17990473
-  - position: {x: 0.36226416, y: 1.0641509}
+  - position: {x: -0.049056605, y: -0.06037736}
     toleranceRadius: 0.1
-  - position: {x: -0.34339622, y: 1.1018867}
+  - position: {x: 0.04528302, y: -0.056603774}
     toleranceRadius: 0.1
-  - position: {x: -0.7018868, y: 0.7056604}
+  - position: {x: 0.19622642, y: -0.21132076}
     toleranceRadius: 0.18175992
+  - position: {x: 0.27075472, y: -0.2830189}
+    toleranceRadius: 0.05
+  - position: {x: 0.4198113, y: -0.4264151}
+    toleranceRadius: 0.05
+  - position: {x: 0.49433962, y: -0.49811321}
+    toleranceRadius: 0.05
+  - position: {x: 0.68679243, y: -0.6264151}
+    toleranceRadius: 0.05
+  - position: {x: 0.9056604, y: -0.60754716}
+    toleranceRadius: 0.05
+  - position: {x: 0.9773585, y: -0.2}
+    toleranceRadius: 0.05
+  - position: {x: 1.045283, y: 0.23773585}
+    toleranceRadius: 0.05
+  - position: {x: 0.8301887, y: 0.6}
+    toleranceRadius: 0.05
+  - position: {x: 0.6037736, y: 0.79622644}
+    toleranceRadius: 0.071797356
+  - position: {x: 0.20754717, y: 1.1132076}
+    toleranceRadius: 0.05
+  - position: {x: -0.43396226, y: 1}
+    toleranceRadius: 0.05
+  - position: {x: -0.69853675, y: 0.7155742}
+    toleranceRadius: 0.05

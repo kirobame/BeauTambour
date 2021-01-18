@@ -34,7 +34,11 @@ namespace BeauTambour
             Event.Register(ExtraEvents.OnIntroBitSkipped, OnIntroBitSkipped);
         }
         
-        void Start() => StartCoroutine(BootupRoutine());
+        void Start()
+        {
+            mapReference.Value.Disable();
+            StartCoroutine(BootupRoutine());
+        }
         private IEnumerator BootupRoutine()
         {
             storyBits = new StoryBit[range];
@@ -52,8 +56,11 @@ namespace BeauTambour
             layout.enabled = true;
         }
 
-        public void Begin() => SetupCurrentBit();
-
+        public void Begin()
+        {
+            mapReference.Value.Enable();
+            SetupCurrentBit();
+        }
         private void SetupCurrentBit()
         {
             isShowingText = true;

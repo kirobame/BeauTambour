@@ -17,7 +17,13 @@ namespace BeauTambour
 
         protected override void RelayedOnStart(EventArgs inArgs)
         {
-            if (GameState.validationMade) return;
+            if (GameState.validationMade)
+            {
+                Event.Call<string>(GameEvents.OnFrogFeedback, "Hit.0");
+                return;
+            }
+
+            Event.Call<string>(GameEvents.OnFrogFeedback, "Hit.3");
             
             GameState.validationMade = true;
             hook.StartCoroutine(ActivationRoutine());
@@ -52,7 +58,6 @@ namespace BeauTambour
                 var id = GameState.Note.speaker.Id;
                 Event.Call(GameEvents.OnDialogueTreeUpdate, id, emotion, selection, branches);
             }
-            
             GameState.Note.speaker.RuntimeLink.PlayMelodyFor(emotion);
         }
 

@@ -18,13 +18,25 @@ MonoBehaviour:
     toleranceRadius: 0.20847523
   - position: {x: 0.4, y: 0.00754717}
     toleranceRadius: 0.125
-  - position: {x: -0.40377358, y: -0}
+  - position: {x: 0.2, y: -0}
     toleranceRadius: 0.125
-  - position: {x: -0.99999356, y: 0.0036231647}
+  - position: {x: 0, y: -0}
     toleranceRadius: 0.17771634
-  - position: {x: -1.0037736, y: -0.49056605}
+  - position: {x: -0.003773585, y: -0.35849056}
     toleranceRadius: 0.1
-  - position: {x: -0.6, y: -0.99622643}
+  - position: {x: 0, y: -0.6}
     toleranceRadius: 0.1
-  - position: {x: 0, y: -1}
+  - position: {x: -0.0035842063, y: -0.99999356}
     toleranceRadius: 0.18175992
+  - position: {x: -0.54339623, y: -1.0037736}
+    toleranceRadius: 0.05
+  - position: {x: -1, y: -0.5509434}
+    toleranceRadius: 0.05
+  - position: {x: -0.99999285, y: 0.0037593718}
+    toleranceRadius: 0.05
+  - position: {x: -1, y: 0.509434}
+    toleranceRadius: 0.05
+  - position: {x: -0.56226414, y: 0.99622643}
+    toleranceRadius: 0.05
+  - position: {x: -0.007518585, y: 0.9999718}
+    toleranceRadius: 0.05

@@ -21,17 +21,18 @@ namespace BeauTambour
             Event.Register<string>(GameEvents.OnFrogFeedback, OnFrogFeedback);
         }
 
-        public void OnHit()
+        public void OnHit(int side)
         {
             var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
             var audioSource = audioPool.RequestSingle();
             
-            hitAudios[isRightHit? leftHitSoundIndex : rightHitSoundIndex].AssignTo(audioSource, EventArgs.Empty);
+            hitAudios[side == 1 ? leftHitSoundIndex : rightHitSoundIndex].AssignTo(audioSource, EventArgs.Empty);
             audioSource.Play();
         }
         
         void OnFrogFeedback(string code)
         {
+            Debug.Log($"--------RECEIVED : {code}");
             var splittedCode = code.Split('.');
             
             var name = splittedCode[0];

@@ -35,8 +35,6 @@ namespace BeauTambour
         private Animator usedEffect;
         private PoolableAudio usedAudio;
 
-        private bool canSing;
-        
         public override void Bootup()
         {
             registry = new Dictionary<int, AudioPackage>();
@@ -53,16 +51,6 @@ namespace BeauTambour
             
             this.hook = hook;
             this.speaker = speaker;
-
-            foreach (var parameter in speaker.RuntimeLink.Animator.parameters)
-            {
-                if (parameter.name == "IsSinging")
-                {
-                    canSing = true;
-                    break;
-                }
-            }
-            canSing = false;
             
             hook.StartCoroutine(ActivationRoutine(audioPackage));
         }
@@ -70,7 +58,7 @@ namespace BeauTambour
         {
             yield return hook.StartCoroutine(FadeMusicRoutine(false, 0.4f));
             
-            speaker.RuntimeLink.Animator.SetBool(canSing ? "IsSinging" : "IsPlaying", true);
+            speaker.RuntimeLink.Animator.SetBool("IsSinging", true);
             
             var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
             usedAudio = audioPool.RequestSinglePoolable();
@@ -93,7 +81,7 @@ namespace BeauTambour
         {
             usedAudio.OnDone -= OnSongEnd;
             usedEffect.SetTrigger("Out");
-            speaker.RuntimeLink.Animator.SetBool(canSing ? "IsSinging" : "IsPlaying", false);
+            speaker.RuntimeLink.Animator.SetBool("IsSinging", false);
 
             yield return hook.StartCoroutine(FadeMusicRoutine(true, 0.4f));
             
