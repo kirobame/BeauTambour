@@ -3930,6 +3930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 1446888606}
+  bootup: 1
   sheetIndex: 0
   key: Intro
 --- !u!1 &1450728285
@@ -5895,6 +5896,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121848867607830419, guid: 7c602d9286bf6cc42896815f7c302a07,
+        type: 3}
+      propertyPath: initialSkinName
+      value: guitar_bear
       objectReference: {fileID: 0}
     - target: {fileID: 3121848867661208707, guid: 7c602d9286bf6cc42896815f7c302a07,
         type: 3}
