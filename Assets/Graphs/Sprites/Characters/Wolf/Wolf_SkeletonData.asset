@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: LBT_Character_cat_SkeletonData
+  m_Name: Wolf_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: a57bb44cfaee5174d9d3a8c8fad58314, type: 2}
@@ -19,9 +19,33 @@ MonoBehaviour:
   skeletonDataModifiers: []
   fromAnimation:
   - red_cat_walk
+  - red_cat_EMOTE_anticipation
+  - red_cat_EMOTE_colere
+  - red_cat_EMOTE_confiance
+  - red_cat_EMOTE_degout
+  - red_cat_EMOTE_joie
+  - red_cat_EMOTE_peur
+  - red_cat_EMOTE_surprise
+  - red_cat_EMOTE_tristesse
   toAnimation:
   - red_cat_idle
+  - red_cat_empty
+  - red_cat_empty
+  - red_cat_empty
+  - red_cat_empty
+  - red_cat_empty
+  - red_cat_empty
+  - red_cat_empty
+  - red_cat_empty
   duration:
   - 0.05
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
   defaultMix: 0.2
-  controller: {fileID: 9100000, guid: 1f4a646d1cb9c184f8e40ecb7a9ca44d, type: 2}
+  controller: {fileID: 9100000, guid: 833f1913f2111e24b8118b6d1e841492, type: 2}
