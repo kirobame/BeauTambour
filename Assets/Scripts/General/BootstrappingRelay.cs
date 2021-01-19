@@ -9,6 +9,7 @@ namespace BeauTambour
         public static int UseBackup { get; private set; } = -1;
         public static int PlayIntro { get; private set; } = -1;
         public static int SkipStart { get; private set; } = -1;
+        public static int SkipDialogues { get; private set; } = -1;
 
         public static void RevertToDefault()
         {
@@ -16,6 +17,7 @@ namespace BeauTambour
             UseBackup = -1;
             PlayIntro = -1;
             SkipStart = -1;
+            SkipDialogues = -1;
         }
             
         public static void SetStartingBlock(int index) => StartingBlock = index;
@@ -23,5 +25,6 @@ namespace BeauTambour
         public static void SetUseBackup(bool value) => UseBackup = Convert.ToInt32(value);
         public static void SetPlayIntro(bool value) => PlayIntro = Convert.ToInt32(value);
         public static void SetSkipStart(bool value) => SkipStart = Convert.ToInt32(value);
+        public static void SetSkipDialogues(bool value) => SkipDialogues = Convert.ToInt32(value);
     }
 }

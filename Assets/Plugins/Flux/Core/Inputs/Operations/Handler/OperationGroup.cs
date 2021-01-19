@@ -32,5 +32,10 @@ namespace Flux
                 runtimeOperations[i] = runtimeOperation;
             }
         }
+        public void Shutdown()
+        {
+            runtimeInputHandler.Unbind();
+            foreach (var runtimeOperation in runtimeOperations) runtimeOperation.Unbind();
+        }
     }
 }

@@ -28,8 +28,9 @@ namespace BeauTambour
 
         private void Awake()
         {
-            Repository.Reference(this, References.DialogueHandler);
+            if (BootstrappingRelay.SkipDialogues != -1) skip = BootstrappingRelay.SkipDialogues != 0;
             
+            Repository.Reference(this, References.DialogueHandler);
             queue = new Queue<Dialogue>();
             
             Event.Open<Cue>(GameEvents.OnNextCue);

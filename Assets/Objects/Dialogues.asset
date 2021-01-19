@@ -109,7 +109,7 @@ MonoBehaviour:
 
       Failsafe : B.Tuto.2;
 
-      Childs : B.Tuto3/B.Tuto.4;'
+      Childs : B.Tuto3/B.Tuto4;'
     - "\u24C7-B.Tuto3"
     - Bird
     - Advance

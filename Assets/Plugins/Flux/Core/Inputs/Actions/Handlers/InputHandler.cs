@@ -15,7 +15,7 @@ namespace Flux
         protected MonoBehaviour hook;
 
         public virtual void Initialize(MonoBehaviour hook) => this.hook = hook;
-        protected virtual void OnDestroy() => Unbind();
+        //protected virtual void OnDestroy() => Unbind();
         
         public virtual void Bind(InputAction inputAction)
         {
@@ -62,9 +62,9 @@ namespace Flux
         {
             base.Bind(inputAction);
             
-            inputAction.started += inputCallbacks.onStart;
-            inputAction.performed += inputCallbacks.onUpdate;
-            inputAction.canceled += inputCallbacks.onEnd;
+            bindedAction.started += inputCallbacks.onStart;
+            bindedAction.performed += inputCallbacks.onUpdate;
+            bindedAction.canceled += inputCallbacks.onEnd;
         }
         public override void Unbind()
         {

@@ -16,5 +16,7 @@ namespace Flux
         }
 
         void Update() { foreach (var continuousHandler in continuousHandlers) continuousHandler.Update(); }
+        
+        public void Shutdown() { foreach (var inputLink in inputLinks) inputLink.Shutdown(); }
     }
 }

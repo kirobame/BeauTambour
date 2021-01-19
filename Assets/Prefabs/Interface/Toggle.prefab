@@ -139,7 +139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c79ad01d489b8b4c9f8153592bedc7d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cd4edfab553e564f82267fc761c61c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 4165377351469051612}
+  bootup: 1
   sheetIndex: 0
   key: 
 --- !u!114 &4165377351469051612

@@ -32,7 +32,6 @@ namespace BeauTambour
         
         void OnFrogFeedback(string code)
         {
-            Debug.Log($"--------RECEIVED : {code}");
             var splittedCode = code.Split('.');
             
             var name = splittedCode[0];

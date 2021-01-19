@@ -30,6 +30,8 @@ namespace BeauTambour
         BlockInfo,
         PauseMenu,
 
+        OperationHandler,
+        
         Settings,
     }
 }

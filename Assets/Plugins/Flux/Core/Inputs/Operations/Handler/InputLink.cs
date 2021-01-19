@@ -15,5 +15,6 @@ namespace Flux
         [SerializeField] private OperationGroup[] groups;
 
         public void Initialize(OperationHandler operationHandler) { foreach (var group in groups) group.Initialize(operationHandler, reference.action); }
+        public void Shutdown() { foreach (var group in groups) group.Shutdown(); }
     }
 }

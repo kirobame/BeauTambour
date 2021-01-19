@@ -17,7 +17,7 @@ namespace BeauTambour
         public static bool PhaseStop { get; private set; }
         public static int BlockIndex { get; private set; }
         public static Note Note { get; private set; }
-        
+
         public static Language UsedLanguage { get; private set; }
         
         public static bool validationMade;

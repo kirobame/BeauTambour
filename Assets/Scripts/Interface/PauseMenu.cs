@@ -62,8 +62,11 @@ namespace BeauTambour
                 if (handle.progress >= 0.9f && !hasBeenCompleted)
                 {
                     normalSnapshot.TransitionTo(0.0f);
+
+                    var operationHandler = Repository.GetSingle<OperationHandler>(References.OperationHandler);
+                    operationHandler.Shutdown();
                     
-                    BootstrappingRelay.RevertToDefault();
+                    //BootstrappingRelay.RevertToDefault();
                     Repository.Cleanup();
                     Event.Cleanup();
             
