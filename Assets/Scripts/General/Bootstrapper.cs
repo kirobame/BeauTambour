@@ -29,7 +29,18 @@ namespace BeauTambour
         }
         void Start()
         {
-            if (!playIntro && useBackup)
+            if (!playIntro && !useBackup)
+            {
+                Event.Open(ExtraEvents.OnDownloadOnlyConfirmed);
+                Event.Call(ExtraEvents.OnDownloadOnlyConfirmed);
+                
+                Event.Open(ExtraEvents.OnDownloadOnly);
+                Event.Register(GameEvents.OnEncounterBootedUp, () => Event.Call(ExtraEvents.OnDownloadOnly));
+                    
+                Event.Open(GameEvents.OnIntroEnd);
+                Event.Register(GameEvents.OnIntroEnd, PlayFirstPhase);
+            }
+            else if (!playIntro && useBackup)
             {
                 Debug.Log("NOT PLAYING INTRO");
                 Event.Register(GameEvents.OnEncounterBootedUp, PlayFirstPhase);
@@ -37,6 +48,14 @@ namespace BeauTambour
             else
             {
                 Debug.Log("PLAYING INTRO");
+
+                if (!useBackup)
+                {
+                    Event.Open(ExtraEvents.OnRegularDownload);
+                    Event.Call(ExtraEvents.OnRegularDownload);
+                    
+                    Event.Open(ExtraEvents.OnRegularDownloadEnd);
+                }
                 
                 Event.Open(GameEvents.OnIntroConfirmed);
                 Event.Call(GameEvents.OnIntroConfirmed);
@@ -57,7 +76,18 @@ namespace BeauTambour
             encounter.Bootup(this, useBackup);
         }
 
-        void OnEncounterBootedUp() => Event.Call(GameEvents.OnIntroStart);
+        void OnEncounterBootedUp() => StartCoroutine(EncounterBootupRoutine());
+        private IEnumerator EncounterBootupRoutine()
+        {
+            if (!useBackup)
+            {
+                Event.Call(ExtraEvents.OnRegularDownloadEnd);
+                yield return new WaitForSeconds(1.0f);
+            }
+            
+            Event.Call(GameEvents.OnIntroStart);
+        }
+        
         void PlayFirstPhase()
         {
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);

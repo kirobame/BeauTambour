@@ -87,7 +87,7 @@ namespace BeauTambour
 
             if (!state)
             {
-                phaseHandler.CurrentPhase.Pause();
+                if (phaseHandler.CurrentCategory != PhaseCategory.None) phaseHandler.CurrentPhase.Pause();
                 pauseSnapshot.TransitionTo(transitionTime);
                 
                 if (pauseRoutine != null) StopCoroutine(pauseRoutine);
@@ -98,7 +98,7 @@ namespace BeauTambour
             }
             else
             {
-                phaseHandler.CurrentPhase.Resume();
+                if (phaseHandler.CurrentCategory != PhaseCategory.None) phaseHandler.CurrentPhase.Resume();
                 normalSnapshot.TransitionTo(transitionTime);
                 
                 if (pauseRoutine != null) StopCoroutine(pauseRoutine);
