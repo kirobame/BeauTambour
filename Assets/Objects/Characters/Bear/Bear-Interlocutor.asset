@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb1b004e281428798593576d9d5c56f, type: 3}
   m_Name: Bear-Interlocutor
   m_EditorClassIdentifier: 
-  isActive: 1
   actor: 2
   fontColor: {r: 0.08235294, g: 0.09803922, b: 0.03529412, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   font: {fileID: 11400000, guid: eb1fe65780f0f804cbeb803ca1cc0158, type: 2}
   audioStringMap: {fileID: 11400000, guid: fd998a3d4a4022143b150f306c24b8ca, type: 2}
-  pitchRange: 0.5
+  pitch: 0.5
+  pitchRange: 0.3

@@ -209,7 +209,7 @@ namespace BeauTambour
             var audio = audioPool.RequestSingle();
 
             package.AssignTo(audio, EventArgs.Empty);
-            audio.pitch = dialogueHandler.Speaker.PitchRange;
+            audio.pitch = dialogueHandler.Speaker.Pitch + UnityEngine.Random.Range(-dialogueHandler.Speaker.PitchRange, dialogueHandler.Speaker.PitchRange);
             audio.Play();
             timeToPlayNextSound = audio.clip.length * consonantFirstVowelTimeRatio;
         }
