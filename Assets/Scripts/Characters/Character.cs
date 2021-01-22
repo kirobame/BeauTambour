@@ -27,6 +27,10 @@ namespace BeauTambour
 
         public AudioStringMapPackage AudioStringMap => audioStringMap;
         [Space, SerializeField] private AudioStringMapPackage audioStringMap;
+
+        public float Pitch => pitch;
+        [SerializeField] private float pitch;
+
         public float PitchRange => pitchRange;
         [SerializeField] private float pitchRange;
 
