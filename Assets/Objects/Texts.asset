@@ -131,4 +131,16 @@ MonoBehaviour:
     - '<size=100%><b>Second chapter</b></size>
 
       <size=50%>The were-cat</size>'
-    size: {x: 3, y: 26}
+    - "\u24C7-Block.3"
+    - "<size=100%><b>Rrois\xE8me chapitre</b></size>\n<size=50%>Le petit chat peureux
+      roux</size>"
+    - '<size=100%><b>Second chapter</b></size>
+
+      <size=50%>The were-cat</size>'
+    - "\u24C7-Block.4"
+    - "<size=100%><b>Quatri\xE8me chapitre</b></size>\n<size=50%>Le plumage ne fait
+      pas le vautour</size>"
+    - '<size=100%><b>Second chapter</b></size>
+
+      <size=50%>The were-cat</size>'
+    size: {x: 3, y: 28}

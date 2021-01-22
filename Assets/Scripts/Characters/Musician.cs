@@ -16,17 +16,35 @@ namespace BeauTambour
             
             public bool TryProcess(string[] texts, Dictionary<string, string> data)
             {
-                if (!data.ContainsKey("Emotion")) return false;
+                if (!data.ContainsKey("Emotion"))
+                {
+                    Debug.LogError($"No Emotion on {name}");
+                    foreach (var key in data.Keys) Debug.LogError($"---| Available key : {key}");
+                    
+                    return false;
+                }
                 else
                 {
                     var emotionName = data["Emotion"].FirstToUpper();
                     requiredEmotion = (Emotion)Enum.Parse(typeof(Emotion), emotionName);
                 }
-                
-                if (!data.ContainsKey("Failsafe")) return false;
+
+                if (!data.ContainsKey("Failsafe"))
+                {
+                    Debug.LogError($"No failsafe on {name}");
+                    foreach (var key in data.Keys) Debug.LogError($"---| Available key : {key}");
+                    
+                    return false;
+                }
                 else failsafe = data["Failsafe"];
 
-                if (!data.ContainsKey("Childs")) return false;
+                if (!data.ContainsKey("Childs"))
+                {
+                    Debug.LogError($"No Childs on {name}");
+                    foreach (var key in data.Keys) Debug.LogError($"---| Available key : {key}");
+                    
+                    return false;
+                }
                 else childs = data["Childs"].Split('/');
                 
                 if (data.ContainsKey("NeededAttributes")) neededAttributes = data["NeededAttributes"].Split('/');

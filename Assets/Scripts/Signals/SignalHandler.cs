@@ -90,6 +90,9 @@ namespace BeauTambour
                 if (queuedSignals.Count > 1) return;
                 
                 BeginIndication(speaker);
+
+                var dialogueHandler = Repository.GetSingle<DialogueHandler>(References.DialogueHandler);
+                dialogueHandler.Speaker.RuntimeLink.StopTalking();
                 
                 signal.OnEnd += OnSignalEnd;
                 textAnimatorPlayer.StopShowingText();
@@ -101,8 +104,7 @@ namespace BeauTambour
         private void BeginIndication(Character speaker)
         {
             if (!indicator.GetCurrentAnimatorStateInfo(0).IsTag("Void")) return;
-
-            speaker.RuntimeLink.StopTalking();
+            
             if (textAnimator.latestCharacterShown.index + 2 < textAnimator.tmproText.textInfo.characterCount)
             {
                 awaitingIndication = true;
@@ -123,15 +125,12 @@ namespace BeauTambour
             {
                 EndIndication();
                 yield return new WaitUntil(() => indicator.GetCurrentAnimatorStateInfo(0).IsTag("Void"));
-                
-                speaker.RuntimeLink.BeginTalking();
                 textAnimatorPlayer.StartShowingText();
+                
+                var dialogueHandler = Repository.GetSingle<DialogueHandler>(References.DialogueHandler);
+                dialogueHandler.Speaker.RuntimeLink.BeginTalking();
             }
-            else
-            {
-                speaker.RuntimeLink.StopTalking();
-                Event.Call(GameEvents.OnCueFinished);
-            }
+            else Event.Call(GameEvents.OnCueFinished);
         }
         
         void OnSignalEnd()

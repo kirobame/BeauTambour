@@ -26,11 +26,11 @@ MonoBehaviour:
     - "\u24C7-M.Tuto1"
     - Mouse
     - Advance
-    - "[Mouse]- Mais oui ! C'\xE9tait avec toi l'\xE9change ! Tu es l'ours de la
-      cabane !\n[Bear]-Un \xE9change ! Tu m'as plut\xF4t pris pour un \xE2ne !\n[Mouse]-Ton
+    - "[Mouse]-Mais oui ! C'\xE9tait avec toi l'\xE9change ! Tu es l'ours de la cabane
+      !\n[Bear]-Un \xE9change ! Tu m'as plut\xF4t pris pour un \xE2ne !\n[Mouse]-Ton
       miel contre le bien le plus pr\xE9cieux de ma famille !\nO\xF9 est la triche
-      ?\n[Bear]-Tu m'as donn\xE9 une vieille noix ! De ma t\xEAte tu te fiches !?\n[Mouse]-Ze
-      n'ai zamais dit qu'on \xE9tait riche..<?E:React/Trust, Mouse, TRUE/>."
+      <?E:React/Trust, Mouse, TRUE/>?\n[Bear]-Tu m'as donn\xE9 une vieille noix !
+      De ma t\xEAte tu te fiches !?\n[Mouse]-Ze n'ai zamais dit qu'on \xE9tait riche..."
     - 
     - 'Emotion : Surprise;
 
@@ -40,8 +40,8 @@ MonoBehaviour:
     - "\u24C7-M.Tuto2"
     - Mouse
     - Advance
-    - "[Mouse]-Et pour prendre la noix z'ai pris des risques, ze l'ai piqu\xE9 \xE0
-      mon p\xE8re <?E:React/Trust, Cat, TRUE/>!\n[Bear]-La noix n'\xE9tait m\xEAme
+    - "[Mouse]-Et pour prendre la noix z'ai pris des risques <?E:React/Trust, Mouse,
+      TRUE/>, ze l'ai piqu\xE9 \xE0 mon p\xE8re!\n[Bear]-La noix n'\xE9tait m\xEAme
       pas \xE0 toi !<?E:React/Fear, Mouse, TRUE/>?\nEn tout cas, tout mon stock je
       dois refaire !\n//A cause de toi je n'ai plus rien \xE0 manger pour l'hiver
       !"
@@ -55,11 +55,10 @@ MonoBehaviour:
     - Mouse
     - Advance
     - "[Mouse]-Manger du miel tout l'hiver !? Tu connais le diab\xE8te <?E:React/Surprise,
-      Mouse, TRUE/>?\n[Bear]-J'adore le miel ce n'est pas ma faute !\nEt je fais
-      ce que je veux d'abord, sale petite b\xEAte <?E:React/Anticipation, Mouse,
-      TRUE/>!\n//Tu m'as bern\xE9 ! je veux \xEAtre rembours\xE9 !\n[Mouse]-Charlie
-      viens m'aider !\n[Bird]-Emilie, c'est un peu m\xE9rit\xE9... Pas tr\xE8s honn\xEAte
-      ce march\xE9..."
+      Bear, TRUE/>?\n[Bear]-J'adore le miel ce n'est pas ma faute !\nEt je fais ce
+      que je veux d'abord, sale petite b\xEAte !\n//<emcol val=Surprise>Tu m'as bern\xE9
+      !</emcol> Je veux \xEAtre rembours\xE9 !\n[Mouse]-Charlie viens m'aider !\n[Bird]-Emilie,
+      c'est un peu m\xE9rit\xE9... Pas tr\xE8s honn\xEAte ce march\xE9..."
     - 
     - 'Emotion : Trust;
 
@@ -70,11 +69,10 @@ MonoBehaviour:
     - Mouse
     - Advance
     - "[Mouse]-Ne t'\xE9nerve pas, je ne veux pas servir de repas d'hiver !\n[Bear]-Alors
-      trouve quelque chose \xE0 faire !\nJe suis dans l'impasse !\n[Mouse]-Prends
-      Charlie \xE0 ma place <?E:React/Surprise, Mouse, TRUE/>!\n[Bird]-Tu es s\xE9rieuses
+      trouve quelque chose \xE0 faire !\nJe suis dans <emcol val=Surprise>l'impasse
+      !</emcol>\n[Mouse]-Prends Charlie \xE0 ma place !\n[Bird]-Tu es s\xE9rieuses
       !!?\nEmilie, Sale voleuse !!!\n[Mouse]-Je plaisante ! Viens avec nous l'ours
-      <?E:React/Anticipation, Mouse, TRUE/>!\nEt sur le chemin tu referas les courses
-      !"
+      !\nEt sur le chemin tu referas les courses !"
     - 
     - 'Emotion : Fear;
 
@@ -84,11 +82,12 @@ MonoBehaviour:
     - "\u24C7-B.Tuto1"
     - Bird
     - Advance
-    - "[Bird]-Emilie... Je ne te savais pas si chipie <?E:React/Trust, Bird, TRUE/>!\n[Mouse]-Mais
-      non voyons ! On a fait un \xE9change honn\xEAte !\n[Bear]-Honn\xEAte !? Je
-      ne suis pas si b\xEAte !!!\n[Bird]-Calmez vous ! Comme vous, j'\xE9tais une
-      vraie b\xE9casse  !\n//Gr\xE2ce \xE0 Grenouille que je suis,\nJe suis apais\xE9e,
-      entour\xE9e d'amis !\n[Bear]-A Grenouille ? Elle me semble pourtant peu loquace..."
+    - "[Bird]-Emilie... Je ne te savais pas si chipie !\n[Mouse]-Mais non voyons
+      ! On a fait un \xE9change honn\xEAte !\n[Bear]-Honn\xEAte !? Je ne suis pas
+      si b\xEAte !!!\n[Bird]-Calmez vous ! Comme vous, j'\xE9tais une vraie b\xE9casse 
+      !\n//Gr\xE2ce \xE0 Grenouille que je suis<?E:React/Trust, Bird, TRUE/>,\nJe
+      suis apais\xE9e, entour\xE9e <emcol val=Trust>d'amis</emcol> !\n[Bear]-A Grenouille
+      ? Elle me semble pourtant peu loquace..."
     - 
     - 'Emotion : Anticipation;
 
@@ -98,8 +97,8 @@ MonoBehaviour:
     - "\u24C7-B.Tuto2"
     - Bird
     - Advance
-    - "[Bird]-Son pouvoir est pourtant certain <?E:React/Trust, Bird, TRUE/>!\nElle
-      change les sons en \xE9motions !\nEt influe ce que nous disons et pensons !\n[Bear]-Bien
+    - "[Bird]-Son pouvoir est pourtant certain <?E:React/Trust, Bird, TRUE/>!\nIl
+      change les sons en \xE9motions !\nEt influ ce que nous disons et pensons !\n[Bear]-Bien
       \xE9trange pouvoir ! Il m'a l'air puissant !\n[Bird]-<shake><emcol val=fear>Et
       m\xEAme effrayant</emcol></shake>, utilis\xE9 par un m\xE9chant !\n//Mais il
       y a une condition, il amplifie l'\xE9motion !\nIl ne la cr\xE9e pas, il faut
@@ -116,9 +115,9 @@ MonoBehaviour:
     - "[Bird]-Grenouille a vu la confiance dans mon discours !\nEt d'un coup, je
       me sens pr\xEAte \xE0 gagner le concours !\n[Mouse]-Je n'ai jamais dout\xE9
       ! Grenouille est la meilleure amie qui soit !\n[Bear]-Le concours <?E:React/Surprise,
-      Bear, TRUE/>? <wiggle><emcol val=anticipation>Tu parles de quoi !</emcol></wiggle>\n[Bird]-Des
-      Grands Musiciens pardi !\nOn va jouer devant eux avec Grenouille et Souris
-      !\n//Toi aussi tu joues, de venir \xE7a te dit ?"
+      Bear, TRUE/>? <wiggle>Tu parles de quoi !</wiggle>\n[Bird]-Des Grands Musiciens
+      pardi !\nOn va jouer devant eux avec Grenouille et Souris !\n//Toi aussi tu
+      joues, de venir \xE7a te dit ?"
     - 
     - 'Emotion : Trust;
 
@@ -131,9 +130,9 @@ MonoBehaviour:
     - "[Bird]-Grenouille a ressenti la peur dans mon discours...\nJe ne me sens pas
       pr\xEAte pour le concours...\n[Mouse]-T'inqui\xE8tes, n'aie pas peur, nous
       jouerons devant eux et on va tout d\xE9chirer !\n[Bear]-Le concours <?E:React/Surprise,
-      Bear, TRUE/>? <wiggle><emcol val=anticipation>Tu parles de quoi !</emcol></wiggle>\n[Bird]-Des
-      Grands Musiciens...\nOn va jouer devant eux avec Grenouille et Souris !\n//Je
-      me pensais pr\xEAte... Et si mon talent \xE9tait parti !?"
+      Bear, TRUE/>? <wiggle>Tu parles de quoi !</wiggle>\n[Bird]-Des Grands Musiciens...\nOn
+      va jouer devant eux avec Grenouille et Souris !\n//Je me pensais pr\xEAte...
+      Et si mon talent \xE9tait parti !?"
     - 
     - 'Emotion : Fear;
 
@@ -169,7 +168,7 @@ MonoBehaviour:
     - "\u24C7-M.FS.Tuto1"
     - Mouse
     - Hint
-    - "[Mouse]-Voleuse... Non mais quel toupet <?E:React/Surprise, Mouse, TRUE/>!\n[Bear]-Ce
+    - "[Mouse]-<emcol val=Surprise>Voleuse !</emcol> Non mais quel toupet...\n[Bear]-Ce
       n'est que v\xE9rit\xE9 !\n[Bird]-Grenouille change les sons en \xE9motions
       !\nPour avancer, il faut choisir avec attention !\n"
     - 
@@ -185,9 +184,9 @@ MonoBehaviour:
     - "\u24C7-M.FS.Tuto3"
     - Mouse
     - Hint
-    - "[Mouse]-Je n'ai rien fait <?E:React/Surprise, Mouse, TRUE/>!\n[Bear]-Je te
-      poursuivrai dans toute la for\xEAt !\n[Bird]-Grenouille, aux discours fait
-      attentions \nAinsi, de leur coeur tu trouveras la solutions !"
+    - "[Mouse]-Je n'ai rien fait !\n[Bear]-Je te poursuivrai dans toute la for\xEAt
+      <?E:React/Surprise, Mouse, TRUE/>!\n[Bird]-Grenouille, aux discours fait attentions
+      \nAinsi, de leur coeur tu trouveras la solutions !"
     - 
     - 'Name : M.Tuto.0;'
     - "\u24C7-M.FS.Tuto4"
@@ -212,7 +211,7 @@ MonoBehaviour:
     - Mouse
     - Hint
     - "[Mouse]-hi-han !\n[Bear]-Es-tu folle !?\n[Mouse]-Non, je te prends pour un
-      \xE2ne, c'est dr\xF4le <?E:React/Trust, Mouse, TRUE/>!\n[Bird]-Grenouille,
+      \xE2ne<?E:React/Trust, Mouse, TRUE/>, c'est dr\xF4le !\n[Bird]-Grenouille,
       piti\xE9, trouve la bonne musique !\nL'ours risque de devenir moins civique..."
     - 
     - 'Name : M.Tuto.1;'
@@ -220,7 +219,7 @@ MonoBehaviour:
     - Mouse
     - Hint
     - "[Mouse]-La t\xEAte de mon p\xE8re quand z'ai piqu\xE9 la noix..<?E:React/Trust,
-      Mouse, TRUE/>.\n[Bear]-Il aurait honte de toi <?E:React/Fear, Cat, TRUE/>!\n[Bird]-Grenouille,
+      Mouse, TRUE/>.\n[Bear]-Il aurait honte de toi <?E:React/Fear, Mouse, TRUE/>!\n[Bird]-Grenouille,
       tu vois les \xE9motions dans les paroles,\nDans les gestes et les mots les
       signaux il faut que tu isoles !\n"
     - 
@@ -247,27 +246,26 @@ MonoBehaviour:
     - Hint
     - "[Mouse]-Viens avec nous l'ours, tu trouveras plein de nourriture !\n[Bear]-Venir
       avec vous !<?E:React/Surprise, Bear, TRUE/>? Avec une souris mesquine par nature
-      <?E:React/Anticipation, Cat, TRUE/>?\n[Bird]-Il h\xE9site \xE0 nous rejoindre
-      !\nGrenouille, trouve la note pour le convaincre !\n"
+      ?\n[Bird]-Il h\xE9site \xE0 nous rejoindre !\nGrenouille, trouve la note pour
+      le convaincre !\n"
     - 
     - 'Name : M.Tuto.3;'
     - "\u24C7-M.FS.Tuto11"
     - Mouse
     - Hint
-    - "[Mouse]-Ne me manze pas ! Soyons amis plut\xF4t !\n[Bear]-<wiggle><emcol val=anticipation>Amis
-      !</emcol></wiggle>< Avec une souris qui me prend pour un sot !?E:React/Surprise,
-      Bear, TRUE/>??\n[Mouse]-Viens avec nous et tu referas ton garde-manger !\nGrenouille,
-      joue, tu peux le convaincre que c'est une bonne id\xE9e !\n"
+    - "[Mouse]-Ne me manze pas ! Soyons amis plut\xF4t !\n[Bear]-<wiggle>Amis <E:React/Surprise,
+      Bear, TRUE/>!</wiggle>< Avec une souris qui me prend pour un sot !???\n[Mouse]-Viens
+      avec nous et tu referas ton garde-manger !\nGrenouille, joue, tu peux le convaincre
+      que c'est une bonne id\xE9e !\n"
     - 
     - 'Name : M.Tuto.3;'
     - "\u24C7-M.FS.Tuto12"
     - Mouse
     - Hint
-    - "[Mouse]-Ze peux pas te rembourser ! Z'ai d\xE9z\xE0 tout revendu !\n[Bear]-Tu
-      vas me le payer !\n[Mouse]-Ze te paye en noix ? Sans rire, viens avec nous,
-      tu trouveras \xE0 manzer <?E:React/surprise, Bear, TRUE/>!\n[Bear]-Mmmm...
-      <wiggle><emcol val=anticipation>Possible...</emcol></wiggle>\n[Bird]-Je peux
-      vous l'assurer !\nGrenouille, trouve la bonne note pour le rassurer !\n"
+    - "[Mouse]-Ze peux pas te rembourser ! Z'ai d\xE9z\xE0 tout revendu <?E:React/surprise,
+      Bear, TRUE/>!\n[Bear]-Tu vas me le payer !\n[Mouse]-Ze te paye en noix ? Sans
+      rire, viens avec nous, tu trouveras \xE0 manzer !\n[Bear]-Mmmm... <wiggle>Possible...</wiggle>\n[Bird]-Je
+      peux vous l'assurer !\nGrenouille, trouve la bonne note pour le rassurer !\n"
     - 
     - 'Name : M.Tuto.3;'
     - "\u24C7-B.FS.Tuto1"
@@ -281,7 +279,7 @@ MonoBehaviour:
     - "\u24C7-B.FS.Tuto2"
     - Bird
     - Hint
-    - "[Bird]-Souris ? Une voleuse <?E:React/Anticipation, Bird, TRUE/>?\nMe voil\xE0
+    - "[Bird]-Souris ? <emcol val=Anticipation>Une voleuse ?</emcol>\nMe voil\xE0
       soucieuse !\n[Mouse]-Charlie semble encore perdue,\nCe n'\xE9tait pas la bonne
       note ! Continue !\n"
     - 
@@ -305,7 +303,7 @@ MonoBehaviour:
     - "\u24C7-B.FS.Tuto5"
     - Bird
     - Hint
-    - "[Bird]-Je suis contente d'\xEAtre avec mes amis <?E:React/Trust, Bird, TRUE/>!\nLa
+    - "[Bird]-Je suis contente <emcol val=Trust>d'\xEAtre avec mes amis !</emcol>\nLa
       solitude ne rapporte que des ennuies !\n[Mouse]-Charlie semble encore dans
       ses pens\xE9es,\nCe n'\xE9tait pas la note qui la fera avancer !\n"
     - 
@@ -331,34 +329,32 @@ MonoBehaviour:
     - "\u24C7-B.FS.Tuto8"
     - Bird
     - Hint
-    - "[Bird]-Les \xE9motions changent selon la situation <?E:React/Fear, Bird, TRUE/>!\nLeur
-      utilit\xE9 varie, c'est le moment qui dicte la partition !\n[Mouse]-Regarde
-      bien sa mani\xE8re de parler !\nTu trouveras quelle note jouer <?E:React/Trust,
-      Bird, TRUE/>!\n"
+    - "[Bird]-Les \xE9motions changent selon la situation !\nLeur utilit\xE9 varie,
+      c'est le moment qui dicte la partition !\n[Mouse]-Regarde bien sa mani\xE8re
+      de parler !\nTu trouveras quelle note jouer <?E:React/Trust, Bird, TRUE/>!\n"
     - 
     - 'Name : B.Tuto.2;'
     - "\u24C7-B.FS.Tuto9"
     - Bird
     - Hint
-    - "[Bird]-On peut ressentir plusieurs \xE9motions \xE0 la fois <?E:React/Fear,
-      Bird, TRUE/>!\nDans ce cas, Grenouille peut faire un choix !\n[Mouse]-Regarde
-      bien sa mani\xE8re de parler !\nTu trouveras quelle note jouer <?E:React/Trust,
-      Bird, TRUE/>!\n"
+    - "[Bird]-On peut ressentir plusieurs \xE9motions \xE0 la fois !\nDans ce cas,
+      Grenouille peut faire un choix !\n[Mouse]-Regarde bien sa mani\xE8re de parler
+      !\nTu trouveras quelle note jouer <?E:React/Trust, Bird, TRUE/>!\n"
     - 
     - 'Name : B.Tuto.2;'
     - "\u24C7-B.FS.Tuto10"
     - Bird
     - Hint
-    - "[Bear]-Je suis intrigu\xE9 par cette histoire de concours..<?E:React/Surprise,
-      Bear, TRUE/>.\nEn gagnant je pourrai remettre mon stock \xE0 jour <?E:React/Anticipation,
-      Bear, TRUE/>!\n[Bird]-Il h\xE9site \xE0 nous rejoindre !\nGrenouille, trouve
-      la note pour le convaincre !\n"
+    - "[Bear]-Je suis intrigu\xE9 par cette histoire de concours...\nEn gagnant je
+      pourrai remettre mon stock \xE0 jour <?E:Sfx/Surprise, Bear, TRUE/>!\n[Bird]-Il
+      h\xE9site \xE0 nous rejoindre !\nGrenouille, trouve la note pour le convaincre
+      !\n"
     - 
     - 'Name : B.Tuto.3;'
     - "\u24C7-B.FS.Tuto11"
     - Bird
     - Hint
-    - "[Bear]-Les Grands-Musiciens !<?E:React/Surprise, Bear, TRUE/>? J'aurais aim\xE9
+    - "[Bear]-<emcol val=Surprise>Les Grands-Musiciens !?</emcol> J'aurais aim\xE9
       les voir...\n[Bird]-Venez avec nous et vous allez le pouvoir !\nGrenouille,
       il faut le faire vouloir !\n"
     - 
@@ -366,9 +362,9 @@ MonoBehaviour:
     - "\u24C7-B.FS.Tuto12"
     - Bird
     - Hint
-    - "[Bear]-Est-ce vrai <?E:React/Surprise, Bear, TRUE/>? Vous partez pour le concours
-      ?\nJe me m\xE9fie comme vous \xEAtes amis avec cette souris <?E:React/Anticipation,
-      Bear, TRUE/>!\n[Bird]-Je peux vous l'assurer !\nGrenouille, trouve la bonne
+    - "[Bear]-<emcol val=Surprise>Est-ce vrai</emcol> <?E:Sfx/Surprise, Bear, TRUE/>?
+      Vous partez pour le concours ?\nJe me m\xE9fie comme vous \xEAtes amis avec
+      cette souris !\n[Bird]-Je peux vous l'assurer !\nGrenouille, trouve la bonne
       note pour le rassurer !\n"
     - 
     - 'Name : B.Tuto.3;'
@@ -376,12 +372,12 @@ MonoBehaviour:
     - Global
     - Event
     - "[Bear]-J'exige que tu me rembourses Emilie !\n[Mouse]-Trop tard, ton miel
-      je l'ai d\xE9j\xE0 revendu <?E:React/Surprise, Bear, TRUE/>!\n[Bear]-Quoi !
-      tu as fait \xE7a, petite souris !\n[Bird]-Nous allons voir les Grands-Musiciens,
-      venez avec nous !\nSur le chemin vous trouverez de la nourriture partout !\n[Bear]-Mmm,
-      J'h\xE9site, je ne suis pas friand des voyages..<?E:React/Anticipation, Bear,
-      TRUE/>.\n[Mouse]-Grenouille, convainc-le avec ta musique, trouve son \xE9motion
-      !\nIl est fort, il faut qu'on l'engage !"
+      je l'ai d\xE9j\xE0 revendu <?E:React/Surprise, Bear, TRUE/>!\n[Bear]-<emcol
+      val=Surprise>Quoi !</emcol> tu as fait \xE7a, petite souris !\n[Bird]-Nous
+      allons voir les Grands-Musiciens, venez avec nous !\nSur le chemin vous trouverez
+      de la nourriture partout !\n[Bear]-Mmm, J'h\xE9site, je ne suis pas friand
+      des voyages...\n[Mouse]-Grenouille, convainc-le avec ta musique, trouve son
+      \xE9motion !\nIl est fort, il faut qu'on l'engage !"
     - 
     - 'Key : Block.1;'
     - "\u24C7-Dial.Intro.Tuto"
@@ -398,9 +394,9 @@ MonoBehaviour:
     - Bear
     - Harmony
     - "[Bear]-Cette joyeuse m\xE9lodie ne m\u2019atteint pas !\nJe suis sur mes gardes,
-      votre petite souris n\u2019es pas sympa <?E:React/Anticipation, Bear, TRUE/>!\n[Mouse]-\xE7a
-      va, n\u2019en fait pas tout un plat <?E:React/Surprise, Bear, TRUE/>!\n//Ah
-      ah ah, \u2018Tout un plat\u2019 !\nAlors que tu n\u2019as plus de repas !!!"
+      votre petite souris n\u2019es pas sympa !\n[Mouse]-\xE7a va, n\u2019en fait
+      pas tout un plat <?E:React/Surprise, Bear, TRUE/>!\n//Ah ah ah, \u2018Tout
+      un plat\u2019 !\nAlors que tu n\u2019as plus de repas !!!"
     - 
     - 'Emotion : Joy;
 
@@ -410,10 +406,9 @@ MonoBehaviour:
     - "\u24C7-H.Tuto.Trust.F"
     - Bear
     - Harmony
-    - "[Bear]-on est loin de ce que je ressens <?E:React/Surprise, Bear, TRUE/>!\nContre
-      votre souris je suis m\xE9fiant..<?E:React/Anticipation, Bear, TRUE/>.\n[Bird]-Grenouille
-      continue, joues des notes, fais du son !\nOn s\u2019approche de plus en plus
-      de ses \xE9motions !"
+    - "[Bear]-on est loin de ce que je ressens <?E:Sfx/Surprise, Bear, TRUE/>!\nContre
+      votre souris je suis m\xE9fiant...\n[Bird]-Grenouille continue, joues des notes,
+      fais du son !\nOn s\u2019approche de plus en plus de ses \xE9motions !"
     - 
     - 'Emotion : Trust;
 
@@ -423,10 +418,9 @@ MonoBehaviour:
     - "\u24C7-H.Tuto.Fear.F"
     - Bear
     - Harmony
-    - "[Bear]-Ta musique me fait froid dans le dos <?E:React/Anticipation, Bear,
-      TRUE/>!\nL\u2019hiver approche, et je suis sans r\xE9serve !!!\n[Mouse]-Balivernes
-      <?E:React/Surprise, Bear, TRUE/>!\n[Bear]-Quoi !?\n[Mouse]-Vu ton ventre, des
-      r\xE9serves, il t\u2019en reste !"
+    - "[Bear]-Ta musique me fait froid dans le dos !\nL\u2019hiver approche, et je
+      suis sans r\xE9serve !!!\n[Mouse]-Balivernes <?E:React/Surprise, Bear, TRUE/>!\n[Bear]-Quoi
+      !?\n[Mouse]-Vu ton ventre, des r\xE9serves, il t\u2019en reste !"
     - 
     - 'Emotion : Fear;
 
@@ -438,9 +432,8 @@ MonoBehaviour:
     - Harmony
     - "[Bear]-Ces notes ne sont pas gaies <?E:React/Surprise, Bear, TRUE/>!\n[Mouse]-\xE7a
       te va bien, toi qui r\xE2le tout le temps !\n[Bear]-Avec tout tes tours c\u2019est
-      bien normal <?E:React/Anticipation, Bear, TRUE/>!\n[Bird]-Toujours \xE0 se
-      chamailler...\nGrenouille, concentres-toi !\nQu\u2019ils cessent de se batailler
-      !"
+      bien normal !\n[Bird]-Toujours \xE0 se chamailler...\nGrenouille, concentres-toi
+      !\nQu\u2019ils cessent de se batailler !"
     - 
     - 'Emotion : Sadness;
 
@@ -452,8 +445,8 @@ MonoBehaviour:
     - Harmony
     - "[Bear]-Si jamais je n\u2019\xE9tais pas v\xE9g\xE9tarien je t\u2019aurais
       aval\xE9 !\n[Mouse]-Tu es v\xE9g\xE9tarien !? \xE7a me fait rigoler <?E:React/Surprise,
-      Bear, TRUE/>!\n[Bear]-Je fais ce que je veux, arr\xEAtes de te moquer <?E:React/Anticipation,
-      Bear, TRUE/>!\n[Bird]-Non pas encore, Grenouille joue plus fort !"
+      Bear, TRUE/>!\n[Bear]-Je fais ce que je veux, arr\xEAtes de te moquer !\n[Bird]-Non
+      pas encore, Grenouille joue plus fort !"
     - 
     - 'Emotion : Anger;
 
@@ -463,11 +456,10 @@ MonoBehaviour:
     - "\u24C7-H.Tuto.Disgust.F"
     - Bear
     - Harmony
-    - "[Bear]-Je me d\xE9teste... Me faire arnaquer par une petite souris..<?E:React/Anticipation,
-      Bear, TRUE/>.\n[Mouse]-Ce n\u2019est pas une arnaque, j\u2019ai pay\xE9 le
-      prix <?E:React/Surprise, Bear, TRUE/>!\n[Bear]-Des centaines de pots de miel
-      contre une noix pourrie !!!\n[Bird]-C\u2019est d\xE9sesp\xE9rant, mais que
-      ressent-il bon sang..."
+    - "[Bear]-Je me d\xE9teste... Me faire arnaquer par une petite souris...\n[Mouse]-Ce
+      n\u2019est pas une arnaque, j\u2019ai pay\xE9 le prix <?E:React/Surprise, Bear,
+      TRUE/>!\n[Bear]-Des centaines de pots de miel contre une noix pourrie !!!\n[Bird]-C\u2019est
+      d\xE9sesp\xE9rant, mais que ressent-il bon sang..."
     - 
     - 'Emotion : Disgust;
 
@@ -510,7 +502,7 @@ MonoBehaviour:
     - "\u24C7-M.1.1"
     - Mouse
     - Advance
-    - "[Mouse]-Un chat ! Un loup ! Un quoi !?\n// Peu importe ce que t'es, <shake><emcol
+    - "[Mouse]-Un chat ! Un loup ! Un quoi !?\n//Peu importe ce que t'es, <shake><emcol
       val=fear>ne me manze pas piti\xE9 !</emcol></shake>\n[Cat]-Je l\u2019avais
       pr\xE9vu, en toute bonne fois !\nMais je crains que votre ours ne me ferait
       pas de quartier...\n[Bear]-C\u2019est certain, ce ne serait pas malin..<?E:React/Trust,
@@ -527,7 +519,7 @@ MonoBehaviour:
     - '[Mouse]-<shake><emcol val=fear>Tu ne vas pas me manzer hein !?</emcol></shake>
 
       L''ours
-      l''a dit, ce ne serait pas malin <?E:React/Trust, Mouse, TRUE/>!'
+      l''a dit, ce ne serait pas malin !'
     - 
     - 'Name : M.1.F1'
     - "\u24C7-M.1.1b"
@@ -544,10 +536,11 @@ MonoBehaviour:
     - Advance
     - "[Mouse]-C'est vrai qu'avec toi M.Ernest, z'ai rien \xE0 craindre !\n[Bear]-Mais
       oui, pas la peine de geindre !\n[Mouse]-D'ailleurs, un chat-loup seul dans
-      les bois?\nC'est quoi cette histoire, ze te crois pas <?E:React/Fear, Mouse,
-      TRUE/>!\n[Cat]-Plus jeune je me perdis dans la for\xEAt,\nUn loup m'a recueilli,
-      avant hier encore il m'adorait !\n// Mais je l'ai d\xE9\xE7u, il m'a chass\xE9,
-      pire, <bounce><emcol val=surprise>il veut me d\xE9vorer </emcol></bounce>!"
+      les bois?\n<emcol val=Surprise>C'est quoi cette histoire</emcol>, ze te crois
+      pas !\n[Cat]-Plus jeune je me perdis dans la for\xEAt,\nUn lou<?E:React/Fear,
+      Mouse, TRUE/>p m'a recueilli, avant hier encore il m'adorait !\n// Mais je
+      l'ai d\xE9\xE7u, il m'a chass\xE9, pire, <bounce>il veut me d\xE9vorer</bounce>
+      !"
     - 
     - 'Emotion : Trust;
 
@@ -557,8 +550,9 @@ MonoBehaviour:
     - "\u24C7-M.1.2a"
     - Mouse
     - Hint
-    - "[Mouse]-Ton p\xE8re veut te manzer !!! Pas tr\xE8s zentil \xE7a !\nMais bien
-      fait ! C'est toi qui veux faire de moi un repas <?E:React/Fear, Mouse, TRUE/>!"
+    - "[Mouse]-Ton p\xE8re veut te manzer !!<?E:React/Surprise, Mouse, TRUE/>! Pas
+      tr\xE8s zentil \xE7a !\nMais bien fait ! C'est toi qui veux faire de moi <emcol
+      val=Fear>un repas !</emcol>"
     - 
     - 'Name : M.1.F2;'
     - "\u24C7-M.1.2b"
@@ -574,9 +568,10 @@ MonoBehaviour:
     - Advance
     - "[Mouse]-Pourquoi ton p\xE8re ferait \xE7a ?\n[Cat]-Il voyait tr\xE8s mal...
       Mais depuis hier sa vue va !\nIl a \xE9t\xE9 d\xE9\xE7u de moi, de ma forme
-      de chat !\n[Mouse]-Ducoup tu es tout seul dans les bois...\nLa solitude ze
-      connais aussi, m\xEAme si z'ai une famille<?E:React/Sadness, Mouse, TRUE/>.\n//
-      Une port\xE9e de 158 souris, et mais ze suis la seule fille..."
+      de chat !\n[Mouse]-Ducoup tu es <emcol val=Sadness>tout seul</emcol> dans les
+      bois..<?E:React/Sadness, Mouse, TRUE/>.\nLa solitude ze connais aussi, m\xEAme
+      si z'ai une famille.\n//Une port\xE9e de cent-cinquante-huit souris, mais ze
+      suis la seule fille..."
     - 
     - 'Emotion : Surprise;
 
@@ -586,26 +581,25 @@ MonoBehaviour:
     - "\u24C7-M.1.3a"
     - Mouse
     - Hint
-    - '[Mouse]-157, ce n''est pas une vie pour une souris..<?E:React/Sadness, Mouse,
-      TRUE/>.'
+    - "[Mouse]-cent-cinquante-sept fr\xE8res, ce n'est pas une vie pour une souris..<?E:React/Sadness,
+      Mouse, TRUE/>."
     - 
     - 'Name : M.1.F3;'
     - "\u24C7-M.1.3b"
     - Mouse
     - Hint
-    - "[Mouse]-Tu me chagrine, tout seul dans cette grande for\xEAt..<?E:React/Sadness,
-      Mouse, TRUE/>."
+    - "[Mouse]-Tu me <emcol val=Sadness>chagrine</emcol>, tout seul dans cette grande
+      for\xEAt..."
     - 
     - 'Name : M.1.F3;'
     - "\u24C7-M.1.4"
     - Mouse
     - Advance
-    - "[Mouse]-La seule fille !!! T'imazines !?\n// Que des bourrins ! Ils aiment
-      la bousculer la franzine <?E:React/Anticipation, Mouse, TRUE/>!\n[Cat]-Tu dois
-      t'amuser ! J'aurais aim\xE9 des fr\xE8res moi !\n[Mouse]-Tu parles ! Toute
-      la zourn\xE9e on doit ramasser des noix !\nMon p\xE8re adore les noix... Mais
-      moi z'aime pas \xE7a !\n// Ma tantine est l\xE0, heureusement pour moi..<?E:React/Trust,
-      Mouse, TRUE/>."
+    - "[Mouse]-La seule fille !!! T'imazines !?\n//Que des bourrins ! Ils aiment
+      la bousculer la franzine !\n[Cat]-Tu dois t'amuser ! J'aurais aim\xE9 des fr\xE8res
+      moi !\n[Mouse]-Tu parles ! Toute la zourn\xE9e on doit ramasser des noix <?E:React/Anticipation,
+      Mouse, TRUE/>!\nMon p\xE8re adore les noix... Mais moi z'aime pas \xE7a !\n//Ma
+      tantine est l\xE0, heureusement pour moi..<?E:React/Trust, Mouse, TRUE/>."
     - 
     - 'Emotion : Sadness;
 
@@ -616,16 +610,16 @@ MonoBehaviour:
     - Mouse
     - Hint
     - "[Mouse]-Je devais constamment me m\xE9fier de mes fr\xE8res..<?E:React/Anticipation,
-      Mouse, TRUE/>.\nHeureusement, ma tante et moi on jouait dans le dos de p\xE8re
-      <?E:React/Trust, Mouse, TRUE/>!"
+      Mouse, TRUE/>.\nHeureusement, <emcol val=Trust>ma tante et moi</emcol> on jouait
+      dans le dos de p\xE8re !"
     - 
     - 'Name : M.1.F4;'
     - "\u24C7-M.1.4b"
     - Mouse
     - Hint
     - "[Mouse]-Ma tante est tout pour moi <?E:React/Trust, Mouse, TRUE/>!\nElle n'est
-      pas appr\xE9ci\xE9e par p\xE8re, fallait pas qu'il nous voit <?E:React/Anticipation,
-      Mouse, TRUE/>!"
+      pas appr\xE9ci\xE9e par p\xE8re, <emcol val=Anticipation>fallait pas qu'il
+      nous voit !</emcol>"
     - 
     - 'Name : M.1.F4;'
     - "\u24C7-M.1.5"
@@ -646,8 +640,8 @@ MonoBehaviour:
     - "\u24C7-M.1.5a"
     - Mouse
     - Hint
-    - "[Mouse]-Le son de la harpe, la musique en g\xE9n\xE9ral me rempli de bonheur
-      <?E:React/Joy, Mouse, TRUE/>!"
+    - "[Mouse]-Le son de la harpe, la musique en g\xE9n\xE9ral <emcol val=Joy>me
+      rempli de bonheur !</emcol>"
     - 
     - 'Name : M.1.F5;'
     - "\u24C7-M.1.5b"
@@ -664,9 +658,10 @@ MonoBehaviour:
       zouais ma musique (mon p\xE8re n'aime pas \xE7a...)\n//Grenouille, c'est comme
       \xE7a que ze t'ai rencontr\xE9 !\nTu \xE9tais seule et ne pouvais parler...\n//
       On aimait la musique et maintenant on ne peut plus se s\xE9parer !\n[Cat]-Quelle
-      belle histoire est votre amiti\xE9 ! Je l'envie..<?E:Sfx/Sadness, Cat, TRUE/>.\nSois
-      tranquille, je ne veux plus \xEAtre ton ennemi.\n[Mouse]-Tu me fais penser
-      \xE0 Grenouille, m\xEAme si de toi encore ze me m\xE9fie..."
+      belle histoire est votre amiti\xE9 ! Je l'envie...\nSois tranquille, je ne
+      veux plus \xEAtre ton ennemi.\n[Mouse]-Tu me fais penser \xE0 Grenouille, m\xEAme
+      si de toi encore ze me m\xE9fie...\n[Cat]-Ce n'est pas de moi que tu devrais
+      te m\xE9fier<?E:Sfx/Fear, Cat, TRUE/>."
     - 
     - 'Emotion : Joy;
 
@@ -687,18 +682,18 @@ MonoBehaviour:
     - Mouse
     - Hint
     - "[Mouse]-Ze t'aurais bien dit de venir avec nous, mais t'es trop chat !\n[Cat]-Je
-      comprends, de toute fa\xE7on je suis chez moi dans ces bois !\nOu j'\xE9tais
-      chez moi..<?E:React/Sadness, Cat, TRUE/>."
+      comprends, de toute fa\xE7on je suis chez moi dans ces bois !\n<emcol val=Fear>Enfin
+      j'esp\xE8re...</emcol>"
     - 
     - 'Name : M.1.F6;'
     - "\u24C7-M.1.7"
     - Mouse
     - Advance
-    - "[Mouse]-Tantine me raconte plein d'histoire sur les chats danzereux <?E:React/Joy,
-      Mouse, TRUE/>!\n// Elle a d\xE9z\xE0 rencontr\xE9 un chat-loup teigneux <?E:React/Fear,
-      Mouse, TRUE/>!\nIl voulait la faire cuire dans une marmite de vin !\n[Cat]-Oh...
-      Et elle s'en est sortie de son bain ?\n[Mouse]-Oui mais sa peur, elle s'en
-      souvient !\n// Cette harpe c'\xE9tait son bien !"
+    - "[Mouse]-Tantine me raconte plein d'histoire sur les chats danzereux !\n//Elle
+      a d\xE9z\xE0 rencontr\xE9 un chat-loup teigneux !\nIl voulait la faire cuire
+      dans une marmite de vin !\n[Cat]-Oh... Et elle s'en est sortie de son bain
+      ?\n[Mouse]-Oui mais <emcol val=Fear>sa peur</emcol>, elle s'en souvient !\n//Cette
+      harpe c'\xE9tait son bien <?E:React/Joy, Mouse, TRUE/>!"
     - 
     - 'Emotion : Anticipation;
 
@@ -710,7 +705,7 @@ MonoBehaviour:
     - Hint
     - "[Mouse]-De ce qu'elle me dit <shake><emcol val=fear>les chats sont terrifiant
       !</emcol></shake>\nMais c'est peut-\xEAtre exag\xE9r\xE9, je me sens plut\xF4t
-      confiant..<?E:React/Joy, Mouse, TRUE/>."
+      confiant..."
     - 
     - 'Name : M.1.F7;'
     - "\u24C7-M.1.7b"
@@ -726,7 +721,7 @@ MonoBehaviour:
     - "[Mouse]-M.Ernest ! Faites-le fuir, <shake><emcol val=fear>z'ai peur pour ma
       vie !</emcol></shake>\n[Bear]-Il n'osera pas si je suis l\xE0...\n[Mouse]-Les
       chats apportent toujours les ennuis !\n[Bear]-Ne t'en fais pas je te dis !\n[Mouse]-Il
-      veut m'assassiner, me vider me manzer !!!!"
+      veut m'assassiner, me vider ! me manzer !!<?E:React/Fear, Mouse, TRUE/>!"
     - 
     - 'Emotion : Fear;
 
@@ -742,19 +737,18 @@ MonoBehaviour:
     - "\u24C7-M.1.8b"
     - Mouse
     - Hint
-    - "[Mouse]-Je ne veux pas \xEAtre d\xE9vor\xE9 <?E:React/Fear, Mouse, TRUE/>!"
+    - "[Mouse]-Je ne veux pas \xEAtre <emcol val=Fear>d\xE9vor\xE9 !</emcol>"
     - 
     - 'Name : M.1.F8;'
     - "\u24C7-M.1.9"
     - Mouse
     - Advance
-    - "[Mouse]-Il est l\xE0 pour moi, z'en suis s\xFBr <?E:React/Fear, Mouse, TRUE/>!\n[Cat]-Je
-      ne m'en prendrai pas \xE0 toi avec l'ours, ne t'inqui\xE8tes pas.\n[Mouse]-Mouais,
-      qu'est-ce que tu fais l\xE0 tout seul, dans ces bois<?E:React/Anticipation,
-      Mouse, TRUE/>!\n[Cat]-J'ai \xE9t\xE9 \xE9lev\xE9 par le loup aveugle ici, c'est
-      juste chez moi !\n// Mais comme il vient de retrouver la vue,\nDe mon apparence
-      de chat il a \xE9t\xE9 d\xE9\xE7u et il me veut au menu..<?E:React/Disgust,
-      Mouse, TRUE/>."
+    - "[Mouse]-Il est l\xE0 pour moi, z'en suis s\xFBr !\n[Cat]-Je ne m'en prendrai
+      pas \xE0 toi avec l'ours, ne t'inqui\xE8tes pas.\n[Mouse]-Mouais, qu'est-ce
+      que tu fais l\xE0 tout seul, dans ces bois<?E:React/Anticipation, Mouse, TRUE/>!\n[Cat]-J'ai
+      \xE9t\xE9 \xE9lev\xE9 par le loup aveugle ici, c'est juste chez moi !\n//Mais
+      comme il vient de retrouver la vue,\nDe mon apparence de chat il a \xE9t\xE9
+      d\xE9\xE7u et il me veut au menu..<?E:React/Fear, Mouse, TRUE/>."
     - 
     - 'Emotion : Fear;
 
@@ -764,25 +758,25 @@ MonoBehaviour:
     - "\u24C7-M.1.9a"
     - Mouse
     - Hint
-    - "[Mouse]-Comment ne pas \xEAtre d\xE9\xE7u des chats..<?E:React/Disgust, Mouse,
-      TRUE/>.\nCe sont juste des malfrats <?E:React/Fear, Mouse, TRUE/>!"
+    - "[Mouse]-<emcol val=Disgust>Comment ne pas \xEAtre d\xE9\xE7u des chats...</emcol>\nCe
+      sont juste des malfrats <?E:React/Anticipation, Mouse, TRUE/>!"
     - 
     - 'Name : M.1.F9;'
     - "\u24C7-M.1.9b"
     - Mouse
     - Hint
     - "[Mouse]-Toujours se m\xE9fier des chats !<?E:React/Anticipation, Mouse, TRUE/>\nRel\xE2che
-      ta vigilance est s'en est fini de toi <?E:React/Fear, Mouse, TRUE/>!"
+      ta <emcol val=Anticipation>vigilance</emcol> est s'en est fini de toi !"
     - 
     - 'Name : M.1.F9;'
     - "\u24C7-M.1.10"
     - Mouse
     - Advance
     - "[Mouse]-Elev\xE9 par un loup <?E:React/Disgust, Mouse, TRUE/>! \n<shake><emcol
-      val=fear>Mais t'es encore plus dangereux !!!</emcol></shake>\n// Ma tante a
+      val=fear>Mais t'es encore plus dangereux !!!</emcol></shake>\n//Ma tante a
       d\xE9j\xE0 rencontr\xE9 un chat-loup teigneux !\nIl voulait la faire cuir dans
       une marmite de vin !\n[Cat]-Oh... Et elle s'en est sortie de son bain ?\n[Mouse]-Elle
-      a bu tout le vin !\n// Ne me fais pas bouillir assassin !"
+      a bu tout le vin !\n//Ne me fais pas bouillir assassin !"
     - 
     - 'Emotion : Fear;
 
@@ -792,9 +786,9 @@ MonoBehaviour:
     - "\u24C7-M.1.10a"
     - Mouse
     - Hint
-    - "[Mouse]-<shake><emcol val=fear>Cuire dans du vin !</emcol></shake>\nIl aurait
-      pu mettre de l'huile plut\xF4t, c'est moins d\xE9go\xFBtant <?E:React/Disgust,
-      Mouse, TRUE/>!"
+    - "[Mouse]-<shake>Cuire dans du vin <?E:React/Fear, Mouse, TRUE/>!</shake>\nIl
+      aurait pu mettre de l'huile plut\xF4t, c'est moins <emcol val=Disgust>d\xE9go\xFBtant</emcol>
+      !"
     - 
     - 'Name : M.1.F10;'
     - "\u24C7-M.1.10b"
@@ -809,9 +803,9 @@ MonoBehaviour:
     - Advance
     - "[Mouse]-Ma tante n'ose plus sortir de chez elle !\n// Cette harpe, c'est elle
       qui me l'a donn\xE9.\nQuand j'ai peur je joue pour me rassurer...\n// Reste
-      loin de moi !!!\n[Cat]-<shake>Je t'ai dis que je ne voulais plus te manger
-      !</shake>\nPuis mince, je n'ai pas le temps pour toi,</emcol></shake>\n<shake><emcol
-      val=fear>C'est moi qui vais finir par \xEAtre d\xE9vor\xE9 !</emcol></shake>"
+      loin de moi !!!\n[Cat]-Je t'ai dis que je ne voulais plus te manger !\nPuis
+      mince, je n'ai pas le temps pour toi, <shake><emcol val=fear>C'est moi qui
+      vais finir par \xEAtre d\xE9vor\xE9 !</emcol></shake>"
     - 
     - 'Emotion : Fear;
 
@@ -833,8 +827,8 @@ MonoBehaviour:
     - Mouse
     - Hint
     - "[Mouse]-Ma tante m'a mise en garde contre vous tous !\n[Cat]-On est pas tous
-      comme \xE7a, n'ai pas la frousse !\nPeu importe ou je vais, je ne serai jamais
-      accept\xE9..<?E:React/Sadness, Cat, TRUE/>."
+      comme \xE7a, n'ai pas la <emcol val=Fear>frousse !</emcol>\nPeu importe ou
+      je vais, je ne serai jamais accept\xE9..."
     - 
     - 'Name : M.1.F11;'
     - "\u24C7-M.1.12"
@@ -845,7 +839,7 @@ MonoBehaviour:
       es s\xE9rieuses la souris !!<?E:React/Fear, Cat, TRUE/>!\n[Bear]-On se calme,
       personne ne veut d'ennuis...\n[Mouse]-C'est vite dit ! La derni\xE8re fois
       que ma tante a rencontr\xE9 un chat,\nIl a voulu la cuire dans une marmite
-      de vin ! C'est d\xE9goutant !"
+      de vin ! C'est <emcol val=Disgust>d\xE9goutant !</emcol>"
     - 
     - 'Emotion : Disgust;
 
@@ -856,15 +850,15 @@ MonoBehaviour:
     - Mouse
     - Hint
     - "[Mouse]-Tu m'\xE9tonnes que le loup a \xE9t\xE9 surpris en voyant \xE7a..<?E:React/Disgust,
-      Mouse, TRUE/>.\n[Cat]-Arr\xEAte \xE7a <?E:React/Fear, Cat, TRUE/>!"
+      Mouse, TRUE/>.\n[Cat]-Arr\xEAte \xE7a !"
     - 
     - 'Name : M.1.F12;'
     - "\u24C7-M.1.12b"
     - Mouse
     - Hint
-    - "[Mouse]-Cuire dans du vin <?E:React/Fear, Cat, TRUE/>!\nIl aurait pu mettre
-      de l'huile plut\xF4t, c'est moins d\xE9go\xFBtant <?E:React/Disgust, Mouse,
-      TRUE/>!"
+    - "[Mouse]-<shake>Cuire dans du vin <?E:React/Fear, Mouse, TRUE/>!</shake>\nIl
+      aurait pu mettre de l'huile plut\xF4t, c'est moins <emcol val=Disgust>d\xE9go\xFBtant</emcol>
+      !"
     - 
     - 'Name : M.1.F12;'
     - "\u24C7-M.1.13"
@@ -872,10 +866,10 @@ MonoBehaviour:
     - Advance
     - "[Mouse]-A-ouh !!!\n[Cat]-Quoi ! Qu'est-ce que ! Tu te fiches de moi !?\n[Mouse]-Ah
       Ah Ah, tu verrais ta t\xEAte !\n[Cat]-<shake>Attention, je peux te faire ta
-      f\xEAte !</shake>\n[Mouse]-Au final c'est toi la proie, pas moi !\nTu as plus
-      peur du loup que je n'ai peur de toi !\nTu ne me feras rien, je n'ai plus peur
-      de toi !\n[Cat]-Tu as raison, je suis path\xE9tique, je n'ai pas le coeur \xE0
-      te prendre en proie..<?E:Sfx/Sadness, Cat, TRUE/>."
+      f\xEAte !</shake>\n[Mouse]-Au final c'est toi la proie<?E:React/Fear, Cat,
+      TRUE/>, pas moi !\nTu as plus peur du loup que je n'ai peur de toi !\nTu ne
+      me feras rien, je n'ai plus peur de toi !\n[Cat]-Tu as raison, je suis path\xE9tique,
+      je n'ai pas le coeur \xE0 te prendre en proie..."
     - 
     - 'Emotion : Disgust;
 
@@ -888,17 +882,16 @@ MonoBehaviour:
     - "\u24C7-M.1.13a"
     - Mouse
     - Hint
-    - '[Mouse]-Tu es ridicule !
-
-      [Cat]-Je sais, ma situation est risible pour
-      une souris..<?E:React/Sadness, Cat, TRUE/>.'
+    - "[Mouse]-Tu es ridicule !\n[Cat]-Je sais, ma situation est risible pour une
+      souris...\nMais il y a plus dont j'ai \xE0 \xEAtre inquiet <?E:React/Fear,
+      Cat, TRUE/>!"
     - 
     - 'Name : M.1.F13;'
     - "\u24C7-M.1.13b"
     - Mouse
     - Hint
     - "[Mouse]-Les chats me d\xE9go\xFBtent !\n[Cat]-Mon p\xE8re pense la m\xEAme
-      chose que toi..<?E:React/Sadness, Cat, TRUE/>."
+      chose que toi...\n<emcol val=Fear>Que feras t-il de moi !?</emcol>"
     - 
     - 'Name : M.1.F12;'
     - "\u24C7-B.1.1"
@@ -907,9 +900,9 @@ MonoBehaviour:
     - "[Bird]-Si vous vous d\xEEtes loup, vous \xEAtes vraiment fou !\nVous \xEAtes
       un chat, et \xE7a se voit !\n[Cat]-Je suis loup car mon p\xE8re est loup !\nIl
       m'a recueilli et \xE9lev\xE9 malgr\xE9 une vue flou !\n[Bird]-Alors que faites-vous
-      sur les routes ?\nPourquoi nous imposer cette joute ?\n[Cat]-Je suis affam\xE9,
-      je suis chat. Votre amie souris fera un bon casse-cro\xFBte <?E:React/Anger,
-      Bird, TRUE/>!"
+      sur les routes ?\nPourquoi nous imposer cette <emcol val=Anger>joute</emcol>
+      ?\n[Cat]-Je suis affam\xE9, je suis chat. Votre amie souris fera un bon casse-cro\xFBte
+      <?E:React/Anger, Bird, TRUE/>!"
     - 
     - 'Emotion : Surprise;
 
@@ -926,7 +919,8 @@ MonoBehaviour:
     - "\u24C7-B.1.1b"
     - Bird
     - Hint
-    - '[Bird]-Manger Emilie ? Pas tant que je serais ici <?E:React/Anger, Bird, TRUE/>!'
+    - '[Bird]-<emcol val=Anger>Manger Emilie ?</emcol> Pas tant que je serais ici
+      !'
     - 
     - 'Name : B.1.F1'
     - "\u24C7-B.1.2"
@@ -955,7 +949,7 @@ MonoBehaviour:
     - Bird
     - Hint
     - "[Bird]-Je vous comprends vous savez...\nUn p\xE8re ne devrait pas de la sorte
-      s'\xE9nerver <?E:React/Anger, Bird, TRUE/>!"
+      <emcol val=Anger>s'\xE9nerver !</emcol>"
     - 
     - 'Name : B.1.F2;'
     - "\u24C7-B.1.3"
@@ -963,7 +957,7 @@ MonoBehaviour:
     - Advance
     - "[Bird]-Croyez-moi, je vous comprends<?E:React/Trust, Bird, TRUE/>. \nVotre
       peur j'entends et votre tristesse je ressens.\n[Cat]-Vous avez un p\xE8re qui
-      cherche \xE0 vous d\xE9vorer !?\n[Bird]-Non, mais <swing><emcol val=sadness>moi
+      cherche \xE0 vous d\xE9vorer !?\n[Bird]-Non, mais <swing><emcol val=Sadness>moi
       aussi dans un sens j'ai \xE9t\xE9 rejet\xE9e...</emcol></swing>\nJe suis Charlie
       Voli\xE8re, la fa...\n[Cat]-<incr>Voli\xE8re !?</incr> Les c\xE9l\xE8bres com\xE9diens
       chanteurs !?\n[Bird]-Oui... Mais je n'ai pas h\xE9rit\xE9 de leur voix...\nEt
@@ -978,7 +972,7 @@ MonoBehaviour:
     - Bird
     - Hint
     - "[Bird]-Votre p\xE8re n'est pas aimant..<?E:React/Sadness, Bird, TRUE/>.\nPourtant
-      vous \xEAtes bien charmant..<?E:React/Trust, Bird, TRUE/>."
+      <emcol val=Trust>vous \xEAtes bien charmant...</emcol>"
     - 
     - 'Name : B.1.F3;'
     - "\u24C7-B.1.3b"
@@ -993,7 +987,7 @@ MonoBehaviour:
     - Advance
     - "[Bird]-Mais je ne veux pas vous attrister, au contraire !\nPour suivre ma
       voie j'ai fui mon p\xE8re !\n//Grenouille et souris m'ont accueilli\n<wave><emcol
-      val=joy>Depuis, le bonheur et la chance me sourient !</emcol></wave>\n[Mouse]-C'est
+      val=Joy>Depuis, le bonheur et la chance me sourient !</emcol></wave>\n[Mouse]-C'est
       vrai \xE7a ! Quand on t'as crois\xE9 t'\xE9tais toute triste !\nPuis hop, un
       coup de tambour de Grenouille et la voil\xE0 sur la piste !"
     - 
@@ -1005,8 +999,8 @@ MonoBehaviour:
     - "\u24C7-B.1.4a"
     - Bird
     - Hint
-    - "[Bird]-Si j'ai pu \xEAtre consol\xE9 par mes amis !\n<wave><emcol val=joy>Il
-      y a bon espoir pour vous aussi !</emcol></wave>"
+    - "[Bird]-Si j'ai pu \xEAtre consol\xE9 par mes amis !\n<wave>Il y a bon espoir
+      pour vous aussi <?E:React/Joy, Bird, TRUE/>!</wave>"
     - 
     - 'Name : B.1.F4;'
     - "\u24C7-B.1.4b"
@@ -1020,11 +1014,11 @@ MonoBehaviour:
     - Bird
     - Advance
     - "[Bird]-Je me suis fabriqu\xE9 une nouvelle voix avec cet instrument !\nEt
-      j'ai quitt\xE9 ma famille qui ne respectait pas mon nouveau talent !\n// :
-      Quoi qu'il en soit, si le destin m'a souri,\nIl le peut pour vous aussi !\nMais
-      vous devez \xE9pargner souris !\n[Cat]-Vous parlez beaucoup mais avec v\xE9rit\xE9..<?E:Sfx/Sadness,
-      Cat, TRUE/>.\nJ'accepte votre amie d'\xE9pargner.\n<shake><emcol val=fear>Mais
-      \xE7a ne me sauvera pas de mon p\xE8re enrag\xE9...</emcol></shake>"
+      j'ai quitt\xE9 ma famille qui ne respectait pas mon nouveau talent !\n//Quoi
+      qu'il en soit, si le destin m'a souri,\nIl le peut pour vous aussi !\nMais
+      vous devez \xE9pargner souris !\n[Cat]-Vous parlez beaucoup mais avec v\xE9rit\xE9..\nJ'accepte
+      votre amie d'\xE9pargner.\n<shake><emcol val=fear>Mais \xE7a ne me sauvera
+      pas de mon p\xE8re enrag\xE9...</emcol></shake>"
     - 
     - 'Emotion : Joy;
 
@@ -1038,27 +1032,27 @@ MonoBehaviour:
     - Bird
     - Hint
     - "[Bird]-Me voil\xE0 combl\xE9e, vous \xEAtes aimable en plus d'\xEAtre charmant
-      !\n[Cat]-Mais \xE7a ne me sauvera pas du sort qui m'attend <?E:React/Sadness,
+      !\n[Cat]-Mais \xE7a ne me sauvera pas du sort qui m'attend <?E:React/Fear,
       Cat, TRUE/>!"
     - 
     - 'Name : B.1.F5;'
     - "\u24C7-B.1.5b"
     - Bird
     - Hint
-    - '[Bird]-Vous laissez souris tranquille ? Vraiment ?
-
-      [Cat]-Du moment
-      qu''il ne me cherche pas, elle ne me trouvera pas <?E:React/Sadness, Cat, TRUE/>!'
+    - "[Bird]-Vous laissez souris tranquille ? Vraiment ?\n[Cat]-Du moment qu'elle
+      ne me cherche pas, elle ne me trouvera pas !\n//Je ne peux pas en dire autant
+      quant \xE0 mon p\xE8re..<?E:React/Fear, Cat, TRUE/>."
     - 
     - 'Name : B.1.F5;'
     - "\u24C7-B.1.6"
     - Bird
     - Advance
-    - "[Bird]-Quel p\xE8re indigne ! <shake><emcol val=anger>C'est inadmissible!</emcol></shake>\n[Cat]-Pas
+    - "[Bird]-Quel p\xE8re indigne ! <shake><emcol val=Anger>C'est inadmissible!</emcol></shake>\n[Cat]-Pas
       la peine de s'emporter, c'est compr\xE9hensible..<?E:React/Trust, Bird, TRUE/>.\n[Bird]-Non,
       un p\xE8re qui n'accepte pas la nature de son enfant...\nCe n'est qu'un <shake>*cui-cui-cui-cui*
       !</shake>\n[Cat]-Pourquoi cette histoire vous touche tant ?\n[Mouse]-Son p\xE8re
-      la jet\xE9 car pour chanter elle n'a pas de talent !\n[Bird]-Esp\xE8ce de *cui-cui-cui*"
+      la jet\xE9 car pour chanter elle n'a pas de talent !\n[Bird]-<emcol val=Anger>Esp\xE8ce
+      de *cui-cui-cui* !</emcol>"
     - 
     - 'Emotion : Anger;
 
@@ -1075,7 +1069,7 @@ MonoBehaviour:
     - "\u24C7-B.1.6b"
     - Bird
     - Hint
-    - '[Bird]-<shake><emcol val=anger>Quel parent abandonne son enfant !</emcol></shake>
+    - '[Bird]-<shake><emcol val=Anger>Quel parent abandonne son enfant !</emcol></shake>
 
       Il
       faut leur prouver qu''on vaut autant <?E:React/Trust, Bird, TRUE/>!'
@@ -1102,15 +1096,15 @@ MonoBehaviour:
     - Hint
     - '[Bird]-Maintenant je viens bien <?E:React/Joy, Bird, TRUE/>!
 
-      En route
-      vers les Grands Musiciens <?E:React/Trust, Bird, TRUE/>!'
+      <emcol
+      val=Trust>En route</emcol> vers les Grands Musiciens !'
     - 
     - 'Name : B.1.F7;'
     - "\u24C7-B.1.7b"
     - Bird
     - Hint
-    - "[Bird]-Gr\xE2ce \xE0 Grenouille et Souris<?E:React/Trust, Bird, TRUE/>,\nMe
-      voil\xE0 \xE9panouie <?E:React/Joy, Bird, TRUE/>!"
+    - "[Bird]-Gr\xE2ce \xE0 Grenouille et Souris<?E:React/Trust, Bird, TRUE/>,\n<emcol
+      val=Joy>Me voil\xE0 \xE9panouie !</emcol>"
     - 
     - 'Name : B.1.F7;'
     - "\u24C7-B.1.8"
@@ -1120,9 +1114,10 @@ MonoBehaviour:
       \xE0 p\xE8re qui me fit chanter : \nJe donnais l'instrument ou je prenais la
       porte.\n//Me voil\xE0 hors du nid avec un objectif !\nRencontrer les Grands-Musiciens
       de la for\xEAt et d'eux \xEAtre reconnue et respect\xE9e.\n[Cat]-Un bien beau
-      r\xEAve... Mon p\xE8re aussi \xE9tait musicien !\n<swing><emcol val=sadness>Sa
-      musique me manque,</emcol></swing> il jouait si bien !\n[Mouse]-(Grenouille
-      a r\xE9ussi ! Il ne semble plus vouloir me farcir...)"
+      r\xEAve... Mon p\xE8re aussi \xE9tait musicien !\n<swing>Sa musique me manque,</swing>
+      il jouait si bien !\n//Maintenant, je n'entend que ses cris dans la for\xEAt..<?E:React/Fear,
+      Cat, TRUE/>.\n[Mouse]-(Grenouille a r\xE9ussi ! Il ne semble plus vouloir me
+      farcir...)"
     - 
     - 'Emotion : Trust;
 
@@ -1136,14 +1131,14 @@ MonoBehaviour:
     - Bird
     - Hint
     - "[Bird]-Votre loup de p\xE8re musicien !?\n[Cat]-Oui, je l'adorais, il jouait
-      si bien <?E:React/Sadness, Cat, TRUE/>!"
+      si bien ! \nJe ne peux le rejoindre, car <emcol val=Fear>il me chasses !</emcol>"
     - 
     - 'Name : B.1.F8;'
     - "\u24C7-B.1.8b"
     - Bird
     - Hint
     - "[Bird]-Ma famille verra, elle regrettera !\n[Cat]-J'esp\xE8re que vous r\xE9ussirez,
-      mais je reste de ne plus \xEAtre l\xE0..<?E:React/Fear, Cat, TRUE/>."
+      mais je risque de ne plus \xEAtre l\xE0..<?E:React/Fear, Cat, TRUE/>."
     - 
     - 'Name : B.1.F8;'
     - "\u24C7-B.1.9"
@@ -1196,14 +1191,15 @@ MonoBehaviour:
     - Bird
     - Hint
     - "[Bird]-Ma voix, d'un ennui !?\n[Cat]-c'est bien ce que j'ai dit, je pr\xE9f\xE8re
-      encore par le loup \xEAtre cuit <?E:React/Fear, Cat, TRUE/>!"
+      encore par le loup \xEAtre cuit !\n...<emcol val=Fear>Quoi que</emcol>."
     - 
     - 'Name : B.1.F10;'
     - "\u24C7-B.1.10b"
     - Bird
     - Hint
     - "[Bird]-Le Chat-Loup qui me traite de folle !\n[Cat]-Je suis loup de mon p\xE8re,
-      il n'y a rien de dr\xF4le <?E:React/Fear, Cat, TRUE/>!"
+      il n'y a rien de dr\xF4le !\n[Bird]-Regarde o\xF9 vouloir \xEAtre loup t'amm\xE8nes
+      <?E:React/Fear, Cat, TRUE/>!"
     - 
     - 'Name : B.1.F10;'
     - "\u24C7-Be.1.1"
@@ -1211,9 +1207,9 @@ MonoBehaviour:
     - Advance
     - "[Bear]-Personnellement je comprends qu'on puisse en vouloir \xE0 cette petite
       souris !\n//A cause d'elle je n'ai plus rien \xE0 manger pour l'hiver <?E:React/Sadness,
-      Cat, TRUE/>!\n[Mouse]-Il te reste une noix tu exag\xE8res <?E:React/Surprise,
-      Cat, TRUE/>!\n[Bear]-Tu as de la chance de me faire rire Emilie...\nJe ne veux
-      pas d'ennui le chat, mais \xE0 Emilie tu ne pourras rien faire !\n[Cat]-Je
+      Bear, TRUE/>!\n[Mouse]-Il te reste une noix tu exag\xE8res <?E:React/Surprise,
+      Bear, TRUE/>!\n[Bear]-Tu as de la chance de me faire rire Emilie...\nJe ne
+      veux pas d'ennui le chat, mais \xE0 Emilie tu ne pourras rien faire !\n[Cat]-Je
       ne voudrais pas vous mettre en col\xE8re..."
     - 
     - 'Emotion : Anger;
@@ -1232,19 +1228,19 @@ MonoBehaviour:
     - Bear
     - Hint
     - "[Bear]-Devoir quitter mon fauteuil si confortable...\nA cause de toi Emilie
-      <?E:React/Surprise, Bear, TRUE/>! \xE7a me rend malade <?E:React/Sadness, Cat,
-      TRUE/>!"
+      <?E:React/Surprise, Bear, TRUE/>! \xE7a me rend <emcol val=Disgust>malade</emcol>
+      !"
     - 
     - 'Name : Be.1.F1'
     - "\u24C7-Be.1.2"
     - Bear
     - Advance
     - "[Bear]-C'est bien trop fatiguant de se mettre en col\xE8re !\nEt je d\xE9teste
-      \xEAtre fatigu\xE9 ! \xE7a me met en col\xE8re <?E:React/Anger, Bear, TRUE/>!\n[Cat]-Euh...
-      D'accord...\n[Bear]-\xEAtre oblig\xE9 de quitter mon fauteuil... <swing> <swing><emcol
-      val=sadness>Il me manque fort.</emcol></swing>\nJe suis si bien chez moi, regarder
-      le monde par la fen\xEAtre...\n[Cat]-Pourquoi avoir quitt\xE9 votre foyer,
-      votre bien-\xEAtre ?"
+      \xEAtre fatigu\xE9 ! \xE7a me met en <emcol val=Anger>col\xE8re</emcol> <?E:React/Anger,
+      Bear, TRUE/>!\n[Cat]-Euh... D'accord...\n[Bear]-\xEAtre oblig\xE9 de quitter
+      mon fauteuil... <swing> <swing><emcol val=sadness>Il me manque fort.</emcol></swing>\nJe
+      suis si bien chez moi, regarder le monde par la fen\xEAtre...\n[Cat]-Pourquoi
+      avoir quitt\xE9 votre foyer, votre bien-\xEAtre ?"
     - 
     - 'Emotion : Sadness;
 
@@ -1254,15 +1250,15 @@ MonoBehaviour:
     - "\u24C7-Be.1.2a"
     - Bear
     - Hint
-    - "[Bear]-\xE7a y est ! Je suis en col\xE8re <?E:React/Anger, Bear, TRUE/>!\nEt
-      je suis si fatigu\xE9, <swing> <swing><emcol val=sadness>quelle gal\xE8re...</emcol></swing>"
+    - "[Bear]-\xE7a y est ! Je suis en col\xE8re <?E:React/Anger, Bear, TRUE/>!\nMais
+      aussi si fatigu\xE9, <swing><emcol val=sadness>quelle gal\xE8re...</emcol></swing>"
     - 
     - 'Name : Be.1.F2;'
     - "\u24C7-Be.1.2b"
     - Bear
     - Hint
     - "[Bear]-Je suis oblig\xE9 de sortir \xE0 cause d'Emilie <?E:React/Anger, Bear,
-      TRUE/>!\n<swing> <swing><emcol val=sadness>Mon pauvre stock d'hiver est parti.</emcol></swing>"
+      TRUE/>!\nMon pauvre stock d'hiver est parti<?E:React/Sadness, Bear, TRUE/>."
     - 
     - 'Name : Be.1.F2;'
     - "\u24C7-Be.1.3"
@@ -1272,7 +1268,7 @@ MonoBehaviour:
       cette petite Emilie...\n//Elle me rappelle une ancienne amie..<?E:React/Trust,
       Bear, TRUE/>.\n[Cat]-Ancienne amie ?\n[Bear]-Elle a disparu il y a longtemps,
       une petite souris que j'aimais tant.\nJe fabriquais des instruments de musique
-      en ce temps.\n// Mais j'ai arr\xEAter, j'ai tout arr\xEAt\xE9 depuis cet instant..."
+      en ce temps.\n//Mais j'ai arr\xEAter, j'ai tout arr\xEAt\xE9 depuis cet instant..."
     - 
     - 'Emotion : Sadness;
 
@@ -1282,7 +1278,7 @@ MonoBehaviour:
     - "\u24C7-Be.1.3a"
     - Bear
     - Hint
-    - '[Bear]-Ce temps on jouait ensemble..<?E:React/Trust, Bear, TRUE/>.'
+    - '[Bear]-Ce temps <emcol val=Trust>on jouait ensemble</emcol>...'
     - 
     - 'Name : Be.1.F3;'
     - "\u24C7-Be.1.3b"
@@ -1294,7 +1290,7 @@ MonoBehaviour:
     - "\u24C7-Be.1.4"
     - Bear
     - Advance
-    - "[Bear]-<wave><emcol val=joy>Elle adorait ma guitare et mes chansons...</emcol></wave>\nDepuis
+    - "[Bear]-<wave><emcol val=Joy>Elle adorait ma guitare et mes chansons...</emcol></wave>\nDepuis
       je suis sur mon fauteuil \xE0 attendre que passent les saisons.\n[Mouse]-C'est
       pour \xE7a gros nounours ! Faut te bouger !\n[Bear]-Mais je suis si bien \xE0
       la maison !\n[Cat]-Vous aviez l'air de bien l'aimer cette souris !\n[Bear]-Elle
@@ -1308,16 +1304,16 @@ MonoBehaviour:
     - "\u24C7-Be.1.4a"
     - Bear
     - Hint
-    - '[Bear]-<wave><emcol val=joy>J''adorais jouer pour elle !</emcol></wave>
+    - '[Bear]-<wave><emcol val=Joy>J''adorais jouer pour elle !</emcol></wave>
 
       Et
-      elle, elle chantait de plus belle <?E:React/Trust, Bear, TRUE/>!'
+      elle, <emcol val=Trust>elle</emcol> chantait de plus belle !'
     - 
     - 'Name : Be.1.F4;'
     - "\u24C7-Be.1.4b"
     - Bear
     - Hint
-    - "[Bear]-elle \xE9tait comme ma fille<?E:React/Trust, Bear, TRUE/>. <wave><emcol
+    - "[Bear]-Elle \xE9tait comme ma fille<?E:React/Trust, Bear, TRUE/>. <wave><emcol
       val=joy>On s'amusait tant !</emcol></wave>"
     - 
     - 'Name : Be.1.F4;'
@@ -1325,12 +1321,11 @@ MonoBehaviour:
     - Bear
     - Advance
     - "[Bear]-J'ai tellement de souvenirs avec elle d'autrefois!\nLe premi\xE8re
-      fois que je lui ai fait boire du vin de noix !\n// Elle \xE9tait toute rouge
+      fois que je lui ai fait boire du vin de noix !\n//Elle \xE9tait toute rouge
       ! Elle riait tant !\n[Mouse]-Tu as bien besoin de sortir ! Tu es rest\xE9 enferm\xE9
       trop longtemps !\n[Cat]-Vous me rappelez mon loup de p\xE8re... Tellement !\nIl
-      me pourchasse maintenant<?E:Sfx/Fear, Cat, TRUE/>, mais on riait tout le temps!\n//
-      Je ne peux m'en prendre \xE0 votre souris,<swing><emcol val=sadness> trop de
-      souvenirs marquants.</emcol></swing>"
+      me pourchasse maintenant<?E:Sfx/Fear, Cat, TRUE/>, mais on riait tout le temps!\n//Je
+      ne peux m'en prendre \xE0 votre souris,<swing> trop de souvenirs marquants.</swing>"
     - 
     - 'Emotion : Joy;
 
@@ -1346,15 +1341,17 @@ MonoBehaviour:
     - '[Bear]-Ma petite souris, on s''amusait tant !
 
       [Cat]-Je vous comprends,
-      j''envie tous ces moments..<?E:React/Sadness, Cat, TRUE/>.'
+      j''envie tous ces moments...
+
+      Mais je <emcol val=Fear>crains</emcol>
+      de ne pouvoir y retourner<?E:React/Fear, Cat, TRUE/>.'
     - 
     - 'Name : Be.1.F5;'
     - "\u24C7-Be.1.5b"
     - Bear
     - Hint
-    - "[Bear]-Merci de laisser Emilie, c'est sympa !\n[Cat]-Vous \xEAtes un ours
-      <?E:React/Fear, Cat, TRUE/>! Et me rappelez trop mon p\xE8re et moi<?E:React/Sadness,
-      Cat, TRUE/>."
+    - "[Bear]-Merci de laisser Emilie, c'est sympa !\n[Cat]-Ma charit\xE9 n'est pas
+      ce qui fera que \xE7a ira mieux pour moi<?E:React/Fear, Cat, TRUE/>."
     - 
     - 'Name : Be.1.F5;'
     - "\u24C7-Be.1.6"
@@ -1363,7 +1360,7 @@ MonoBehaviour:
     - "[Bear]-Tu fais bien... Mais \xE7a ne r\xE8gle pas mon soucis \xE0 moi ! J'ai
       faim <?E:React/Anger, Bear, TRUE/>!\n[Cat]-Si vous pouviez ne pas me manger
       moi...\n[Bear]-Te manger !? Quelle id\xE9e !\nJe ne mange pas de viande ! Que
-      des plantes, du miel et des baies !\n// Manger de la viande, tu m'\xE9coeures
+      des plantes, du miel et des baies !\n//Manger de la viande, tu m'\xE9coeures
       !"
     - 
     - 'Emotion : Disgust;
@@ -1403,16 +1400,16 @@ MonoBehaviour:
     - Bear
     - Hint
     - "[Bear]-Te laisser la d\xE9vorer, tu es f\xEAl\xE9 <?E:React/Surprise, Bear,
-      TRUE/>! Un f\xE9lin f\xEAl\xE9 !\n<bounce><emcol val=trust>Fais confiance</emcol></bounce>
+      TRUE/>! Un f\xE9lin f\xEAl\xE9 !\n<bounce><emcol val=Trust>Fais confiance</emcol></bounce>
       au lieu de tout agresser !"
     - 
     - 'Name : Be.1.F7;'
     - "\u24C7-Be.1.7b"
     - Bear
     - Hint
-    - "[Bear]-Je ne veux pas la punir <?E:React/Surprise, Bear, TRUE/>! Elle m'a
-      jou\xE9 un tour, mais ce n'\xE9tait pas m\xE9chant !\nElle a bon fond, mais
-      taquine de temps en temps..<?E:React/Trust, Bear, TRUE/>."
+    - "[Bear]-La punir ?<?E:React/Surprise, Bear, TRUE/>! Je ne le veux pas. Elle
+      m'a jou\xE9 un tour, mais ce n'\xE9tait pas m\xE9chant !\nElle a bon fond<?E:React/Trust,
+      Bear, TRUE/>, m\xEAme si taquine de temps en temps..."
     - 
     - 'Name : Be.1.F7;'
     - "\u24C7-Be.1.8"
@@ -1420,9 +1417,9 @@ MonoBehaviour:
     - Advance
     - "[Bear]-Les souris sont des amis, pas des repas !\n[Cat]-Vous avez \xE9lev\xE9
       une souris !?\n[Bear]-Bien s\xFBr pourquoi !?\n[Cat]-J'ai \xE9t\xE9 \xE9lev\xE9
-      par un loup, \xE7a me rappelle juste \xE7a..<?E:Sfx/Sadness, Cat, TRUE/>.\n<shake><emcol
-      val=fear>Aujourd'hui il me poursuit !</emcol></shake>\n[Bear]-Jamais moi je
-      n'aurais fait de mal \xE0 ma souris !\n[Cat]-Je n'ai pas le choix, je vais
+      par un loup, \xE7a me rappelle juste \xE7a...\n<shake><emcol val=fear>Aujourd'hui
+      il me poursuit <?E:Sfx/Fear, Cat, TRUE/>!</emcol></shake>\n[Bear]-Jamais moi
+      je n'aurais fait de mal \xE0 ma souris !\n[Cat]-Je n'ai pas le choix, je vais
       devoir laisser votre Emilie..."
     - 
     - 'Emotion : Trust;
@@ -1437,15 +1434,16 @@ MonoBehaviour:
     - Bear
     - Hint
     - "[Bear]-Bien s\xFBr que j'ai \xE9lev\xE9 une souris !\n[Cat]-Mon p\xE8re est
-      loup, ce n'est pas si diff\xE9rent ! Mais notre relation est finie<?E:React/Sadness,
-      Bear, TRUE/>."
+      loup, ce n'est pas si diff\xE9rent ! Mais notre relation est finie.\nEt j'ai
+      <emcol val=Fear>peur</emcol> que \xE7a en soit fini pour moi aussi<?E:Sfx/Fear,
+      Cat, TRUE/>."
     - 
     - 'Name : Be.1.F8;'
     - "\u24C7-Be.1.8b"
     - Bear
     - Hint
     - "[Bear]-C'est \xE9trange que ton p\xE8re te poursuis !\n[Cat]-Il ne se doutait
-      pas que j'\xE9tais chat... <shake><emcol val=fear>Il le sait maintenant alors
+      pas que j'\xE9tais chat... <shake><emcol val=Fear>Il le sait maintenant alors
       j'ai fui !</emcol></shake>"
     - 
     - 'Name : Be.1.F8;'
@@ -1473,7 +1471,7 @@ MonoBehaviour:
     - "\u24C7-Be.1.9b"
     - Bear
     - Hint
-    - "[Bear]-<bounce><emcol val=trust>Elle m'a aid\xE9</emcol></bounce> quand les
+    - "[Bear]-<bounce><emcol val=Trust>Elle m'a aid\xE9</emcol></bounce> quand les
       miens m'ont abandonn\xE9 !"
     - 
     - 'Name : Be.1.F9;'
@@ -1482,7 +1480,7 @@ MonoBehaviour:
     - Advance
     - "[Bear]-Pour m'avoir aider, la souris \xE9tait devenu criminelle pour les siens.\nPour
       accepter son aide, moi je devins un vaurien.\n//On s'est enfuit et r\xE9fugi\xE9
-      dans la for\xEAt<?E:React/Trust, Bear, TRUE/>. <wave><emcol val=joy>Heureux
+      dans la for\xEAt<?E:React/Trust, Bear, TRUE/>. <wave><emcol val=Joy>Heureux
       et loin d'eux.</emcol></wave>\n[Cat]-Un ours qui \xE9l\xE8ve une souris !?\n[Bear]-Pas
       plus \xE9tonnant qu'un loup qui \xE9l\xE8ve un chat...\n[Cat]-Mais lui ne voyait
       pas que j'\xE9tais chat."
@@ -1501,19 +1499,19 @@ MonoBehaviour:
     - "\u24C7-Be.1.10b"
     - Bear
     - Hint
-    - "[Bear]-<wave><emcol val=joy>C'\xE9taient mes meilleurs ann\xE9es...</emcol></wave>\nAvec
+    - "[Bear]-<wave>C'\xE9taient mes meilleurs ann\xE9es..<?E:React/Joy, Bear, TRUE/>.</wave>\nAvec
       elle, le temps est vite pass\xE9!"
     - 
     - 'Name : Be.1.F10;'
     - "\u24C7-Be.1.11"
     - Bear
     - Advance
-    - "[Bear]-Moi je vois tr\xE8s bien et souris ou pas quelle importance <?E:React/Anger,
-      Bear, TRUE/>?\n// Comme moi elle adorait la musique et le miel \xE0 outrance
-      !\n// Je jouais de la guitare, elle de la harpe que je lui ai fabriqu\xE9...\n[Cat]-Vous
-      avez peut-\xEAtre raison dans le fond mais...\n[Bear]-Je ne peux m'emp\xEAcher
-      de la voir dans le visage d'Emilie.\nC'est aussi pour cela que je les suis
-      !"
+    - "[Bear]-Moi je vois tr\xE8s bien et souris ou pas quelle importance ?\n//Comme
+      moi elle adorait la musique et le miel \xE0 outrance !\n//Je jouais de la guitare,
+      elle de la harpe que je lui ai fabriqu\xE9...\n[Cat]-Vous avez peut-\xEAtre
+      raison dans le fond mais..<?E:React/Surprise, Bear, TRUE/>.\n[Bear]-Je ne peux
+      m'emp\xEAcher de la voir dans le visage d'Emilie.\nC'est aussi pour cela que
+      je les suis !"
     - 
     - 'Emotion : Joy;
 
@@ -1523,14 +1521,14 @@ MonoBehaviour:
     - "\u24C7-Be.1.11a"
     - Bear
     - Hint
-    - "[Bear]-Pourquoi accorder une telle importance \xE0 l'apparence !<?E:React/Anger,
-      Bear, TRUE/>?"
+    - "[Bear]-Pourquoi accorder <emcol val=Surprise>une telle importance \xE0 l'apparence
+      !?</emcol>"
     - 
     - 'Name : Be.1.F11;'
     - "\u24C7-Be.1.11b"
     - Bear
     - Hint
-    - "[Bear]-C'est \xE9tonnant \xE0 quelle point Emilie lui ressemble..<?E:React/Anger,
+    - "[Bear]-C'est \xE9tonnant \xE0 quelle point Emilie lui ressemble..<?E:React/Surprise,
       Bear, TRUE/>."
     - 
     - 'Name : Be.1.F11;'
@@ -1541,7 +1539,7 @@ MonoBehaviour:
       !\nRegarde-toi un chat \xE9lev\xE9 par un loup, ce sont de biens dr\xF4les
       de paris !\n[Cat]-Si chat et loup s'entendent...\nAlors peut-\xEAtre que chat
       et souris ne sont pas ennemis du tout !\nJ'aurais aim\xE9 qu'il en soit de
-      m\xEAme pour chat et loup..<?E:Sfx/Fear, Cat, TRUE/>."
+      m\xEAme pour <emcol val=Fear>chat et loup..<?E:Sfx/Fear, Cat, TRUE/>.</emcol>"
     - 
     - 'Emotion : Surprise;
 
@@ -1550,7 +1548,7 @@ MonoBehaviour:
       Childs : Empty;
 
       GivenAttributes
-      : Wize;'
+      : Wise;'
     - "\u24C7-Be.1.12a"
     - Bear
     - Hint
@@ -1562,17 +1560,17 @@ MonoBehaviour:
     - "\u24C7-Be.1.12b"
     - Bear
     - Hint
-    - "[Bear]-Je suis s\xFBr que ton p\xE8re se calmera !\n[Cat]-J'aimerai y croire,
-      l'avenir nous le dira..<?E:React/Sadness, Cat, TRUE/>."
+    - "[Bear]-Je suis s\xFBr que ton p\xE8re se calmera !\n[Cat]-J'aimerai y croire<?E:Sfx/Fear,
+      Cat, TRUE/>, <emcol val=Fear>l'avenir nous le dira...</emcol>"
     - 
     - 'Name : Be.1.F12;'
     - "\u24C7-H.Joy.F"
     - Cat
     - Harmony
-    - "[Cat]-Un morceau bien joyeux, <swing> cette chanson ne me va pas...</swing>
+    - "[Cat]-Un morceau bien joyeux, <swing>cette chanson ne me va pas...</swing>
       \n[Bird]-Allons, un peu de joie, un peu de confiance, voil\xE0 le d\xE9but
-      d\u2019une romance...\n[Cat]-Abandonn\xE9 par mon p\xE8re j\u2019ai le coeur
-      en miette. Pas de romance pour moi... <?E:Sfx/Sadness, Cat, TRUE/> "
+      d\u2019une romance...\n[Cat]-Abandonn\xE9 par mon p\xE8re j\u2019ai <emcol
+      val=Fear>le coeur en miette</emcol>. Pas de romance pour moi... "
     - 
     - 'Emotion : Joy;
 
@@ -1583,7 +1581,7 @@ MonoBehaviour:
     - Cat
     - Harmony
     - "[Cat]-Mon loup de p\xE8re \xE9tait le seul ami que j\u2019avais, maintenant
-      il m'effrait !<?E:React/Fear, Cat, TRUE/> \n// Cette musique ne me va pas...\n[Bird]-De
+      il m'effrait !<?E:React/Fear, Cat, TRUE/> \n//Cette musique ne me va pas...\n[Bird]-De
       nous rencontrer tu as de la chance, tu peux nous faire confiance !"
     - 
     - 'Emotion : Trust;
@@ -1594,11 +1592,11 @@ MonoBehaviour:
     - "\u24C7-H.Fear.V2"
     - Cat
     - Harmony
-    - "[Cat]-Je suis <shake><color=#9868da> mort de peur !</color></shake> Je suis
-      d\xE9sesp\xE9r\xE9 !\nLui ce vieux loup qui m\u2019a \xE9lev\xE9<?E:React/Sadness,
-      Cat, TRUE/>, moi un jeune chat, et aim\xE9. \n//J\u2019avais un p\xE8re un
-      foyer !\nMaintenant il veut ma peau et me manger...\n//Tout \xE7a pour une
-      histoire de vue et de malentendue..."
+    - "[Cat]-Je suis <shake><emcol val=Fear>mort de peur !</emcol></shake> Je suis
+      d\xE9sesp\xE9r\xE9 !\nLui ce vieux loup qui m\u2019a \xE9lev\xE9, moi un jeune
+      chat, et aim\xE9. \n//J\u2019avais un p\xE8re un foyer !\nMaintenant il veut
+      ma peau et me manger..<?E:React/Fear, Cat, TRUE/>.\n//Tout \xE7a pour une histoire
+      de vue et de malentendue..."
     - 
     - 'Emotion : Fear;
 
@@ -1611,8 +1609,8 @@ MonoBehaviour:
     - "[Cat]-Il y a longtemps je me suis perdu...\nJe me suis retrouv\xE9 chez un
       loup avec une mauvaise vu...\n//Il me <bounce> recueilli en fils</bounce> ,
       mais depuis qu\u2019il retrouva les yeux,\nIl me jeta dehors en moins de deux...\n//J\u2019ai
-      le coeur bris\xE9<?E:React/Sadness, Cat, TRUE/>, je ne suis qu\u2019un petit
-      chat triste et peureux<?E:React/Fear, Cat, TRUE/>..."
+      le coeur bris\xE9, je ne suis qu\u2019un petit chat triste et peureux..<?E:React/Fear,
+      Cat, TRUE/>."
     - 
     - 'Emotion : Sadness;
 
@@ -1622,10 +1620,10 @@ MonoBehaviour:
     - "\u24C7-H.Anger.F"
     - Cat
     - Harmony
-    - "[Cat]-Je suis dos au mur, et me voil\xE0 entrain de m\u2019humilier devant
-      un rat !<?E:Animation/Sadness, Cat, TRUE/> \n[Mouse]-Une souris !\n[Cat]-Peu
-      importe, tu es mon repas !\n[Bear]-Allons, pas de \xE7a !\n[Cat]-D\xE9sol\xE9,
-      cette m\xE9lodie ne me r\xE9ussit pas..."
+    - "[Cat]-Je suis dos au mur<?E:Sfx/Fear, Cat, TRUE/>, et me voil\xE0 entrain
+      de m\u2019humilier devant un rat !\n[Mouse]-Une souris !\n[Cat]-Peu importe,
+      tu es mon repas !\n[Bear]-Allons, pas de \xE7a !\n[Cat]-D\xE9sol\xE9, cette
+      m\xE9lodie ne me r\xE9ussit pas..."
     - 
     - 'Emotion : Anger;
 
@@ -1635,9 +1633,10 @@ MonoBehaviour:
     - "\u24C7-H.Disgust.F"
     - Cat
     - Harmony
-    - "[Cat]-Me faire aider par ceux qui devaient \xEAtre mon repas...\r\nJe suis
-      la honte des chats !\r\n[Mouse]-Ton repas ? Tu n\u2019oserais pas !\r\n[Cat]-En
-      tout cas, cette musique je ne la ressens pas...\r"
+    - "[Cat]-Me faire aider par ceux qui devaient \xEAtre mon repas...\nJe suis la
+      honte des chats !\n[Mouse]-Ton repas ? Tu n\u2019oserais pas !\n[Cat]-En tout
+      cas, cette musique je ne la ressens pas...\nJe n'entend que le glas <?E:Sfx/Fear,
+      Cat, TRUE/>!"
     - 
     - 'Emotion : Disgust;
 
@@ -1648,10 +1647,9 @@ MonoBehaviour:
     - Cat
     - Harmony
     - "[Cat]-Comment aurais-je pu pr\xE9voir ! Je pensais lui faire tellement plaisir
-      !<?E:Sfx/Sadness, Cat, TRUE/> \n[Bird]-Comment ? Lui faire plaisir ? Ou voulez-vous
-      en venir ?\n[Cat]-C\u2019est gr\xE2ce \xE0 moi qu\u2019il a retrouv\xE9 la
-      vue...\n// Une id\xE9e bien ing\xE9nue... Maintenant <shake><color=#9868da>
-      il veut me r\xF4tir \xE0 vue !!!</color></shake>"
+      !\n[Bird]-Comment ? Lui faire plaisir ? Ou voulez-vous en venir ?\n[Cat]-C\u2019est
+      gr\xE2ce \xE0 moi qu\u2019il a retrouv\xE9 la vue...\n//Une id\xE9e bien ing\xE9nue...
+      Maintenant <shake><emcol val=Fear>il veut me r\xF4tir \xE0 vue !!!</emcol></shake>"
     - 
     - 'Emotion : Surprise;
 
@@ -1662,9 +1660,8 @@ MonoBehaviour:
     - Cat
     - Harmony
     - "[Cat]-Vigilant, je le suis. Mais ce que je ressens est plus fort...\nJe ne
-      peux emp\xEAcher de faire<shake><color=#9868da> trembler mon corrrrrps...</color></shake>\n//Lui
-      qui m\u2019a \xE9lev\xE9, comment peut-il m\u2019exiler !?<?E:Animation/Sadness,
-      Cat, TRUE/> "
+      peux emp\xEAcher de faire <shake><emcol val=Fear>trembler mon corrrrrps...</emcol></shake>\n//Lui
+      qui m\u2019a \xE9lev\xE9, comment peut-il m\u2019exiler !?"
     - 
     - 'Emotion : Anticipation;
 
@@ -1675,10 +1672,9 @@ MonoBehaviour:
     - Global
     - Event
     - "[Cat]-Je suis l\xE0 devant vous, feintant de vous prendre en proies...\nMais
-      mon coeur est trop lourd pour bondir... <?E:Animation/Sadness, Cat, TRUE/>
-      maintenant je le vois...\nJe suis trop triste pour faire quoi que ce soit...<?E:Sfx/Sadness,
-      Cat, TRUE/> \nMais ce n\u2019est pas si simple, un autre sentiment est l\xE0
-      mais quoi !? "
+      mon coeur est trop lourd pour bondir... Maintenant je le vois...\nJe suis trop
+      triste pour faire quoi que ce soit...\nMais ce n\u2019est pas si simple, un
+      autre sentiment est l\xE0 mais quoi !? "
     - 
     - 'Key : Block.2;'
     - "\u24C7-M.Root.2"
@@ -1731,8 +1727,8 @@ MonoBehaviour:
     - Hint
     - '[Mouse]-M.Ernest ! Manzes le chat !
 
-      Ou il va me manzer moi <?E:React/Fear,
-      Mouse, TRUE/>!'
+      Ou il va <emcol val=Fear>me manzer
+      moi !</emcol>'
     - 
     - 'Name : M.1.F0;'
     - "\u24C7-B.1.0a"
@@ -1744,7 +1740,7 @@ MonoBehaviour:
     - "\u24C7-B.1.0b"
     - Bird
     - Hint
-    - '[Bird]-Un chat-loup !? Est-il fou !<?E:React/Surprise, Bird, TRUE/>?'
+    - '[Bird]-Un chat-loup !? <emcol val=Surprise>Est-il fou !?</emcol>'
     - 
     - 'Name : B.1.F0;'
     - "\u24C7-Be.1.0a"
@@ -1757,8 +1753,8 @@ MonoBehaviour:
     - "\u24C7-Be.1.0b"
     - Bear
     - Hint
-    - '[Bear]-Pour qui tu te prends !? C''est toi qui devrais partir en courant <?E:React/Anger,
-      Bear, TRUE/>!'
+    - '[Bear]-Pour qui tu te prends !? <emcol val=Anger>C''est toi qui devrais partir
+      en courant !</emcol>'
     - 
     - 'Name : Be.1.F0;'
     - "\u24C7-Dial.Intro1"
@@ -1782,13 +1778,14 @@ MonoBehaviour:
     - "\u24C7-M.2.1"
     - Mouse
     - Advance
-    - "[Mouse]-Tom le Taupticien !? Moi qui croyais que les taupes n\u2019y voyaient
-      rien\u2026\n[Cat]-C\u2019est bien pour \xE7a qu\u2019elles sont dou\xE9es en
-      verres !\n[Bird]-Tant de mani\xE8re, moi aussi je suis dou\xE9e en vers !\n[Bear]-Qui
-      parle de boire un verre ? \n[Bird]-Veuillez \xE0 votre parl\xE9 ! \xE7a ne
-      se boit pas, les vers sont bons \xE0 manger !\n[Mouse]-Les gars, vous divaguez
-      ! Laissez ce pauvre chat parler !\n[Cat]-Laissez, ce n'est rien, vous me faites
-      rigoler !"
+    - "[Mouse]-Tom le Taupticien !<?E:React/Surprise, Mouse, TRUE/>? Moi qui croyais
+      que les taupes n\u2019y voyaient rien...\n[Cat]-C\u2019est bien pour \xE7a
+      qu\u2019elles sont dou\xE9es en verres !\n[Bird]-Tant de mani\xE8re, moi aussi
+      je suis dou\xE9e en vers !\n[Bear]-Qui parle de boire un verre ? \n[Bird]-Veillez
+      \xE0 votre parl\xE9 ! \xE7a ne se boit pas, les vers sont bons \xE0 manger
+      !\n[Mouse]-Les amis, <emcol val=Anticipation>vous divaguez !</emcol> Laissez
+      ce pauvre chat parler !\n[Cat]-Laissez, ce n'est rien, vous me faites rigoler
+      !"
     - 
     - 'Emotion : Surprise;
 
@@ -1801,27 +1798,28 @@ MonoBehaviour:
     - "\u24C7-M.2.1a"
     - Mouse
     - Hint
-    - "[Mouse]-Un taupticien\u2026 Quelle id\xE9e !? \n[Cat]-Tom est tr\xE8s dou\xE9
-      !"
+    - "[Mouse]-Un taupticien... <emcol val=Surprise>Quelle id\xE9e !?</emcol>\n[Cat]-Tom
+      est tr\xE8s dou\xE9 !"
     - 
     - 'Name : M.2.F1'
     - "\u24C7-M.2.1b"
     - Mouse
     - Hint
-    - "[Mouse]-Une histoire folle\u2026 Si elle est vraie !\n[Cat]-Les histoires
-      folles, c\u2019est le lot de la for\xEAt !"
+    - "[Mouse]-Une histoire folle... Si elle est vraie <?E:React/Anticipation, Mouse,
+      TRUE/>!\n[Cat]-Les histoires folles, c\u2019est le lot de la for\xEAt !"
     - 
     - 'Name : M.2.F1'
     - "\u24C7-M.2.2"
     - Mouse
     - Advance
     - "[Mouse]-Eh bien, m\xEAme si tu d\xE9sirais me nuire, me voil\xE0 qui t\u2019appr\xE9cie
-      !\n[Cat]-Si mon loup de p\xE8re me fait fuir, pour votre \xE9coute je vous
-      remercie.\n[Mouse]-Maintenant qu\u2019on est ami, \xE7a te dit de faire un
-      \xE9chanze ?\n[Bear]-Tu es s\xE9rieuse !? Je suis constern\xE9\u2026 Le chat,
-      ne te laisse pas bern\xE9 ! \n[Cat]-Vous pouvez m\u2019appelez Scapin !\n[Mouse]-\xE7a
-      rime avec copain !\n[Bear]-Emilie, au fait, mon miel, pourquoi l\u2019avoir
-      vol\xE9 ?\n[Mouse]-Ze te l\u2019ai \xE9chanz\xE9 !"
+      <?E:React/Trust, Mouse, TRUE/>!\n[Cat]-Si mon loup de p\xE8re me fait fuir,
+      pour votre \xE9coute je vous remercie.\n[Mouse]-Maintenant qu\u2019on est ami,
+      \xE7a te dit de faire un \xE9chanze ?\n[Bear]-Tu es s\xE9rieuse !? Je suis
+      constern\xE9... Le chat, ne te laisse pas bern\xE9 ! \n[Cat]-Vous pouvez m\u2019appelez
+      Scapin !\n[Mouse]-\xE7a rime avec <emcol val=Trust>copain</emcol> !\n[Bear]-Emilie,
+      au fait, mon miel, pourquoi l\u2019avoir vol\xE9 ?\n[Mouse]-Ze te l\u2019ai
+      \xE9chanz\xE9 !"
     - 
     - 'Emotion : Surprise;
 
@@ -1831,28 +1829,30 @@ MonoBehaviour:
     - "\u24C7-M.2.2a"
     - Mouse
     - Hint
-    - "[Mouse]-Aller un petit \xE9change Scapin !\n[Bear]-Emilie, cesses tes larcins
-      !"
+    - "[Mouse]-Aller un petit \xE9change <emcol val=Trust>Scapin</emcol> !\n[Bear]-Emilie,
+      cesses tes larcins !"
     - 
     - 'Name : M.2.F2;'
     - "\u24C7-M.2.2b"
     - Mouse
     - Hint
-    - "[Mouse]-Grenouille ! Utilise ton pouvoir ! Convainc M.Ernest d\u2019arr\xEAter
-      de m\u2019emb\xEAter !\n[Bear]-Et convainc Souris de me rendre ce qu\u2019elle
-      m\u2019a vol\xE9 !"
+    - "[Mouse]-Grenouille <?E:React/Trust, Mouse, TRUE/>! Utilise ton pouvoir ! Convainc
+      M.Ernest d\u2019arr\xEAter de m\u2019emb\xEAter !\n[Bear]-Et convainc Souris
+      de me rendre ce qu\u2019elle m\u2019a vol\xE9 !"
     - 
     - 'Name : M.2.F2;'
     - "\u24C7-M.2.3"
     - Mouse
     - Advance
     - "[Mouse]-Si tu veux savoir, ce n\u2019\xE9tais pas pour moi mais pour ma tante
-      !\nElle adore le miel, elle m\u2019en a donn\xE9 une fausse noix jaune et brillante\n[Cat]-Une
-      p\xE9pite d\u2019or !? pour du miel, c\u2019est exorbitant !\n[Mouse]-C\u2019est
-      un brise dent ! Tantine adore les dents !\nEt tous les animaux croquent dedans
-      pour voir si c\u2019est une vraie noix !\n//Je la voulais pour faire une blague
-      \xE0 papa\u2026\nJ\u2019ai remplac\xE9 sa noix pr\xE9f\xE9r\xE9e par \xE7a
-      ! Ses dents n\u2019ont pas fait le poids !"
+      <?E:React/Trust, Cat, TRUE/>!\nElle adore le miel, elle m\u2019en a donn\xE9
+      une fausse noix jaune et brillante\n[Cat]-Une p\xE9pite d\u2019or !? pour du
+      miel, c\u2019est exorbitant !\n[Mouse]-C\u2019est un brise dent ! Tantine adore
+      les dents !\nEt tous les animaux croquent dedans pour voir si c\u2019est une
+      vraie noix !\n//Je la voulais pour faire une blague \xE0 papa...\nJ\u2019ai
+      remplac\xE9 sa noix pr\xE9f\xE9r\xE9e par \xE7a ! Ses dents n\u2019ont pas
+      fait le poids !\n[Cat]-Comme c'est marrant ! Ma peur s'envole, <emcol val=Trust>avec
+      vous je suis confiant <?E:Sfx/Trust, Cat, TRUE/>!</emcol>"
     - 
     - 'Emotion : Trust;
 
@@ -1865,15 +1865,17 @@ MonoBehaviour:
     - "\u24C7-M.2.3a"
     - Mouse
     - Hint
-    - "[Cat]-Je n\u2019ai plus peur de mon p\xE8re.\nJe crains \xE7a col\xE8re\u2026\nMais
-      vous voir vous chamailler me rappelle nos rires sinc\xE8res\u2026"
+    - "[Cat]-Je n\u2019ai plus peur de mon p\xE8re.\nJe crains \xE7a col\xE8re...\nMais
+      vous voir vous chamailler me rappelle nos rires sinc\xE8res..<?E:React/Trust,
+      Cat, TRUE/>."
     - 
     - 'Name : M.2.F3;'
     - "\u24C7-M.2.3b"
     - Mouse
     - Hint
-    - "[Cat]-J\u2019aimerai pouvoir ainsi me chamailler avec lui\u2026\nPeut-\xEAtre
-      qu\u2019il me pardonnera, m\xEAme si je suis chat et que j\u2019ai fui\u2026"
+    - "[Cat]-J\u2019aimerai pouvoir ainsi me chamailler avec lui...\n<emcol val=Trust>Peut-\xEAtre
+      qu\u2019il me pardonnera</emcol>, m\xEAme si je suis chat et que j\u2019ai
+      fui..."
     - 
     - 'Name : M.2.F3;'
     - "\u24C7-M.2.4"
@@ -1882,7 +1884,8 @@ MonoBehaviour:
     - "[Mouse]-J'ai encore du mal \xE0 te croire le chat, \xE7a me para\xEEt invraisemblable.\n[Cat]-N'ayant
       crainte, ma parole est v\xE9ritable.\nEt tu peux m'appeler Scapin.\n[Mouse]-\xE7a
       rime avec p\xE9pin !\nComment tu t'es perdu d'abord ?\n[Cat]-Sur le sentier
-      des fleurs aux abords...\n[Mouse]-Le sentier des fleurs !? \xE7a alors !"
+      des fleurs aux abords...\n[Mouse]-Le sentier des fleurs !<?E:React/Surprise,
+      Mouse, TRUE/>? \xE7a alors !"
     - 
     - 'Emotion : Anticipation;
 
@@ -1892,28 +1895,28 @@ MonoBehaviour:
     - "\u24C7-M.2.4a"
     - Mouse
     - Hint
-    - "[Mouse]-Le sentier des fleurs !\nCette co\xEFncidence est-elle signe de malheur
-      ?"
+    - "[Mouse]-<emcol val=Surprise>Le sentier des fleurs !</emcol>\nCette co\xEFncidence
+      est-elle signe de malheur ?"
     - 
     - 'Name : M.2.F4;'
     - "\u24C7-M.2.4b"
     - Mouse
     - Hint
-    - '[Mouse]-Le sentier des fleurs !?
+    - '[Mouse]-Le sentier des fleurs !<?E:React/Surprise, Mouse, TRUE/>?
 
-      [Cat]-Et bien oui, on dirait que tu
-      as peur.'
+      [Cat]-Et
+      bien oui, on dirait que tu as peur.'
     - 
     - 'Name : M.2.F4;'
     - "\u24C7-M.2.5"
     - Mouse
     - Advance
-    - "[Mouse]-C'est pour cela comprends-tu, que te toi je me suis m\xE9fi\xE9e !\n[Cat]-Bien
+    - "[Mouse]-C'est pour cela comprends-tu, que de toi je me suis m\xE9fi\xE9e !\n[Cat]-Bien
       entendu, et maintenant ? Est-elle possible notre amiti\xE9 ?\n[Mouse]-Ze ne
-      sais pas, mais pour ton p\xE8re tu m'as l'air sinc\xE8re.\nEt si on faisait
-      un \xE9change, maintenant qu'on se tol\xE8re ?\n[Bear]-A non ! Tu ne vas pas
-      recommencer !?\nD'ailleurs, voler TOUT mon miel... Pour toi quel int\xE9r\xEAt
-      ?\n[Mouse]-\xE9changer !"
+      sais pas, mais pour ton p\xE8re tu m'as l'air sinc\xE8re<?E:React/Trust, Mouse,
+      TRUE/>.\nEt si on faisait un \xE9change, maintenant qu'on se tol\xE8re ?\n[Bear]-A
+      non ! Tu ne vas pas recommencer !?\nD'ailleurs, voler TOUT mon miel... Pour
+      toi quel int\xE9r\xEAt ?\n[Mouse]-\xC9changer !"
     - 
     - 'Emotion : Trust;
 
@@ -1923,27 +1926,28 @@ MonoBehaviour:
     - "\u24C7-M.2.5a"
     - Mouse
     - Hint
-    - "[Mouse]-Aller, juste un tout petit \xE9change !\n[Cat]-D\xE9sol\xE9 mais vos
-      march\xE9s m\u2019ont l\u2019air assez \xE9trange\u2026"
+    - "[Mouse]-<emcol val=Trust>Aller</emcol>, juste un tout petit \xE9change !\n[Cat]-D\xE9sol\xE9
+      mais vos march\xE9s m\u2019ont l\u2019air assez \xE9trange..."
     - 
     - 'Name : M.2.F5;'
     - "\u24C7-M.2.5b"
     - Mouse
     - Hint
-    - "[Mouse]-N\u2019\xE9coute pas M.Ernest, il est de mauvaise foi\u2026\n[Bear]-Emilie\u2026
-      Tu es vraiment chipie parois !"
+    - "[Mouse]-N\u2019\xE9coute pas M.Ernest<?E:React/Trust, Mouse, TRUE/>, il est
+      de mauvaise foi...\n[Bear]-Emilie... Tu es vraiment chipie parois !"
     - 
     - 'Name : M.2.F5;'
     - "\u24C7-M.2.6"
     - Mouse
     - Advance
-    - "[Mouse]-Dire que tu \xE9tais dans notre village le chat ! Je ne sortirais
-      plus de chez moi !\n[Cat]-Tu es sortie l\xE0, et mon nom est Scapin !\n[Mouse]-C\u2019est
-      vrai !!! Grenouille sauve-moi ! Scapin rime avec p\xE9pin !\n[Bear]-Il ne vit
-      m\xEAme plus dans ton village, calme-toi !\n[Cat]-C\u2019est vrai ! Depuis
-      que je me suis perdu sur le sentier des fleurs !\nJe voulais offrir un bouquet
-      \xE0 ma m\xE8re en douleur.\n[Mouse]-Le sentier des fleurs !? c\u2019est toi
-      la cause de ces malheurs !?\n[Cat]-\u2026"
+    - "[Mouse]-Dire que tu \xE9tais dans notre village le chat <?E:React/Surprise,
+      Mouse, TRUE/>! Je ne sortirais plus de chez moi !\n[Cat]-Tu es sortie l\xE0,
+      et mon nom est Scapin !\n[Mouse]-C\u2019est vrai !!! Grenouille sauve-moi !
+      Scapin rime avec p\xE9pin !\n[Bear]-Il ne vit m\xEAme plus dans ton village,
+      calme-toi !\n[Cat]-C\u2019est vrai ! Depuis que je me suis perdu sur le sentier
+      des fleurs !\nJe voulais offrir un bouquet \xE0 ma m\xE8re en douleur.\n[Mouse]-<emcol
+      val=Surprise>Le sentier des fleurs !?</emcol> c\u2019est toi la cause de ces
+      malheurs !?\n[Cat]-..."
     - 
     - 'Emotion : Surprise;
 
@@ -1956,28 +1960,29 @@ MonoBehaviour:
     - "\u24C7-M.2.6a"
     - Mouse
     - Hint
-    - "[Mouse]-Le sentier des fleurs !\nCette co\xEFncidence est-elle signe de malheur
-      ?"
+    - "[Mouse]-<emcol val=Surprise>Le sentier des fleurs !</emcol>\nCette co\xEFncidence
+      est-elle signe de malheur ?"
     - 
     - 'Name : M.2.F6;'
     - "\u24C7-M.2.6b"
     - Mouse
     - Hint
-    - '[Mouse]-Le sentier des fleurs !?
+    - '[Mouse]-Le sentier des fleurs !<?E:React/Surprise, Mouse, TRUE/>?
 
-      [Cat]-Et bien oui, on dirait que tu
-      as peur.'
+      [Cat]-Et
+      bien oui, on dirait que tu as peur.'
     - 
     - 'Name : M.2.F6;'
     - "\u24C7-M.2.7"
     - Mouse
     - Advance
     - "[Mouse]-Dans le temps les familles souris pique-niquaient dans le sentier.\nUn
-      jour tout le monde disparut, sur le lieu seuls des poils roux restaient ! \n[Cat]-Des
-      poils roux ? Me voil\xE0 \xE9tonn\xE9 !\n[Mouse]-Ma tantine est la seule survivante,
-      elle m\u2019a tout racont\xE9 !\nComment un chat roux l\u2019avait enlev\xE9
-      pour la faire cuire ! Elle s\u2019est \xE9chapp\xE9e.\n[Cat]-D\xE9cid\xE9ment,
-      il y a beaucoup de chat roux dans cette for\xEAt\u2026"
+      jour tout le monde disparut, sur le lieu seuls des poils roux restaient <?E:React/Disgust,
+      Mouse, TRUE/>! \n[Cat]-Des poils roux ? Me voil\xE0 \xE9tonn\xE9 !\n[Mouse]-Ma
+      tantine est la seule survivante, elle m\u2019a tout racont\xE9 !\nComment un
+      chat roux l\u2019avait enlev\xE9 <emcol val=Fear>pour la faire cuire !</emcol>
+      Elle s\u2019est \xE9chapp\xE9e.\n[Cat]-D\xE9cid\xE9ment, il y a beaucoup de
+      chat roux dans cette for\xEAt..."
     - 
     - 'Emotion : Surprise;
 
@@ -1987,15 +1992,15 @@ MonoBehaviour:
     - "\u24C7-M.2.7a"
     - Mouse
     - Hint
-    - "[Mouse]-Seul un chat est aussi horrible pour faire \xE7a !\nTu n\u2019as pas
-      int\xE9r\xEAt \xE0 me cuire moi !"
+    - "[Mouse]-Seul un chat est aussi horrible pour faire \xE7a !\n<emcol val=Fear>Tu
+      n\u2019as pas int\xE9r\xEAt \xE0 me cuire moi</emcol>!"
     - 
     - 'Name : M.2.F7;'
     - "\u24C7-M.2.7b"
     - Mouse
     - Hint
-    - "[Mouse]-Les chats n\u2019ont pas de go\xFBt\u2026 Le vin\u2026\nMais toi tu
-      ne me ferait pas de mal ! Hein ?"
+    - "[Mouse]-Les chats n\u2019ont pas de go\xFBt... <emcol val=Disgust>Le vin...</emcol>\nMais
+      toi tu ne me ferait pas de mal <?E:React/Trust, Mouse, TRUE/>! Hein ?"
     - 
     - 'Name : M.2.F7;'
     - "\u24C7-M.2.8"
@@ -2003,11 +2008,11 @@ MonoBehaviour:
     - Advance
     - "[Mouse]-Tantine est arriv\xE9e chez nous il y a deux ans.\n On est devenu
       proche, elle m\u2019a dit \xE0 quel point les chats \xE9taient terrifiants
-      !\n // Avec cette histoire elle n\u2019ose plus sortir du village !\n [Cat]-Pr\xE9pare-toi,
+      !\n //Avec cette histoire elle n\u2019ose plus sortir du village !\n [Cat]-Pr\xE9pare-toi,
       je vais faire un carnage !!!\n [Mouse]-Je le savais, il feignait d\u2019\xEAtre
-      sage !\n [Cat]-Ah ah ah, je rigole ! Mais tu es tellement ridicule que s\u2019en
-      est dr\xF4le !\n [Bird]-Le voil\xE0 enfin joyeux ! M\xEAme si Emilie l\u2019est
-      peu\u2026"
+      sage !\n [Cat]-Ah ah ah, <emcol val=Trust>je rigole</emcol> ! Mais tu es tellement
+      ridicule que s\u2019en est dr\xF4le !\n [Bird]-Le voil\xE0 enfin joyeux <?E:Sfx/Trust,
+      Cat, TRUE/>! M\xEAme si Emilie l\u2019est peu..."
     - 
     - 'Emotion : Fear;
 
@@ -2020,8 +2025,8 @@ MonoBehaviour:
     - "\u24C7-M.2.8a"
     - Mouse
     - Hint
-    - "[Cat]-Aller fait pas cette t\xEAte petite souris !\nJe plaisante, je ne te
-      veux pas d\u2019ennuis !"
+    - "[Cat]-Aller fait pas cette t\xEAte petite souris !\nJe plaisante, <emcol val=Trust>je
+      ne te veux pas d\u2019ennuis</emcol> !"
     - 
     - 'Name : M.2.F8;'
     - "\u24C7-M.2.8b"
@@ -2034,11 +2039,12 @@ MonoBehaviour:
     - "\u24C7-M.2.9"
     - Mouse
     - Advance
-    - "[Mouse]-Oh non, il veut vraiment ma chair !\n[Cat]-J'ai pass\xE9 des heures
-      dans un arbres pour fuir un p\xE8re !\nTout \xE7a parce qu'il m'a vu en chat,
-      ma nature il ne tol\xE8re !\nS'il n'\xE9tait vieux il aurait d\xE9j\xE0 eu
-      la mienne de chair !\n[Mouse]-Alors... tu maintiens, tu n'as jamais vu d'autres
-      souris vertes ?\nTu n'as jamais vu tante Berthe ?\n[Cat]-..."
+    - "[Mouse]-Oh non, <emcol val=Fear>il veut vraiment ma chair !</emcol>\n[Cat]-J'ai
+      pass\xE9 des heures dans un arbres pour fuir un p\xE8re !\nTout \xE7a parce
+      qu'il m'a vu en chat, ma nature il ne tol\xE8re !\nS'il n'\xE9tait vieux il
+      aurait d\xE9j\xE0 eu la mienne de chair !\n[Mouse]-Alors... tu maintiens, tu
+      n'as jamais vu d'autres souris vertes <?E:React/Anticipation, Mouse, TRUE/>?\nTu
+      n'as jamais vu tante Berthe ?\n[Cat]-..."
     - 
     - 'Emotion : Fear;
 
@@ -2048,14 +2054,15 @@ MonoBehaviour:
     - "\u24C7-M.2.9a"
     - Mouse
     - Hint
-    - "[Mouse]-Tu ne m\u2019auras pas Scapin !\nLes chats sont tous des vauriens
-      !"
+    - "[Mouse]-Tu ne m\u2019auras pas Scapin <?E:React/Anticipation, Mouse, TRUE/>!\nLes
+      chats sont tous des vauriens !"
     - 
     - 'Name : M.2.F9;'
     - "\u24C7-M.2.9b"
     - Mouse
     - Hint
-    - "[Mouse]-Ne m\u2019enl\xE8ves pas pour me cuire dans du vin ! Piti\xE9 !"
+    - "[Mouse]-Ne m\u2019enl\xE8ves pas pour me cuire dans du vin ! <emcol val=Fear>Piti\xE9
+      !</emcol>"
     - 
     - 'Name : M.2.F9;'
     - "\u24C7-M.2.10"
@@ -2063,10 +2070,11 @@ MonoBehaviour:
     - Advance
     - "[Mouse]-Tom le Taupticien ? Nous ne sommes pas si ing\xE9nus !\nTon p\xE8re
       t\u2019aurait chass\xE9 juste en ayant retrouv\xE9 la vue ?\nA mon avis il
-      savait que tu n\u2019\xE9tais pas loup, un chat \xE7a pu !\n[Cat]-Comment !?
-      Un rat parle d\u2019odorat ?\n[Mouse]-C\u2019est que dans ton discours, il
-      y a une chose que tu oublies !\n[Cat]-C\u2019est faux ! Parole de Scapin, rien
-      n\u2019est omis.\n[Mouse]-Scapin ? \xE7a rime avec coquin\u2026"
+      savait que tu n\u2019\xE9tais pas loup, un chat \xE7a pu <?E:React/Disgust,
+      Mouse, TRUE/>!\n[Cat]-Comment !? Un rat parle d\u2019odorat ?\n[Mouse]-C\u2019est
+      que dans ton discours, il y a une chose que tu oublies !\n[Cat]-C\u2019est
+      faux ! Parole de Scapin, rien n\u2019est omis.\n[Mouse]-<emcol val=Disgust>Scapin</emcol>
+      ? \xE7a rime avec <emcol val=Disgust>coquin...</emcol>"
     - 
     - 'Emotion : Surprise;
 
@@ -2079,26 +2087,27 @@ MonoBehaviour:
     - "\u24C7-M.2.10a"
     - Mouse
     - Hint
-    - "[Mouse]-Un chat c\u2019est r\xE9pugnant, mais un aveugle le voit !\n[Cat]-Pourquoi
-      tu insistes \xE0 t\u2019en prendre \xE0 moi !"
+    - "[Mouse]-Un chat c\u2019est <emcol val=Disgust>r\xE9pugnant</emcol>, m\xEAme
+      un aveugle le voit !\n[Cat]-Pourquoi tu insistes \xE0 t\u2019en prendre \xE0
+      moi !"
     - 
     - 'Name : M.2.F10;'
     - "\u24C7-M.2.10b"
     - Mouse
     - Hint
     - "[Mouse]-Si moi je te sens d\u2019ici, je n\u2019imagine vivre sous le m\xEAme
-      toit\u2026"
+      toit..<?E:React/Disgust, Mouse, TRUE/>."
     - 
     - 'Name : M.2.F10;'
     - "\u24C7-M.2.11"
     - Mouse
     - Advance
-    - "[Mouse]-J\u2019insiste ! Quelque chose ne tourne pas rond !\n[Bear]-Allons
-      Emilie, c\u2019est la haine des chats qui te pousse au juron.\n[Mouse]-Peut-\xEAtre,
-      mais j\u2019ai des soup\xE7ons.\nLe chat qui avait enlev\xE9 ma tante \xE9tait
-      roux.\n// A part moi tu n\u2019as jamais rencontr\xE9 de souris verte le chat-loup
-      ?\n[Cat]-Euh\u2026 C\u2019est possible\u2026 Enfin non bien s\xFBr, elle serait
-      inerte !"
+    - "[Mouse]-J\u2019insiste ! Quelque chose ne tourne pas rond <?E:React/Anticipation,
+      Mouse, TRUE/>!\n[Bear]-Allons Emilie, c\u2019est la haine des chats qui te
+      pousse au juron.\n[Mouse]-Peut-\xEAtre, mais j\u2019ai des soup\xE7ons.\nLe
+      chat qui avait <emcol val=Fear>enlev\xE9 ma tante</emcol> \xE9tait roux.\n//\xC0
+      part moi tu n\u2019as jamais rencontr\xE9 de souris verte le chat-loup ?\n[Cat]-Euh...
+      C\u2019est possible... Enfin non bien s\xFBr, elle serait inerte !"
     - 
     - 'Emotion : Disgust;
 
@@ -2108,15 +2117,15 @@ MonoBehaviour:
     - "\u24C7-M.2.11a"
     - Mouse
     - Hint
-    - "[Mouse]-Tu mens, on ne peut pas faire confiance \xE0 un chat !\n[Cat]-Mais
-      tu vas arr\xEAter avec \xE7a !"
+    - "[Mouse]-Tu mens, on ne peut pas faire confiance \xE0 un chat <?E:React/Anticipation,
+      Mouse, TRUE/>!\n[Cat]-Mais tu vas arr\xEAter avec \xE7a !"
     - 
     - 'Name : M.2.F11;'
     - "\u24C7-M.2.11b"
     - Mouse
     - Hint
     - "[Mouse]-Oh non ! Il s\u2019est d\xE9cid\xE9 \xE0 s\u2019en prendre \xE0 moi
-      !"
+      <?E:React/Fear, Mouse, TRUE/>!"
     - 
     - 'Name : M.2.F11;'
     - "\u24C7-M.2.12"
@@ -2124,10 +2133,11 @@ MonoBehaviour:
     - Advance
     - "[Mouse]-Tu h\xE9sites, tu nous caches des choses !\n[Bird]-Voyons, arr\xEAtes
       tes sottises ! Avec son p\xE8re, de malheurs il a eu sa dose !\n[Cat]-Merci,
-      heureux de vous avoir en ami ! Ne croyez mots de cette souris !\nElle persiste
-      \xE0 me consid\xE9rer ennemi !\n[Mouse]-Depuis cet incident, tantine n\u2019a
-      plus jamais revu son ami.\nElle vivait avec lui, elle a d\xFB fuir, on l\u2019a
-      accept\xE9 dans la famille !"
+      heureux de vous avoir en <emcol val=Trust>ami</emcol> <?E:Sfx/Trust, Cat, TRUE/>!
+      Ne croyez mots de cette souris !\nElle persiste \xE0 me consid\xE9rer ennemi
+      !\n[Mouse]-Depuis cet incident, tantine n\u2019a plus jamais revu son ami.\nElle
+      vivait avec lui, elle a d\xFB fuir, on l\u2019a accept\xE9 dans la famille
+      !"
     - 
     - 'Emotion : Anticipation;
 
@@ -2141,14 +2151,14 @@ MonoBehaviour:
     - Mouse
     - Hint
     - "[Bear]-Quelle est cette histoire ?\n[Mouse]-Plus tard.\n[Cat]-Si je ne comprends
-      souris, au moins vous autres \xEAtes gentils !"
+      souris, au moins vous autres \xEAtes gentils <?E:React/Trust, Cat, TRUE/>!"
     - 
     - 'Name : M.2.F12;'
     - "\u24C7-M.2.12b"
     - Mouse
     - Hint
-    - "[Cat]-J\u2019aimerai te prouver ma bonne foi !\n[Bird]-Ne t\u2019inqui\xE8tes
-      pas, nous on croit en toi !"
+    - "[Cat]-J\u2019aimerai te prouver <emcol val=Trust>ma bonne foi !</emcol>\n[Bird]-Ne
+      t\u2019inqui\xE8tes pas, nous on croit en toi !"
     - 
     - 'Name : M.2.F12;'
     - "\u24C7-B.2.1"
@@ -2159,7 +2169,8 @@ MonoBehaviour:
       bon, ce n'est pas votre faute !\nVous vouliez plaire \xE0 votre p\xE8re, l'id\xE9e
       n'\xE9tait pas sotte !\n[Cat]-Bien s\xFBr que si ! C'est par pur vanit\xE9,
       je voulais qu'il me voit, qu'il soit fier de moi !\n[Bird]-Alors il a bien
-      mauvais go\xFBt ! Du pelage au langage, vous \xEAtes un beau matou !"
+      mauvais go\xFBt ! Du pelage au langage, <emcol val=Joy>vous \xEAtes un beau
+      matou </emcol>!"
     - 
     - 'Emotion : Trust;
 
@@ -2172,26 +2183,27 @@ MonoBehaviour:
     - "\u24C7-B.2.1a"
     - Bird
     - Hint
-    - "[Bird]-En tout cas moi je suis heureuse d\u2019\xEAtre avec vous !\nJe me
-      fiche que vous soyez chat ou loup !"
+    - "[Bird]-En tout cas moi je suis heureuse d\u2019\xEAtre avec vous <?E:React/Joy,
+      Bird, TRUE/>!\nJe me fiche que vous soyez chat ou loup !"
     - 
     - 'Name : B.2.F1'
     - "\u24C7-B.2.1b"
     - Bird
     - Hint
-    - "[Bird]-Maintenant que vous nous avez trouver !\nPlus la peine d\u2019\xEAtre
-      terrifi\xE9"
+    - "[Bird]-Maintenant que vous nous avez trouv\xE9 !\nPlus la peine d\u2019\xEAtre
+      terrifi\xE9 <?E:React/Joy, Bird, TRUE/>!"
     - 
     - 'Name : B.2.F1'
     - "\u24C7-B.2.2"
     - Bird
     - Advance
-    - "[Bird]-Moi je serai ravie de vivre avec vous !\nEuh... Je veux dire en tant
-      que soeur c'est tout...\n[Cat]-Vous le pensez vraiment ? Je ne suis pas \xE9coeurant
-      ?\n[Bird]-Vous plaisantez ! \xE9coutez, votre d\xE9sarroi je comprends !\n//Mon
-      p\xE8re m'a rejet\xE9, car je ne savais pas chanter.\n//Mais sans \xE7a, je
-      ne vous aurais jamais rencontr\xE9...\n[Cat]-En toute honn\xEAtet\xE9, votre
-      p\xE8re est aussi fou que le miens de vous avoir jet\xE9 !"
+    - "[Bird]-Moi je serai ravie de vivre avec vous <?E:React/Joy, Bird, TRUE/>!\nEuh...
+      Je veux dire en tant que soeur c'est tout...\n[Cat]-Vous le pensez vraiment
+      ? Je ne suis pas \xE9coeurant ?\n[Bird]-Vous plaisantez ! \xE9coutez, votre
+      d\xE9sarroi je comprends !\n//Mon p\xE8re m'a rejet\xE9, car je ne savais pas
+      chanter.\n//Mais sans \xE7a, je ne vous aurais jamais rencontr\xE9...\n[Cat]-<bounce><emcol
+      val=Trust>En toute honn\xEAtet\xE9</emcol></bounce>, votre p\xE8re est aussi
+      fou que le miens de vous avoir jet\xE9 !"
     - 
     - 'Emotion : Joy;
 
@@ -2201,24 +2213,25 @@ MonoBehaviour:
     - "\u24C7-B.2.2a"
     - Bird
     - Hint
-    - "[Bird]-C\u2019est vrai que vous semblez agr\xE9able\u2026\nD\u2019esprit comme
-      pour le regard\u2026"
+    - "[Bird]-C\u2019est vrai que vous semblez <emcol val=Trust>agr\xE9able</emcol>...\nD\u2019esprit
+      comme pour le regard..."
     - 
     - 'Name : B.2.F2;'
     - "\u24C7-B.2.2b"
     - Bird
     - Hint
-    - "[Bird]-Vous \xEAtes un flatteur ! Vous allez app\xE2ter mon c\u0153ur\u2026"
+    - "[Bird]-Vous \xEAtes un flatteur <?E:React/Joy, Bird, TRUE/>! Vous allez app\xE2ter
+      mon c\u0153ur..."
     - 
     - 'Name : B.2.F2;'
     - "\u24C7-B.2.3"
     - Bird
     - Advance
     - "[Bird]-Vous \xEAtes si touchant et mignon !\n[Cat]-Et vous un si bon compagnon
-      !\n[Bird]-Je craque, ce chat roux m\u2019ensoleille !\n[Cat]-C'est vous qui
-      m'illuminez tellement vous \xEAtes belle !\n[Mouse]-Euh... M.Ernest, il se
-      passe quoi l\xE0 !?\n[Bear]-Aucune id\xE9e... Je n'ai pas eu le temps de suivre
-      je crois...\nAu moins il ne s'en prend plus \xE0 toi..."
+      <?E:Sfx/Trust, Cat, TRUE/>!\n[Bird]-Je craque, ce chat roux m\u2019ensoleille
+      !\n[Cat]-C'est vous qui m'illuminez tellement vous \xEAtes belle !\n[Mouse]-Euh...
+      M.Ernest, il se passe quoi l\xE0 !?\n[Bear]-Aucune id\xE9e... Je n'ai pas eu
+      le temps de suivre je crois...\nAu moins il ne s'en prend plus \xE0 toi..."
     - 
     - 'Emotion : Joy;
 
@@ -2231,23 +2244,25 @@ MonoBehaviour:
     - "\u24C7-B.2.3a"
     - Bird
     - Hint
-    - "[Cat]-Je ne ressens plus aucune peur avec vous\u2026\n[Bird]-Et moi je me
-      sens si bien pr\xEAt de vous !"
+    - "[Cat]-Je ne ressens plus <emcol val=Trust>aucune peur avec vous</emcol>...\n[Bird]-Et
+      moi je me sens si bien pr\xEAt de vous !"
     - 
     - 'Name : B.2.F3;'
     - "\u24C7-B.2.3b"
     - Bird
     - Hint
-    - "[Cat]-C\u2019est donc cela aimer, voil\xE0 mon c\u0153ur pi\xE9g\xE9\u2026"
+    - "[Cat]-C\u2019est donc cela aimer<?E:React/Trust, Cat, TRUE/>, voil\xE0 mon
+      c\u0153ur pi\xE9g\xE9..."
     - 
     - 'Name : B.2.F3;'
     - "\u24C7-B.2.4"
     - Bird
     - Advance
-    - "[Bird]-Allons, des tracas ? Je n'en vois aucun !\nJuste un ami qui est dans
-      le besoin !\n[Cat]-Vous me consid\xE9rez vraiment comme un ami ?\nMoi qui suis
-      mis\xE9rable \xE0 fuir mes ennuis...\n[Bird]-Vous \xEAtes adorable ! Fa\xEEtes
-      confiance \xE0 notre musique !\nElle r\xE9pare les coeurs \xE7a en est magiques"
+    - "[Bird]-Allons, des tracas ? Je n'en vois aucun <?E:React/Joy, Bird, TRUE/>!\nJuste
+      un ami qui est dans le besoin !\n[Cat]-Vous me consid\xE9rez vraiment comme
+      un ami ?\nMoi qui suis mis\xE9rable \xE0 fuir mes ennuis...\n[Bird]-Vous \xEAtes
+      adorable ! <emcol val =Trust>Fa\xEEtes confiance \xE0 notre musique</emcol>
+      !\nElle r\xE9pare les coeurs \xE7a en est magiques"
     - 
     - 'Emotion : Joy;
 
@@ -2257,24 +2272,26 @@ MonoBehaviour:
     - "\u24C7-B.2.4a"
     - Bird
     - Hint
-    - "[Bird]-Grenouille peut l\u2019assurer !\nLa musique peut tout r\xE9parer !"
+    - "[Bird]-Grenouille peut l\u2019assurer !\n<bounce><emcol val =Joy>La musique
+      peut tout r\xE9parer</emcol></bounce> !"
     - 
     - 'Name : B.2.F4;'
     - "\u24C7-B.2.4b"
     - Bird
     - Hint
-    - "[Bird]-Soyez confiants, ensemble nous iront de l\u2019avant !"
+    - "[Bird]-Soyez confiants<?E:React/Trust, Bird, TRUE/>, ensemble nous iront de
+      l\u2019avant !"
     - 
     - 'Name : B.2.F4;'
     - "\u24C7-B.2.5"
     - Bird
     - Advance
     - "[Bird]-Consolez-vous, si votre famille ne veut plus de vous partez !\nC'est
-      l'occasion de prendre la route qui vous plait !\n[Cat]-Le probl\xE8me est l\xE0,
-      \xEAtre loin du foyer ne me convient pas !\n[Bird]-Dans ce cas peut-\xEAtre
-      pourrions-nous lui parler !\nIl est musicien aussi, il voudra peut-\xEAtre
-      nous \xE9couter !\n[Cat]-Surtout pas ! Je veux dire... Je ne veux pas vous
-      attirer de tracas..."
+      l'occasion de prendre <emcol val=Joy>la route qui vous plait</emcol> !\n[Cat]-Le
+      probl\xE8me est l\xE0, \xEAtre loin du foyer ne me convient pas !\n[Bird]-Dans
+      ce cas peut-\xEAtre pourrions-nous lui parler !\nIl est musicien aussi, il
+      voudra peut-\xEAtre nous \xE9couter <?E:React/Trust, Bird, TRUE/>!\n[Cat]-Surtout
+      pas ! Je veux dire... Je ne veux pas vous attirer de tracas..."
     - 
     - 'Emotion : Trust;
 
@@ -2287,14 +2304,15 @@ MonoBehaviour:
     - "\u24C7-B.2.5a"
     - Bird
     - Hint
-    - "[Bird]-Ne vous en fa\xEEtes pas, ne nous vous d\xE9cevrons pas !"
+    - "[Bird]-Ne vous en fa\xEEtes pas, <emcol val=Trust>nous ne vous d\xE9cevrons
+      pas</emcol> !"
     - 
     - 'Name : B.2.F5;'
     - "\u24C7-B.2.5b"
     - Bird
     - Hint
-    - "[Bird]-Je suis s\xFBre qu\u2019il suffit de lui parler\u2026\n[Cat]-Oubliez-\xE7a,
-      vous allez vous faire blesser !"
+    - "[Bird]-Je suis s\xFBre qu\u2019il suffit de lui parler<?E:React/Trust, Bird,
+      TRUE/>...\n[Cat]-Oubliez-\xE7a, vous allez vous faire blesser !"
     - 
     - 'Name : B.2.F5;'
     - "\u24C7-B.2.6"
@@ -2304,8 +2322,9 @@ MonoBehaviour:
       est muet mais avec son tambour il parle avec ferveur !\n// La musique peut
       tout changer pour celui qui est pr\xEAt \xE0 l'\xE9couter...\n[Cat]-Surement,
       mais s'il est p\xE8re aimant, il fut un loup vaillant.\nLe Grand M\xE9chant
-      Loup ! Le monstre fourvoyant !\nNe le sous-estimez pas, son instinct \xE9tait
-      f\xE9roce avant !\n[Mouse]-Tu es le fils du Grand M\xE9chant Loup !"
+      Loup ! Le monstre fourvoyant <?E:React/Anger, Bird, TRUE/>!\nNe le sous-estimez
+      pas, son instinct \xE9tait f\xE9roce avant !\n[Mouse]-Tu es le fils du Grand
+      M\xE9chant Loup !"
     - 
     - 'Emotion : Trust;
 
@@ -2316,14 +2335,14 @@ MonoBehaviour:
     - Bird
     - Hint
     - "[Bird]-Si c\u2019est vraiment le monstre des rumeurs !\nJe m\u2019en vais
-      occire ce tueur !"
+      occire ce tueur <?E:React/Anger, Bird, TRUE/>!"
     - 
     - 'Name : B.2.F6;'
     - "\u24C7-B.2.6b"
     - Bird
     - Hint
-    - "[Bird]-La musique peut apaiser le pire des c\u0153urs !\nM\xEAme si c\u2019est
-      celui d\u2019un tueur !"
+    - "[Bird]-La musique peut apaiser le pire des c\u0153urs !\nM\xEAme si <emcol
+      val=Anger>c\u2019est celui d\u2019un tueur</emcol> !"
     - 
     - 'Name : B.2.F6;'
     - "\u24C7-B.2.7"
@@ -2334,7 +2353,8 @@ MonoBehaviour:
       l\xE0 n'est quand m\xEAme LE loup !\n[Cat]-C'est vrai, pour l'affronter il
       faut \xEAtre fou !\n[Bird]-J'ai quitt\xE9 mon nid pour prouver mon talent !\nEt
       convaincre le Grand M\xE9chant Loup, c\u2019est assez parlant !\n[Cat]-Avec
-      des amis comme vous, je ne peux qu'\xEAtre confiant !"
+      des <emcol val=Trust>amis comme vous</emcol>, je ne peux qu'\xEAtre confiant
+      <?E:Sfx/Trust, Cat, TRUE/>!"
     - 
     - 'Emotion : Anger;
 
@@ -2347,15 +2367,15 @@ MonoBehaviour:
     - "\u24C7-B.2.7a"
     - Bird
     - Hint
-    - "[Cat]-J\u2019aurais d\xFB vous rencontrer avant,\nMon \xE9tat aurait \xE9t\xE9
-      moins navrant\u2026"
+    - "[Cat]-J\u2019aurais d\xFB vous rencontrer avant<?E:React/Trust, Cat, TRUE/>,\nMon
+      \xE9tat aurait \xE9t\xE9 moins navrant..."
     - 
     - 'Name : B.2.F7;'
     - "\u24C7-B.2.7b"
     - Bird
     - Hint
-    - "[Cat]-Je suis bien heureux de vous avoir rencontrer !\nApr\xE8s tout, peut-\xEAtre
-      que tout va s\u2019arranger."
+    - "[Cat]-Je suis bien heureux de vous avoir rencontrer !\nApr\xE8s tout, <emcol
+      val=Trust>peut-\xEAtre que tout va s\u2019arranger</emcol>."
     - 
     - 'Name : B.2.F7;'
     - "\u24C7-B.2.8"
@@ -2364,7 +2384,7 @@ MonoBehaviour:
     - "[Bird]-Mais assez de ces histoires d\xE9primantes !\nLa musique est fa\xEEtes
       pour \xEAtre dansante !\n[Cat]-Vous avez raison sur ce point...\nRessassez
       le passer ne sert \xE0 rien.\n[Bird]-L'important c'est d'assurer votre avenir
-      !\nEt avec notre musique on peut r\xE9ussir !"
+      !\nEt avec notre musique on peut r\xE9ussir <?E:React/Trust, Bird, TRUE/>!"
     - 
     - 'Emotion : Joy;
 
@@ -2381,8 +2401,10 @@ MonoBehaviour:
     - "\u24C7-B.2.8b"
     - Bird
     - Hint
-    - "[Bird]-Bien, je vais fais confiance\u2026\nMais ne parlez plus de ma voix,
-      ou je reperds patience."
+    - '[Bird]-Bien, je vous fais confiance...
+
+      Mais ne parlez plus de ma voix,
+      ou je reperds patience.'
     - 
     - 'Name : B.2.F8;'
     - "\u24C7-B.2.9"
@@ -2391,8 +2413,8 @@ MonoBehaviour:
     - "[Bird]-Je suis d\xE9sol\xE9e de m'\xEAtre emport\xE9e.\nMais ma voix n'est
       pas un sujet plein de gaiet\xE9...\n//Vous avez bon fond, comme votre histoire
       l'a prouv\xE9.\n[Cat]-Ne vous en fa\xEEte pas, je vous comprends bien en v\xE9rit\xE9...\nMon
-      p\xE8re m'en veut d'\xEAtre chat, le v\xF4tre de ne pas savoir chanter.\n//Mais
-      c'est la nature qui d\xE9cide comment on n'est."
+      p\xE8re m'en veut d'\xEAtre chat, le v\xF4tre de ne pas savoir chanter <?E:React/Surprise,
+      Bird, TRUE/>.\n//Mais c'est la nature qui d\xE9cide comment on n'est."
     - 
     - 'Emotion : Trust;
 
@@ -2405,24 +2427,25 @@ MonoBehaviour:
     - "\u24C7-B.2.9a"
     - Bird
     - Hint
-    - "[Bird]-Comment \xE7a ne pas savoir chanter !?"
+    - "[Bird]-<emcol val=Surprise>Comment \xE7a</emcol> ne pas savoir chanter !?"
     - 
     - 'Name : B.2.F9;'
     - "\u24C7-B.2.9b"
     - Bird
     - Hint
-    - "[Bird]-D\xE9sol\xE9e pour tout, je me laisse emport\xE9e\u2026\nMais je suis
+    - "[Bird]-D\xE9sol\xE9e pour tout, je me laisse emport\xE9e...\nMais je suis
       ravie de vous avoir \xE9cout\xE9 !"
     - 
     - 'Name : B.2.F9;'
     - "\u24C7-B.2.10"
     - Bird
     - Advance
-    - "[Bird]-Ne pas savoir chanter !? Vous rigolez !?\nMoi qui vous complimentais...
-      Ma voix est ce qu'elle est !\nBelle est m\xE9lodieuse, pleine de gaiet\xE9
-      !\n[Cat]-La voil\xE0 qui recommence avec sa voix au rabais !\nVous utilisez
-      un instrument ! Ce n'est pas chanter c'est tricher !\n[Bird]-Vous \xEAtes comme
-      mon fr\xE8re !\nLui qui me vendit \xE0 mon p\xE8re !"
+    - "[Bird]-Ne pas savoir chanter !? Vous rigolez !?\nMoi qui vous complimentais<?E:React/Disgust,
+      Bird, TRUE/>... Ma voix est ce qu'elle est !\nBelle est m\xE9lodieuse, pleine
+      de gaiet\xE9 !\n[Cat]-La voil\xE0 qui recommence avec sa voix au rabais !\nVous
+      utilisez un instrument ! Ce n'est pas chanter c'est tricher !\n[Bird]-Vous
+      \xEAtes comme mon fr\xE8re !\n<wave><emcol val=Disgust>Lui qui me vendit</emcol></wave>
+      \xE0 mon p\xE8re !"
     - 
     - 'Emotion : Surprise;
 
@@ -2433,7 +2456,7 @@ MonoBehaviour:
     - Bird
     - Hint
     - "[Bird]-Je n\u2019y crois pas ! apr\xE8s les compliments que j\u2019ai fait
-      sur toi !"
+      sur toi <?E:React/Disgust, Bird, TRUE/>!"
     - 
     - 'Name : B.2.F10;'
     - "\u24C7-B.2.10b"
@@ -2446,11 +2469,11 @@ MonoBehaviour:
     - Bird
     - Advance
     - "[Bird]-Quand cet inconnu me donna cet instrument,\nLe son de ma voix qui soufflait
-      dedans \xE9tant bien \xE9l\xE9gant.\n//De la beaut\xE9 de ma voix mon p\xE8re
-      fut juge.\nMais mon fr\xE8re r\xE9v\xE9la le subterfuge...\n[Cat]-Votre p\xE8re
-      pensait que c'\xE9tait votre vraie voix.\n[Bird]-L'instrument est juste un
-      micro, c'est ma vraie voix !\nEnfin, au d\xE9but, c'est ce que mon p\xE8re
-      a cru..."
+      dedans \xE9tant bien \xE9l\xE9gant<?E:React/Joy, Bird, TRUE/>.\n//De la beaut\xE9
+      de ma voix mon p\xE8re fut juge.\nMais <emcol val=Anger>mon fr\xE8re r\xE9v\xE9la
+      le subterfuge</emcol>...\n[Cat]-Votre p\xE8re pensait que c'\xE9tait votre
+      vraie voix.\n[Bird]-L'instrument est juste un micro, c'est ma vraie voix !\nEnfin,
+      au d\xE9but, c'est ce que mon p\xE8re a cru..."
     - 
     - 'Emotion : Disgust;
 
@@ -2460,25 +2483,26 @@ MonoBehaviour:
     - "\u24C7-B.2.11a"
     - Bird
     - Hint
-    - "[Bird]-Mon fr\xE8re n\u2019est qu\u2019un jaloux ! Un *cui-cui-cui* !"
+    - "[Bird]-Mon fr\xE8re n\u2019est qu\u2019un jaloux ! Un *cui-cui-cui* <?E:React/Anger,
+      Bird, TRUE/>!"
     - 
     - 'Name : B.2.F11;'
     - "\u24C7-B.2.11b"
     - Bird
     - Hint
-    - "[Bird]-Si seulement il s\u2019\xE9tait tu ! Ma renomm\xE9e je l\u2019aurais
-      d\xE9j\xE0 eu !"
+    - "[Bird]-<emcol val=Anger>Si seulement il s\u2019\xE9tait tu</emcol> ! Ma renomm\xE9e
+      je l\u2019aurais d\xE9j\xE0 eu !"
     - 
     - 'Name : B.2.F11;'
     - "\u24C7-B.2.12"
     - Bird
     - Advance
     - "[Bird]-La jalousie de mon fr\xE8re l'a pouss\xE9 \xE0 me d\xE9noncer !\n[Cat]-En
-      quoi peut-on \xEAtre jaloux de vous, quelle id\xE9e !\n[Bird]-Ma famille est
-      une troupe de chanteur-com\xE9dien...\nSans talent, je devais jouer le sapin...\n//Mais
-      depuis que ma voix a chang\xE9 !\nC'est mon fr\xE8re que de cette humiliation
-      \xE9tait charg\xE9 !\n[Cat]-Vous en sapin ! Ah ahah, qu'elle charmant portrait
-      !"
+      quoi peut-on \xEAtre jaloux de vous, quelle id\xE9e <?E:Sfx/Trust, Cat, TRUE/>!\n[Bird]-Ma
+      famille est une troupe de chanteur-com\xE9dien...\nSans talent, je devais jouer
+      le sapin...\n//Mais depuis que ma voix a chang\xE9 !\nC'est mon fr\xE8re que
+      de cette humiliation \xE9tait charg\xE9 !\n[Cat]-Vous en sapin ! <wiggle><emcol
+      val=Trust>Ah ahah</emcol></wiggle>, qu'elle charmant portrait !"
     - 
     - 'Emotion : Anger;
 
@@ -2505,10 +2529,11 @@ MonoBehaviour:
     - "\u24C7-Be.2.1"
     - Bear
     - Advance
-    - "[Bear]-Une bien triste histoire que voil\xE0...\nIl me fait dire qu'il vaut
-      mieux rester chez soi !\n[Cat]-Je n'aurai pas d\xFB, j'en suis conscient...\n[Bear]-Ne
-      te reproche rien, ton p\xE8re se sent trahi mais sois patient.\nIl regrettera
-      et reviendra vers toi assur\xE9ment !\nUn p\xE8re n'est rien sans son enfant..."
+    - "[Bear]-Une bien <emcol val=Sadness>triste</emcol> histoire que voil\xE0...\nIl
+      me fait dire qu'il vaut mieux rester chez soi !\n[Cat]-Je n'aurai pas d\xFB,
+      j'en suis conscient...\n[Bear]-Ne te reproche rien, ton p\xE8re se sent trahi
+      mais sois patient.\nIl regrettera et reviendra vers toi assur\xE9ment !\nUn
+      p\xE8re n'est rien sans son enfant..<?E:React/Sadness, Bear, TRUE/>."
     - 
     - 'Emotion : Sadness;
 
@@ -2522,14 +2547,15 @@ MonoBehaviour:
     - Bear
     - Hint
     - "[Bear]-On est bien mieux chez sois\nMais je dois sortir, je n\u2019ai pas
-      le choix\u2026"
+      le choix..<?E:React/Sadness, Bear, TRUE/>."
     - 
     - 'Name : Be.2.F1'
     - "\u24C7-Be.2.1b"
     - Bear
     - Hint
-    - "[Bear]-Le plus grand regret d\u2019un parent est de laisser partir son enfant.\nTon
-      loup reviendra sois patient."
+    - "[Bear]-Le plus grand <emcol val=Sadness>regret</emcol> d\u2019un parent est
+      de <emcol val=Sadness>laisser partir son enfant</emcol>.\nTon loup reviendra
+      sois patient."
     - 
     - 'Name : Be.2.F1'
     - "\u24C7-Be.2.2"
@@ -2537,10 +2563,11 @@ MonoBehaviour:
     - Advance
     - "[Bear]-Tu sais, moi j'avais offert un instrument \xE0 ma petite souris !\nUne
       harpe je ne souffre pas d'oublie...\n// Elle \xE9tait si heureuse, sur le sentier
-      des fleurs elle est partie jouer.\n[Cat]-Vous lui avait un beau cadeau, c'\xE9tait
-      une bonne id\xE9e !\nDes lunettes, ce n'\xE9tait pas ce qu'il y avait de plus
-      malin...\n[Bear]-Une bonne id\xE9e... Elle n'est jamais rentr\xE9e depuis ce
-      matin.\nCela fait deux ans maintenant que j'attends..."
+      des fleurs elle est partie jouer.\n[Cat]-Vous lui avait fait un beau cadeau,
+      c'\xE9tait une bonne id\xE9e !\nDes lunettes, ce n'\xE9tait pas ce qu'il y
+      avait de plus malin...\n[Bear]-Une <emcol val=Anger>bonne id\xE9e</emcol>...
+      Elle n'est jamais rentr\xE9e depuis ce matin<?E:React/Sadness, Bear, TRUE/>.\nCela
+      fait deux ans maintenant que j'attends..."
     - 
     - 'Emotion : Sadness;
 
@@ -2550,15 +2577,15 @@ MonoBehaviour:
     - "\u24C7-Be.2.2a"
     - Bear
     - Hint
-    - "[Bear]-Deux ans \xE0 regarder le monde depuis ma fen\xEAtre\u2026\n Et c\u2019est
-      ma faute !"
+    - "[Bear]-Deux ans \xE0 regarder le monde depuis ma fen\xEAtre...\nEt c\u2019est
+      ma faute <?E:React/Anger, Bear, TRUE/>!"
     - 
     - 'Name : Be.2.F2;'
     - "\u24C7-Be.2.2b"
     - Bear
     - Hint
     - "[Bear]-A cause d\u2019Emilie je ne peux plus l\u2019attendre.\nIl me faut
-      remplir mon stock !"
+      remplir mon stock <?E:React/Anger, Bear, TRUE/>!"
     - 
     - 'Name : Be.2.F2;'
     - "\u24C7-Be.2.3"
@@ -2566,10 +2593,11 @@ MonoBehaviour:
     - Advance
     - "[Bear]-Si je ne quittais ni mon fauteuil, ni ma fen\xEAtre,\nC'est pour la
       voir un jour repara\xEEtre.\n[Cat]-Vous pensez alors que mon p\xE8re peut me
-      pardonner ?\n[Bear]-sans aucune h\xE9sitation, sa confiance il va te redonner.\n//Les
-      petites choses vont lui manquer !\nPar exemple, ma petite souris, elle adorait
-      collectionnait les dents !\nElle en faisait des colliers, je trouvais \xE7a
-      d\xE9go\xFBtant !\nMaintenant \xE7a me manque tellement..."
+      <emcol val=Trust>pardonner</emcol> <?E:Sfx/Trust, Cat, TRUE/>?\n[Bear]-sans
+      aucune h\xE9sitation, sa confiance il va te redonner.\n//Les petites choses
+      vont lui manquer !\nPar exemple, ma petite souris, elle adorait collectionnait
+      les dents !\nElle en faisait des colliers, je trouvais \xE7a d\xE9go\xFBtant
+      !\nMaintenant \xE7a me manque tellement..."
     - 
     - 'Emotion : Sadness;
 
@@ -2582,15 +2610,15 @@ MonoBehaviour:
     - "\u24C7-Be.2.3a"
     - Bear
     - Hint
-    - "[Cat]-Si vous pensez que mon p\xE8re peut me pardonner\u2026\nJe vous fais
-      confiance et j\u2019oserai l\u2019aborder."
+    - "[Cat]-Si vous pensez que mon p\xE8re peut me pardonner...\nJe vous fais <emcol
+      val=Trust>confiance</emcol> et j\u2019oserai l\u2019aborder."
     - 
     - 'Name : Be.2.F3;'
     - "\u24C7-Be.2.3b"
     - Bear
     - Hint
-    - "[Cat]-Votre histoire me touche, je suis convaincu.\nJe ne laisserai pas mon
-      p\xE8re sans m\u2019\xEAtre battu !"
+    - "[Cat]-Votre histoire me touche, je suis convaincu<?E:React/Trust, Cat, TRUE/>.\nJe
+      ne laisserai pas mon p\xE8re sans m\u2019\xEAtre battu !"
     - 
     - 'Name : Be.2.F3;'
     - "\u24C7-Be.2.4"
@@ -2599,8 +2627,8 @@ MonoBehaviour:
     - "[Bear]-Mais maintenant que mon stock est vide, me voil\xE0 forc\xE9 \xE0 sortir...\nPeut-\xEAtre
       que sur ce miel je misais trop...\n//Voil\xE0 que ma faim revient au galop
       !\n[Cat]-Tout l'hivers \xE0 manger du miel c'est insens\xE9 !\n[Bear]-Je ne
-      parle pas que de r\xE9serves entrepos\xE9es...\n[Cat]-Par quoi d'autre ce stock
-      vous a \xE9t\xE9 incit\xE9 ?"
+      parle pas que de r\xE9serves entrepos\xE9es..<?E:React/Sadness, Bear, TRUE/>.\n[Cat]-Par
+      quoi d'autre ce stock vous a \xE9t\xE9 incit\xE9 ?"
     - 
     - 'Emotion : Anger;
 
@@ -2610,27 +2638,28 @@ MonoBehaviour:
     - "\u24C7-Be.2.4a"
     - Bear
     - Hint
-    - "[Bear]-je ne peux plus rester chez moi\u2026\nEsp\xE9rons qu\u2019elle ne
-      rentre pas \xE0 ce moment-l\xE0\u2026"
+    - "[Bear]-je ne peux plus rester chez moi...\nEsp\xE9rons qu\u2019elle ne rentre
+      pas \xE0 ce moment-l\xE0..<?E:React/Trust, Bear, TRUE/>."
     - 
     - 'Name : Be.2.F4;'
     - "\u24C7-Be.2.4b"
     - Bear
     - Hint
-    - "[Bear]-Mon plan \xE9tait parfait, le miel allait l\u2019attirer !\nPourquoi
-      fallait-il qu\u2019Emilie ne m\u2019arnaque avec sa noix p\xE9rim\xE9e !"
+    - "[Bear]-Mon plan \xE9tait parfait, <emcol val=Trust>le miel allait l\u2019attirer</emcol>
+      !\nPourquoi fallait-il qu\u2019Emilie ne m\u2019arnaque avec sa noix p\xE9rim\xE9e
+      <?E:React/Sadness, Bear, TRUE/>!"
     - 
     - 'Name : Be.2.F4;'
     - "\u24C7-Be.2.5"
     - Bear
     - Advance
     - "[Bear]-Emilie me convainc de sortir pour trouver \xE0 manger...\nEt tout ce
-      qu'on trouve c'est un chat qui ne fait que pleurnicher !\n[Cat]-Pardon ? Pourquoi
-      vous vous emportez !?\n[Bear]-Je suis d\xE9sol\xE9 ! La faim me d\xE9vore et
-      je ne peux pas d\xE9vorer ma faim !\nEt je deviens irrit\xE9... Ma petite souris
-      savait me redonner le sourire...\n[Cat]-Ah ah ah, je vous comprends, semblable
-      est mon p\xE8re loup !\nPour le calmer je r\xF4tissais des lapins blancs, il
-      en est fou !"
+      qu'on trouve c'est un chat qui ne fait que pleurnicher <?E:React/Surprise,
+      Bear, TRUE/>!\n[Cat]-Pardon ? Pourquoi vous vous emportez !?\n[Bear]-Je suis
+      d\xE9sol\xE9 ! La faim me d\xE9vore et je ne peux pas d\xE9vorer ma faim !\nEt
+      je deviens irrit\xE9... Ma petite souris savait me redonner le sourire...\n[Cat]-Ah
+      ah ah, je vous comprends, semblable est mon p\xE8re loup !\nPour le calmer
+      je r\xF4tissais des lapins blancs, il en est fou !"
     - 
     - 'Emotion : Sadness;
 
@@ -2643,14 +2672,15 @@ MonoBehaviour:
     - "\u24C7-Be.2.5a"
     - Bear
     - Hint
-    - "[Bear]-Tu nourris ton p\xE8re ?\nSa faim finira par remplacer sa col\xE8re
-      !"
+    - "[Bear]-Tu nourris ton p\xE8re <?E:React/Surprise, Bear, TRUE/>?\nSa faim finira
+      par remplacer sa col\xE8re !"
     - 
     - 'Name : Be.2.F5;'
     - "\u24C7-Be.2.5b"
     - Bear
     - Hint
-    - "[Bear]-Quelle chance\u2026\nQuelqu\u2019un qui vous remplie la panse\u2026"
+    - "[Bear]-<emcol val=Surprise>Quelle chance ! </emcol>\nQuelqu\u2019un qui vous
+      remplie la panse..."
     - 
     - 'Name : Be.2.F5;'
     - "\u24C7-Be.2.6"
@@ -2658,8 +2688,9 @@ MonoBehaviour:
     - Advance
     - "[Bear]-Tu nourris ton p\xE8re ?\n[Cat]-Sa c\xE9cit\xE9 ne rend pas sa chasse
       ais\xE9e...\n[Bear]-Crois-moi alors ! De revenir il va t'implorer !\n[Cat]-Bah...
-      Avec les lunettes... Il n'a plus besoin de moi...\n[Bear]-Oh... Pas le meilleur
-      cadeau je vois...\nMais \xE7a ne me dit pas quoi manger moi !"
+      Avec les lunettes... Il n'a plus besoin de moi...\n[Bear]-<emcol val=Sadness>Oh...</emcol>
+      Pas le meilleur cadeau je vois...\nMais \xE7a ne me dit pas quoi manger moi
+      <?E:React/Anger, Bear, TRUE/>!"
     - 
     - 'Emotion : Surprise;
 
@@ -2669,14 +2700,14 @@ MonoBehaviour:
     - "\u24C7-Be.2.6a"
     - Bear
     - Hint
-    - "[Bear]-J\u2019ai tellement faim !"
+    - "[Bear]-J\u2019ai tellement faim <?E:React/Anger, Bear, TRUE/>!"
     - 
     - 'Name : Be.2.F6;'
     - "\u24C7-Be.2.6b"
     - Bear
     - Hint
-    - "[Bear]-Si seulement tu \xE9tais un l\xE9gume\u2026\n[Cat]-Vous plaisantez
-      je pr\xE9sume !"
+    - "[Bear]-<emcol val=Sadness>Si seulement tu \xE9tais un l\xE9gume...</emcol>\n[Cat]-Vous
+      plaisantez je pr\xE9sume !"
     - 
     - 'Name : Be.2.F6;'
     - "\u24C7-Be.2.7"
@@ -2685,8 +2716,8 @@ MonoBehaviour:
     - "[Bear]-Un chat roux \xE7a n'a pas le go\xFBt de carotte ?\n[Mouse]-Et une
       souris verte le go\xFBt d'un ptit poids ? C'est quoi cette id\xE9e sotte !?\n[Bear]-Oui
       bon... C'est \xE0 cause de toi que j'en suis l\xE0 !\nEn plus elle ne reviendra
-      pas... Mais je ne t'en veux pas, tu ne savais pas.\n[Mouse]-Comment \xE7a ?\nOu
-      :..."
+      pas... Mais je ne t'en veux pas<?E:React/Trust, Bear, TRUE/>, tu ne savais
+      pas.\n[Mouse]-Comment \xE7a ?\nOu :..."
     - 
     - 'Emotion : Anger;
 
@@ -2696,13 +2727,15 @@ MonoBehaviour:
     - "\u24C7-Be.2.7a"
     - Bear
     - Hint
-    - "[Bear]-Mon plan allait marcher, Emilie a tout g\xE2cher !"
+    - "[Bear]-<emcol val=Trust>Mon plan allait marcher</emcol>, Emilie a tout g\xE2cher
+      !"
     - 
     - 'Name : Be.2.F7;'
     - "\u24C7-Be.2.7b"
     - Bear
     - Hint
-    - "[Bear]-Je ne t\u2019en veut pas Emilie, mais tu es une petite chipie !"
+    - "[Bear]-Je ne t\u2019en veut pas Emilie<?E:React/Trust, Bear, TRUE/>, mais
+      tu es une petite chipie !"
     - 
     - 'Name : Be.2.F7;'
     - "\u24C7-Be.2.8"
@@ -2710,9 +2743,9 @@ MonoBehaviour:
     - Advance
     - "[Bear]-Ma petite souris adorait le miel, elle en mangeait tout le temps !\nJe
       me disais que peut-\xEAtre \xE7a aurait pu \xEAtre pour elle attirant...\n[Cat]-Vous
-      pensez que je manquerai au loup comme votre souris \xE0 vous ?\n[Bear]-C'est
-      votre p\xE8re, c'est certain.\nElle \xE9tait comme ma fille, sans elle je suis
-      fou...\nEt j'ai faim..."
+      pensez que je manquerai au loup comme votre souris \xE0 vous <?E:Sfx/Trust,
+      Cat, TRUE/>?\n[Bear]-C'est votre p\xE8re, c'est certain<?E:React/Trust, Cat,
+      TRUE/>.\nElle \xE9tait comme ma fille, sans elle je suis fou...\nEt j'ai faim..."
     - 
     - 'Emotion : Trust;
 
@@ -2725,15 +2758,15 @@ MonoBehaviour:
     - "\u24C7-Be.2.8a"
     - Bear
     - Hint
-    - "[Cat]-Vous me redonnez espoir\nJ\u2019ai \xE0 nouveau l\u2019envie d\u2019y
-      croire !"
+    - "[Cat]-Vous me redonnez <emcol val=Trust>espoir</emcol>\nJ\u2019ai \xE0 nouveau
+      l\u2019envie d\u2019y croire <?E:React/Trust, Cat, TRUE/>!"
     - 
     - 'Name : Be.2.F8;'
     - "\u24C7-Be.2.8b"
     - Bear
     - Hint
-    - "[Cat]-Vous \xEAtes s\xFBr de ce que vous d\xEEtes ? Vous ne mentez pas ?\n[Bear]-En
-      fils cuisinier \xE7a ne se renie pas"
+    - "[Cat]-Vous \xEAtes s\xFBr de ce que vous d\xEEtes ? Vous ne mentez pas ?\n[Bear]-Un
+      fils cuisinier \xE7a ne se renie pas<?E:React/Trust, Cat, TRUE/>."
     - 
     - 'Name : Be.2.F8;'
     - "\u24C7-Be.2.9"
@@ -2741,8 +2774,9 @@ MonoBehaviour:
     - Advance
     - "[Bear]-Allons, tu ne peux nier les bon souvenirs !\n[Cat]-C'est vrai, il m'a
       appris \xE0 chasser, il m'a donn\xE9 un avenir.\n// Puis sa vue l'entravant,
-      c'est moi qui m'occupait du diner.\nIl adorait quand je cuisinais !\n[Bear]-J'ai
-      tellement faim, j'aimerai un fils qui puisse mon repas m'amener..."
+      c'est moi qui m'occupait du diner.\nIl adorait quand je cuisinais <?E:React/Surprise,
+      Bear, TRUE/>!\n[Bear]-J'ai tellement faim, j'aimerai un fils qui puisse mon
+      repas m'amener..."
     - 
     - 'Emotion : Joy;
 
@@ -2752,14 +2786,15 @@ MonoBehaviour:
     - "\u24C7-Be.2.9a"
     - Bear
     - Hint
-    - "[Bear]-Tu nourris ton p\xE8re ?\nSa faim finira par remplacer sa col\xE8re
-      !"
+    - "[Bear]-Tu nourris ton p\xE8re <?E:React/Surprise, Bear, TRUE/>?\nSa faim finira
+      par remplacer sa col\xE8re !"
     - 
     - 'Name : Be.2.F9;'
     - "\u24C7-Be.2.9b"
     - Bear
     - Hint
-    - "[Bear]-Quelle chance\u2026\nQuelqu\u2019un qui vous remplie la panse\u2026"
+    - "[Bear]-<emcol val=Surprise>Quelle chance !</emcol>\nQuelqu\u2019un qui vous
+      remplie la panse..."
     - 
     - 'Name : Be.2.F9;'
     - "\u24C7-Be.2.10"
@@ -2768,8 +2803,9 @@ MonoBehaviour:
     - "[Bear]-Cette histoire est bien triste...\nMais ce genre de relation, dans
       la nature, existe !\n[Cat]-J'en doute, elle finissent toujours par faner...\nRegardez
       vous et votre amie souris qui s'est envol\xE9e.\n[Bear]-c'est un point, mais
-      on ne peut nier sa beaut\xE9 !\nUn ours sauv\xE9e par une souris, une souris
-      adopt\xE9e !\n[Cat]-Un chat recueilli par un loup puis chasser..."
+      on ne peut nier sa beaut\xE9 <?E:React/Joy, Bear, TRUE/>!\nUn ours sauv\xE9e
+      par une souris, une souris adopt\xE9e !\n[Cat]-Un chat recueilli par un loup
+      puis chasser..."
     - 
     - 'Emotion : Sadness;
 
@@ -2782,27 +2818,28 @@ MonoBehaviour:
     - "\u24C7-Be.2.10a"
     - Bear
     - Hint
-    - "[Bear]-Ais confiance au destin ! \nIl vous a fait rencontrer, je suis s\xFBr
-      qu\u2019il r\xE9unira \xE0 nouveau vos chemins."
+    - "[Bear]-<emcol val=Trust>Ais confiance</emcol> au destin ! \nIl vous a fait
+      rencontrer, je suis s\xFBr qu\u2019il r\xE9unira \xE0 nouveau vos chemins."
     - 
     - 'Name : Be.2.F10;'
     - "\u24C7-Be.2.10b"
     - Bear
     - Hint
     - "[Bear]-Il faut toujours garder dans nos c\u0153urs les bonnes choses.\nLa
-      joie l\u2019emporte toujours, peu importe la cause."
+      <emcol val=Joy>joie</emcol> l\u2019emporte toujours, peu importe la cause<?E:React/Joy,
+      Bear, TRUE/>."
     - 
     - 'Name : Be.2.F10;'
     - "\u24C7-Be.2.11"
     - Bear
     - Advance
-    - "[Bear]-C'est certes triste mais \xE7a va s'arranger !\n[Cat]-Comment ? Vous
-      semblez s\xFBr, qu'avez vous v\xE9cu pour votre espoir prolonger !\n[Bear]-Il
-      y a tr\xE8s longtemps je vivais dans un village d'ours voisin \xE0 celui des
-      souris.\nJ'\xE9tais exclu par les miens parce que j'\xE9tais v\xE9g\xE9tarien.\n//
-      J'\xE9tais devenu mendiant, sans rien...\n//De l'autre c\xF4t\xE9 une petite
-      souris \xE9tait elle aussi bannie des siens.\nElle \xE9tait verte, on la pensait
-      malade et contagieuse."
+    - "[Bear]-C'est certes triste mais \xE7a va s'arranger <?E:React/Trust, Bear,
+      TRUE/>!\n[Cat]-Comment ? Vous semblez s\xFBr, qu'avez vous v\xE9cu pour votre
+      espoir prolonger !\n[Bear]-Il y a tr\xE8s longtemps je vivais dans un village
+      d'ours voisin \xE0 celui des souris.\nJ'\xE9tais exclu par les miens parce
+      que j'\xE9tais v\xE9g\xE9tarien.\n//J'\xE9tais devenu mendiant, sans rien...\n//De
+      l'autre c\xF4t\xE9 une petite souris \xE9tait elle aussi bannie des siens.\nElle
+      \xE9tait verte, on la pensait malade et contagieuse."
     - 
     - 'Emotion : Trust;
 
@@ -2812,15 +2849,15 @@ MonoBehaviour:
     - "\u24C7-Be.2.11a"
     - Bear
     - Hint
-    - "[Bear]-Si nous avons v\xE9cu heureux avec ma petite souris\u2026\nIl n\u2019y
-      a pas de raison que vous ne puissiez pas aussi !"
+    - "[Bear]-Si nous avons v\xE9cu heureux avec ma petite souris...\n<emcol val=Trust>Il
+      n\u2019y a pas de raison que vous ne puissiez pas aussi !</emcol>"
     - 
     - 'Name : Be.2.F11;'
     - "\u24C7-Be.2.11b"
     - Bear
     - Hint
-    - "[Bear]-Comme moi ton p\xE8re n\u2019oubliera pas\nLes ann\xE9es de bonheur
-      partag\xE9es ici bah."
+    - "[Bear]-Comme moi ton p\xE8re n\u2019oubliera pas<?E:React/Trust, Bear, TRUE/>,\nLes
+      ann\xE9es de bonheur partag\xE9es ici bas."
     - 
     - 'Name : Be.2.F11;'
     - "\u24C7-Be.2.12"
@@ -2830,8 +2867,9 @@ MonoBehaviour:
       m'a aid\xE9 et ensemble on a fui nos chagrin.\n//Certes aujourd'hui elle a
       disparu,\nMais on ne peut oublier ces ann\xE9es de bonheur absolu !\n//Je suis
       certain que malgr\xE9 la surprise et la col\xE8re,\nTon loup de p\xE8re s'en
-      souvient comme si c'\xE9tait hier.\n[Cat]-Vous avez raison,\nIl ne peut oublie
-      \xE0 quel point d'\xEAtre son fils je suis fier!"
+      souvient comme si c'\xE9tait hier.\n[Cat]-Vous avez <emcol val=Trust>raison</emcol><?E:Sfx/Trust,
+      Cat, TRUE/>,\nIl ne peut oublier \xE0 quel point d'\xEAtre son fils je suis
+      fier!"
     - 
     - 'Emotion : Trust;
 
@@ -2844,23 +2882,25 @@ MonoBehaviour:
     - "\u24C7-Be.2.12a"
     - Bear
     - Hint
-    - "[Cat]-Je suis fier d\u2019\xEAtre son fils c\u2019est vrai !\nJe fais confiance
-      en la for\xEAt, mon p\xE8re je retrouverais."
+    - "[Cat]-Je suis fier d\u2019\xEAtre son fils c\u2019est vrai <?E:React/Trust,
+      Cat, TRUE/>!\nJe fais <emcol val=Trust>confiance</emcol> en la for\xEAt, mon
+      p\xE8re je retrouverais."
     - 
     - 'Name : Be.2.F12;'
     - "\u24C7-Be.2.12b"
     - Bear
     - Hint
-    - "[Cat]-Vous m\u2019inspirez !\nVotre histoire est belle, mon p\xE8re je ne
-      veux abandonner."
+    - "[Cat]-Vous m\u2019inspirez <?E:React/Trust, Cat, TRUE/>!\nVotre histoire est
+      belle, mon p\xE8re je ne veux abandonner."
     - 
     - 'Name : Be.2.F12;'
     - "\u24C7-H.2.Joy.F"
     - Cat
     - Harmony
-    - "[Cat]-C\u2019est certain, je m\u2019amuse \xE0 vos c\xF4t\xE9s !\nComme aupr\xE8s
-      de mon p\xE8re je m\u2019amusais\u2026\n[Bird]-Cette musique vous fait de l\u2019effet
-      ?\n[Cat]-Oui mais pas assez pour mon p\xE8re l\u2019affronter !"
+    - "[Cat]-C\u2019est certain, je m\u2019amuse \xE0 vos c\xF4t\xE9s <?E:Sfx/Trust,
+      Cat, TRUE/>!\nComme aupr\xE8s de mon p\xE8re je m\u2019amusais...\n[Bird]-Cette
+      musique vous fait de l\u2019effet ?\n[Cat]-Oui mais pas assez pour mon p\xE8re
+      l\u2019affronter !"
     - 
     - 'Emotion : Joy;
 
@@ -2870,9 +2910,9 @@ MonoBehaviour:
     - "\u24C7-H.2.Anticipation.F"
     - Cat
     - Harmony
-    - "[Cat]-C\u2019est vrai, avec vous je rie bien\u2026\nMais j\u2019ai toujours
-      la menace du loup qui tra\xEEne dans le coin !\n[Bird]-Notre musique ne le
-      rassure pas assez !"
+    - "[Cat]-C\u2019est vrai, avec vous je rie bien...\nMais j\u2019ai toujours la
+      menace du loup qui tra\xEEne dans le coin !\n[Bird]-Notre musique ne le <emcol
+      val=Trust>rassure</emcol> pas assez !"
     - 
     - 'Emotion : Anticipation;
 
@@ -2882,8 +2922,8 @@ MonoBehaviour:
     - "\u24C7-H.2.Fear.F"
     - Cat
     - Harmony
-    - "[Cat]-Me revoil\xE0 \xE0 paniquer !\n[Bird]-Oups, il est de nouveau apeur\xE9
-      !"
+    - "[Cat]-Ma <emcol val=Trust>confiance</emcol> s'est \xE9vapor\xE9 !\nMe revoil\xE0
+      \xE0 paniquer.\n[Bird]-Oups, il est de nouveau apeur\xE9 !"
     - 
     - 'Emotion : Fear;
 
@@ -2894,8 +2934,8 @@ MonoBehaviour:
     - Cat
     - Harmony
     - "[Cat]-Oh ! c\u2019est vrai que vous avez du talent !\n[Bird]-Vous \xEAtes
-      bien charmant !\n[Cat]-Mais il vous manque quelque chose, ce n\u2019est pas
-      suffisant !"
+      bien charmant !\n[Cat]-Mais il vous manque quelque chose<?E:Sfx/Trust, Cat,
+      TRUE/>, ce n\u2019est pas suffisant !"
     - 
     - 'Emotion : Surprise;
 
@@ -2906,7 +2946,8 @@ MonoBehaviour:
     - Cat
     - Harmony
     - "[Cat]-Cessez ce vacarme !\n[Bird]-Vacarme !? Vous me fa\xEEtes verser une
-      larme !\n[Cat]-Changer de piste ou je m\u2019en vais tout de suite !"
+      larme !\n[Cat]-Changer de piste ou je m\u2019en vais tout de suite <?E:Sfx/Trust,
+      Cat, TRUE/>!"
     - 
     - 'Emotion : Anger;
 
@@ -2930,9 +2971,9 @@ MonoBehaviour:
     - "\u24C7-H.2.Sadness.F"
     - Cat
     - Harmony
-    - "[Cat]-J\u2019ai perdu mon p\xE8re, jamais plus il ne voudra de moi\u2026\n[Bird]-Oula,
-      notre musique ne le met clairement pas en joie !\nTestons autre chose qu\u2019il
-      quitte cet \xE9moi !"
+    - "[Cat]-J\u2019ai perdu mon p\xE8re, jamais plus il ne <emcol val=Trust>voudra
+      de moi...</emcol>\n[Bird]-Oula, notre musique ne le met clairement pas en joie
+      !\nTestons autre chose qu\u2019il quitte cet \xE9moi !"
     - 
     - 'Emotion : Sadness;
 
@@ -2942,10 +2983,10 @@ MonoBehaviour:
     - "\u24C7-H.2.Disgust.F"
     - Cat
     - Harmony
-    - "[Cat]-Vous auriez vu comme il m\u2019a regard\xE9\u2026\nJ\u2019ai lu le d\xE9go\xFBt
+    - "[Cat]-Vous auriez vu comme il m\u2019a regard\xE9...\nJ\u2019ai lu le d\xE9go\xFBt
       dans ses yeux, je ne peux l\u2019effacer.\nEt je le comprends, je sentirais
-      la m\xEAme chose si je me voyais.\n[Bird]-Allons, changeons de m\xE9lodie vite
-      fais !"
+      la m\xEAme chose si je me voyais.\n[Bird]-Allons<?E:React/Trust, Cat, TRUE/>,
+      changeons de m\xE9lodie vite fais !"
     - 
     - 'Emotion : Disgust;
 
@@ -2958,10 +2999,10 @@ MonoBehaviour:
     - "[Cat]-Je vous suis redevable, si vous ne pouvez plus m\u2019aider ;\nLa peur
       m\u2019a au moins quitt\xE9.\n[Bird]-Allons, pourquoi pas venir avec nous,
       si ce lieu n\u2019est plus chez vous ?\n[Cat]-J\u2019y ai tout mes souvenir,
-      je ne peux le quitter et\u2026\nIl a beau m\u2019avoir abandonn\xE9, mon p\xE8re
-      je ne peux renier\u2026\n[Bear]-Je te comprends. Ces liens sont forts, on ne
-      peut les briser.\n[Cat]-Mais ce n\u2019est pas assez, Grenouille, joue ! Vois
-      si on peut encore l\u2019aider !"
+      je ne peux le quitter et...\nIl a beau m\u2019avoir abandonn\xE9, mon p\xE8re
+      je ne peux renier...\n[Bear]-Je te comprends. Ces liens sont forts, on ne peut
+      les briser.\n[Cat]-Mais ce n\u2019est pas assez, Grenouille, joue ! Vois si
+      on peut encore l\u2019aider !"
     - 
     - 'Key : Block.3;'
     - "\u24C7-M.Root.3"
@@ -3006,64 +3047,1421 @@ MonoBehaviour:
     - "\u24C7-M.2.0a"
     - Mouse
     - Hint
-    - '[Mouse]-Une taupe qui vend des lunettes !?
+    - '[Mouse]-Une taupe qui vend des lunettes !<?E:React/Surprise, Mouse, TRUE/>?
 
-      C''est toi qui n''est pas
-      nette !'
+      C''est
+      toi qui n''est pas nette !'
     - 
     - 'Name : M.2.F0;'
     - "\u24C7-M.2.0b"
     - Mouse
     - Hint
-    - "[Mouse]-Tu venais de notre village !?\nC'est dingue de penser que tu ais \xE9t\xE9
-      dans les parages !"
+    - "[Mouse]-<emcol val=Surprise>Tu venais de notre village !?</emcol>\nC'est dingue
+      de penser que tu ais \xE9t\xE9 dans les parages !"
     - 
     - 'Name : M.2.F0;'
     - "\u24C7-B.2.0a"
     - Bird
     - Hint
-    - "[Bird]-Votre histoire est triste, vous pensiez bien faire !\nC'ets dingues
-      de rejeter pour si peu un \xEAtre cher..."
+    - "[Bird]-Votre histoire est triste, vous pensiez <emcol val=Trust>bien faire
+      !</emcol>\nC'ets dingues de rejeter pour si peu un \xEAtre cher..."
     - 
     - 'Name : B.2.F0;'
     - "\u24C7-B.2.0b"
     - Bird
     - Hint
     - "[Bird]-Vous devez le ha\xEFr pour cela !\n[Cat]-\xE7a ne sert \xE0 rien, \xE7a
-      ne le changera pas..."
+      ne le changera pas...\n[Bird]-Il ne faut pas baisser les bras<?E:React/Trust,
+      Bird, TRUE/>."
     - 
     - 'Name : B.2.F0;'
     - "\u24C7-Be.2.0a"
     - Bear
     - Hint
-    - "[Bear]-Bien cruelle est la nature...\nJ'esp\xE8re qu'il te pardonnera dans
-      le future !"
+    - "[Bear]-Bien cruelle est la nature..<?E:React/Sadness, Bear, TRUE/>.\nJ'esp\xE8re
+      qu'il te pardonnera dans le future !"
     - 
     - 'Name : Be.2.F0;'
     - "\u24C7-Be.2.0b"
     - Bear
     - Hint
-    - "[Bear]-Ne pense pas que tu es b\xEAte !\nTon cadeau \xE9tais chouette !"
+    - "[Bear]-Ne pense pas que tu es b\xEAte !\nTon cadeau \xE9tais chouette !\n[Cat]-J'aurais
+      d\xFB le r\xE9duire en miettes<?E:React/Sadness, Bear, TRUE/>."
     - 
     - 'Name : Be.2.F0;'
     - "\u24C7-Dial.Intro2"
     - Global
     - Event
-    - "[Bear]-De malentendu ? Qu\u2019elle est cette d\xE9convenue !?\n[Cat]-Avant
+    - "[Bird]-De malentendu ? Qu\u2019elle est cette d\xE9convenue !?\n[Cat]-Avant
       d\u2019\xEAtre avec le loup, je n\u2019\xE9tais qu\u2019un petit chat peureux
       roux...\nJe vivais dans le village mar\xE9cage...\n[Mouse]-Grenouille, on vient
-      de l\xE0, mais zamais on ne t\u2019a crois\xE9 dans les parages !\n[Cat]-C\u2019est
-      vrai... mais jeune je me suis perdu dans la for\xEAt.\n[Mouse]-L\u2019histoire
-      du Petit Chat peureux Roux !\n[Cat]-Je me suis retrouv\xE9 dans la cabane du
-      loup !\nMais il n\u2019y voyait rien, il me prit pour son petit.\n//Ensemble
-      nous \xE9tions bien, je voulais qu\u2019il soit fier de moi comme moi de lui.\n//Je
-      me suis alors rendu chez Tom le Taupticien !\nVers le loup, avec des lunettes
-      je revins.\n//Pour la premi\xE8re fois, il me vit en chat...\nLa suite vous
-      la connaissez d\xE9j\xE0.\n[Bird]-Quelle histoire, quel malheur ! Grenouille,
-      retrouvons-lui le bonheur !"
+      de l\xE0, mais <emcol val=Surprise>zamais on ne t\u2019a crois\xE9 dans les
+      parages !</emcol>\n[Cat]-C\u2019est vrai... mais jeune je me suis perdu dans
+      la for\xEAt.\n[Mouse]-L\u2019histoire du Petit Chat peureux Roux <?E:React/Surprise,
+      Mouse, TRUE/>!\n[Cat]-Je me suis retrouv\xE9 dans la cabane du loup !\nMais
+      il n\u2019y voyait rien, il me prit pour son petit.\n//Ensemble nous \xE9tions
+      bien, je voulais qu\u2019il soit fier de moi comme moi de lui.\n//Je me suis
+      alors rendu chez Tom le Taupticien !\nVers le loup, avec des lunettes je revins.\n//Pour
+      la premi\xE8re fois, il me vit en chat...\nLa suite vous la connaissez d\xE9j\xE0<?E:React/Sadness,
+      Bear, TRUE/>.\n[Bird]-Quelle histoire, quel malheur ! <emcol val=Trust>Grenouille</emcol>,
+      retrouvons-lui le bonheur <?E:React/Trust, Bird, TRUE/>!"
     - 
     - 'Key : Start.3;'
-    size: {x: 6, y: 296}
+    - "\u24C7-M.3.1"
+    - Mouse
+    - Advance
+    - "[Mouse]-Je n'ai pas tr\xE8s bien compris, <emcol val=anticipation>ce n'est
+      pas toi l'ennemi ?</emcol>\n[Wolf]-Seulement du chat, il m'a bern\xE9... Il
+      m'a pouss\xE9 \xE0 manger mon vrai fils !\nIl l'a d\xE9guis\xE9 en lapin puis
+      a pris sa place... Il n'est que vice !\n[Mouse]-Z'avoue ce n'est pas sympa,
+      mais c'est sacr\xE9ment malin !\nPour une fois que ze faisait confiance \xE0
+      un chat, le voil\xE0 malsain !\n//Tante Berthe avais raison<?E:React/Anticipation,
+      Mouse, TRUE/>, tous les chats sont des vauriens !\n[Bear]-Berthe tu dis ?"
+    - 
+    - 'Emotion : Disgust;
+
+      Failsafe : M.3.F1;
+
+      Childs : M.3.2/M.3.8;
+
+      NeededAttributes
+      : Friend+;'
+    - "\u24C7-M.3.1a"
+    - Mouse
+    - Hint
+    - "[Mouse]-Toujours avoir confiance \xE0 tante Berthe <?E:React/Trust, Mouse,
+      TRUE/>!\nElle sait qu\u2019il faut se m\xE9fier des chats, c\u2019est une experte
+      !"
+    - 
+    - 'Name : M.3.F1'
+    - "\u24C7-M.3.1b"
+    - Mouse
+    - Hint
+    - "[Mouse]-Tu connais tante Berthe ? C\u2019est bizarre<?E:React/Anticipation,
+      Mouse, TRUE/>...\n[Bear]-C\u2019est possible, par le plus heureux des hasard
+      !"
+    - 
+    - 'Name : M.3.F1'
+    - "\u24C7-M.3.2"
+    - Mouse
+    - Advance
+    - "[Mouse]-Oui, Tante Berthe ! Une souris verte !\n[Wolf]-Une souris verte !
+      Scapin, ce chat vilain, l'avait d\xE9couverte !\nIl avait tent\xE9 de la cuire
+      dans un chaudron de vin !\n[Mouse]-Pas de doutes c'est bien elle ! <emcol val=anger>elle
+      adore me raconter cette histoire !</emcol>\n[Wolf]-C'\xE9tait il y a deux ans
+      de \xE7a, il voulait me faire plaisir et se faire valoir !\n[Bear]-Plus de
+      doutes possibles ! Mon amie disparue est celle de ton histoire !"
+    - 
+    - 'Emotion : Trust;
+
+      Failsafe :M.3.F2; ;
+
+      Childs : M.3.3/M.3.6;'
+    - "\u24C7-M.3.2a"
+    - Mouse
+    - Hint
+    - "[Mouse]-\xEAtre avec tante Berthe c\u2019est un bonheur <?E:React/Joy, Mouse,
+      TRUE/>!\nElle raconte toujours des histoires de chat qui font peur !"
+    - 
+    - 'Name : M.3.F2;'
+    - "\u24C7-M.3.2b"
+    - Mouse
+    - Hint
+    - "[Mouse]-C\u2019est dingue que tout le monde la connaisse <?E:React/Trust,
+      Mouse, TRUE/>!\nD\u2019un coup tout le monde \xE0 elle s\u2019int\xE9resse
+      !"
+    - 
+    - 'Name : M.3.F2;'
+    - "\u24C7-M.3.3"
+    - Mouse
+    - Advance
+    - "[Mouse]-Tu connais Tante Berthe !?\n[Bear]-Ma petite Berthile est en vie !?\n[Mouse]-Bien
+      s\xFBre, c'est elle qui m'a parl\xE9 de ton miel !\nMais \xE0 cause de l'histoire
+      du vin elle ne sors plus de chez elle...\n[Wolf]-Il aura fait du mal \xE0 beaucoup
+      de monde ce chat criminel <?E:React/Sadness, Wolf, TRUE/>!\n[Bear]-Le loup,
+      Emilie, merci, vous me comblez avec cette nouvelle !"
+    - 
+    - 'Emotion : Joy;
+
+      Failsafe : M.3.F3;
+
+      Childs : Empty;'
+    - "\u24C7-M.3.3a"
+    - Mouse
+    - Hint
+    - "[Wolf]-Je me sens mal pour tous les d\xE9g\xE2ts qu\u2019il a caus\xE9..<?E:React/Sadness,
+      Wolf, TRUE/>.\n[Mouse]-Ma tante s\u2019en est remise, il ne faut pas s\u2019inqui\xE9ter
+      !"
+    - 
+    - 'Name : M.3.F3;'
+    - "\u24C7-M.3.3b"
+    - Mouse
+    - Hint
+    - "[Wolf]-Il faut que le retrouve !\nAvant qu\u2019un autre plan foireux il ne
+      trouve..<?E:React/Sadness, Wolf, TRUE/>."
+    - 
+    - 'Name : M.3.F3;'
+    - "\u24C7-M.3.4"
+    - Mouse
+    - Advance
+    - "[Mouse]-Un loup maintenant ! et <shake><emcol val=fear>c'est le grand m\xE9chant
+      loup !</emcol></shake>\n\xE0 peine partis \xE0 l'aventure qu'on tombe sur un
+      chat puis un loup !\n//C'est quoi cette malchance, la prochaine \xE9tape c'est
+      un dinosaure !?\n[Bear]-Emilie calme toi... \xE7a ne vie pas dans la for\xEAt
+      les dinosaures !\n[Wolf]-Je n'en ai pas apr\xE8s toi, juste apr\xE8s ce tra\xEEtre
+      de chat !\n[Bear]-\xE7a ne se fait pas de trahir un ami, peu importe ce qu'il
+      a fait.\n[Mouse]-Si je vous dit o\xF9 il est all\xE9 vous promettez de me laisser
+      !"
+    - 
+    - 'Emotion : Disgust;
+
+      Failsafe : M.3.F4;
+
+      Childs : M.3.5;
+
+      NeededAttributes
+      : Prey+;'
+    - "\u24C7-M.3.4a"
+    - Mouse
+    - Hint
+    - "[Mouse]-Je n\u2019ai jamais de chance, c\u2019est touzours pour ma paume <?E:React/Fear,
+      Mouse, TRUE/>!\nCe n\u2019est pas une for\xEAt, c\u2019est un train fant\xF4me
+      !"
+    - 
+    - 'Name : M.3.F4;'
+    - "\u24C7-M.3.4b"
+    - Mouse
+    - Hint
+    - "[Mouse]-Si c\u2019est pour sauver ma peau je le balance le chat <?E:React/Fear,
+      Mouse, TRUE/>!\nRien \xE0 faire si \xE7a se fait ou pas !"
+    - 
+    - 'Name : M.3.F4;'
+    - "\u24C7-M.3.5"
+    - Mouse
+    - Advance
+    - "[Mouse]-Mieux vaut lui que moi !!!\n<wiggle><emcol val=anticipation>Je ne
+      veux pas finir comme tante Berthe !</emcol></wiggle>\nEnlev\xE9 sur le sentier
+      des fleurs !\n[Bear]-Berthe tu dis ? Berthile <?E:React/Surprise, Mouse, TRUE/>?\n[Mouse]-C'est
+      \xE7a, tu la connais ?\n[Bear]-Impossible, c'est elle ! Ma petite souris avec
+      qui j'ai v\xE9cu !\n[Wolf]-Vous viviez avec une souris ? Vous aussi avais des
+      probl\xE8mes de vue ?"
+    - 
+    - 'Emotion : Fear;
+
+      Failsafe : M.3.F5;
+
+      Childs : M.3.2/M.3.6/M.3.8;'
+    - "\u24C7-M.3.5a"
+    - Mouse
+    - Hint
+    - "[Mouse]-Dans le doute vaut mieux coop\xE9rer..<?E:React/Anticipation, Mouse,
+      TRUE/>.\nMais bon, au pire <bounce><emcol val=trust>je compte sur M.Ernest
+      pour me prot\xE9ger !</emcol></bounce>"
+    - 
+    - 'Name : M.3.F5;'
+    - "\u24C7-M.3.5b"
+    - Mouse
+    - Hint
+    - '[Mouse]-Tu connais Berthe !? Vraiment !<?E:React/Surprise, Mouse, TRUE/>?
+
+      Pourtant
+      elle ne quitte plus son logement !'
+    - 
+    - 'Name : M.3.F5;'
+    - "\u24C7-M.3.6"
+    - Mouse
+    - Advance
+    - "[Mouse]-Impossible, elle m'a parl\xE9 de son ami qu'elle consid\xE9rait comme
+      un p\xE8re !\nMais ce n'est pas toi, lui s'appelait Ernest !\n[Bird]-Euh Emilie...
+      Tu sais qu'il s'appelle aussi Ernest ?\n[Mouse]-Bah non, lui c'est M. Ernest
+      il a dit, rien \xE0 voir !\nOu :...\n//.............................\nTu veux
+      dire que depuis le d\xE9but tu savais !?\nJe devrais laisser le loup te manger
+      <?E:React/Fear, Mouse, TRUE/>!"
+    - 
+    - 'Emotion : Surprise;
+
+      Failsafe : M.3.F6;
+
+      Childs : M.3.7;'
+    - "\u24C7-M.3.6a"
+    - Mouse
+    - Hint
+    - "[Mouse]-Voil\xE0 que M.Ernest se retourne contre moi !!!!\n<shake><emcol val=fear>Je
+      vais finir en charpie, en p\xE2t\xE9 de foie !</emcol></shake>"
+    - 
+    - 'Name : M.3.F6;'
+    - "\u24C7-M.3.6b"
+    - Mouse
+    - Hint
+    - "[Mouse]-Non piti\xE9 je suis d\xE9sol\xE9e <?E:React/Fear, Mouse, TRUE/>!\nMais
+      le \u2018M.\u2019 est trompeur faut avouer !"
+    - 
+    - 'Name : M.3.F6;'
+    - "\u24C7-M.3.7"
+    - Mouse
+    - Advance
+    - "[Mouse]-Voil\xE0 que maintenant un chat, un loup et un ours sont apr\xE8s
+      moi !\nJe vais faire comme tante Berthe et ne plus sortir de chez moi !\n//Sortir
+      dehors c'est bien trop dangereux, ya des danzers partout !!!!\n[Wolf]-Ah AH
+      Ah ! Pardonnez ce rire franc, mais la situation est hilarante !\n[Mouse]-Ce
+      rire diabolique ! Il veut m'assassiner, me cuisiner, m'assaisonner !\n[Wolf]-Mais
+      non petite cr\xE9ature, je n'ai pas le coeur \xE0 \xE7a ne t'en fait pas je
+      t'assure <?E:React/Sadness, Wolf, TRUE/>! \n[Bear]-Emilie... Tu ressembles
+      tellement \xE0 ta tante...\nTout ce qu'elle faisait \xE9tait improbable, elle
+      \xE9tant marrante et \xE9nervante..."
+    - 
+    - 'Emotion : Fear;
+
+      Failsafe : M.3.F7;
+
+      Childs : Empty;'
+    - "\u24C7-M.3.7a"
+    - Mouse
+    - Hint
+    - "[Wolf]-Vous voir cous chamailler\u2026 \xE7a a beau \xEAtre une crapule\u2026\nScapin
+      \xE9tait comme mon fils, enfin\u2026 je suis peut-\xEAtre trop cr\xE9dule<?E:React/Sadness,
+      Wolf, TRUE/>."
+    - 
+    - 'Name : M.3.F7;'
+    - "\u24C7-M.3.7b"
+    - Mouse
+    - Hint
+    - "[Wolf]-Si seulement il n\u2019avait pas fait \xE7a \xE0 mon fils.\nMais bon,
+      le mal est fait, <swing><emcol val=sadness>je dois supporter ce supplice.</emcol></swing>"
+    - 
+    - 'Name : M.3.F7;'
+    - "\u24C7-M.3.8"
+    - Mouse
+    - Advance
+    - "[Bear]-Ma petite souris avec qui je vivais !\nJe lui avait donn\xE9 une harpe
+      qu'elle a ador\xE9 !\n// c'est celle que tu portes en ce moment !\n[Mouse]-C'est
+      ma tante Berthe qui me l'a donn\xE9 pourtant <?E:React/Anticipation, Mouse,
+      TRUE/>!\n[Bear]-Oui mais c'est moi qui l'ai faite pour elle !\n\xE7a veut dire
+      que c'est bien elle !\n[Wolf]-\xE7a ne me dit pas o\xF9 est parti Scapin vos
+      histoire !!!\nDites-le-moi, je dois savoir !"
+    - 
+    - 'Emotion : Anticipation;
+
+      Failsafe : M.3.F8;
+
+      Childs : M.3.6/M.3.11;'
+    - "\u24C7-M.3.8a"
+    - Mouse
+    - Hint
+    - "[Mouse]-C\u2019est bizarre son histoire, \nTante Berthe m\u2019aurait parl\xE9
+      de lui, je dois le croire <?E:React/Anticipation, Mouse, TRUE/>?"
+    - 
+    - 'Name : M.3.F8;'
+    - "\u24C7-M.3.8b"
+    - Mouse
+    - Hint
+    - "[Mouse]-C\u2019est mon bien le plus pr\xE9cieux attention !\nC\u2019est tante
+      Berthe qui me l\u2019a donn\xE9, c\u2019est ma plus belle possession <?E:React/Trust,
+      mouse, TRUE/>!"
+    - 
+    - 'Name : M.3.F8;'
+    - "\u24C7-M.3.9"
+    - Mouse
+    - Advance
+    - "[Mouse]-Je le savais ! Le chat \xE9tait notre ennemi ! Ils le sont tous !\nJ'ai
+      tout de suite lu dans son jeu, avec ses poils roux et sa f\xE9line frimousse
+      <?E:React/Disgust, Mouse, TRUE/>!\n[Wolf]-Je pensais devoir plus insister pour
+      que vous me croyez !\n[Mouse]-Je te fais confiance \xE0 cent pour cent ! Les
+      chats faut les exterminer !\n[Bear]-Emilie, tu y va un peu fort !\n[Mouse]-La
+      guerre est d\xE9clar\xE9e ! Le loup, pour le chat tu as besoin de renfort ?\n[Wolf]-\xE7a
+      devrait aller, mais j'appr\xE9cie ces efforts !"
+    - 
+    - 'Emotion : Disgust;
+
+      Failsafe : M.3.F9;
+
+      Childs : M.3.10;
+
+      NeededAttributes
+      : Enemy+;'
+    - "\u24C7-M.3.9a"
+    - Mouse
+    - Hint
+    - "[Mouse]-<slide><emcol val=disgust>Enfin un alli\xE9 contre les chats </emcol></slide>dans
+      cette guerre sainte !\nAllons sur le chemin de la vengeance sans craintes !"
+    - 
+    - 'Name : M.3.F9;'
+    - "\u24C7-M.3.9b"
+    - Mouse
+    - Hint
+    - "[Mouse]-Le loup, il faut laisser aucun chat !\nSe sont tous les m\xEAme, <slide><emcol
+      val=disgust>des vauriens des sc\xE9l\xE9rats !</emcol></slide>"
+    - 
+    - 'Name : M.3.F9;'
+    - "\u24C7-M.3.10"
+    - Mouse
+    - Advance
+    - "[Mouse]-Je vais vous dire vers ou il a fui ! Pour moi vous lui ferait sa f\xEAte
+      !\n[Bear]-Emilie tu abuses, tu ne sais m\xEAme pas si son histoire est contrefaite
+      !\n[Mouse]-<bounce><emcol val=trust>Il se bat contre un chat,</emcol></bounce>
+      c'est tout ce que j'ai besoin d'entendre...\n[Mouse]-Tante Berthe, je m'en
+      vais te venger sans attendre !\n[Bear]-Calme toi ou....\nAttends...\n//Tu as
+      dis Berthe ?\nTa harpe, c'est elle qui te l'a offerte ?"
+    - 
+    - 'Emotion : Disgust;
+
+      Failsafe : M.3.F10;
+
+      Childs : M.3.8/M.3.11;'
+    - "\u24C7-M.3.10a"
+    - Mouse
+    - Hint
+    - '[Mouse]-Tu connais Berthe !? Vraiment !?
+
+      Pourtant elle ne quitte plus
+      son logement <?E:React/Anticipation, Mouse, TRUE/>!'
+    - 
+    - 'Name : M.3.F10;'
+    - "\u24C7-M.3.10b"
+    - Mouse
+    - Hint
+    - "[Mouse]-C\u2019est \xE9trange que tu connaisses ma tante <?E:React/Anticipation,
+      Mouse, TRUE/>!\nEt pourquoi ma harpe t\u2019est si int\xE9ressante ?"
+    - 
+    - 'Name : M.3.F10;'
+    - "\u24C7-M.3.11"
+    - Mouse
+    - Advance
+    - "[Mouse]-Et alors ? O\xF9 est le probl\xE8me ? Elle me l'a donn\xE9.\n[Bear]-Elle
+      m'\xE9tait familier, elle a vieilli mais je la reconnait.\nC'est moi qui l'ai
+      fabriqu\xE9...\n//C'\xE9tait un cadeau pour ma petite Berthile avant qu'elle
+      ne disparaisse...\n\xE7a veut dire que ta tante c'est ma petite fille, ma petite
+      princesse ?\n[Mouse]-Pas possible ! Elle est vieille tante Berthe, tu peux
+      pas \xEAtre son p\xE8re !\n[Bear]-Ours et souris ne vieillissent pas de la
+      m\xEAme mani\xE8re...\n[Wolf]-swing><emcol val=sadness>Vous me rappelez Scapin
+      et moi...</emcol></swing> Une dr\xF4le de paire..."
+    - 
+    - 'Emotion : Trust;
+
+      Failsafe : M.3.F11;
+
+      Childs : Empty;'
+    - "\u24C7-M.3.11a"
+    - Mouse
+    - Hint
+    - "[Wolf]-Malgr\xE9 nos diff\xE9rences, comme vous, on s\u2019amusait tout le
+      temps...\n\xC7a me manque d\xE9j\xE0 tant..<?E:React/Sadness, Wolf, TRUE/>."
+    - 
+    - 'Name : M.3.F11;'
+    - "\u24C7-M.3.11b"
+    - Mouse
+    - Hint
+    - "[Wolf]-J\u2019aimerai pourvoir lui dire qu\u2019il est pardonn\xE9..<?E:React/Sadness,
+      Bear, TRUE/>.\nMais j\u2019ai aussi tellement envie de l\u2019\xE9visc\xE9rer
+      !"
+    - 
+    - 'Name : M.3.F11;'
+    - "\u24C7-B.3.1"
+    - Bird
+    - Advance
+    - "[Bird]-Compris quoi !? \xE7a veut dire quoi tout \xE7a !<?E:React/Surprise,
+      Bird, TRUE/>?\n[Wolf]-Le lapin \xE9tait mon fils ! Le chat a pris sa place
+      !\nIl l'a d\xE9guis\xE9 quand j'\xE9tais \xE0 ma chasse\nIl... il savait que
+      sans r\xE9fl\xE9chir j'allais le d\xE9... d\xE9vor\xE9...\n[Bird]-C'est le
+      chat qui vous aurez trahit !?\nMais c'est vous le grand m\xE9chant des r\xE9cits
+      !\n[Wolf]-Le... Le Grand M\xE9chant Loup ? Comment ? Je ne... ne voyais rien
+      du tout..."
+    - 
+    - 'Emotion : surprise;
+
+      Failsafe : B.3.F1;
+
+      Childs : B.3.2/B.3.11;
+
+      NeededAttributes
+      : Love+;'
+    - "\u24C7-B.3.1a"
+    - Bird
+    - Hint
+    - "[Bird]-Tu mens !!! shake><emcol val=anger>\xE7a ne peut \xEAtre vrai !</emcol></shake>\n[Wolf]-Juste
+      pour des lunettes je l\u2019aurais chass\xE9 dans la for\xEAt ?"
+    - 
+    - 'Name : B.3.F1'
+    - "\u24C7-B.3.1b"
+    - Bird
+    - Hint
+    - "[Bird]-shake><emcol val=anger>Il ne m\u2019aurait jamais trahi !</emcol></shake>\nC\u2019\xE9tait
+      le chat de ma vie !"
+    - 
+    - 'Name : B.3.F1'
+    - "\u24C7-B.3.2"
+    - Bird
+    - Advance
+    - "[Bird]-Je ne peux y croire, je ne veux y croire !!<?E:React/Anticipation,
+      Bird, TRUE/>!\n[Wolf]-c'est p...pourtant la v\xE9rit\xE9...\n[Bird]-Non tu
+      mens ! Il est si doux, si charmant !\nIl ne peut \xEAtre si m\xE9chant !\n[Wolf]-Il
+      \xE9tait p...perdu, apeur\xE9... C'est s...son instinct qui l'a guid\xE9...\nMais
+      malgr\xE9 tout c...comment lui pardonner... \n[Bird]-Il m'aurait menti !? L'amour
+      de sa vie !?"
+    - 
+    - 'Emotion : Anger;
+
+      Failsafe :B.3.F2; ;
+
+      Childs : B.3.3;'
+    - "\u24C7-B.3.2a"
+    - Bird
+    - Hint
+    - '[Bird]-Je ne peux y croire, je ne veux y croire !!<?E:React/Anticipation,
+      Bird, TRUE/>!'
+    - 
+    - 'Name : B.3.F2;'
+    - "\u24C7-B.3.2b"
+    - Bird
+    - Hint
+    - "[Bird]-Il est si doux et charmant\u2026 J\u2019en suis s\xFBre ! Tu mens <?E:React/Anticipation,
+      Bird, TRUE/>!"
+    - 
+    - 'Name : B.3.F2;'
+    - "\u24C7-B.3.3"
+    - Bird
+    - Advance
+    - "[Bird]-<wiggle><emcol val=anticipation>Donne-moi une preuve de ce que tu avances
+      !</emcol></wiggle>\n[Mouse]-Charlie, rends-toi \xE0 l'\xE9vidence...\n[Wolf]-LE
+      CHAT ET SON VICE M\u2019ONT PRIS MON FILS ! \nEN LAPIN BLANC IL LE TRAVESTIT
+      POUR QUE MES YEUX ME TRAHISSENT...\nEN MON ABSENCE, IL M\u2019A P\xC9IG\xC9
+      POUR AVOIR UN FOYER !\n[Bird]-C'est donc \xE7a la v\xE9rit\xE9... Aucune once
+      de charit\xE9...\nVous ne l'avez recueilli, il vous a pi\xE9g\xE9..<?E:React/Sadness,
+      Bird, TRUE/>."
+    - 
+    - 'Emotion : Anticipation;
+
+      Failsafe : B.3.F3;
+
+      Childs : B.3.4;'
+    - "\u24C7-B.3.3a"
+    - Bird
+    - Hint
+    - "[Bird]-Alors c\u2019est vrai ?\n[Wolf]-Je\u2026 je suis d\xE9sol\xE9, il vous
+      a eu aussi on d\u2026dirait<?E:React/Sadness, Bird, TRUE/>."
+    - 
+    - 'Name : B.3.F3;'
+    - "\u24C7-B.3.3b"
+    - Bird
+    - Hint
+    - "[Bird]-Je pensais pouvoir lui faire confiance !\n[Mouse]-</emcol></wiggle>Les
+      chat ne m\xE9rite que d\xE9fiance !</emcol></wiggle>"
+    - 
+    - 'Name : B.3.F3;'
+    - "\u24C7-B.3.4"
+    - Bird
+    - Advance
+    - "[Bird]-Mais comment vous a-t-il berner ?\nM\xEAme en voyant mal, de roux \xE0
+      gris c'est facile \xE0 cerner !\n[Wolf]-Je... Je suis accroc aux lapins blanc...\nJ'avais
+      f...faim, quand je l'ai vu j...j'ai saut\xE9 dessus...\n<swing><emcol val=sadness>Je...
+      Je n'ai r\xE9alis\xE9 que trop t...tarp.</emcol></swing>\n[Bird]-Vous saviez
+      la v\xE9rit\xE9 !?\n[Wolf]-Je m'en d...dout\xE9... Mais je l'ai ignor\xE9.\nAvec
+      les lunettes je n...ne pouvais plus me leurrer."
+    - 
+    - 'Emotion : Sadness;
+
+      Failsafe : B.3.F4;
+
+      Childs : Empty;'
+    - "\u24C7-B.3.4a"
+    - Bird
+    - Hint
+    - "[Wolf]-Salet\xE9 de chat mesquin !!!\nIl m\u2019a pris mon fils, mais avec
+      le temps il en est devenu un\u2026\nAujourd\u2019hui je l\u2019ai perdu aussi,
+      je n\u2019ai plus rien<?E:React/Sadness, Wolf, TRUE/>."
+    - 
+    - 'Name : B.3.F4;'
+    - "\u24C7-B.3.4b"
+    - Bird
+    - Hint
+    - "[Wolf]-Il est beau le grand m\xE9chant loup !\nSe faire avoir par un matou
+      !\nLe p\u2026pire, c\u2019est qu\u2019il reste mon fils malgr\xE9 t\u2026tout..<?E:React/Sadness,
+      Wolf, TRUE/>."
+    - 
+    - 'Name : B.3.F4;'
+    - "\u24C7-B.3.5"
+    - Bird
+    - Advance
+    - "[Bird]-Je ne comprends vos dire... c'est une ruse pour nous convaincre de
+      le trahir <?E:React/Surprise, Bird, TRUE/>?\n[Wolf]-J'ai l'impression que c'est
+      lui qui vous a trahi !\nle lapin de mon histoire \xE9tait mon v\xE9ritable
+      fils.\n//Le chat est arriv\xE9 chez moi par hasard et l'a d\xE9guis\xE9 lapin
+      blanc...\nMon louveteau \xE9tait trop jeune pour r\xE9agir, je l'ai d\xE9vor\xE9
+      sur le champ...\n[Bird]-Dire que je voulais vous convaincre envers lui d'\xEAtre
+      conciliant !\n[Wolf]-S'il \xE9tait honn\xEAte vous pensez qu'il serait parti
+      en courant ?"
+    - 
+    - 'Emotion : Surprise;
+
+      Failsafe : B.3.F5;
+
+      Childs : B.3.11/B.3.6;
+
+      NeededAttributes
+      : Music+;'
+    - "\u24C7-B.3.5a"
+    - Bird
+    - Hint
+    - "[Bird]-<emcol val=anticipation>qui croire dans cette histoire\u2026</emcol>\nIl
+      me faut plus d\u2019\xE9l\xE9ment pour le savoir."
+    - 
+    - 'Name : B.3.F5;'
+    - "\u24C7-B.3.5b"
+    - Bird
+    - Hint
+    - "[Bird]-Le chat serait le v\xE9ritable causeur de mis\xE8re ?\n<emcol val=anticipation>A
+      voir si ce n\u2019est pas le loup qui tente de nous la faire \xE0 l\u2019envers
+      !</emcol>"
+    - 
+    - 'Name : B.3.F5;'
+    - "\u24C7-B.3.6"
+    - Bird
+    - Advance
+    - "[Bird]-Je voulais l'aider, je me sentais redevable envers la for\xEAt...\n[Wolf]-Q...quel
+      rapport avec la for\xEAt ?\n[Bird]-J'avais perdu espoir, un inconnu m'a donn\xE9
+      m'a voix, ma cl\xE9 vers la gloire !\nJe voulais alors sauver quelqu'un, pour
+      \xEAtre quitte envers le destin\n// Mais ce chat roux... il n'\xE9tait pas
+      digne apr\xE8s tout..<?E:React/Disgust, Bird, TRUE/>.\n[Wolf]-On vous a donn\xE9
+      votre voix ?\n[Bird]-Oui ! cet instrument en sois !"
+    - 
+    - 'Emotion : Anticipation;
+
+      Failsafe : B.3.F6;
+
+      Childs : B.3.7/B.3.9;'
+    - "\u24C7-B.3.6a"
+    - Bird
+    - Hint
+    - "[Bird]-Ce chat voulait profiter de moi !\nJ\u2019allais l\u2019aider alors
+      qu\u2019il ne le m\xE9ritait pas <?E:React/Disgust, Bird, TRUE/>!"
+    - 
+    - 'Name : B.3.F6;'
+    - "\u24C7-B.3.6b"
+    - Bird
+    - Hint
+    - "[Bird]-Sans ma voix<emcol val=disgust> je ne serais bonne \xE0 rien\u2026</emcol></slide>\nHeureuse
+      d\u2019avoir re\xE7u ce bien !"
+    - 
+    - 'Name : B.3.F6;'
+    - "\u24C7-B.3.7"
+    - Bird
+    - Advance
+    - "[Bird]-J'\xE9tais d\xE9sesp\xE9r\xE9e, mon p\xE8re ne croyait pas en moi,
+      c'\xE9tait la fin...\nIl venait de m'annoncer que je passerai ma vie dans mon
+      r\xF4le de sapin !\n[Wolf]-de sapin !?\n[Bird]-Longue histoire... Quoi qu'il
+      en soit j'ai pleur\xE9 jusqu'au soir !\nPuis cet inconnu encapuchonn\xE9 est
+      apparut... il me donna l'instrument et disparut.\n[Wolf]-Mais oui je te reconnais
+      maintenant ! C'\xE9tait toi l'oiseau en pleurs !\n[Bird]-Comment ? On c'est
+      crois\xE9 avant cette heure !?\nL'inconnu c'\xE9tait moi d\xE9guis\xE9e <?E:React/Surprise,
+      Bird, TRUE/>! Content que mon cadeau aie fait ton bonheur !"
+    - 
+    - 'Emotion : Disgust;
+
+      Failsafe : B.3.F7;
+
+      Childs : B.3.8;'
+    - "\u24C7-B.3.7a"
+    - Bird
+    - Hint
+    - "[Bird]-Je ne me souviens pas vous avoir rencontrer <?E:React/Surprise, Bird,
+      TRUE/>!\nOu alors j\u2019ai peut-\xEAtre oubli\xE9 !"
+    - 
+    - 'Name : B.3.F7;'
+    - "\u24C7-B.3.7b"
+    - Bird
+    - Hint
+    - "[Bird]-C\u2019\xE9tait vraiment vous !<?E:React/Surprise, Bird, TRUE/>?\nJ\u2019aurais
+      reconnu un loup !"
+    - 
+    - 'Name : B.3.F7;'
+    - "\u24C7-B.3.8"
+    - Bird
+    - Advance
+    - "[Bird]-C'\xE9tait vous !? Mais comment !? C'est fou !?\n[Wolf]-Tu pleurais
+      de ne pas savoir chanter... Je me suis dit que \xE7a aurait pu t'aider !\n[Bird]-Mais
+      pourquoi vous \xEAtre cach\xE9 ? Discret, encapuchonn\xE9 ?\n[Wolf]-Pour r\xE9sum\xE9,
+      dans la for\xEAt je ne suis pas tr\xE8s appr\xE9ci\xE9..<?E:React/Sadness,
+      Wolf, TRUE/>.\n// L'instrument appartenait \xE0 un \xEAtre cher...\nJe suis
+      content qu'il retrouve vie avec toi, j'en suis fier.\n[Bird]-Vos actes vous
+      prouve g\xE9n\xE9reux et sinc\xE8re...\nJ'avais des doutes mais je vous crois,
+      je pense coupable le chat..."
+    - 
+    - 'Emotion : Surprise;
+
+      Failsafe : B.3.F8;
+
+      Childs : Empty;'
+    - "\u24C7-B.3.8a"
+    - Bird
+    - Hint
+    - "[Wolf]-C\u2019est dur \xE0 croire que ce chat sois vicieux\u2026\nPendant
+      toutes ces ann\xE9es j\u2019ai aim\xE9 notre vie \xE0 deux..<?E:React/Sadness,
+      Wolf, TRUE/>."
+    - 
+    - 'Name : B.3.F8;'
+    - "\u24C7-B.3.8b"
+    - Bird
+    - Hint
+    - "[Wolf]-Ces lunettes m\u2019ont ouvert les yeux\u2026\nMais le chat\u2026 <emcol
+      val=sadness>M\u2026mon petit Scapin\u2026 il reste mon fils, avec lui j\u2019\xE9tais
+      heureux.</emcol>"
+    - 
+    - 'Name : B.3.F8;'
+    - "\u24C7-B.3.9"
+    - Bird
+    - Advance
+    - "[Bird]-Depuis que j'ai cette musique avec moi je me sens invincible !\nPeu
+      importe ce que pense ma famille, tout est possible !\n[Wolf]-que vous-est-il
+      arriv\xE9 ?\n[Bird]-Comme vous, mon image est ternie..<?E:React/Disgust, Bird,
+      TRUE/>.\nC'est pourquoi j'ai quitt\xE9 mon nid !\n[Wolf]-Nos deux histoires
+      semblent \xEAtres unies..."
+    - 
+    - 'Emotion : Trust;
+
+      Failsafe : B.3.F9;
+
+      Childs : B.3.7/B.3.13;'
+    - "\u24C7-B.3.9a"
+    - Bird
+    - Hint
+    - "[Bird]-<emcol val=anticipation>Puis-je vous faire confiance ? </emcol></wiggle>Votre
+      histoire inspire m\xE9fiance\u2026"
+    - 
+    - 'Name : B.3.F9;'
+    - "\u24C7-B.3.9b"
+    - Bird
+    - Hint
+    - "[Bird]-Ma famille m\u2019a jet\xE9 dehors !\nTant mieux, loin d\u2019eux tr\xE8s
+      bien je m\u2019en sors <?E:React/Disgust, Bird, TRUE/>!"
+    - 
+    - 'Name : B.3.F9;'
+    - "\u24C7-B.3.10"
+    - Bird
+    - Advance
+    - "[Bird]-Qu'avez-vous compris <?E:React/Surprise, Bird, TRUE/>? Soyez plus pr\xE9cis
+      !\n[Wolf]-Le lapin \xE9tait mon fils ! Le chat a pris sa place !\nIl l'a d\xE9guis\xE9
+      quand j'\xE9tais \xE0 ma chasse\nIl... il savait que sans r\xE9fl\xE9chir j'allais
+      le d\xE9... d\xE9vor\xE9...\n[Bird]-Comment !? Il nous a menti, c'est lui de
+      l'histoire le m\xE9chant !?\nPas \xE9tonnant en y r\xE9fl\xE9chissant... Il
+      se moquait de ma voix le chenapan !"
+    - 
+    - 'Emotion : Surprise;
+
+      Failsafe : B.3.F10;
+
+      Childs : B.3.11;
+
+      NeededAttributes
+      : Proud+;'
+    - "\u24C7-B.3.10a"
+    - Bird
+    - Hint
+    - "[Bird]-Il nous aurait menti depuis le d\xE9but !<?E:React/Surprise, Bird,
+      TRUE/>?\n\xC7a me semble r\xE9aliste, en ma voix il n\u2019a pas cru\u2026"
+    - 
+    - 'Name : B.3.F10;'
+    - "\u24C7-B.3.10b"
+    - Bird
+    - Hint
+    - "[Bird]-Il vous aurait pi\xE9g\xE9 !?\n Et votre fils y est rest\xE9 !<?E:React/Surprise,
+      Bird, TRUE/>?"
+    - 
+    - 'Name : B.3.F10;'
+    - "\u24C7-B.3.11"
+    - Bird
+    - Advance
+    - "[Bird]-<emcol val=anticipation>Mais je me m\xE9fie de vous ! Vous \xEAtes
+      le grand m\xE9chant loup !</emcol>\n[Wolf]-Encore cette histoire !? De cette
+      r\xE9putation j'en ai marre !\nAvant hier je ne voyait rien, pourquoi tout
+      le monde me craint !?\n[Bird]-C'est le chat qui nous l'a dit, nous aurait-il
+      encore menti ?\n[Wolf]-Ce serait lui qui r\xE9pandrait toutes ces rumeurs ?\n[Bird]-tout
+      le monde vous prend pour un monstre sanguinaire !\nMais vous ne voyiez rien,
+      \xE7a ne peut \xEAtre vous, \xE7a ne peut se faire <?E:React/Trust, Bird, TRUE/>!"
+    - 
+    - 'Emotion : Surprise;
+
+      Failsafe : B.3.F11;
+
+      Childs : B.3.3/B.3.12;'
+    - "\u24C7-B.3.11a"
+    - Bird
+    - Hint
+    - "[Bird]-C\u2019est vrai, \xE7a ne peut \xEAtre vous<?E:React/Trust, Bird, TRUE/>.\nDe
+      ce que nous a dit le chat, vous ne voyez rien du tout !"
+    - 
+    - 'Name : B.3.F11;'
+    - "\u24C7-B.3.11b"
+    - Bird
+    - Hint
+    - "[Bird]-Si \xE7a ne peut \xEAtre vous le Grand m\xE9chant loup..<?E:React/Trust,
+      Bird, TRUE/>.\n<emcol val=anticipation>Alors le menteur c\u2019\xE9tait ce
+      matou !</emcol>"
+    - 
+    - 'Name : B.3.F11;'
+    - "\u24C7-B.3.12"
+    - Bird
+    - Advance
+    - "[Wolf]-Il y a toutes sortes de rumeurs sur moi dans la for\xEAt...\n[Bird]-<wiggle><emcol
+      val=anticipation>Le monde vous pense mauvais,</emcol></wiggle> que le chat
+      vous avez enlev\xE9 !\n//Voici la chanson : dans l\u2019ombre un chat fredonnait...\nParti
+      seul cueillir des fleurs, pour une m\xE8re en douleur,\nDans la for\xEAt il
+      s\u2019engouffra, sur ces traces le loup, ce malfrat...\nLe destin attrapa
+      l\u2019enfant, le ventre du loup triomphant..."
+    - 
+    - 'Emotion : Trust;
+
+      Failsafe : B.3.F12;
+
+      Childs : B.3.9/B.3.13;'
+    - "\u24C7-B.3.12a"
+    - Bird
+    - Hint
+    - "[Bird]-Mais les rumeurs sur vous sont bien ancr\xE9e..<?E:React/Anticipation,
+      Bird, TRUE/>.\nMais je pense que vous d\xEEtes la v\xE9rit\xE9 <?E:React/Trust,
+      Bird, TRUE/>!"
+    - 
+    - 'Name : B.3.F12;'
+    - "\u24C7-B.3.12b"
+    - Bird
+    - Hint
+    - "[Bird]-\xEAtes-vous la terreur de la for\xEAt <?E:React/Anticipation, Bird,
+      TRUE/>?\nOu n\u2019est-ce que rumeurs infond\xE9es ?"
+    - 
+    - 'Name : B.3.F12;'
+    - "\u24C7-B.3.13"
+    - Bird
+    - Advance
+    - "[Bird]-Est-ce vrai ? Vous \xEAtes la terreur de la for\xEAt ?\n[Wolf]-Je chasses
+      quelques lapins blancs, mais avec ma vu aucun ne tr\xE9passe...\nJ'aimerai
+      \xEAtre cette terreur swing><emcol val=sadness>mais j'en suis incapable...</emcol></swing>\n[Bird]-Ma
+      famille m'a reni\xE9, elle pense que mon r\xEAve est irr\xE9alisable !\nMais
+      je r\xE9ussirais \xE0 force de volont\xE9, c'est indiscutable !\n[Wolf]-Vous
+      avez raison, avec ces lunettes mes proies sont atteignables !\n[Mouse]-c'est
+      moi ou Charlie de motiver le loup \xE0 assassiner ses proies?\nD\xE9cid\xE9ment,
+      sa fiert\xE9 l'aveugle... Du moment qu'on ne s'en prend pas \xE0 moi..."
+    - 
+    - 'Emotion : Anticipation;
+
+      Failsafe : B.3.F13;
+
+      Childs : Empty;
+
+      GivenAttributes
+      : Proud+;'
+    - "\u24C7-B.3.13a"
+    - Bird
+    - Hint
+    - "[Wolf]-C\u2019est vrai que ces lunettes sont bien adapt\xE9es.\nM\xEAme si
+      c\u2019est un vicieux, ce petit Scapin, avec ce cadeau, eut une bonne id\xE9e\u2026\nEntre
+      l\u2019envie de me venger et de l\u2019aimer je suis tiraill\xE9..<?E:React/Sadness,
+      Wolf, TRUE/>."
+    - 
+    - 'Name : B.3.F13;'
+    - "\u24C7-B.3.13b"
+    - Bird
+    - Hint
+    - "[Wolf]-en r\xE9alit\xE9 son cadeau \xE9tait sinc\xE8re\u2026\nMalgr\xE9 tout
+      il m\u2019aimait\u2026 Que dois-je faire..<?E:React/Sadness, Wolf, TRUE/>."
+    - 
+    - 'Name : B.3.F13;'
+    - "\u24C7-Be.3.1"
+    - Bear
+    - Advance
+    - "[Bear]-Si je comprends bien, le chat vous a pi\xE9g\xE9 !\nIl avait d\xE9guis\xE9
+      votre fils en lapin pour que vous le mangiez ?\n[Wolf]-C'est bien \xE7a, quelle
+      fut ma surprise quand je le vis chat !\nJ'ai tout de suite compris qu'il avait
+      pris la place de mon fils ce sc\xE9l\xE9rat !\n[Bear]-Peut-\xEAtre, mais pendant
+      toutes ces ann\xE9es,\nc'est avec lui que vous avez partag\xE9 <?E:React/Trust,
+      Bear, TRUE/>!\n[Wolf]-Je le sais bien... C'est pour \xE7a que je suis tiraill\xE9...\nDois-je
+      le punir ou l'aimer ?"
+    - 
+    - 'Emotion : Surprise;
+
+      Failsafe : Be.3.F1;
+
+      Childs : Be.3.2;
+
+      NeededAttributes
+      : Lazy+;'
+    - "\u24C7-Be.3.1a"
+    - Bear
+    - Hint
+    - "[Bear]-Croyez-moi, vous pouvez me faire confiance <?E:React/Trust, Bear, TRUE/>!\nNe
+      l\u2019abandonnez pas malgr\xE9 votre d\xE9fiance !"
+    - 
+    - 'Name : Be.3.F1'
+    - "\u24C7-Be.3.1b"
+    - Bear
+    - Hint
+    - "[Bear]-M\xEAme s\u2019il n\u2019est de votre sang,\nEt qu\u2019il vous a trahi
+      il y a longtemps,\nIl est devenu votre fils avec le temps <?E:React/Trust,
+      Bear, TRUE/>!"
+    - 
+    - 'Name : Be.3.F1'
+    - "\u24C7-Be.3.2"
+    - Bear
+    - Advance
+    - "[Bear]-qsiuhfkjshfp\xE7zswhf\n[Wolf]-Zzz... Zzz... Zzz...\n[Mouse]-Qu'est-ce
+      qu'il se passe, tout le monde est devenu fou ?\n[Bird]-Ce n'est rien, c'est
+      l'auteur qui s'est endormi sur son clavier !\n\xE7a arrive tout le temps, il
+      a encore pass\xE9 sa nuit \xE0 travailler !\n[Bear]-Fa\xEEtes le points avec
+      tous vos moments pass\xE9s <?E:React/Trust, Bear, TRUE/>!\n[Wolf]-Je n'arrive
+      pas \xE0 me d\xE9cider..<?E:React/Sadness, Bear, TRUE/>.\n[Mouse]-(\xE7a y
+      est, ils reprennent comme si de rien \xE9tait!)"
+    - 
+    - 'Emotion : Trust;
+
+      Failsafe :Be.3.F2; ;
+
+      Childs : Be.3.3/Be.3.10;'
+    - "\u24C7-Be.3.2a"
+    - Bear
+    - Hint
+    - "[Bear]-<emcol val=trust>Je comprends votre d\xE9sarroi\u2026</emcol></bounce>\nDes
+      ann\xE9es auparavant \xE7a aurait pu \xEAtre moi !"
+    - 
+    - 'Name : Be.3.F2;'
+    - "\u24C7-Be.3.2b"
+    - Bear
+    - Hint
+    - "[Bear]-Vous avez tous les \xE9l\xE9ments pour d\xE9cider !\n<emcol val=trust>Faites
+      confiance \xE0 votre c\u0153ur pour avancer.</emcol></bounce>"
+    - 
+    - 'Name : Be.3.F2;'
+    - "\u24C7-Be.3.3"
+    - Bear
+    - Advance
+    - "[Bear]-Croyez-moi, je donnerai tout pour revoir ma petite Berthile...\n[Wolf]-C'est
+      le nom de votre amie ?\n[Bear]-Oui, ses b\xEAtise me manque, comme son rire...\n[Wolf]-\xE7a
+      me ferait de la peine de ne plus le voir sourire.\n[Bear]-Ne devient pas comme
+      moi ! Affal\xE9 \xE0 attendre la vie chez soi !\n[Mouse]-Tu crois que c'est
+      pour quoi que je t'ai piqu\xE9 ton miel !?\n[Bear]-<emcol val=surprise>Quoi
+      !</emcol> <shake><emcol val=anger>De quoi tu te m\xEAles !?</emcol></shake>"
+    - 
+    - 'Emotion : Trust;
+
+      Failsafe : Be.3.F3;
+
+      Childs : Be.3.4/Be.3.6;'
+    - "\u24C7-Be.3.3a"
+    - Bear
+    - Hint
+    - '[Bear]-Tu oses revenir dessus !<?E:React/Surprise, Bear, TRUE/>?
+
+      <shake><emcol
+      val=anger>Quel toupet ! </emcol></shake>Sur ton audace on pourra toujours miser
+      dessus !'
+    - 
+    - 'Name : Be.3.F3;'
+    - "\u24C7-Be.3.3b"
+    - Bear
+    - Hint
+    - "[Bear]-Quoi !<?E:React/Surprise, Bear, TRUE/>? Quelle est cette parole ?\nDans
+      cette affaire tu as jou\xE9 quel r\xF4le !?"
+    - 
+    - 'Name : Be.3.F3;'
+    - "\u24C7-Be.3.4"
+    - Bear
+    - Advance
+    - "[Bear]-R\xE9ponds moi, pourquoi avoir fait \xE7a ?\n[Mouse]-Ma tante par ta
+      fen\xEAtre t'a vu un jour dans ton fauteuil tout tristounet !\nElle a \xE9t\xE9
+      attir\xE9 par ton miel, mais ta vision triste lui a fait piti\xE9 !\n//Elle
+      m'a juste dit qu'elle voulait ton miel, mais je suis s\xFBr que ce n'est pas
+      tout !\n// je suis s\xFBr qu'elle voulait que se rencontre ! Que tu cesses
+      de te morfondre !\nOu: Elle t'aurait envoy\xE9 \xE0 moi ? Merci pour le cadeau
+      !\n[Mouse]-Allons, tu m'aimes bien, fais pas l'idiot !\n[Wolf]-A vous voir
+      on dirait un p\xE8re et sa fille..<?E:React/Sadness, Wolf, TRUE/>."
+    - 
+    - 'Emotion : Anger;
+
+      Failsafe : Be.3.F4;
+
+      Childs : Empty;'
+    - "\u24C7-Be.3.4a"
+    - Bear
+    - Hint
+    - "[Wolf]-Vous me rappeler tous ces souvenirs\u2026\nIl m\u2019a trahi, mais
+      a aussi \xE9t\xE9 mon fils, que choisir..<?E:React/Sadness, Wolf, TRUE/>."
+    - 
+    - 'Name : Be.3.F4;'
+    - "\u24C7-Be.3.4b"
+    - Bear
+    - Hint
+    - "[Wolf]-Je suis perdu, entre col\xE8re de ce qu\u2019il m\u2019a fait <?E:React/Sadness,
+      Wolf, TRUE/>!\nEt l\u2019amour que je lui ai port\xE9\u2026"
+    - 
+    - 'Name : Be.3.F4;'
+    - "\u24C7-Be.3.5"
+    - Bear
+    - Advance
+    - "[Bear]-Et moi qui ai dit au chat que vous alliez lui manquer.\n[Wolf]-Il me
+      manquera une fois que par vengeance je l'aurai d\xE9vor\xE9 !\n[Bear]-Pourquoi
+      vous parlez tous de manger !\nC'est fatiguant \xE0 la fin ! <emcol val=anger>Surtout
+      quand on meurt de faim !</emcol>\nD'ailleurs Emilie je n'ai pas fini ton proc\xE8s
+      !\nLa personne qui t'a achet\xE9 ton miel \xE0 prix d'or, quelles raisons l'ont
+      pouss\xE9e ?\n[Mouse]-C'est ma tante ! Tu me trouvais mesquine ? Attends de
+      voir ce qui l'a motiv\xE9 <?E:React/Surprise, Bear, TRUE/>!"
+    - 
+    - 'Emotion : Surprise;
+
+      Failsafe : Be.3.F5;
+
+      Childs : Be.3.6/Be.3.4;
+
+      NeededAttributes
+      : Greedy+;'
+    - "\u24C7-Be.3.5a"
+    - Bear
+    - Hint
+    - "[Bear]-<emcol val=anger>Emilie, je ne te pardonnerai jamais !</emcol>\nJe
+      meure de faim, n\u2019a tu donc aucune piti\xE9 !?"
+    - 
+    - 'Name : Be.3.F5;'
+    - "\u24C7-Be.3.5b"
+    - Bear
+    - Hint
+    - "[Bear]-Comment \xE7a ta tante <?E:React/Surprise, Bear, TRUE/>?\nEn quoi elle
+      est surprenante !?"
+    - 
+    - 'Name : Be.3.F5;'
+    - "\u24C7-Be.3.6"
+    - Bear
+    - Advance
+    - "[Bear]-Vas-y raconte, raconte ! Je suis tout ou\xEF !\n[Mouse]-L'autre jour,
+      ma tante est sortie de chez elle ! Sur le coup je n'ai pas compris !\nElle
+      s'enfon\xE7ait dans la for\xEAt, en r\xE9p\xE9tant *miel* tout le trajet !\n//C'\xE9tait
+      marrant \xE0 voir, elle \xE9tait comme envo\xFBt\xE9e !\nPuis on est tomb\xE9
+      sur ta cabane et elle s'est brusquement arr\xEAt\xE9e.\nElle t'a aper\xE7u
+      par la fen\xEAtre et la mine sombre chez elle est rentr\xE9e.\n[Bear]-C'est
+      bien \xE9trange en effet..<?E:React/Anticipation, Bear, TRUE/>."
+    - 
+    - 'Emotion : Surprise;
+
+      Failsafe : Be.3.F6;
+
+      Childs : Be.3.7;'
+    - "\u24C7-Be.3.6a"
+    - Bear
+    - Hint
+    - "[Bear]-qu\u2019est-ce qui lui a bien pu arriver !<?E:React/Anticipation, Bear,
+      TRUE/>?\nPour ainsi changer \xEAtre d\xE9boussol\xE9e !?"
+    - 
+    - 'Name : Be.3.F6;'
+    - "\u24C7-Be.3.6b"
+    - Bear
+    - Hint
+    - "[Bear]-Bien \xE9trange comme comportement\u2026\nAurait-elle eu son id\xE9e
+      machiav\xE9lique en me voyant <?E:React/Anticipation, Bear, TRUE/>?"
+    - 
+    - 'Name : Be.3.F6;'
+    - "\u24C7-Be.3.7"
+    - Bear
+    - Advance
+    - "[Bear]-Elle a eu peur de moi ta tante ?\n[Mouse]-Ze ne pense pas, elle \xE9tait
+      d\xE9boussol\xE9e.\nComme si un souvenir l'avait frapp\xE9.\n[Bear]-C'est l\xE0
+      qu'elle t'a dit que mon miel elle convoitait ?\n[Mouse]-Oui, mais avant de
+      toi elle a parl\xE9..<?E:React/Anticipation, Bear, TRUE/>.\n[Wolf]-Tout \xE7a
+      pour du miel... Vous n'avez pas de go\xFBt !\n[Bear]-c'est s\xFBr que d\xE9vorer
+      son enfant inspire moins le d\xE9go\xFBt !!<?E:React/Anger, Bear, TRUE/>!"
+    - 
+    - 'Emotion : Anticipation;
+
+      Failsafe : Be.3.F7;
+
+      Childs : Be.3.8/Be.3.4;'
+    - "\u24C7-Be.3.7a"
+    - Bear
+    - Hint
+    - "[Bear]-Pour du miel !? Mais le miel c\u2019est ce qui fait tout !\nC\u2019est
+      vous qui n\u2019avez aucun go\xFBt <?E:React/Anger, Bear, TRUE/>!"
+    - 
+    - 'Name : Be.3.F7;'
+    - "\u24C7-Be.3.7b"
+    - Bear
+    - Hint
+    - "[Bear]-<emcol val=anticipation>de moi elle a parl\xE9 ?</emcol></wiggle>\nJe
+      me demande bien ce qu\u2019elle pensait\u2026"
+    - 
+    - 'Name : Be.3.F7;'
+    - "\u24C7-Be.3.8"
+    - Bear
+    - Advance
+    - "[Bear]-Qu'est-ce qu'elle a dit pour se justifier ?\n[Mouse]-Que tu lui rappelais
+      un vieil ami, elle voulait le v\xE9rifier !\n//Elle m'a dit : *rapporte moi
+      son miel !*\nSi c'est bien lui, il sortira de chez lui et voudra \xE0 tout
+      prix le r\xE9cup\xE9rer !\n[Bear]-Elle voulait juste me faire sortir... Elle
+      m'aurait retrouv\xE9...\n\xE7a veut dire que mon miel est encore entier !?\n[Mouse]-r\xEAve
+      pas, elle a tout mang\xE9 !\n[Wolf]-<swing><emcol val=sadness>Et si vous cessiez
+      de m'ignorer !</emcol></swing> Le chat ! D\xEEtes moi o\xF9 il est !\n[Bear]-..."
+    - 
+    - 'Emotion : Anticipation;
+
+      Failsafe : Be.3.F8;
+
+      Childs : Empty;'
+    - "\u24C7-Be.3.8a"
+    - Bear
+    - Hint
+    - "[Wolf]-Il n\u2019y en a pas un pour m\u2019\xE9couter\u2026\nC\u2019est toujours
+      comme \xE7a,<emcol val=sadness> les gens m\u2019ignorent ou sont paniqu\xE9\u2026</emcol>"
+    - 
+    - 'Name : Be.3.F8;'
+    - "\u24C7-Be.3.8b"
+    - Bear
+    - Hint
+    - "[Wolf]-Vous ne m\u2019aiderez pas ?\nJe vais devoir me d\xE9brouiller seul
+      pour trouver ce chat.\nComme d\u2019habitude, <emcol val=sadness>je reprends
+      ma route de la solitude\u2026</emcol>"
+    - 
+    - 'Name : Be.3.F8;'
+    - "\u24C7-Be.3.9"
+    - Bear
+    - Advance
+    - "[Bear]-Ce que tu essais de nous dire c'est que...\n[Wolf]-J'avais un fils
+      l\xE9gitime !\nQuand de ma chasse j'\xE9tais rentr\xE9, voici ce qu'avec mes
+      yeux flous je vis :\n//Un lapin blanc et un loup roux. \xC9trange, je n'avais
+      qu'un louveteau gris !\nMon instinct m'\xE9lan\xE7a, pouss\xE9 par ma mauvaise
+      chasse, sur le lapin blanc...\n//Hier avec ces lunettes enfin m'\xE9tait r\xE9v\xE9l\xE9e
+      la v\xE9rit\xE9.\nSi c'\xE9tait un chat, alors le lapin que j'ai mang\xE9..<?E:React/Sadness,
+      Bear, TRUE/>."
+    - 
+    - 'Emotion : Surprise;
+
+      Failsafe : Be.3.F9;
+
+      Childs : Be.3.10;
+
+      NeededAttributes
+      : Wise+;'
+    - "\u24C7-Be.3.9a"
+    - Bear
+    - Hint
+    - "[Bear]-Quelle histoire\u2026 Quelle tristesse\u2026\nJe comprends votre d\xE9tresse
+      <?E:React/Sadness, Bear, TRUE/>!"
+    - 
+    - 'Name : Be.3.F9;'
+    - "\u24C7-Be.3.9b"
+    - Bear
+    - Hint
+    - "[Bear]-Un chat bien dangereux !\n<emcol val=sadness>Mais il \xE9tait seul,
+      triste et peureux !</emcol></swing>\nIl devait agir pour vivre encore un peu
+      !"
+    - 
+    - 'Name : Be.3.F9;'
+    - "\u24C7-Be.3.10"
+    - Bear
+    - Advance
+    - "[Bear]-Cette histoire est une trag\xE9die...\nMais parfois <emcol val=trust>du
+      chaos naisent les plus belles m\xE9lodies !</emcol></bounce>\nJ'ai \xE9t\xE9
+      jet\xE9 de mon village, banni, avec une petite souris.\nMais \xE0 deux, notre
+      vie on a reconstruit !\nCe que votre chat a fait, c'\xE9tait par instinct de
+      survie !\nTout comme ce qui vous a pouss\xE9 a bondir sur votre malheureux
+      petit <?E:React/Anger, Bear, TRUE/>!\n[Wolf]-Alors je devrais le pardonner
+      selon vous !?"
+    - 
+    - 'Emotion : Sadness;
+
+      Failsafe : Be.3.F10;
+
+      Childs : Be.3.11/Be.3.3;'
+    - "\u24C7-Be.3.10a"
+    - Bear
+    - Hint
+    - "[Bear]-<emcol val=trust>Je suis certain que quelque chose de bon peut en sortir
+      !</emcol></bounce>\nMais \xE0 vous, votre voie vous devez choisir !"
+    - 
+    - 'Name : Be.3.F10;'
+    - "\u24C7-Be.3.10b"
+    - Bear
+    - Hint
+    - "[Bear]-Vous vous en prenez \xE0 lui, mais vous \xEAtes aussi fautif <?E:React/Anger,
+      Bear, TRUE/>!\nA vous jeter sur le lapin ! Il fallait \xEAtre attentif !"
+    - 
+    - 'Name : Be.3.F10;'
+    - "\u24C7-Be.3.11"
+    - Bear
+    - Advance
+    - "[Bear]-Un avis ne se forge qu'\xE0 l'\xE9coute de chaque partie.\nJ'ai \xE9cout\xE9
+      le chat, et maintenant j'entends le p\xE8re aussi.\nMalgr\xE9 cet incident,
+      pendant des ann\xE9es vous avez v\xE9cu en famille<?E:React/Trust, Bear, TRUE/>.\n[Wolf]-Je
+      ne le nie pas, mais ce qu'il a fait est impardonnable !\n[Bear]-Un chat perdu
+      qui ruse pour ne pas finir sur la table ?\nAu fond, ce n'est pas au chat que
+      vous en voulez, mais \xE0 vous...\n[Wolf]-Pourquoi me dire cela !? Pourquoi
+      d\xE9fendre ce matou !?"
+    - 
+    - 'Emotion : Anger;
+
+      Failsafe : Be.3.F11;
+
+      Childs : Be.3.12;'
+    - "\u24C7-Be.3.11a"
+    - Bear
+    - Hint
+    - "[Bear]-Je suis confiant en ce que je dis <?E:React/Trust, Bear, TRUE/>!\nC\u2019est
+      par exp\xE9rience que ces propos j\u2019appuie !"
+    - 
+    - 'Name : Be.3.F11;'
+    - "\u24C7-Be.3.11b"
+    - Bear
+    - Hint
+    - "[Bear]-Je ne d\xE9fends personne, j\u2019essai de vous aider vous <?E:React/Trust,
+      Bear, TRUE/>!\nJe sais ce que je dis, le regret va vous rendre fou !"
+    - 
+    - 'Name : Be.3.F11;'
+    - "\u24C7-Be.3.12"
+    - Bear
+    - Advance
+    - "[Bear]-Je ne d\xE9fends rien, je parle vrai, d'une v\xE9rit\xE9 que j'ai moi
+      m\xEAme subie.\n//Ma petite souris un jour a disparu. A sa recherche je ne
+      suis jamais sorti.\nMon pass\xE9 ma pris ma confiance \xE0 autrui, de chez
+      moi jamais plus je sortis.\n//Plus le temps passa, plus mon fauteuil m'encha\xEEna
+      \xE0 chez moi.\n//Vous avez d\xE9vor\xE9 votre fils et exil\xE9 celui qui dans
+      votre coeur l'a remplac\xE9 !\nC'est contre vous que votre col\xE8re est tourn\xE9e
+      !\n[Wolf]-Vous me d\xEEtes de le pardonner <?E:React/Sadness, Wolf, TRUE/>?\n[Bear]-Je
+      vous dis de VOUS pardonner, pour votre fils retrouver."
+    - 
+    - 'Emotion : Trust;
+
+      Failsafe : Be.3.F12;
+
+      Childs : Empty;'
+    - "\u24C7-Be.3.12a"
+    - Bear
+    - Hint
+    - "[Wolf]-Vos paroles sont sages\u2026\nMais je ne sais pas si je peux encore
+      tourner la page..<?E:React/Sadness, Wolf, TRUE/>."
+    - 
+    - 'Name : Be.3.F12;'
+    - "\u24C7-Be.3.12b"
+    - Bear
+    - Hint
+    - "[Wolf]-Me pardonner ?\nComment je le pourrai\u2026 J\u2019ai d\xE9vorer mon
+      fils et chass\xE9 celui qui restait..<?E:React/Sadness, Wolf, TRUE/>."
+    - 
+    - 'Name : Be.3.F12;'
+    - "\u24C7-H.3.Joy.F"
+    - Wolf
+    - Harmony
+    - "[Wolf]-Un rythme bien entra\xEEnant ! Mais pas d'humeur \xE0 danser <?E:React/Sadness,
+      Wolf, TRUE/>!\nJ'ai un chat \xE0 retrouver !\n[Bear]-La joie ne lui va pas,
+      changeons de ce pas !"
+    - 
+    - 'Emotion : Joy;
+
+      IsCorrect : FALSE;
+
+      Block : 4;'
+    - "\u24C7-H.3.Trust.F"
+    - Wolf
+    - Harmony
+    - "[Wolf]-Je suis encore plus dans le doute <?E:React/Sadness, Wolf, TRUE/>!
+      Quelle est la solution !\n[Bear]-Ce n'est pas \xE7a, il faut changer d'\xE9motion
+      !"
+    - 
+    - 'Emotion : Trust;
+
+      IsCorrect : FALSE;
+
+      Block : 4;'
+    - "\u24C7-H.3.Fear.F"
+    - Wolf
+    - Harmony
+    - "[Wolf]-Et tu le monde qui me craint...\n<swing><emcol val=sadness>Alors que
+      je n'y suis pour rien...</emcol></swing>\n[Bear]-Non, je ne pense pas que se
+      soit \xE7a, il manque d'entrain !"
+    - 
+    - 'Emotion : Fear;
+
+      IsCorrect : TRUE;
+
+      Block : 4;'
+    - "\u24C7-H.3.Sadness.V"
+    - Wolf
+    - Harmony
+    - "[Wolf]-Cette musique... Je comprends...\r\nSi je le chasse je m'en voudrais
+      tellement !\r\n[Mouse]-Au final Le Grand m\xE9chant loup n\u2019est pas si
+      m\xE9chant!\r\n[Bird]-Nous sommes souvent trahis par les visages et contours
+      !\r\nLe plumage ne fait pas forc\xE9ment le vautour !\r\n[Wolf]-En tout cas
+      merci pour votre prestation.\r\nJe joue un peu aussi et je voie en vous de
+      la magie et de la passion !\r\n[Bird]-Il faut bien ! On s'en va jouer devant
+      les Grands-Musiciens !\r\n[Wolf]-Comment ? Voir les Grands Musiciens est votre
+      int\xE9r\xEAt ?\r\n[Mouse]-Vous les connaissez ?\r\n[Wolf]-Pardi !\r\nquand
+      j\u2019etais jeune et vigoureux sachez que j\u2019en faisais partie !\r\n[Mouse]-Hein
+      !\r\n[Bird]-Quoi ! Vraiment !?\r\n[Wolf]-C\u2019\xE9tait il y a longtemps maintenant...\r\nMais
+      certains des musiciens actuels connaissent encore mon nom.\r\nD\xEEtes-leur
+      que vous venez de la part du vieux G\xE9vaudan, ils vous recevront !\r\n[Mouse]-Hors
+      de Question !\r\n[Bear]-Emilie a raison... \r\nVous laissez seul dans votre
+      tristesse hors de question ! \r\nPrenez votre instrument, vous venez avec nous
+      !\r\n[Wolf]-Vous... vous voulez vraiment du grand m\xE9chant loup avec vous
+      ?\r\n[Mouse]-Le grand m\xE9chant loup ? Jamais !\r\n//Par contre un nouvel
+      ami ? Volontiers !\r\n[Wolf]-Je je ne sais que dire...\r\n[Bird]-d\xEEtes oui
+      !\r\n[Mouse]-Et en revenant vous nous suivrez au village !\r\nLe chat roux
+      a d\xFB rentrer chez sa m\xE8re ou dans les parages !"
+    - 
+    - 'Emotion : Sadness;
+
+      IsCorrect : TRUE;
+
+      Block : 4;'
+    - "\u24C7-H.3.Anger.F"
+    - Wolf
+    - Harmony
+    - "[Wolf]-Il m'a forc\xE9 \xE0 d\xE9vorer mon fils !!!\nJe lui ferait subir mille
+      supplices !\n[Bear]-Oui, \xE7a le touche bien, mais on empreinte pas le bon
+      chemin !"
+    - 
+    - 'Emotion : Anger;
+
+      IsCorrect : FALSE;
+
+      Block : 4;'
+    - "\u24C7-H.3.Disgust.F"
+    - Wolf
+    - Harmony
+    - "[Wolf]-<swing><emcol val=sadness>Tout est de ma faute...</emcol></swing> Si
+      je n'\xE9tais si accroc aux lapinc blancs...\n[Bear]-On se rapproche, mais
+      ce n'est pas exactement ce qu'il ressent !"
+    - 
+    - 'Emotion : Disgust;
+
+      IsCorrect : FALSE;
+
+      Block : 4;'
+    - "\u24C7-H.3.Surprise.F"
+    - Wolf
+    - Harmony
+    - "[Wolf]-Qu'elle est cette m\xE9lodie !? \nJe la jouais aussi avant que mon
+      regard ne soit r\xE9duit...\n[Bear]-Dommage, ce n'est pas \xE7a, il est juste
+      surpris."
+    - 
+    - 'Emotion : Surprise;
+
+      IsCorrect : FALSE;
+
+      Block : 4;'
+    - "\u24C7-H.3.Anticipation.F"
+    - Wolf
+    - Harmony
+    - "[Wolf]-Comment je peux encore avoir confiance en lui ?\nIl m'a trahi !\n[Bear]-Ce
+      n'est pas la bonne m\xE9lodie..."
+    - 
+    - 'Emotion : Anticipation;
+
+      IsCorrect : FALSE;
+
+      Block : 4;'
+    - "\u24C7-Event.FirstEmo.3"
+    - Global
+    - Event
+    - "[Wolf]-Je suis plong\xE9 dans le doute ! Mon coeur est tiraill\xE9 <?E:React/Sadness,
+      Wolf, TRUE/>!\nMa fureur je veux qu'il go\xFBte ! Mais ne plus le voir j'en
+      serai pein\xE9.\nQu'est-ce que ce sentiment !?\n[Bear]-Il est perdu. Grenouille,
+      aide le \xE0 trouver ce qu'il ressent !\nSi tu r\xE9ussi tu sauveras plus d'un
+      innocent !\n//Fais ce que tu as fait pour moi !\nM\xE8ne le pas et malgr\xE9
+      tout, sauve le chat !"
+    - 
+    - 'Key : Block.4;'
+    - "\u24C7-M.Root.4"
+    - Mouse
+    - Advance
+    - 
+    - 
+    - 'Root : 4;
+
+      Emotion : None;
+
+      Failsafe : M.3.F0;
+
+      Childs :
+      M.3.1;'
+    - "\u24C7-B.Root.4"
+    - Bird
+    - Advance
+    - 
+    - 
+    - 'Root : 4;
+
+      Emotion : None;
+
+      Failsafe : B.3.F0;
+
+      Childs : 
+      B.3.1;'
+    - "\u24C7-Be.Root.4"
+    - Bear
+    - Advance
+    - 
+    - 
+    - 'Root : 4;
+
+      Emotion : None;
+
+      Failsafe : Be.3.F0;
+
+      Childs
+      :  Be.3.1;'
+    - "\u24C7-M.3.0a"
+    - Mouse
+    - Hint
+    - "[Mouse]-Le grand m\xE9chant loup !\nCe chat nous aura mis dans la boue jusqu'au
+      bout <?E:React/Disgust, Mouse, TRUE/>!"
+    - 
+    - 'Name : M.3.F0;'
+    - "\u24C7-M.3.0b"
+    - Mouse
+    - Hint
+    - "[Mouse]-Au final le chat n'\xE9tait pas honn\xEAte ?\nQuelle surprise ! C'est
+      un chat, pour esp\xE9rer autre chose faut \xEAtre b\xEAte <?E:React/Disgust,
+      Mouse, TRUE/>!"
+    - 
+    - 'Name : M.3.F0;'
+    - "\u24C7-B.3.0a"
+    - Bird
+    - Hint
+    - "[Bird]-Que d\xEEtes vous <?E:React/Surprise, Bird, TRUE/>? C'est le chat qui
+      se moque de nous !?"
+    - 
+    - 'Name : B.3.F0;'
+    - "\u24C7-B.3.0b"
+    - Bird
+    - Hint
+    - '[Bird]-Vous tentez de nous berner <?E:React/Surprise, Bird, TRUE/>? Il faut
+      vous expliquer !'
+    - 
+    - 'Name : B.3.F0;'
+    - "\u24C7-Be.3.0a"
+    - Bear
+    - Hint
+    - "[Bear]-Le chat c'est moqu\xE9 de toi !<?E:React/Surprise, Bear, TRUE/>?\nEt
+      moi qui pens\xE9 que c'\xE9tait lui la proie..."
+    - 
+    - 'Name : Be.3.F0;'
+    - "\u24C7-Be.3.0b"
+    - Bear
+    - Hint
+    - "[Bear]-Il aurait pris la place de ton enfant !<?E:React/Surprise, Bear, TRUE/>?\nJe
+      con\xE7oit que \xE7a doit \xEAtre dur pour un parent..."
+    - 
+    - 'Name : Be.3.F0;'
+    - "\u24C7-Dial.Intro3"
+    - Global
+    - Event
+    - "[Wolf]-aouuuuh <?E:React/Surprise, Bird, TRUE/>!\n[Cat]-oh non, c\u2019est
+      le loup !\nJ'ai chang\xE9 d'avis, je prends mes jambes a mon coup !\n[Wolf]-o\xF9
+      est ce vaurien de chat ! Que je le fasse crier entre mes crocs !\n[Bird]-Les
+      amis, nous devons le prot\xE9ger ! Vous ne l'aurez pas bourreau <?E:React/Surprise,
+      Bear, TRUE/>!\n[Wolf]-alors c\u2019est-ce qu\u2019il dit ? Que je suis son
+      bourreau ?\nDes ann\xE9es auparavant, j\u2019eus un fils, un petit louveteau.\nMais
+      voila que ma vue commen\xE7a a me faire d\xE9faut\n//Un jour je suis rentr\xE9,
+      chose \xE9trange me fit face\nUn gros lapin blanc endormi, aubaine suite a
+      ma mauvaise chasse !\n//Mes faibles yeux ne s\u2019offusqu\xE8rent pas de mon
+      fils qui rouge \xE9tait devenu...\nMon ventre oeuvra ensuite, le lapin je d\xE9vorai
+      tout cru <?E:React/Disgust, Mouse, TRUE/>!\n//Les ann\xE9es pass\xE8rent, plut\xF4t
+      bien je dois l\u2019admettre.\nMais quand hier ce bougre m\u2019a offert ces
+      lunettes\nJe compris aussit\xF4t...quand de nouveau ma vu fut nette... "
+    - 
+    - 'Key : Start.4;'
+    size: {x: 6, y: 423}
   - name: Sample
     version: 1.0
     array:
