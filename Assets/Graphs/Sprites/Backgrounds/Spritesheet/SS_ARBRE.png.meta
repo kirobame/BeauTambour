@@ -32,6 +32,21 @@ TextureImporter:
   - first:
       213: -3387777409974696989
     second: SS_ARBRE_9
+  - first:
+      213: 4050776885582718935
+    second: SS_ARBRE_10
+  - first:
+      213: -2806210759516958192
+    second: SS_ARBRE_11
+  - first:
+      213: -1037648929378294875
+    second: SS_ARBRE_12
+  - first:
+      213: 5810809031309424303
+    second: SS_ARBRE_13
+  - first:
+      213: 8235363430122704165
+    second: SS_ARBRE_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -170,10 +185,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +204,12 @@ TextureImporter:
       name: SS_ARBRE_1
       rect:
         serializedVersion: 2
-        x: 395
+        x: 255
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +225,12 @@ TextureImporter:
       name: SS_ARBRE_2
       rect:
         serializedVersion: 2
-        x: 790
+        x: 510
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +246,12 @@ TextureImporter:
       name: SS_ARBRE_3
       rect:
         serializedVersion: 2
-        x: 1185
+        x: 765
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +267,12 @@ TextureImporter:
       name: SS_ARBRE_4
       rect:
         serializedVersion: 2
-        x: 1580
+        x: 1020
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +288,12 @@ TextureImporter:
       name: SS_ARBRE_5
       rect:
         serializedVersion: 2
-        x: 1975
+        x: 1275
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,12 +309,12 @@ TextureImporter:
       name: SS_ARBRE_6
       rect:
         serializedVersion: 2
-        x: 2370
+        x: 1530
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +330,12 @@ TextureImporter:
       name: SS_ARBRE_7
       rect:
         serializedVersion: 2
-        x: 2765
+        x: 1785
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +351,12 @@ TextureImporter:
       name: SS_ARBRE_8
       rect:
         serializedVersion: 2
-        x: 3160
+        x: 2040
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,12 +372,12 @@ TextureImporter:
       name: SS_ARBRE_9
       rect:
         serializedVersion: 2
-        x: 3555
+        x: 2295
         y: 0
-        width: 395.3
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -374,10 +389,115 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SS_ARBRE_10
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 0
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d765819d10473830800000000000000
+      internalID: 4050776885582718935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SS_ARBRE_11
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 0
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012dc12ae265e09d0800000000000000
+      internalID: -2806210759516958192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SS_ARBRE_12
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 0
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3a7d2ebc78991f0800000000000000
+      internalID: -1037648929378294875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SS_ARBRE_13
+      rect:
+        serializedVersion: 2
+        x: 3315
+        y: 0
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa674d8e60424a050800000000000000
+      internalID: 5810809031309424303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SS_ARBRE_14
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 0
+        width: 255.33333
+        height: 356
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52dc4b82863e94270800000000000000
+      internalID: 8235363430122704165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 89e79765dfaaa0f4db128d268ea24485
+    spriteID: dcd8cb6befb62194f82c2be547b70d4e
     internalID: 0
     vertices: []
     indices: 

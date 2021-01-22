@@ -15,6 +15,8 @@ MonoBehaviour:
   key: Start.1
   infoKey: Block.1
   interlocutor: {fileID: 11400000, guid: f65fe9a32f3676c408d14b39cf4d8e55, type: 2}
-  musicians:
-  - {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}
-  - {fileID: 11400000, guid: 482f099fc4d8c9545a7eff7f5f3b4400, type: 2}
+  musicianEntries:
+  - value: {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}
+    givenAttributes: 
+  - value: {fileID: 11400000, guid: 482f099fc4d8c9545a7eff7f5f3b4400, type: 2}
+    givenAttributes: 

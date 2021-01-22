@@ -17,7 +17,11 @@ namespace BeauTambour
             public bool TryProcess(string[] texts, Dictionary<string, string> data)
             {
                 if (!data.ContainsKey("Emotion")) return false;
-                else requiredEmotion = (Emotion)Enum.Parse(typeof(Emotion), data["Emotion"]);
+                else
+                {
+                    var emotionName = data["Emotion"].FirstToUpper();
+                    requiredEmotion = (Emotion)Enum.Parse(typeof(Emotion), emotionName);
+                }
                 
                 if (!data.ContainsKey("Failsafe")) return false;
                 else failsafe = data["Failsafe"];
@@ -60,8 +64,10 @@ namespace BeauTambour
         }
 
         #endregion
+
+        public override bool HasArcEnded => hasArcEnded;
+        private bool hasArcEnded;
         
-        public override bool HasArcEnded => currentNode == null || currentNode.Childs[0] == "Empty";
         public override int Branches => currentNode.Childs.Count;
 
         private List<string> rootNodeKeys;
@@ -95,13 +101,17 @@ namespace BeauTambour
         public override void Bootup(RuntimeCharacterBase runtimeCharacter)
         {
             base.Bootup(runtimeCharacter);
-
+            hasArcEnded = false;
+            
             rootNodeKeys = new List<string>();
             nodes = new Dictionary<string, DialogueNode>();
             failsafes = new Dictionary<string, DialogueFailsafe>();
             attributes = new HashSet<string>();
         }
 
+        public void ResetArcCompletion() => hasArcEnded = false;
+        public void AddAttribute(string attribute) => attributes.Add(attribute);
+        
         public override bool IsValid(Emotion emotion, out int selection, out int followingBranches)
         {
             selection = 0;
@@ -150,6 +160,8 @@ namespace BeauTambour
                     if (child.Childs[0] == "Empty")
                     {
                         Debug.Log($"--|DIAG|-> End of narrative arc for : {name}");
+                        hasArcEnded = true;
+                        
                         if (GameState.NotifyMusicianArcEnd(out var blockDialogue))
                         {
                             return new Dialogue[]
