@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BlurryAngerReact
   m_EditorClassIdentifier: 
   key: 2
-  isBlurry: 0
+  isBlurry: 1
   visualEffectSignal: {fileID: 11400000, guid: 4e04e7aaa52343a4cab1935f7991ecd4, type: 2}
   animationSignal: {fileID: 11400000, guid: dbf3248659cb36b4eaf33af5e93b9872, type: 2}

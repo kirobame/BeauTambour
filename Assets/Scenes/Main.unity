@@ -11522,7 +11522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder: {fileID: 1309046916}
   widthCorrection: 0.25
-  skip: 1
+  skip: 0
 --- !u!1 &1453769030
 GameObject:
   m_ObjectHideFlags: 0
@@ -11541,6 +11541,7 @@ GameObject:
   - component: {fileID: 1453769040}
   - component: {fileID: 1453769032}
   - component: {fileID: 1453769038}
+  - component: {fileID: 1453769041}
   - component: {fileID: 1453769042}
   m_Layer: 5
   m_Name: -OnIntroStoryEnd
@@ -11627,6 +11628,7 @@ MonoBehaviour:
   - {fileID: 1453769040}
   - {fileID: 1453769038}
   - {fileID: 1453769042}
+  - {fileID: 1453769041}
   - {fileID: 1453769037}
   isUnscaled: 0
 --- !u!114 &1453769034
@@ -11819,6 +11821,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1.25
+--- !u!114 &1453769041
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453769030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c09793b8a4d40b991162bd6bae7a59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0.5
 --- !u!114 &1453769042
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -11828,12 +11843,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1453769030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27839caf5ec6508448b64860a8e33f21, type: 3}
+  m_Script: {fileID: 11500000, guid: 5db24308cff4406497310bd16b04b08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 885846193}
   name: In
-  waitingFor: Out
 --- !u!1001 &1509659209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16125,7 +16139,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -16222,8 +16236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 2031483948}
-  clip: {fileID: 8300000, guid: c396be14244a3bd4e9f8cf895f581a28, type: 3}
-  volumeRange: {x: 0, y: 0.15}
+  clip: {fileID: 8300000, guid: bc5dcd93996176848b88dc662d3f3255, type: 3}
+  volumeRange: {x: 0, y: 0.3}
   inCurve:
     serializedVersion: 2
     m_Curve:

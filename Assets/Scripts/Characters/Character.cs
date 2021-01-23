@@ -24,6 +24,7 @@ namespace BeauTambour
         [Space, SerializeField] private Color fontColor;
         [SerializeField] private Color backgroundColor;
         [SerializeField] private TMP_FontAsset font;
+        [SerializeField] private float yOffset;
 
         public AudioStringMapPackage AudioStringMap => audioStringMap;
         [Space, SerializeField] private AudioStringMapPackage audioStringMap;
@@ -56,6 +57,8 @@ namespace BeauTambour
             
             dialogueHolder.TextMesh.color = fontColor;
             dialogueHolder.TextMesh.font = font;
+            
+            dialogueHolder.Offset(yOffset);
         }
         public Vector2 GetPositionForDialogueHolder() => runtimeLink.DialogueAnchor;
 

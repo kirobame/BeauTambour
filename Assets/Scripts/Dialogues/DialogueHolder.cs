@@ -33,6 +33,7 @@ namespace BeauTambour
         private bool isOperational;
         private Vector2 previousSize;
 
+        private float height;
         private float startX;
         private float maxWidth;
         
@@ -41,6 +42,7 @@ namespace BeauTambour
         void Awake()
         {
             isOperational = false;
+            height = boundsTransform.localPosition.y;
             
             textMesh = GetComponent<TextMeshPro>();
             textAnimatorPlayer = GetComponent<TextAnimatorPlayer>();
@@ -70,6 +72,12 @@ namespace BeauTambour
         {
             boundsTransform.sizeDelta = previousSize;
             textTransform.sizeDelta = previousSize;
+        }
+        public void Offset(float value)
+        {
+            var position = boundsTransform.localPosition;
+            position.y = height + value;
+            boundsTransform.localPosition = position;
         }
 
         public void Deactivate() => StartCoroutine(DeactivationRoutine(true));

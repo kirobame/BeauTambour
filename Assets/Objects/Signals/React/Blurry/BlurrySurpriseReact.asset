@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BlurrySurpriseReact
   m_EditorClassIdentifier: 
   key: 6
-  isBlurry: 0
+  isBlurry: 1
   visualEffectSignal: {fileID: 11400000, guid: 63f742019e65f7a4ba649336ebe2db72, type: 2}
   animationSignal: {fileID: 11400000, guid: 8f8f7fee87b8bf8488d06babfe549190, type: 2}

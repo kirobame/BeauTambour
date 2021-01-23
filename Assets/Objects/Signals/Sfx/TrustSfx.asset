@@ -14,8 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 8
   effect: {fileID: 3935002598629572295, guid: 94c32761946785f4c9735e22c0e670de, type: 3}
-  stock:
-  - key: {fileID: 11400000, guid: f65fe9a32f3676c408d14b39cf4d8e55, type: 2}
-    value: {fileID: 11400000, guid: 73d33542ae9ad434dab1201ce63a2997, type: 2}
-  - key: {fileID: 11400000, guid: 0f85a343b67edc34ab116ac1474a19f8, type: 2}
-    value: {fileID: 11400000, guid: 73d33542ae9ad434dab1201ce63a2997, type: 2}
+  song: {fileID: 11400000, guid: 73d33542ae9ad434dab1201ce63a2997, type: 2}

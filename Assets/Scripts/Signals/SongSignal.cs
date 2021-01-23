@@ -25,25 +25,17 @@ namespace BeauTambour
         public override string Category => "sfx";
 
         [SerializeField] private PoolableAnimation effect;
-        
-        [SerializeField] private Melody[] stock;
-        private Dictionary<int, AudioPackage> registry;
+        [SerializeField] private AudioPackage song;
 
         private MonoBehaviour hook;
 
         private Character speaker;
         private Animator usedEffect;
         private PoolableAudio usedAudio;
-
-        public override void Bootup()
-        {
-            registry = new Dictionary<int, AudioPackage>();
-            foreach (var melodies in stock) registry.Add(melodies.Key.Id, melodies.Value);
-        }
-
+        
         public override void Execute(MonoBehaviour hook, Character speaker, string[] args)
         {
-            if (speaker is Musician || !registry.TryGetValue(speaker.Id, out var audioPackage))
+            if (speaker is Musician)
             {
                 hook.StartCoroutine(FallbackRoutine());
                 return;
@@ -52,7 +44,7 @@ namespace BeauTambour
             this.hook = hook;
             this.speaker = speaker;
             
-            hook.StartCoroutine(ActivationRoutine(audioPackage));
+            hook.StartCoroutine(ActivationRoutine(song));
         }
         private IEnumerator ActivationRoutine(AudioPackage audioPackage)
         {
@@ -65,6 +57,8 @@ namespace BeauTambour
 
             usedAudio.OnDone += OnSongEnd;
             audioPackage.AssignTo(usedAudio.Value, EventArgs.Empty);
+
+            usedAudio.Value.pitch = ((Interlocutor) speaker).SingingPitch;
             usedAudio.Value.Play();
 
             var animationPool = Repository.GetSingle<AnimationPool>(References.AnimationPool);

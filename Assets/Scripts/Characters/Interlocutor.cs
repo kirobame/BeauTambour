@@ -34,6 +34,9 @@ namespace BeauTambour
         public override bool HasArcEnded => false;
         public override int Branches => 1;
 
+        public float SingingPitch => singingPitch;
+        [SerializeField] private float singingPitch;
+        
         private List<DialogueBlock> blocks;
         private List<Dictionary<Emotion, DialogueFailsafe>> options;
 

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BlurryTrustReact
   m_EditorClassIdentifier: 
   key: 8
-  isBlurry: 0
+  isBlurry: 1
   visualEffectSignal: {fileID: 11400000, guid: 0c72196c77273ec49910df1f42e95374, type: 2}
   animationSignal: {fileID: 11400000, guid: b7570aac24052e5488e8f23a71220b84, type: 2}
