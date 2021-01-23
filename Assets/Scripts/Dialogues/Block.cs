@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Flux;
 using UnityEngine;
 using Event = Flux.Event;
@@ -8,6 +10,26 @@ namespace BeauTambour
     [IconIndicator(7705900795600745325), CreateAssetMenu(fileName = "NewEncounter", menuName = "Beau Tambour/Chapter/Block")]
     public class Block : ScriptableObject
     {
+        #region Encapsulated Types
+
+        [Serializable]
+        public class MusicianEntry
+        {
+            public Musician Value => value;
+            [SerializeField] private Musician value;
+
+            public string[] GivenAttributes
+            {
+                get
+                {
+                    if (givenAttributes == string.Empty) return Array.Empty<string>();
+                    else return givenAttributes.Split(';');
+                }
+            } 
+            [SerializeField] private string givenAttributes;
+        }
+        #endregion
+        
         public string InfoKey => infoKey;
         
         [SerializeField] private string key;
@@ -16,9 +38,17 @@ namespace BeauTambour
         public Interlocutor Interlocutor => interlocutor;
         [Space, SerializeField] private Interlocutor interlocutor;
 
-        public IReadOnlyList<Musician> Musicians => musicians;
-        [SerializeField] private Musician[] musicians;
+        public Musician[] Musicians => musicianEntries.Select(entry => entry.Value).ToArray();
+        [SerializeField] private MusicianEntry[] musicianEntries;
 
+        public void SendAttributes()
+        {
+            foreach (var entry in musicianEntries)
+            {
+                foreach (var attribute in entry.GivenAttributes) entry.Value.AddAttribute(attribute);
+            }
+        }
+        
         public void Execute(Block previousBlock)
         {
             if (previousBlock != null)
@@ -29,10 +59,10 @@ namespace BeauTambour
                 previousBlock.interlocutor.isActive = false;
                 GameState.UnregisterSpeakerForUse(previousBlock.interlocutor);
                 
-                for (var i = 0; i < previousBlock.musicians.Length; i++)
+                for (var i = 0; i < previousBlock.musicianEntries.Length; i++)
                 {
                     var spot = Repository.GetSingle<Transform>($"1.MusicianDiscard.{i}");
-                    var musician = previousBlock.musicians[i];
+                    var musician = previousBlock.musicianEntries[i].Value;
 
                     musician.isActive = false;
                     GameState.UnregisterSpeakerForUse(musician);
@@ -45,10 +75,18 @@ namespace BeauTambour
             var dialoguePhase = phaseHandler.Get<DialoguePhase>(PhaseCategory.Dialogue);
             dialoguePhase.SetNewStartingKey(key);
 
-            for (var i = 0; i < musicians.Length; i++)
+            for (var i = 0; i < musicianEntries.Length; i++)
             {
-                var musician = musicians[i];
-                var spot = Repository.GetSingle<Transform>($"{musicians.Length}.MusicianSpot.{i}");
+                var musician = musicianEntries[i].Value;
+                var spot = Repository.GetSingle<Transform>($"{musicianEntries.Length}.MusicianSpot.{i}");
+
+                if (!musician.HasArcEnded)
+                {
+                    foreach (var attribute in musicianEntries[i].GivenAttributes)
+                    {
+                        musician.AddAttribute(attribute);
+                    }
+                }
                 
                 musician.RuntimeLink.Reboot();
                 musician.RuntimeLink.transform.position = spot.position;

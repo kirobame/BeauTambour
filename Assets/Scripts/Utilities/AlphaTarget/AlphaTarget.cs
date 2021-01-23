@@ -11,5 +11,6 @@ namespace BeauTambour
 
         public virtual void Prepare(float goal) => this.goal = goal;
         public abstract void Set(float ratio);
+        public virtual void End() { }
     }
 }

@@ -19,5 +19,7 @@ namespace BeauTambour
         
         OnDownloadOnlyConfirmed,
         OnDownloadOnly,
+        
+        OnIntroSkipped,
     }
 }

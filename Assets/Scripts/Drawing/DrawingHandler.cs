@@ -41,8 +41,6 @@ namespace BeauTambour
         private ShapeAnalyzer analyzer;
         private PoolableDrawing drawing;
 
-        //private Vector2 dummy;
-
         void Awake()
         {
             Repository.Reference(this, References.DrawingHandler);
@@ -83,9 +81,6 @@ namespace BeauTambour
 
         public void Execute(Vector2 input)
         {
-            /*if (Vector2.Distance(input, dummy) >= 0.4f) Debug.Log($"MAJOR -||- FROM {dummy} --> TO {input}");
-            dummy = input;*/
-                
             cachedInput = input.normalized;
             
             input *= radius;

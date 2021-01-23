@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace BeauTambour
@@ -6,26 +7,21 @@ namespace BeauTambour
     public class ArcSegment : MonoBehaviour
     {
         [SerializeField] private Image image;
-        [SerializeField] private Color activationColor;
-        [SerializeField] private Color deactivationColor;
 
-        [Space, SerializeField] private GameObject portraitObject;
+        [Space, SerializeField] private Animator reveal;
         [SerializeField] private Image portrait;
         [SerializeField] private MusicianIconRegistry musicianIconRegistry;
-        
-        public void Reboot()
-        {
-            image.color = deactivationColor;
-            portraitObject.SetActive(false);
-        }
-        
+
+        public void Reboot() => reveal.SetTrigger("Out");
+
         public void Complete(Musician musician)
         {
-            image.color = activationColor;
+            reveal.ResetTrigger("Out");
             
-            portraitObject.SetActive(true);
             portrait.sprite = musicianIconRegistry[musician.Actor];
             portrait.SetNativeSize();
+            
+            reveal.SetTrigger("In");
         }
     }
 }

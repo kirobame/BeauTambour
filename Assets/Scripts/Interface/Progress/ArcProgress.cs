@@ -8,6 +8,7 @@ namespace BeauTambour
     public class ArcProgress : MonoBehaviour
     {
         [SerializeField] private ArcSegment[] segments;
+        [SerializeField] private float delay;
 
         private int speakerCount;
         
@@ -35,7 +36,12 @@ namespace BeauTambour
         {
             var index = speakerCount - GameState.FinishedArcsCount - 1;
             if (index < 0) return;
-            
+
+            StartCoroutine(CompletionRoutine(index, musician));
+        }
+        private IEnumerator CompletionRoutine(int index, Musician musician)
+        {
+            yield return new WaitForSeconds(delay);
             segments[index].Complete(musician);
         }
     }

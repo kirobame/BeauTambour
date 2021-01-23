@@ -56,6 +56,8 @@ namespace BeauTambour
         [Space, SerializeField] private AnimationCurve disapparitionCurve;
         [SerializeField] private float disapparitionTime;
 
+        [Space, SerializeField] private Animator reveal;
+
         private int previousActor;
         private int currentActor;
         
@@ -153,19 +155,20 @@ namespace BeauTambour
             tree.localScale = Vector3.Lerp(startingSize, Vector3.one * goal, 1.0f);
         }
 
-        private ProgressIcon GetIcon(IconPool pool, Emotion emotion, int position)
+        private ProgressIcon PlaceIcon(IconPool pool, Emotion emotion, int position)
         {
             var icon = pool.RequestSingle();
 
             icon.RectTransform.parent = tree;
             icon.Set(emotion);
-                
+            
             icon.RectTransform.localPosition = new Vector2(spacing * (position + 1), 0.0f);
+            icon.RectTransform.localPosition += (Vector3)icon.Offset;
 
             icons.Add(icon);
             return icon;
         }
-        private void PlaceLink(ImagePool pool, int position, float width)
+        private Image PlaceLink(ImagePool pool, int position, float width)
         {
             var link = pool.RequestSingle(linkPrefab);
 
@@ -174,6 +177,7 @@ namespace BeauTambour
             link.rectTransform.localPosition = new Vector2(spacing * position + width / 2.0f, 0.0f);
                 
             links.Add(link);
+            return link;
         }
         private void ShowTree()
         {
@@ -187,7 +191,7 @@ namespace BeauTambour
             var width = 65.0f;
             for (var i = 0; i < history.Emotions.Count; i++)
             {
-                var icon = GetIcon(iconPool, history.Emotions[i], i);
+                var icon = PlaceIcon(iconPool, history.Emotions[i], i);
                 width = icon.RectTransform.sizeDelta.x; ;
 
                 PlaceLink(linkPool, i, width);
@@ -199,7 +203,15 @@ namespace BeauTambour
                 branchingRepresentation.RectTransform.localPosition = new Vector2(spacing * history.Emotions.Count + width / 2.0f, 0.0f);
                 branchingRepresentation.Prepare(history.Branches);
             }
-            else  branchingRepresentation.RectTransform.localScale = Vector3.zero;
+            else
+            {
+                branchingRepresentation.RectTransform.localScale = Vector3.zero;
+                
+                var icon = PlaceIcon(iconPool, Emotion.None, history.Emotions.Count);
+                width = icon.RectTransform.sizeDelta.x; 
+                
+                PlaceLink(linkPool, history.Emotions.Count, width);
+            }
 
             apparitionRoutine = StartCoroutine(ApparitionRoutine());
         }
@@ -221,7 +233,7 @@ namespace BeauTambour
             yield return StartCoroutine(branchingRepresentation.SelectionRoutine(selection));
             
             var iconPool = Repository.GetSingle<IconPool>(References.IconPool);
-            var icon = GetIcon(iconPool, emotion, icons.Count);
+            var icon = PlaceIcon(iconPool, emotion, icons.Count);
 
             icon.RectTransform.localScale = Vector3.zero;
             var width = icon.RectTransform.sizeDelta.x;
@@ -231,20 +243,54 @@ namespace BeauTambour
 
             while (time < duration)
             {
-                icon.RectTransform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, time / duration);
+                icon.RectTransform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one * icon.Size, time / duration);
 
                 yield return new WaitForEndOfFrame();
                 time += Time.deltaTime;
             }
-            icon.RectTransform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, 1.0f);
+            icon.RectTransform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one * icon.Size, 1.0f);
+            reveal.transform.position = icon.RectTransform.TransformPoint(icon.RectTransform.sizeDelta.x * 0.5f, 0, 0);
+            reveal.SetTrigger("Play");
             
             yield return new WaitForSeconds(0.15f);
             
             var linkPool = Repository.GetSingle<ImagePool>(References.ImagePool);
-            PlaceLink(linkPool, icons.Count - 1, width);
-            
-            branchingRepresentation.RectTransform.localScale = Vector3.zero;
-            if (branches <= 0) yield break;
+            var link = PlaceLink(linkPool, icons.Count - 1, width);
+            link.transform.localScale = new Vector3(1, 0, 0);
+
+            yield return StartCoroutine(branchingRepresentation.DisapparitionRoutine(link));
+            if (branches <= 0)
+            {
+                var pos = icons.Count;
+
+                var endIcon = PlaceIcon(iconPool, Emotion.None, pos);
+                endIcon.transform.localScale = Vector3.zero;
+                
+                var endLink = PlaceLink(linkPool, pos, width);
+                endLink.transform.localScale = Vector3.zero;
+                
+                time = 0.0f;
+                while (time < duration)
+                {
+                    endLink.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, time / duration);
+                    
+                    yield return new WaitForEndOfFrame();
+                    time += Time.deltaTime;
+                }
+                endLink.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, 1.0f);
+                
+                time = 0.0f;
+                while (time < duration)
+                {
+                    endIcon.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, time / duration);
+                    
+                    yield return new WaitForEndOfFrame();
+                    time += Time.deltaTime;
+                }
+                endIcon.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, 1.0f);
+
+                yield break;
+            }
             
             branchingRepresentation.RectTransform.localPosition = new Vector2(spacing * icons.Count + width / 2.0f, 0.0f);
             branchingRepresentation.Prepare(branches);

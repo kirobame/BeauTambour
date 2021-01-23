@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2425710529569531431}
   - component: {fileID: 1538933826794207488}
   - component: {fileID: 805237003723300340}
-  - component: {fileID: 805237003723300339}
   - component: {fileID: 805237003723300341}
   m_Layer: 5
   m_Name: ProgressIcon
@@ -66,9 +65,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 805237003723300340}
+  size: 0.75
   emotionColorRegistry: {fileID: 11400000, guid: d1c62902753354141ba2448c78b765db,
     type: 2}
-  emotionIconRegistry: {fileID: 11400000, guid: 2e6b18557113178469cdbf61c4a94e08,
+  emotionIconRegistry: {fileID: 11400000, guid: 523ed8e6972c8f64bb7330c3fea0d180,
     type: 2}
 --- !u!114 &805237003723300340
 MonoBehaviour:
@@ -99,21 +99,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &805237003723300339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805237003723300337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
-  m_EffectDistance: {x: 4, y: 4}
-  m_UseGraphicAlpha: 1
 --- !u!222 &805237003723300341
 CanvasRenderer:
   m_ObjectHideFlags: 0

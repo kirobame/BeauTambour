@@ -1,4 +1,5 @@
-﻿using Flux;
+﻿using System;
+using Flux;
 using UnityEngine;
 
 namespace BeauTambour
@@ -9,13 +10,10 @@ namespace BeauTambour
     {
         [SerializeField] private AlphaTarget target;
         [SerializeField] private float goal;
-
-        public override void Initialize()
-        {
-            base.Initialize();
-            target.Prepare(goal);
-        }
-
+        
+        protected override void Startup() => target.Prepare(goal);
         protected override void Execute(float ratio) => target.Set(ratio);
+
+        protected override void End() => target.End();
     }
 }

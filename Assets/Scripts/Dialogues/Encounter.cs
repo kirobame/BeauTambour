@@ -51,6 +51,8 @@ namespace BeauTambour
         {
             if (!hasBeenBootedUp)
             {
+                for (var i = 0; i < GameState.BlockIndex; i++) blocks[i].SendAttributes();
+                
                 var characters = Repository.GetAll<Character>(References.Characters);
                 var musicianIndex = 0;
                 
@@ -109,6 +111,11 @@ namespace BeauTambour
 
             Interlocutor = block.Interlocutor;
             Event.Call(GameEvents.OnGoingToNextBlock);
+
+            foreach (var character in Repository.GetAll<Character>(References.Characters))
+            {
+                if (character is Musician musician) musician.ResetArcCompletion();
+            }
         }
         
         private void OnDialogueSheetsDownloaded(Sheet[] sheets)
