@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a84b74bb42811a47825a59323b6d402, type: 3}
+  m_Name: MouseVoiceAudioStringMapPackage
+  m_EditorClassIdentifier: 
+  letterAudioPairs:
+  - key: a
+    value: {fileID: 11400000, guid: e97a9acd2685ddf459ff3a8c52158b25, type: 2}
+  - key: b
+    value: {fileID: 11400000, guid: d590487a10fba814d9cd4b1402984383, type: 2}
+  - key: c
+    value: {fileID: 11400000, guid: cae97469314b1ef409c20e7851ed05ce, type: 2}
+  - key: d
+    value: {fileID: 11400000, guid: 5f7eec6e66741e140b37d27a974efa45, type: 2}
+  - key: e
+    value: {fileID: 11400000, guid: 1ffd6d330dec2414dba8d1ab9d58ac6f, type: 2}
+  - key: f
+    value: {fileID: 11400000, guid: 2564db026e21e4b49ab5ff208bbb4bde, type: 2}
+  - key: g
+    value: {fileID: 11400000, guid: fdac97a43a554a04e8cf619393754540, type: 2}
+  - key: h
+    value: {fileID: 11400000, guid: 4b2f04649249e8145b093a5b68c88b93, type: 2}
+  - key: i
+    value: {fileID: 11400000, guid: 6419f02035dc9284f9c8140249b9b9cd, type: 2}
+  - key: j
+    value: {fileID: 11400000, guid: bc4a65b1642b7004ca49d89824b0b54e, type: 2}
+  - key: k
+    value: {fileID: 11400000, guid: f86b67c52c756244c850fd1f5161e298, type: 2}
+  - key: l
+    value: {fileID: 11400000, guid: 8ea1eefd9a32e6c42abd7c5937850b18, type: 2}
+  - key: m
+    value: {fileID: 11400000, guid: 68a955e1965df27478d1bf5cecaa4896, type: 2}
+  - key: n
+    value: {fileID: 11400000, guid: aef87fcf68ed1e04fa9e8063f91b1562, type: 2}
+  - key: o
+    value: {fileID: 11400000, guid: 3d26dd1a5dffb304fb37f9462d242bbf, type: 2}
+  - key: p
+    value: {fileID: 11400000, guid: 7952a019fb68d2e4987d53e41e0ac5d2, type: 2}
+  - key: q
+    value: {fileID: 11400000, guid: 9396b0bb2a253544d810fa345190ff84, type: 2}
+  - key: r
+    value: {fileID: 11400000, guid: c5397561973b20e4591d8cc8e7773732, type: 2}
+  - key: s
+    value: {fileID: 11400000, guid: 2357d9ac327df7b449d83ddc4f9496f1, type: 2}
+  - key: t
+    value: {fileID: 11400000, guid: 89382c383c044f0499abae2796e18af4, type: 2}
+  - key: u
+    value: {fileID: 11400000, guid: 2d3e44e140ce7ac49939023140cce19c, type: 2}
+  - key: v
+    value: {fileID: 11400000, guid: bd7ef0ef097bef14298299b5b27c6d0c, type: 2}
+  - key: w
+    value: {fileID: 11400000, guid: c2595e55a3e0ebc4d988c45a343b9220, type: 2}
+  - key: x
+    value: {fileID: 11400000, guid: 9eab4d634506c24418f5e54120559de7, type: 2}
+  - key: y
+    value: {fileID: 11400000, guid: 54710cc8794d6d34f9578969468e211b, type: 2}
+  - key: z
+    value: {fileID: 11400000, guid: 99bfe1b9d86bb1a438afe73c444997f4, type: 2}
+  - key: ou
+    value: {fileID: 11400000, guid: 2d3e44e140ce7ac49939023140cce19c, type: 2}
+  - key: "\xE8"
+    value: {fileID: 11400000, guid: 140c65ba646ff8e4e81f83ef56be6c0a, type: 2}
+  - key: "\xE9"
+    value: {fileID: 11400000, guid: 140c65ba646ff8e4e81f83ef56be6c0a, type: 2}
+  - key: ui
+    value: {fileID: 11400000, guid: 6419f02035dc9284f9c8140249b9b9cd, type: 2}
+  - key: ie
+    value: {fileID: 11400000, guid: 1ffd6d330dec2414dba8d1ab9d58ac6f, type: 2}
+  - key: ia
+    value: {fileID: 11400000, guid: e97a9acd2685ddf459ff3a8c52158b25, type: 2}
