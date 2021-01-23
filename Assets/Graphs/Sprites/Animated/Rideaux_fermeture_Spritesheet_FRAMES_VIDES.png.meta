@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 7bf168f64c8e47d4c8de7fb1133660d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2764900428820455769
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_0
+  - first:
+      213: -226720525258797105
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_1
+  - first:
+      213: -2181414121304834114
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_2
+  - first:
+      213: 4352441940561742809
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_3
+  - first:
+      213: -3405893975433423618
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_4
+  - first:
+      213: -2423539515494353281
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_5
+  - first:
+      213: -8894837717705021789
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_6
+  - first:
+      213: 1199356037321189064
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_7
+  - first:
+      213: -3788327222973796806
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_8
+  - first:
+      213: -3561813952569866615
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_9
+  - first:
+      213: 9101249261974134909
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_10
+  - first:
+      213: -2967583992441638669
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_11
+  - first:
+      213: -4994081269273557533
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_12
+  - first:
+      213: -907697083975734932
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_13
+  - first:
+      213: 9178548219197928737
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_14
+  - first:
+      213: -8258148213415565482
+    second: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_1
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 3241
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfc8ac22e68adcf0800000000000000
+      internalID: -226720525258797105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_2
+      rect:
+        serializedVersion: 2
+        x: 3841
+        y: 3241
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebfba9f0a6f0ab1e0800000000000000
+      internalID: -2181414121304834114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_3
+      rect:
+        serializedVersion: 2
+        x: 5761
+        y: 3242
+        width: 1918
+        height: 1077
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dbc1bc72eaf66c30800000000000000
+      internalID: 4352441940561742809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2161
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4d5ab7975dbb0d0800000000000000
+      internalID: -3405893975433423618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_5
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 2161
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7636dfa6abdd5ed0800000000000000
+      internalID: -2423539515494353281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_6
+      rect:
+        serializedVersion: 2
+        x: 3841
+        y: 2161
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6227df8303f8480800000000000000
+      internalID: -8894837717705021789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_7
+      rect:
+        serializedVersion: 2
+        x: 5761
+        y: 2161
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6efb326f7f4a010800000000000000
+      internalID: 1199356037321189064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1081
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e64bd46782d6bc0800000000000000
+      internalID: -3788327222973796806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_9
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 1081
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9860b09d415e19ec0800000000000000
+      internalID: -3561813952569866615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_10
+      rect:
+        serializedVersion: 2
+        x: 3841
+        y: 1081
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d702148bbf12e4e70800000000000000
+      internalID: 9101249261974134909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_11
+      rect:
+        serializedVersion: 2
+        x: 5761
+        y: 1081
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f07161f41601d6d0800000000000000
+      internalID: -2967583992441638669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5848d9b8571bab0800000000000000
+      internalID: -4994081269273557533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_13
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 1
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69e7f1bf463763f0800000000000000
+      internalID: -907697083975734932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_fermeture_Spritesheet_FRAMES_VIDES_14
+      rect:
+        serializedVersion: 2
+        x: 3841
+        y: 1
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125361fa9f0c06f70800000000000000
+      internalID: 9178548219197928737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 38e94bcfb7b713b4299303c3b2658a7b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

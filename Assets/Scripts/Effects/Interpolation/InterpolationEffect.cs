@@ -10,6 +10,7 @@ namespace BeauTambour
         [SerializeField] private AnimationCurve curve;
         [SerializeField] private float time;
 
+        private bool hasBeenStartedUp;
         private float runtime;
         
         public override void Initialize()
@@ -18,12 +19,19 @@ namespace BeauTambour
             
             time = Mathf.Abs(time);
             if (time == 0f) time = Mathf.Epsilon;
-            
+
+            hasBeenStartedUp = false;
             runtime = 0f;
         }
 
         public override int Evaluate(int advancement, IReadOnlyList<Effect> registry, float deltaTime, out bool prolong)
         {
+            if (!hasBeenStartedUp)
+            {
+                Startup();
+                hasBeenStartedUp = true;
+            }
+
             var ratio = curve.Evaluate(Mathf.Clamp01(runtime / time));
             Execute(ratio);
             
@@ -36,10 +44,14 @@ namespace BeauTambour
             else
             {
                 Execute(1.0f);
+                End();
+                
                 return base.Evaluate(advancement, registry, deltaTime, out prolong);
             }
         }
 
+        protected abstract void Startup();
         protected abstract void Execute(float ratio);
+        protected abstract void End();
     }
 }

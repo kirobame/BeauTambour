@@ -9,12 +9,11 @@ namespace Deprecated
         [SerializeField] private ColorTarget target;
         [SerializeField] private float goal;
 
-        public override void Initialize()
-        {
-            base.Initialize();
-            target.Initialize();
-        }
-
+        protected override void Startup() => target.Initialize();
         protected override void Execute(float ratio) => target.SetAlpha(Mathf.Lerp(target.StartingAlpha, goal, ratio));
+        protected override void End()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,0 +1,491 @@
+fileFormatVersion: 2
+guid: e4bdf021906e0a041a492875778635be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2674372199865359189
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_0
+  - first:
+      213: 4387929241544015136
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_1
+  - first:
+      213: -1652846109011153187
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_2
+  - first:
+      213: 367666517910488978
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_3
+  - first:
+      213: -7960069748131868486
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_4
+  - first:
+      213: 6853669044372387079
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_5
+  - first:
+      213: -3434423552516106321
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_6
+  - first:
+      213: 4407169325195849028
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_7
+  - first:
+      213: 4500635822404666950
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_8
+  - first:
+      213: 4071440492789537684
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_9
+  - first:
+      213: -7941372083560178148
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_10
+  - first:
+      213: -2461565751279710059
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_11
+  - first:
+      213: -1217836895417486263
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_12
+  - first:
+      213: -1556768349034744746
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_13
+  - first:
+      213: 1882698841138464985
+    second: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_0
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 3241
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b972aa8574d1520800000000000000
+      internalID: 2674372199865359189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_1
+      rect:
+        serializedVersion: 2
+        x: 3841
+        y: 3241
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02db7cd956e05ec30800000000000000
+      internalID: 4387929241544015136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_2
+      rect:
+        serializedVersion: 2
+        x: 5761
+        y: 3242
+        width: 1918
+        height: 1077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddee0049839ef09e0800000000000000
+      internalID: -1652846109011153187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2161
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2970cd300c63a1500800000000000000
+      internalID: 367666517910488978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_4
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 2161
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab054430db6288190800000000000000
+      internalID: -7960069748131868486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_5
+      rect:
+        serializedVersion: 2
+        x: 3841
+        y: 2161
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70538edfeaf1d1f50800000000000000
+      internalID: 6853669044372387079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_6
+      rect:
+        serializedVersion: 2
+        x: 5761
+        y: 2161
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7da00b9f97650d0800000000000000
+      internalID: -3434423552516106321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1081
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44deb4da629692d30800000000000000
+      internalID: 4407169325195849028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_8
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 1081
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64604d16f68757e30800000000000000
+      internalID: 4500635822404666950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_9
+      rect:
+        serializedVersion: 2
+        x: 3841
+        y: 1081
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b9cd88e89a08830800000000000000
+      internalID: 4071440492789537684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_10
+      rect:
+        serializedVersion: 2
+        x: 5761
+        y: 1081
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e113a4a249ac190800000000000000
+      internalID: -7941372083560178148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59094bbbdf2c6ddd0800000000000000
+      internalID: -2461565751279710059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_12
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 1
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944b646cbcf591fe0800000000000000
+      internalID: -1217836895417486263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rideaux_Ouverture_Spritesheet_FRAMES_VIDES_13
+      rect:
+        serializedVersion: 2
+        x: 3841
+        y: 1
+        width: 1918
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65476364f6f356ae0800000000000000
+      internalID: -1556768349034744746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a217abb3c002cc442a5fa633c98c96d1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

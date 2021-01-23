@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: {fileID: 0}
   emotionRenderer: {fileID: 6392608535992209727}
+  alphaTarget: {fileID: 5732958297701833215}
   maxScale: 0.75
   opacityRange: {x: 0.5, y: 1}
   interpolation:

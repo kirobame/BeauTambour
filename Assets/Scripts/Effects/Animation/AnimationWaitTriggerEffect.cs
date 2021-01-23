@@ -11,6 +11,7 @@ namespace BeauTambour
     {
         [SerializeField] private Animator target;
         [SerializeField] private new string name;
+        [SerializeField] private string waitingFor;
 
         private bool isHandled = false;
 
@@ -26,7 +27,7 @@ namespace BeauTambour
                 Handle(target);
                 isHandled = true;
             }
-            if (target.GetCurrentAnimatorStateInfo(0).IsName("Void"))
+            if (target.GetCurrentAnimatorStateInfo(0).IsName(waitingFor))
             {
                 return base.Evaluate(advancement, registry, deltaTime, out prolong);
             }

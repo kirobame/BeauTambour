@@ -9,6 +9,7 @@ namespace BeauTambour
 
         [SerializeField] private Shape shape;
         [SerializeField] private SpriteRenderer emotionRenderer;
+        [SerializeField] private SpriteAlphaTarget alphaTarget;
 
         [Space, SerializeField] private float maxScale;
         [SerializeField] private Vector2 opacityRange;
@@ -55,9 +56,7 @@ namespace BeauTambour
             var ratio = interpolation.Evaluate(distanceRatio);
 
             transform.localScale = Vector3.one * Mathf.Lerp(minScale, maxScale, ratio);
-            var color = emotionRenderer.color;
-            color.a = Mathf.Lerp(opacityRange.x, opacityRange.y, ratio);
-            emotionRenderer.color = color;
+            alphaTarget.TrySet(Mathf.Lerp(opacityRange.x, opacityRange.y, ratio));
 
             return angle >= 1.0f - angleRange && input.magnitude >= catchDistance;
         }

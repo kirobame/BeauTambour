@@ -16,5 +16,10 @@ namespace BeauTambour
         {
             foreach (var target in targets) target.Set(ratio);
         }
+
+        public override void End()
+        {
+            foreach (var target in targets) target.End();
+        }
     }
 }

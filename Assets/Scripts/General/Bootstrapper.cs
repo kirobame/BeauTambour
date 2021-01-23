@@ -43,6 +43,9 @@ namespace BeauTambour
             else if (!playIntro && useBackup)
             {
                 Debug.Log("NOT PLAYING INTRO");
+                Event.Open(ExtraEvents.OnIntroSkipped);
+                Event.Call(ExtraEvents.OnIntroSkipped);
+                
                 Event.Register(GameEvents.OnEncounterBootedUp, PlayFirstPhase);
             }
             else
@@ -91,6 +94,7 @@ namespace BeauTambour
         void PlayFirstPhase()
         {
             var phaseHandler = Repository.GetSingle<PhaseHandler>(References.PhaseHandler);
+            if (!playIntro) Event.Call(GameEvents.OnCurtainRaised);
 
             if (skipStart)
             {
