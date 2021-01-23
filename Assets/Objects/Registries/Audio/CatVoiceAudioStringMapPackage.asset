@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a84b74bb42811a47825a59323b6d402, type: 3}
+  m_Name: CatVoiceAudioStringMapPackage
+  m_EditorClassIdentifier: 
+  letterAudioPairs:
+  - key: a
+    value: {fileID: 11400000, guid: 1d42c8d06913eeb458f7cbd45970250d, type: 2}
+  - key: b
+    value: {fileID: 11400000, guid: 13b28c724bc7a4043ba3c19aa07f1646, type: 2}
+  - key: c
+    value: {fileID: 11400000, guid: 7b6cc29f5c6deb745b34c15957a69346, type: 2}
+  - key: d
+    value: {fileID: 11400000, guid: bc84db3f18aab3c4397addd20216212b, type: 2}
+  - key: e
+    value: {fileID: 11400000, guid: 749c8f1185b658f4f9c5ec7ce3b2b412, type: 2}
+  - key: f
+    value: {fileID: 11400000, guid: c5a088cd8b196fe4ba8cac268fe90088, type: 2}
+  - key: g
+    value: {fileID: 11400000, guid: 69baae21f7465f344b26c996b60f2bac, type: 2}
+  - key: h
+    value: {fileID: 11400000, guid: 493fafad4f5faee4d94bdcbc84bf7e24, type: 2}
+  - key: i
+    value: {fileID: 11400000, guid: 1d42c8d06913eeb458f7cbd45970250d, type: 2}
+  - key: j
+    value: {fileID: 11400000, guid: 13b28c724bc7a4043ba3c19aa07f1646, type: 2}
+  - key: k
+    value: {fileID: 11400000, guid: 7b6cc29f5c6deb745b34c15957a69346, type: 2}
+  - key: l
+    value: {fileID: 11400000, guid: bc84db3f18aab3c4397addd20216212b, type: 2}
+  - key: m
+    value: {fileID: 11400000, guid: 749c8f1185b658f4f9c5ec7ce3b2b412, type: 2}
+  - key: n
+    value: {fileID: 11400000, guid: c5a088cd8b196fe4ba8cac268fe90088, type: 2}
+  - key: o
+    value: {fileID: 11400000, guid: 69baae21f7465f344b26c996b60f2bac, type: 2}
+  - key: p
+    value: {fileID: 11400000, guid: 493fafad4f5faee4d94bdcbc84bf7e24, type: 2}
+  - key: q
+    value: {fileID: 11400000, guid: 1d42c8d06913eeb458f7cbd45970250d, type: 2}
+  - key: r
+    value: {fileID: 11400000, guid: 13b28c724bc7a4043ba3c19aa07f1646, type: 2}
+  - key: s
+    value: {fileID: 11400000, guid: 7b6cc29f5c6deb745b34c15957a69346, type: 2}
+  - key: t
+    value: {fileID: 11400000, guid: bc84db3f18aab3c4397addd20216212b, type: 2}
+  - key: u
+    value: {fileID: 11400000, guid: 749c8f1185b658f4f9c5ec7ce3b2b412, type: 2}
+  - key: v
+    value: {fileID: 11400000, guid: c5a088cd8b196fe4ba8cac268fe90088, type: 2}
+  - key: w
+    value: {fileID: 11400000, guid: 69baae21f7465f344b26c996b60f2bac, type: 2}
+  - key: x
+    value: {fileID: 11400000, guid: 493fafad4f5faee4d94bdcbc84bf7e24, type: 2}
+  - key: y
+    value: {fileID: 11400000, guid: 1d42c8d06913eeb458f7cbd45970250d, type: 2}
+  - key: z
+    value: {fileID: 11400000, guid: 13b28c724bc7a4043ba3c19aa07f1646, type: 2}
+  - key: ou
+    value: {fileID: 11400000, guid: 7b6cc29f5c6deb745b34c15957a69346, type: 2}
+  - key: "\xE8"
+    value: {fileID: 11400000, guid: bc84db3f18aab3c4397addd20216212b, type: 2}
+  - key: "\xE9"
+    value: {fileID: 11400000, guid: 749c8f1185b658f4f9c5ec7ce3b2b412, type: 2}
+  - key: ui
+    value: {fileID: 11400000, guid: c5a088cd8b196fe4ba8cac268fe90088, type: 2}
+  - key: ie
+    value: {fileID: 11400000, guid: 69baae21f7465f344b26c996b60f2bac, type: 2}
+  - key: ia
+    value: {fileID: 11400000, guid: 493fafad4f5faee4d94bdcbc84bf7e24, type: 2}
