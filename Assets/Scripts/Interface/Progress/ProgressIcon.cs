@@ -22,7 +22,7 @@ namespace BeauTambour
             RectTransform.localScale = Vector3.one * Size;
 
             image.sprite = emotionIconRegistry[emotion];
-            image.SetNativeSize();
+            //image.SetNativeSize();
         }
     }
 }

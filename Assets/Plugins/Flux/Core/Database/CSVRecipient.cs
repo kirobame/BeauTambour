@@ -75,7 +75,7 @@ namespace Flux
                 if (baseRequest.isNetworkError) Debug.LogError( $"Download Error : {baseRequest.error}. Could not retrieve Id sheet");
                 else
                 {
-                    Debug.Log($"Download success for Id sheet : {baseRequest.downloadHandler.text}");
+                    //Debug.Log($"Download success for Id sheet : {baseRequest.downloadHandler.text}");
                     success = EvaluateIdSheet(baseRequest.downloadHandler.text, out ids);
                 }
             }
@@ -111,13 +111,13 @@ namespace Flux
                     else
                     {
                         //Debug.Log($"Download success : {request.downloadHandler.text}");
-                        Debug.Log($"Download success");
+                        //Debug.Log($"Download success");
 
                         var versionSection = request.downloadHandler.text.Split(',').First();
                         UnityEngine.Assertions.Assert.IsTrue( versionSection.Contains('='), "Could not find a '=' at the start of the CSV" );
 
                         var versionText = versionSection.Split('=')[1];
-                        Debug.Log( $"Downloaded data version : {versionText}");
+                        //Debug.Log( $"Downloaded data version : {versionText}");
 
                         var sheet = new Sheet();
                         sheet.Process(request.downloadHandler.text);

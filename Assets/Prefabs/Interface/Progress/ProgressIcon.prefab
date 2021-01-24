@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: -610.6, y: 0}
-  m_SizeDelta: {x: 65, y: 65}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2425710529569531431
 MonoBehaviour:
@@ -65,9 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 805237003723300340}
-  size: 0.75
-  emotionColorRegistry: {fileID: 11400000, guid: d1c62902753354141ba2448c78b765db,
-    type: 2}
+  size: 1
   emotionIconRegistry: {fileID: 11400000, guid: 523ed8e6972c8f64bb7330c3fea0d180,
     type: 2}
 --- !u!114 &805237003723300340

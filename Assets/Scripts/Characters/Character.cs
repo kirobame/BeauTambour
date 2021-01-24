@@ -15,6 +15,7 @@ namespace BeauTambour
         
         public abstract bool HasArcEnded { get; }
         public abstract int Branches { get; }
+        public float YOffset => yOffset;
 
         [NonSerialized, HideInInspector] public bool isActive;
         
@@ -57,8 +58,6 @@ namespace BeauTambour
             
             dialogueHolder.TextMesh.color = fontColor;
             dialogueHolder.TextMesh.font = font;
-            
-            dialogueHolder.Offset(yOffset);
         }
         public Vector2 GetPositionForDialogueHolder() => runtimeLink.DialogueAnchor;
 

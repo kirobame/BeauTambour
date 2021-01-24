@@ -28,7 +28,7 @@ namespace BeauTambour
                 segments[i].gameObject.SetActive(true);
                 segments[i].Reboot();
             }
-
+            
             for (var i = speakerCount; i < segments.Length; i++) segments[i].gameObject.SetActive(false);
         }
 

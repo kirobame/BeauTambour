@@ -29,7 +29,7 @@ namespace BeauTambour
 
         public bool SetActive(bool state)
         {
-            Debug.Log("Setting phase handling to : " + state);
+            //Debug.Log("Setting phase handling to : " + state);
             return isActive = state;
         }
         public TPhase Get<TPhase>(PhaseCategory category) => (TPhase)phases[category];
@@ -53,11 +53,11 @@ namespace BeauTambour
         {
             if (!isActive || !phases.ContainsKey(category))
             {
-                Debug.Log($"Phase handler halted : {isActive} / Contains - {category} : {phases.ContainsKey(category)}");
+                //Debug.Log($"Phase handler halted : {isActive} / Contains - {category} : {phases.ContainsKey(category)}");
                 return;
             }
             
-            Debug.Log($"-||--> SWITCHING TO : {category}");
+            //Debug.Log($"-||--> SWITCHING TO : {category}");
             if (currentCategory != PhaseCategory.None) CurrentPhase.End();
             
             phases[category].Begin();

@@ -11,7 +11,7 @@ namespace BeauTambour
         public override void Execute(MonoBehaviour hook, Character speaker, string[] args) => hook.StartCoroutine(WaitRoutine(speaker));
         private IEnumerator WaitRoutine(Character speaker)
         {
-            Debug.Log($"{Time.time} -- [Animation]:[{speaker.Actor}]:[{Key}]");
+            //Debug.Log($"{Time.time} -- [Animation]:[{speaker.Actor}]:[{Key}]");
 
             if (speaker.RuntimeLink.ActOut(Key))
             {

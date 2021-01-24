@@ -205,7 +205,7 @@ namespace BeauTambour
 
         private void AssignToAudioSource(AudioPackage package)
         {
-            var audioPool = Repository.GetSingle<AudioPool>(References.AudioPool);
+            if (!Repository.TryGetSingle<AudioPool>(References.AudioPool, out var audioPool)) return;
             var audio = audioPool.RequestSingle();
 
             package.AssignTo(audio, EventArgs.Empty);

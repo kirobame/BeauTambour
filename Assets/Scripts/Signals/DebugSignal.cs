@@ -14,7 +14,7 @@ namespace BeauTambour
 
         private IEnumerator Routine(Character speaker, string message)
         {
-            Debug.Log($"[Debug]:[{speaker.Actor}]:[{Key}] -> {message}");
+            //Debug.Log($"[Debug]:[{speaker.Actor}]:[{Key}] -> {message}");
             
             yield return new WaitForSeconds(waitTime);
             End();

@@ -21,7 +21,7 @@ namespace BeauTambour
 
         public override void Execute(MonoBehaviour hook, Character speaker, string[] args)
         {
-            Debug.Log($"{Time.time} -- [Vfx]:[{speaker.Actor}]:[{Key}]");
+            //Debug.Log($"{Time.time} -- [Vfx]:[{speaker.Actor}]:[{Key}]");
             
             var animationPool = Repository.GetSingle<AnimationPool>(References.AnimationPool);
             playedEffect = animationPool.RequestSinglePoolable(emotionEffectPrefab) as EmotionEffect;

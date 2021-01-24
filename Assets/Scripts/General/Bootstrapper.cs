@@ -42,7 +42,7 @@ namespace BeauTambour
             }
             else if (!playIntro && useBackup)
             {
-                Debug.Log("NOT PLAYING INTRO");
+                //Debug.Log("NOT PLAYING INTRO");
                 Event.Open(ExtraEvents.OnIntroSkipped);
                 Event.Call(ExtraEvents.OnIntroSkipped);
                 
@@ -50,7 +50,7 @@ namespace BeauTambour
             }
             else
             {
-                Debug.Log("PLAYING INTRO");
+                //Debug.Log("PLAYING INTRO");
 
                 if (!useBackup)
                 {
@@ -98,7 +98,7 @@ namespace BeauTambour
 
             if (skipStart)
             {
-                Debug.Log("SKIPPING START");
+                //Debug.Log("SKIPPING START");
                 
                 var dialoguePhase = phaseHandler.Get<DialoguePhase>(PhaseCategory.Dialogue);
                 dialoguePhase.SkipBootUp();
@@ -107,7 +107,7 @@ namespace BeauTambour
             }
             else
             {
-                Debug.Log("NOT SKIPPING START");
+                //Debug.Log("NOT SKIPPING START");
                 phaseHandler.Play(PhaseCategory.Dialogue);
             }
         }

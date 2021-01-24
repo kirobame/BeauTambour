@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using Event = Flux.Event;
 
@@ -158,7 +159,7 @@ namespace BeauTambour
         {
             if (currentNode.Childs[0] == "Empty") return GetDefaultDialogues();
             
-            Debug.Log($"--|DIAG|-> [{Actor}] : {currentNode.Name}");
+            //Debug.Log($"--|DIAG|-> [{Actor}] : {currentNode.Name}");
             for (var i = 0; i < currentNode.Childs.Count; i++)
             {
                 if (!nodes.TryGetValue(currentNode.Childs[i], out var child))
@@ -173,11 +174,11 @@ namespace BeauTambour
                     currentNode = child;
 
                     var dialogue = child.GetDialogue();
-                    Debug.Log($"--|DIAG|-> Dialogue found : {dialogue}");
+                    //Debug.Log($"--|DIAG|-> Dialogue found : {dialogue}");
 
                     if (child.Childs[0] == "Empty")
                     {
-                        Debug.Log($"--|DIAG|-> End of narrative arc for : {name}");
+                        //Debug.Log($"--|DIAG|-> End of narrative arc for : {name}");
                         hasArcEnded = true;
                         
                         if (GameState.NotifyMusicianArcEnd(out var blockDialogue))
@@ -200,14 +201,14 @@ namespace BeauTambour
             if (failsafes.TryGetValue(currentNode.Failsafe, out var failsafe))
             {
                 var failsafeDialogue = failsafe.GetDialogue();
-                Debug.Log($"--|DIAG|-> Falling back to : {failsafe}");
+                //Debug.Log($"--|DIAG|-> Falling back to : {failsafe}");
                 
                 return new Dialogue[] { failsafeDialogue };
             }
             else
             {
                 Debug.LogError($"For current node : {currentNode.Name} | Failsafe {currentNode.Failsafe} does not exist");
-                Debug.Log("--|DIAG|-> No correct options : Reverting to current");
+                //Debug.Log("--|DIAG|-> No correct options : Reverting to current");
                 
                 return new Dialogue[] { currentNode.GetDialogue() };
             }

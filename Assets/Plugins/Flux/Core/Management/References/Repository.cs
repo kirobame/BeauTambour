@@ -114,6 +114,18 @@ namespace Flux
 
         public static T GetSingle<T>(Enum address) => Get<T>(address.GetNiceName(), 0);
         public static T GetSingle<T>(string address) => Get<T>(address, 0);
+
+        public static bool TryGetSingle<T>(Enum address, out T result)
+        {
+            if (globalReferences.TryGetValue(address.GetNiceName(), out var reference))
+            {
+                result = (T)reference[0];
+                return true;
+            }
+
+            result = default;
+            return false;
+        }
         
         public static IEnumerable<T> GetAll<T>(Enum address) => GetAll<T>(address.GetNiceName());
         public static IEnumerable<T> GetAll<T>(string address) => globalReferences[address].Cast<T>();

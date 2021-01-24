@@ -223,7 +223,7 @@ namespace BeauTambour
 
         void OnDialogueTreeUpdate(int id, Emotion emotion, int selection, int branches)
         {
-            Debug.Log($"DIALOGUE TREE UPDATE : {id} - {emotion}");
+            //Debug.Log($"DIALOGUE TREE UPDATE : {id} - {emotion}");
             
             histories[id].Update(emotion, branches);
             StartCoroutine(AdvanceRoutine(emotion, selection, branches));

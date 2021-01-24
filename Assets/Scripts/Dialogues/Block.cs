@@ -82,10 +82,7 @@ namespace BeauTambour
 
                 if (!musician.HasArcEnded)
                 {
-                    foreach (var attribute in musicianEntries[i].GivenAttributes)
-                    {
-                        musician.AddAttribute(attribute);
-                    }
+                    foreach (var attribute in musicianEntries[i].GivenAttributes) musician.AddAttribute(attribute);
                 }
                 
                 musician.RuntimeLink.Reboot();

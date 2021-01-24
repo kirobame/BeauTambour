@@ -17,8 +17,8 @@ MonoBehaviour:
   interlocutor: {fileID: 11400000, guid: 0f85a343b67edc34ab116ac1474a19f8, type: 2}
   musicianEntries:
   - value: {fileID: 11400000, guid: f5e03629a7308004d9db998d1131e6a1, type: 2}
-    givenAttributes: Friend
+    givenAttributes: 
   - value: {fileID: 11400000, guid: ec12714f2912f0b43b9ebde71cb856e2, type: 2}
-    givenAttributes: Greedy
+    givenAttributes: 
   - value: {fileID: 11400000, guid: 482f099fc4d8c9545a7eff7f5f3b4400, type: 2}
-    givenAttributes: Music
+    givenAttributes: 

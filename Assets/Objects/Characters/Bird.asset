@@ -16,6 +16,7 @@ MonoBehaviour:
   fontColor: {r: 0.1764706, g: 0.2, b: 0.16862746, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   font: {fileID: 11400000, guid: eb1fe65780f0f804cbeb803ca1cc0158, type: 2}
+  yOffset: 0
   audioStringMap: {fileID: 11400000, guid: 50e97fa6059feeb4d9308eba9eb23f20, type: 2}
-  pitch: 2.8
+  pitch: 2.55
   pitchRange: 0.1

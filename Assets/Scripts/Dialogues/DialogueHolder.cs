@@ -111,6 +111,9 @@ namespace BeauTambour
         {
             if (isOperational) yield return DeactivationRoutine(false);
             else isOperational = true;
+
+            var handler = Repository.GetSingle<DialogueHandler>(References.DialogueHandler);
+            Offset(handler.Speaker.YOffset);
             
             var camera = Repository.GetSingle<Camera>(References.Camera);
             var screenPosition = camera.WorldToViewportPoint(position);

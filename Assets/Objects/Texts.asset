@@ -59,56 +59,61 @@ MonoBehaviour:
     - "\u24C7-Resume"
     - Reprendre
     - Resume
+    - "\u24C7-End"
+    - Fin
+    - The End
     - "\u24C7-Story.1"
-    - "Dans le village Mar\xE9cage vivait une petite Grenouille muette qui en avait
-      assez d'\xEAtre discr\xE8te ! \nPas facile, sans dire mots, de se faire des
-      amis chez les animaux ! \nMais heureusement pour elle, gr\xE2ce \xE0 son tambour,
-      elle avait le rythme dans la peau."
-    - "Dans le village Mar\xE9cage vivait une petite Grenouille muette qui en avait
-      assez d'\xEAtre discr\xE8te ! \nPas facile, sans dire mots, de se faire des
-      amis chez les animaux ! \nMais heureusement pour elle, gr\xE2ce \xE0 son tambour,
-      elle avait le rythme dans la peau."
+    - "Dans le village Mar\xE9cage vivait Grenouille. Il \xE9tait muet et en avait
+      assez d'\xEAtre discret ! \nPas facile, sans dire mots, de se faire des amis
+      chez les animaux ! \nMais heureusement pour lui, gr\xE2ce \xE0 son tambour,
+      il avait le rythme dans la peau."
+    - "Dans le village Mar\xE9cage vivait Grenouille. Il \xE9tait muet et en avait
+      assez d'\xEAtre discret ! \nPas facile, sans dire mots, de se faire des amis
+      chez les animaux ! \nMais heureusement pour lui, gr\xE2ce \xE0 son tambour,
+      il avait le rythme dans la peau."
     - "\u24C7-Story.2"
-    - "Un jour, une petite souris au nom d'Emilie, passa par l\xE0, charm\xE9e par
-      cette m\xE9lodie."
-    - "Un jour, une petite souris au nom d'Emilie, passa par l\xE0, charm\xE9e par
-      cette m\xE9lodie. "
+    - "Un jour, une petite souris au nom d'Emilie, passa par-l\xE0, charm\xE9e par
+      cette m\xE9lodie.\nDepuis ce jour, Grenouille et Emilie ne se quittaient plus,
+      \nmais malgr\xE9 tout, notre petit tambourineur se sentait encore exclu."
+    - "Un jour, une petite souris au nom d'Emilie, passa par-l\xE0, charm\xE9e par
+      cette m\xE9lodie.\nDepuis ce jour, Grenouille et Emilie ne se quittaient plus,
+      \nmais malgr\xE9 tout, notre petit tambourineur se sentait encore exclu."
     - "\u24C7-Story.3"
-    - "C'est alors que la rumeur apporta avec elle, la solution \xE0 ces ennuis...
-      \nLes Grands Musiciens cherchaient de nouveaux membres !\nLes plus reconnus
-      et talentueux !\nSi elle \xE9tait prise, c'est s\xFBr, les amis allaient arriver
-      nombreux ! \nIl fallait absolument s'y rendre !"
-    - "C'est alors que la rumeur apporta avec elle, la solution \xE0 ces ennuis...
-      \nLes Grands Musiciens cherchaient de nouveaux membres !\nLes plus reconnus
-      et talentueux !\nSi elle \xE9tait prise, c'est s\xFBr, les amis allaient arriver
-      nombreux ! \nIl fallait absolument s'y rendre !"
+    - "C'est alors que la rumeur que le vent a conduit, apporta avec elle la solution
+      \xE0 ses ennuis... \nLes Grands Musiciens cherchaient de nouveaux membres !\nLes
+      musiciens les plus reconnus et talentueux !\nS'il \xE9tait pris, c'est s\xFBr,
+      les amis allaient arriver nombreux ! \nIl fallait absolument s'y rendre !"
+    - "C'est alors que la rumeur que le vent a conduit, apporta avec elle la solution
+      \xE0 ses ennuis... \nLes Grands Musiciens cherchaient de nouveaux membres !\nLes
+      musiciens les plus reconnus et talentueux !\nS'il \xE9tait pris, c'est s\xFBr,
+      les amis allaient arriver nombreux ! \nIl fallait absolument s'y rendre !"
     - "\u24C7-Story.4"
     - "Ni une, ni deux, notre jeune Grenouille et son amie souris s'\xE9lanc\xE8rent
       dans la for\xEAt, \ndans une aventure que jamais ils n'oublieraient..."
     - "Ni une, ni deux, notre jeune Grenouille et son amie souris s'\xE9lanc\xE8rent
       dans la for\xEAt, \ndans une aventure que jamais ils n'oublieraient..."
     - "\u24C7-Story.5"
-    - "Elle semblait furieuse, mais Grenouille joua quelques notes joyeuses. \nL'effet
-      fut imm\xE9diat. Ses \xE9motions elle d\xE9lia !"
-    - "Elle semblait furieuse, mais Grenouille joua quelques notes joyeuses. \nL'effet
-      fut imm\xE9diat. Ses \xE9motions elle d\xE9lia ! "
-    - "\u24C7-Story.6"
-    - "A peine sorties du village, ils rencontr\xE8rent un dr\xF4le d'oiseau... Un
+    - "A peine sortis du village, ils rencontr\xE8rent un dr\xF4le d'oiseau... Une
       rouge-gorge qui vivait plus haut."
-    - "A peine sorties du village, ils rencontr\xE8rent un dr\xF4le d'oiseau... Un
-      rouge-gorge qui vivait plus haut. "
+    - "A peine sortis du village, ils rencontr\xE8rent un dr\xF4le d'oiseau... Une
+      rouge-gorge qui vivait plus haut."
+    - "\u24C7-Story.6"
+    - "Elle semblait furieuse, mais Grenouille joua quelques notes joyeuses. L'effet
+      fut imm\xE9diat. Ses \xE9motions il d\xE9lia !"
+    - "Elle semblait furieuse, mais Grenouille joua quelques notes joyeuses. L'effet
+      fut imm\xE9diat. Ses \xE9motions il d\xE9lia !"
     - "\u24C7-Story.7"
     - "L'Oiseau se nommait Charlie, elle aussi jouait d'un instrument et cherchait
       \xE0 prouver son talent !"
     - "L'Oiseau se nommait Charlie, elle aussi jouait d'un instrument et cherchait
-      \xE0 prouver son talent ! "
+      \xE0 prouver son talent !"
     - "\u24C7-Story.8"
-    - "Ni une ni deux, notre jeune oiseau rejoignit les deux amis \xE0 la recherche
+    - "Notre jeune oiseau n'h\xE9sita pas \xE0 rejoindre les deux amis \xE0 la recherche
       des Grands-Musiciens !\nLa petite troupe continua alors son chemin, mais encore
       une fois, un obstacle entrava leur destin..."
-    - "Ni une ni deux, notre jeune oiseau rejoignit les deux amis \xE0 la recherche
+    - "Notre jeune oiseau n'h\xE9sita pas \xE0 rejoindre les deux amis \xE0 la recherche
       des Grands-Musiciens !\nLa petite troupe continua alors son chemin, mais encore
-      une fois, un obstacle entrava leur destin... "
+      une fois, un obstacle entrava leur destin..."
     - "\u24C7-Story.9"
     - Se dressait devant eux un ours en furie ! Il s'approcha du groupe et d'un coup
       rugit...
@@ -132,15 +137,17 @@ MonoBehaviour:
 
       <size=50%>The were-cat</size>'
     - "\u24C7-Block.3"
-    - "<size=100%><b>Rrois\xE8me chapitre</b></size>\n<size=50%>Le petit chat peureux
+    - "<size=100%><b>Trois\xE8me chapitre</b></size>\n<size=50%>Le petit chat peureux
       roux</size>"
-    - '<size=100%><b>Second chapter</b></size>
+    - '<size=100%><b>Third chapter</b></size>
 
-      <size=50%>The were-cat</size>'
+      <size=50%>The little scaredy
+      red cat</size>'
     - "\u24C7-Block.4"
     - "<size=100%><b>Quatri\xE8me chapitre</b></size>\n<size=50%>Le plumage ne fait
       pas le vautour</size>"
     - '<size=100%><b>Second chapter</b></size>
 
-      <size=50%>The were-cat</size>'
-    size: {x: 3, y: 28}
+      <size=50%>Don''t judge a bird
+      by its feathers</size>'
+    size: {x: 3, y: 29}
